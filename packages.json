@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "serial": 1,
+  "packages": [
+    {
+      "id": "frostmage",
+      "kind": "mod",
+      "name": "Frost Mage",
+      "author": "Syiana",
+      "repo": "Syiana/azs-mod-frostmage",
+      "description": "The mage as a frost caster: its starter becomes Glacial Pulse, a frost nova that roots what it hits and builds Chill.",
+      "license": "MIT",
+      "namespace": "syiana.frostmage",
+      "requires": [],
+      "status": "active",
+      "reason": "",
+      "mirrors": [],
+      "version": "v1",
+      "asset_url": "https://github.com/Syiana/azs-mod-frostmage/releases/download/v1/frostmage-v1.zip",
+      "size": 1420409,
+      "sha256": "29392b3b1631177a362de668734a9724fae021d172353ac15bff4655e97321c0",
+      "profile": {
+        "name": "frost-mage",
+        "packages": [
+          {
+            "id": "base",
+            "version": "1",
+            "kind": "gameplay"
+          },
+          {
+            "id": "tbc",
+            "version": "1",
+            "kind": "gameplay"
+          },
+          {
+            "id": "wotlk",
+            "version": "1",
+            "kind": "gameplay"
+          },
+          {
+            "id": "cata",
+            "version": "1",
+            "kind": "gameplay"
+          },
+          {
+            "id": "syiana.frostmage",
+            "version": "1",
+            "kind": "gameplay"
+          }
+        ],
+        "compatibility": {
+          "content_schema": 1,
+          "simulation_abi": 1,
+          "protocol_abi": 1,
+          "required_capabilities": []
+        }
+      }
+    }
+  ]
+}

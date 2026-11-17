@@ -1,0 +1,13 @@
+id = "frostmage"
+kind = "mod"
+name = "Frost Mage"
+author = "Syiana"
+repo = "Syiana/azs-mod-frostmage"
+description = "The mage as a frost caster: its starter becomes Glacial Pulse, a frost nova that roots what it hits and builds Chill."
+license = "MIT"
+namespace = "syiana.frostmage"
+requires = []
+
+[source]
+type = "release"
+asset = "frostmage-*.zip"
