@@ -1,0 +1,106 @@
+# What a piece of each slot adds, and the eight class profiles (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# Shares are fractions (0.012 is 1.2%); health and regen are flat. The weapons' slots (8 main
+# hand, 9 off hand, 10 ranged) take no class profile.
+
+[[piece_slot]]
+key = "head"
+slot = 0
+stats = [{ hp = 12.0 }, { crit = 0.01 }]
+
+[[piece_slot]]
+key = "shoulders"
+slot = 1
+stats = [{ area = 0.04 }, { hp = 6.0 }]
+
+[[piece_slot]]
+key = "chest"
+slot = 2
+stats = [{ hp = 18.0 }, { armor = 0.02 }]
+
+[[piece_slot]]
+key = "waist"
+slot = 3
+stats = [{ pickup = 0.12 }, { gold = 0.06 }]
+
+[[piece_slot]]
+key = "legs"
+slot = 4
+stats = [{ hp = 14.0 }, { regen = 0.3 }]
+
+[[piece_slot]]
+key = "feet"
+slot = 5
+stats = [{ speed = 0.075 }]
+
+[[piece_slot]]
+key = "wrists"
+slot = 6
+stats = [{ cooldown = 0.025 }]
+
+[[piece_slot]]
+key = "hands"
+slot = 7
+stats = [{ crit = 0.012 }, { crit_damage = 0.06 }, { pickup = 0.6 }]
+
+[[piece_slot]]
+key = "main_hand"
+slot = 8
+profile = false
+stats = [{ damage = 0.12 }]
+
+[[piece_slot]]
+key = "off_hand"
+slot = 9
+profile = false
+stats = [{ damage = 0.06 }, { hp = 8.0 }]
+
+[[piece_slot]]
+key = "ranged"
+slot = 10
+profile = false
+stats = [{ damage = 0.12 }]
+
+# The eight pairs a class puts into its armor slots (its `piece_profiles`).
+
+[[piece_profile]]
+key = "p0"
+profile = 0
+stats = [{ damage = 0.03 }, { crit = 0.01 }]
+
+[[piece_profile]]
+key = "p1"
+profile = 1
+stats = [{ hp = 10.0 }, { armor = 0.015 }]
+
+[[piece_profile]]
+key = "p2"
+profile = 2
+stats = [{ hp = 8.0 }, { cooldown = 0.015 }]
+
+[[piece_profile]]
+key = "p3"
+profile = 3
+stats = [{ speed = 0.02 }, { crit = 0.01 }]
+
+[[piece_profile]]
+key = "p4"
+profile = 4
+stats = [{ cooldown = 0.02 }, { regen = 0.3 }]
+
+[[piece_profile]]
+key = "p5"
+profile = 5
+stats = [{ hp = 12.0 }, { regen = 0.4 }]
+
+[[piece_profile]]
+key = "p6"
+profile = 6
+stats = [{ damage = 0.03 }, { speed = 0.015 }]
+
+[[piece_profile]]
+key = "p7"
+profile = 7
+stats = [{ area = 0.04 }, { crit = 0.008 }]

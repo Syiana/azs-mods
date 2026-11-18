@@ -1,0 +1,297 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "bladesedge"
+order = 17
+name = { en = "Blade's Edge Mountains", de = "Schergrat", fr = "Montagnes des Tranchantes", es = "Montañas Filospada", pt = "Montanhas Lâmina da Espada", ru = "Острогорье", pl = "Góry Ostrzy", tr = "Bıçak Sırtı Dağları", it = "Montagne del Filo della Lama", ja = "ブレイズエッジ山脈", zh = "刀锋山", ko = "칼날 산맥" }
+subtitle = { en = "The Dragonkiller", de = "Der Drachenschlächter", fr = "Le Tueur de dragons", es = "El Matadragones", pt = "O Matador de Dragões", ru = "Убийца драконов", pl = "Zabójca smoków", tr = "Ejderha Katili", it = "L'Ammazzadraghi", ja = "ドラゴンキラー", zh = "屠龙者", ko = "용 사냥꾼" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_BladesEdgeMtns_01"
+map = 530
+map_name = "Expansion01"
+area = 3522
+center = [3041.7, 5570.8]
+radius = 100.0
+map_bounds = [8845.83, 3420.83, 4408.33, 791.67]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 8.93
+gold_factor = 2.87
+late_factor = 0.4
+hour = 17
+weather = { fine = 90, sand = 10 }
+# The Fel Reavers stalk it, as 3.3.5a has them here.
+fel_reavers = true
+
+[[zone.enemy]]
+entry = 3500
+name = { en = "Scalewing Serpent", de = "Schuppenschwingenschlange", fr = "Serpent aile-d'écailles", es = "Serpiente alaescama", pt = "Serpente Asa-escamosa", ru = "Чешуекрылый змей", pl = "Wąż Scalewing", tr = "Pulkanat Yılanı", it = "Serpente Alasquamosa", ja = "スケイルウィング・サーペント", zh = "鳞翼毒蛇", ko = "비늘날개 뱀" }
+type = "beast"
+display = 16897
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.8
+
+[[zone.enemy]]
+entry = 3501
+name = { en = "Bladewing Rockflayer", de = "Felsschinder der Klingenschwingen", fr = "Écorcheur de roc aile-lame", es = "Desollador de roca alaespada", pt = "Esfolador de Pedra Asa-lâmina", ru = "Камнедер Лезвиекрылых", pl = "Skałożer Bladewing", tr = "Bıçakkanat Kaya Yüzen", it = "Scorticarocce Alalama", ja = "ブレードウィング・ロックフレイヤー", zh = "刃翼碎岩者", ko = "칼날날개 바위약탈자" }
+type = "beast"
+display = 19850
+icon = "Ability_Hunter_Pet_Bat"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.9
+
+[[zone.enemy]]
+entry = 3502
+name = { en = "Bloodmaul Skirmisher", de = "Plänkler der Blutschläger", fr = "Tirailleur Cogne-sang", es = "Hostigador Machacasangre", pt = "Escaramuçador Malho Sangrento", ru = "Застрельщик из клана Кровавого Молота", pl = "Harcownik z klanu Bloodmaul", tr = "Kanezen Çatışmacısı", it = "Schermagliatore Sanguemaglio", ja = "ブラッドモール・スカーミッシャー", zh = "血槌散兵", ko = "피망치 척후병" }
+type = "humanoid"
+display = 33
+icon = "Achievement_Reputation_Ogre"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.85
+
+[[zone.enemy]]
+entry = 3503
+name = { en = "Bladespire Shaman", de = "Schamane der Speerspitzen", fr = "Chaman Pique-lame", es = "Chamán Aguja Hoja", pt = "Xamã Torre da Lâmina", ru = "Шаман из клана Острогорных", pl = "Szaman z Bladespire", tr = "Bıçaksivri Şamanı", it = "Sciamano Lamacuspide", ja = "ブレードスパイア・シャーマン", zh = "刀塔萨满祭司", ko = "칼날첨탑 주술사" }
+type = "humanoid"
+display = 19749
+icon = "Achievement_Reputation_Ogre"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.8
+role = { ranged = { spell = 9532, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3504
+name = { en = "Thunderlord Dire Wolf", de = "Terrorwolf der Donnerfürsten", fr = "Loup redoutable Seigneur-du-tonnerre", es = "Lobo feroz Señor del Trueno", pt = "Lobo Atroz Senhor do Trovão", ru = "Лютый волк из клана Повелителей Грома", pl = "Złowrogi wilk Thunderlordów", tr = "Gök Lordu Korkunç Kurdu", it = "Lupo atroce Signore del Tuono", ja = "サンダーロード・ダイアウルフ", zh = "雷神恐狼", ko = "천둥군주 광포한 늑대" }
+type = "beast"
+display = 73
+icon = "Ability_Hunter_Pet_Wolf"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 3505
+name = { en = "Bladespire Champion", de = "Champion der Speerspitzen", fr = "Champion Pique-lame", es = "Campeón Aguja Hoja", pt = "Campeão Torre da Lâmina", ru = "Воитель из клана Острогорных", pl = "Czempion z Bladespire", tr = "Bıçaksivri Şampiyonu", it = "Campione Lamacuspide", ja = "ブレードスパイア・チャンピオン", zh = "刀塔勇士", ko = "칼날첨탑 용사" }
+type = "humanoid"
+display = 326
+icon = "Achievement_Reputation_Ogre"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 1.05
+
+[[zone.enemy]]
+entry = 3506
+name = { en = "Bladespire Raptor", de = "Raptor der Speerspitzen", fr = "Raptor Pique-lame", es = "Raptor Aguja Hoja", pt = "Raptor Torre da Lâmina", ru = "Раптор Острогорных", pl = "Raptor z Bladespire", tr = "Bıçaksivri Yırtıcısı", it = "Raptor Lamacuspide", ja = "ブレードスパイア・ラプター", zh = "刀塔迅猛龙", ko = "칼날첨탑 랩터" }
+type = "beast"
+display = 19733
+icon = "Ability_Hunter_Pet_Raptor"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 3507
+name = { en = "Bloodmaul Geomancer", de = "Geomant der Blutschläger", fr = "Géomancien Cogne-sang", es = "Geomántico Machacasangre", pt = "Geomante Malho Sangrento", ru = "Геомант из клана Кровавого Молота", pl = "Geomanta z klanu Bloodmaul", tr = "Kanezen Yer Büyücüsü", it = "Geomante Sanguemaglio", ja = "ブラッドモール・ジオマンサー", zh = "血槌地卜师", ko = "피망치 대지술사" }
+type = "humanoid"
+display = 19751
+icon = "Achievement_Reputation_Ogre"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.85
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3508
+name = { en = "Bladespire Mountain Giant", de = "Bergriese der Speerspitzen", fr = "Géant des montagnes Pique-lame", es = "Gigante de las montañas Aguja Hoja", pt = "Gigante da Montanha Torre da Lâmina", ru = "Горный великан Острогорных", pl = "Górski olbrzym z Bladespire", tr = "Bıçaksivri Dağ Devi", it = "Gigante di montagna Lamacuspide", ja = "ブレードスパイア・マウンテン・ジャイアント", zh = "刀塔山岭巨人", ko = "칼날첨탑 산악 거인" }
+type = "giant"
+display = 17073
+icon = "Achievement_Reputation_Ogre"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.45
+
+[[zone.elite]]
+entry = 3510
+name = { en = "Gronn-Priest", de = "Gronnpriester", fr = "Prêtre gronn", es = "Sacerdote gronn", pt = "Sacerdote Gronn", ru = "Жрец гроннов", pl = "Kapłan gronnów", tr = "Gronn Rahibi", it = "Sacerdote Gronn", ja = "ゴロンの司祭", zh = "戈隆祭司", ko = "그론 사제" }
+type = "giant"
+display = 18155
+icon = "Achievement_Boss_GruulTheDragonkiller"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+# The Gronn model's display is scaled 7.0 (about 34 yd tall at size 1): 0.22 stands it 7.5 yd,
+# a mini-boss like Nagrand's Durn the Hungerer, under the 11.6 yd of Maggoc.
+size = 0.22
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 3511
+name = { en = "Bloodmaul Warlord", de = "Kriegsherr der Blutschläger", fr = "Seigneur de guerre Cogne-sang", es = "Señor de la guerra Machacasangre", pt = "Senhor da Guerra Malho Sangrento", ru = "Полководец из клана Кровавого Молота", pl = "Wódz wojenny z klanu Bloodmaul", tr = "Kanezen Savaş Lordu", it = "Signore della guerra Sanguemaglio", ja = "ブラッドモール・ウォーロード", zh = "血槌督军", ko = "피망치 전쟁군주" }
+type = "humanoid"
+display = 19762
+icon = "Achievement_Reputation_Ogre"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.5
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 3512
+name = { en = "Apexis Guardian", de = "Apexiswächter", fr = "Gardien d'Apexis", es = "Guardián de Apexis", pt = "Guardião de Apexis", ru = "Страж Апекса", pl = "Strażnik Apexis", tr = "Apexis Muhafızı", it = "Guardiano Apexis", ja = "エイペクシスのガーディアン", zh = "埃匹希斯守护者", ko = "아펙시스 수호자" }
+type = "mechanical"
+display = 16349
+icon = "Ability_GolemStormBolt"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 1449, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 6.0 } }, { nova = { spell = 1449, radius = 6.0, warn = 1.4 } }], 0.6] }
+
+[[zone.boss]]
+entry = 3590
+name = { en = "Gurn Grubnosh", de = "Gurn Grubnase", fr = "Gurn Groin-de-ver", es = "Gurn Narizgusano", pt = "Gurn Narizverme", ru = "Гурн Червеносый", pl = "Gurn Grubnosh", tr = "Gurn Grubnosh", it = "Gurn Nasoschifoso", ja = "ガーン・グラブノッシュ", zh = "古恩·格鲁诺什", ko = "구른 그럽노쉬" }
+type = "humanoid"
+display = 19908
+icon = "Achievement_Reputation_Ogre"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.0
+minute = 4
+yell = { en = "Gurn hungry!", de = "Gurn hungrig!", fr = "Gurn faim !", es = "¡Gurn hambre!", pt = "Gurn fome!", ru = "Гурн голодный!", pl = "Gurn głodny!", tr = "Gurn aç!", it = "Gurn ha fame!", ja = "グルン、腹へった！", zh = "古恩饿了！", ko = "건 배고파!" }
+kit = "gurn_grubnosh"
+
+[[zone.boss]]
+entry = 3591
+name = { en = "Maggoc", de = "Maggoc", fr = "Maggoc", es = "Maggoc", pt = "Maggoc", ru = "Маггок", pl = "Maggoc", tr = "Maggoc", it = "Maggoc", ja = "マゴック", zh = "玛戈克", ko = "마고크" }
+type = "giant"
+display = 18645
+icon = "Achievement_Reputation_Ogre"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.2
+minute = 8
+yell = { en = "Maggoc stomps toward you!", de = "Maggoc stampft auf dich zu!", fr = "Maggoc piétine vers toi !", es = "¡Maggoc pisotea hacia ti!", pt = "Maggoc pisoteia em sua direção!", ru = "Маггок топает к тебе!", pl = "Maggoc tupie w twoją stronę!", tr = "Maggoc sana doğru tepinerek geliyor!", it = "Maggoc avanza pesantemente verso di te!", ja = "マゴックが足を踏み鳴らして迫ってくる！", zh = "玛戈克朝你踏步而来！", ko = "마고크가 쿵쿵거리며 다가옵니다!" }
+kit = "maggoc"
+
+[[zone.boss]]
+entry = 3592
+name = { en = "High King Maulgar", de = "Hochkönig Maulgar", fr = "Grand roi Maulgar", es = "Alto Rey Maulgar", pt = "Grão-Rei Maulgar", ru = "Верховный король Молгар", pl = "Wielki Król Maulgar", tr = "Yüce Kral Maulgar", it = "Alto Re Maulgar", ja = "大王モールガー", zh = "莫加尔大王", ko = "왕중왕 마울가르" }
+type = "giant"
+display = 18058
+icon = "Achievement_Reputation_Ogre"
+health = 21000
+damage = 46
+speed = 5.0
+size = 0.9
+minute = 12
+yell = { en = "Gronn are the real power in Outland!", de = "Die Gronn sind die wahre Macht in der Scherbenwelt!", fr = "Les gronns sont le vrai pouvoir en Outreterre !", es = "¡Los gronn son el verdadero poder de Terrallende!", pt = "Os Gronn são o verdadeiro poder de Terralém!", ru = "Гронны — вот настоящая сила Запределья!", pl = "Gronnowie to prawdziwa siła Outland!", tr = "Outland'in gerçek gücü Gronn'dur!", it = "I Gronn sono il vero potere dell'Outland!", ja = "アウトランドの真の支配者はゴロンだ！", zh = "戈隆才是外域真正的主宰！", ko = "아웃랜드의 진짜 힘은 그론이다!" }
+kit = "high_king_maulgar"
+
+[[zone.boss]]
+entry = 3593
+name = { en = "Krosh Firehand", de = "Krosh Feuerhand", fr = "Krosh Poing-de-feu", es = "Krosh Manofuego", pt = "Krosh Mão de Fogo", ru = "Крош Огненная Рука", pl = "Krosh Ognista Ręka", tr = "Krosh Ateşel", it = "Krosh Manofuoco", ja = "クロッシュ・ファイアハンド", zh = "克洛什·火拳", ko = "크로쉬 파이어핸드" }
+type = "humanoid"
+display = 19752
+icon = "Achievement_Reputation_Ogre"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.6
+minute = 16
+yell = { en = "Burn, little ones!", de = "Brennt, ihr Winzlinge!", fr = "Brûlez, petits !", es = "¡Arded, pequeños!", pt = "Queimem, pequenos!", ru = "Горите, малыши!", pl = "Płońcie, mali!", tr = "Yanın, ufaklıklar!", it = "Bruciate, piccoli!", ja = "燃えろ、ちびども！", zh = "燃烧吧，小东西们！", ko = "불타라, 꼬맹이들아!" }
+kit = "krosh_firehand"
+
+[[zone.boss]]
+entry = 2006
+name = { en = "Gruul", de = "Gruul", fr = "Gruul", es = "Gruul", pt = "Gruul", ru = "Груул", pl = "Gruul", tr = "Gruul", it = "Gruul", ja = "グルール", zh = "格鲁尔", ko = "그룰" }
+type = "giant"
+display = 18698
+icon = "Achievement_Boss_GruulTheDragonkiller"
+health = 60000
+damage = 66
+speed = 6.0
+size = 0.8
+minute = 20
+yell = { en = "Come... and die.", de = "Kommt... und sterbt.", fr = "Venez... et mourez.", es = "Venid... y morid.", pt = "Venham... e morram.", ru = "Идите... и умрите.", pl = "Chodź... i zgiń.", tr = "Gel... ve öl.", it = "Vieni... e muori.", ja = "来い…そして死ね。", zh = "来吧……受死吧。", ko = "와라... 그리고 죽어라." }
+final = true
+kit = "gruul"

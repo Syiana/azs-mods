@@ -1,0 +1,25 @@
+# Emperor Dagran Thaurissan's abilities, Blackrock Mountain.
+
+[[boss]]
+key = "emperor_dagran_thaurissan"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 133 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { rain = { spell = 2120, count = 5, radius = 6.0, spread = 10.0, warn = 1.5, factor = 2.6 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { leap = { spell = 11113, radius = 5.0, reach = 13.0, warn = 1.6, factor = 2.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { rush = { spell = 2120, len = 30.0, w = 6.0, warn = 1.8, factor = 2.4 } }
+
+# AS's tag 22 kind 1 (totems) not in: every 20 s.
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

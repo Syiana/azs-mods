@@ -1,0 +1,291 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "dragonblight"
+order = 26
+name = { en = "Dragonblight", de = "Drachenöde", fr = "Désolation des dragons", es = "Cementerio de Dragones", pt = "Ravina do Dragão", ru = "Драконий Погост", pl = "Smocze Pustkowie", tr = "Ejderha Yarası", it = "Rovina del Drago", ja = "ドラゴンブライト", zh = "龙骨荒野", ko = "용의 안식처" }
+subtitle = { en = "The Obsidian Sanctum", de = "Das Obsidiansanktum", fr = "Le sanctum Obsidien", es = "El Santuario Obsidiana", pt = "O Santuário Obsidiana", ru = "Обсидиановое святилище", pl = "Obsydianowe Sanktuarium", tr = "Obsidyen Mabed", it = "Il Santuario di Ossidiana", ja = "オブシディアン・サンクタム", zh = "黑曜石圣殿", ko = "흑요석 성소" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_DragonBlight_01"
+map = 571
+map_name = "Northrend"
+area = 65
+center = [3300.0, 900.0]
+radius = 100.0
+map_bounds = [3627.08, -1981.25, 5575.0, 1835.42]
+health_factor = 19.83
+gold_factor = 3.86
+late_factor = 0.4
+hour = 13
+weather = { fine = 55, snow = 45 }
+
+[[zone.enemy]]
+entry = 4400
+name = { en = "Risen Ghoul", de = "Auferstandener Ghul", fr = "Goule ressuscitée", es = "Necrófago resucitado", pt = "Carniçal Ressurgido", ru = "Восставший вурдалак", pl = "Powstały ghul", tr = "Dirilmiş Gulyabani", it = "Ghoul risorto", ja = "蘇ったグール", zh = "复活的食尸鬼", ko = "되살아난 구울" }
+type = "undead"
+display = 24993
+icon = "Ability_GhoulFrenzy"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 4401
+name = { en = "Dragonblight Wolf", de = "Wolf der Drachenöde", fr = "Loup de la Désolation", es = "Lobo del Cementerio de Dragones", pt = "Lobo da Ravina do Dragão", ru = "Волк Драконьего Погоста", pl = "Wilk ze Smoczego Pustkowia", tr = "Ejderha Yarası Kurdu", it = "Lupo della Rovina del Drago", ja = "ドラゴンブライト・ウルフ", zh = "龙骨荒野狼", ko = "용의 안식처 늑대" }
+type = "beast"
+display = 868
+icon = "Ability_Hunter_Pet_Wolf"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.85
+
+[[zone.enemy]]
+entry = 4402
+name = { en = "Anub'ar Ambusher", de = "Lauerer der Anub'ar", fr = "Guetteur anub'ar", es = "Emboscador Anub'ar", pt = "Emboscador Anub'ar", ru = "Ануб'арский засадник", pl = "Zasadzkowiec Anub'ar", tr = "Anub'ar Pusucusu", it = "Imboscatore Anub'ar", ja = "アヌバールの伏兵", zh = "阿努巴尔伏击者", ko = "아눕아르 매복병" }
+type = "humanoid"
+display = 23567
+icon = "INV_Misc_Head_Nerubian_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.85
+
+[[zone.enemy]]
+entry = 4403
+name = { en = "Cult Necrolyte", de = "Nekrolyt des Kults", fr = "Nécrolyte du culte", es = "Necrolito del culto", pt = "Necrolito do Culto", ru = "Некролит культа", pl = "Nekrolita kultu", tr = "Tarikat Ölü Çağıranı", it = "Necrolita del culto", ja = "教団のネクロライト", zh = "教派通灵师", ko = "교단 강령술사" }
+type = "humanoid"
+display = 16309
+icon = "INV_Misc_Head_Human_02"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.35
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4404
+name = { en = "Anub'ar Crusher", de = "Zermalmer der Anub'ar", fr = "Broyeur anub'ar", es = "Triturador anub'ar", pt = "Esmagador Anub'ar", ru = "Крушитель Ануб'ар", pl = "Miażdżyciel Anub'ar", tr = "Anub'ar Ezicisi", it = "Frantumatore Anub'ar", ja = "アヌバール・クラッシャー", zh = "阿努巴尔粉碎者", ko = "아눕아르 분쇄자" }
+type = "undead"
+display = 21977
+icon = "INV_Misc_Head_Nerubian_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.75
+
+[[zone.enemy]]
+entry = 4405
+name = { en = "Frozen Earth", de = "Gefrorene Erde", fr = "Terre gelée", es = "Tierra congelada", pt = "Terra Congelada", ru = "Промёрзшая земля", pl = "Zamarznięta ziemia", tr = "Donmuş Toprak", it = "Terra congelata", ja = "凍てついた大地", zh = "冰冻大地", ko = "얼어붙은 대지" }
+type = "elemental"
+display = 26177
+icon = "Spell_Frost_SummonWaterElemental_2"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.95
+role = { exploder = { spell = 9874, burst = 22519, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 4406
+name = { en = "Azure Whelp", de = "Azurblauer Welpe", fr = "Dragonnet azur", es = "Crío azur", pt = "Filhote Azul", ru = "Лазурный дракончик", pl = "Lazurowy smoczek", tr = "Gök Mavisi Ejder Yavrusu", it = "Cucciolo azzurro", ja = "アズール・ウェルプ", zh = "碧蓝小龙", ko = "푸른용 새끼" }
+type = "dragonkin"
+display = 6293
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 1.6
+
+[[zone.enemy]]
+entry = 4407
+name = { en = "Dragonblight Mage Hunter", de = "Magierjäger der Drachenöde", fr = "Chasseur de mages de la Désolation", es = "Cazador de magos del Cementerio de Dragones", pt = "Caçador de Magos da Ravina do Dragão", ru = "Охотник на магов Драконьего Погоста", pl = "Łowca magów ze Smoczego Pustkowia", tr = "Ejderha Yarası Büyücü Avcısı", it = "Cacciamaghi della Rovina del Drago", ja = "ドラゴンブライトのメイジハンター", zh = "龙骨荒野法师猎手", ko = "용의 안식처 마법사 사냥꾼" }
+type = "humanoid"
+display = 24906
+icon = "INV_Misc_Head_Human_02"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4408
+name = { en = "Wooly Mammoth Bull", de = "Wollmammutbulle", fr = "Mammouth laineux mâle", es = "Mamut lanudo macho", pt = "Mamute Felpudo Macho", ru = "Шерстистый мамонт-самец", pl = "Byk włochatego mamuta", tr = "Yünlü Mamut Boğası", it = "Mammut lanoso maschio", ja = "ウーリー・マンモスの雄", zh = "雄性长毛猛犸象", ko = "털북숭이 매머드 황소" }
+type = "beast"
+display = 26423
+icon = "Ability_Mount_Mammoth_Brown"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.55
+
+[[zone.elite]]
+entry = 4410
+name = { en = "Wastes Drake", de = "Ödnisdrache", fr = "Drake des friches", es = "Draco de los yermos", pt = "Draco dos Ermos", ru = "Дракон пустошей", pl = "Drake Pustkowi", tr = "Çorak Toprak Ejderi", it = "Drago delle distese", ja = "ウェイスト・ドレイク", zh = "荒野幼龙", ko = "황무지 비룡" }
+type = "dragonkin"
+display = 24714
+icon = "Ability_Mount_Drake_Twilight"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.8
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16099, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 4411
+name = { en = "Icemist Warlord", de = "Kriegsherr der Eisnebel", fr = "Seigneur de guerre brumeglace", es = "Señor de la guerra Bruma de Hielo", pt = "Senhor da Guerra Brumagelada", ru = "Полководец Ледяной Мглы", pl = "Wódz wojenny Icemist", tr = "Buzsis Savaş Lordu", it = "Signore della guerra di Nebbiaghiacciata", ja = "アイスミスト・ウォーロード", zh = "冰雾督军", ko = "얼음안개 전쟁군주" }
+type = "humanoid"
+display = 23563
+icon = "INV_Misc_Head_Nerubian_01"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.5
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 4412
+name = { en = "Plagued Abomination", de = "Verseuchte Monstrosität", fr = "Abomination pestiférée", es = "Abominación apestada", pt = "Abominação Empesteada", ru = "Чумное поганище", pl = "Poczwara dotknięta plagą", tr = "Vebalı Canavar", it = "Abominio appestato", ja = "疫病のアボミネーション", zh = "瘟疫憎恶", ko = "역병걸린 누더기골렘" }
+type = "undead"
+display = 14693
+icon = "Spell_Shadow_AbominationExplosion"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 0.75
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 4.5, warn = 2.0, factor = 1.0, lasts = 6.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 4490
+name = { en = "Tenebron", de = "Tenebron", fr = "Ténébron", es = "Tenebron", pt = "Tenebron", ru = "Тенеброн", pl = "Tenebron", tr = "Tenebron", it = "Tenebron", ja = "テネブロン", zh = "塔尼布隆", ko = "테네브론" }
+type = "dragonkin"
+display = 27040
+icon = "Ability_Mount_Drake_Twilight"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.0
+minute = 4
+yell = { en = "Tenebron guards the eggs of the black flight!", de = "Tenebron bewacht die Eier des schwarzen Drachenschwarms!", fr = "Ténébron garde les œufs du vol noir !", es = "¡Tenebron guarda los huevos de la bandada negra!", pt = "Tenebron guarda os ovos da revoada negra!", ru = "Тенеброн охраняет яйца чёрных драконов!", pl = "Tenebron strzeże jaj czarnego stada!", tr = "Tenebron kara ejderha sürüsünün yumurtalarını koruyor!", it = "Tenebron custodisce le uova dello stormo nero!", ja = "テネブロンが黒竜の卵を守っている！", zh = "塔尼布隆守护着黑龙军团的龙蛋！", ko = "테네브론이 검은용군단의 알을 지킵니다!" }
+kit = "tenebron"
+
+[[zone.boss]]
+entry = 4491
+name = { en = "Shadron", de = "Shadron", fr = "Obsidia", es = "Sombrion", pt = "Shadron", ru = "Шадрон", pl = "Shadron", tr = "Shadron", it = "Shadron", ja = "シャドロン", zh = "沙德隆", ko = "샤드론" }
+type = "dragonkin"
+display = 27038
+icon = "Ability_Mount_Drake_Twilight"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.2
+minute = 8
+yell = { en = "Shadron descends upon you!", de = "Shadron stürzt auf dich herab!", fr = "Obsidia fond sur toi !", es = "¡Sombrion se abate sobre ti!", pt = "Shadron desce sobre você!", ru = "Шадрон обрушивается на тебя!", pl = "Shadron spada na was!", tr = "Shadron üzerinize iniyor!", it = "Shadron scende su di voi!", ja = "シャドロンが襲いかかってきた！", zh = "沙德隆向你们俯冲而来！", ko = "샤드론이 당신에게 내려옵니다!" }
+kit = "shadron"
+
+[[zone.boss]]
+entry = 4492
+name = { en = "Gammothra the Tormentor", de = "Gammothra der Peiniger", fr = "Gammothra le Tourmenteur", es = "Gammothra el Atormentador", pt = "Gammothra, o Atormentador", ru = "Гаммотра Мучитель", pl = "Gammothra Dręczycielka", tr = "Işkenceci Gammothra", it = "Gammothra il Tormentatore", ja = "責め苦の主ガモスラ", zh = "折磨者加莫斯拉", ko = "고문자 가모트라" }
+type = "giant"
+display = 24843
+icon = "Achievement_Reputation_Ogre"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.0
+minute = 12
+yell = { en = "Gammothra will feast on your bones!", de = "Gammothra wird sich an deinen Knochen laben!", fr = "Gammothra va se repaître de tes os !", es = "¡Gammothra se dará un festín con tus huesos!", pt = "Gammothra vai se banquetear com seus ossos!", ru = "Гаммотра полакомится твоими костями!", pl = "Gammothra pożywi się waszymi kośćmi!", tr = "Gammothra kemiklerinizle ziyafet çekecek!", it = "Gammothra banchetterà con le vostre ossa!", ja = "ガモスラが貴様の骨を喰らうだろう！", zh = "加摩斯拉要啃你们的骨头！", ko = "감모트라가 네 뼈를 뜯어 먹으리라!" }
+kit = "gammothra_the_tormentor"
+
+[[zone.boss]]
+entry = 4493
+name = { en = "Vesperon", de = "Vesperon", fr = "Vespéron", es = "Vesperon", pt = "Vesperon", ru = "Весперон", pl = "Vesperon", tr = "Vesperon", it = "Vesperon", ja = "ヴェスペロン", zh = "维斯匹隆", ko = "베스페론" }
+type = "dragonkin"
+display = 27039
+icon = "Ability_Mount_Drake_Twilight"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.3999999
+minute = 16
+yell = { en = "Vesperon rises from the twilight!", de = "Vesperon erhebt sich aus dem Zwielicht!", fr = "Vespéron surgit du crépuscule !", es = "¡Vesperon surge del crepúsculo!", pt = "Vesperon surge do crepúsculo!", ru = "Весперон восстаёт из сумерек!", pl = "Vesperon wznosi się z zmierzchu!", tr = "Vesperon alacakaranlıktan yükseliyor!", it = "Vesperon sorge dal crepuscolo!", ja = "ヴェスペロンがトワイライトから立ち上がった！", zh = "维斯匹隆从暮光中升起！", ko = "베스페론이 황혼 속에서 일어섭니다!" }
+kit = "vesperon"
+
+[[zone.boss]]
+entry = 2103
+name = { en = "Sartharion", de = "Sartharion", fr = "Sartharion", es = "Sartharion", pt = "Sartharion", ru = "Сартарион", pl = "Sartharion", tr = "Sartharion", it = "Sartharion", ja = "サーサリオン", zh = "萨塔里奥", ko = "사르타리온" }
+type = "dragonkin"
+display = 27035
+icon = "Achievement_Boss_Sartharion_01"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.6
+minute = 20
+yell = { en = "It is my charge to watch over these eggs. I will see you burn before any harm comes to them!", de = "Es ist meine Pflicht, über diese Eier zu wachen. Eher sehe ich euch brennen, als dass ihnen ein Leid geschieht!", fr = "J'ai pour mission de veiller sur ces œufs. Je vous verrai brûler avant qu'il leur arrive malheur !", es = "Mi deber es velar por estos huevos. ¡Antes os veré arder que permitir que les ocurra algún daño!", pt = "É minha missão zelar por estes ovos. Prefiro ver vocês queimarem a deixar que algum mal lhes aconteça!", ru = "Мой долг - охранять эти яйца. Я сожгу вас, прежде чем им причинят вред!", pl = "Moim obowiązkiem jest strzec tych jaj. Zobaczę was w płomieniach, nim spadnie na nie jakakolwiek krzywda!", tr = "Bu yumurtalara göz kulak olmak benim görevim. Onlara zarar gelmeden önce sizi yanarken göreceğim!", it = "È mio dovere vegliare su queste uova. Vi vedrò bruciare prima che venga fatto loro del male!", ja = "この卵を見守るのが我が務め。卵に危害が及ぶ前に、貴様らを焼き尽くしてくれる！", zh = "看守这些龙蛋是我的职责。在它们受到任何伤害之前，我会先看着你们化为灰烬！", ko = "이 알들을 지키는 것이 나의 사명이다. 알들이 해를 입기 전에 너희를 불태워 주마!" }
+final = true
+kit = "sartharion"

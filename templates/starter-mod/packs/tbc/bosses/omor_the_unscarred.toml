@@ -1,0 +1,20 @@
+# Omor the Unscarred: Shadow Bolt, Orbital Strike, Shadow Whip, his Fiendish Hounds.
+
+[[boss]]
+key = "omor_the_unscarred"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 30686 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 30637, radius = 9.0, warn = 1.8, knock = 14.0 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { tether = { spell = 30638, reach = 16.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

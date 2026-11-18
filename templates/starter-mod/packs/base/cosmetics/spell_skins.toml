@@ -1,0 +1,942 @@
+# The shop's spell skins (survivors-sim spellskins.rs): `class` is the ChrClasses id, `spell` the pool
+# spell it dresses, `look` the 3.3.5a spell the client shows. Prices: 2500 plain, 3500 showy, 5000 grand. `TUNE`
+#
+# Every skin, by class. The looks are 3.3.5a spells of the same kind as the spell they dress (a
+# missile for a missile, a ground ring for a ground ring), so the cast reads right.
+
+# Warrior
+[[spell_skin]]
+key = "cleave_heroic"
+class = 1
+spell = "cleave"
+look = 78
+price = 2500
+
+[[spell_skin]]
+key = "cleave_sunder"
+class = 1
+spell = "cleave"
+look = 7386
+price = 3500
+
+[[spell_skin]]
+key = "whirlwind_bladestorm"
+class = 1
+spell = "whirlwind"
+look = 46924
+price = 5000
+
+[[spell_skin]]
+key = "whirlwind_divine"
+class = 1
+spell = "whirlwind"
+look = 53385
+price = 3500
+
+[[spell_skin]]
+key = "thunder_clap_shockwave"
+class = 1
+spell = "thunder_clap"
+look = 46968
+price = 3500
+
+[[spell_skin]]
+key = "thunder_clap_storm"
+class = 1
+spell = "thunder_clap"
+look = 51490
+price = 5000
+
+[[spell_skin]]
+key = "mortal_strike_bloodthirst"
+class = 1
+spell = "mortal_strike"
+look = 23881
+price = 2500
+
+[[spell_skin]]
+key = "mortal_strike_overpower"
+class = 1
+spell = "mortal_strike"
+look = 7384
+price = 2500
+
+[[spell_skin]]
+key = "execute_victory"
+class = 1
+spell = "execute"
+look = 34428
+price = 3500
+
+[[spell_skin]]
+key = "heroic_throw_shattering"
+class = 1
+spell = "heroic_throw"
+look = 64382
+price = 3500
+
+[[spell_skin]]
+key = "battle_shout_commanding"
+class = 1
+spell = "battle_shout"
+look = 469
+price = 2500
+
+# Paladin
+[[spell_skin]]
+key = "consecration_flame"
+class = 2
+spell = "consecration"
+look = 2120
+price = 3500
+
+[[spell_skin]]
+key = "consecration_decay"
+class = 2
+spell = "consecration"
+look = 43265
+price = 5000
+
+[[spell_skin]]
+key = "exorcism_shock"
+class = 2
+spell = "exorcism"
+look = 20473
+price = 2500
+
+[[spell_skin]]
+key = "exorcism_smite"
+class = 2
+spell = "exorcism"
+look = 585
+price = 2500
+
+[[spell_skin]]
+key = "hammer_of_wrath_shield"
+class = 2
+spell = "hammer_of_wrath"
+look = 31935
+price = 3500
+
+[[spell_skin]]
+key = "hammer_of_wrath_judgement"
+class = 2
+spell = "hammer_of_wrath"
+look = 20271
+price = 2500
+
+[[spell_skin]]
+key = "holy_shock_exorcism"
+class = 2
+spell = "holy_shock"
+look = 879
+price = 2500
+
+[[spell_skin]]
+key = "holy_shock_flash"
+class = 2
+spell = "holy_shock"
+look = 19750
+price = 2500
+
+[[spell_skin]]
+key = "divine_storm_whirlwind"
+class = 2
+spell = "divine_storm"
+look = 1680
+price = 2500
+
+[[spell_skin]]
+key = "divine_storm_bladestorm"
+class = 2
+spell = "divine_storm"
+look = 46924
+price = 5000
+
+[[spell_skin]]
+key = "holy_light_flash"
+class = 2
+spell = "holy_light"
+look = 19750
+price = 2500
+
+[[spell_skin]]
+key = "holy_light_hands"
+class = 2
+spell = "holy_light"
+look = 633
+price = 3500
+
+# Hunter
+[[spell_skin]]
+key = "arcane_shot_chimera"
+class = 3
+spell = "arcane_shot"
+look = 53209
+price = 3500
+
+[[spell_skin]]
+key = "arcane_shot_explosive"
+class = 3
+spell = "arcane_shot"
+look = 53301
+price = 3500
+
+[[spell_skin]]
+key = "arcane_shot_steady"
+class = 3
+spell = "arcane_shot"
+look = 56641
+price = 2500
+
+[[spell_skin]]
+key = "multi_shot_chimera"
+class = 3
+spell = "multi_shot"
+look = 53209
+price = 3500
+
+[[spell_skin]]
+key = "multi_shot_kill"
+class = 3
+spell = "multi_shot"
+look = 53351
+price = 5000
+
+[[spell_skin]]
+key = "serpent_sting_scorpid"
+class = 3
+spell = "serpent_sting"
+look = 3043
+price = 2500
+
+[[spell_skin]]
+key = "serpent_sting_viper"
+class = 3
+spell = "serpent_sting"
+look = 3034
+price = 2500
+
+[[spell_skin]]
+key = "serpent_sting_wyvern"
+class = 3
+spell = "serpent_sting"
+look = 19386
+price = 3500
+
+[[spell_skin]]
+key = "volley_fire"
+class = 3
+spell = "volley"
+look = 5740
+price = 3500
+
+[[spell_skin]]
+key = "volley_frost"
+class = 3
+spell = "volley"
+look = 10
+price = 3500
+
+[[spell_skin]]
+key = "explosive_trap_immolation"
+class = 3
+spell = "explosive_trap"
+look = 13795
+price = 2500
+
+[[spell_skin]]
+key = "explosive_trap_frost"
+class = 3
+spell = "explosive_trap"
+look = 1499
+price = 2500
+
+[[spell_skin]]
+key = "explosive_trap_snake"
+class = 3
+spell = "explosive_trap"
+look = 34600
+price = 5000
+
+[[spell_skin]]
+key = "aimed_shot_kill"
+class = 3
+spell = "aimed_shot"
+look = 53351
+price = 3500
+
+[[spell_skin]]
+key = "aimed_shot_black"
+class = 3
+spell = "aimed_shot"
+look = 3674
+price = 3500
+
+# Rogue
+[[spell_skin]]
+key = "sinister_strike_hemorrhage"
+class = 4
+spell = "sinister_strike"
+look = 16511
+price = 2500
+
+[[spell_skin]]
+key = "sinister_strike_backstab"
+class = 4
+spell = "sinister_strike"
+look = 53
+price = 2500
+
+[[spell_skin]]
+key = "sinister_strike_ghostly"
+class = 4
+spell = "sinister_strike"
+look = 14278
+price = 3500
+
+[[spell_skin]]
+key = "sinister_strike_mutilate"
+class = 4
+spell = "sinister_strike"
+look = 1329
+price = 3500
+
+[[spell_skin]]
+key = "eviscerate_envenom"
+class = 4
+spell = "eviscerate"
+look = 32645
+price = 3500
+
+[[spell_skin]]
+key = "fan_of_knives_whirlwind"
+class = 4
+spell = "fan_of_knives"
+look = 1680
+price = 2500
+
+[[spell_skin]]
+key = "fan_of_knives_bladestorm"
+class = 4
+spell = "fan_of_knives"
+look = 46924
+price = 5000
+
+[[spell_skin]]
+key = "rupture_garrote"
+class = 4
+spell = "rupture"
+look = 703
+price = 2500
+
+[[spell_skin]]
+key = "rupture_poison"
+class = 4
+spell = "rupture"
+look = 2818
+price = 3500
+
+[[spell_skin]]
+key = "kidney_shot_cheap"
+class = 4
+spell = "kidney_shot"
+look = 1833
+price = 2500
+
+[[spell_skin]]
+key = "killing_spree_shadowstep"
+class = 4
+spell = "killing_spree"
+look = 36554
+price = 5000
+
+# Priest
+[[spell_skin]]
+key = "smite_holy_fire"
+class = 5
+spell = "smite"
+look = 14914
+price = 3500
+
+[[spell_skin]]
+key = "smite_shadow"
+class = 5
+spell = "smite"
+look = 8092
+price = 3500
+
+[[spell_skin]]
+key = "smite_penance"
+class = 5
+spell = "smite"
+look = 47540
+price = 5000
+
+[[spell_skin]]
+key = "sw_pain_vampiric"
+class = 5
+spell = "sw_pain"
+look = 34914
+price = 2500
+
+[[spell_skin]]
+key = "sw_pain_plague"
+class = 5
+spell = "sw_pain"
+look = 2944
+price = 3500
+
+[[spell_skin]]
+key = "mind_blast_holy"
+class = 5
+spell = "mind_blast"
+look = 585
+price = 2500
+
+[[spell_skin]]
+key = "mind_blast_death"
+class = 5
+spell = "mind_blast"
+look = 32379
+price = 5000
+
+[[spell_skin]]
+key = "holy_nova_shadow"
+class = 5
+spell = "holy_nova"
+look = 48045
+price = 3500
+
+[[spell_skin]]
+key = "holy_nova_circle"
+class = 5
+spell = "holy_nova"
+look = 34861
+price = 2500
+
+[[spell_skin]]
+key = "mind_flay_drain"
+class = 5
+spell = "mind_flay"
+look = 689
+price = 3500
+
+[[spell_skin]]
+key = "mind_flay_penance"
+class = 5
+spell = "mind_flay"
+look = 47540
+price = 5000
+
+# Death knight
+[[spell_skin]]
+key = "icy_touch_coil"
+class = 6
+spell = "icy_touch"
+look = 47541
+price = 3500
+
+[[spell_skin]]
+key = "icy_touch_plague"
+class = 6
+spell = "icy_touch"
+look = 45462
+price = 2500
+
+[[spell_skin]]
+key = "plague_strike_scourge"
+class = 6
+spell = "plague_strike"
+look = 55090
+price = 3500
+
+[[spell_skin]]
+key = "plague_strike_blood"
+class = 6
+spell = "plague_strike"
+look = 45902
+price = 2500
+
+[[spell_skin]]
+key = "plague_strike_heart"
+class = 6
+spell = "plague_strike"
+look = 55050
+price = 2500
+
+[[spell_skin]]
+key = "dk_death_coil_frost"
+class = 6
+spell = "dk_death_coil"
+look = 45477
+price = 3500
+
+[[spell_skin]]
+key = "dk_death_coil_shadow"
+class = 6
+spell = "dk_death_coil"
+look = 686
+price = 2500
+
+[[spell_skin]]
+key = "blood_boil_pestilence"
+class = 6
+spell = "blood_boil"
+look = 50842
+price = 2500
+
+[[spell_skin]]
+key = "blood_boil_howl"
+class = 6
+spell = "blood_boil"
+look = 49184
+price = 3500
+
+[[spell_skin]]
+key = "death_and_decay_holy"
+class = 6
+spell = "death_and_decay"
+look = 26573
+price = 5000
+
+[[spell_skin]]
+key = "death_and_decay_flame"
+class = 6
+spell = "death_and_decay"
+look = 2120
+price = 3500
+
+[[spell_skin]]
+key = "obliterate_rune"
+class = 6
+spell = "obliterate"
+look = 56815
+price = 3500
+
+[[spell_skin]]
+key = "obliterate_blood"
+class = 6
+spell = "obliterate"
+look = 45902
+price = 2500
+
+[[spell_skin]]
+key = "howling_blast_nova"
+class = 6
+spell = "howling_blast"
+look = 122
+price = 2500
+
+[[spell_skin]]
+key = "howling_blast_cone"
+class = 6
+spell = "howling_blast"
+look = 120
+price = 3500
+
+# Shaman
+[[spell_skin]]
+key = "lightning_bolt_lava"
+class = 7
+spell = "lightning_bolt"
+look = 51505
+price = 3500
+
+[[spell_skin]]
+key = "lightning_bolt_earth"
+class = 7
+spell = "lightning_bolt"
+look = 8042
+price = 2500
+
+[[spell_skin]]
+key = "chain_lightning_heal"
+class = 7
+spell = "chain_lightning"
+look = 1064
+price = 3500
+
+[[spell_skin]]
+key = "flame_shock_lava"
+class = 7
+spell = "flame_shock"
+look = 51505
+price = 3500
+
+[[spell_skin]]
+key = "flame_shock_frost"
+class = 7
+spell = "flame_shock"
+look = 8056
+price = 2500
+
+[[spell_skin]]
+key = "fire_nova_storm"
+class = 7
+spell = "fire_nova"
+look = 51490
+price = 5000
+
+[[spell_skin]]
+key = "fire_nova_frost"
+class = 7
+spell = "fire_nova"
+look = 122
+price = 2500
+
+[[spell_skin]]
+key = "healing_wave_chain"
+class = 7
+spell = "healing_wave"
+look = 1064
+price = 3500
+
+[[spell_skin]]
+key = "healing_wave_lesser"
+class = 7
+spell = "healing_wave"
+look = 8004
+price = 2500
+
+[[spell_skin]]
+key = "stormstrike_windfury"
+class = 7
+spell = "stormstrike"
+look = 25504
+price = 3500
+
+[[spell_skin]]
+key = "stormstrike_earth"
+class = 7
+spell = "stormstrike"
+look = 8042
+price = 2500
+
+# Mage
+[[spell_skin]]
+key = "fireball_frostfire"
+class = 8
+spell = "fireball"
+look = 44614
+price = 3500
+
+[[spell_skin]]
+key = "fireball_pyro"
+class = 8
+spell = "fireball"
+look = 11366
+price = 5000
+
+[[spell_skin]]
+key = "fireball_scorch"
+class = 8
+spell = "fireball"
+look = 2948
+price = 2500
+
+[[spell_skin]]
+key = "frostbolt_lance"
+class = 8
+spell = "frostbolt"
+look = 30455
+price = 2500
+
+[[spell_skin]]
+key = "frostbolt_frostfire"
+class = 8
+spell = "frostbolt"
+look = 44614
+price = 3500
+
+[[spell_skin]]
+key = "arcane_missiles_barrage"
+class = 8
+spell = "arcane_missiles"
+look = 44425
+price = 3500
+
+[[spell_skin]]
+key = "arcane_missiles_blast"
+class = 8
+spell = "arcane_missiles"
+look = 30451
+price = 2500
+
+[[spell_skin]]
+key = "blizzard_fire"
+class = 8
+spell = "blizzard"
+look = 2120
+price = 3500
+
+[[spell_skin]]
+key = "blizzard_hurricane"
+class = 8
+spell = "blizzard"
+look = 16914
+price = 5000
+
+[[spell_skin]]
+key = "frost_nova_blast"
+class = 8
+spell = "frost_nova"
+look = 11113
+price = 3500
+
+[[spell_skin]]
+key = "frost_nova_arcane"
+class = 8
+spell = "frost_nova"
+look = 1449
+price = 2500
+
+[[spell_skin]]
+key = "arcane_explosion_frost"
+class = 8
+spell = "arcane_explosion"
+look = 122
+price = 2500
+
+[[spell_skin]]
+key = "arcane_explosion_blast"
+class = 8
+spell = "arcane_explosion"
+look = 11113
+price = 3500
+
+# Warlock
+[[spell_skin]]
+key = "shadow_bolt_chaos"
+class = 9
+spell = "shadow_bolt"
+look = 50796
+price = 5000
+
+[[spell_skin]]
+key = "shadow_bolt_incinerate"
+class = 9
+spell = "shadow_bolt"
+look = 29722
+price = 3500
+
+[[spell_skin]]
+key = "shadow_bolt_soul"
+class = 9
+spell = "shadow_bolt"
+look = 6353
+price = 3500
+
+[[spell_skin]]
+key = "corruption_unstable"
+class = 9
+spell = "corruption"
+look = 30108
+price = 3500
+
+[[spell_skin]]
+key = "corruption_immolate"
+class = 9
+spell = "corruption"
+look = 348
+price = 2500
+
+[[spell_skin]]
+key = "rain_of_fire_frost"
+class = 9
+spell = "rain_of_fire"
+look = 10
+price = 3500
+
+[[spell_skin]]
+key = "rain_of_fire_hurricane"
+class = 9
+spell = "rain_of_fire"
+look = 16914
+price = 5000
+
+[[spell_skin]]
+key = "immolate_shadow"
+class = 9
+spell = "immolate"
+look = 172
+price = 2500
+
+[[spell_skin]]
+key = "immolate_searing"
+class = 9
+spell = "immolate"
+look = 5676
+price = 2500
+
+[[spell_skin]]
+key = "death_coil_haunt"
+class = 9
+spell = "death_coil"
+look = 48181
+price = 3500
+
+[[spell_skin]]
+key = "death_coil_drain"
+class = 9
+spell = "death_coil"
+look = 689
+price = 2500
+
+[[spell_skin]]
+key = "hellfire_shadowfury"
+class = 9
+spell = "hellfire"
+look = 30283
+price = 5000
+
+# Druid
+[[spell_skin]]
+key = "wrath_starfire"
+class = 11
+spell = "wrath"
+look = 2912
+price = 3500
+
+[[spell_skin]]
+key = "wrath_swarm"
+class = 11
+spell = "wrath"
+look = 5570
+price = 2500
+
+[[spell_skin]]
+key = "moonfire_swarm"
+class = 11
+spell = "moonfire"
+look = 5570
+price = 2500
+
+[[spell_skin]]
+key = "moonfire_sun"
+class = 11
+spell = "moonfire"
+look = 8050
+price = 3500
+
+[[spell_skin]]
+key = "starfire_wrath"
+class = 11
+spell = "starfire"
+look = 5176
+price = 2500
+
+[[spell_skin]]
+key = "starfire_sun"
+class = 11
+spell = "starfire"
+look = 51505
+price = 5000
+
+[[spell_skin]]
+key = "hurricane_blizzard"
+class = 11
+spell = "hurricane"
+look = 10
+price = 3500
+
+[[spell_skin]]
+key = "hurricane_fire"
+class = 11
+spell = "hurricane"
+look = 5740
+price = 3500
+
+[[spell_skin]]
+key = "swipe_maul"
+class = 11
+spell = "swipe"
+look = 6807
+price = 2500
+
+[[spell_skin]]
+key = "swipe_claw"
+class = 11
+spell = "swipe"
+look = 1082
+price = 2500
+
+[[spell_skin]]
+key = "shred_rake"
+class = 11
+spell = "shred"
+look = 1822
+price = 2500
+
+[[spell_skin]]
+key = "shred_ravage"
+class = 11
+spell = "shred"
+look = 6785
+price = 3500
+
+[[spell_skin]]
+key = "shred_bite"
+class = 11
+spell = "shred"
+look = 22568
+price = 3500
+
+[[spell_skin]]
+key = "rejuvenation_lifebloom"
+class = 11
+spell = "rejuvenation"
+look = 33763
+price = 3500
+
+[[spell_skin]]
+key = "rejuvenation_nourish"
+class = 11
+spell = "rejuvenation"
+look = 50464
+price = 2500
+
+# Monk (the looks are the Shadowsong client's monk spells, patch-{'s Spell.dbc rows)
+[[spell_skin]]
+key = "jab_tiger"
+class = 12
+spell = "jab"
+look = 900089
+price = 2500
+
+[[spell_skin]]
+key = "spinning_crane_kick_jade"
+class = 12
+spell = "spinning_crane_kick"
+look = 900053
+price = 3500
+
+[[spell_skin]]
+key = "chi_burst_lightning"
+class = 12
+spell = "chi_burst"
+look = 900055
+price = 3500
+
+# Demon Hunter (the looks are the Shadowsong client's demon hunter spells, patch-}'s Spell.dbc
+# rows)
+[[spell_skin]]
+key = "demons_bite_chaos"
+class = 13
+spell = "demons_bite"
+look = 904019
+price = 2500
+
+[[spell_skin]]
+key = "throw_glaive_betrayer"
+class = 13
+spell = "throw_glaive"
+look = 904024
+price = 3500
+
+[[spell_skin]]
+key = "eye_beam_felfire"
+class = 13
+spell = "eye_beam"
+look = 904025
+price = 3500

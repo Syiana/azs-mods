@@ -1,0 +1,297 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "hellfire"
+order = 12
+name = { en = "Hellfire Peninsula", de = "Höllenfeuerhalbinsel", fr = "Péninsule des Flammes infernales", es = "Península del Fuego Infernal", pt = "Península do Fogo do Inferno", ru = "Полуостров Адского Пламени", pl = "Półwysep Ognistej Pożogi", tr = "Cehennem Ateşi Yarımadası", it = "Penisola del Fuoco Infernale", ja = "ヘルファイア半島", zh = "地狱火半岛", ko = "지옥불 반도" }
+subtitle = { en = "Through the Dark Portal", de = "Durch das Dunkle Portal", fr = "À travers la Porte des ténèbres", es = "A través del Portal Oscuro", pt = "Através do Portal Negro", ru = "Сквозь Темный портал", pl = "Przez Mroczny Portal", tr = "Kara Portal'dan Geçerek", it = "Attraverso il Portale Oscuro", ja = "ダーク・ポータルの向こうへ", zh = "穿越黑暗之门", ko = "어둠의 문을 넘어" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_HellfirePeninsula_01"
+map = 530
+map_name = "Expansion01"
+area = 3483
+center = [-212.5, 1125.0]
+radius = 100.0
+map_bounds = [5539.58, 375.0, 1481.25, -1962.5]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 6.08
+gold_factor = 2.32
+late_factor = 0.4
+hour = 13
+weather = { fine = 90, sand = 10 }
+# Outland's first pair drops Uncommon, not its place's Common: a hero here holds Classic's
+# Common set already (2026-11-13). `TUNE`
+gear_rarity = "uncommon"
+# The Fel Reavers stalk it, as 3.3.5a has them here.
+fel_reavers = true
+
+[[zone.enemy]]
+entry = 3000
+name = { en = "Bonechewer Hungerer", de = "Hungerleider der Knochenmalmer", fr = "Affamé Mâche-os", es = "Hambriento Mascahuesos", pt = "Faminto Mascaossos", ru = "Голодный из клана Крушителей Костей", pl = "Głodomór z klanu Bonechewer", tr = "Kemik Çiğneyen Açgözlü", it = "Affamato Rodiossa", ja = "ボーンチューワーの飢えし者", zh = "噬骨饥饿者", ko = "뼈다귀씹개 굶주린 자" }
+type = "humanoid"
+display = 16324
+icon = "INV_Misc_Head_Orc_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.95
+
+[[zone.enemy]]
+entry = 3001
+name = { en = "Hellfire Imp", de = "Höllenfeuerwichtel", fr = "Diablotin des Flammes infernales", es = "Diablillo del Fuego Infernal", pt = "Diabrete do Fogo do Inferno", ru = "Бес Адского Пламени", pl = "Chochlik z Ognistej Pożogi", tr = "Cehennem Ateşi İmpi", it = "Imp del Fuoco Infernale", ja = "ヘルファイア・インプ", zh = "地狱火小鬼", ko = "지옥불 임프" }
+type = "demon"
+display = 16888
+icon = "Spell_Shadow_SummonImp"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.9
+
+[[zone.enemy]]
+entry = 3002
+name = { en = "Felhound", de = "Teufelshund", fr = "Gangrechien", es = "Sabueso vil", pt = "Cão Vil", ru = "Гончая Скверны", pl = "Ogar Zła", tr = "Fel Tazısı", it = "Vilsegugio", ja = "フェルハウンド", zh = "地狱犬", ko = "지옥사냥개" }
+type = "demon"
+display = 850
+icon = "Spell_Shadow_SummonFelHunter"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 1.6
+
+[[zone.enemy]]
+entry = 3003
+name = { en = "Shattered Hand Warlock", de = "Hexenmeister der Zerschmetterten Hand", fr = "Démoniste de la Main brisée", es = "Brujo de la Mano Destrozada", pt = "Bruxo da Mão Despedaçada", ru = "Чернокнижник из клана Сломанной Руки", pl = "Czarnoksiężnik Roztrzaskanej Dłoni", tr = "Parçalanmış El Kara Büyücüsü", it = "Stregone Mano Distrutta", ja = "シャッタード・ハンドのウォーロック", zh = "碎手术士", ko = "으스러진 손 흑마법사" }
+type = "humanoid"
+display = 16629
+icon = "INV_Misc_Head_Orc_02"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 35913, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3004
+name = { en = "Hellfire Boar", de = "Höllenfeuereber", fr = "Sanglier des Flammes infernales", es = "Jabalí del Fuego Infernal", pt = "Javali do Fogo do Inferno", ru = "Вепрь Адского Пламени", pl = "Dzik z Ognistej Pożogi", tr = "Cehennem Ateşi Yaban Domuzu", it = "Cinghiale del Fuoco Infernale", ja = "ヘルファイア・ボア", zh = "地狱火野猪", ko = "지옥불 멧돼지" }
+type = "beast"
+display = 11410
+icon = "Ability_Hunter_Pet_Boar"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.75
+
+[[zone.enemy]]
+entry = 3005
+name = { en = "Mo'arg Weaponsmith", de = "Waffenschmied der Mo'arg", fr = "Forgearmes mo'arg", es = "Armero mo'arg", pt = "Armeiro Mo'arg", ru = "Оружейник мо'аргов", pl = "Płatnerz Mo'arg", tr = "Mo'arg Silah Ustası", it = "Fabbro d'armi Mo'arg", ja = "モアーグの武器職人", zh = "莫尔格武器匠", ko = "모아그 무기제작자" }
+type = "demon"
+display = 17207
+icon = "Spell_Shadow_SummonInfernal"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.8
+
+[[zone.enemy]]
+entry = 3006
+name = { en = "Ravenous Vulture", de = "Gefräßiger Geier", fr = "Vautour vorace", es = "Buitre voraz", pt = "Abutre Voraz", ru = "Прожорливый стервятник", pl = "Żarłoczny sęp", tr = "Obur Akbaba", it = "Avvoltoio vorace", ja = "飢えたハゲワシ", zh = "贪婪的秃鹫", ko = "굶주린 대머리수리" }
+type = "beast"
+display = 16880
+icon = "Ability_Hunter_Pet_Vulture"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.8
+
+[[zone.enemy]]
+entry = 3007
+name = { en = "Bonechewer Shadowcaster", de = "Schattenzauberer der Knochenmalmer", fr = "Lance-ombre Mâche-os", es = "Lanzasombras Mascahuesos", pt = "Conjurador de Sombras Mascaossos", ru = "Чародей Тьмы из клана Крушителей Костей", pl = "Czarownik cienia z klanu Bonechewer", tr = "Kemik Çiğneyen Gölge Büyücüsü", it = "Lanciaombre Rodiossa", ja = "ボーンチューワー・シャドウキャスター", zh = "噬骨暗影施法者", ko = "뼈다귀씹개 그림자술사" }
+type = "humanoid"
+display = 16323
+icon = "INV_Misc_Head_Orc_02"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 1.05
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3008
+name = { en = "Infernal Warbringer", de = "Höllischer Kriegshetzer", fr = "Belliciste infernal", es = "Belicista infernal", pt = "Belicista Infernal", ru = "Адский поджигатель войны", pl = "Piekielny wojownik", tr = "Cehennemi Savaş Getiren", it = "Araldo di guerra infernale", ja = "インファーナル・ウォーブリンガー", zh = "地狱火战争使者", ko = "지옥불 전쟁인도자" }
+type = "demon"
+display = 16874
+icon = "Spell_Shadow_SummonInfernal"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.9
+
+[[zone.elite]]
+entry = 3010
+name = { en = "Shattered Hand Warlord", de = "Kriegsherr der Zerschmetterten Hand", fr = "Seigneur de guerre de la Main brisée", es = "Señor de la guerra de la Mano Destrozada", pt = "Senhor da Guerra da Mão Despedaçada", ru = "Полководец из клана Сломанной Руки", pl = "Wódz Roztrzaskanej Dłoni", tr = "Parçalanmış El Savaş Lordu", it = "Signore della guerra Mano Distrutta", ja = "シャッタード・ハンド・ウォーロード", zh = "碎手督军", ko = "으스러진 손 전쟁군주" }
+type = "humanoid"
+display = 21249
+icon = "INV_Misc_Head_Orc_01"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.elite]]
+entry = 3011
+name = { en = "Pit Commander", de = "Grubenkommandant", fr = "Commandant des Abîmes", es = "Comandante del foso", pt = "Comandante do Fosso", ru = "Командир Преисподней", pl = "Dowódca Dołu", tr = "Çukur Komutanı", it = "Comandante della Fossa", ja = "ピット・コマンダー", zh = "深渊指挥官", ko = "구덩이 사령관" }
+type = "demon"
+display = 16632
+icon = "Spell_Shadow_SummonInfernal"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.9
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { rain = { spell = 5740, count = 3, radius = 4.0, spread = 9.0, warn = 1.8, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite]]
+entry = 3012
+name = { en = "Fel Reaver Sentry", de = "Teufelshäscherwache", fr = "Sentinelle saccageuse gangrenée", es = "Centinela atracador vil", pt = "Sentinela Aniquiladora Vil", ru = "Страж-губитель Скверны", pl = "Wartownik Niszczyciela Zła", tr = "Fel Yağmacısı Nöbetçisi", it = "Sentinella Vildevastatore", ja = "フェルリーヴァーの歩哨", zh = "邪能收割者哨兵", ko = "지옥 절단기 보초" }
+type = "mechanical"
+display = 17205
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 0.55
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 3090
+name = { en = "Watchkeeper Gargolmar", de = "Wachhabender Gargolmar", fr = "Gardien Gargolmar", es = "Vigilante Gargolmar", pt = "Vigia Gargolmar", ru = "Хранитель Гарголмар", pl = "Strażnik Gargolmar", tr = "Gözcü Gargolmar", it = "Custode Gargolmar", ja = "見張り番ガーゴルマー", zh = "巡视者加戈玛", ko = "감시관 가르골마르" }
+type = "humanoid"
+display = 16475
+icon = "INV_Misc_Head_Orc_01"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.4
+minute = 4
+yell = { en = "Who dares trespass in the Citadel?", de = "Wer wagt es, in die Zitadelle einzudringen?", fr = "Qui ose pénétrer dans la Citadelle ?", es = "¿Quién osa entrar en la Ciudadela?", pt = "Quem ousa invadir a Cidadela?", ru = "Кто смеет вторгаться в Цитадель?", pl = "Kto śmie wkraczać do Cytadeli?", tr = "Kale'ye girmeye kim cüret eder?", it = "Chi osa violare la Cittadella?", ja = "シタデルに踏み入るのは何者だ？", zh = "是谁胆敢闯入城塞？", ko = "누가 감히 성채에 발을 들이느냐?" }
+kit = "watchkeeper_gargolmar"
+
+[[zone.boss]]
+entry = 3091
+name = { en = "Omor the Unscarred", de = "Omor der Narbenlose", fr = "Omor l'Intact", es = "Omor el Sincicatrices", pt = "Omor, o Sem-cicatrizes", ru = "Омор Неуязвимый", pl = "Omor Nieposzlakowany", tr = "Yarasız Omor", it = "Omor l'Illeso", ja = "傷なきオモール", zh = "无疤者奥摩尔", ko = "무적의 오모르" }
+type = "demon"
+display = 17542
+icon = "Achievement_Boss_OmarTheUnscarred_01"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.2
+minute = 8
+yell = { en = "Die, foolish mortal!", de = "Stirb, törichter Sterblicher!", fr = "Meurs, mortel insensé !", es = "¡Muere, mortal insensato!", pt = "Morra, mortal tolo!", ru = "Умри, глупый смертный!", pl = "Giń, głupi śmiertelniku!", tr = "Geber, aptal ölümlü!", it = "Muori, stolto mortale!", ja = "死ね、愚かな定命の者よ！", zh = "去死吧，愚蠢的凡人！", ko = "죽어라, 어리석은 필멸자여!" }
+kit = "omor_the_unscarred"
+
+[[zone.boss]]
+entry = 3092
+name = { en = "Nazan", de = "Nazan", fr = "Nazan", es = "Nazan", pt = "Nazan", ru = "Назан", pl = "Nazan", tr = "Nazan", it = "Nazan", ja = "ナザン", zh = "纳赞", ko = "나잔" }
+type = "dragonkin"
+display = 6371
+icon = "Ability_Mount_NetherDrakeElite"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.8
+minute = 12
+yell = { en = "Nazan descends from the burning sky!", de = "Nazan stürzt aus dem brennenden Himmel herab!", fr = "Nazan fond du ciel embrasé !", es = "¡Nazan desciende del cielo en llamas!", pt = "Nazan desce do céu em chamas!", ru = "Назан спускается с пылающего неба!", pl = "Nazan zstępuje z płonącego nieba!", tr = "Nazan yanan gökten iniyor!", it = "Nazan scende dal cielo in fiamme!", ja = "ナザンが燃える空から舞い降りてきた！", zh = "纳赞从燃烧的天空中降下！", ko = "나잔이 불타는 하늘에서 내려옵니다!" }
+kit = "nazan"
+
+[[zone.boss]]
+entry = 3093
+name = { en = "Keli'dan the Breaker", de = "Keli'dan der Zerstörer", fr = "Keli'dan le Briseur", es = "Keli'dan el Quebrantador", pt = "Keli'dan, o Destruidor", ru = "Кели'дан Разрушитель", pl = "Keli'dan Łamacz", tr = "Kıran Keli'dan", it = "Keli'dan il Distruttore", ja = "破壊者ケリダン", zh = "破坏者克里丹", ko = "파괴자 켈리단" }
+type = "humanoid"
+display = 16839
+icon = "Achievement_Boss_KelidanTheBreaker"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.2
+minute = 16
+yell = { en = "Your souls will feed the Legion!", de = "Eure Seelen werden die Legion nähren!", fr = "Vos âmes nourriront la Légion !", es = "¡Vuestras almas alimentarán a la Legión!", pt = "Suas almas alimentarão a Legião!", ru = "Ваши души напитают Легион!", pl = "Wasze dusze nakarmią Legion!", tr = "Ruhlarınız Lejyon'u besleyecek!", it = "Le vostre anime nutriranno la Legione!", ja = "貴様らの魂はリージョンの糧となる！", zh = "你们的灵魂将成为燃烧军团的食粮！", ko = "너희 영혼은 군단의 먹이가 되리라!" }
+kit = "kelidan_the_breaker"
+
+[[zone.boss]]
+entry = 2001
+name = { en = "Kargath Bladefist", de = "Kargath Messerfaust", fr = "Kargath Poing-de-lame", es = "Kargath Puñalada", pt = "Kargath Mão de Lâmina", ru = "Каргат Острорук", pl = "Kargath Ostrzepięść", tr = "Kargath Bıçakyumruk", it = "Kargath Pugno di Lama", ja = "カーガス・ブレードフィスト", zh = "卡加斯·刃拳", ko = "카르가스 블레이드피스트" }
+type = "humanoid"
+display = 17724
+icon = "Achievement_Boss_KargathBladefist_01"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.2
+minute = 20
+yell = { en = "The Shattered Hand will crush you!", de = "Die Zerschmetterte Hand wird euch zermalmen!", fr = "La Main brisée vous écrasera !", es = "¡La Mano Destrozada os aplastará!", pt = "A Mão Despedaçada vai esmagar vocês!", ru = "Сломанная Рука сокрушит вас!", pl = "Roztrzaskana Dłoń was zmiażdży!", tr = "Parçalanmış El sizi ezecek!", it = "La Mano Distrutta vi schiaccerà!", ja = "シャッタード・ハンドが貴様を叩き潰す！", zh = "碎手氏族会碾碎你们！", ko = "으스러진 손이 너희를 짓밟으리라!" }
+final = true
+kit = "kargath_bladefist"

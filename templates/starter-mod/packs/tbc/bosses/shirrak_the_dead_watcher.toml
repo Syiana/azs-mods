@@ -1,0 +1,20 @@
+# Shirrak the Dead Watcher: Focus Fire's Fiery Blasts, Carnivorous Bite, Attract Magic.
+
+[[boss]]
+key = "shirrak_the_dead_watcher"
+
+[[boss.kit]]
+every = 11.0
+ability = { trail = { spell = 32302, count = 4, radius = 5.0, warn = 1.6, gap = 0.8, factor = 1.8 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 36383, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.2 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { tether = { spell = 32265, reach = 16.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

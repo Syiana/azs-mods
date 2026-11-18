@@ -1,0 +1,20 @@
+# Stitches's abilities, Duskwood.
+
+[[boss]]
+key = "stitches"
+
+[[boss.kit]]
+every = 6.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 90.0, warn = 1.0, factor = 2.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { trail = { spell = 6524, count = 4, radius = 5.0, warn = 1.6, gap = 0.8, factor = 1.6 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { nova = { spell = 6343, radius = 9.0, warn = 1.8 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

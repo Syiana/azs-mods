@@ -1,0 +1,268 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "wrath"
+id = 5176
+visual = 910001
+vfx = { source = 5176, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.55 } }
+school = "nature"
+shape = { strike = { targets = 2 } }
+hit = 38
+cooldown = 1.2
+range = 30.0
+name = { en = "Wrath", de = "Zorn", fr = "Colère", es = "Cólera", pt = "Ira", ru = "Гнев", pl = "Gniew", tr = "Gazap", it = "Ira", ja = "ラース", zh = "愤怒", ko = "천벌" }
+icon = "Spell_Nature_AbolishMagic"
+
+[[spell]]
+key = "moonfire"
+id = 8921
+visual = 910002
+vfx = { source = 8921, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Magic_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "arcane"
+shape = { dot = { targets = 3, secs = 5.0, ticks = 2, cap = 1 } }
+hit = 72
+cooldown = 1.8
+range = 30.0
+name = { en = "Moonfire", de = "Mondfeuer", fr = "Éclat lunaire", es = "Fuego lunar", pt = "Fogo Lunar", ru = "Лунный огонь", pl = "Księżycowy ogień", tr = "Ay Ateşi", it = "Fuoco lunare", ja = "ムーンファイア", zh = "月火术", ko = "달빛섬광" }
+icon = "Spell_Nature_StarFall"
+
+[[spell]]
+key = "starfire"
+id = 2912
+visual = 910003
+vfx = { source = 2912, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Magic_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "arcane"
+shape = { strike = { targets = 1 } }
+hit = 136
+cooldown = 4.5
+range = 32.0
+name = { en = "Starfire", de = "Sternenfeuer", fr = "Feu stellaire", es = "Fuego estelar", pt = "Fogo Estelar", ru = "Звездный огонь", pl = "Gwiezdny ogień", tr = "Yıldız Ateşi", it = "Fuoco stellare", ja = "スターファイア", zh = "星火术", ko = "별빛 화살" }
+icon = "Spell_Arcane_StarFire"
+
+[[spell]]
+key = "hurricane"
+id = 16914
+visual = 910004
+vfx = { source = 16914, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { ground = { radius = 10.0, every = 1.0, secs = 8.0 } }
+hit = 34
+cooldown = 9.0
+range = 28.0
+rider = { slow = { pct = 40, secs = 1.5 } }
+# Its stock area model is a black glow on the ground under a storm cloud; widened with the area
+# (up to 4x) it hid the whole arena floor. The radius that hits and the rain keep the full area.
+look_widen_max = 1.5   # `TUNE`
+name = { en = "Hurricane", de = "Hurrikan", fr = "Ouragan", es = "Huracán", pt = "Furacão", ru = "Ураган", pl = "Huragan", tr = "Kasırga", it = "Uragano", ja = "ハリケーン", zh = "飓风", ko = "허리케인" }
+icon = "Spell_Nature_Cyclone"
+
+[[spell]]
+key = "insect_swarm"
+id = 5570
+visual = 910005
+vfx = { source = 5570, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.55 } }
+school = "nature"
+shape = { dot = { targets = 3, secs = 6.0, ticks = 2, cap = 1 } }
+hit = 69
+cooldown = 2.5
+range = 28.0
+rider = { weaken = { pct = 15, secs = 12.0 } }
+name = { en = "Insect Swarm", de = "Insektenschwarm", fr = "Essaim d'insectes", es = "Enjambre de insectos", pt = "Enxame de Insetos", ru = "Рой насекомых", pl = "Rój owadów", tr = "Böcek Sürüsü", it = "Sciame d'insetti", ja = "インセクト・スウォーム", zh = "虫群", ko = "곤충 떼" }
+icon = "Spell_Nature_InsectSwarm"
+
+[[spell]]
+key = "entangling_roots"
+id = 339
+visual = 910006
+vfx = { source = 339, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { strike = { targets = 3 } }
+hit = 29
+cooldown = 5.0
+range = 25.0
+rider = { root = { secs = 3.0 } }
+name = { en = "Entangling Roots", de = "Wucherwurzeln", fr = "Sarments", es = "Raíces enredadoras", pt = "Raízes Enredantes", ru = "Гнев деревьев", pl = "Pnącza", tr = "Dolaşan Kökler", it = "Radici intrappolanti", ja = "エンタングリング・ルーツ", zh = "纠缠根须", ko = "휘감는 뿌리" }
+icon = "Spell_Nature_StrangleVines"
+
+[[spell]]
+key = "rejuvenation"
+id = 774
+visual = 910007
+vfx = { source = 774, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Rejuvenation_Impact_Base.mdx", slot = "base", scale = 0.6 } }
+school = "nature"
+shape = { heal = { share = 30, secs = 12.0 } }
+hit = 0
+cooldown = 8.0
+range = 0.0
+name = { en = "Rejuvenation", de = "Verjüngung", fr = "Récupération", es = "Rejuvenecimiento", pt = "Rejuvenescimento", ru = "Омоложение", pl = "Odmłodzenie", tr = "Gençleşme", it = "Rinvigorimento", ja = "リジュヴェネーション", zh = "回春术", ko = "회복" }
+icon = "Spell_Nature_Rejuvenation"
+
+[[spell]]
+key = "regrowth"
+id = 8936
+visual = 910008
+vfx = { source = 8936, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Rejuvenation_Impact_Base.mdx", slot = "base", scale = 0.6 } }
+school = "nature"
+shape = { heal = { share = 42, secs = 0.0 } }
+hit = 0
+cooldown = 14.0
+range = 0.0
+name = { en = "Regrowth", de = "Nachwachsen", fr = "Rétablissement", es = "Recrecimiento", pt = "Recrescimento", ru = "Восстановление", pl = "Odrost", tr = "Yeniden Büyüme", it = "Ricrescita", ja = "リグロウス", zh = "愈合", ko = "재생" }
+icon = "Spell_Nature_ResistNature"
+
+[[spell]]
+key = "thorns"
+id = 467
+visual = 910009
+vfx = { source = 467, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { thorns = { secs = 20.0 } }
+hit = 24
+cooldown = 20.0
+range = 30.0
+name = { en = "Thorns", de = "Dornen", fr = "Épines", es = "Espinas", pt = "Espinhos", ru = "Шипы", pl = "Ciernie", tr = "Dikenler", it = "Spine", ja = "ソーン", zh = "荆棘术", ko = "가시" }
+icon = "Spell_Nature_Thorns"
+
+# TUNE 2026-11-09 (cat feedback): reach 7 -> 10 (the nova's radius and the range it casts at).
+[[spell]]
+key = "swipe"
+id = 779
+visual = 910010
+# The cast kit's base slot and the impact kit's chest slot hold its own effects; the accent takes the impact kit's free base slot.
+vfx = { source = 779, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "base", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 10.0 } }
+hit = 13
+cooldown = 3.0
+range = 10.0
+name = { en = "Swipe", de = "Prankenhieb", fr = "Balayage", es = "Vapuleo", pt = "Golpe Giratório", ru = "Взмах", pl = "Smagnięcie", tr = "Pençe Darbesi", it = "Spazzata", ja = "スワイプ", zh = "横扫", ko = "휘둘러치기" }
+icon = "INV_Misc_MonsterClaw_03"
+
+# TUNE 2026-11-09 (cat feedback): reach 7 -> 10, hit 105 -> 115, cooldown 2 -> 4 s.
+[[spell]]
+key = "shred"
+id = 5221
+visual = 910011
+vfx = { source = 5221, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 115
+cooldown = 4.0
+range = 10.0
+name = { en = "Shred", de = "Schreddern", fr = "Lambeau", es = "Triturar", pt = "Dilacerar", ru = "Полоснуть", pl = "Rozszarpanie", tr = "Parçala", it = "Dilaniare", ja = "シュレッド", zh = "撕碎", ko = "칼날 발톱" }
+icon = "Spell_Shadow_VampiricAura"
+
+[[spell]]
+key = "faerie_fire"
+id = 770
+visual = 910012
+vfx = { source = 770, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.55 } }
+school = "nature"
+shape = { proc = { kind = "arcs", radius = 8.0 } }
+hit = 200
+cooldown = 1.0
+range = 30.0
+name = { en = "Faerie Fire", de = "Feenfeuer", fr = "Lucioles", es = "Fuego feérico", pt = "Fogo Feérico", ru = "Волшебный огонь", pl = "Magiczny ogień", tr = "Peri Ateşi", it = "Fuoco fatato", ja = "フェアリー・ファイア", zh = "精灵之火", ko = "요정의 불꽃" }
+icon = "Spell_Nature_FaerieFire"
+
+# Wrath of the Lich King.
+[[spell]]
+key = "starfall"
+id = 48505
+visual = 910013
+vfx = { source = 48505, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Magic_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "arcane"
+shape = { missiles = { count = 8 } }
+hit = 31
+cooldown = 15.0
+range = 30.0
+name = { en = "Starfall", de = "Sternenregen", fr = "Chute d'étoiles", es = "Lluvia de estrellas", pt = "Chuva de Estrelas", ru = "Звездопад", pl = "Gwiezdny deszcz", tr = "Yıldız Düşüşü", it = "Pioggia di stelle", ja = "スターフォール", zh = "星辰坠落", ko = "별똥별" }
+icon = "Ability_Druid_Starfall"
+
+[[spell]]
+key = "typhoon"
+id = 50516
+visual = 910014
+vfx = { source = 50516, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { cone = { length = 12.0 } }
+hit = 56
+cooldown = 8.0
+range = 12.0
+rider = { flee = { secs = 1.5 } }
+name = { en = "Typhoon", de = "Taifun", fr = "Typhon", es = "Tifón", pt = "Tufão", ru = "Тайфун", pl = "Tajfun", tr = "Tayfun", it = "Tifone", ja = "タイフーン", zh = "台风", ko = "태풍" }
+icon = "Ability_Druid_Typhoon"
+
+[[spell]]
+key = "wild_growth"
+id = 48438
+visual = 910015
+vfx = { source = 48438, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Rejuvenation_Impact_Base.mdx", slot = "base", scale = 0.6 } }
+school = "nature"
+shape = { heal = { share = 25, secs = 7.0 } }
+hit = 0
+cooldown = 10.0
+range = 0.0
+tags = ["group_heal"]
+name = { en = "Wild Growth", de = "Wildwuchs", fr = "Croissance sauvage", es = "Crecimiento salvaje", pt = "Crescimento Selvagem", ru = "Буйный рост", pl = "Dziki wzrost", tr = "Vahşi Büyüme", it = "Crescita selvaggia", ja = "ワイルド・グロウス", zh = "野性成长", ko = "급속 성장" }
+icon = "Ability_Druid_Flourish"
+
+[[spell]]
+key = "mangle"
+id = 33878
+visual = 910016
+vfx = { source = 33878, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 77
+cooldown = 3.0
+range = 6.0
+name = { en = "Mangle", de = "Zerfleischen", fr = "Mutiler", es = "Destrozar", pt = "Mutilar", ru = "Увечье", pl = "Okaleczenie", tr = "Sakatla", it = "Maciullare", ja = "マングル", zh = "裂伤", ko = "짓이기기" }
+icon = "Ability_Druid_Mangle2"
+
+[[spell]]
+key = "lacerate"
+id = 33745
+visual = 910017
+# The cast kit's base slot and the impact kit's chest slot hold its own effects; the accent takes the impact kit's free base slot.
+vfx = { source = 33745, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "base", scale = 0.55 } }
+school = "physical"
+shape = { dot = { targets = 1, secs = 15.0, ticks = 5, cap = 5 } }
+hit = 56
+cooldown = 2.0
+range = 6.0
+name = { en = "Lacerate", de = "Aufschlitzen", fr = "Lacérer", es = "Lacerar", pt = "Lacerar", ru = "Растерзать", pl = "Rozcięcie", tr = "Yırt", it = "Lacerazione", ja = "ラセレイト", zh = "割伤", ko = "가르기" }
+icon = "Ability_Druid_Lacerate"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "berserk"
+id = 50334
+visual = 910018
+vfx = { source = 50334, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { fury = { pct = 30, secs = 10.0 } }
+hit = 0
+cooldown = 30.0
+range = 30.0
+name = { en = "Berserk", de = "Berserker", fr = "Berserker", es = "Berserker", pt = "Berserker", ru = "Берсерк", pl = "Berserk", tr = "Çılgınlık", it = "Berserk", ja = "バーサーク", zh = "狂暴", ko = "광포화" }
+icon = "Ability_Druid_Berserk"
+
+[[spell]]
+key = "barkskin"
+id = 22812
+visual = 910019
+vfx = { source = 22812, cast = { model = "spells/wrath_precast_hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "spells/wrath_impact_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { shield = { share = 30 } }
+hit = 0
+cooldown = 14.0
+range = 0.0
+name = { en = "Barkskin", de = "Baumrinde", fr = "Ecorce", es = "Piel de corteza", pt = "Pele de Árvore", ru = "Дубовая кожа", pl = "Kora", tr = "Ağaç Kabuğu", it = "Pelle coriacea", ja = "バークスキン", zh = "树皮术", ko = "나무 껍질" }
+icon = "Spell_Nature_StoneClawTotem"

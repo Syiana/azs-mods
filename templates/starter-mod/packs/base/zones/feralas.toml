@@ -1,0 +1,298 @@
+# Feralas, "The Gates of Dire Maul".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "feralas"
+order = 5
+name = { en = "Feralas", de = "Feralas", fr = "Féralas", es = "Feralas", pt = "Feralas", ru = "Фералас", pl = "Feralas", tr = "Feralas", it = "Feralas", ja = "フェララス", zh = "菲拉斯", ko = "페랄라스" }
+subtitle = { en = "The Gates of Dire Maul", de = "Die Tore von Düsterbruch", fr = "Les portes de Hache-tripes", es = "Las puertas de La Masacre", pt = "Os Portões do Gládio Cruel", ru = "Врата Забытого города", pl = "Wrota Dire Maul", tr = "Dire Maul Kapıları", it = "I Cancelli di Maglio Infausto", ja = "ダイア・モールの門", zh = "厄运之槌之门", ko = "혈투의 전장 관문" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Feralas"
+map = 1
+map_name = "Kalimdor"
+area = 357
+center = [-4680.0, 1300.0]
+radius = 100.0
+map_bounds = [5441.67, -1508.33, -2366.67, -7000.0]
+health_factor = 2.05
+gold_factor = 1.55
+late_factor = 0.0
+hour = 8
+weather = { fine = 75, rain = 25 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = -10.0
+pitch = 26.0
+distance = 16.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 800
+name = { en = "Woodpaw Mongrel", de = "Mischling der Waldpfoten", fr = "Bâtard Patte-des-bois", es = "Mestizo Zarpasilvestre", pt = "Vira-lata Pata do Bosque", ru = "Дворняга Лесных Лап", pl = "Kundel z Woodpaw", tr = "Odunpençe Melezi", it = "Bastardo Zampalegno", ja = "ウッドポー・モングレル", zh = "木爪杂种狗", ko = "나무발톱 잡종" }
+type = "humanoid"
+display = 355
+icon = "INV_Misc_Head_Gnoll_01"
+health = 28
+damage = 4
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 801
+name = { en = "Longtooth Runner", de = "Langzahnläufer", fr = "Coureur Longues-dents", es = "Corredor Dientelargo", pt = "Corredor Dente Longo", ru = "Бегун-длиннозуб", pl = "Biegacz Longtooth", tr = "Uzundiş Koşucusu", it = "Corridore Dentelungo", ja = "ロングトゥース・ランナー", zh = "长牙奔跑者", ko = "긴송곳니 질주자" }
+type = "beast"
+display = 165
+icon = "Ability_Hunter_Pet_Wolf"
+health = 24
+damage = 5
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.6
+size = 0.9
+
+[[zone.enemy]]
+entry = 802
+name = { en = "Sprite Darter", de = "Feendrachenflitzer", fr = "Libellule fée", es = "Libélula hada", pt = "Libélula-fada", ru = "Стрекоза-фея", pl = "Szlifierz iskrzący", tr = "Peri Yusufçuğu", it = "Libellula folletto", ja = "スプライト・ダーター", zh = "小精灵龙", ko = "요정용" }
+type = "dragonkin"
+display = 1267
+icon = "Ability_Hunter_Pet_Moth"
+health = 22
+damage = 5
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.8
+
+[[zone.enemy]]
+entry = 803
+name = { en = "Woodpaw Mystic", de = "Mystiker der Waldpfoten", fr = "Mystique Patte-des-bois", es = "Místico Zarpasilvestre", pt = "Místico Pata do Bosque", ru = "Мистик Лесных Лап", pl = "Mistyk z Woodpaw", tr = "Odunpençe Mistiği", it = "Mistico Zampalegno", ja = "ウッドポー・ミスティック", zh = "木爪秘法师", ko = "나무발톱 신비술사" }
+type = "humanoid"
+display = 491
+icon = "INV_Misc_Head_Gnoll_01"
+health = 36
+damage = 7
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9532, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 804
+name = { en = "Gordunni Ogre", de = "Gordunnioger", fr = "Ogre Gordunni", es = "Ogro Gordunni", pt = "Ogro Gordunni", ru = "Огр Гордунни", pl = "Ogr z Gordunni", tr = "Gordunni Ogresi", it = "Ogre Gordunni", ja = "ゴードゥニ・オーガ", zh = "戈杜尼食人魔", ko = "고르둔니 오우거" }
+type = "humanoid"
+display = 415
+icon = "Achievement_Reputation_Ogre"
+health = 75
+damage = 9
+swing = 2.0
+speed = 5.0
+cost = 2.0
+from = 3.0
+
+[[zone.enemy]]
+entry = 805
+name = { en = "Wildspawn Satyr", de = "Satyr der Wildbrut", fr = "Satyre de la Couvée sauvage", es = "Sátiro Cría Salvaje", pt = "Sátiro Cria Selvagem", ru = "Сатир Дикого Отродья", pl = "Satyr Wildspawn", tr = "Yabansoy Satiri", it = "Satiro Prole Selvaggia", ja = "ワイルドスポーン・サテュロス", zh = "野性萨特", ko = "야생종 사티로스" }
+type = "demon"
+display = 2013
+icon = "Spell_Shadow_SummonFelHunter"
+health = 50
+damage = 8
+swing = 1.6
+speed = 6.2
+cost = 1.5
+from = 4.0
+
+[[zone.enemy]]
+entry = 806
+name = { en = "Ironfur Bear", de = "Eisenpelzbär", fr = "Ours Poil-de-fer", es = "Oso Pelohierro", pt = "Urso Pelo de Ferro", ru = "Медведь Железной Шерсти", pl = "Niedźwiedź Ironfur", tr = "Demirtüy Ayısı", it = "Orso Pelleferro", ja = "アイアンファー・ベア", zh = "铁毛熊", ko = "무쇠털 곰" }
+type = "beast"
+display = 820
+icon = "Ability_Hunter_Pet_Bear"
+health = 160
+damage = 12
+swing = 2.2
+speed = 4.8
+cost = 3.0
+from = 5.5
+
+[[zone.enemy]]
+entry = 807
+name = { en = "Gordunni Ogre-Mage", de = "Gordunniogermagier", fr = "Ogre-mage Gordunni", es = "Ogro mago Gordunni", pt = "Ogro-Mago Gordunni", ru = "Огр-маг Гордунни", pl = "Ogr-mag z Gordunni", tr = "Gordunni Ogre Büyücüsü", it = "Ogre mago Gordunni", ja = "ゴードゥニ・オーガメイジ", zh = "戈杜尼食人魔法师", ko = "고르둔니 오우거 마법사" }
+type = "humanoid"
+display = 3250
+icon = "Achievement_Reputation_Ogre"
+health = 55
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 808
+name = { en = "Feral Scar Yeti", de = "Yeti der Wildnarben", fr = "Yéti Balafre-sauvage", es = "Yeti Cicatriz Salvaje", pt = "Yeti Cicatriz Selvagem", ru = "Йети Дикого Шрама", pl = "Yeti Feral Scar", tr = "Vahşi İzli Yeti", it = "Yeti Cicatrice Ferale", ja = "フェラル・スカー・イエティ", zh = "野疤雪人", ko = "야생 흉터 예티" }
+type = "beast"
+display = 1076
+icon = "Ability_Hunter_Pet_Gorilla"
+health = 200
+damage = 14
+swing = 2.4
+speed = 4.6
+cost = 3.5
+from = 9.0
+size = 1.3
+
+[[zone.elite]]
+entry = 809
+name = { en = "Gordunni Brute", de = "Gordunnirohling", fr = "Brute Gordunni", es = "Bruto Gordunni", pt = "Bruto Gordunni", ru = "Громила Гордунни", pl = "Brutal z Gordunni", tr = "Gordunni Vahşisi", it = "Bruto Gordunni", ja = "ゴードゥニ・ブルート", zh = "戈杜尼蛮兵", ko = "고르둔니 야수" }
+type = "humanoid"
+display = 10170
+icon = "Achievement_Reputation_Ogre"
+health = 750
+damage = 22
+swing = 2.0
+speed = 5.4
+cost = 12.0
+from = 4.0
+size = 1.6
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 810
+name = { en = "Warpwood Treant", de = "Wucherborkentreant", fr = "Treant Tordubois", es = "Ent Maderaviciada", pt = "Treant Madeira Retorcida", ru = "Древень Криводрева", pl = "Drzewiec Warpwood", tr = "Çarpıkağaç Ağaç Evladı", it = "Ent Legnotorto", ja = "ワープウッド・トレント", zh = "扭木树人", ko = "굽이나무 정령" }
+type = "elemental"
+display = 2078
+icon = "Ability_Druid_ForceofNature"
+health = 950
+damage = 26
+swing = 2.4
+speed = 4.4
+cost = 13.0
+from = 8.5
+size = 1.4
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { pool = { spell = 0, burst = 339, radius = 5.0, warn = 1.6, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { stomp = { spell = 20549, radius = 6.0, warn = 1.6, knock = 8.0 } }
+
+[[zone.elite]]
+entry = 811
+name = { en = "Ironbark Protector", de = "Eisenborkenbeschützer", fr = "Protecteur Écorce-de-fer", es = "Protector Corteza de Hierro", pt = "Protetor Casca de Ferro", ru = "Защитник Железной Коры", pl = "Obrońca Ironbark", tr = "Demirkabuk Koruyucusu", it = "Protettore Corteccia di Ferro", ja = "アイアンバーク・プロテクター", zh = "铁木保护者", ko = "무쇠껍질 수호자" }
+type = "elemental"
+display = 860
+icon = "Ability_Druid_ForceofNature"
+health = 1150
+damage = 30
+swing = 2.6
+speed = 4.4
+cost = 15.0
+from = 13.0
+size = 0.63
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { pool = { spell = 0, burst = 339, radius = 5.0, warn = 1.6, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { stomp = { spell = 20549, radius = 6.0, warn = 1.6, knock = 8.0 } }
+
+[[zone.boss]]
+entry = 890
+name = { en = "Zevrim Thornhoof", de = "Zevrim Dornhuf", fr = "Zevrim Sabot-d'épine", es = "Zevrim Pezuñespina", pt = "Zevrim Casco Espinhoso", ru = "Зеврим Терновое Копыто", pl = "Zevrim Cierniopyt", tr = "Zevrim Dikentoynak", it = "Zevrim Zoccolospina", ja = "ゼヴリム・ソーンフーフ", zh = "瑟雷姆·刺蹄", ko = "제브림 쏜후프" }
+type = "demon"
+display = 11346
+icon = "Spell_Shadow_SummonFelHunter"
+health = 3800
+damage = 24
+speed = 5.8
+minute = 4
+yell = { en = "Your blood will feed the forest's corruption!", de = "Euer Blut wird die Verderbnis des Waldes nähren!", fr = "Ton sang nourrira la corruption de la forêt !", es = "¡Tu sangre alimentará la corrupción del bosque!", pt = "Seu sangue alimentará a corrupção da floresta!", ru = "Твоя кровь напитает порчу леса!", pl = "Wasza krew nakarmi skażenie lasu!", tr = "Kanınız ormanın yozlaşmasını besleyecek!", it = "Il tuo sangue nutrirà la corruzione della foresta!", ja = "貴様の血が森の腐敗の糧となる！", zh = "你的鲜血将滋养森林的腐化！", ko = "네 피가 숲의 타락을 살찌우리라!" }
+kit = "zevrim_thornhoof"
+
+[[zone.boss]]
+entry = 891
+name = { en = "Alzzin the Wildshaper", de = "Alzzin der Wildformer", fr = "Alzzin le Façonneur sauvage", es = "Alzzin el Formaferal", pt = "Alzzin, o Moldador Selvagem", ru = "Альзин Перевертыш", pl = "Alzzin Zmiennokształtny", tr = "Yaban Biçimleyen Alzzin", it = "Alzzin il Modellaselvaggio", ja = "野生を形作る者アルジン", zh = "塑形者奥兹恩", ko = "야생변환자 알진" }
+type = "demon"
+display = 14416
+icon = "Spell_Shadow_SummonFelHunter"
+health = 9400
+damage = 32
+speed = 6.0
+size = 1.4399999
+minute = 7
+yell = { en = "The wilds will consume you!", de = "Die Wildnis wird euch verschlingen!", fr = "La nature sauvage te dévorera !", es = "¡Lo salvaje te consumirá!", pt = "A natureza selvagem vai consumir você!", ru = "Дикая природа поглотит тебя!", pl = "Dzicz was pochłonie!", tr = "Yaban sizi yutacak!", it = "La natura selvaggia vi divorerà!", ja = "荒野が貴様を飲み込むだろう！", zh = "荒野会吞噬你！", ko = "야생이 너를 집어삼키리라!" }
+kit = "alzzin_the_wildshaper"
+
+[[zone.boss]]
+entry = 892
+name = { en = "Tendris Warpwood", de = "Tendris Wucherborke", fr = "Tendris Tordubois", es = "Tendris Maderaviciada", pt = "Tendris Madeira Retorcida", ru = "Тендрис Криводрев", pl = "Tendris Warpwood", tr = "Tendris Çarpıkağaç", it = "Tendris Legnotorto", ja = "テンドリス・ワープウッド", zh = "特迪斯·扭木", ko = "텐드리스 워프우드" }
+type = "elemental"
+display = 14383
+icon = "Ability_Druid_ForceofNature"
+health = 18000
+damage = 40
+speed = 4.8
+size = 0.85
+minute = 11
+yell = { en = "Who disturbs the Warpwood?", de = "Wer stört die Wucherborke?", fr = "Qui dérange le Bois-tordu ?", es = "¿Quién perturba a la Maderaviciada?", pt = "Quem perturba a Madeira Retorcida?", ru = "Кто тревожит Криводрев?", pl = "Kto zakłóca spokój Warpwood?", tr = "Çarpıkağaç'ı kim rahatsız ediyor?", it = "Chi disturba i Legnotorto?", ja = "ワープウッドを騒がすのは誰だ？", zh = "是谁打扰了扭木林？", ko = "누가 굽이나무를 어지럽히느냐?" }
+kit = "tendris_warpwood"
+
+[[zone.boss]]
+entry = 893
+name = { en = "Immol'thar", de = "Immol'thar", fr = "Immol'thar", es = "Immol'thar", pt = "Immol'thar", ru = "Иммол'тар", pl = "Immol'thar", tr = "Immol'thar", it = "Immol'thar", ja = "イモルサー", zh = "伊莫塔尔", ko = "이몰타르" }
+type = "demon"
+display = 14173
+icon = "Spell_Shadow_SummonFelHunter"
+health = 30000
+damage = 48
+speed = 5.6
+size = 1.1999999
+minute = 14
+yell = { en = "Immol'thar breaks free of its prison!", de = "Immol'thar bricht aus seinem Gefängnis aus!", fr = "Immol'thar se libère de sa prison !", es = "¡Immol'thar se libera de su prisión!", pt = "Immol'thar se liberta da sua prisão!", ru = "Иммол'тар вырывается из своей тюрьмы!", pl = "Immol'thar uwalnia się z więzienia!", tr = "Immol'thar hapishanesinden kurtuluyor!", it = "Immol'thar si libera dalla sua prigione!", ja = "イモルサーが牢獄から解き放たれた！", zh = "伊莫塔尔挣脱了牢笼！", ko = "이몰타르가 감옥을 부수고 풀려납니다!" }
+kit = "immolthar"
+
+[[zone.boss]]
+entry = 894
+name = { en = "King Gordok", de = "König Gordok", fr = "Roi Gordok", es = "Rey Gordok", pt = "Rei Gordok", ru = "Король Гордок", pl = "Król Gordok", tr = "Kral Gordok", it = "Re Gordok", ja = "ゴードク王", zh = "戈多克大王", ko = "왕 고르독" }
+type = "humanoid"
+display = 11583
+icon = "Achievement_Reputation_Ogre"
+health = 56250
+damage = 58
+speed = 6.0
+size = 1.2857143
+minute = 18
+yell = { en = "Me smash! You die!", de = "Ich zerschmettern! Du sterben!", fr = "Moi écraser ! Toi mourir !", es = "¡Yo aplastar! ¡Tú morir!", pt = "Eu esmagar! Você morrer!", ru = "Я крушить! Ты умирать!", pl = "Ja rozwalić! Ty umrzeć!", tr = "Ben ezer! Sen ölür!", it = "Io spaccare! Tu morire!", ja = "オレ、潰す！オマエ、死ぬ！", zh = "我砸！你死！", ko = "나 부숴! 너 죽어!" }
+final = true
+kit = "king_gordok"

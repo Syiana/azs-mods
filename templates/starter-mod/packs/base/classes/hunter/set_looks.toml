@@ -1,0 +1,60 @@
+# The hunter's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Tracker's") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Beaststalker's pieces: Beaststalker Armor, tier 0 (ItemSet 186).
+[[set_look]]
+key = "hunter_uncommon"
+rarity = 1
+pieces = [
+    [0, 31410, 1, "Helmet_24"], [1, 31409, 3, "Shoulder_10"],
+    [2, 31402, 5, "Chest_Chain_03"], [3, 31404, 6, "Belt_28"],
+    [4, 31403, 7, "Pants_03"], [5, 31408, 8, "Boots_Plate_07"],
+    [6, 31405, 9, "Bracer_17"], [7, 31406, 10, "Gauntlets_10"],
+]
+
+# Giantstalker's pieces: Giantstalker Armor, tier 1 (ItemSet 206).
+[[set_look]]
+key = "hunter_rare"
+rarity = 2
+pieces = [
+    [0, 32028, 1, "Helmet_05"], [1, 32030, 3, "Shoulder_10"],
+    [2, 32022, 5, "Chest_Chain_03"], [3, 32019, 6, "Belt_28"],
+    [4, 32029, 7, "Pants_Mail_03"], [5, 32040, 8, "Boots_Chain_13"],
+    [6, 32021, 9, "Bracer_17"], [7, 32024, 10, "Gauntlets_10"],
+]
+
+# Dragonstalker's pieces: Dragonstalker Armor, tier 2 (ItemSet 215).
+[[set_look]]
+key = "hunter_epic"
+rarity = 3
+pieces = [
+    [0, 34367, 1, "Helmet_05"], [1, 34091, 3, "Shoulder_10"],
+    [2, 33667, 5, "Chest_Chain_03"], [3, 33665, 6, "Belt_28"],
+    [4, 33672, 7, "Pants_03"], [5, 34269, 8, "Boots_Plate_07"],
+    [6, 33666, 9, "Bracer_17"], [7, 33668, 10, "Gauntlets_10"],
+]
+
+# Cryptstalker pieces: Cryptstalker Armor, tier 3 (ItemSet 530).
+[[set_look]]
+key = "hunter_legendary"
+rarity = 4
+pieces = [
+    [0, 35601, 1, "Helmet_15"], [1, 35611, 3, "Shoulder_14"],
+    [2, 35415, 5, "Chest_Chain_15"], [3, 35410, 6, "Belt_22"],
+    [4, 35413, 7, "Pants_Mail_15"], [5, 35409, 8, "Boots_Chain_05"],
+    [6, 35416, 9, "Bracer_02"], [7, 35411, 10, "Gauntlets_25"],
+]
+
+# Field Marshal's pieces: Field Marshal's Pursuit, the Alliance's rank 13 PvP set (ItemSet 395).
+[[set_look]]
+key = "hunter_pvp"
+rarity = 5
+pieces = [
+    [0, 32093, 1, "Helmet_05"], [1, 32092, 3, "Shoulder_10"],
+    [2, 32094, 5, "Chest_Chain_03"], [4, 32097, 7, "Pants_Mail_17"],
+    [5, 32095, 8, "Boots_Plate_07"], [7, 32098, 10, "Gauntlets_10"],
+]

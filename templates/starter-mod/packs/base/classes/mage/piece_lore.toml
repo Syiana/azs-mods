@@ -1,0 +1,43 @@
+# The mage's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "mage_0"
+profile = 0
+text = { en = "Arcane runes sharpen every spell.", de = "Arkane Runen schärfen jeden Zauber.", fr = "Des runes des arcanes aiguisent chaque sort.", es = "Las runas arcanas afilan cada hechizo.", pt = "Runas arcanas aguçam cada feitiço.", ru = "Чародейские руны оттачивают каждое заклинание.", pl = "Tajemne runy wyostrzają każde zaklęcie.", tr = "Arkan rünler her büyüyü keskinleştirir.", it = "Le rune arcane affilano ogni incantesimo.", ja = "秘術のルーンがあらゆる呪文を研ぎ澄ます。", zh = "奥术符文使每个法术更加锋锐。", ko = "비전 룬이 모든 주문을 날카롭게 벼린다." }
+
+[[piece_lore]]
+key = "mage_1"
+profile = 1
+text = { en = "Its threads hold a ward of frost.", de = "Seine Fäden bergen einen Schutz aus Frost.", fr = "Ses fils retiennent une protection de givre.", es = "Sus hilos guardan una protección de escarcha.", pt = "Seus fios guardam uma proteção de gelo.", ru = "Его нити хранят ледяной оберег.", pl = "Jego nici kryją osłonę z mrozu.", tr = "İplikleri bir ayaz koruması taşır.", it = "Le sue trame custodiscono una protezione di gelo.", ja = "その糸には冷気の守りが宿る。", zh = "其丝线中蕴藏着冰霜结界。", ko = "그 실에는 냉기의 수호가 깃들어 있다." }
+
+[[piece_lore]]
+key = "mage_2"
+profile = 2
+text = { en = "Its weave hastens the next spell.", de = "Sein Gewebe beschleunigt den nächsten Zauber.", fr = "Sa trame hâte le sort suivant.", es = "Su tejido acelera el siguiente hechizo.", pt = "Sua trama acelera o próximo feitiço.", ru = "Его плетение ускоряет следующее заклинание.", pl = "Jego splot przyspiesza kolejne zaklęcie.", tr = "Dokusu sonraki büyüyü hızlandırır.", it = "La sua trama accelera il prossimo incantesimo.", ja = "その織り目が次の呪文を早める。", zh = "其织纹能加快下一个法术。", ko = "그 짜임새가 다음 주문을 재촉한다." }
+
+[[piece_lore]]
+key = "mage_3"
+profile = 3
+text = { en = "Lighter than air, and precise as a blink.", de = "Leichter als Luft und präzise wie ein Blinzeln.", fr = "Plus léger que l'air, et précis comme un transfert.", es = "Más ligero que el aire y preciso como un traslado.", pt = "Mais leve que o ar, e preciso como um teleporte.", ru = "Легче воздуха и точен, как скачок.", pl = "Lżejsze od powietrza i precyzyjne jak mrugnięcie.", tr = "Havadan hafif, bir göz kırpması kadar kesin.", it = "Più leggero dell'aria, preciso come un battito di ciglia.", ja = "空気より軽く、ブリンクのように正確。", zh = "轻若无物，精准如闪现。", ko = "공기보다 가볍고, 점멸처럼 정확하다." }
+
+[[piece_lore]]
+key = "mage_4"
+profile = 4
+text = { en = "The arcane mends its wearer between spells.", de = "Die Arkanen heilen seinen Träger zwischen den Zaubern.", fr = "Les arcanes soignent son porteur entre deux sorts.", es = "Lo arcano repara a quien lo lleva entre hechizos.", pt = "O arcano cura quem o usa entre um feitiço e outro.", ru = "Тайная магия исцеляет владельца между заклинаниями.", pl = "Magia leczy noszącego między zaklęciami.", tr = "Arkan güç, büyüler arasında giyenini iyileştirir.", it = "L'arcano cura chi lo indossa tra un incantesimo e l'altro.", ja = "秘術が呪文の合間に持ち主を癒やす。", zh = "奥术之力在施法间隙治愈其穿戴者。", ko = "비전이 주문 사이사이 착용자를 치유한다." }
+
+[[piece_lore]]
+key = "mage_5"
+profile = 5
+text = { en = "Enchanted to endure what would fell lesser magi.", de = "Verzaubert, um zu überstehen, was geringere Magier fällen würde.", fr = "Enchanté pour endurer ce qui terrasserait des mages moindres.", es = "Encantado para soportar lo que derribaría a magos menores.", pt = "Encantado para aguentar o que derrubaria magos menores.", ru = "Зачаровано выдерживать то, что свалило бы магов послабее.", pl = "Zaklęte, by wytrzymać to, co powaliłoby słabszych magów.", tr = "Daha zayıf büyücüleri yere serecek şeye dayanmak için büyülenmiş.", it = "Incantato per resistere a ciò che abbatterebbe maghi minori.", ja = "並の魔術師なら倒れる力にも耐えるよう魔法がかけられている。", zh = "附有魔法，能承受足以击倒寻常法师的打击。", ko = "평범한 마법사라면 쓰러졌을 것도 견디도록 마법이 부여되었다." }
+
+[[piece_lore]]
+key = "mage_6"
+profile = 6
+text = { en = "Spells loosed on the move, and loosed hard.", de = "Zauber in der Bewegung entfesselt, und zwar mit Wucht.", fr = "Des sorts lancés en mouvement, et lancés fort.", es = "Hechizos lanzados en movimiento, y lanzados con fuerza.", pt = "Feitiços lançados em movimento, e com força.", ru = "Заклинания на ходу — и в полную силу.", pl = "Zaklęcia rzucane w biegu, i to z mocą.", tr = "Hareket halinde, sert atılan büyüler.", it = "Incantesimi lanciati in movimento, e lanciati con forza.", ja = "動きながら放ち、力強く放つ。", zh = "边走边施法，且法术威力不减。", ko = "움직이며 날리는 주문, 그리고 강하게 날리는 주문." }
+
+[[piece_lore]]
+key = "mage_7"
+profile = 7
+text = { en = "Its blizzards fall wider and bite deeper.", de = "Seine Blizzards fallen weiter und beißen tiefer.", fr = "Ses blizzards tombent plus large et mordent plus fort.", es = "Sus ventiscas caen más amplias y muerden más hondo.", pt = "Suas nevascas caem mais largas e mordem mais fundo.", ru = "Его снежные бури шире и кусают глубже.", pl = "Jego zamiecie sięgają szerzej i gryzą mocniej.", tr = "Kar fırtınaları daha geniş düşer, daha derin ısırır.", it = "Le sue bufere cadono più ampie e mordono più a fondo.", ja = "そのブリザードはより広く降り、より深く凍てつかせる。", zh = "它的暴风雪范围更广，寒意更深。", ko = "그 눈보라는 더 넓게 내리고 더 깊이 파고든다." }

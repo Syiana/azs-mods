@@ -1,0 +1,298 @@
+# Duskwood, "Night of the Nightbane": AS's second zone, opened by VanCleef's fall.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "duskwood"
+order = 1
+name = { en = "Duskwood", de = "Dämmerwald", fr = "Sombrebois", es = "Bosque del Ocaso", pt = "Floresta do Crepúsculo", ru = "Сумеречный лес", pl = "Mroczny Bór", tr = "Alacaorman", it = "Boscotetro", ja = "ダスクウッド", zh = "暮色森林", ko = "그늘숲" }
+subtitle = { en = "Night of the Nightbane", de = "Die Nacht der Nachtbanne", fr = "La nuit du Fléau-nocturne", es = "La noche de Ruina Nocturna", pt = "A Noite da Ruína Noturna", ru = "Ночь Ночной Погибели", pl = "Noc Nightbane", tr = "Gecebelası Gecesi", it = "La notte dei Nightbane", ja = "ナイトベインの夜", zh = "夜行魔之夜", ko = "밤의 파멸이 오는 밤" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Duskwood"
+map = 0
+map_name = "Azeroth"
+area = 10
+# AS's own centre (`re/NUMBERS.md` 1.1), on the road west of Darkshire. `TUNE`
+center = [-10540.0, 180.0]
+# As in Elwynn: a little inside AS's 120, widening past it.
+radius = 100.0
+# WorldMapArea 34, "Duskwood".
+map_bounds = [833.3333, -1866.6666, -9716.666, -11516.666]
+health_factor = 0.97
+gold_factor = 1.11
+late_factor = 0.0
+# AS keeps Duskwood at midnight (0). Use early evening so the battlefield is easier to read. `TUNE`
+hour = 18
+# Duskwood's own light is dark blue at any hour, so its edge stands as the night's unlit beam: the
+# day pillar is lit and fogged, and in this light only a faint red shimmer was left of it, so the
+# wall of the arena could not be seen (a player's report, 2026-11-16).
+dark_sky = true
+weather = { fine = 70, rain = 30 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [-10583.327, 201.2838]
+turn = 0
+yaw = 26.1622
+pitch = 21.5999
+distance = 30.0
+lift = 3.2
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 700
+name = { en = "Skeletal Raider", de = "Skeletträuber", fr = "Pillard squelettique", es = "Saqueador esquelético", pt = "Saqueador Esquelético", ru = "Скелет-налетчик", pl = "Szkieletowy najeźdźca", tr = "İskelet Akıncı", it = "Predone scheletrico", ja = "スケルトンの略奪者", zh = "骷髅袭击者", ko = "해골 약탈자" }
+type = "undead"
+display = 158
+icon = "Spell_Shadow_AnimateDead"
+health = 28
+damage = 4
+swing = 1.6
+speed = 5.2
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 701
+name = { en = "Plague Spreader", de = "Seuchenverbreiter", fr = "Propagateur de peste", es = "Propagador de plaga", pt = "Propagador de Peste", ru = "Разносчик чумы", pl = "Szerzyciel zarazy", tr = "Veba Yayıcı", it = "Diffusore di peste", ja = "疫病をまく者", zh = "瘟疫传播者", ko = "역병 전파자" }
+type = "undead"
+display = 137
+icon = "INV_Misc_Head_Undead_02"
+health = 30
+damage = 4
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.4
+
+[[zone.enemy]]
+entry = 702
+name = { en = "Black Widow Hatchling", de = "Schwarze-Witwe-Jungtier", fr = "Bébé veuve noire", es = "Cría de viuda negra", pt = "Filhote de Viúva-negra", ru = "Детеныш черной вдовы", pl = "Pisklę czarnej wdowy", tr = "Kara Dul Yavrusu", it = "Cucciolo di vedova nera", ja = "黒後家蜘蛛の子", zh = "黑寡妇幼蛛", ko = "새끼 검은 과부거미" }
+type = "beast"
+display = 1091
+icon = "Ability_Hunter_Pet_Spider"
+health = 18
+damage = 4
+swing = 1.2
+speed = 7.8
+cost = 1.0
+from = 1.0
+
+[[zone.enemy]]
+entry = 703
+name = { en = "Nightbane Shadow Weaver", de = "Schattenweber der Nachtbanne", fr = "Tisseur d'ombre Fléau-nocturne", es = "Tejedor de sombras Ruina Nocturna", pt = "Tecelão de Sombras Ruína Noturna", ru = "Ткач теней Ночной Погибели", pl = "Tkacz cieni Nightbane", tr = "Gecebelası Gölge Dokuyucusu", it = "Tessitore d'ombre Nightbane", ja = "ナイトベイン・シャドウウィーヴァー", zh = "夜行魔暗影织者", ko = "밤의 파멸 그림자술사" }
+type = "humanoid"
+display = 203
+icon = "INV_Misc_Head_Human_02"
+health = 36
+damage = 7
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 704
+name = { en = "Rotting Horror", de = "Verrottender Schrecken", fr = "Horreur pourrissante", es = "Horror putrefacto", pt = "Horror Apodrecido", ru = "Гниющий ужас", pl = "Gnijąca zgroza", tr = "Çürüyen Dehşet", it = "Orrore in putrefazione", ja = "ロッティング・ホラー", zh = "腐烂恐魔", ko = "썩어가는 공포" }
+type = "undead"
+display = 1201
+icon = "Spell_Shadow_AbominationExplosion"
+health = 60
+damage = 7
+swing = 2.0
+speed = 4.8
+cost = 1.5
+from = 3.0
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 705
+name = { en = "Nightbane Dark Runner", de = "Dunkler Läufer der Nachtbanne", fr = "Coureur sombre Fléau-nocturne", es = "Corredor oscuro Ruina Nocturna", pt = "Corredor Sombrio Ruína Noturna", ru = "Темный бегун Ночной Погибели", pl = "Mroczny biegacz Nightbane", tr = "Gecebelası Karanlık Koşucusu", it = "Corridore oscuro Nightbane", ja = "ナイトベイン・ダークランナー", zh = "夜行魔黑暗奔跑者", ko = "밤의 파멸 어둠질주자" }
+type = "humanoid"
+display = 202
+icon = "INV_Misc_Head_Human_01"
+health = 55
+damage = 8
+swing = 1.4
+speed = 7.0
+cost = 2.0
+from = 4.0
+
+[[zone.enemy]]
+entry = 706
+name = { en = "Fleshripper", de = "Fleischreißer", fr = "Déchire-chair", es = "Desgarracarne", pt = "Rasga-carne", ru = "Рвач плоти", pl = "Rozszarpywacz ciał", tr = "Et Yırtıcı", it = "Squarciacarne", ja = "フレッシュリッパー", zh = "剥肉者", ko = "살점 찢는 새" }
+type = "beast"
+display = 388
+icon = "Ability_Hunter_Pet_Wolf"
+health = 40
+damage = 6
+swing = 1.4
+speed = 7.4
+cost = 1.5
+from = 5.5
+
+[[zone.enemy]]
+entry = 707
+name = { en = "Restless Shade", de = "Ruheloser Schatten", fr = "Ombre agitée", es = "Sombra inquieta", pt = "Sombra Inquieta", ru = "Беспокойная тень", pl = "Niespokojny cień", tr = "Huzursuz Gölge", it = "Ombra inquieta", ja = "さまよう亡霊", zh = "不安的阴影", ko = "안식 없는 그림자" }
+type = "undead"
+display = 146
+icon = "Achievement_Halloween_Ghost_01"
+health = 46
+damage = 8
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 708
+name = { en = "Bone Chewer", de = "Knochenkauer", fr = "Ronge-os", es = "Mascahuesos", pt = "Mastigador de Ossos", ru = "Костегрыз", pl = "Gryzibkość", tr = "Kemik Çiğneyen", it = "Rosicchiaossa", ja = "骨をかじる者", zh = "啃骨者", ko = "뼈다귀 씹는 자" }
+type = "undead"
+display = 414
+icon = "Spell_Shadow_AnimateDead"
+health = 170
+damage = 12
+swing = 2.3
+speed = 4.6
+cost = 3.0
+from = 9.0
+
+[[zone.elite]]
+entry = 709
+name = { en = "Nightbane Worgen Alpha", de = "Worgenalpha der Nachtbanne", fr = "Worgen alpha Fléau-nocturne", es = "Huargen alfa Ruina Nocturna", pt = "Worgen Alfa Ruína Noturna", ru = "Ворген-альфа Ночной Погибели", pl = "Alfa worgenów Nightbane", tr = "Gecebelası Worgen Alfası", it = "Worgen alfa Nightbane", ja = "ナイトベインのウォーゲン・アルファ", zh = "夜行魔狼人首领", ko = "밤의 파멸 늑대인간 우두머리" }
+type = "humanoid"
+display = 523
+icon = "Ability_Hunter_Pet_Wolf"
+health = 700
+damage = 20
+swing = 1.6
+speed = 6.4
+cost = 12.0
+from = 4.0
+size = 1.2
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 710
+name = { en = "Carrion Recluse", de = "Aasspinne", fr = "Recluse charognarde", es = "Reclusa carroñera", pt = "Reclusa Carniceira", ru = "Падальный паук-отшельник", pl = "Padlinowy pustelnik", tr = "Leş Yiyen Münzevi", it = "Reclusa necrofaga", ja = "キャリオン・リクルース", zh = "食腐隐士蛛", ko = "썩은고기 은둔거미" }
+type = "beast"
+display = 366
+icon = "Ability_Hunter_Pet_Spider"
+health = 850
+damage = 24
+swing = 2.0
+speed = 5.6
+cost = 13.0
+from = 8.5
+size = 1.7
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 6917, count = 3, radius = 3.0, spread = 6.0, warn = 1.4, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 12.0, warn = 1.5, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 711
+name = { en = "Flesh Eating Abomination", de = "Fleischfressende Monstrosität", fr = "Abomination mangeuse de chair", es = "Abominación devoracarne", pt = "Abominação Devoradora de Carne", ru = "Пожирающее плоть отродье", pl = "Plugastwo pożerające ciała", tr = "Et Yiyen Canavar", it = "Abominio mangiacarne", ja = "肉喰らいのアボミネーション", zh = "食肉憎恶", ko = "살점을 먹는 누더기골렘" }
+type = "undead"
+display = 15961
+icon = "Spell_Shadow_AbominationExplosion"
+health = 1000
+damage = 28
+swing = 2.4
+speed = 4.6
+cost = 14.0
+from = 13.0
+size = 1.19
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 4.5, warn = 2.0, factor = 1.0, lasts = 6.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 790
+name = { en = "Naraxis", de = "Naraxis", fr = "Naraxis", es = "Naraxis", pt = "Naraxis", ru = "Нараксис", pl = "Naraxis", tr = "Naraxis", it = "Naraxis", ja = "ナラクシス", zh = "纳拉克西斯", ko = "나락시스" }
+type = "beast"
+display = 1091
+icon = "Ability_Hunter_Pet_Spider"
+health = 3600
+damage = 22
+speed = 6.0
+minute = 3
+yell = { en = "Naraxis drops from the branches!", de = "Naraxis lässt sich aus den Ästen fallen!", fr = "Naraxis se laisse tomber des branches !", es = "¡Naraxis cae de las ramas!", pt = "Naraxis cai dos galhos!", ru = "Нараксис падает с веток!", pl = "Naraxis spada z gałęzi!", tr = "Naraxis dallardan düşüyor!", it = "Naraxis cala giù dai rami!", ja = "ナラクシスが枝から降りてきた！", zh = "纳拉克西斯从树枝上落下！", ko = "나락시스가 나뭇가지에서 떨어져 내립니다!" }
+kit = "naraxis"
+
+[[zone.boss]]
+entry = 791
+name = { en = "Mor'Ladim", de = "Mor'Ladim", fr = "Mor'Ladim", es = "Mor'Ladim", pt = "Mor'Ladim", ru = "Мор'Ладим", pl = "Mor'Ladim", tr = "Mor'Ladim", it = "Mor'Ladim", ja = "モル・ラディム", zh = "莫拉迪姆", ko = "모르라딤" }
+type = "undead"
+display = 200
+icon = "INV_Misc_Head_Undead_02"
+health = 9000
+damage = 30
+speed = 5.4
+minute = 6
+yell = { en = "You will join my army in death!", de = "Im Tod wirst du meiner Armee beitreten!", fr = "Tu rejoindras mon armée dans la mort !", es = "¡Te unirás a mi ejército en la muerte!", pt = "Você se juntará ao meu exército na morte!", ru = "В смерти ты присоединишься к моей армии!", pl = "Dołączysz do mojej armii w śmierci!", tr = "Ölümde ordumun bir parçası olacaksın!", it = "Ti unirai al mio esercito nella morte!", ja = "死して我が軍に加わるがいい！", zh = "你将在死后加入我的大军！", ko = "너는 죽어서 내 군대에 들어오게 되리라!" }
+kit = "morladim"
+
+[[zone.boss]]
+entry = 792
+name = { en = "Stitches", de = "Flickwerk", fr = "Recousu", es = "Remiendos", pt = "Costuras", ru = "Лоскуток", pl = "Szwaczek", tr = "Stitches", it = "Stitches", ja = "スティッチーズ", zh = "缝合者", ko = "스티치스" }
+type = "undead"
+display = 1061
+icon = "Spell_Shadow_AbominationExplosion"
+health = 17000
+damage = 38
+speed = 4.8
+minute = 9
+yell = { en = "Stitches hungry! Stitches eat!", de = "Flickwerk hungrig! Flickwerk essen!", fr = "Recousu avoir faim ! Recousu manger !", es = "¡Remiendos hambre! ¡Remiendos comer!", pt = "Costuras com fome! Costuras comer!", ru = "Лоскуток голодный! Лоскуток есть!", pl = "Szwaczek głodny! Szwaczek jeść!", tr = "Stitches aç! Stitches yer!", it = "Stitches ha fame! Stitches mangia!", ja = "スティッチーズ、腹へった！スティッチーズ、食う！", zh = "缝合者饿了！缝合者要吃！", ko = "스티치스 배고파! 스티치스 먹어!" }
+kit = "stitches"
+
+[[zone.boss]]
+entry = 793
+name = { en = "Lupos", de = "Lupos", fr = "Lupos", es = "Lupos", pt = "Lupos", ru = "Лупос", pl = "Lupos", tr = "Lupos", it = "Lupos", ja = "ルポス", zh = "卢普斯", ko = "루포스" }
+type = "beast"
+display = 1236
+icon = "Ability_Hunter_Pet_Wolf"
+health = 28000
+damage = 46
+speed = 7.4
+minute = 12
+yell = { en = "Lupos howls, and the Nightbane answer!", de = "Lupos heult, und die Nachtbanne antworten!", fr = "Lupos hurle, et le Fléau-nocturne répond !", es = "¡Lupos aúlla y Ruina Nocturna responde!", pt = "Lupos uiva, e a Ruína Noturna responde!", ru = "Лупос воет, и Ночная Погибель отвечает!", pl = "Lupos wyje, a Nightbane odpowiadają!", tr = "Lupos ulur ve Gecebelası karşılık verir!", it = "Lupos ulula e i Nightbane rispondono!", ja = "ルポスが吠え、ナイトベインが応える！", zh = "卢普斯一声长嚎，夜之魇群起回应！", ko = "루포스가 울부짖자 파멸의 어둠이 응답합니다!" }
+kit = "lupos"
+
+[[zone.boss]]
+entry = 794
+name = { en = "Morbent Fel", de = "Morbent Fel", fr = "Morbent Fel", es = "Morbent Vil", pt = "Morbent Vil", ru = "Морбент Фел", pl = "Morbent Fel", tr = "Morbent Fel", it = "Morbent Magia vile", ja = "モーベント・フェル", zh = "莫本特·费尔", ko = "모르벤트 펠" }
+type = "undead"
+display = 16309
+icon = "INV_Misc_Head_Undead_01"
+health = 52500
+damage = 54
+speed = 5.6
+minute = 16
+yell = { en = "The dead of Raven Hill rise at my command!", de = "Die Toten von Rabenflucht erheben sich auf meinen Befehl!", fr = "Les morts de la Colline du Corbeau se lèvent sur mon ordre !", es = "¡Los muertos de Colina Cuervo se alzan a mi orden!", pt = "Os mortos da Colina do Corvo erguem-se ao meu comando!", ru = "Мертвецы Вороньего холма встают по моему приказу!", pl = "Zmarli z Raven Hill powstają na mój rozkaz!", tr = "Kuzgun Tepesi'nin ölüleri emrimle kalkıyor!", it = "I morti di Collecorvo si levano al mio comando!", ja = "レイヴン・ヒルの死者よ、我が命に従い蘇れ！", zh = "鸦岗的死者听我号令而起！", ko = "까마귀 언덕의 망자들이여, 내 명령에 일어나라!" }
+final = true
+kit = "morbent_fel"

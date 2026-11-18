@@ -1,0 +1,458 @@
+# The standard run: every key a mode may set, with the values the game plays by.
+# Other modes `extends = "standard"` and write down only what they change.
+# See docs/PLAN-MODES.md.
+
+name = "Campaign"
+
+# The content packs a run loads (survivors-content/packs/): only their classes, zones, jewelry and
+# mutators exist in it; a pack's requirements are listed too. And the mutators every run plays
+# (packs/*/mutators/), beside a Heroic tier's affixes. See docs/PLAN-ARCHITECTURE.md 2.5.
+# The kit's copy: the game's own file also lists "cata", a pack the kit does not carry.
+packs = ["base", "tbc", "wotlk"]
+mutators = []
+
+# The hero menu's Game Modes window: icon, tint, tag, what it is, rules and rewards. A mode that
+# extends this one writes its own card.
+[card]
+order = 0
+icon = "INV_Misc_Map_01"
+color = [0.85, 0.62, 0.12]
+tag = "SOLO · CO-OP"
+text = "The zone chain as you know it: hold out against the horde until the zone's boss arrives, slay it and open the next zone."
+rules = [
+    "Zone and difficulty from the hero menu",
+    "Heroic tiers open zone by zone",
+    "Weekly affixes from Heroic III",
+]
+rewards = [
+    ["INV_Misc_Coin_01", "Gold"],
+    ["INV_Box_02", "Chests"],
+    ["INV_Misc_Book_11", "Experience"],
+]
+
+# The name and the card in the other languages (`[i18n.<lang>]`: name, tag, text, rules, and the
+# rewards' labels in order); a text left out reads in English. A mode that extends this one
+# writes its own.
+[i18n.de]
+name = "Kampagne"
+tag = "SOLO · KOOP"
+text = "Die Zonenkette, wie du sie kennst: Halte gegen die Horde durch, bis der Boss der Zone erscheint, besiege ihn und öffne die nächste Zone."
+rules = [
+    "Zone und Schwierigkeit aus dem Heldenmenü",
+    "Heroische Stufen öffnen sich Zone für Zone",
+    "Wöchentliche Affixe ab Heroisch III",
+]
+rewards = ["Gold", "Truhen", "Erfahrung"]
+
+[i18n.fr]
+name = "Campagne"
+tag = "SOLO · COOP"
+text = "La chaîne de zones telle que tu la connais : résiste à la horde jusqu'à l'arrivée du boss de la zone, terrasse-le et ouvre la zone suivante."
+rules = [
+    "Zone et difficulté depuis le menu du héros",
+    "Les paliers héroïques s'ouvrent zone par zone",
+    "Affixes hebdomadaires à partir d'Héroïque III",
+]
+rewards = ["Or", "Coffres", "Expérience"]
+
+[i18n.es]
+name = "Campaña"
+tag = "SOLO · COOP"
+text = "La cadena de zonas como la conoces: resiste a la horda hasta que aparezca el jefe de la zona, derrótalo y abre la siguiente zona."
+rules = [
+    "Zona y dificultad desde el menú del héroe",
+    "Los niveles heroicos se abren zona a zona",
+    "Afijos semanales a partir de Heroico III",
+]
+rewards = ["Oro", "Cofres", "Experiencia"]
+
+[i18n.pt]
+name = "Campanha"
+tag = "SOLO · COOP"
+text = "A cadeia de zonas como você a conhece: resista à horda até o chefe da zona chegar, derrote-o e abra a próxima zona."
+rules = [
+    "Zona e dificuldade pelo menu do herói",
+    "Os níveis heroicos abrem zona por zona",
+    "Afixos semanais a partir do Heroico III",
+]
+rewards = ["Ouro", "Baús", "Experiência"]
+
+[i18n.ru]
+name = "Кампания"
+tag = "СОЛО · КООП"
+text = "Цепочка зон, какой ты её знаешь: продержись против орды, пока не появится босс зоны, победи его и открой следующую зону."
+rules = [
+    "Зона и сложность выбираются в меню героя",
+    "Героические ступени открываются зона за зоной",
+    "Еженедельные аффиксы с Героического III",
+]
+rewards = ["Золото", "Сундуки", "Опыт"]
+
+[i18n.it]
+name = "Campagna"
+tag = "SOLO · CO-OP"
+text = "La catena di zone come la conosci: resisti all'orda finché arriva il boss della zona, abbattilo e apri la zona successiva."
+rules = [
+    "Zona e difficoltà dal menu dell'eroe",
+    "I gradi eroici si aprono zona dopo zona",
+    "Affissi settimanali da Eroico III",
+]
+rewards = ["Oro", "Forzieri", "Esperienza"]
+
+[i18n.pl]
+name = "Kampania"
+tag = "SOLO · CO-OP"
+text = "Łańcuch stref, jaki znasz: opieraj się hordzie, aż pojawi się boss strefy, pokonaj go i otwórz kolejną strefę."
+rules = [
+    "Strefa i trudność z menu bohatera",
+    "Stopnie heroiczne odblokowują się strefa po strefie",
+    "Cotygodniowe modyfikatory od Heroiczny III",
+]
+rewards = ["Złoto", "Skrzynie", "Doświadczenie"]
+
+[i18n.tr]
+name = "Kampanya"
+tag = "SOLO · CO-OP"
+text = "Bildiğin bölge zinciri: bölgenin bossu gelene kadar sürüye dayan, onu alt et ve sonraki bölgeyi aç."
+rules = [
+    "Bölge ve zorluk kahraman menüsünden",
+    "Kahramanlık kademeleri bölge bölge açılır",
+    "Kahramanlık III'ten itibaren haftalık ek özellikler",
+]
+rewards = ["Altın", "Sandıklar", "Tecrübe"]
+
+[i18n.ja]
+name = "キャンペーン"
+tag = "ソロ・協力プレイ"
+text = "おなじみのゾーンの連なりです。ゾーンのボスが現れるまで群れに耐え、ボスを倒して次のゾーンを開きましょう。"
+rules = [
+    "ゾーンと難易度はヒーローメニューで選びます",
+    "ヒロイックの段階はゾーンごとに開放されます",
+    "ヒロイック III から週替わりアフィックス",
+]
+rewards = ["ゴールド", "宝箱", "経験値"]
+
+[i18n.zh]
+name = "战役"
+tag = "单人 · 合作"
+text = "你熟悉的区域链：抵挡怪潮，直到区域首领现身，击败它并开启下一个区域。"
+rules = [
+    "在英雄菜单中选择区域和难度",
+    "英雄难度逐个区域解锁",
+    "英雄 III 起出现每周词缀",
+]
+rewards = ["金币", "宝箱", "经验值"]
+
+[i18n.ko]
+name = "캠페인"
+tag = "솔로 · 협동"
+text = "익숙한 지역들의 연속입니다. 지역 우두머리가 나타날 때까지 무리를 버텨 내고, 우두머리를 처치해 다음 지역을 여십시오."
+rules = [
+    "지역과 난이도는 영웅 메뉴에서 선택",
+    "영웅 단계는 지역마다 차례로 열립니다",
+    "영웅 III부터 주간 어픽스",
+]
+rewards = ["골드", "상자", "경험치"]
+
+[horde]
+# The knobs on AS's numbers: its spawn rate, enemy health and enemy hit times these.
+spawn_rate = 1.0
+enemy_health = 1.0
+enemy_damage = 1.0
+# Health on top of AS's numbers for the mini-bosses (elites and guardians) and the timed bosses.
+elite_health = 1.4
+boss_health = 2.5
+# Most enemies alive at once: a bound on what one client draws and the link carries. Past five
+# heroes the server grows it to max_enemies * heroes / 5, at most 300 (game/seats.rs).
+max_enemies = 120
+# Most enemies on the field at once with what may come past max_enemies: the bosses' adds and eggs,
+# the elites and the portals' demons. Past it each of those makes the nearest enemy stronger
+# instead (a Bolstering stack: +20% health and hit, a little bigger, at most 10 on one enemy), so a
+# deep endless field grows stronger, not larger. Grown for a large party as max_enemies is.
+max_bodies = 300
+# The most budget the waves save up while the field is full.
+spawn_budget_max = 8.0
+# Each minute of endless play multiplies an enemy's health and hit by these. AS's are 1.22 and
+# 1.096; ours are steeper, AS's endless was too easy.
+endless_health_rise = 1.25
+endless_damage_rise = 1.13
+# Deep endless must bite: the heroes' damage compounds with every rank, so a straight rise is
+# outgrown. Past `endless_ramp` minutes of endless play both rises count `endless_accel` extra
+# minutes for each minute past the ramp, squared (at 0.025: 40 minutes in, 20 past a ramp of 20,
+# the enemies are 1.25^10, about 9 times, tougher than the straight rise makes them, at 50 minutes
+# about 150 times, at 60 about 7500 times). 0 keeps the rise straight. TUNE
+endless_ramp = 20.0
+endless_accel = 0.025
+# The deeper endless goes the less a stun, root (a freeze) or Polymorph holds an enemy: each
+# endless minute multiplies its length by this (at 0.93: a third gone after 6 minutes, half after
+# 10, 0.23 of it left at 20, 0.05 at 40). 1 keeps holds at full length, 0 makes every enemy immune
+# from the first endless minute. TUNE
+endless_hold_decay = 0.93
+# A stun that takes hold on a boss or guardian breaks off what it winds up (its cast, the ground it
+# marked for it, a combo's next steps) and leaves it immune to stuns for this many seconds, so a
+# stun build interrupts now and then instead of locking the boss. 0 lets every stun land. TUNE
+boss_stun_immunity = 8.0
+
+[hero]
+# Experience from orbs times this: more level-ups, so more spells, in a run.
+xp_gain = 1.35
+# Shift's ability (learnt in the account talent tree, `dodge`). `false` turns it off in a mode.
+dash = true
+# What Shift does: "steed" (mount for a few seconds and run fast, [steed]) or "dash" (the dodge:
+# a short jump, untouchable a moment, survivors-sim game/dash.rs).
+shift = "steed"
+
+[steed]
+# Divine Steed for every hero (survivors-sim game/steed.rs): the mount chosen in the shop (else
+# the class's or the race's own) for `seconds`, with `speed_pct` percent run speed on top; cold
+# does not slow the rider and spells keep casting. A press while riding is ignored and takes no charge.
+seconds = 1.5
+speed_pct = 75.0
+# Charges (the account talent's further ranks add none here) and the seconds until one spent
+# charge is back; each talent rank past the first brings them back `rank_recharge_pct` percent
+# faster (account/tree.toml `dodge` says the same number).
+charges = 2
+recharge = 12.0
+rank_recharge_pct = 25.0
+
+[rift_bar]
+# Kills fill a bar toward the next boss; the boss comes when it is full. Off: by the minute.
+enabled = true
+# A boss's minute still brings it at the latest, the bar full or not.
+clock = false
+# What a full bar asks of the waves' budget gained between two bosses' minutes.
+need = 1.0
+# The most normals kept on the field over the waves' own, for a hero `dense_ahead` (a share of
+# the bar) ahead of the clock on it.
+density = 1.5
+dense_ahead = 0.25
+# The share of the bar a slain elite's and guardian's orbs are worth in all, and their count.
+elite_orb_share = 0.08
+elite_orbs = 3
+guardian_orb_share = 0.15
+guardian_orbs = 5
+
+[rifts]
+# Crystals to gather, a portal that tears open, a boss from another zone.
+enabled = true
+# When the crystals are set out (seconds).
+crystals_at = 8.0
+# The portal opens at a share of the run's length within these, never before `portal_earliest`.
+portal_share = [0.25, 0.55]
+portal_earliest = 120.0
+# How long the opened portal stirs (the heroes' summoning) before its boss steps out (seconds).
+emerge_seconds = 6.0
+# The rift boss against the zone's final one: health, hit and size.
+boss_health = 1.3
+boss_damage = 1.5
+boss_size = 1.2
+# The chance its fall drops each hero gear at all, and that a piece is Legendary, not Epic.
+drop_chance = 0.5
+legendary_chance = 0.1
+
+[vault]
+# The goblin treasury: a portal between two bosses, goblins to catch while the horde waits.
+enabled = true
+# The chance a stretch between two bosses brings a portal, and the share of the stretch (the
+# rift bar, or the clock without one) it opens within.
+chance = 0.6
+stretch_share = [0.3, 0.7]
+# How far from the hero the portal opens (yards), and how long it stays open (seconds).
+from_hero = [20.0, 35.0]
+open_seconds = 25.0
+# The seconds between stepping in and the treasury, and how long the treasury lasts.
+countdown_seconds = 2.0
+treasury_seconds = 30.0
+# The goblins (more for each hero past the first), their guards, and how far round the heroes
+# they appear (yards).
+goblins = 24
+goblins_per_hero = 6
+guards = 8
+ring = [6.0, 22.0]
+# While the treasury stands, more goblins pour out of the rift: `packs` packs of `pack` (more
+# for each hero past the first), one every `pack_every` seconds, or at once when the field is
+# cleared before.
+packs = 2
+pack = 12
+pack_per_hero = 2
+pack_every = 6.0
+# A goblin's gold, and what catching every one adds: gold, and a share of the rift bar.
+goblin_gold = 6
+cleared_gold = 150
+cleared_bar = 0.15
+
+[lairs]
+# Lairs at the battlefield's edge, each with a sleeping guardian (a mini-boss): one lair per
+# entry, first filled at that run clock (seconds). Empty: no lairs.
+first_seconds = [40.0, 100.0, 160.0, 220.0]
+# How near the hero comes before a guardian wakes (yards), and the minions it calls.
+wake_range = 24.0
+minions = 4
+# A guardian's health and hit, times its zone elite's (AS's 7.5 and 1.4, raised).
+health_factor = 9.0
+hit_factor = 1.6
+# How near the hero whose turn it is stands before an awake guardian uses its elite's kit on them.
+ability_reach = 30.0
+# A slain guardian's strength for the hero: damage (%), maximum health, regeneration per second;
+# and its experience and gold.
+guardian_damage_pct = 5
+guardian_health = 25
+guardian_regen = 1
+guardian_xp = 40
+guardian_gold = 30
+
+[cursed_chest]
+# Free jewelry that sets a curse off.
+enabled = true
+# The first at this clock, then one every `every_seconds` while none stands and no boss is up
+# (else again `retry_seconds` later), this far from the hero (yards); left unopened it crumbles
+# after `lasts_seconds`.
+first_seconds = 150.0
+every_seconds = 120.0
+retry_seconds = 10.0
+distance = [18.0, 30.0]
+lasts_seconds = 40.0
+# How much rarer its jewelry rolls than a cache's.
+bonus = 0.4
+# The ambush: elites, one more each `ambush_every` minutes and for each friend, at most
+# `ambush_max`, in a ring round the hero (yards).
+ambush = 2
+ambush_every = 5.0
+ambush_max = 6
+ambush_ring = 14.0
+# The swarm: the minute's wave enemies, one more each `swarm_every` minutes, half as many more
+# for each friend, at most `swarm_max`, in a ring round the hero (yards).
+swarm = 10
+swarm_every = 1.0
+swarm_max = 30
+swarm_ring = 12.0
+# The lasting curses, each for its seconds: enemies faster (%), the horde this many times as
+# fast and thick, more damage taken (%), healing cut (%).
+frenzy_pct = 50.0
+frenzy_seconds = 20.0
+surge_rate = 2.5
+surge_seconds = 20.0
+frailty_pct = 40.0
+frailty_seconds = 20.0
+wither_pct = 60.0
+wither_seconds = 25.0
+
+[caches]
+# Battleground caches, bought with gold: the first at this clock (seconds), then one every
+# `every_seconds` (sooner in co-op), at most `max` standing (one more for each friend).
+enabled = true
+first_seconds = 45.0
+every_seconds = 70.0
+max = 3
+
+[runes]
+# Speed, berserking, restoration: one every `every_seconds` while fewer than `max` lie, this far
+# from the hero (yards).
+enabled = true
+every_seconds = 45.0
+max = 2
+distance = [15.0, 40.0]
+# How long a boon lasts (seconds), its speed and damage (%), and the share of health
+# Restoration heals.
+lasts_seconds = 12.0
+speed_pct = 60.0
+berserk_pct = 50
+restore_share = 0.4
+
+[magnets]
+# Brings in every coin and wisp: at these run minutes, then every `every_minutes` past the last,
+# this far from the hero (yards).
+enabled = true
+minutes = [3.5, 7.5, 11.5, 15.0]
+every_minutes = 4.0
+distance = [20.0, 40.0]
+
+[events]
+# Wave events (a swarm, a wall, a pack, a stampede): the first at this clock (seconds), then one
+# every `every_seconds - every_less * minute`, never less than `every_least`.
+enabled = true
+first_seconds = 100.0
+every_seconds = 60.0
+every_less = 1.5
+every_least = 35.0
+# How many each brings: `size + size_per_minute * minute`, at most `size_most`.
+size = 10.0
+size_per_minute = 1.2
+size_most = 36
+
+[arena]
+# The battlefield widens `widen_yards` every `widen_seconds`, up to `widen_max` (at most 50)
+# past the zone's radius.
+widen_seconds = 60.0
+widen_yards = 5.0
+widen_max = 50.0
+
+[coop]
+# The most heroes a run seats, the host's among them: 1 (solo) up to 16. Past 5 the group is a
+# raid, five to a subgroup, and the raid frames show it.
+max_heroes = 5
+# AS's co-op factors for n heroes: enemies' health (1 + (n - 1) * k * health_per_hero) *
+# health_scale, the spawn rate 1 + (n - 1) * k * spawn_per_hero, where k is early_zone_factor in
+# each campaign's first early_zones zones (AS's, Outland's, Northrend's) and 1 after; caches
+# 1 + caches_per_hero * (n - 1) times as often. Past five heroes each more hero adds only a quarter
+# of a hero's step to the health (game/seats.rs, COOP_HEALTH_PAST_PARTY).
+health_per_hero = 0.72
+health_scale = 0.8
+spawn_per_hero = 0.312
+caches_per_hero = 0.5
+early_zones = 3
+early_zone_factor = 0.7
+
+[difficulty]
+# The highest tier a run may be played at: 0 Normal, 1-5 Heroic I-V.
+max_tier = 5
+# One factor per tier, Normal to Heroic V: enemies' health and damage, the marks a run pays,
+# the chance gear drops (also talent experience's), and experience from orbs.
+health = [1.0, 1.79, 1.97, 2.16, 2.45, 2.72]
+damage = [1.0, 1.65, 1.77, 1.88, 2.01, 2.16]
+marks = [0.5, 1.0, 1.25, 1.5, 2.0, 2.5]
+loot = [1.0, 1.3, 1.4, 1.5, 1.6, 1.7]
+xp = [1.0, 1.25, 1.4, 1.55, 1.75, 2.0]
+
+[hub]
+# A social hub instead of a run: no clock, no horde, no bosses, no death and no end, nothing
+# earned and nothing recorded; heroes meet in `place` (a zone key) whatever zone the hero menu
+# picked. See docs/PLAN-HUB.md.
+enabled = false
+place = "elwynn"
+# How far from a hub place's centre heroes may roam, in yards (at most 400): the unmarked wall
+# stands there. 0: the place's own small radius. A campaign zone met in keeps its own.
+roam = 0.0
+
+[daily]
+# The daily challenge (src/daily.rs), off here. When on, every UTC day picks one of `zones`, one
+# of `classes` (empty: every class the packs offer) and one of `tiers`, and draws
+# `mutator_count` of `mutators` (its twists: AS's three affixes, in their order) whatever the
+# tier; one seed for everyone gives the same card offers. `fair`: no gear bonuses, talents, perks,
+# training or companion.
+enabled = false
+zones = []
+classes = []
+tiers = [0]
+mutators = ["bolstering", "sanguine", "explosive"]
+mutator_count = 0
+fair = false
+
+[proving]
+# The Proving Grounds (src/game/proving.rs), off here. When on, the run is a practice field: no
+# horde until the hero calls it, no bosses, caches, rifts or events, the hero cannot fall, and
+# nothing the run gains goes home. Every spell, ring, trinket, amulet and legendary is the
+# hero's to pick in the Proving Grounds window, any number of legendaries at once. `dummies`
+# training dummies stand round the start, `dummy_health` each (a boss dummy `boss_health`); a
+# dummy never falls, its health fills again as it would.
+enabled = false
+dummies = 5
+dummy_health = 2000000
+boss_health = 20000000
+
+[unlocks]
+# When a class opens for an account, by class key: "open" from the start, or "classic", "tbc",
+# "wotlk": once a hero of the account (any class) has beaten that world's last zone. A class not
+# named here goes by its own `unlock` (class.toml; none: open): the monk's says "classic", the
+# demon hunter's "tbc", the death knight's "wotlk".
+# Example: deathknight = "tbc" would open the death knight with Northrend.

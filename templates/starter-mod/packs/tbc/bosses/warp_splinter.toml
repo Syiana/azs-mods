@@ -1,0 +1,16 @@
+# Warp Splinter: Stomp, Arcane Volley, Summon Saplings.
+
+[[boss]]
+key = "warp_splinter"
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 34716, radius = 9.0, warn = 1.8, knock = 12.0 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 36705 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 8 }

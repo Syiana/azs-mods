@@ -1,0 +1,319 @@
+# Naxxramas, "The Scourge Invasion": inside the necropolis, in Kel'Thuzad's chamber.
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "naxx"
+order = 11
+name = { en = "Naxxramas", de = "Naxxramas", fr = "Naxxramas", es = "Naxxramas", pt = "Naxxramas", ru = "Наксрамас", pl = "Naxxramas", tr = "Naxxramas", it = "Naxxramas", ja = "ナクスラーマス", zh = "纳克萨玛斯", ko = "낙스라마스" }
+subtitle = { en = "The Scourge Invasion", de = "Die Invasion der Geißel", fr = "L'invasion du Fléau", es = "La invasión de la Plaga", pt = "A Invasão do Flagelo", ru = "Вторжение Плети", pl = "Inwazja Plagi", tr = "Yıkım Ordusu İstilası", it = "L'invasione del Flagello", ja = "スカージの侵攻", zh = "天灾入侵", ko = "스컬지 침공" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_EasternPlaguelands"
+# Inside the necropolis, in Kel'Thuzad's chamber of the Naxxramas instance (map 533), where
+# TrinityCore seats Kel'Thuzad (3716.4, -5106.4, 141.3). Its halls are WMOs over map 533's ADT
+# ground, so the arena stands on their floor (`floor` below, `places::floor`) and the
+# void past the walls is blocked (`places::floor_only`).
+map = 533
+map_name = "Stratholme Raid"
+area = 3456
+center = [3716.4, -5106.4]
+# The chamber is open floor some 44 yd out from its middle, walled past that. `TUNE`
+radius = 40.0
+# DungeonMap 73, Naxxramas's floor 6 (the Frostwyrm Lair and Kel'Thuzad's chamber), the rect the
+# client's own map position is read against inside the instance.
+map_bounds = [-4866.35, -5522.29, 3816.54, 3379.25]
+health_factor = 6.25
+gold_factor = 2.21
+late_factor = 0.4
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+weather = { fine = 85, rain = 15 }
+# The floor of Kel'Thuzad's chamber, where TrinityCore seats Kel'Thuzad (z 141.3).
+floor = 141.3
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = 20.0
+pitch = 14.0
+distance = 0.0
+lift = 1.5
+scale = 0.14
+orbit = [0.6, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+focus = [4005.4558, -5201.981]
+
+[[zone.enemy]]
+entry = 1400
+name = { en = "Plagued Ghoul", de = "Verseuchter Ghul", fr = "Goule pestiférée", es = "Necrófago empestado", pt = "Carniçal Empestado", ru = "Зараженный вурдалак", pl = "Ghul dotknięty plagą", tr = "Vebalı Gulyabani", it = "Ghoul appestato", ja = "疫病のグール", zh = "瘟疫食尸鬼", ko = "역병 구울" }
+type = "undead"
+display = 14708
+icon = "Ability_GhoulFrenzy"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.73
+
+[[zone.enemy]]
+entry = 1401
+name = { en = "Dread Creeper", de = "Schreckenskriecher", fr = "Rampant d'effroi", es = "Reptador terrible", pt = "Rastejante Pavoroso", ru = "Ужасный ползун", pl = "Pełzacz grozy", tr = "Dehşet Sürüngeni", it = "Strisciante del terrore", ja = "ドレッド・クリーパー", zh = "恐怖爬行者", ko = "공포의 거미" }
+type = "beast"
+display = 15937
+icon = "Ability_Hunter_Pet_Spider"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.85
+
+[[zone.enemy]]
+entry = 1402
+name = { en = "Soldier of the Frozen Wastes", de = "Soldat der Gefrorenen Ödnis", fr = "Soldat des friches gelées", es = "Soldado de los Páramos Helados", pt = "Soldado dos Ermos Congelados", ru = "Солдат Ледяных Пустошей", pl = "Żołnierz Mroźnych Pustkowi", tr = "Donmuş Çorak Toprakların Askeri", it = "Soldato delle Distese Ghiacciate", ja = "凍てつく荒野の兵士", zh = "冰荒士兵", ko = "얼어붙은 황무지의 병사" }
+type = "undead"
+display = 7869
+icon = "INV_Misc_Head_Undead_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.75
+
+[[zone.enemy]]
+entry = 1403
+name = { en = "Naxxramas Cultist", de = "Kultist von Naxxramas", fr = "Cultiste de Naxxramas", es = "Cultista de Naxxramas", pt = "Cultista de Naxxramas", ru = "Культист Наксрамаса", pl = "Kultysta z Naxxramas", tr = "Naxxramas Tarikatçısı", it = "Cultista di Naxxramas", ja = "ナクスラーマスの教団員", zh = "纳克萨玛斯信徒", ko = "낙스라마스 광신도" }
+type = "humanoid"
+display = 16594
+icon = "INV_Misc_Head_Human_01"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.95
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1404
+name = { en = "Carrion Spinner", de = "Aasspinnerin", fr = "Fileuse charognarde", es = "Hiladora carroñera", pt = "Fiandeira de Carniça", ru = "Падальная пряха", pl = "Padlinowy przędziorek", tr = "Leş Örücü", it = "Tessitrice di carogne", ja = "キャリオン・スピナー", zh = "腐肉织网者", ko = "썩은고기 거미" }
+type = "beast"
+display = 15938
+icon = "Ability_Hunter_Pet_Spider"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.95
+
+[[zone.enemy]]
+entry = 1405
+name = { en = "Bile Retcher", de = "Gallespucker", fr = "Vomisseur de bile", es = "Vomitabilis", pt = "Vomitador de Bile", ru = "Желчный рвотник", pl = "Wymiotnik żółci", tr = "Safra Kusan", it = "Vomitatore di bile", ja = "胆汁を吐く者", zh = "胆汁喷吐者", ko = "담즙 토하는 자" }
+type = "undead"
+display = 15958
+icon = "Spell_Shadow_AbominationExplosion"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.48
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 1406
+name = { en = "Stoneskin Gargoyle", de = "Steinhautgargoyle", fr = "Gargouille peau-de-pierre", es = "Gárgola piel de piedra", pt = "Gárgula Pele de Pedra", ru = "Каменная горгулья", pl = "Kamienny gargulec", tr = "Taş Derili Gargoyle", it = "Gargoyle Pellepietra", ja = "ストーンスキン・ガーゴイル", zh = "石肤石像鬼", ko = "돌가죽 가고일" }
+type = "undead"
+display = 14710
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.5
+
+[[zone.enemy]]
+entry = 1407
+name = { en = "Naxxramas Acolyte", de = "Akolyth von Naxxramas", fr = "Acolyte de Naxxramas", es = "Acólito de Naxxramas", pt = "Acólito de Naxxramas", ru = "Служитель Наксрамаса", pl = "Akolita z Naxxramas", tr = "Naxxramas Çömezi", it = "Accolito di Naxxramas", ja = "ナクスラーマスの侍祭", zh = "纳克萨玛斯侍僧", ko = "낙스라마스 수행사제" }
+type = "humanoid"
+display = 16598
+icon = "INV_Misc_Head_Human_02"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 1.05
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1408
+name = { en = "Living Monstrosity", de = "Lebende Monstrosität", fr = "Monstruosité vivante", es = "Monstruosidad viviente", pt = "Monstruosidade Viva", ru = "Живое чудовище", pl = "Żywa potworność", tr = "Yaşayan Canavar", it = "Mostruosità vivente", ja = "生ける怪物", zh = "活体憎恶", ko = "살아있는 괴물" }
+type = "undead"
+display = 16175
+icon = "Spell_Shadow_AbominationExplosion"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.9
+
+[[zone.elite]]
+entry = 1409
+name = { en = "Soul Weaver", de = "Seelenweber", fr = "Tisseur d'âmes", es = "Tejedor de almas", pt = "Tecelão de Almas", ru = "Ткач душ", pl = "Tkacz dusz", tr = "Ruh Dokuyucu", it = "Tessitore di anime", ja = "ソウル・ウィーヴァー", zh = "灵魂编织者", ko = "영혼 직조자" }
+type = "undead"
+display = 16178
+icon = "Achievement_Halloween_Ghost_01"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.elite]]
+entry = 1410
+name = { en = "Unstoppable Abomination", de = "Unaufhaltbare Monstrosität", fr = "Abomination inarrêtable", es = "Abominación imparable", pt = "Abominação Imparável", ru = "Неудержимое порождение", pl = "Niepowstrzymana poczwara", tr = "Durdurulamaz Canavar", it = "Abominio inarrestabile", ja = "止められぬアボミネーション", zh = "势不可挡的憎恶", ko = "멈출 수 없는 누더기골렘" }
+type = "undead"
+display = 12818
+icon = "Spell_Shadow_AbominationExplosion"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.92
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 4.5, warn = 2.0, factor = 1.0, lasts = 6.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 1411
+name = { en = "Guardian of Icecrown", de = "Wächter von Eiskrone", fr = "Gardien de la Couronne de glace", es = "Guardián de Corona de Hielo", pt = "Guardião da Coroa de Gelo", ru = "Страж Ледяной Короны", pl = "Strażnik Icecrown", tr = "Buz Tacı Muhafızı", it = "Guardiano di Corona di Ghiaccio", ja = "アイスクラウンのガーディアン", zh = "寒冰皇冠卫士", ko = "얼음왕관의 수호자" }
+type = "undead"
+display = 16586
+icon = "INV_Misc_Head_Undead_02"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 0.43
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 1490
+name = { en = "Anub'Rekhan", de = "Anub'Rekhan", fr = "Anub'Rekhan", es = "Anub'Rekhan", pt = "Anub'Rekhan", ru = "Ануб'Рекан", pl = "Anub'Rekhan", tr = "Anub'Rekhan", it = "Anub'Rekhan", ja = "アヌブ・レカーン", zh = "阿努布雷坎", ko = "아눕레칸" }
+type = "undead"
+display = 15931
+icon = "INV_Misc_Head_Nerubian_01"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.9
+minute = 4
+yell = { en = "Ahh... welcome to my parlor.", de = "Ahh... willkommen in meinem Salon.", fr = "Ahh... bienvenue dans mon salon.", es = "Ahh... bienvenido a mi salón.", pt = "Ahh... bem-vindo ao meu salão.", ru = "Ааа... добро пожаловать в мою гостиную.", pl = "Ach... witajcie w moim salonie.", tr = "Ahh... salonuma hoş geldiniz.", it = "Ahh... benvenuti nel mio salotto.", ja = "ああ…我が客間へようこそ。", zh = "啊……欢迎来到我的客厅。", ko = "아아... 내 응접실에 온 것을 환영한다." }
+kit = "anubrekhan"
+
+[[zone.boss]]
+entry = 1491
+name = { en = "Noth the Plaguebringer", de = "Noth der Seuchenfürst", fr = "Noth le Porte-peste", es = "Noth el Pestífero", pt = "Noth, o Pestilento", ru = "Нот Чумной", pl = "Noth Siewca Plagi", tr = "Veba Getiren Noth", it = "Noth il Pestilente", ja = "疫病をもたらす者ノス", zh = "瘟疫使者诺斯", ko = "역병술사 노스" }
+type = "undead"
+display = 16590
+icon = "INV_Misc_Head_Undead_02"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.8
+minute = 8
+yell = { en = "Glory to the master!", de = "Ruhm dem Meister!", fr = "Gloire au maître !", es = "¡Gloria al maestro!", pt = "Glória ao mestre!", ru = "Слава господину!", pl = "Chwała mistrzowi!", tr = "Efendiye zafer!", it = "Gloria al padrone!", ja = "主に栄光あれ！", zh = "荣耀归于主人！", ko = "주인님께 영광을!" }
+kit = "noth_the_plaguebringer"
+
+[[zone.boss]]
+entry = 1492
+name = { en = "Patchwerk", de = "Flickwerk", fr = "Le Recousu", es = "Remendejo", pt = "Retalho", ru = "Лоскутик", pl = "Patchwerk", tr = "Patchwerk", it = "Patchwerk", ja = "パッチワーク", zh = "帕奇维克", ko = "패치워크" }
+type = "undead"
+display = 16174
+icon = "Achievement_Boss_patchwerk"
+health = 21000
+damage = 46
+speed = 5.0
+size = 0.9
+minute = 12
+yell = { en = "Patchwerk want to play!", de = "Flickwerk will spielen!", fr = "Le Recousu veut jouer !", es = "¡Remendejo quiere jugar!", pt = "Retalho quer brincar!", ru = "Лоскутик хотеть играть!", pl = "Patchwerk chce się bawić!", tr = "Patchwerk oynamak ister!", it = "Patchwerk voler giocare!", ja = "パッチワーク、遊びたい！", zh = "帕奇维克要玩！", ko = "패치워크 놀고 싶어!" }
+kit = "patchwerk"
+
+[[zone.boss]]
+entry = 1493
+name = { en = "Sapphiron", de = "Saphiron", fr = "Saphiron", es = "Sapphiron", pt = "Sapphiron", ru = "Сапфирон", pl = "Sapphiron", tr = "Sapphiron", it = "Sapphiron", ja = "サフィロン", zh = "萨菲隆", ko = "사피론" }
+type = "undead"
+display = 16033
+icon = "Achievement_Boss_Sapphiron_01"
+health = 26000
+damage = 54
+speed = 5.8
+size = 0.95
+minute = 16
+yell = { en = "Sapphiron rises from the frozen lair, its wings filling the hall with frost!", de = "Saphiron erhebt sich aus dem gefrorenen Hort, und seine Schwingen füllen die Halle mit Frost!", fr = "Saphiron s'élève de son antre gelé, et ses ailes emplissent la salle de givre !", es = "¡Sapphiron se alza de su helada guarida y sus alas llenan la sala de escarcha!", pt = "Sapphiron se ergue do covil congelado, e suas asas enchem o salão de gelo!", ru = "Сапфирон поднимается из ледяного логова, и его крылья наполняют зал стужей!", pl = "Sapphiron wznosi się z zamarzniętego leża, a jego skrzydła wypełniają halę mrozem!", tr = "Sapphiron donmuş inden yükseliyor, kanatları salonu ayazla dolduruyor!", it = "Sapphiron si leva dalla tana gelata e le sue ali riempiono la sala di gelo!", ja = "サフィロンが凍てついた巣から舞い上がり、その翼が広間を冷気で満たす！", zh = "萨菲隆从冰封的巢穴中升起，双翼让大厅充满冰霜！", ko = "사피론이 얼어붙은 둥지에서 날아오르고, 그 날개가 전당을 서리로 가득 채웁니다!" }
+kit = "sapphiron"
+
+[[zone.boss]]
+entry = 1494
+name = { en = "Kel'Thuzad", de = "Kel'Thuzad", fr = "Kel'Thuzad", es = "Kel'Thuzad", pt = "Kel'Thuzad", ru = "Кел'Тузад", pl = "Kel'Thuzad", tr = "Kel'Thuzad", it = "Kel'Thuzad", ja = "ケル・サザード", zh = "克尔苏加德", ko = "켈투자드" }
+type = "undead"
+display = 15945
+icon = "Achievement_Boss_KelThuzad_01"
+health = 58500
+damage = 66
+speed = 5.8
+size = 0.9
+minute = 20
+yell = { en = "Your petty magics are no challenge to the might of the Scourge!", de = "Eure armselige Magie ist keine Herausforderung für die Macht der Geißel!", fr = "Votre magie dérisoire ne défie pas la puissance du Fléau !", es = "¡Vuestra magia insignificante no es un desafío para el poder de la Plaga!", pt = "Sua magia insignificante não é desafio para o poder da Legião da Praga!", ru = "Ваша жалкая магия не бросит вызов мощи Плети!", pl = "Wasze marne czary nie dorównują potędze Plagi!", tr = "Sizin bayağı büyüleriniz Yıkım ordusunun gücüne meydan okuyamaz!", it = "I vostri meschini incantesimi non sono una sfida per la potenza del Flagello!", ja = "貴様らのちっぽけな魔法など、スカージの力の前では取るに足らぬ！", zh = "你们那点微不足道的魔法，根本无法挑战天灾军团的力量！", ko = "너희의 하찮은 마법은 스컬지의 힘에 상대가 되지 않는다!" }
+final = true
+kit = "kelthuzad"

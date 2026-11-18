@@ -1,0 +1,29 @@
+# Zul'jin: the troll's charge and Whirlwind, Grievous Throw, the lynx's Lynx Rush, the
+# dragonhawk's Flame Breath and Flame Whirl.
+
+[[boss]]
+key = "zuljin"
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [["charge", { whirlwind = { spell = 17207, radius = 7.0, lasts = 4.0, tick = 0.5 } }], 0.6] }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 43093 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { rush = { spell = 43153, len = 30.0, w = 6.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { line = { spell = 43215, len = 30.0, w = 5.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 43213, burst = 43213, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

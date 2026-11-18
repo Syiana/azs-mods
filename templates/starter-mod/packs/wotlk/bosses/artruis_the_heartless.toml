@@ -1,0 +1,29 @@
+# Artruis the Heartless: Frostbolt, Ice Lance, Blink then Frost Nova, Blizzard, the frozen
+# ground round his phylactery.
+
+[[boss]]
+key = "artruis_the_heartless"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 15530 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 54261, count = 5, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 8.0 } }, { nova = { spell = 11831, radius = 10.0, warn = 2.0 } }], 0.5] }
+
+[[boss.kit]]
+every = 12.0
+ability = { puddle = { spell = 10, burst = 10, radius = 7.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 18.0
+ability = { ring = { spell = 10, radius = 13.0, warn = 2.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

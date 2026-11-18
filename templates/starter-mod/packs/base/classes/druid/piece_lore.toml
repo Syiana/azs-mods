@@ -1,0 +1,43 @@
+# The druid's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "druid_0"
+profile = 0
+text = { en = "Sharp as the great cat's claws.", de = "Scharf wie die Krallen der Großkatze.", fr = "Tranchant comme les griffes du grand félin.", es = "Afilado como las garras del gran felino.", pt = "Afiado como as garras do grande felino.", ru = "Остёр, как когти большой кошки.", pl = "Ostre jak pazury wielkiego kota.", tr = "Büyük kedinin pençeleri kadar keskin.", it = "Affilato come gli artigli del grande felino.", ja = "大いなる猫の爪のごとく鋭い。", zh = "锋利如巨猫之爪。", ko = "거대한 고양이의 발톱처럼 날카롭다." }
+
+[[piece_lore]]
+key = "druid_1"
+profile = 1
+text = { en = "Thick as the hide of the great bear.", de = "Dick wie das Fell des großen Bären.", fr = "Épais comme la peau du grand ours.", es = "Grueso como la piel del gran oso.", pt = "Grosso como o couro do grande urso.", ru = "Толст, как шкура большого медведя.", pl = "Grube jak skóra wielkiego niedźwiedzia.", tr = "Büyük ayının postu kadar kalın.", it = "Spesso come la pelle del grande orso.", ja = "大いなる熊の毛皮のごとく厚い。", zh = "厚实如巨熊之皮。", ko = "거대한 곰의 가죽처럼 두껍다." }
+
+[[piece_lore]]
+key = "druid_2"
+profile = 2
+text = { en = "Nature's gifts return swiftly to its wearer.", de = "Die Gaben der Natur kehren schnell zu seinem Träger zurück.", fr = "Les dons de la nature reviennent vite à son porteur.", es = "Los dones de la naturaleza vuelven enseguida a quien lo lleva.", pt = "Os dons da natureza voltam depressa a quem o usa.", ru = "Дары природы быстро возвращаются к владельцу.", pl = "Dary natury szybko wracają do noszącego.", tr = "Doğanın armağanları giyenine çabucak döner.", it = "I doni della natura tornano in fretta a chi lo indossa.", ja = "自然の恵みは素早く持ち主のもとへ還る。", zh = "自然的馈赠迅速回到穿戴者身上。", ko = "자연의 선물이 착용자에게 빠르게 돌아온다." }
+
+[[piece_lore]]
+key = "druid_3"
+profile = 3
+text = { en = "Swift as the stag, sure as the claw.", de = "Flink wie der Hirsch, sicher wie die Klaue.", fr = "Rapide comme le cerf, sûr comme la griffe.", es = "Veloz como el ciervo, certero como la garra.", pt = "Veloz como o cervo, certeiro como a garra.", ru = "Быстр, как олень, точен, как коготь.", pl = "Szybkie jak jeleń, pewne jak pazur.", tr = "Geyik kadar hızlı, pençe kadar kesin.", it = "Rapido come il cervo, sicuro come l'artiglio.", ja = "牡鹿のように速く、爪のように確か。", zh = "迅捷如雄鹿，精准如利爪。", ko = "사슴처럼 빠르고, 발톱처럼 확실하다." }
+
+[[piece_lore]]
+key = "druid_4"
+profile = 4
+text = { en = "Wise as the moonkin; nature mends between spells.", de = "Weise wie der Mondkin; die Natur heilt zwischen den Zaubern.", fr = "Sage comme le sélénien ; la nature soigne entre deux sorts.", es = "Sabio como el lechúcico lunar; la naturaleza repara entre hechizos.", pt = "Sábio como o luniscante; a natureza cura entre feitiços.", ru = "Мудр, как лунный совух; природа исцеляет между заклинаниями.", pl = "Mądre jak sowiec; natura leczy między zaklęciami.", tr = "Moonkin kadar bilge; doğa büyüler arasında iyileştirir.", it = "Saggio come il gufo lunare; la natura cura tra un incantesimo e l'altro.", ja = "ムーンキンのように賢く、呪文の合間に自然が癒やす。", zh = "睿智如枭兽；自然在施法间隙抚平伤痛。", ko = "달빛야수처럼 지혜롭다. 주문 사이에 자연이 상처를 치유한다." }
+
+[[piece_lore]]
+key = "druid_5"
+profile = 5
+text = { en = "The Emerald Dream sustains its wearer.", de = "Der Smaragdgrüne Traum erhält seinen Träger.", fr = "Le Rêve d'émeraude soutient son porteur.", es = "El Sueño Esmeralda sostiene a quien lo lleva.", pt = "O Sonho Esmeralda sustenta quem o usa.", ru = "Изумрудный Сон поддерживает владельца.", pl = "Szmaragdowy Sen podtrzymuje noszącego.", tr = "Zümrüt Rüya giyenini ayakta tutar.", it = "Il Sogno di Smeraldo sostiene chi lo indossa.", ja = "エメラルド・ドリームが持ち主を支える。", zh = "翡翠梦境滋养着它的穿戴者。", ko = "에메랄드의 꿈이 착용자를 지탱한다." }
+
+[[piece_lore]]
+key = "druid_6"
+profile = 6
+text = { en = "Made for the hunt, at the pace of the pack.", de = "Gemacht für die Jagd, im Tempo des Rudels.", fr = "Fait pour la chasse, au rythme de la meute.", es = "Hecho para la caza, al ritmo de la manada.", pt = "Feito para a caçada, no ritmo da matilha.", ru = "Для охоты в темпе стаи.", pl = "Stworzone do łowów, w tempie stada.", tr = "Sürünün temposunda, av için yapılmış.", it = "Fatto per la caccia, al passo del branco.", ja = "群れの速さで狩るために作られた。", zh = "为狩猎而生，与狼群同步。", ko = "무리의 걸음에 맞춰, 사냥을 위해 만들어졌다." }
+
+[[piece_lore]]
+key = "druid_7"
+profile = 7
+text = { en = "Nature's wrath reaches far and strikes true.", de = "Der Zorn der Natur reicht weit und trifft sicher.", fr = "La colère de la nature porte loin et frappe juste.", es = "La cólera de la naturaleza llega lejos y golpea certera.", pt = "A ira da natureza alcança longe e atinge certeira.", ru = "Гнев природы достаёт далеко и бьёт точно.", pl = "Gniew natury sięga daleko i trafia celnie.", tr = "Doğanın gazabı uzağa erişir ve isabetle vurur.", it = "L'ira della natura arriva lontano e colpisce sicura.", ja = "自然の怒りは遠くまで届き、狙いを外さない。", zh = "自然之怒远及四方，百发百中。", ko = "자연의 분노는 멀리 닿고 정확히 꽂힌다." }

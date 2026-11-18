@@ -1,0 +1,16 @@
+# Krosh Firehand: Greater Fireball, Blast Wave.
+
+[[boss]]
+key = "krosh_firehand"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 33051 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 33061, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 10 }

@@ -1,0 +1,79 @@
+key = "warrior"
+# The `ChrClasses` id.
+id = 1
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [3, 4, 5, 6, 7, 0, 1, 2]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 230
+# Balance (2026-11-08): a little more damage and a little tougher. 6 % less taken is 6 % more
+# effective health (1 / 0.94 = 1.06).
+damage_pct = 6
+taken_pct = -6
+power = "rage"
+starter = "cleave"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's,
+# the pandaren (15 Horde, 17 Alliance) as Mists of Pandaria's.
+races = [1, 3, 4, 7, 11, 12, 2, 5, 6, 8, 9, 15, 17]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    49778, # Worn Greatsword
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 20252
+dash_legend = { en = "Heroic Leap cracks the ground: three aftershocks follow the landing, each half as strong.", de = "Heldenhafter Sprung spaltet den Boden: Drei Nachbeben folgen der Landung, jedes halb so stark.", fr = "Bond héroïque fissure le sol : trois répliques suivent l'atterrissage, chacune deux fois moins forte.", es = "Salto heroico resquebraja el suelo: tres réplicas siguen al aterrizaje, cada una con la mitad de fuerza.", pt = "Salto Heroico racha o chão: três tremores secundários seguem o pouso, cada um com metade da força.", ru = "Героический прыжок раскалывает землю: за приземлением следуют три подземных толчка, каждый вдвое слабее.", pl = "Heroiczny skok rozłupuje ziemię: po lądowaniu następują trzy wstrząsy wtórne, każdy o połowę słabszy.", tr = "Kahramanca Atlayış zemini çatlatır: inişi üç artçı sarsıntı izler, her biri yarı güçte.", it = "Balzo eroico spacca il terreno: tre scosse di assestamento seguono l'atterraggio, ciascuna forte la metà.", ja = "ヒロイック・リープが大地を割ります：着地後に半分の威力の余震が3回続きます。", zh = "英勇飞跃震裂大地：落地后会接连产生三次余震，每次强度减半。", ko = "영웅의 도약이 땅을 가릅니다: 착지 후 여진이 세 번 이어지며, 각각 절반의 위력입니다." }
+bot_name = "Botwarrior"
+bot_order = 3
+name = { en = "Warrior", de = "Krieger", fr = "Guerrier", es = "Guerrero", pt = "Guerreiro", ru = "Воин", pl = "Wojownik", tr = "Savaşçı", it = "Guerriero", ja = "ウォリアー", zh = "战士", ko = "전사" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [0.78, 0.61, 0.43]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "warrior_blood"
+tone = 1
+price = 12000
+name = { en = "Bloodrage", de = "Blutrausch", fr = "Rage sanguinaire", es = "Ira sangrienta", pt = "Ira Sangrenta", ru = "Кровавое бешенство", pl = "Krwawa wściekłość", tr = "Kanlı Hiddet", it = "Ira di sangue", ja = "ブラッドレイジ", zh = "血性狂暴", ko = "피의 분노" }
+
+[[colors]]
+key = "warrior_ember"
+tone = 2
+price = 12000
+name = { en = "Battle Fury", de = "Kampfeswut", fr = "Fureur de bataille", es = "Furia de batalla", pt = "Fúria de Batalha", ru = "Боевая ярость", pl = "Furia bitewna", tr = "Savaş Öfkesi", it = "Furia di battaglia", ja = "戦いの怒り", zh = "战斗狂怒", ko = "전투의 격노" }
+
+[[colors]]
+key = "warrior_azure"
+tone = 9
+price = 15000
+name = { en = "Stormforged", de = "Sturmgeschmiedet", fr = "Forgé par la tempête", es = "Forjado por la tormenta", pt = "Forjado na Tempestade", ru = "Рождённый бурей", pl = "Wykuty w burzy", tr = "Fırtınada Dövülmüş", it = "Forgiato dalla tempesta", ja = "嵐鍛え", zh = "风暴铸造", ko = "폭풍벼림" }
+
+[[colors]]
+key = "warrior_fel"
+tone = 5
+price = 15000
+name = { en = "Fel Fury", de = "Teufelszorn", fr = "Fureur gangrenée", es = "Furia vil", pt = "Fúria Vil", ru = "Ярость Скверны", pl = "Furia Zła", tr = "Fel Öfkesi", it = "Furia vile", ja = "フェルの怒り", zh = "邪能狂怒", ko = "지옥 격노" }
+
+[[colors]]
+key = "warrior_gold"
+tone = 3
+price = 18000
+name = { en = "Golden Warlord", de = "Goldener Kriegsherr", fr = "Seigneur de guerre doré", es = "Señor de la guerra dorado", pt = "Senhor da Guerra Dourado", ru = "Золотой полководец", pl = "Złoty wódz", tr = "Altın Savaş Lordu", it = "Signore della guerra dorato", ja = "黄金の将軍", zh = "黄金督军", ko = "황금 전쟁군주" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "warrior_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "warrior_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

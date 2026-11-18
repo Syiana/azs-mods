@@ -1,0 +1,677 @@
+# The wardrobe's transmog sets (survivors-sim wardrobe.rs). A set's place is its number on the wire (`w<index>`):
+# new sets go at the end. `pieces` are (gear slot, ItemDisplayInfo id, InventoryType).
+#
+# Every set. The index is the set's number on the wire (`w<index>` in a look), so new sets go
+# at the end. The client's table (SurvivorsWardrobe.lua) is in this order. `TUNE` the prices.
+# `class` is the class whose tier set it is (any hero may wear it): the shop sells at least one
+# set of every class (test the_shop_sells_a_wardrobe_set_of_every_class). `admin = true` makes it an
+# admin's set: shown and worn on an admin's device alone, never sold (price 0).
+
+[[wardrobe_set]]
+key = "judgement"
+name = "Judgement Armor"
+class = "paladin"
+price = 8000
+armor = 4
+pieces = [
+    [0, 45888, 1], [1, 34258, 3], [2, 33635, 5], [3, 33633, 6], [4, 33637, 7], [5, 33639, 8],
+    [6, 33634, 9], [7, 33636, 10],
+]
+
+[[wardrobe_set]]
+key = "wrath"
+name = "Battlegear of Wrath"
+class = "warrior"
+price = 8000
+armor = 4
+pieces = [
+    [0, 34215, 1], [1, 34253, 3], [2, 33983, 5], [3, 33990, 6], [4, 33986, 7], [5, 33989, 8],
+    [6, 33982, 9], [7, 33984, 10],
+]
+
+[[wardrobe_set]]
+key = "netherwind"
+name = "Netherwind Regalia"
+class = "mage"
+price = 8000
+armor = 1
+pieces = [
+    [0, 34218, 1], [1, 34254, 3], [2, 34038, 20], [3, 34046, 6], [4, 34039, 7], [5, 34044, 8],
+    [6, 34045, 9], [7, 34041, 10],
+]
+
+[[wardrobe_set]]
+key = "nemesis"
+name = "Nemesis Raiment"
+class = "warlock"
+price = 8000
+armor = 1
+pieces = [
+    [0, 34369, 1], [1, 34022, 3], [2, 34014, 20], [3, 34011, 6], [4, 29857, 7], [5, 34015, 8],
+    [6, 34012, 9], [7, 34013, 10],
+]
+
+[[wardrobe_set]]
+key = "stormrage"
+name = "Stormrage Raiment"
+class = "druid"
+price = 8000
+armor = 2
+pieces = [
+    [0, 33655, 1], [1, 30546, 3], [2, 30536, 5], [3, 30541, 6], [4, 30540, 7], [5, 30542, 8],
+    [6, 30548, 9], [7, 34016, 10],
+]
+
+[[wardrobe_set]]
+key = "bloodfang"
+name = "Bloodfang Armor"
+class = "rogue"
+price = 8000
+armor = 2
+pieces = [
+    [0, 33743, 1], [1, 33653, 3], [2, 33650, 5], [3, 31110, 6], [4, 31115, 7], [5, 31111, 8],
+    [6, 31127, 9], [7, 33651, 10],
+]
+
+[[wardrobe_set]]
+key = "transcendence"
+name = "Vestments of Transcendence"
+class = "priest"
+price = 8000
+armor = 1
+pieces = [
+    [0, 34233, 1], [1, 34048, 3], [2, 34047, 20], [3, 34053, 6], [4, 34049, 7], [5, 34055, 8],
+    [6, 34052, 9], [7, 34051, 10],
+]
+
+[[wardrobe_set]]
+key = "frostfire"
+name = "Frostfire Regalia"
+class = "mage"
+price = 15000
+armor = 1
+pieces = [
+    [0, 36440, 1], [1, 35326, 3], [2, 35523, 20], [3, 35519, 6], [4, 35522, 7], [5, 35525, 8],
+    [6, 35677, 9], [7, 35521, 10],
+]
+
+[[wardrobe_set]]
+key = "plagueheart"
+name = "Plagueheart Raiment"
+class = "warlock"
+price = 15000
+armor = 1
+pieces = [
+    [0, 35182, 1], [1, 35187, 3], [2, 35185, 20], [3, 35179, 6], [4, 35184, 7], [5, 35186, 8],
+    [6, 35180, 9], [7, 35183, 10],
+]
+
+[[wardrobe_set]]
+key = "cryptstalker"
+name = "Cryptstalker Armor"
+class = "hunter"
+price = 15000
+armor = 3
+pieces = [
+    [0, 35601, 1], [1, 35611, 3], [2, 35415, 5], [3, 35410, 6], [4, 35413, 7], [5, 35409, 8],
+    [6, 35416, 9], [7, 35411, 10],
+]
+
+[[wardrobe_set]]
+key = "redemption"
+name = "Redemption Armor"
+class = "paladin"
+price = 15000
+armor = 4
+pieces = [
+    [0, 36972, 1], [1, 35617, 3], [2, 35618, 5], [3, 35614, 6], [4, 35616, 7], [5, 35613, 8],
+    [6, 35619, 9], [7, 35615, 10],
+]
+
+[[wardrobe_set]]
+key = "lightbringer"
+name = "Lightbringer Armor"
+class = "paladin"
+price = 12000
+armor = 4
+pieces = [
+    [0, 45684, 1], [1, 45884, 3], [2, 45683, 5], [3, 48355, 6], [4, 45686, 7], [5, 48366, 8],
+    [6, 48314, 9], [7, 45685, 10],
+]
+
+[[wardrobe_set]]
+key = "thunderheart"
+name = "Thunderheart Harness"
+class = "druid"
+price = 12000
+armor = 2
+pieces = [
+    [0, 45663, 1], [1, 45667, 3], [2, 45662, 20], [3, 48352, 6], [4, 45665, 7], [5, 48362, 8],
+    [6, 48311, 9], [7, 45664, 10],
+]
+
+[[wardrobe_set]]
+key = "tempest"
+name = "Tempest Regalia"
+class = "mage"
+price = 12000
+armor = 1
+pieces = [
+    [0, 45449, 1], [1, 45126, 3], [2, 45119, 20], [3, 48354, 6], [4, 45122, 7], [5, 48365, 8],
+    [6, 48316, 9], [7, 45121, 10],
+]
+
+# The bracers' display 64107 (no item wears it) is the set's green; the gold one stood here before.
+[[wardrobe_set]]
+key = "lightsworn"
+name = "Lightsworn Battlegear"
+class = "paladin"
+price = 20000
+armor = 4
+pieces = [
+    [0, 64630, 1], [1, 64999, 3], [2, 64637, 5], [3, 64661, 6], [4, 64633, 7], [5, 64655, 8],
+    [6, 64107, 9], [7, 64627, 10],
+]
+
+[[wardrobe_set]]
+key = "ymirjar"
+name = "Ymirjar Lord's Battlegear"
+class = "warrior"
+price = 20000
+armor = 4
+pieces = [
+    [0, 64527, 1], [1, 64618, 3], [2, 64523, 5], [3, 64774, 6], [4, 64568, 7], [5, 64771, 8],
+    [6, 64772, 9], [7, 64525, 10],
+]
+
+[[wardrobe_set]]
+key = "bloodmage"
+name = "Bloodmage's Regalia"
+class = "mage"
+price = 20000
+armor = 1
+pieces = [
+    [0, 64268, 1], [1, 64271, 3], [2, 64270, 20], [3, 64348, 6], [4, 64269, 7], [5, 64296, 8],
+    [6, 64294, 9], [7, 64267, 10],
+]
+
+[[wardrobe_set]]
+key = "shadowblade"
+name = "Shadowblade's Battlegear"
+class = "rogue"
+price = 20000
+armor = 2
+pieces = [
+    [0, 63690, 1], [1, 63689, 3], [2, 63692, 5], [3, 63688, 6], [4, 63691, 7], [5, 63694, 8],
+    [6, 64405, 9], [7, 63693, 10],
+]
+
+# The gloves are 65230, the Frost Witch's Gloves of the set's other two kinds: Blizzard gave this
+# kind's Frost Witch's Grips (Item.dbc 51753) the warrior's Ymirjar gauntlets (64776).
+[[wardrobe_set]]
+key = "frostwitch"
+name = "Frost Witch's Battlegear"
+class = "shaman"
+price = 20000
+armor = 3
+pieces = [
+    [0, 65227, 1], [1, 65233, 3], [2, 65228, 5], [3, 65226, 6], [4, 65232, 7], [5, 65259, 8],
+    [6, 65224, 9], [7, 65230, 10],
+]
+
+[[wardrobe_set]]
+key = "dreadnaught"
+name = "Dreadnaught's Battlegear"
+class = "warrior"
+price = 0
+pass_only = true
+armor = 4
+pieces = [
+    [0, 36730, 1], [1, 35177, 3], [2, 35049, 5], [3, 35058, 6], [4, 35051, 7], [5, 35067, 8],
+    [6, 35044, 9], [7, 35050, 10],
+]
+
+[[wardrobe_set]]
+key = "scourgelord"
+name = "Scourgelord's Battlegear"
+class = "deathknight"
+price = 0
+pass_only = true
+armor = 4
+pieces = [
+    [0, 64594, 1], [1, 64705, 3], [2, 64592, 5], [3, 64786, 6], [4, 64595, 7], [5, 64781, 8],
+    [6, 64782, 9], [7, 64593, 10],
+]
+
+# Game Pass season 2 (Secrets of Ulduar): Ulduar's 25-player warrior tier 8, the black
+# Plate_RaidWarrior_G_01. Helm 46151, shoulders 46149, chest 46146, legs 46150, gloves 46148;
+# belt 45824, boots 46327 and the bracers' display 63745 (no item wears it) are its matching
+# off-set pieces.
+[[wardrobe_set]]
+key = "siegebreaker"
+name = "Conqueror's Siegebreaker Battlegear"
+class = "warrior"
+price = 0
+pass_only = true
+armor = 4
+pieces = [
+    [0, 59675, 1], [1, 59419, 3], [2, 59047, 5], [3, 58746, 6], [4, 59420, 7], [5, 59529, 8],
+    [6, 63745, 9], [7, 59417, 10],
+]
+
+# The death knight's tier 7 of Naxxramas (25 players, Valorous Scourgeborne Battlegear), the black
+# Plate_RaidDeathKnight_C_02: helm 40554, shoulders 40557, chest 40550, legs 40556, gloves 40552;
+# boots 40742 and the belt's and bracers' displays 63980 and 63982 (no item wears them) are its
+# matching off-set pieces.
+[[wardrobe_set]]
+key = "scourgeborne"
+name = "Scourgeborne Battlegear"
+class = "deathknight"
+price = 15000
+armor = 4
+pieces = [
+    [0, 55493, 1], [1, 55499, 3], [2, 55492, 5], [3, 63980, 6], [4, 55497, 7], [5, 56996, 8],
+    [6, 63982, 9], [7, 55494, 10],
+]
+
+# The monk's set: the client has no Shado-Pan armor, so it wears the masked black-and-blue
+# Darkmantle Armor (ItemSet 512, the rogue's tier 0.5), which no other set here shows, until a
+# monk set of its own comes in. `TUNE`
+[[wardrobe_set]]
+key = "shadopan"
+name = "Shado-Pan Battlegear"
+class = "monk"
+price = 8000
+armor = 2
+pieces = [
+    [0, 34700, 1], [1, 34688, 3], [2, 34689, 5], [3, 34699, 6], [4, 34687, 7], [5, 34684, 8],
+    [6, 34685, 9], [7, 34686, 10],
+]
+
+# The demon hunter's set: the client has no Illidari armor, so it wears the fel-green Slayer's
+# Armor (ItemSet 668, the rogue's tier 6 from Illidan's Black Temple), which no other set here
+# shows, until a demon hunter set of its own comes in. `TUNE`
+[[wardrobe_set]]
+key = "illidari"
+name = "Illidari Battlegear"
+class = "demonhunter"
+price = 8000
+armor = 2
+pieces = [
+    [0, 45434, 1], [1, 45436, 3], [2, 45425, 5], [3, 48357, 6], [4, 45428, 7], [5, 48369, 8],
+    [6, 48324, 9], [7, 45426, 10],
+]
+
+# A retail item back-ported by tools/retail-backport-source.js and shipped by tools/cosmetics-patch.js
+# (patch-W holds its ItemDisplayInfo row, 90901; patch-H its body textures): the Darkfuse Lowdown Coat,
+# the coat as a robe with plain black boots and gloves (the other slots stay as worn). Its class
+# only files it for the shop; the price is the user's (50000 gold).
+[[wardrobe_set]]
+key = "darkfuse"
+name = "Darkfuse Lowdown Coat"
+class = "rogue"
+price = 50000
+armor = 1
+pieces = [[2, 90901, 20], [5, 90903, 8], [7, 90902, 10]]
+
+# The Gamemaster's Robe and Hood (Item.dbc 2586 and 12064, displays 22033 and 22036, a blue cloth robe
+# and hood of the stock client) as Bloodmourne's companion: tools/robe-repaint.py paints their
+# textures anew (charcoal cloth, black satin drape, blackened steel trim with blood-red runes inlaid,
+# blood soaked up from the hem and the cuffs and spattered) and tools/cosmetics-patch.js ships them
+# (patch-W holds the display rows, 90951 the robe and 90952 the hood; patch-H the textures). An
+# admin's set: listed in an admin's shop and worn on an admin's device alone, never sold. Its class
+# only files it for the shop. The gear dyes colour it. Worn, a black glow rings the hero: spell 90981
+# (patch-W, GLOWS in tools/cosmetics-patch.js), Flame Reflection's glow drawn dark without its flames.
+[[wardrobe_set]]
+key = "gamemaster"
+name = "Gamemaster's Robe"
+class = "mage"
+price = 0
+admin = true
+armor = 1
+pieces = [[0, 90952, 1], [2, 90951, 20]]
+aura = 90981
+
+[[wardrobe_set]]
+key = "aegis"
+name = "Aegis Plate"
+class = "paladin"
+price = 24000
+armor = 4
+pieces = [
+    [0, 58269, 1], [1, 58278, 3], [2, 58264, 5], [4, 58277, 7], [7, 58275, 10],
+]
+
+[[wardrobe_set]]
+key = "worldbreaker"
+name = "Worldbreaker Regalia"
+class = "shaman"
+price = 24000
+armor = 3
+pieces = [
+    [0, 58294, 1], [1, 58296, 3], [2, 59485, 20], [4, 58339, 7], [7, 58293, 10],
+]
+
+[[wardrobe_set]]
+key = "terrorblade"
+name = "Terrorblade Battlegear"
+class = "rogue"
+price = 24000
+armor = 2
+pieces = [
+    [0, 58322, 1], [1, 58291, 3], [2, 58287, 5], [4, 58290, 7], [7, 58288, 10],
+]
+
+[[wardrobe_set]]
+key = "nightsong"
+name = "Nightsong Regalia"
+class = "druid"
+price = 24000
+armor = 2
+pieces = [
+    [0, 58242, 1], [1, 58243, 3], [2, 58337, 20], [4, 58335, 7], [7, 58239, 10],
+]
+
+[[wardrobe_set]]
+key = "sanctification"
+name = "Sanctification Regalia"
+class = "priest"
+price = 24000
+armor = 1
+pieces = [
+    [0, 58284, 1], [1, 58283, 3], [2, 58333, 20], [4, 58332, 7], [7, 58331, 10],
+]
+
+[[wardrobe_set]]
+key = "darkruned"
+name = "Darkruned Plate"
+class = "deathknight"
+price = 24000
+armor = 4
+pieces = [
+    [0, 58231, 1], [1, 58233, 3], [2, 58229, 5], [4, 58330, 7], [7, 58230, 10],
+]
+
+[[wardrobe_set]]
+key = "kirin_tor"
+name = "Kirin Tor Garb"
+class = "mage"
+price = 24000
+armor = 1
+pieces = [
+    [0, 58259, 1], [1, 58262, 3], [2, 58261, 20], [4, 59431, 7], [7, 58258, 10],
+]
+
+[[wardrobe_set]]
+key = "deathbringer"
+name = "Deathbringer Garb"
+class = "warlock"
+price = 24000
+armor = 1
+pieces = [
+    [0, 59396, 1], [1, 58307, 3], [2, 58328, 20], [4, 58327, 7], [7, 58302, 10],
+]
+
+[[wardrobe_set]]
+key = "scourgestalker"
+name = "Scourgestalker Battlegear"
+class = "hunter"
+price = 24000
+armor = 3
+pieces = [
+    [0, 58255, 1], [1, 58257, 3], [2, 58253, 5], [4, 58256, 7], [7, 58338, 10],
+]
+
+[[wardrobe_set]]
+key = "dark_coven"
+name = "Dark Coven's Regalia"
+class = "warlock"
+price = 36000
+armor = 1
+pieces = [
+    [0, 64286, 1], [1, 64289, 3], [2, 64288, 20], [4, 64287, 7], [7, 64283, 10],
+]
+
+[[wardrobe_set]]
+key = "lasherweave"
+name = "Lasherweave Regalia"
+class = "druid"
+price = 36000
+armor = 2
+pieces = [
+    [0, 64446, 1], [1, 64457, 3], [2, 64731, 20], [4, 64458, 7], [7, 64448, 10],
+]
+
+[[wardrobe_set]]
+key = "ahnkahar"
+name = "Ahn'Kahar Blood Hunter's Battlegear"
+class = "hunter"
+price = 36000
+armor = 3
+pieces = [
+    [0, 65130, 1], [1, 64804, 3], [2, 64814, 5], [4, 64812, 7], [7, 64810, 10],
+]
+
+# Molten Core's tier 1, the rest of Blackwing Lair's tier 2 and Naxxramas' tier 3, and tier 6 of
+# Mount Hyjal and the Black Temple (2026-11-13): each the client's own set (ItemSet.dbc), all eight
+# pieces as Item.dbc dresses them. `TUNE` the prices.
+
+[[wardrobe_set]]
+key = "might"
+name = "Battlegear of Might"
+class = "warrior"
+price = 6000
+armor = 4
+pieces = [
+    [0, 41847, 1], [1, 31024, 3], [2, 31021, 5], [3, 31019, 6], [4, 31023, 7], [5, 31025, 8],
+    [6, 31020, 9], [7, 31022, 10],
+]
+
+[[wardrobe_set]]
+key = "lawbringer"
+name = "Lawbringer Armor"
+class = "paladin"
+price = 6000
+armor = 4
+pieces = [
+    [0, 31506, 1], [1, 31510, 3], [2, 31505, 5], [3, 31353, 6], [4, 31352, 7], [5, 31354, 8],
+    [6, 31509, 9], [7, 31507, 10],
+]
+
+[[wardrobe_set]]
+key = "giantstalker"
+name = "Giantstalker Armor"
+class = "hunter"
+price = 6000
+armor = 3
+pieces = [
+    [0, 32028, 1], [1, 32030, 3], [2, 32022, 5], [3, 32019, 6], [4, 32029, 7], [5, 32040, 8],
+    [6, 32021, 9], [7, 32024, 10],
+]
+
+[[wardrobe_set]]
+key = "nightslayer"
+name = "Nightslayer Armor"
+class = "rogue"
+price = 6000
+armor = 2
+pieces = [
+    [0, 31514, 1], [1, 31504, 3], [2, 31105, 5], [3, 31339, 6], [4, 31340, 7], [5, 31109, 8],
+    [6, 31106, 9], [7, 31503, 10],
+]
+
+[[wardrobe_set]]
+key = "prophecy"
+name = "Vestments of Prophecy"
+class = "priest"
+price = 6000
+armor = 1
+pieces = [
+    [0, 31371, 1], [1, 30623, 3], [2, 31490, 20], [3, 30621, 6], [4, 28198, 7], [5, 31718, 8],
+    [6, 30617, 9], [7, 30620, 10],
+]
+
+[[wardrobe_set]]
+key = "earthfury"
+name = "The Earthfury"
+class = "shaman"
+price = 6000
+armor = 3
+pieces = [
+    [0, 31835, 1], [1, 31833, 3], [2, 31832, 20], [3, 31829, 6], [4, 31836, 7], [5, 31830, 8],
+    [6, 31831, 9], [7, 31834, 10],
+]
+
+[[wardrobe_set]]
+key = "arcanist"
+name = "Arcanist Regalia"
+class = "mage"
+price = 6000
+armor = 1
+pieces = [
+    [0, 31517, 1], [1, 30586, 3], [2, 30581, 20], [3, 30583, 6], [4, 30582, 7], [5, 30587, 8],
+    [6, 30584, 9], [7, 30585, 10],
+]
+
+[[wardrobe_set]]
+key = "felheart"
+name = "Felheart Raiment"
+class = "warlock"
+price = 6000
+armor = 1
+pieces = [
+    [0, 31987, 1], [1, 31974, 3], [2, 31973, 20], [3, 31969, 6], [4, 31972, 7], [5, 31975, 8],
+    [6, 31970, 9], [7, 31971, 10],
+]
+
+[[wardrobe_set]]
+key = "cenarion"
+name = "Cenarion Raiment"
+class = "druid"
+price = 6000
+armor = 2
+pieces = [
+    [0, 32790, 1], [1, 32016, 3], [2, 31797, 20], [3, 31722, 6], [4, 31729, 7], [5, 31724, 8],
+    [6, 31725, 9], [7, 31726, 10],
+]
+
+[[wardrobe_set]]
+key = "dragonstalker"
+name = "Dragonstalker Armor"
+class = "hunter"
+price = 8000
+armor = 3
+pieces = [
+    [0, 34367, 1], [1, 34091, 3], [2, 33667, 5], [3, 33665, 6], [4, 33672, 7], [5, 34269, 8],
+    [6, 33666, 9], [7, 33668, 10],
+]
+
+[[wardrobe_set]]
+key = "ten_storms"
+name = "The Ten Storms"
+class = "shaman"
+price = 8000
+armor = 3
+pieces = [
+    [0, 34217, 1], [1, 34255, 3], [2, 34081, 5], [3, 34078, 6], [4, 34084, 7], [5, 34083, 8],
+    [6, 34079, 9], [7, 34082, 10],
+]
+
+[[wardrobe_set]]
+key = "bonescythe"
+name = "Bonescythe Armor"
+class = "rogue"
+price = 15000
+armor = 2
+pieces = [
+    [0, 41849, 1], [1, 35064, 3], [2, 35054, 5], [3, 36349, 6], [4, 35065, 7], [5, 36351, 8],
+    [6, 35053, 9], [7, 35055, 10],
+]
+
+[[wardrobe_set]]
+key = "faith"
+name = "Vestments of Faith"
+class = "priest"
+price = 15000
+armor = 1
+pieces = [
+    [0, 56051, 1], [1, 35149, 3], [2, 36354, 20], [3, 35143, 6], [4, 35154, 7], [5, 35148, 8],
+    [6, 35144, 9], [7, 35145, 10],
+]
+
+[[wardrobe_set]]
+key = "earthshatterer"
+name = "The Earthshatterer"
+class = "shaman"
+price = 15000
+armor = 3
+pieces = [
+    [0, 42115, 1], [1, 35751, 3], [2, 35752, 5], [3, 35747, 6], [4, 35754, 7], [5, 35746, 8],
+    [6, 35753, 9], [7, 35748, 10],
+]
+
+[[wardrobe_set]]
+key = "dreamwalker"
+name = "Dreamwalker Raiment"
+class = "druid"
+price = 15000
+armor = 2
+pieces = [
+    [0, 35162, 1], [1, 35160, 3], [2, 35159, 5], [3, 35164, 6], [4, 35161, 7], [5, 35173, 8],
+    [6, 35158, 9], [7, 35167, 10],
+]
+
+[[wardrobe_set]]
+key = "onslaught"
+name = "Onslaught Battlegear"
+class = "warrior"
+price = 12000
+armor = 4
+pieces = [
+    [0, 49684, 1], [1, 45661, 3], [2, 45658, 5], [3, 48360, 6], [4, 45660, 7], [5, 48372, 8],
+    [6, 48347, 9], [7, 45659, 10],
+]
+
+[[wardrobe_set]]
+key = "gronnstalker"
+name = "Gronnstalker's Armor"
+class = "hunter"
+price = 12000
+armor = 3
+pieces = [
+    [0, 45680, 1], [1, 45682, 3], [2, 45678, 5], [3, 48353, 6], [4, 45681, 7], [5, 48364, 8],
+    [6, 48315, 9], [7, 45679, 10],
+]
+
+[[wardrobe_set]]
+key = "absolution"
+name = "Absolution Regalia"
+class = "priest"
+price = 12000
+armor = 1
+pieces = [
+    [0, 45770, 1], [1, 44978, 3], [2, 44979, 20], [3, 48356, 6], [4, 44976, 7], [5, 48368, 8],
+    [6, 48321, 9], [7, 44977, 10],
+]
+
+[[wardrobe_set]]
+key = "malefic"
+name = "Malefic Raiment"
+class = "warlock"
+price = 12000
+armor = 1
+pieces = [
+    [0, 45674, 1], [1, 45676, 3], [2, 45677, 20], [3, 48359, 6], [4, 45675, 7], [5, 48371, 8],
+    [6, 48349, 9], [7, 45673, 10],
+]
+
+[[wardrobe_set]]
+key = "skyshatter"
+name = "Skyshatter Harness"
+class = "shaman"
+price = 12000
+armor = 3
+pieces = [
+    [0, 45669, 1], [1, 45672, 3], [2, 45668, 20], [3, 48358, 6], [4, 45671, 7], [5, 48370, 8],
+    [6, 48326, 9], [7, 45670, 10],
+]

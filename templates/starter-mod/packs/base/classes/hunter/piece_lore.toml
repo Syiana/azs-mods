@@ -1,0 +1,43 @@
+# The hunter's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "hunter_0"
+profile = 0
+text = { en = "Every shot finds the heart.", de = "Jeder Schuss trifft das Herz.", fr = "Chaque tir trouve le cœur.", es = "Cada disparo encuentra el corazón.", pt = "Cada tiro encontra o coração.", ru = "Каждый выстрел находит сердце.", pl = "Każdy strzał trafia w serce.", tr = "Her atış kalbi bulur.", it = "Ogni colpo trova il cuore.", ja = "放つ矢はすべて心臓を射抜く。", zh = "每一箭都直取心脏。", ko = "모든 화살이 심장을 찾아간다." }
+
+[[piece_lore]]
+key = "hunter_1"
+profile = 1
+text = { en = "Cut from a beast that would not die.", de = "Geschnitten aus einer Bestie, die nicht sterben wollte.", fr = "Taillé dans une bête qui refusait de mourir.", es = "Cortado de una bestia que se negaba a morir.", pt = "Cortado de uma fera que se recusava a morrer.", ru = "Скроено из зверя, который не хотел умирать.", pl = "Wycięte z bestii, która nie chciała umrzeć.", tr = "Ölmeyi reddeden bir canavardan kesilmiş.", it = "Ricavato da una bestia che non voleva morire.", ja = "死を拒んだ獣から切り出された。", zh = "取自一头不死之兽的皮。", ko = "죽지 않으려던 짐승에게서 잘라 낸 것." }
+
+[[piece_lore]]
+key = "hunter_2"
+profile = 2
+text = { en = "Keen-eyed and tireless, ever ready to loose again.", de = "Scharfäugig und unermüdlich, stets bereit, erneut zu schießen.", fr = "L'œil vif et infatigable, toujours prêt à tirer de nouveau.", es = "De vista aguda e incansable, siempre listo para disparar de nuevo.", pt = "Olhar aguçado e incansável, sempre pronto para disparar de novo.", ru = "Зоркий и неутомимый, всегда готов выстрелить снова.", pl = "Bystre oko i niezmordowana ręka, zawsze gotowa do strzału.", tr = "Keskin gözlü ve yorulmaz, yeniden atmaya her an hazır.", it = "Occhio acuto e instancabile, sempre pronto a scoccare ancora.", ja = "鋭い目と疲れ知らずの腕、常に次の矢を放つ準備がある。", zh = "目光敏锐，不知疲倦，随时准备再次放箭。", ko = "예리한 눈, 지치지 않는 손. 언제든 다시 시위를 당긴다." }
+
+[[piece_lore]]
+key = "hunter_3"
+profile = 3
+text = { en = "Light on the trail, sure on the shot.", de = "Leicht auf der Fährte, sicher im Schuss.", fr = "Léger sur la piste, sûr au tir.", es = "Ligero en el rastro, certero en el disparo.", pt = "Leve na trilha, certeiro no tiro.", ru = "Лёгок на тропе, точен в выстреле.", pl = "Lekkie na tropie, pewne przy strzale.", tr = "İzde hafif, atışta isabetli.", it = "Leggero sulle tracce, sicuro nel tiro.", ja = "足取りは軽く、射撃は確か。", zh = "追踪时步履轻盈，射击时一击必中。", ko = "추적은 가볍게, 사격은 확실하게." }
+
+[[piece_lore]]
+key = "hunter_4"
+profile = 4
+text = { en = "The patient hunter rests, and readies the next trap.", de = "Der geduldige Jäger ruht und stellt die nächste Falle bereit.", fr = "Le chasseur patient se repose, et prépare le piège suivant.", es = "El cazador paciente descansa y prepara la siguiente trampa.", pt = "O caçador paciente descansa e prepara a próxima armadilha.", ru = "Терпеливый охотник отдыхает и готовит следующую ловушку.", pl = "Cierpliwy łowca odpoczywa i szykuje kolejną pułapkę.", tr = "Sabırlı avcı dinlenir ve sonraki tuzağı hazırlar.", it = "Il cacciatore paziente riposa e prepara la prossima trappola.", ja = "辛抱強い狩人は休み、次の罠を備える。", zh = "耐心的猎人稍作休息，布下下一个陷阱。", ko = "참을성 있는 사냥꾼은 쉬면서 다음 덫을 준비한다." }
+
+[[piece_lore]]
+key = "hunter_5"
+profile = 5
+text = { en = "Made for long seasons in the wild.", de = "Gemacht für lange Jahreszeiten in der Wildnis.", fr = "Fait pour de longues saisons en pleine nature.", es = "Hecho para largas temporadas en tierras salvajes.", pt = "Feito para longas temporadas na natureza.", ru = "Для долгих сезонов в дикой глуши.", pl = "Na długie pory roku w dziczy.", tr = "Vahşi doğada geçen uzun mevsimler için yapılmış.", it = "Fatto per lunghe stagioni nella natura selvaggia.", ja = "荒野での長い季節のために作られた。", zh = "为荒野中漫长的季节而制。", ko = "야생에서 보내는 긴 계절을 위해 만들어졌다." }
+
+[[piece_lore]]
+key = "hunter_6"
+profile = 6
+text = { en = "Runs with the pack, and bites with it.", de = "Läuft mit dem Rudel und beißt mit ihm.", fr = "Court avec la meute, et mord avec elle.", es = "Corre con la manada y muerde con ella.", pt = "Corre com a matilha, e morde com ela.", ru = "Бежит со стаей и кусает вместе с ней.", pl = "Biegnie ze stadem i gryzie razem z nim.", tr = "Sürüyle koşar, sürüyle ısırır.", it = "Corre con il branco e morde con esso.", ja = "群れと共に走り、群れと共に噛みつく。", zh = "与兽群同奔，与兽群同噬。", ko = "무리와 함께 달리고, 무리와 함께 문다." }
+
+[[piece_lore]]
+key = "hunter_7"
+profile = 7
+text = { en = "From high above, nothing escapes its reach.", de = "Von hoch oben entgeht ihm nichts.", fr = "De là-haut, rien n'échappe à sa portée.", es = "Desde lo alto, nada escapa a su alcance.", pt = "Lá do alto, nada escapa ao seu alcance.", ru = "С высоты ничто не ускользнёт.", pl = "Z wysoka nic nie umknie jego zasięgowi.", tr = "Yukarıdan hiçbir şey erişiminden kaçamaz.", it = "Dall'alto, nulla sfugge alla sua portata.", ja = "高みからは、何ものも逃れられない。", zh = "居高临下，无物能逃。", ko = "높은 곳에서 보면 그 무엇도 손아귀를 벗어나지 못한다." }

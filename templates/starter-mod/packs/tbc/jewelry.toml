@@ -1,0 +1,121 @@
+# The Burning Crusade's jewelry (`re/NUMBERS.md` 17.11), the port's own: eight trinkets and two legendary
+# amulets, dropping in Outland only. Their worth is the strength of their proc
+# (`game/tbc_jewelry.rs`). `TUNE`
+#
+# A trinket's `base` is set so that its first Common pick (1.5 x base) is worth, averaged over
+# the time its proc is up, what the Classic trinket of the same stat is worth for good: Tsunami and
+# the Brooch against Earthstrike (+19.5 % damage), Dragonspine and the Skull against the Talisman of
+# Ephemeral Power (-10.5 % cooldowns), the Hourglass against Blackhand's Breadth (+29 % critical
+# strike damage), Crusade against Earthstrike. The `ceiling` of a damage or cooldown proc is the
+# cap it shares with the WotLK procs (+200 % damage, 50 % cooldowns, `jewelry/wotlk.rs`). A test
+# in `game/tbc_jewelry.rs` plays the real procs and holds that average.
+[[jewel]]
+key = "dragonspine"
+slot = "trinket"
+behavior = "dragonspine"
+base = 0.16
+growth = "c"
+ceiling = 0.5
+world = "outland"
+icon = "INV_Misc_Bone_03"
+name = { en = "Dragonspine Trophy", de = "Drachenwirbeltrophäe", fr = "Trophée d'Échine-de-dragon", es = "Trofeo Espinazo de Dragón", pt = "Troféu da Espinha do Dragão", ru = "Трофей Драконьего Хребта", pl = "Trofeum z Kręgosłupa Smoka", tr = "Ejderomurga Ganimeti", it = "Trofeo di Spinadidraco", ja = "ドラゴンスパインの戦利品", zh = "龙脊奖章", ko = "용등뼈 전리품" }
+
+[[jewel]]
+key = "tsunami"
+slot = "trinket"
+behavior = "tsunami"
+base = 0.62
+growth = "c"
+ceiling = 2.0
+world = "outland"
+icon = "Spell_Nature_UnrelentingStorm"
+name = { en = "Tsunami Talisman", de = "Tsunamitalisman", fr = "Talisman du tsunami", es = "Talismán de tsunami", pt = "Talismã do Tsunami", ru = "Талисман цунами", pl = "Talizman Tsunami", tr = "Tsunami Tılsımı", it = "Talismano dello tsunami", ja = "ツナミ・タリスマン", zh = "海啸护符", ko = "해일의 부적" }
+
+[[jewel]]
+key = "hourglass"
+slot = "trinket"
+behavior = "hourglass"
+base = 0.8
+growth = "c"
+ceiling_x = 3.0
+world = "outland"
+icon = "INV_Gizmo_KhoriumPowerCore"
+name = { en = "Hourglass of the Unraveller", de = "Stundenglas des Entwirrers", fr = "Sablier du Défaiseur", es = "Reloj de arena del Desentrañador", pt = "Ampulheta do Desenredador", ru = "Песочные часы Разрушителя", pl = "Klepsydra Rozplatacza", tr = "Çözücünün Kum Saati", it = "Clessidra del Dipanatore", ja = "解き放つ者の砂時計", zh = "解脱者的沙漏", ko = "해체자의 모래시계" }
+
+[[jewel]]
+key = "crusade"
+slot = "trinket"
+behavior = "crusade"
+base = 0.0065
+growth = "c"
+ceiling_x = 5.0
+world = "outland"
+icon = "INV_Misc_Ticket_Tarot_Crusade"
+name = { en = "Darkmoon Card: Crusade", de = "Dunkelmondkarte: Kreuzzug", fr = "Carte Sombrelune : Croisade", es = "Carta de la Luna Negra: Cruzada", pt = "Carta da Lua Negra: Cruzada", ru = "Карта Новолуния: Крестовый поход", pl = "Karta Mrocznego Księżyca: Krucjata", tr = "Kararay Kartı: Sefer", it = "Carta di Lunacupa: Crociata", ja = "ダークムーン・カード：クルセイド", zh = "暗月卡片：十字军", ko = "다크문 카드: 성전" }
+
+[[jewel]]
+key = "guldan_skull"
+slot = "trinket"
+behavior = "skull"
+base = 0.32
+growth = "c"
+ceiling = 0.5
+world = "outland"
+icon = "INV_Misc_Bone_ElfSkull_01"
+name = { en = "The Skull of Gul'dan", de = "Schädel von Gul'dan", fr = "Le crâne de Gul'dan", es = "La calavera de Gul'dan", pt = "O Crânio de Gul'dan", ru = "Череп Гул'дана", pl = "Czaszka Gul'dana", tr = "Gul'dan'ın Kafatası", it = "Il Teschio di Gul'dan", ja = "グルダンの頭蓋骨", zh = "古尔丹之颅", ko = "굴단의 해골" }
+
+[[jewel]]
+key = "madness"
+slot = "trinket"
+behavior = "madness"
+base = 0.2
+growth = "c"
+ceiling_x = 5.0
+world = "outland"
+icon = "Spell_Shadow_Charm"
+name = { en = "Madness of the Betrayer", de = "Wahnsinn des Verräters", fr = "Folie du Traître", es = "Locura del Traidor", pt = "Loucura do Traidor", ru = "Безумие Предателя", pl = "Szaleństwo Zdrajcy", tr = "Hainin Çılgınlığı", it = "Follia del Traditore", ja = "裏切り者の狂気", zh = "背叛者的疯狂", ko = "배신자의 광기" }
+
+[[jewel]]
+key = "bloodlust_brooch"
+slot = "trinket"
+behavior = "brooch"
+base = 0.78
+growth = "c"
+ceiling = 2.0
+world = "outland"
+icon = "INV_Misc_MonsterScales_15"
+name = { en = "Bloodlust Brooch", de = "Kampfrauschbrosche", fr = "Broche de soif de sang", es = "Broche de sed de sangre", pt = "Broche da Sede de Sangue", ru = "Брошь кровожадности", pl = "Broszka żądzy krwi", tr = "Kan Hırsı Broşu", it = "Spilla della brama di sangue", ja = "ブラッドラストのブローチ", zh = "嗜血胸针", ko = "피의 욕망 브로치" }
+
+[[jewel]]
+key = "violet_eye"
+group = "sustain"
+slot = "trinket"
+behavior = "violet_eye"
+base = 0.2
+growth = "c"
+ceiling_x = 3.0
+world = "outland"
+icon = "INV_Trinket_Naxxramas02"
+name = { en = "Pendant of the Violet Eye", de = "Anhänger des Violetten Auges", fr = "Pendentif de l'Œil violet", es = "Colgante del Ojo Violeta", pt = "Pingente do Olho Violeta", ru = "Подвеска Аметистового Ока", pl = "Wisiorek Fioletowego Oka", tr = "Mor Göz Kolyesi", it = "Pendente dell'Occhio Violetto", ja = "ヴァイオレット・アイのペンダント", zh = "紫罗兰之眼坠饰", ko = "보랏빛 눈의 펜던트" }
+
+[[amulet]]
+key = "warglaives"
+rarity = "legendary"
+growth = 0.25
+effects = [["damage", 0.06], ["crit", 0.04]]
+special = { azzinoth = 0.75 }
+world = "outland"
+classes = ["warrior", "rogue", "demonhunter"]
+icon = "INV_Weapon_Glave_01"
+name = { en = "Warglaives of Azzinoth", de = "Kriegsgleven von Azzinoth", fr = "Glaives de guerre d'Azzinoth", es = "Guanteletes de guerra de Azzinoth", pt = "Glaives de Guerra de Azzinoth", ru = "Боевые клинки Аззинота", pl = "Wojenne glewie Azzinotha", tr = "Azzinoth'un Savaş Glaive'leri", it = "Lame da guerra di Azzinoth", ja = "アズィノスのウォーグレイヴ", zh = "埃辛诺斯战刃", ko = "아지노스의 전투검" }
+
+[[amulet]]
+key = "thoridal"
+rarity = "legendary"
+growth = 0.25
+effects = [["damage", 0.08], ["cooldown", 0.05]]
+special = { stars_fury = 0.45 }
+world = "outland"
+classes = ["hunter"]
+icon = "INV_Weapon_Bow_39"
+name = { en = "Thori'dal, the Stars' Fury", de = "Thori'dal, der Sternenzorn", fr = "Thori'dal, la Fureur des étoiles", es = "Thori'dal, la Furia de las Estrellas", pt = "Thori'dal, a Fúria das Estrelas", ru = "Тори'дал, Звёздный Гнев", pl = "Thori'dal, Furia Gwiazd", tr = "Thori'dal, Yıldızların Öfkesi", it = "Thori'dal, Furia delle Stelle", ja = "ソリダル、星々の怒り", zh = "索利达尔，群星之怒", ko = "토리달 - 별의 격노" }

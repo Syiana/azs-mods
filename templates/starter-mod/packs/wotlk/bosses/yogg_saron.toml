@@ -1,0 +1,29 @@
+# Yogg-Saron: Psychosis, Brain Link (the sanity drain), Lunatic Gaze, the Death Rays, the
+# Constrictor Tentacles' Squeeze, the tentacles and Guardians.
+
+[[boss]]
+key = "yogg_saron"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 63795 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { tether = { spell = 63802, reach = 16.0, warn = 1.6, lasts = 5.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { gaze = { spell = 64163, lasts = 3.5, factor = 3.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 63884, count = 2, radius = 3.5, speed = 4.5, lasts = 8.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ pool = { spell = 0, burst = 64125, radius = 6.0, warn = 2.0, factor = 2.6 } }, { pool = { spell = 0, burst = 64125, radius = 6.0, warn = 2.0, factor = 2.6 } }], 1.2] }
+
+[[boss.kit]]
+every = 10.0
+ability = { adds = 14 }

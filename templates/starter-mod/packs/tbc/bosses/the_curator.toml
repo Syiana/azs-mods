@@ -1,0 +1,16 @@
+# The Curator: Hateful Bolt, the Astral Flares' arcane bursts and the flares themselves.
+
+[[boss]]
+key = "the_curator"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 30383 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 1449, count = 4, radius = 4.0, spread = 10.0, warn = 1.6, factor = 2.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 10 }

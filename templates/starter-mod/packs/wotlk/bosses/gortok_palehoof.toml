@@ -1,0 +1,20 @@
+# Gortok Palehoof: Withering Roar, Arcing Smash, Impale.
+
+[[boss]]
+key = "gortok_palehoof"
+
+[[boss.kit]]
+every = 10.0
+ability = { nova = { spell = 48256, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 48260, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { line = { spell = 48261, len = 30.0, w = 5.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

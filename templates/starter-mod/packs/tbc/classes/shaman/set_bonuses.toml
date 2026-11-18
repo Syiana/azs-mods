@@ -1,0 +1,22 @@
+[[set_bonus]]
+key = "shaman_exotic_4"
+tier = "exotic"
+pieces = 4
+mechanic = { kind = "strike_chain", spell = "lava_burst", targets = 2, radius = 12.0, damage = 0.3 }
+text = { en = "Magmaweaver: Start each run with Lava Burst instead of Lightning Bolt. Each Lava Burst jumps to up to two additional enemies for 30% damage each.", de = "Magmawirker: Du beginnst jeden Lauf mit Lavaeruption statt Blitzschlag. Jede Lavaeruption springt auf bis zu zwei weitere Gegner über und verursacht bei jedem 30% Schaden.", fr = "Tisseur de magma : Vous commencez chaque partie avec Explosion de lave au lieu d’Éclair. Chaque Explosion de lave rebondit sur deux ennemis supplémentaires au maximum, infligeant 30 % de dégâts à chacun.", es = "Tejedor de Magma: Empiezas cada partida con Ráfaga de lava en lugar de Descarga de relámpagos. Cada ráfaga salta a un máximo de dos enemigos adicionales y les inflige un 30 % de daño a cada uno.", pt = "Tecelão de Magma: Você começa cada partida com Explosão de Lava em vez de Raio. Cada Explosão de Lava salta para até dois inimigos adicionais e causa 30% do dano a cada um.", ru = "Магматкач: Вы начинаете каждый забег с «Выбросом лавы» вместо «Молнии». Каждый «Выброс лавы» перескакивает на двух дополнительных врагов и наносит каждому 30% урона.", it = "Tessitore di Magma: Inizi ogni partita con Esplosione di Lava al posto di Dardo Fulminante. Ogni Esplosione di Lava rimbalza su un massimo di due nemici aggiuntivi e infligge a ciascuno il 30% dei danni.", pl = "Tkacz Magmy: Każdą rozgrywkę zaczynasz z Wybuchem lawy zamiast Błyskawicy. Każdy Wybuch lawy przeskakuje na maksymalnie dwóch dodatkowych wrogów, zadając każdemu 30% obrażeń.", tr = "Magma Dokuyucusu: Her oyuna Şimşek yerine Lav Patlaması ile başlarsın. Her Lav Patlaması en fazla iki ek düşmana sıçrar ve her birine %30 hasar verir.", ja = "マグマウィーヴァー：毎ランをライトニング・ボルトの代わりにラヴァ・バーストを持って始めます。各ラヴァ・バーストが追加で最大2体の敵に跳躍し、それぞれ30%のダメージを与えます。", zh = "熔岩编织者：每场对局开始时拥有熔岩爆裂而非闪电箭。每次熔岩爆裂会跳跃到最多两个额外的敌人身上，各造成30%的伤害。", ko = "마그마 직조자: 모든 런을 번개 화살 대신 용암 폭발을 가지고 시작합니다. 용암 폭발이 최대 2명의 적에게 더 튀어 각각 30%의 피해를 줍니다." }
+
+[[set_bonus.part]]
+effects = [{ start_instead = "lava_burst" }]
+fixed = true
+
+[[set_bonus]]
+key = "shaman_exotic_8"
+tier = "exotic"
+pieces = 8
+mechanic = { kind = "field_echo", spell = "searing_totem", cast = "lava_burst", every = 2.5, damage = 0.6 }
+text = { en = "Magmaweaver: Searing Totem lasts 50% longer and fires a Lava Burst for 60% of its normal damage every 2.5 sec in addition to its usual shots.", de = "Magmawirker: Totem der Verbrennung bleibt 50% länger bestehen und feuert zusätzlich zu seinen normalen Geschossen alle 2,5 Sek. eine Lavaeruption mit 60% ihres normalen Schadens ab.", fr = "Tisseur de magma : Totem incendiaire dure 50 % plus longtemps et lance, en plus de ses tirs habituels, une Explosion de lave toutes les 2,5 s à 60 % de ses dégâts normaux.", es = "Tejedor de Magma: El Tótem abrasador dura un 50 % más y, además de sus disparos habituales, lanza una Ráfaga de lava cada 2,5 s que inflige un 60 % de su daño normal.", pt = "Tecelão de Magma: Totem Calcinante dura 50% a mais e, além dos disparos normais, lança uma Explosão de Lava a cada 2,5 s que causa 60% do dano normal.", ru = "Магматкач: «Опаляющий тотем» действует на 50% дольше. Помимо обычных выстрелов он каждые 2,5 сек. применяет «Выброс лавы» с 60% обычного урона.", it = "Tessitore di Magma: Il Totem Rovente dura il 50% in più e, oltre ai suoi colpi abituali, lancia ogni 2,5 s un’Esplosione di Lava al 60% dei suoi danni normali.", pl = "Tkacz Magmy: Totem żaru trwa o 50% dłużej i oprócz zwykłych pocisków co 2,5 sek. rzuca Wybuch lawy, który zadaje 60% normalnych obrażeń.", tr = "Magma Dokuyucusu: Kavurucu Totem %50 daha uzun sürer ve normal atışlarına ek olarak her 2,5 sn’de normal hasarının %60’ını veren bir Lav Patlaması yapar.", ja = "マグマウィーヴァー：シアリング・トーテムの持続時間が50%延び、通常の射撃に加えて2.5秒ごとに通常の60%のダメージのラヴァ・バーストを放ちます。", zh = "熔岩编织者：灼热图腾的存在时间延长50%，除了平常的射击外，每2.5秒还会发射一次熔岩爆裂，造成正常伤害的60%。", ko = "마그마 직조자: 불타는 토템이 50% 더 오래 유지되며, 평소 공격과 함께 2.5초마다 일반 피해의 60%로 용암 폭발을 발사합니다." }
+
+[[set_bonus.part]]
+mods = [{ duration = ["searing_totem"] }]
+mods_v = 0.5
+fixed = true

@@ -1,0 +1,31 @@
+# The Black Knight: Icy Touch, Desecration, a charge into Obliterate, the Ghoul Explodes, the
+# desecrated field, Army of the Dead.
+
+[[boss]]
+key = "the_black_knight"
+
+# Icy Touch marks its ground: a bolt lands unwarned for the boss's whole hit, more than a hero's
+# health this late, and the burning ring holds the hero within its reach.
+[[boss.kit]]
+every = 4.5
+ability = { pool = { spell = 67718, burst = 67718, radius = 5.0, warn = 2.0, factor = 1.0 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 67778, burst = 67778, radius = 7.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { combo = [["charge", { cone = { spell = 67725, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.8 } }], 0.8] }
+
+[[boss.kit]]
+every = 12.0
+ability = { rain = { spell = 67751, count = 4, radius = 6.0, spread = 10.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 18.0
+ability = { ring = { spell = 67778, radius = 13.0, warn = 2.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

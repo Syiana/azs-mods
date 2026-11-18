@@ -1,0 +1,16 @@
+# Elder Nadox: Brood Plague, the Ahn'kahar eggs.
+
+[[boss]]
+key = "elder_nadox"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 56130 } }
+
+[[boss.kit]]
+every = 17.0
+ability = { eggs = { hatch = 2, count = 3, radius = 6.0, health = 0.03, lasts = 10.0 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

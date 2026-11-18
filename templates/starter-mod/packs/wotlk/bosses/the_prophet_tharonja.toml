@@ -1,0 +1,25 @@
+# The Prophet Tharon'ja: Shadow Volley, Rain of Fire, Eye Beam then Lightning Breath, Poison
+# Cloud.
+
+[[boss]]
+key = "the_prophet_tharonja"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 49528 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 49518, count = 5, radius = 6.0, spread = 10.0, warn = 1.6, factor = 2.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ line = { spell = 49544, len = 30.0, w = 5.0, warn = 1.4, factor = 2.6 } }, { cone = { spell = 49537, range = 14.0, arc = 70.0, warn = 1.4, factor = 2.6 } }], 1.4] }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 49548, burst = 49548, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

@@ -1,0 +1,105 @@
+# The druid's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: play nth_cast [wrath] -> wrath every v
+[[set_bonus]]
+key = "druid_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Every {v} Wraths, one strikes twice.", de = "Jeder {v}. Zorn trifft doppelt.", fr = "Toutes les {v} Colères, l'une frappe deux fois.", es = "Cada {v} Cóleras, una golpea dos veces.", pt = "A cada {v} Iras, uma acerta duas vezes.", ru = "Каждый {v}-й «Гнев» бьёт дважды.", pl = "Co {v}. Gniew uderza dwa razy.", tr = "Her {v} Wrath'ta biri iki kez vurur.", it = "Ogni {v} Ire, una colpisce due volte.", ja = "ラースを{v}回唱えるごとに、1回が2度命中します。", zh = "每施放{v}次愤怒，其中一次会打击两次。", ko = "천벌을 {v}번 시전할 때마다 한 번은 두 번 적중합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 4.0, play = { nth_cast = { keys = ["wrath"], cast = "wrath" } } }]
+empowered = 3.0
+shows = "v"
+
+# Original: mod area [swipe] +0.50; play hit_dot [swipe] 0.40p of the hit over 6 s
+[[set_bonus]]
+key = "druid_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Swipe is 50% wider and makes enemies bleed for {v}% of its hit over 6 sec.", de = "Prankenhieb ist 50% breiter und lässt Feinde über 6 Sek. für {v}% seines Treffers bluten.", fr = "Balayage est 50% plus large et fait saigner les ennemis pour {v}% de son impact en 6 s.", es = "Flagelo es un 50% más amplio y hace sangrar a los enemigos un {v}% de su golpe durante 6 s.", pt = "Golpe Amplo fica 50% mais largo e faz os inimigos sangrarem {v}% do golpe ao longo de 6 s.", ru = "«Размах» на 50% шире и вызывает у врагов кровотечение на {v}% удара в течение 6 сек.", pl = "Zamach jest szerszy o 50% i wywołuje u wrogów krwawienie za {v}% swojego trafienia przez 6 s.", tr = "Swipe %50 daha geniştir ve düşmanları 6 sn boyunca vuruşunun %{v}'i kadar kanatır.", it = "Spazzata è più ampia del 50% e fa sanguinare i nemici per il {v}% del suo colpo in 6 sec.", ja = "スワイプの範囲が50%広がり、命中した敵を6秒かけてそのダメージの{v}%分出血させます。", zh = "横扫的范围扩大50%，并使敌人在6秒内流血，造成相当于其伤害{v}%的伤害。", ko = "휘둘러치기의 범위가 50% 넓어지고, 적중한 적이 6초에 걸쳐 그 피해의 {v}%만큼 출혈 피해를 입습니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["swipe"] }]
+mods_v = 0.5
+fixed = true
+
+[[set_bonus.part]]
+plays = [{ v = 0.4, play = { hit_dot = { keys = ["swipe"], secs = 6.0 } } }]
+shows = "v"
+percent = true
+
+# Original: mod targets [entangling_roots] +v
+[[set_bonus]]
+key = "druid_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Entangling Roots strikes {v} more enemies.", de = "Wucherwurzeln treffen {v} Feinde mehr.", fr = "Sarments frappe {v} ennemis de plus.", es = "Raíces enredadoras alcanza a {v} enemigos más.", pt = "Raízes Constritoras atinge mais {v} inimigos.", ru = "«Гнев деревьев» поражает дополнительных врагов: {v}.", pl = "Splątujące Korzenie trafiają o {v} wrogów więcej.", tr = "Entangling Roots {v} düşmana daha vurur.", it = "Radici intrappolanti colpisce {v} nemici in più.", ja = "エンタングリング・ルーツが追加で{v}体の敵に命中します。", zh = "纠缠根须额外击中{v}个敌人。", ko = "휘감는 뿌리가 적을 {v}명 더 공격합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["entangling_roots"] }]
+mods_v = 3.0
+whole = true
+shows = "v"
+
+# Original: play cleave [starfire] all within 6 yd, share 0.35p
+[[set_bonus]]
+key = "druid_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Starfire bursts on every enemy within 6 yards of its target for {v}% of its damage.", de = "Sternenfeuer birst auf jedem Feind innerhalb von 6 m um sein Ziel für {v}% seines Schadens.", fr = "Feu stellaire éclate sur chaque ennemi à moins de 6 m de sa cible pour {v}% de ses dégâts.", es = "Fuego estelar estalla sobre todos los enemigos a 6 m de su objetivo con un {v}% de su daño.", pt = "Fogo Estelar explode em todos os inimigos a até 6 m do alvo com {v}% do seu dano.", ru = "«Звездный огонь» взрывается на всех врагах в радиусе 6 м от цели, нанося {v}% своего урона.", pl = "Gwiezdny Ogień wybucha na każdym wrogu w promieniu 6 jd od celu, zadając {v}% swoich obrażeń.", tr = "Starfire, hedefinin 6 m çevresindeki her düşmanda hasarının %{v}'i kadar patlar.", it = "Fuoco stellare esplode su ogni nemico entro 6 m dal bersaglio per il {v}% dei suoi danni.", ja = "スターファイアが対象の6ヤード以内にいるすべての敵にもそのダメージの{v}%で炸裂します。", zh = "星火术会在目标6码范围内的所有敌人身上爆发，造成相当于其伤害{v}%的伤害。", ko = "별빛 화살이 대상 주위 6미터 안의 모든 적에게 터져 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.35, play = { cleave = { keys = ["starfire"], n = 20, radius = 6.0, stun = 0.0 } } }]
+shows = "v"
+percent = true
+
+# Original: mod area [hurricane] +0.40p; mod duration +0.40p
+[[set_bonus]]
+key = "druid_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Hurricane is {v}% wider and lasts {v2}% longer.", de = "Hurrikan ist {v}% breiter und hält {v2}% länger an.", fr = "Ouragan est {v}% plus large et dure {v2}% plus longtemps.", es = "Huracán es un {v}% más amplio y dura un {v2}% más.", pt = "Furacão fica {v}% mais largo e dura {v2}% a mais.", ru = "«Гроза» на {v}% шире и длится на {v2}% дольше.", pl = "Huragan jest szerszy o {v}% i trwa o {v2}% dłużej.", tr = "Hurricane %{v} daha geniştir ve %{v2} daha uzun sürer.", it = "Uragano è più ampio del {v}% e dura il {v2}% in più.", ja = "ハリケーンの範囲が{v}%広がり、持続時間が{v2}%延びます。", zh = "飓风的范围扩大{v}%，持续时间延长{v2}%。", ko = "허리케인의 범위가 {v}% 넓어지고 지속시간이 {v2}% 길어집니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["hurricane"] }]
+mods_v = 0.4
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ duration = ["hurricane"] }]
+mods_v = 0.4
+shows = "v2"
+percent = true
+
+# Original: mod targets +v; cooldown 0.40; play hit_rider stun 1 s at 33%; stat vs_held +1.0p
+[[set_bonus]]
+key = "druid_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Shred strikes {v} more enemies, has a 33% chance to stun them for 1 sec and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Schreddern trifft {v} weitere Feinde, betäubt sie mit 33% Chance 1 Sek. lang und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Lambeau frappe {v} ennemis de plus, a 33% de chances de les étourdir 1 s et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Triturar golpea a {v} enemigos más, tiene un 33% de probabilidad de aturdirlos 1 s y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Retalhar atinge {v} inimigos a mais, tem 33% de chance de atordoá-los por 1 s e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Полоснуть поражает ещё {v} противников, с вероятностью 33% оглушает их на 1 сек. и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Rozszarpanie trafia {v} kolejnych wrogów, z 33% szansą ogłusza ich na 1 s i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Parçalama {v} düşmana daha vurur, %33 şansla onları 1 sn sersemletir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Dilaniare colpisce {v} nemici in più, ha il 33% di probabilità di stordirli per 1 sec e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "シュレッドが追加で{v}体の敵に命中し、33%の確率で1秒間スタンさせ、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "撕碎额外击中{v}个敌人，有33%的几率使其昏迷1秒，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "칼날 발톱이 적을 {v}명 더 공격하고, 33% 확률로 1초 동안 기절시키며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["shred"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["shred"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+plays = [{ v = 0.33, play = { hit_rider = { keys = ["shred"], rider = { stun = { secs = 1.0 } } } } }]
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true

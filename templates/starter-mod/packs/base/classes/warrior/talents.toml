@@ -1,0 +1,568 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "warrior_arms"
+index = 0
+icon = "Ability_Rogue_Eviscerate"
+background = "WarriorArms"
+name = { en = "Arms", de = "Waffen", fr = "Armes", es = "Armas", pt = "Armas", ru = "Оружие", pl = "Broń", tr = "Silahlar", it = "Armi", ja = "アームズ", zh = "武器", ko = "무기" }
+
+[[talent_tree]]
+key = "warrior_fury"
+index = 1
+icon = "Ability_Warrior_InnerRage"
+background = "WarriorFury"
+name = { en = "Fury", de = "Furor", fr = "Fureur", es = "Furia", pt = "Fúria", ru = "Неистовство", pl = "Furia", tr = "Kudurma", it = "Furia", ja = "フューリー", zh = "狂怒", ko = "분노" }
+
+[[talent_tree]]
+key = "warrior_protection"
+index = 2
+icon = "INV_Shield_06"
+background = "WarriorProtection"
+name = { en = "Protection", de = "Schutz", fr = "Protection", es = "Protección", pt = "Proteção", ru = "Защита", pl = "Ochrona", tr = "Koruma", it = "Protezione", ja = "プロテクション", zh = "防护", ko = "보호" }
+
+[[talent]]
+key = "imp_heroic"
+tree = 0
+row = 0
+col = 0
+ranks = 5
+effects = [{ stat = [21, 0.03] }]
+icon = "Ability_Warrior_DecisiveStrike"
+name = { en = "Trauma", de = "Trauma", fr = "Traumatisme", es = "Trauma", pt = "Trauma", ru = "Травма", pl = "Uraz", tr = "Travma", it = "Trauma", ja = "トラウマ", zh = "创伤", ko = "외상" }
+text = { en = "You deal {v}% more damage to enemies suffering your damage-over-time effects, such as Rend and Deep Wounds.", de = "Du verursachst {v}% mehr Schaden an Feinden, die unter deinen Effekten für Schaden über Zeit leiden, etwa Verwunden und Tiefe Wunden.", fr = "Tu infliges {v}% de dégâts en plus aux ennemis qui subissent tes effets de dégâts sur la durée, comme Pourfendre et Blessures profondes.", es = "Infliges un {v}% más de daño a los enemigos que sufren tus efectos de daño con el tiempo, como Romper y Heridas profundas.", pt = "Você causa {v}% a mais de dano a inimigos que sofrem seus efeitos de dano ao longo do tempo, como Dilacerar e Ferimentos Profundos.", ru = "Ты наносишь на {v}% больше урона врагам, страдающим от твоих эффектов периодического урона, таких как Кровопускание и Глубокие раны.", pl = "Zadajesz o {v}% więcej obrażeń przeciwnikom cierpiącym od twoich efektów obrażeń w czasie, takich jak Rozdarcie i Głębokie rany.", tr = "Doğrama ve Derin Yaralar gibi zamanla hasar efektlerinden etkilenen düşmanlara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più ai nemici afflitti dai tuoi effetti di danno nel tempo, come Squarcio e Ferite profonde.", ja = "レンドやディープ・ウーンズなど、あなたの継続ダメージ効果を受けている敵に与えるダメージが{v}%増加します。", zh = "你对受到你的持续伤害效果（如撕裂和深度伤痕）影响的敌人造成的伤害提高{v}%。", ko = "분쇄나 깊은 상처 같은 지속 피해 효과에 걸린 적에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "deflection"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "Ability_Parry"
+name = { en = "Deflection", de = "Abwehr", fr = "Déviation", es = "Desvío", pt = "Deflexão", ru = "Отражение ударов", pl = "Odbicie", tr = "Savuşturma", it = "Deviazione", ja = "ディフレクション", zh = "偏斜", ko = "튕겨내기" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "imp_rend"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Ability_Gouge"
+name = { en = "Improved Rend", de = "Verbessertes Verwunden", fr = "Pourfendre amélioré", es = "Romper mejorado", pt = "Dilacerar Aprimorado", ru = "Улучшенное кровопускание", pl = "Ulepszone Rozdarcie", tr = "Gelişmiş Doğrama", it = "Squarcio migliorato", ja = "改良型レンド", zh = "强化撕裂", ko = "분쇄 연마" }
+text = { en = "Rend deals {v}% more damage.", de = "Verwunden verursacht {v}% mehr Schaden.", fr = "Pourfendre inflige {v}% de dégâts en plus.", es = "Romper inflige un {v}% más de daño.", pt = "Dilacerar causa {v}% a mais de dano.", ru = "Кровопускание наносит на {v}% больше урона.", pl = "Rozdarcie zadaje o {v}% więcej obrażeń.", tr = "Doğrama {v}% daha fazla hasar verir.", it = "Squarcio infligge il {v}% di danni in più.", ja = "レンドのダメージが{v}%増加します。", zh = "撕裂造成的伤害提高{v}%。", ko = "분쇄의 피해가 {v}% 증가합니다." }
+menu_v = 0.15
+mods = [{ damage = ["rend"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "tactical_mastery"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.02] }]
+icon = "Spell_Nature_EnchantArmor"
+name = { en = "Tactical Mastery", de = "Taktiker", fr = "Maîtrise tactique", es = "Maestría táctica", pt = "Maestria Tática", ru = "Тактическое мастерство", pl = "Mistrzostwo taktyki", tr = "Taktik Ustalığı", it = "Maestria tattica", ja = "タクティカル・マスタリー", zh = "战术掌握", ko = "전술 숙련" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "deep_wounds"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_BackStab"
+name = { en = "Deep Wounds", de = "Tiefe Wunden", fr = "Blessures profondes", es = "Heridas profundas", pt = "Ferimentos Profundos", ru = "Глубокие раны", pl = "Głębokie rany", tr = "Derin Yaralar", it = "Ferite profonde", ja = "ディープ・ウーンズ", zh = "深度伤痕", ko = "깊은 상처" }
+text = { en = "Milestone. Your critical strikes make the target bleed for {v}% of the hit over 6 sec.", de = "Meilenstein. Deine kritischen Treffer lassen das Ziel über 6 Sek. für {v}% des Treffers bluten.", fr = "Étape. Tes coups critiques font saigner la cible pour {v}% du coup sur 6 s.", es = "Hito. Tus golpes críticos hacen sangrar al objetivo por un {v}% del golpe durante 6 s.", pt = "Marco. Seus golpes críticos fazem o alvo sangrar por {v}% do golpe ao longo de 6 s.", ru = "Веха. Твои критические удары вызывают у цели кровотечение на {v}% урона удара в течение 6 сек.", pl = "Kamień milowy. Twoje trafienia krytyczne sprawiają, że cel krwawi za {v}% trafienia przez 6 s.", tr = "Dönüm noktası. Kritik vuruşların hedefi kanatır: 6 sn içinde vuruşun {v}%'si kadar.", it = "Traguardo. I tuoi colpi critici fanno sanguinare il bersaglio per il {v}% del colpo in 6 s.", ja = "【マイルストーン】クリティカルで対象を出血させ、6秒かけてその攻撃の{v}%のダメージを与えます。", zh = "里程碑：你的暴击会使目标流血，在6秒内造成相当于该次攻击{v}%的伤害。", ko = "이정표. 치명타가 대상을 출혈시켜 6초에 걸쳐 그 피해의 {v}%를 줍니다." }
+menu_v = 0.8
+plays = [
+    { v = 0.8, play = { crit_bleed = { keys = [], school = 0, secs = 6.0 } } },
+]
+
+[[talent]]
+key = "anger_management"
+tree = 0
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [6, 0.6] }]
+icon = "Spell_Holy_BlessingOfStamina"
+name = { en = "Anger Management", de = "Aggressionskontrolle", fr = "Gestion de la colère", es = "Control de la ira", pt = "Controle da Ira", ru = "Контроль над гневом", pl = "Panowanie nad gniewem", tr = "Öfke Kontrolü", it = "Gestione della rabbia", ja = "アンガー・マネジメント", zh = "愤怒掌控", ko = "분노 조절" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.6
+
+[[talent]]
+key = "impale"
+tree = 0
+row = 3
+col = 0
+ranks = 3
+effects = [{ stat = [4, 0.1] }]
+icon = "Ability_SearingArrow"
+name = { en = "Impale", de = "Durchbohren", fr = "Empalement", es = "Empalar", pt = "Empalar", ru = "Прокалывание", pl = "Przebicie", tr = "Mızraklama", it = "Impalare", ja = "インペイル", zh = "穿刺", ko = "꿰뚫기" }
+text = { en = "Your critical strikes deal {v}% more damage.", de = "Deine kritischen Treffer verursachen {v}% mehr Schaden.", fr = "Tes coups critiques infligent {v}% de dégâts en plus.", es = "Tus golpes críticos infligen un {v}% más de daño.", pt = "Seus golpes críticos causam {v}% a mais de dano.", ru = "Твои критические удары наносят на {v}% больше урона.", pl = "Twoje trafienia krytyczne zadają o {v}% więcej obrażeń.", tr = "Kritik vuruşların {v}% daha fazla hasar verir.", it = "I tuoi colpi critici infliggono il {v}% di danni in più.", ja = "クリティカルのダメージが{v}%増加します。", zh = "你的暴击造成的伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+
+[[talent]]
+key = "two_hand_spec"
+tree = 0
+row = 3
+col = 2
+ranks = 5
+req = "deep_wounds"
+effects = [{ stat = [0, 0.025] }]
+icon = "INV_Axe_09"
+name = { en = "Two-Handed Weapon Specialization", de = "Zweihandwaffen-Spezialisierung", fr = "Spécialisation Armes à deux mains", es = "Especialización en armas a dos manos", pt = "Especialização em Armas de Duas Mãos", ru = "Специализация на двуручном оружии", pl = "Specjalizacja: broń dwuręczna", tr = "İki Elli Silah Uzmanlığı", it = "Specializzazione nelle armi a due mani", ja = "トゥーハンド・ウェポン・スペシャライゼーション", zh = "双手武器专精", ko = "양손 무기 전문화" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "sweeping_strikes"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_Rogue_SliceDice"
+name = { en = "Sweeping Strikes", de = "Weitreichende Stöße", fr = "Frappes balayantes", es = "Golpes de barrido", pt = "Golpes Amplos", ru = "Размашистые удары", pl = "Zamiatające ciosy", tr = "Süpüren Darbeler", it = "Colpi di spazzata", ja = "スウィーピング・ストライク", zh = "横扫攻击", ko = "휩쓸기 일격" }
+text = { en = "Milestone. Cleave, Mortal Strike and Execute sweep on: each hit also strikes 2 more enemies near its target for {v}% of it.", de = "Meilenstein. Spalten, Tödlicher Stoß und Hinrichten schwingen weiter: Jeder Treffer trifft zusätzlich 2 weitere Feinde nahe seinem Ziel für {v}% davon.", fr = "Étape. Enchaînement, Frappe mortelle et Exécution balaient plus loin : chaque coup frappe aussi 2 autres ennemis proches de sa cible pour {v}% de son montant.", es = "Hito. Hender, Golpe mortal y Ejecutar barren más allá: cada golpe también alcanza a 2 enemigos más cerca de su objetivo por un {v}% de su valor.", pt = "Marco. Fender, Golpe Mortal e Execução varrem adiante: cada golpe também atinge mais 2 inimigos perto do alvo com {v}% do seu valor.", ru = "Веха. Рассекающий удар, Смертельный удар и Казнь идут дальше: каждый удар также поражает ещё 2 врагов рядом с целью с {v}% урона.", pl = "Kamień milowy. Cięcie, Śmiertelny cios i Egzekucja zamiatają dalej: każde trafienie uderza też 2 kolejnych przeciwników w pobliżu celu za {v}% obrażeń.", tr = "Dönüm noktası. Yarma, Ölümcül Darbe ve İnfaz süpürür: her vuruş hedefinin yakınındaki 2 düşmana daha hasarının {v}%'si kadar vurur.", it = "Traguardo. Fendente, Colpo mortale ed Esecuzione spazzano oltre: ogni colpo colpisce anche altri 2 nemici vicini al bersaglio per il {v}% del danno.", ja = "【マイルストーン】クリーヴ、モータル・ストライク、エクセキュートがなぎ払います：各命中が対象の近くの敵さらに2体にもその{v}%のダメージを与えます。", zh = "里程碑：顺劈斩、致死打击和斩杀会继续横扫：每次攻击还会击中目标附近另外2个敌人，造成相当于其伤害{v}%的伤害。", ko = "이정표. 회전베기, 필사의 일격, 마무리 일격이 휩쓸고 지나갑니다: 적중할 때마다 대상 근처의 적 2명을 더 공격하여 그 피해의 {v}%를 줍니다." }
+menu_v = 0.7
+plays = [
+    { v = 0.7, play = { cleave = { keys = ["cleave", "mortal_strike", "execute"], n = 2, radius = 8.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "imp_execute"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "INV_Sword_48"
+name = { en = "Improved Execute", de = "Verbessertes Hinrichten", fr = "Exécution améliorée", es = "Ejecutar mejorado", pt = "Execução Aprimorada", ru = "Улучшенная казнь", pl = "Ulepszona Egzekucja", tr = "Gelişmiş İnfaz", it = "Esecuzione migliorata", ja = "改良型エクセキュート", zh = "强化斩杀", ko = "마무리 일격 연마" }
+text = { en = "Execute, Mortal Strike and Heroic Throw deal {v}% more damage.", de = "Hinrichten, Tödlicher Stoß und Heldenhafter Wurf verursachen {v}% mehr Schaden.", fr = "Exécution, Frappe mortelle et Lancer héroïque infligent {v}% de dégâts en plus.", es = "Ejecutar, Golpe mortal y Lanzamiento heroico infligen un {v}% más de daño.", pt = "Execução, Golpe Mortal e Arremesso Heroico causam {v}% a mais de dano.", ru = "Казнь, Смертельный удар и Героический бросок наносят на {v}% больше урона.", pl = "Egzekucja, Śmiertelny cios i Heroiczny rzut zadają o {v}% więcej obrażeń.", tr = "İnfaz, Ölümcül Darbe ve Kahramanca Fırlatış {v}% daha fazla hasar verir.", it = "Esecuzione, Colpo mortale e Lancio eroico infliggono il {v}% di danni in più.", ja = "エクセキュート、モータル・ストライク、ヒロイック・スローのダメージが{v}%増加します。", zh = "斩杀、致死打击和英勇投掷造成的伤害提高{v}%。", ko = "마무리 일격, 필사의 일격, 영웅의 투척의 피해가 {v}% 증가합니다." }
+menu_v = 0.12
+mods = [{ damage = ["execute", "mortal_strike", "heroic_throw"] }]
+mods_v = 0.12
+
+[[talent]]
+key = "sword_spec"
+tree = 0
+row = 5
+col = 0
+ranks = 5
+effects = [{ stat = [13, 0.015] }]
+icon = "INV_Sword_27"
+name = { en = "Sword Specialization", de = "Schwertspezialisierung", fr = "Spécialisation épée", es = "Especialización con espadas", pt = "Especialização em Espadas", ru = "Мастерство владения мечами", pl = "Specjalizacja: miecze", tr = "Kılıç Uzmanlığı", it = "Specializzazione nelle spade", ja = "ソード・スペシャライゼーション", zh = "剑类专精", ko = "도검류 전문화" }
+text = { en = "{v}% chance for any spell to strike twice.", de = "{v}% Chance, dass ein Zauber doppelt trifft.", fr = "{v}% de chances qu'un sort frappe deux fois.", es = "{v}% de probabilidad de que cualquier hechizo golpee dos veces.", pt = "{v}% de chance de qualquer feitiço atingir duas vezes.", ru = "Шанс {v}%, что любое заклинание ударит дважды.", pl = "{v}% szansy, że dowolny czar uderzy dwukrotnie.", tr = "Herhangi bir büyünün iki kez vurma şansı {v}%.", it = "{v}% di probabilità che qualsiasi incantesimo colpisca due volte.", ja = "{v}%の確率であらゆる呪文が2度命中します。", zh = "任何法术都有{v}%的几率打击两次。", ko = "{v}% 확률로 모든 주문이 두 번 적중합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "weapon_mastery"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "sweeping_strikes"
+effects = [{ stat = [20, 0.1] }]
+icon = "Ability_Warrior_Sunder"
+name = { en = "Weapon Mastery", de = "Waffenbeherrschung", fr = "Maîtrise des armes", es = "Maestría con armas", pt = "Maestria em Armas", ru = "Мастерство владения оружием", pl = "Mistrzostwo w broni", tr = "Silah Ustalığı", it = "Maestria con le armi", ja = "ウェポン・マスタリー", zh = "武器掌握", ko = "무기 통달" }
+text = { en = "You deal {v}% more damage to enemies below 30% health.", de = "Du verursachst {v}% mehr Schaden an Feinden unter 30% Gesundheit.", fr = "Tu infliges {v}% de dégâts en plus aux ennemis à moins de 30% de vie.", es = "Infliges un {v}% más de daño a los enemigos con menos del 30% de salud.", pt = "Você causa {v}% a mais de dano a inimigos com menos de 30% de vida.", ru = "Ты наносишь на {v}% больше урона врагам со здоровьем ниже 30%.", pl = "Zadajesz o {v}% więcej obrażeń przeciwnikom poniżej 30% zdrowia.", tr = "Canı 30%'un altındaki düşmanlara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più ai nemici sotto il 30% di salute.", ja = "体力30%未満の敵に与えるダメージが{v}%増加します。", zh = "你对生命值低于30%的敌人造成的伤害提高{v}%。", ko = "생명력이 30% 미만인 적에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+
+[[talent]]
+key = "mortal_wounds"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "mortal_strike" }]
+icon = "Ability_Warrior_SavageBlow"
+name = { en = "Mortal Wounds", de = "Tödliche Wunden", fr = "Blessures mortelles", es = "Heridas mortales", pt = "Ferimentos Mortais", ru = "Смертельные раны", pl = "Śmiertelne rany", tr = "Ölümcül Yaralar", it = "Ferite mortali", ja = "モータル・ウーンズ", zh = "致死伤口", ko = "필사의 상처" }
+text = { en = "Capstone. You start every run with Mortal Strike; a killing blow by Mortal Strike or Execute readies it again at once, at most once a second.", de = "Schlussstein. Du beginnst jeden Lauf mit Tödlichem Stoß; ein tödlicher Hieb durch Tödlichen Stoß oder Hinrichten macht ihn sofort wieder bereit, höchstens einmal pro Sekunde.", fr = "Apogée. Tu commences chaque partie avec Frappe mortelle ; un coup fatal de Frappe mortelle ou d'Exécution la rend aussitôt de nouveau prête, une fois par seconde au maximum.", es = "Cúspide. Empiezas cada partida con Golpe mortal; un golpe letal de Golpe mortal o Ejecutar lo deja listo de nuevo al instante, como máximo una vez por segundo.", pt = "Ápice. Você começa cada partida com Golpe Mortal; um golpe fatal de Golpe Mortal ou Execução o deixa pronto de novo na hora, no máximo uma vez por segundo.", ru = "Вершина. Ты начинаешь каждый забег со Смертельным ударом; добивающий удар Смертельного удара или Казни тут же снова делает его готовым, не чаще раза в секунду.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz ze Śmiertelnym ciosem; cios dobijający Śmiertelnym ciosem lub Egzekucją natychmiast go odnawia, najwyżej raz na sekundę.", tr = "Zirve. Her oyuna Ölümcül Darbe ile başlarsın; Ölümcül Darbe veya İnfaz ile vurulan öldürücü darbe onu hemen yeniden hazırlar, saniyede en fazla bir kez.", it = "Vertice. Inizi ogni partita con Colpo mortale; un colpo di grazia di Colpo mortale o Esecuzione lo rende subito di nuovo pronto, al massimo una volta al secondo.", ja = "【キャップストーン】毎ランをモータル・ストライクを持って始め、モータル・ストライクかエクセキュートでとどめを刺すと即座に再使用可能になります（1秒に1回まで）。", zh = "终极天赋：你在每场对局开始时拥有致死打击；致死打击或斩杀造成致命一击时会使致死打击立即就绪，每秒最多一次。", ko = "궁극 특성. 모든 런을 필사의 일격을 가지고 시작합니다. 필사의 일격이나 마무리 일격으로 적을 처치하면 필사의 일격이 즉시 다시 준비됩니다. 초당 최대 한 번입니다." }
+plays = [
+    { v = 1.0, play = { kill_reset = { keys = ["mortal_strike", "execute"], spell = "mortal_strike", gap = 1.0 } } },
+]
+
+[[talent]]
+key = "cruelty"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "Ability_Rogue_Eviscerate"
+name = { en = "Cruelty", de = "Grausamkeit", fr = "Cruauté", es = "Crueldad", pt = "Crueldade", ru = "Жестокость", pl = "Okrucieństwo", tr = "Zalimlik", it = "Crudeltà", ja = "クルエルティ", zh = "残忍", ko = "잔혹성" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "booming_voice"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Nature_Purge"
+name = { en = "Booming Voice", de = "Donnernde Stimme", fr = "Voix tonitruante", es = "Voz atronadora", pt = "Voz Estrondosa", ru = "Громогласие", pl = "Gromki głos", tr = "Gürleyen Ses", it = "Voce tonante", ja = "ブーミング・ヴォイス", zh = "震耳嗓音", ko = "우렁찬 목소리" }
+text = { en = "Your shouts reach {v}% farther and last longer.", de = "Deine Rufe reichen {v}% weiter und halten länger an.", fr = "Tes cris portent {v}% plus loin et durent plus longtemps.", es = "Tus gritos alcanzan un {v}% más lejos y duran más.", pt = "Seus gritos alcançam {v}% mais longe e duram mais.", ru = "Твои крики действуют на {v}% дальше и длятся дольше.", pl = "Twoje okrzyki sięgają o {v}% dalej i trwają dłużej.", tr = "Bağırışların {v}% daha uzağa erişir ve daha uzun sürer.", it = "I tuoi gridi arrivano il {v}% più lontano e durano più a lungo.", ja = "シャウトの範囲が{v}%広がり、持続時間も延びます。", zh = "你的怒吼范围扩大{v}%，持续时间更长。", ko = "외침의 사거리가 {v}% 늘어나고 더 오래 지속됩니다." }
+menu_v = 0.1
+mods = [{ area = ["demo_shout"] }, { duration = ["battle_shout", "demo_shout"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "unbridled_wrath"
+tree = 1
+row = 1
+col = 0
+ranks = 5
+effects = [{ stat = [23, 0.06] }]
+icon = "Spell_Shadow_BloodBoil"
+name = { en = "Bloodlust", de = "Kampfrausch", fr = "Furie sanguinaire", es = "Ansia de sangre", pt = "Sede de Sangue", ru = "Жажда крови", pl = "Żądza krwi", tr = "Kan Hırsı", it = "Brama di sangue", ja = "ブラッドラスト", zh = "嗜血狂热", ko = "피의 욕망" }
+text = { en = "Battle Shout and your other damage, haste, shield and thorns buffs are {v}% stronger.", de = "Schlachtruf und deine anderen Stärkungseffekte für Schaden, Hast, Schild und Dornen sind {v}% stärker.", fr = "Cri de guerre et tes autres bonus de dégâts, de hâte, de bouclier et d'épines sont {v}% plus puissants.", es = "Grito de batalla y tus otras mejoras de daño, celeridad, escudo y espinas son un {v}% más potentes.", pt = "Grito de Batalha e seus outros bônus de dano, aceleração, escudo e espinhos são {v}% mais fortes.", ru = "Боевой крик и другие твои усиления урона, скорости, щита и шипов на {v}% сильнее.", pl = "Okrzyk bojowy i twoje inne wzmocnienia obrażeń, przyspieszenia, tarczy i cierni są silniejsze o {v}%.", tr = "Savaş Narası ve diğer hasar, hız, kalkan ve diken güçlendirmelerin {v}% daha güçlü.", it = "Grido di battaglia e gli altri tuoi potenziamenti di danni, celerità, scudo e spine sono più forti del {v}%.", ja = "バトル・シャウトとその他のダメージ・加速・シールド・ソーンのバフが{v}%強化されます。", zh = "战斗怒吼以及你的其他伤害、急速、护盾和荆棘增益效果提高{v}%。", ko = "전투의 외침과 그 밖의 피해, 가속, 보호막, 가시 강화 효과가 {v}% 강해집니다." }
+menu_v = 0.06
+
+[[talent]]
+key = "imp_battle_shout"
+tree = 1
+row = 1
+col = 2
+ranks = 3
+effects = []
+icon = "Ability_Warrior_BattleShout"
+name = { en = "Improved Battle Shout", de = "Verbesserter Schlachtruf", fr = "Cri de guerre amélioré", es = "Grito de batalla mejorado", pt = "Grito de Batalha Aprimorado", ru = "Улучшенный боевой крик", pl = "Ulepszony Okrzyk bojowy", tr = "Gelişmiş Savaş Narası", it = "Grido di battaglia migliorato", ja = "改良型バトル・シャウト", zh = "强化战斗怒吼", ko = "전투의 외침 연마" }
+text = { en = "Battle Shout's cooldown is {v}% shorter.", de = "Die Abklingzeit von Schlachtruf ist {v}% kürzer.", fr = "Le temps de recharge de Cri de guerre est réduit de {v}%.", es = "El tiempo de reutilización de Grito de batalla es un {v}% menor.", pt = "O tempo de recarga de Grito de Batalha é {v}% menor.", ru = "Перезарядка Боевого крика сокращена на {v}%.", pl = "Czas odnowienia Okrzyku bojowego jest krótszy o {v}%.", tr = "Savaş Narası'nın bekleme süresi {v}% daha kısa.", it = "La ricarica di Grido di battaglia è più breve del {v}%.", ja = "バトル・シャウトのクールダウンが{v}%短くなります。", zh = "战斗怒吼的冷却时间缩短{v}%。", ko = "전투의 외침의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.1
+mods = [{ cooldown = ["battle_shout"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "rampage"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_UnholyFrenzy"
+name = { en = "Rampage", de = "Toben", fr = "Saccager", es = "Arrasar", pt = "Destruição", ru = "Буйство", pl = "Pogrom", tr = "Kıyım", it = "Furia incontrollata", ja = "ランペイジ", zh = "暴怒", ko = "광란" }
+text = { en = "Milestone. Every {v}th kill unleashes a free Whirlwind.", de = "Meilenstein. Jeder {v}. Kill entfesselt einen kostenlosen Wirbelwind.", fr = "Étape. Chaque {v}e ennemi tué déchaîne un Tourbillon gratuit.", es = "Hito. Cada {v}.ª baja desata un Torbellino gratuito.", pt = "Marco. A cada {v}ª morte, libera um Redemoinho grátis.", ru = "Веха. Каждое {v}-е убийство высвобождает бесплатный Вихрь.", pl = "Kamień milowy. Co {v}. zabójstwo uwalnia darmowy Wir.", tr = "Dönüm noktası. Her {v}. öldürme bedava bir Girdap salar.", it = "Traguardo. Ogni {v}ª uccisione scatena un Turbine gratuito.", ja = "【マイルストーン】{v}体倒すごとに無料のワールウィンドを繰り出します。", zh = "里程碑：每击杀{v}个敌人，释放一次免费的旋风斩。", ko = "이정표. {v}번째 처치마다 소용돌이가 무료로 발동합니다." }
+menu_v = 7
+plays = [
+    { v = 7.0, play = { nth_kill = "whirlwind" } },
+]
+
+[[talent]]
+key = "imp_cleave"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Ability_Warrior_Cleave"
+name = { en = "Improved Cleave", de = "Verbessertes Spalten", fr = "Enchaînement amélioré", es = "Hender mejorado", pt = "Fender Aprimorado", ru = "Улучшенный рассекающий удар", pl = "Ulepszone Cięcie", tr = "Gelişmiş Yarma", it = "Fendente migliorato", ja = "改良型クリーヴ", zh = "强化顺劈斩", ko = "회전베기 연마" }
+text = { en = "Cleave deals {v}% more damage.", de = "Spalten verursacht {v}% mehr Schaden.", fr = "Enchaînement inflige {v}% de dégâts en plus.", es = "Hender inflige un {v}% más de daño.", pt = "Fender causa {v}% a mais de dano.", ru = "Рассекающий удар наносит на {v}% больше урона.", pl = "Cięcie zadaje o {v}% więcej obrażeń.", tr = "Yarma {v}% daha fazla hasar verir.", it = "Fendente infligge il {v}% di danni in più.", ja = "クリーヴのダメージが{v}%増加します。", zh = "顺劈斩造成的伤害提高{v}%。", ko = "회전베기의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["cleave"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "dual_wield_spec"
+tree = 1
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [0, 0.02] }]
+icon = "Ability_DualWield"
+name = { en = "Dual Wield Specialization", de = "Beidhändigkeits-Spezialisierung", fr = "Spécialisation à deux armes", es = "Especialización en doble empuñadura", pt = "Especialização em Empunhadura Dupla", ru = "Мастерство владения двумя оружиями", pl = "Specjalizacja: walka dwiema brońmi", tr = "Çift Silah Uzmanlığı", it = "Specializzazione nell'uso di due armi", ja = "デュアルウィールド・スペシャライゼーション", zh = "双武器专精", ko = "쌍수 무기 전문화" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "imp_whirlwind"
+tree = 1
+row = 3
+col = 2
+ranks = 3
+req = "rampage"
+effects = []
+icon = "Ability_Whirlwind"
+name = { en = "Improved Whirlwind", de = "Verbesserter Wirbelwind", fr = "Tourbillon amélioré", es = "Torbellino mejorado", pt = "Redemoinho Aprimorado", ru = "Улучшенный вихрь", pl = "Ulepszony Wir", tr = "Gelişmiş Girdap", it = "Turbine migliorato", ja = "改良型ワールウィンド", zh = "强化旋风斩", ko = "소용돌이 연마" }
+text = { en = "Whirlwind and Bladestorm reach {v}% farther.", de = "Wirbelwind und Klingensturm reichen {v}% weiter.", fr = "Tourbillon et Tempête de lames portent {v}% plus loin.", es = "Torbellino y Tormenta de acero alcanzan un {v}% más lejos.", pt = "Redemoinho e Tempestade de Lâminas alcançam {v}% mais longe.", ru = "Вихрь и Вихрь клинков действуют на {v}% дальше.", pl = "Wir i Burza ostrzy sięgają o {v}% dalej.", tr = "Girdap ve Kılıç Fırtınası {v}% daha uzağa erişir.", it = "Turbine e Tempesta di lame arrivano il {v}% più lontano.", ja = "ワールウィンドとブレードストームの範囲が{v}%広がります。", zh = "旋风斩和剑刃风暴的范围扩大{v}%。", ko = "소용돌이와 칼날폭풍의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.06
+mods = [{ area = ["whirlwind", "bladestorm"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "flurry"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_GhoulFrenzy"
+name = { en = "Flurry", de = "Schlaghagel", fr = "Rafale", es = "Frenesí", pt = "Rajada", ru = "Шквал", pl = "Szał", tr = "Hamle Fırtınası", it = "Raffica", ja = "フラーリー", zh = "乱舞", ko = "질풍" }
+text = { en = "Milestone. Whirlwind and Bloodthirst strike twice: everything they hit is struck again at once for 40% of the blow.", de = "Meilenstein. Wirbelwind und Blutdurst treffen doppelt: Alles, was sie treffen, wird sofort erneut für 40% des Hiebs getroffen.", fr = "Étape. Tourbillon et Sanguinaire frappent deux fois : tout ce qu'ils touchent est aussitôt frappé de nouveau pour 40% du coup.", es = "Hito. Torbellino y Sed de sangre golpean dos veces: todo lo que alcanzan es golpeado de nuevo al instante por un 40% del golpe.", pt = "Marco. Redemoinho e Sede de Sangue atingem duas vezes: tudo o que atingem é atingido de novo na hora com 40% do golpe.", ru = "Веха. Вихрь и Жажда крови бьют дважды: всё, что они поражают, тут же получает повторный удар с 40% урона.", pl = "Kamień milowy. Wir i Krwiożerczość uderzają dwukrotnie: wszystko, co trafią, dostaje natychmiast drugi cios za 40% pierwszego.", tr = "Dönüm noktası. Girdap ve Kan Susuzluğu iki kez vurur: vurdukları her şeye hemen darbenin 40%'ı kadar yeniden vurulur.", it = "Traguardo. Turbine e Sete di sangue colpiscono due volte: tutto ciò che colpiscono viene colpito di nuovo subito per il 40% del colpo.", ja = "【マイルストーン】ワールウィンドとブラッドサーストが2度命中します：命中したすべての敵に即座にもう一度その40%のダメージを与えます。", zh = "里程碑：旋风斩和嗜血会打击两次：被击中的目标会立即再受到一次相当于该次攻击40%的伤害。", ko = "이정표. 소용돌이와 피의 갈증이 두 번 적중합니다: 맞힌 모든 대상을 즉시 한 번 더 공격하여 그 피해의 40%를 줍니다." }
+menu_v = 1
+plays = [
+    { v = 0.4, play = { cleave = { keys = ["whirlwind", "bloodthirst"], n = 0, radius = 0.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "death_wish"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_DeathPact"
+name = { en = "Death Wish", de = "Todeswunsch", fr = "Souhait de mort", es = "Deseo de muerte", pt = "Desejo de Morte", ru = "Жажда смерти", pl = "Życzenie śmierci", tr = "Ölüm Dileği", it = "Desiderio di morte", ja = "デス・ウィッシュ", zh = "死亡之愿", ko = "죽음의 소원" }
+text = { en = "Bloodthirst, Whirlwind and Victory Rush deal {v}% more damage.", de = "Blutdurst, Wirbelwind und Siegesrausch verursachen {v}% mehr Schaden.", fr = "Sanguinaire, Tourbillon et Ivresse de la victoire infligent {v}% de dégâts en plus.", es = "Sed de sangre, Torbellino y Subidón de victoria infligen un {v}% más de daño.", pt = "Sede de Sangue, Redemoinho e Ímpeto da Vitória causam {v}% a mais de dano.", ru = "Жажда крови, Вихрь и Победный раж наносят на {v}% больше урона.", pl = "Krwiożerczość, Wir i Szał zwycięstwa zadają o {v}% więcej obrażeń.", tr = "Kan Susuzluğu, Girdap ve Zafer Hamlesi {v}% daha fazla hasar verir.", it = "Sete di sangue, Turbine e Impeto vittorioso infliggono il {v}% di danni in più.", ja = "ブラッドサースト、ワールウィンド、ヴィクトリー・ラッシュのダメージが{v}%増加します。", zh = "嗜血、旋风斩和乘胜追击造成的伤害提高{v}%。", ko = "피의 갈증, 소용돌이, 연전연승의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["bloodthirst", "whirlwind", "victory_rush"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "blood_craze"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [14, 0.002] }]
+icon = "Spell_Shadow_SummonImp"
+name = { en = "Blood Craze", de = "Blutwahnsinn", fr = "Folie sanguinaire", es = "Frenesí sanguinario", pt = "Frenesi Sangrento", ru = "Кровавое безумие", pl = "Krwawe szaleństwo", tr = "Kan Cinneti", it = "Smania di sangue", ja = "ブラッド・クレイズ", zh = "血之狂热", ko = "피의 광기" }
+text = { en = "{v}% of all the damage you deal heals you.", de = "{v}% des gesamten Schadens, den du verursachst, heilt dich.", fr = "{v}% de tous les dégâts que tu infliges te soignent.", es = "El {v}% de todo el daño que infliges te cura.", pt = "{v}% de todo o dano que você causa cura você.", ru = "{v}% всего наносимого тобой урона лечит тебя.", pl = "{v}% wszystkich zadanych obrażeń leczy cię.", tr = "Verdiğin tüm hasarın {v}%'si seni iyileştirir.", it = "Il {v}% di tutti i danni che infliggi ti cura.", ja = "与えたすべてのダメージの{v}%だけ体力を回復します。", zh = "你造成的所有伤害的{v}%会治疗你。", ko = "주는 모든 피해의 {v}%만큼 생명력을 회복합니다." }
+menu_v = 0.002
+
+[[talent]]
+key = "imp_berserker"
+tree = 1
+row = 5
+col = 2
+ranks = 5
+req = "flurry"
+effects = [{ stat = [4, 0.05] }]
+icon = "Ability_Racial_Avatar"
+name = { en = "Improved Berserker Stance", de = "Verbesserte Berserkerhaltung", fr = "Posture berserker améliorée", es = "Actitud rabiosa mejorada", pt = "Postura Berserker Aprimorada", ru = "Улучшенная стойка берсерка", pl = "Ulepszona Postawa berserkera", tr = "Gelişmiş Çılgın Savaşçı Duruşu", it = "Posizione berserker migliorata", ja = "改良型バーサーカー・スタンス", zh = "强化狂暴姿态", ko = "광전사 태세 연마" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "bladestorm"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "whirlwind" }]
+icon = "Ability_Whirlwind"
+name = { en = "Bladestorm", de = "Klingensturm", fr = "Tempête de lames", es = "Tormenta de acero", pt = "Tempestade de Lâminas", ru = "Вихрь клинков", pl = "Burza ostrzy", tr = "Kılıç Fırtınası", it = "Tempesta di lame", ja = "ブレードストーム", zh = "剑刃风暴", ko = "칼날폭풍" }
+text = { en = "Capstone. You start every run with Whirlwind, and you never stop spinning: a free Whirlwind every 3 sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Wirbelwind und hörst nie auf zu wirbeln: alle 3 Sek. ein kostenloser Wirbelwind.", fr = "Apogée. Tu commences chaque partie avec Tourbillon, et tu ne cesses jamais de tournoyer : un Tourbillon gratuit toutes les 3 s.", es = "Cúspide. Empiezas cada partida con Torbellino, y nunca dejas de girar: un Torbellino gratuito cada 3 s.", pt = "Ápice. Você começa cada partida com Redemoinho e nunca para de girar: um Redemoinho grátis a cada 3 s.", ru = "Вершина. Ты начинаешь каждый забег с Вихрем и никогда не перестаёшь вращаться: бесплатный Вихрь каждые 3 сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Wirem i nigdy nie przestajesz wirować: darmowy Wir co 3 s.", tr = "Zirve. Her oyuna Girdap ile başlarsın ve hiç dönmeyi bırakmazsın: her 3 sn'de bedava bir Girdap.", it = "Vertice. Inizi ogni partita con Turbine e non smetti mai di girare: un Turbine gratuito ogni 3 s.", ja = "【キャップストーン】毎ランをワールウィンドを持って始め、回転が止まりません：3秒ごとに無料のワールウィンド。", zh = "终极天赋：你在每场对局开始时拥有旋风斩，并且永不停转：每3秒施放一次免费的旋风斩。", ko = "궁극 특성. 모든 런을 소용돌이를 가지고 시작하며, 회전이 멈추지 않습니다: 3초마다 소용돌이를 무료로 시전합니다." }
+plays = [
+    { v = 3.0, play = { every = "whirlwind" } },
+]
+
+[[talent]]
+key = "shield_spec"
+tree = 2
+row = 0
+col = 0
+ranks = 5
+effects = [{ stat = [5, 0.015] }]
+icon = "INV_Shield_06"
+name = { en = "Shield Specialization", de = "Schildspezialisierung", fr = "Spécialisation Bouclier", es = "Especialización con escudo", pt = "Especialização em Escudo", ru = "Специализация на щитах", pl = "Specjalizacja: tarcze", tr = "Kalkan Uzmanlığı", it = "Specializzazione negli scudi", ja = "シールド・スペシャライゼーション", zh = "盾牌专精", ko = "방패 전문화" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "anticipation"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.03] }]
+icon = "Spell_Nature_MirrorImage"
+name = { en = "Anticipation", de = "Vorahnung", fr = "Anticipation", es = "Anticipación", pt = "Antecipação", ru = "Предчувствие", pl = "Antycypacja", tr = "Önsezi", it = "Anticipazione", ja = "アンティシペーション", zh = "预知", ko = "예견" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "imp_thunder_clap"
+tree = 2
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Ability_ThunderClap"
+name = { en = "Improved Thunder Clap", de = "Verbesserter Donnerknall", fr = "Coup de tonnerre amélioré", es = "Choque de trueno mejorado", pt = "Trovoada Aprimorada", ru = "Улучшенный громовой раскат", pl = "Ulepszony Grom", tr = "Gelişmiş Gök Gürültüsü", it = "Schianto del tuono migliorato", ja = "改良型サンダー・クラップ", zh = "强化雷霆一击", ko = "천둥벼락 연마" }
+text = { en = "Thunder Clap deals an extra {v}% of your maximum health.", de = "Donnerknall verursacht zusätzlich {v}% deiner maximalen Gesundheit.", fr = "Coup de tonnerre inflige en plus {v}% de tes points de vie maximum.", es = "Choque de trueno inflige adicionalmente un {v}% de tu salud máxima.", pt = "Trovoada causa {v}% extra da sua vida máxima.", ru = "Громовой раскат дополнительно наносит {v}% твоего максимального здоровья.", pl = "Grom zadaje dodatkowo {v}% twojego maksymalnego zdrowia.", tr = "Gök Gürültüsü azami canının fazladan {v}%'si kadar hasar verir.", it = "Schianto del tuono infligge un ulteriore {v}% della tua salute massima.", ja = "サンダー・クラップが最大体力の{v}%の追加ダメージを与えます。", zh = "雷霆一击额外造成相当于你最大生命值{v}%的伤害。", ko = "천둥벼락이 최대 생명력의 {v}%만큼 추가 피해를 줍니다." }
+menu_v = 0.015
+mods = [{ health_hit = ["thunder_clap"] }]
+mods_v = 0.015
+
+[[talent]]
+key = "toughness"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [24, 0.002] }]
+icon = "Spell_Holy_Devotion"
+name = { en = "Toughness", de = "Zähigkeit", fr = "Ténacité", es = "Dureza", pt = "Dureza", ru = "Крепость", pl = "Wytrzymałość", tr = "Sağlamlık", it = "Tempra", ja = "タフネス", zh = "坚韧", ko = "강인함" }
+text = { en = "Regenerate {v}% of your maximum health per second.", de = "Regeneriere {v}% deiner maximalen Gesundheit pro Sekunde.", fr = "Régénère {v}% de tes points de vie maximum par seconde.", es = "Regenera un {v}% de tu salud máxima por segundo.", pt = "Regenera {v}% da sua vida máxima por segundo.", ru = "Восстанавливает {v}% твоего максимального здоровья в секунду.", pl = "Regenerujesz {v}% maksymalnego zdrowia na sekundę.", tr = "Saniyede azami canının {v}%'si kadar yenilenirsin.", it = "Rigeneri il {v}% della tua salute massima al secondo.", ja = "毎秒、最大体力の{v}%を回復します。", zh = "每秒恢复相当于你最大生命值{v}%的生命值。", ko = "초당 최대 생명력의 {v}%를 재생합니다." }
+menu_v = 0.002
+
+[[talent]]
+key = "heavy_shield"
+tree = 2
+row = 2
+col = 0
+ranks = 3
+effects = []
+icon = "INV_Shield_05"
+name = { en = "Heavy Shield", de = "Schwerer Schild", fr = "Bouclier lourd", es = "Escudo pesado", pt = "Escudo Pesado", ru = "Тяжёлый щит", pl = "Ciężka tarcza", tr = "Ağır Kalkan", it = "Scudo pesante", ja = "ヘヴィ・シールド", zh = "重盾", ko = "무거운 방패" }
+text = { en = "Shield Slam deals an extra {v}% of your maximum health.", de = "Schildschlag verursacht zusätzlich {v}% deiner maximalen Gesundheit.", fr = "Heurt de bouclier inflige en plus {v}% de tes points de vie maximum.", es = "Embate de escudo inflige adicionalmente un {v}% de tu salud máxima.", pt = "Pancada de Escudo causa {v}% extra da sua vida máxima.", ru = "Мощный удар щитом дополнительно наносит {v}% твоего максимального здоровья.", pl = "Uderzenie tarczą zadaje dodatkowo {v}% twojego maksymalnego zdrowia.", tr = "Kalkan Çarpması azami canının fazladan {v}%'si kadar hasar verir.", it = "Colpo di scudo infligge un ulteriore {v}% della tua salute massima.", ja = "シールド・スラムが最大体力の{v}%の追加ダメージを与えます。", zh = "盾牌猛击额外造成相当于你最大生命值{v}%的伤害。", ko = "방패 밀쳐내기가 최대 생명력의 {v}%만큼 추가 피해를 줍니다." }
+menu_v = 0.035
+mods = [{ health_hit = ["shield_slam"] }]
+mods_v = 0.035
+
+[[talent]]
+key = "shockwave"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_Warrior_Revenge"
+name = { en = "Shockwave", de = "Schockwelle", fr = "Onde de choc", es = "Onda de choque", pt = "Onda de Choque", ru = "Ударная волна", pl = "Fala uderzeniowa", tr = "Şok Dalgası", it = "Onda d'urto", ja = "ショックウェーブ", zh = "震荡波", ko = "충격파" }
+text = { en = "Milestone. Each Shield Slam sends a shockwave from its first target: every enemy within 8 yd of it is struck for {v}% of the blow and stunned.", de = "Meilenstein. Jeder Schildschlag sendet eine Schockwelle von seinem ersten Ziel aus: Jeder Feind im Umkreis von 8 m wird für {v}% des Hiebs getroffen und betäubt.", fr = "Étape. Chaque Heurt de bouclier envoie une onde de choc depuis sa première cible : chaque ennemi à moins de 8 m est frappé pour {v}% du coup et étourdi.", es = "Hito. Cada Embate de escudo envía una onda de choque desde su primer objetivo: todo enemigo a 8 m de él recibe un {v}% del golpe y queda aturdido.", pt = "Marco. Cada Pancada de Escudo envia uma onda de choque a partir do primeiro alvo: todo inimigo num raio de 8 m é atingido com {v}% do golpe e atordoado.", ru = "Веха. Каждый Мощный удар щитом посылает ударную волну от первой цели: каждый враг в радиусе 8 м от неё получает {v}% урона удара и оглушается.", pl = "Kamień milowy. Każde Uderzenie tarczą wysyła falę uderzeniową od pierwszego celu: każdy przeciwnik w promieniu 8 m od niego dostaje {v}% ciosu i zostaje ogłuszony.", tr = "Dönüm noktası. Her Kalkan Çarpması ilk hedefinden bir şok dalgası yollar: 8 m içindeki her düşman darbenin {v}%'si kadar vurulur ve sersemler.", it = "Traguardo. Ogni Colpo di scudo invia un'onda d'urto dal suo primo bersaglio: ogni nemico entro 8 m viene colpito per il {v}% del colpo e stordito.", ja = "【マイルストーン】シールド・スラムのたびに最初の対象から衝撃波が広がります：その8ヤード以内のすべての敵にその一撃の{v}%のダメージを与え、スタンさせます。", zh = "里程碑：每次盾牌猛击都会从其第一个目标处发出震荡波：对其8码内的所有敌人造成相当于该次攻击{v}%的伤害，并使其昏迷。", ko = "이정표. 방패 밀쳐내기가 첫 대상에게서 충격파를 일으킵니다: 그 주위 8미터 안의 모든 적에게 피해의 {v}%를 주고 기절시킵니다." }
+menu_v = 0.4
+plays = [
+    { v = 0.4, play = { cleave = { keys = ["shield_slam"], n = 99, radius = 8.0, stun = 1.0 } } },
+]
+
+[[talent]]
+key = "imp_demo_shout"
+tree = 2
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Ability_Warrior_WarCry"
+name = { en = "Improved Demoralizing Shout", de = "Verbesserter demoralisierender Ruf", fr = "Cri démoralisant amélioré", es = "Grito desmoralizador mejorado", pt = "Grito Desmoralizante Aprimorado", ru = "Улучшенный деморализующий крик", pl = "Ulepszony Okrzyk demoralizujący", tr = "Gelişmiş Moral Bozan Bağırış", it = "Grido demoralizzante migliorato", ja = "改良型デモラライジング・シャウト", zh = "强化挫志怒吼", ko = "사기의 외침 연마" }
+text = { en = "Enemies hit by Demoralizing Shout take {v}% more damage from you and your allies for 6 sec.", de = "Von Demoralisierendem Ruf getroffene Feinde erleiden 6 Sek. lang {v}% mehr Schaden durch dich und deine Verbündeten.", fr = "Les ennemis touchés par Cri démoralisant subissent {v}% de dégâts en plus de ta part et de celle de tes alliés pendant 6 s.", es = "Los enemigos alcanzados por Grito desmoralizador reciben un {v}% más de daño de ti y de tus aliados durante 6 s.", pt = "Inimigos atingidos por Grito Desmoralizante sofrem {v}% a mais de dano de você e dos seus aliados por 6 s.", ru = "Враги, задетые Деморализующим криком, получают на {v}% больше урона от тебя и твоих союзников в течение 6 сек.", pl = "Przeciwnicy trafieni Okrzykiem demoralizującym otrzymują od ciebie i twoich sojuszników o {v}% więcej obrażeń przez 6 s.", tr = "Moral Bozan Bağırış'ın vurduğu düşmanlar 6 sn boyunca senden ve müttefiklerinden {v}% daha fazla hasar alır.", it = "I nemici colpiti da Grido demoralizzante subiscono il {v}% di danni in più da te e dai tuoi alleati per 6 s.", ja = "デモラライジング・シャウトを受けた敵は、6秒間あなたと味方から受けるダメージが{v}%増加します。", zh = "被挫志怒吼击中的敌人受到你和你的盟友的伤害提高{v}%，持续6秒。", ko = "사기의 외침에 맞은 적은 6초 동안 당신과 아군에게서 받는 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = ["exposed"]
+mods_v = 0.05
+
+[[talent]]
+key = "defiance"
+tree = 2
+row = 3
+col = 0
+ranks = 3
+effects = [{ stat = [25, 1.0] }]
+icon = "Ability_Warrior_InnerRage"
+name = { en = "Defiance", de = "Trotz", fr = "Défi", es = "Desafío", pt = "Desafio", ru = "Вызов", pl = "Zuchwałość", tr = "Meydan Okuma Ruhu", it = "Sfida", ja = "ディファイアンス", zh = "挑衅", ko = "도전" }
+text = { en = "You deal {v}% more damage for every 10% damage reduction you have.", de = "Du verursachst {v}% mehr Schaden pro 10% Schadensverringerung, die du hast.", fr = "Tu infliges {v}% de dégâts en plus pour chaque tranche de 10% de réduction des dégâts que tu possèdes.", es = "Infliges un {v}% más de daño por cada 10% de reducción de daño que tengas.", pt = "Você causa {v}% a mais de dano para cada 10% de redução de dano que tiver.", ru = "Ты наносишь на {v}% больше урона за каждые 10% снижения урона.", pl = "Zadajesz o {v}% więcej obrażeń za każde 10% redukcji obrażeń, które masz.", tr = "Sahip olduğun her 10% hasar azaltma için {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più per ogni 10% di riduzione dei danni che hai.", ja = "被ダメージ軽減10%ごとに与えるダメージが{v}%増加します。", zh = "你每拥有10%的伤害减免，造成的伤害提高{v}%。", ko = "피해 감소 10%마다 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "imp_shield_slam"
+tree = 2
+row = 3
+col = 2
+ranks = 3
+effects = []
+icon = "Ability_Warrior_ShieldBash"
+name = { en = "Improved Shield Slam", de = "Verbesserter Schildschlag", fr = "Heurt de bouclier amélioré", es = "Embate de escudo mejorado", pt = "Pancada de Escudo Aprimorada", ru = "Улучшенный мощный удар щитом", pl = "Ulepszone Uderzenie tarczą", tr = "Gelişmiş Kalkan Çarpması", it = "Colpo di scudo migliorato", ja = "改良型シールド・スラム", zh = "强化盾牌猛击", ko = "방패 밀쳐내기 연마" }
+text = { en = "Shield Slam and Shockwave deal {v}% more damage and recover faster.", de = "Schildschlag und Schockwelle verursachen {v}% mehr Schaden und laden schneller.", fr = "Heurt de bouclier et Onde de choc infligent {v}% de dégâts en plus et se rechargent plus vite.", es = "Embate de escudo y Onda de choque infligen un {v}% más de daño y se recargan antes.", pt = "Pancada de Escudo e Onda de Choque causam {v}% a mais de dano e recarregam mais rápido.", ru = "Мощный удар щитом и Ударная волна наносят на {v}% больше урона и быстрее перезаряжаются.", pl = "Uderzenie tarczą i Fala uderzeniowa zadają o {v}% więcej obrażeń i odnawiają się szybciej.", tr = "Kalkan Çarpması ve Şok Dalgası {v}% daha fazla hasar verir ve daha hızlı yenilenir.", it = "Colpo di scudo e Onda d'urto infliggono il {v}% di danni in più e si ricaricano più in fretta.", ja = "シールド・スラムとショックウェーブのダメージが{v}%増加し、回復が速くなります。", zh = "盾牌猛击和震荡波造成的伤害提高{v}%，冷却速度更快。", ko = "방패 밀쳐내기와 충격파의 피해가 {v}% 증가하고 더 빨리 회복됩니다." }
+menu_v = 0.15
+mods = [{ damage = ["shield_slam", "shockwave"] }, { cooldown = ["shield_slam", "shockwave"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "shield_mastery"
+tree = 2
+row = 4
+col = 0
+ranks = 3
+req = "shockwave"
+effects = []
+icon = "Ability_Defend"
+name = { en = "Shield Mastery", de = "Schildbeherrschung", fr = "Maîtrise du bouclier", es = "Maestría con escudo", pt = "Maestria em Escudo", ru = "Мастерство обращения со щитом", pl = "Mistrzostwo tarczy", tr = "Kalkan Ustalığı", it = "Maestria con lo scudo", ja = "シールド・マスタリー", zh = "盾牌掌握", ko = "방패 숙련" }
+text = { en = "Shield Slam's shield holds {v}% more of your maximum health.", de = "Der Schild von Schildschlag hält {v}% mehr deiner maximalen Gesundheit.", fr = "Le bouclier de Heurt de bouclier absorbe {v}% de plus de tes points de vie maximum.", es = "El escudo de Embate de escudo absorbe un {v}% más de tu salud máxima.", pt = "O escudo de Pancada de Escudo absorve {v}% a mais da sua vida máxima.", ru = "Щит Мощного удара щитом вмещает на {v}% больше твоего максимального здоровья.", pl = "Tarcza z Uderzenia tarczą chroni o {v}% więcej twojego maksymalnego zdrowia.", tr = "Kalkan Çarpması'nın kalkanı azami canının {v}% daha fazlasını tutar.", it = "Lo scudo di Colpo di scudo regge il {v}% in più della tua salute massima.", ja = "シールド・スラムのシールドが最大体力の{v}%分多く吸収します。", zh = "盾牌猛击的护盾吸收量提高，额外吸收相当于你最大生命值{v}%的伤害。", ko = "방패 밀쳐내기 보호막의 흡수량이 최대 생명력의 {v}%만큼 증가합니다." }
+menu_v = 0.04
+mods = [{ shield_cap = ["shield_slam"] }]
+mods_v = 0.04
+
+[[talent]]
+key = "fortified"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = [{ stat = [28, 0.2] }]
+icon = "Ability_Warrior_ShieldWall"
+name = { en = "Fortified", de = "Befestigt", fr = "Fortifié", es = "Fortificado", pt = "Fortificado", ru = "Укреплённый", pl = "Umocnienie", tr = "Tahkim Edilmiş", it = "Fortificato", ja = "フォーティファイド", zh = "强固", ko = "요새화" }
+text = { en = "Milestone. Every Shield Slam raises a shield of {v}% of your maximum health, stacking up to 30% (42% with Shield Mastery), and while a shield holds, you deal 20% more damage.", de = "Meilenstein. Jeder Schildschlag errichtet einen Schild von {v}% deiner maximalen Gesundheit, stapelbar bis 30% (42% mit Schildbeherrschung), und solange ein Schild hält, verursachst du 20% mehr Schaden.", fr = "Étape. Chaque Heurt de bouclier dresse un bouclier de {v}% de tes points de vie maximum, cumulable jusqu'à 30% (42% avec Maîtrise du bouclier), et tant qu'un bouclier tient, tu infliges 20% de dégâts en plus.", es = "Hito. Cada Embate de escudo levanta un escudo del {v}% de tu salud máxima, acumulable hasta un 30% (42% con Maestría con escudo), y mientras un escudo aguante, infliges un 20% más de daño.", pt = "Marco. Cada Pancada de Escudo ergue um escudo de {v}% da sua vida máxima, acumulável até 30% (42% com Maestria em Escudo), e enquanto um escudo resistir, você causa 20% a mais de dano.", ru = "Веха. Каждый Мощный удар щитом возводит щит в {v}% твоего максимального здоровья, суммируясь до 30% (42% с Мастерством обращения со щитом), и пока щит держится, ты наносишь на 20% больше урона.", pl = "Kamień milowy. Każde Uderzenie tarczą wznosi tarczę o wartości {v}% twojego maksymalnego zdrowia, kumulującą się do 30% (42% z Mistrzostwem tarczy), a gdy tarcza trzyma, zadajesz o 20% więcej obrażeń.", tr = "Dönüm noktası. Her Kalkan Çarpması azami canının {v}%'si kadar bir kalkan kaldırır, en fazla 30%'a kadar birikir (Kalkan Ustalığı ile 42%) ve kalkan dururken 20% daha fazla hasar verirsin.", it = "Traguardo. Ogni Colpo di scudo erige uno scudo pari al {v}% della tua salute massima, cumulabile fino al 30% (42% con Maestria con lo scudo), e finché uno scudo regge infliggi il 20% di danni in più.", ja = "【マイルストーン】シールド・スラムのたびに最大体力の{v}%のシールドが張られ、30%まで重ねられます（シールド・マスタリーがあれば42%）。シールドがある間、与えるダメージが20%増加します。", zh = "里程碑：每次盾牌猛击都会生成一个吸收相当于你最大生命值{v}%伤害的护盾，最多叠加至30%（拥有盾牌掌握时为42%），护盾存在期间，你造成的伤害提高20%。", ko = "이정표. 방패 밀쳐내기마다 최대 생명력의 {v}%에 해당하는 보호막이 생기며 최대 30%(방패 숙련이 있으면 42%)까지 중첩됩니다. 보호막이 유지되는 동안 주는 피해가 20% 증가합니다." }
+menu_v = 0.1
+plays = [
+    { v = 0.1, play = { shield_stack = { keys = ["shield_slam"], cap = 0.3 } } },
+]
+
+[[talent]]
+key = "last_stand"
+tree = 2
+row = 5
+col = 0
+ranks = 1
+effects = []
+icon = "Spell_Holy_AshesToAshes"
+name = { en = "Last Stand", de = "Letztes Gefecht", fr = "Dernier rempart", es = "Hasta el final", pt = "Última Resistência", ru = "Ни шагу назад", pl = "Ostatni bastion", tr = "Son Direniş", it = "Ultima difesa", ja = "ラスト・スタンド", zh = "破釜沉舟", ko = "최후의 저항" }
+text = { en = "A blow that would kill you leaves you at 40% health instead, then you answer with a free Shield Slam and a shield of 10% of your maximum health. Once every 90 sec.", de = "Ein Hieb, der dich töten würde, lässt dich stattdessen mit 40% Gesundheit zurück, dann antwortest du mit einem kostenlosen Schildschlag und einem Schild von 10% deiner maximalen Gesundheit. Einmal alle 90 Sek.", fr = "Un coup qui te tuerait te laisse à 40% de points de vie à la place, puis tu ripostes avec un Heurt de bouclier gratuit et un bouclier de 10% de tes points de vie maximum. Une fois toutes les 90 s.", es = "Un golpe que te mataría te deja con un 40% de salud en su lugar, y respondes con un Embate de escudo gratuito y un escudo del 10% de tu salud máxima. Una vez cada 90 s.", pt = "Um golpe que mataria você deixa você com 40% de vida, e então você responde com uma Pancada de Escudo grátis e um escudo de 10% da sua vida máxima. Uma vez a cada 90 s.", ru = "Удар, который убил бы тебя, оставляет тебе 40% здоровья, после чего ты отвечаешь бесплатным Мощным ударом щитом и щитом в 10% твоего максимального здоровья. Раз в 90 сек.", pl = "Cios, który by cię zabił, zostawia cię przy 40% zdrowia, a ty odpowiadasz darmowym Uderzeniem tarczą i tarczą o wartości 10% twojego maksymalnego zdrowia. Raz na 90 s.", tr = "Seni öldürecek bir darbe seni 40% canla bırakır, ardından bedava bir Kalkan Çarpması ve azami canının 10%'u kadar bir kalkanla karşılık verirsin. 90 sn'de bir.", it = "Un colpo che ti ucciderebbe ti lascia invece al 40% di salute, poi rispondi con un Colpo di scudo gratuito e uno scudo pari al 10% della tua salute massima. Una volta ogni 90 s.", ja = "致命的な一撃を受けると代わりに体力40%で踏みとどまり、無料のシールド・スラムと最大体力10%のシールドで反撃します。90秒に1回まで。", zh = "致命的一击会使你保留40%的生命值，随后你会以一次免费的盾牌猛击还击，并获得一个吸收相当于你最大生命值10%伤害的护盾。每90秒一次。", ko = "치명적인 일격을 받으면 대신 생명력 40%로 남고, 방패 밀쳐내기를 무료로 반격하며 최대 생명력 10%의 보호막을 얻습니다. 90초에 한 번 발동합니다." }
+menu_v = 90
+plays = [
+    { v = 90.0, play = { save = { health = 0.4, immune = 0.0, shield = 0.1, cast = ["shield_slam"] } } },
+]
+
+[[talent]]
+key = "unbreakable"
+tree = 2
+row = 5
+col = 2
+ranks = 3
+req = "fortified"
+effects = [{ stat = [26, 1.0] }]
+icon = "Ability_Warrior_Sunder"
+name = { en = "Unbreakable", de = "Unzerbrechlich", fr = "Incassable", es = "Inquebrantable", pt = "Inquebrável", ru = "Несокрушимый", pl = "Niezniszczalny", tr = "Kırılmaz", it = "Infrangibile", ja = "アンブレイカブル", zh = "坚不可摧", ko = "불굴" }
+text = { en = "Damage reduction past the cap is not wasted: each 1% of it becomes {v}% more damage.", de = "Schadensverringerung über der Obergrenze geht nicht verloren: Jedes 1% davon wird zu {v}% mehr Schaden.", fr = "La réduction des dégâts au-delà du plafond n'est pas perdue : chaque 1% devient {v}% de dégâts en plus.", es = "La reducción de daño por encima del límite no se desperdicia: cada 1% se convierte en un {v}% más de daño.", pt = "A redução de dano além do limite não se perde: cada 1% dela vira {v}% a mais de dano.", ru = "Снижение урона сверх предела не пропадает: каждый 1% превращается в {v}% дополнительного урона.", pl = "Redukcja obrażeń ponad limit nie przepada: każdy 1% z niej zamienia się w {v}% więcej obrażeń.", tr = "Sınırı aşan hasar azaltma boşa gitmez: her 1%'i {v}% daha fazla hasara dönüşür.", it = "La riduzione dei danni oltre il limite non va sprecata: ogni 1% diventa il {v}% di danni in più.", ja = "上限を超えた被ダメージ軽減も無駄になりません：超過分1%ごとにダメージが{v}%増加します。", zh = "超出上限的伤害减免不会浪费：每超出1%，造成的伤害提高{v}%。", ko = "상한을 넘은 피해 감소가 낭비되지 않습니다: 그 1%마다 피해가 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "titan"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "shield_slam" }, { stat = [27, 0.1] }]
+icon = "Ability_Warrior_DefensiveStance"
+name = { en = "Titan", de = "Titan", fr = "Titan", es = "Titán", pt = "Titã", ru = "Титан", pl = "Tytan", tr = "Titan", it = "Titano", ja = "タイタン", zh = "泰坦", ko = "티탄" }
+text = { en = "Capstone. You start every run with Shield Slam, your damage reduction can reach 70% instead of 60%, and every spell you cast deals an extra 1.5% of your maximum health, and Shield Slam also strikes for 2% of its target's maximum health.", de = "Schlussstein. Du beginnst jeden Lauf mit Schildschlag, deine Schadensverringerung kann 70% statt 60% erreichen, jeder Zauber, den du wirkst, verursacht zusätzlich 1,5% deiner maximalen Gesundheit, und Schildschlag trifft zudem für 2% der maximalen Gesundheit seines Ziels.", fr = "Apogée. Tu commences chaque partie avec Heurt de bouclier, ta réduction des dégâts peut atteindre 70% au lieu de 60%, chaque sort que tu lances inflige en plus 1,5% de tes points de vie maximum, et Heurt de bouclier frappe aussi pour 2% des points de vie maximum de sa cible.", es = "Cúspide. Empiezas cada partida con Embate de escudo, tu reducción de daño puede llegar al 70% en lugar del 60%, cada hechizo que lanzas inflige adicionalmente un 1,5% de tu salud máxima, y Embate de escudo también golpea por un 2% de la salud máxima de su objetivo.", pt = "Ápice. Você começa cada partida com Pancada de Escudo, sua redução de dano pode chegar a 70% em vez de 60%, cada feitiço que você lança causa 1,5% extra da sua vida máxima, e Pancada de Escudo também atinge com 2% da vida máxima do alvo.", ru = "Вершина. Ты начинаешь каждый забег с Мощным ударом щитом, снижение урона может достигать 70% вместо 60%, каждое твоё заклинание дополнительно наносит 1,5% твоего максимального здоровья, а Мощный удар щитом также бьёт на 2% максимального здоровья цели.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Uderzeniem tarczą, twoja redukcja obrażeń może sięgnąć 70% zamiast 60%, każdy rzucony czar zadaje dodatkowo 1,5% twojego maksymalnego zdrowia, a Uderzenie tarczą uderza też za 2% maksymalnego zdrowia celu.", tr = "Zirve. Her oyuna Kalkan Çarpması ile başlarsın, hasar azaltman 60% yerine 70%'e çıkabilir, yaptığın her büyü azami canının fazladan 1,5%'i kadar hasar verir ve Kalkan Çarpması ayrıca hedefinin azami canının 2%'si kadar vurur.", it = "Vertice. Inizi ogni partita con Colpo di scudo, la tua riduzione dei danni può arrivare al 70% invece del 60%, ogni incantesimo che lanci infligge un ulteriore 1,5% della tua salute massima e Colpo di scudo colpisce anche per il 2% della salute massima del bersaglio.", ja = "【キャップストーン】毎ランをシールド・スラムを持って始め、被ダメージ軽減の上限が60%から70%になります。呪文を唱えるたびに最大体力の1.5%の追加ダメージを与え、シールド・スラムは対象の最大体力の2%のダメージも与えます。", zh = "终极天赋：你在每场对局开始时拥有盾牌猛击，你的伤害减免上限从60%提高到70%，你施放的每个法术额外造成相当于你最大生命值1.5%的伤害，盾牌猛击还会造成相当于目标最大生命值2%的伤害。", ko = "궁극 특성. 모든 런을 방패 밀쳐내기를 가지고 시작하며, 피해 감소 상한이 60% 대신 70%가 됩니다. 주문을 시전할 때마다 최대 생명력의 1.5%만큼 추가 피해를 주며, 방패 밀쳐내기가 대상의 최대 생명력의 2%만큼 추가 피해를 줍니다." }
+mods = [{ health_hit = [] }]
+mods_v = 0.015
+plays = [
+    { v = 0.02, play = { max_health_hit = { school = 0, keys = ["shield_slam"] } } },
+]

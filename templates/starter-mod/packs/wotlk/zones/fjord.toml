@@ -1,0 +1,295 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "fjord"
+order = 25
+name = { en = "Howling Fjord", de = "Der Heulende Fjord", fr = "Fjord hurlant", es = "Fiordo Aquilonal", pt = "Fiorde Uivante", ru = "Ревущий фьорд", pl = "Wyjący Fiord", tr = "Uluyan Fiyort", it = "Fiordo Echeggiante", ja = "ハウリング・フィヨルド", zh = "嚎风峡湾", ko = "울부짖는 협만" }
+subtitle = { en = "The Vrykul Awaken", de = "Die Vrykul erwachen", fr = "L'éveil des Vrykul", es = "El despertar de los vrykul", pt = "O Despertar dos Vrykul", ru = "Пробуждение врайкулов", pl = "Przebudzenie Vrykuli", tr = "Vrykul Uyanıyor", it = "Il risveglio dei Vrykul", ja = "ヴライクルの目覚め", zh = "维库人苏醒", ko = "브리쿨의 각성" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_HowlingFjord_01"
+map = 571
+map_name = "Northrend"
+area = 495
+center = [635.4, -4493.8]
+radius = 100.0
+map_bounds = [-1397.92, -7443.75, 3116.67, -914.58]
+health_factor = 18.36
+gold_factor = 3.75
+late_factor = 0.4
+hour = 16
+weather = { fine = 65, rain = 25, snow = 10 }
+# Northrend's first pair drops Uncommon, not its place's Common, as Borean Tundra (2026-11-13). `TUNE`
+gear_rarity = "uncommon"
+# The jungle, the hills and the fjord's shore are mild: no cold, no bonfires.
+mild = true
+
+[[zone.enemy]]
+entry = 4300
+name = { en = "Plagued Dragonflayer", de = "Verseuchter Drachenschinder", fr = "Écorche-dragon pestiféré", es = "Zahorí de dragones apestado", pt = "Esfola-dragão Empesteado", ru = "Чумной Драконоубийца", pl = "Smoczy Oprawca dotknięty plagą", tr = "Vebalı Ejderha Yüzen", it = "Scuoiadraghi appestato", ja = "疫病のドラゴンフレイヤー", zh = "瘟疫屠龙者", ko = "역병걸린 용사냥꾼" }
+type = "undead"
+display = 25240
+icon = "INV_Misc_Head_Vrykul"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 4301
+name = { en = "Dragonflayer Worg", de = "Worg der Drachenschinder", fr = "Worg écorche-dragon", es = "Huargo Desuella Dragones", pt = "Worg Esfola-dragão", ru = "Ворг Драконоубийц", pl = "Worg Smoczych Oprawców", tr = "Ejderha Yüzen Worg'u", it = "Worg Scuoiadraghi", ja = "ドラゴンフレイヤー・ウォーグ", zh = "屠龙者座狼", ko = "용사냥꾼 늑대" }
+type = "beast"
+display = 22042
+icon = "Ability_Hunter_Pet_Wolf"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.65
+
+[[zone.enemy]]
+entry = 4302
+name = { en = "Dragonflayer Raider", de = "Plünderer der Drachenschinder", fr = "Pillard écorche-dragon", es = "Merodeador Desuella Dragones", pt = "Saqueador Esfola-dragão", ru = "Налётчик Драконоубийц", pl = "Najeźdźca Smoczych Oprawców", tr = "Ejderha Yüzen Akıncısı", it = "Predone Scuoiadraghi", ja = "ドラゴンフレイヤーの略奪者", zh = "屠龙者袭击者", ko = "용사냥꾼 약탈자" }
+type = "humanoid"
+display = 25802
+icon = "INV_Misc_Head_Vrykul"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.85
+
+[[zone.enemy]]
+entry = 4303
+name = { en = "Dragonflayer Runecaster", de = "Runenwirker der Drachenschinder", fr = "Lanceur de runes écorche-dragon", es = "Lanzarruna Desuella Dragones", pt = "Lançador de Runas Esfola-dragão", ru = "Заклинатель рун Драконоубийц", pl = "Runiczny czarownik Smoczych Oprawców", tr = "Ejderha Yüzen Rün Büyücüsü", it = "Incantarune Scuoiadraghi", ja = "ドラゴンフレイヤー・ルーンキャスター", zh = "屠龙者符文施法者", ko = "용사냥꾼 룬술사" }
+type = "humanoid"
+display = 25393
+icon = "INV_Misc_Head_Vrykul"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.85
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4304
+name = { en = "Iron Rune Construct", de = "Eisenrunenkonstrukt", fr = "Assemblage de runes de fer", es = "Constructo de runas de hierro", pt = "Constructo de Runas de Ferro", ru = "Создание железных рун", pl = "Żelazny konstrukt runiczny", tr = "Demir Rün Yapısı", it = "Costrutto Runa di Ferro", ja = "アイアン・ルーン・コンストラクト", zh = "铁符文构造体", ko = "무쇠 룬 구조물" }
+type = "mechanical"
+display = 26128
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.7
+
+[[zone.enemy]]
+entry = 4305
+name = { en = "Dragonflayer Ironhelm", de = "Eisenhelm der Drachenschinder", fr = "Heaume-de-fer écorche-dragon", es = "Yelmo de hierro Desuella Dragones", pt = "Elmo de Ferro Esfola-dragão", ru = "Железный шлем Драконоубийц", pl = "Żelazny hełm Smoczych Oprawców", tr = "Ejderha Yüzen Demirmiğfer", it = "Elmoferro Scuoiadraghi", ja = "ドラゴンフレイヤー・アイアンヘルム", zh = "屠龙者铁盔", ko = "용사냥꾼 무쇠투구" }
+type = "humanoid"
+display = 25982
+icon = "INV_Misc_Head_Vrykul"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.95
+
+[[zone.enemy]]
+entry = 4306
+name = { en = "Fjord Hawk", de = "Fjordfalke", fr = "Faucon du fjord", es = "Halcón del fiordo", pt = "Falcão do Fiorde", ru = "Ястреб фьорда", pl = "Jastrząb z fiordu", tr = "Fiyort Şahini", it = "Falco del fiordo", ja = "フィヨルド・ホーク", zh = "峡湾雄鹰", ko = "협만 매" }
+type = "beast"
+display = 23483
+icon = "Ability_Hunter_Pet_Owl"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.7
+
+[[zone.enemy]]
+entry = 4307
+name = { en = "Gjalerbron Necromancer", de = "Nekromant von Gjalerbron", fr = "Nécromancien de Gjalerbron", es = "Nigromante de Gjalerbron", pt = "Necromante de Gjalerbron", ru = "Некромант из Гьялерброна", pl = "Nekromanta z Gjalerbron", tr = "Gjalerbron Ölü Çağıran", it = "Negromante Gjalerbron", ja = "ギャラーブロンのネクロマンサー", zh = "加勒布隆通灵师", ko = "걀레르브론 강령술사" }
+type = "undead"
+display = 25243
+icon = "Spell_Shadow_RaiseDead"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.9
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4308
+name = { en = "Kvaldir Reaver", de = "Häscher der Kvaldir", fr = "Saccageur kvaldir", es = "Atracador Kvaldir", pt = "Saqueador Kvaldir", ru = "Квальдирский разбойник", pl = "Rabuś Kvaldirów", tr = "Kvaldir Yağmacısı", it = "Razziatore Kvaldir", ja = "クヴァルディア・リーヴァー", zh = "克瓦迪尔掠夺者", ko = "크발디르 파괴자" }
+type = "humanoid"
+display = 25773
+icon = "INV_Misc_Head_Vrykul"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+
+[[zone.elite]]
+entry = 4310
+name = { en = "Dragonflayer Lord", de = "Lord der Drachenschinder", fr = "Seigneur écorche-dragon", es = "Señor Desuella Dragones", pt = "Lorde Esfola-dragão", ru = "Лорд Драконоубийц", pl = "Lord Smoczych Oprawców", tr = "Ejderha Yüzen Lordu", it = "Signore Scuoiadraghi", ja = "ドラゴンフレイヤー・ロード", zh = "屠龙者领主", ko = "용사냥꾼 군주" }
+type = "humanoid"
+display = 25838
+icon = "INV_Misc_Head_Vrykul"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.elite]]
+entry = 4311
+name = { en = "Proto-Drake", de = "Protodrache", fr = "Proto-drake", es = "Protodraco", pt = "Protodraco", ru = "Протодракон", pl = "Proto-smok", tr = "Proto-Ejder", it = "Proto-drago", ja = "プロトドレイク", zh = "始祖幼龙", ko = "원시비룡" }
+type = "dragonkin"
+display = 26710
+icon = "INV_PET_FROSTWYRM"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.7
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16396, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 2120, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 4312
+name = { en = "Iron Rune Golem", de = "Eisenrunengolem", fr = "Golem de runes de fer", es = "Gólem de runas de hierro", pt = "Golem de Runas de Ferro", ru = "Голем железных рун", pl = "Żelazny golem runiczny", tr = "Demir Rün Golemi", it = "Golem Runa di Ferro", ja = "アイアン・ルーン・ゴーレム", zh = "铁符文魔像", ko = "무쇠 룬 골렘" }
+type = "mechanical"
+display = 26131
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.2
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { stomp = { spell = 31277, radius = 7.0, warn = 1.8, knock = 9.0 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 6524, count = 3, radius = 4.0, spread = 8.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.boss]]
+entry = 4390
+name = { en = "Prince Keleseth", de = "Prinz Keleseth", fr = "Prince Keleseth", es = "Príncipe Keleseth", pt = "Príncipe Keleseth", ru = "Принц Келесет", pl = "Książę Keleseth", tr = "Prens Keleseth", it = "Principe Keleseth", ja = "ケレセス王子", zh = "凯雷塞斯王子", ko = "공작 켈레세스" }
+type = "undead"
+display = 25338
+icon = "Achievement_Boss_PrinceKeleseth"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.8
+minute = 4
+yell = { en = "Your blood is mine!", de = "Euer Blut gehört mir!", fr = "Votre sang m'appartient !", es = "¡Vuestra sangre es mía!", pt = "O sangue de vocês é meu!", ru = "Ваша кровь - моя!", pl = "Wasza krew jest moja!", tr = "Kanınız benim!", it = "Il tuo sangue è mio!", ja = "貴様の血は我がものだ！", zh = "你的血是我的！", ko = "네 피는 내 것이다!" }
+kit = "prince_keleseth"
+
+[[zone.boss]]
+entry = 4391
+name = { en = "Skarvald the Constructor", de = "Skarvald der Konstrukteur", fr = "Skarvald le Constructeur", es = "Skarvald el Constructor", pt = "Skarvald, o Construtor", ru = "Скарвальд Созидатель", pl = "Skarvald Konstruktor", tr = "Yapıcı Skarvald", it = "Skarvald il Costruttore", ja = "建造者スカーヴァルド", zh = "建筑师斯卡瓦尔德", ko = "건축가 스카발드" }
+type = "humanoid"
+display = 25984
+icon = "INV_Misc_Head_Vrykul"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.4
+minute = 8
+yell = { en = "Dalronn! See if you can muster the nerve to join my attack!", de = "Dalronn! Schau, ob du den Mut aufbringst, dich meinem Angriff anzuschließen!", fr = "Dalronn ! Vois si tu trouves le courage de te joindre à mon attaque !", es = "¡Dalronn! ¡A ver si reúnes el valor para unirte a mi ataque!", pt = "Dalronn! Veja se você tem coragem de se juntar ao meu ataque!", ru = "Далронн! Посмотрим, хватит ли у тебя духу присоединиться к моей атаке!", pl = "Dalronn! Zobacz, czy zdobędziesz się na odwagę, by dołączyć do mojego ataku!", tr = "Dalronn! Saldırıma katılacak cesareti bulabilecek misin, bir bak!", it = "Dalronn! Vedi se riesci a trovare il coraggio di unirti al mio attacco!", ja = "ダルロン！我が攻撃に加わる度胸があるか見せてみろ！", zh = "达尔隆！看看你有没有胆量加入我的攻击！", ko = "달론! 내 공격에 가담할 배짱이 있는지 보자!" }
+kit = "skarvald_the_constructor"
+
+[[zone.boss]]
+entry = 4392
+name = { en = "Gortok Palehoof", de = "Gortok Bleichhuf", fr = "Gortok Pâlesabot", es = "Gortok Pezuña Pálida", pt = "Gortok Casco Pálido", ru = "Горток Бледное Копыто", pl = "Gortok Bladokopyt", tr = "Gortok Solgunpatı", it = "Gortok Zoccolopallido", ja = "ゴートク・ペイルフーフ", zh = "戈托克·苍蹄", ko = "고르토크 페일후프" }
+type = "giant"
+display = 21597
+icon = "Ability_Hunter_Pet_Gorilla"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.0
+minute = 12
+yell = { en = "What this place? I will remember!", de = "Was das für Ort? Ich mich erinnern!", fr = "C'est quoi, cet endroit ? Moi me souviendrai !", es = "¿Qué sitio ser este? ¡Yo recordar!", pt = "Que lugar ser esse? Eu lembrar!", ru = "Что за место? Я запомнить!", pl = "Co to za miejsce? Ja zapamiętać!", tr = "Burası ne? Ben hatırlayacak!", it = "Che posto è questo? Ricorderò!", ja = "ここはどこだ？覚えておくぞ！", zh = "这是哪里？我会记住的！", ko = "여기 어디? 기억할 거다!" }
+kit = "gortok_palehoof"
+
+[[zone.boss]]
+entry = 4393
+name = { en = "Skadi the Ruthless", de = "Skadi der Skrupellose", fr = "Skadi l'Impitoyable", es = "Skadi el Despiadado", pt = "Skadi, o Impiedoso", ru = "Скади Безжалостный", pl = "Skadi Bezlitosny", tr = "Acımasız Skadi", it = "Skadi lo Spietato", ja = "無慈悲なるスカディ", zh = "残忍的斯卡迪", ko = "무자비한 스카디" }
+type = "dragonkin"
+display = 26709
+icon = "Achievement_Boss_Skadi"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.4
+minute = 16
+yell = { en = "What mongrels dare intrude here?", de = "Welche Köter wagen es, hier einzudringen?", fr = "Quels roquets osent s'introduire ici ?", es = "¿Qué chuchos se atreven a entrar aquí?", pt = "Que vira-latas ousam invadir este lugar?", ru = "Какие шавки посмели сюда сунуться?", pl = "Jakie kundle śmią tu wtargnąć?", tr = "Hangi melezler buraya girmeye cüret ediyor?", it = "Quali bastardi osano intromettersi qui?", ja = "どこの雑種がここに踏み込むか？", zh = "是什么杂种胆敢闯入这里？", ko = "어떤 잡종 놈들이 감히 여기에 들어오느냐?" }
+kit = "skadi_the_ruthless"
+
+[[zone.boss]]
+entry = 2102
+name = { en = "Ingvar the Plunderer", de = "Ingvar der Brandschatzer", fr = "Ingvar le Pillard", es = "Ingvar el Expoliador", pt = "Ingvar, o Saqueador", ru = "Ингвар Разоритель", pl = "Ingvar Łupieżca", tr = "Yağmacı Ingvar", it = "Ingvar il Saccheggiatore", ja = "略奪者イングヴァル", zh = "掠夺者因格瓦尔", ko = "약탈자 잉바르" }
+type = "humanoid"
+display = 21953
+icon = "INV_Misc_Head_Vrykul"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.6
+minute = 20
+yell = { en = "I'll paint my face with your blood!", de = "Ich bemale mein Gesicht mit eurem Blut!", fr = "Je vais me peindre le visage avec votre sang !", es = "¡Me pintaré la cara con vuestra sangre!", pt = "Vou pintar meu rosto com o sangue de vocês!", ru = "Я раскрашу своё лицо вашей кровью!", pl = "Pomaluję sobie twarz waszą krwią!", tr = "Yüzümü kanınızla boyayacağım!", it = "Mi dipingerò il volto col vostro sangue!", ja = "貴様の血で顔を塗ってやる！", zh = "我要用你们的血涂满我的脸！", ko = "네 피로 내 얼굴을 칠하겠다!" }
+final = true
+kit = "ingvar_the_plunderer"

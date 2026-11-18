@@ -1,0 +1,288 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "zuldrak"
+order = 28
+name = { en = "Zul'Drak", de = "Zul'Drak", fr = "Zul'Drak", es = "Zul'Drak", pt = "Zul'Drak", ru = "Зул'Драк", pl = "Zul'Drak", tr = "Zul'Drak", it = "Zul'Drak", ja = "ズル・ドラク", zh = "祖达克", ko = "줄드락" }
+subtitle = { en = "The Fall of the Drakkari", de = "Der Fall der Drakkari", fr = "La chute des Drakkari", es = "La caída de los drakkari", pt = "A Queda dos Drakkari", ru = "Падение драккари", pl = "Upadek Drakkari", tr = "Drakkari'nin Çöküşü", it = "La caduta dei Drakkari", ja = "ドラッカリの陥落", zh = "达卡莱的陨落", ko = "드라카리의 몰락" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_ZulDrak_03"
+map = 571
+map_name = "Northrend"
+area = 66
+center = [5489.6, -2543.8]
+radius = 100.0
+map_bounds = [-600.0, -5593.75, 7668.75, 4339.58]
+health_factor = 23.13
+gold_factor = 4.08
+late_factor = 0.4
+hour = 15
+weather = { fine = 55, snow = 45 }
+
+[[zone.enemy]]
+entry = 4600
+name = { en = "Scourge Geist", de = "Geist der Geißel", fr = "Geist du Fléau", es = "Geist de la Plaga", pt = "Geist do Flagelo", ru = "Гейст Плети", pl = "Upiór Plagi", tr = "Yıkım Ordusu Geist'ı", it = "Geist del Flagello", ja = "スカージ・ガイスト", zh = "天灾鬼灵", ko = "스컬지 망령" }
+type = "undead"
+display = 24590
+icon = "Ability_GhoulFrenzy"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 4601
+name = { en = "Ghoul Scavenger", de = "Aasfressender Ghul", fr = "Goule charognarde", es = "Necrófago carroñero", pt = "Carniçal Necrófago", ru = "Вурдалак-падальщик", pl = "Ghul-padlinożerca", tr = "Gulyabani Leş Yiyici", it = "Ghoul spazzino", ja = "グールの漁り屋", zh = "食尸鬼食腐者", ko = "구울 청소부" }
+type = "undead"
+display = 24994
+icon = "Ability_GhoulFrenzy"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+
+[[zone.enemy]]
+entry = 4602
+name = { en = "Drakkari Skullcrusher", de = "Schädelbrecher der Drakkari", fr = "Brise-crâne drakkari", es = "Machacacráneos drakkari", pt = "Quebra-crânios Drakkari", ru = "Крушитель черепов драккари", pl = "Zgniatacz czaszek Drakkari", tr = "Drakkari Kafatası Ezici", it = "Spaccateste Drakkari", ja = "ドラッカリ・スカルクラッシャー", zh = "达卡莱碎颅者", ko = "드라카리 해골분쇄자" }
+type = "humanoid"
+display = 26858
+icon = "INV_Misc_Head_Troll_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 4603
+name = { en = "Scourge Necromancer", de = "Nekromant der Geißel", fr = "Nécromancien du Fléau", es = "Nigromante de la Plaga", pt = "Necromante do Flagelo", ru = "Некромант Плети", pl = "Nekromanta Plagi", tr = "Yıkım Ordusu Ölü Çağıranı", it = "Negromante del Flagello", ja = "スカージ・ネクロマンサー", zh = "天灾通灵师", ko = "스컬지 강령술사" }
+type = "humanoid"
+display = 16279
+icon = "INV_Misc_Head_Human_02"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.35
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4604
+name = { en = "Drakkari Earthshaker", de = "Erderschütterer der Drakkari", fr = "Secoue-terre drakkari", es = "Sacudetierra drakkari", pt = "Abala-terra Drakkari", ru = "Сотрясатель земли драккари", pl = "Wstrząsacz ziemi Drakkari", tr = "Drakkari Yer Sarsıcı", it = "Scuotiterra Drakkari", ja = "ドラッカリ・アースシェイカー", zh = "达卡莱撼地者", ko = "드라카리 대지진동자" }
+type = "elemental"
+display = 26585
+icon = "Spell_Nature_EarthElemental_Totem"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.45
+role = { ranged = { spell = 36645, range = 16.0, every = 4.0, speed = 30.0, radius = 2.5, factor = 1.0 } }
+
+[[zone.enemy]]
+entry = 4605
+name = { en = "Bloated Abomination", de = "Aufgeblähte Monstrosität", fr = "Abomination boursouflée", es = "Abominación hinchada", pt = "Abominação Inchada", ru = "Раздутое поганище", pl = "Spuchnięta poczwara", tr = "Şişkin Canavar", it = "Abominio gonfio", ja = "膨れ上がったアボミネーション", zh = "臃肿的憎恶", ko = "부푼 누더기골렘" }
+type = "undead"
+display = 10006
+icon = "Spell_Shadow_AbominationExplosion"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.75
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 4606
+name = { en = "Gundrak Raptor", de = "Raptor von Gundrak", fr = "Raptor de Gundrak", es = "Raptor de Gundrak", pt = "Raptor de Gundrak", ru = "Раптор Гундрака", pl = "Raptor z Gundrak", tr = "Gundrak Yırtıcısı", it = "Raptor di Gundrak", ja = "グンドラク・ラプター", zh = "古达克迅猛龙", ko = "군드락 랩터" }
+type = "beast"
+display = 19734
+icon = "Ability_Hunter_Pet_Raptor"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 4607
+name = { en = "Drakkari Inciter", de = "Aufwiegler der Drakkari", fr = "Instigateur drakkari", es = "Incitador drakkari", pt = "Incitador Drakkari", ru = "Подстрекатель драккари", pl = "Podżegacz Drakkari", tr = "Drakkari Kışkırtıcı", it = "Sobillatore Drakkari", ja = "ドラッカリの扇動者", zh = "达卡莱煽动者", ko = "드라카리 선동가" }
+type = "humanoid"
+display = 26856
+icon = "INV_Misc_Head_Troll_02"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+
+[[zone.enemy]]
+entry = 4608
+name = { en = "Drakkari Rhino", de = "Nashorn der Drakkari", fr = "Rhinocéros drakkari", es = "Rinoceronte drakkari", pt = "Rinoceronte Drakkari", ru = "Носорог драккари", pl = "Nosorożec Drakkari", tr = "Drakkari Gergedanı", it = "Rinoceronte Drakkari", ja = "ドラッカリ・ライノ", zh = "达卡莱犀牛", ko = "드라카리 코뿔소" }
+type = "beast"
+display = 26265
+icon = "Ability_Hunter_Pet_Rhino"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+
+[[zone.elite]]
+entry = 4610
+name = { en = "Drakkari Guardian", de = "Wächter der Drakkari", fr = "Gardien drakkari", es = "Guardián drakkari", pt = "Guardião Drakkari", ru = "Страж драккари", pl = "Strażnik Drakkari", tr = "Drakkari Muhafızı", it = "Guardiano Drakkari", ja = "ドラッカリ・ガーディアン", zh = "达卡莱守护者", ko = "드라카리 수호병" }
+type = "mechanical"
+display = 26586
+icon = "Ability_GolemStormBolt"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.65
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { stomp = { spell = 31277, radius = 7.0, warn = 1.8, knock = 9.0 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 6524, count = 3, radius = 4.0, spread = 8.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 4611
+name = { en = "Frost Revenant", de = "Frostwiedergänger", fr = "Revenant du givre", es = "Renacido de escarcha", pt = "Aparição do Gelo", ru = "Ледяной призрак", pl = "Mroźne widmo", tr = "Buz Hortlağı", it = "Spettro del gelo", ja = "フロスト・レヴナント", zh = "冰霜亡魂", ko = "서리 망령" }
+type = "elemental"
+display = 26617
+icon = "Spell_Frost_SummonWaterElemental_2"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.3
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 8.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { wander = { spell = 28547, count = 1, radius = 3.0, speed = 3.5, lasts = 6.0, tick = 0.5 } }
+
+[[zone.elite]]
+entry = 4612
+name = { en = "Plague Behemoth", de = "Seuchenbehemoth", fr = "Béhémoth de peste", es = "Behemot de la plaga", pt = "Beemote da Peste", ru = "Чумной бегемот", pl = "Behemot plagi", tr = "Veba Behemotu", it = "Behemoth della peste", ja = "プレイグ・ベヒモス", zh = "瘟疫巨兽", ko = "역병 거수" }
+type = "undead"
+display = 31001
+icon = "Spell_Shadow_AbominationExplosion"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 0.8
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 4.5, warn = 2.0, factor = 1.0, lasts = 6.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 4690
+name = { en = "Slad'ran", de = "Slad'ran", fr = "Slad'ran", es = "Slad'ran", pt = "Slad'ran", ru = "Слад'ран", pl = "Slad'ran", tr = "Slad'ran", it = "Slad'ran", ja = "スラドラン", zh = "斯拉德兰", ko = "슬라드란" }
+type = "beast"
+display = 4435
+icon = "Achievement_Boss_Sladran"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.8
+minute = 4
+yell = { en = "Drakkari gonna kill anybody who trespass on these lands!", de = "Die Drakkari töten jeden, der dieses Land betritt!", fr = "Les Drakkari vont tuer quiconque met les pieds sur ces terres !", es = "¡Los drakkari matar a quien pisar estas tierras!", pt = "Drakkari vão matar quem invadir essas terras!", ru = "Драккари убьют всякого, кто ступит на эти земли!", pl = "Drakkari zabić każdego, kto wejść na te ziemie!", tr = "Drakkari bu topraklara girenleri öldürecek!", it = "I Drakkari uccidere chiunque invada queste terre!", ja = "ドラッカリ、この地に踏み込むヤツは誰でも殺す！", zh = "达卡莱会杀死任何闯入这片土地的人！", ko = "드라카리는 이 땅에 들어온 놈 누구든 죽인다!" }
+kit = "sladran"
+
+[[zone.boss]]
+entry = 4691
+name = { en = "Drakkari Colossus", de = "Koloss der Drakkari", fr = "Colosse drakkari", es = "Coloso drakkari", pt = "Colosso Drakkari", ru = "Колосс драккари", pl = "Kolos Drakkari", tr = "Drakkari Devi", it = "Colosso Drakkari", ja = "ドラッカリ・コロッサス", zh = "达卡莱巨像", ko = "드라카리 거신" }
+type = "mechanical"
+display = 26584
+icon = "Ability_GolemStormBolt"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.0
+minute = 8
+yell = { en = "The Colossus lurches to life!", de = "Der Koloss erwacht schwankend zum Leben!", fr = "Le colosse s'ébranle et s'éveille !", es = "¡El Coloso cobra vida tambaleándose!", pt = "O Colosso desperta cambaleando!", ru = "Колосс, шатаясь, оживает!", pl = "Kolos budzi się do życia z impetem!", tr = "Dev sendeleyerek hayata geliyor!", it = "Il Colosso si anima con un sussulto!", ja = "コロッサスがよろめきながら動き出した！", zh = "巨像摇摇晃晃地活了过来！", ko = "거신이 비틀거리며 깨어납니다!" }
+kit = "drakkari_colossus"
+
+[[zone.boss]]
+entry = 4692
+name = { en = "Moorabi", de = "Moorabi", fr = "Moorabi", es = "Moorabi", pt = "Moorabi", ru = "Мурраби", pl = "Moorabi", tr = "Moorabi", it = "Moorabi", ja = "ムーラビ", zh = "莫拉比", ko = "무라비" }
+type = "beast"
+display = 27269
+icon = "Achievement_Boss_Moorabi"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.0
+minute = 12
+yell = { en = "We fought back da Scourge. What chance joo be thinkin' JOO got?", de = "Wir ham die Geißel zurückgeschlagen. Was für 'ne Chance glaubt IHR zu haben?", fr = "On a repoussé le Fléau. Quelle chance tu crois avoir, TOI ?", es = "Hemos frenado a la Plaga. ¿Qué posibilidades creéis tener VOSOTROS?", pt = "A gente fez o Flagelo recuar. Que chance VOCÊS acham que têm?", ru = "Мы отбились от Плети. А у вас какие шансы, а?", pl = "Odparliśmy Plagę. Jakie szanse wy myślicie, że macie?", tr = "Biz Yıkım ordusunu püskürttük. Sen ne şansın olduğunu sanıyorsun?", it = "Noi abbiamo respinto il Flagello. Che speranza credere di avere voi?", ja = "オレたち、スカージを撃退した。お前らに何の勝ち目があると思ってる？", zh = "我们击退了天灾军团。你们觉得你们有什么机会？", ko = "우린 스컬지도 물리쳤다. 너희한테 무슨 승산이 있다고 생각하나?" }
+kit = "moorabi"
+
+[[zone.boss]]
+entry = 4693
+name = { en = "Eck the Ferocious", de = "Eck der Wilde", fr = "Eck le Féroce", es = "Eck el Feroz", pt = "Eck, o Feroz", ru = "Эк Свирепый", pl = "Eck Dziki", tr = "Yırtıcı Eck", it = "Eck il Feroce", ja = "獰猛なるエック", zh = "凶残的埃克", ko = "흉포한 에크" }
+type = "beast"
+display = 2076
+icon = "Ability_Hunter_Pet_Worm"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.6
+minute = 16
+yell = { en = "Eck lunges from the shadows!", de = "Eck springt aus den Schatten!", fr = "Eck bondit des ombres !", es = "¡Eck se lanza desde las sombras!", pt = "Eck salta das sombras!", ru = "Эк бросается из тени!", pl = "Eck rzuca się z cienia!", tr = "Eck gölgelerden atılıyor!", it = "Eck balza fuori dall'ombra!", ja = "エックが影の中から飛びかかってきた！", zh = "埃克从阴影中猛扑而出！", ko = "에크가 그림자 속에서 덮쳐 옵니다!" }
+kit = "eck_the_ferocious"
+
+[[zone.boss]]
+entry = 2105
+name = { en = "Gal'darah", de = "Gal'darah", fr = "Gal'darah", es = "Gal'darah", pt = "Gal'darah", ru = "Гал'дара", pl = "Gal'darah", tr = "Gal'darah", it = "Gal'darah", ja = "ガルダラ", zh = "迦尔达拉", ko = "갈다라" }
+type = "humanoid"
+display = 27061
+icon = "Achievement_Boss_Galdarah"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.3999999
+minute = 20
+yell = { en = "I'm gonna spill your guts, mon!", de = "Ich reiß dir die Eingeweide raus, Mann!", fr = "Je vais t'étaler les tripes, mon gars !", es = "¡Te voy a sacar las tripas, colega!", pt = "Vou arrancar suas tripas, cara!", ru = "Я выпущу тебе кишки, мон!", pl = "Rozpruję wam flaki, mon!", tr = "Bağırsaklarını dökeceğim, dostum!", it = "Io squarciarvi le budella, mon!", ja = "はらわたぶちまけてやるぜ、マン！", zh = "我要让你肠穿肚烂，伙计！", ko = "네 내장을 쏟아 주마, 친구!" }
+final = true
+kit = "galdarah"

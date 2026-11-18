@@ -1,0 +1,20 @@
+# Forgemaster Garfrost: Throw Saronite, Chilling Wave, Thundering Stomp.
+
+[[boss]]
+key = "forgemaster_garfrost"
+
+[[boss.kit]]
+every = 8.0
+ability = { pool = { spell = 68788, burst = 0, radius = 6.0, warn = 2.5, factor = 2.8 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 68778, range = 12.0, arc = 70.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { stomp = { spell = 68771, radius = 9.0, warn = 1.8, knock = 12.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

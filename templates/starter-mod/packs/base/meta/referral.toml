@@ -1,0 +1,18 @@
+# Recruit a Friend (survivors-sim referral.rs): the welcome pack and the recruiter's milestones.
+#
+# The welcome pack's gold. `TUNE`
+# The welcome pack's cosmetic, which only a recruit gets.
+# The recruiter's milestones: how many qualified recruits each takes and what it gives. Only
+# Recruit a Friend gives these; the shop does not sell them. Appended only: bit `i` of
+# `Progress::claimed` is the `i`-th.
+
+[[referral]]
+key = "recruit_a_friend"
+welcome_gold = 2000
+welcome = { name_style = "brother_in_arms" }
+milestones = [
+    { recruits = 1, reward = { trail = "banner" } },
+    { recruits = 3, reward = { name_style = "warbanner" } },
+    { recruits = 5, reward = { mount = "red_gryphon" } },
+    { recruits = 10, reward = { weapon = "frostmourne" } },
+]

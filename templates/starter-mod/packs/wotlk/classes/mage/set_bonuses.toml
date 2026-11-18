@@ -1,0 +1,56 @@
+# Time Fracture, the mage's Mythic set (the balance team's rework document of 2026-11-13).
+# The 4-piece starts the run with Deep Freeze and makes it hit 2.5 times as hard, come back in 0.6 times
+# the time and freeze (30%, 1.5 sec) in place of stunning; bosses are not frozen. The 8-piece: three ice
+# portals orbit the head and take turns casting Deep Freeze on a fixed beat; the first Deep Freeze hit on a
+# frozen enemy stores a share of its damage ({v}: 80%, empowered 120%), and when the enemy thaws or dies
+# frozen, up to five splinters of the stored damage jump to other enemies within 6 m (a yard is 0.9144 m).
+
+[[set_bonus]]
+key = "mage_mythic_4"
+tier = "mythic"
+pieces = 4
+mechanic = { kind = "spell_freeze", spell = "deep_freeze", chance = 0.3, secs = 1.5, boss_immune = true }
+text = { en = "Time Fracture: Start with Deep Freeze. Deep Freeze deals 150% more damage and its cooldown is 40% shorter. It has a 30% chance to freeze targets for 1.5 sec and no longer stuns.", de = "Zeitbruch: Du startest mit Tieffrieren. Tieffrieren verursacht 150% mehr Schaden und seine Abklingzeit ist 40% kürzer. Es friert Ziele mit 30% Wahrscheinlichkeit 1,5 Sek. lang ein und betäubt nicht länger.", fr = "Fracture temporelle : Vous commencez avec Gel profond. Gel profond inflige 150 % de dégâts supplémentaires et se recharge 40 % plus vite. Il a 30 % de chances de geler ses cibles pendant 1,5 s et n’étourdit plus.", es = "Fractura temporal: Empiezas con Congelación profunda. Congelación profunda inflige un 150 % más de daño y su reutilización es un 40 % más corta. Tiene un 30 % de probabilidad de congelar a los objetivos durante 1,5 s y ya no aturde.", pt = "Fratura Temporal: Você começa com Congelamento Profundo. Congelamento Profundo causa 150% a mais de dano e tem recarga 40% menor. Tem 30% de chance de congelar alvos por 1,5 s e deixa de atordoar.", ru = "Разлом времени: Вы начинаете с «Глубокой заморозкой». «Глубокая заморозка» наносит на 150% больше урона и восстанавливается на 40% быстрее. Она с вероятностью 30% замораживает цели на 1,5 сек. и больше не оглушает.", it = "Frattura Temporale: Inizi con Congelamento profondo. Congelamento profondo infligge il 150% di danni in più e si ricarica il 40% prima. Ha il 30% di probabilità di congelare i bersagli per 1,5 s e non stordisce più.", pl = "Pęknięcie Czasu: Zaczynasz z Głębokim zamrożeniem. Głębokie zamrożenie zadaje o 150% więcej obrażeń i odnawia się o 40% szybciej. Ma 30% szans na zamrożenie celów na 1,5 sek. i już nie ogłusza.", tr = "Zaman Kırılması: Derin Dondurma ile başlarsın. Derin Dondurma %150 daha fazla hasar verir ve bekleme süresi %40 kısalır. Hedefleri 1,5 sn boyunca dondurma şansı %30’dur ve artık sersemletmez.", ja = "時の亀裂：ディープ・フリーズを持って始めます。ディープ・フリーズのダメージが150%増加し、クールダウンが40%短くなります。30%の確率で対象を1.5秒間凍結させ、スタン効果はなくなります。", zh = "时间裂痕：对局开始时拥有深度冻结。深度冻结造成的伤害提高150%，冷却时间缩短40%。它有30%的几率将目标冻结1.5秒，且不再造成昏迷。", ko = "시간 붕괴: 동결을 가지고 시작합니다. 동결의 피해가 150% 증가하고 재사용 대기시간이 40% 감소합니다. 30% 확률로 대상을 1.5초 동안 얼리며, 더 이상 기절시키지 않습니다." }
+
+# The run starts with Deep Freeze as well as the class's first spell (a card with no boosts, like the starter).
+[[set_bonus.part]]
+effects = [{ start_with = "deep_freeze" }]
+fixed = true
+
+# 150% more damage is a factor of 2.5, multiplied with every other damage bonus (`damage_times`).
+[[set_bonus.part]]
+mods = [{ damage_times = ["deep_freeze"] }]
+mods_v = 1.5
+fixed = true
+
+# A cooldown 40% shorter is a factor of 0.6, multiplied with every other cooldown cut (`cooldown_times`).
+[[set_bonus.part]]
+mods = [{ cooldown_times = ["deep_freeze"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus]]
+key = "mage_mythic_8"
+tier = "mythic"
+pieces = 8
+# radius: 6 m; orbit radius 1 m, a turn in 2.5 sec, a cast every 0.5 sec (fixed: no cooldown bonus changes it).
+# `heights` is the orbit's centre above the hero's feet, by the hero's display (the head), and sizes the portal.
+mechanic = { kind = "thaw_splash", spell = "deep_freeze", radius = 6.56168, targets = 5, damage = 0.8, empowers = true, same_spell = true, boss_immune = true, visual = 910902, kit = 6452, orbit = { count = 3, radius = 1.09361, period = 2.5, every = 0.5, height = 2.03, shot = 910901, heights = [[49, 2.03], [50, 1.91], [51, 2.03], [52, 2.05], [53, 1.61], [54, 1.53], [55, 2.44], [56, 2.25], [57, 1.86], [58, 1.84], [59, 2.23], [60, 2.64], [1478, 2.03], [1479, 2.43], [1563, 1.21], [1564, 1.21], [6894, 1.39], [6895, 1.39], [15475, 2.03], [15476, 2.03], [16125, 2.54], [16126, 2.46], [90301, 2.03], [90302, 2.03], [90303, 2.03], [90304, 1.91]] } }
+text = { en = "Time Fracture: Three ice portals orbit your head at 1 m and take turns firing Deep Freeze every 0.5 sec, preferring bosses and elites. The first Deep Freeze hit on a frozen enemy stores {v}% of its damage. When the enemy thaws or dies frozen, up to 5 splinters jump to other enemies within 6 m and each deal the stored damage.", de = "Zeitbruch: Drei Eisportale kreisen im Abstand von 1 m um deinen Kopf und feuern reihum alle 0,5 Sek. Tieffrieren ab, bevorzugt auf Bosse und Elites. Der erste Tieffrieren-Treffer auf einen eingefrorenen Gegner speichert {v}% des Schadens. Taut der Gegner auf oder stirbt er eingefroren, springen bis zu 5 Splitter auf andere Gegner im Umkreis von 6 m über und verursachen jeweils den gespeicherten Schaden.", fr = "Fracture temporelle : Trois portails de glace tournent à 1 m autour de votre tête et lancent Gel profond à tour de rôle toutes les 0,5 s, de préférence sur les boss et les élites. Le premier Gel profond qui touche un ennemi gelé stocke {v} % de ses dégâts. Quand l’ennemi dégèle ou meurt gelé, jusqu’à 5 éclats bondissent sur d’autres ennemis à 6 m et infligent chacun les dégâts stockés.", es = "Fractura temporal: Tres portales de hielo orbitan a 1 m de tu cabeza y se turnan para lanzar Congelación profunda cada 0,5 s, con preferencia por jefes y élites. El primer impacto de Congelación profunda contra un enemigo congelado almacena un {v} % de su daño. Cuando el enemigo se descongela o muere congelado, hasta 5 esquirlas saltan a otros enemigos a 6 m y cada una inflige el daño almacenado.", pt = "Fratura Temporal: Três portais de gelo orbitam sua cabeça a 1 m e se alternam para lançar Congelamento Profundo a cada 0,5 s, de preferência em chefes e elites. O primeiro acerto de Congelamento Profundo em um inimigo congelado armazena {v}% do dano dele. Quando o inimigo descongela ou morre congelado, até 5 estilhaços saltam para outros inimigos a 6 m e cada um causa o dano armazenado.", ru = "Разлом времени: Три ледяных портала кружат в 1 м от вашей головы и по очереди применяют «Глубокую заморозку» каждые 0,5 сек., в первую очередь по боссам и элите. Первое попадание «Глубокой заморозкой» по замороженному врагу сохраняет {v}% нанесённого урона. Когда враг оттаивает или погибает замороженным, до 5 осколков перелетают на других врагов в радиусе 6 м, и каждый наносит сохранённый урон.", it = "Frattura Temporale: Tre portali di ghiaccio orbitano a 1 m dalla tua testa e a turno lanciano Congelamento profondo ogni 0,5 s, di preferenza su boss ed élite. Il primo colpo di Congelamento profondo su un nemico congelato accumula il {v}% dei danni inflitti. Quando il nemico si scongela o muore congelato, fino a 5 schegge saltano su altri nemici entro 6 m e ciascuna infligge i danni accumulati.", pl = "Pęknięcie Czasu: Trzy lodowe portale krążą 1 m od twojej głowy i na zmianę rzucają Głębokie zamrożenie co 0,5 sek., najchętniej na bossów i elity. Pierwsze trafienie Głębokim zamrożeniem zamrożonego wroga zachowuje {v}% zadanych obrażeń. Gdy wróg odmarznie lub zginie zamrożony, do 5 odłamków przeskakuje na innych wrogów w promieniu 6 m i każdy zadaje zachowane obrażenia.", tr = "Zaman Kırılması: Üç buz geçidi başının 1 m çevresinde döner ve sırayla her 0,5 sn’de Derin Dondurma yapar; öncelikle boss’ları ve elitleri hedef alır. Derin Dondurma’nın donmuş bir düşmana ilk vuruşu, hasarı %{v} oranında saklar. Düşman çözülünce ya da donmuşken ölünce, 6 m içindeki en fazla 5 başka düşmana parçalar sıçrar ve her biri saklanan hasarı verir.", ja = "時の亀裂：3つの氷のポータルが頭の周り1メートルを回り、0.5秒ごとに交代でディープ・フリーズを放ちます（ボスとエリートを優先）。凍結した敵への最初のディープ・フリーズの命中が、そのダメージの{v}%を蓄えます。敵が解凍されるか凍ったまま死ぬと、最大5つの破片が6メートル以内の他の敵へ飛び、それぞれ蓄えたダメージを与えます。", zh = "时间裂痕：三个寒冰传送门在你头部周围1码处环绕，每0.5秒轮流发射深度冻结，优先攻击首领和精英。深度冻结对被冻结敌人的第一次命中会储存其伤害的{v}%。当该敌人解冻或在冻结状态下死亡时，最多5块碎片会跳到6码内的其他敌人身上，每块造成储存的伤害。", ko = "시간 붕괴: 얼음 차원문 셋이 머리 주위 1미터에서 돌며 0.5초마다 번갈아 동결을 발사하며, 우두머리와 정예를 우선합니다. 얼어붙은 적에게 처음 적중한 동결이 피해의 {v}%를 저장합니다. 그 적이 녹거나 얼어붙은 채 죽으면 최대 5개의 파편이 6미터 안의 다른 적에게 튀어 각각 저장된 피해를 줍니다." }
+# The portal is the Frost Sphere of the Anub'arak fight (NPC 34606): its creature display 25144 (AzerothCore's
+# `creature_template_model`; stock CreatureDisplayInfo.dbc: Creature\SnowFlakeCreature, skin Snow_Shield2). `scale`
+# is its size at the default `height`: the model's box (about 2.8 x 3.0 x 4.3) sized to the 0.22 an XP orb (3.0 x 3.0 x 3.2)
+# had, so a ball is about a head wide. `heights` then grows or shrinks it with the hero's head.
+marker = { entry = 990105, display = 25144, scale = 0.2 }
+
+# The missiles are Ice Lance's look (spell 30455): a portal's shot at half its size, a splinter at twice its speed.
+# `tools/class-spell-vfx.py` writes both into the client's tables; rebuild the patch for them to show.
+[[set_bonus.look]]
+visual = 910901
+source = 30455
+missile_scale = 0.5
+
+[[set_bonus.look]]
+visual = 910902
+source = 30455
+missile_speed = 2.0

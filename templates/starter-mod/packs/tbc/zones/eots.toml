@@ -1,0 +1,292 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "eots"
+order = 16
+name = { en = "Eye of the Storm", de = "Auge des Sturms", fr = "Œil du cyclone", es = "Ojo de la Tormenta", pt = "Olho da Tormenta", ru = "Око Бури", pl = "Oko Burzy", tr = "Fırtınanın Gözü", it = "Occhio della Tempesta", ja = "アイ・オブ・ザ・ストーム", zh = "风暴之眼", ko = "폭풍의 눈" }
+subtitle = { en = "The Fel Reaver", de = "Der Teufelshäscher", fr = "Le Saccageur gangrené", es = "El Atracador vil", pt = "O Aniquilador Vil", ru = "Губитель Скверны", pl = "Niszczyciel Zła", tr = "Fel Yağmacısı", it = "Il Vildevastatore", ja = "フェルリーヴァー", zh = "邪能收割者", ko = "지옥 절단기" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_BG_winEOS"
+map = 566
+map_name = "NetherstormBG"
+area = 3820
+center = [2174.0, 1569.0]
+radius = 100.0
+map_bounds = [2660.42, 389.58, 2918.75, 1404.17]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 8.26
+gold_factor = 2.76
+late_factor = 0.4
+hour = 15
+# The Fel Reavers stalk it, as 3.3.5a has them here.
+fel_reavers = true
+
+[[zone.enemy]]
+entry = 3400
+name = { en = "Mana Wyrm", de = "Manawyrm", fr = "Wyrm de mana", es = "Vermis de maná", pt = "Serpe de Mana", ru = "Змей маны", pl = "Wyrm many", tr = "Mana Ejderi", it = "Viverna del mana", ja = "マナ・ワーム", zh = "法力浮龙", ko = "마나 지룡" }
+type = "beast"
+display = 15501
+icon = "Ability_Hunter_Pet_Moth"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.8
+
+[[zone.enemy]]
+entry = 3401
+name = { en = "Nether Ray", de = "Netherrochen", fr = "Raie du Néant", es = "Raya abisal", pt = "Arraia Etérea", ru = "Скат Пустоты", pl = "Płaszczka Netheru", tr = "Nether Vatozu", it = "Manta del Nether", ja = "ネザーレイ", zh = "虚空鳐", ko = "황천 가오리" }
+type = "beast"
+display = 19405
+icon = "Ability_Hunter_Pet_NetherRay"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.75
+
+[[zone.enemy]]
+entry = 3402
+name = { en = "Ethereum Assassin", de = "Assassine des Astraleums", fr = "Assassin de l'Éthereum", es = "Asesino del Etereum", pt = "Assassino do Etereum", ru = "Убийца Этериума", pl = "Zabójca Ethereum", tr = "Ethereum Suikastçısı", it = "Assassino dell'Etereum", ja = "エセリウムの暗殺者", zh = "复仇军刺客", ko = "에테리움 암살자" }
+type = "humanoid"
+display = 17687
+icon = "Spell_Arcane_Arcane04"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 3403
+name = { en = "Ethereal Arcanist", de = "Astraler Arkanist", fr = "Arcaniste éthérien", es = "Arcanista etéreo", pt = "Arcanista Etéreo", ru = "Эфириал-чародей", pl = "Eteryczny arcymag", tr = "Ruhani Arkanist", it = "Arcanista etereo", ja = "エセリアル・アーケニスト", zh = "虚灵奥术师", ko = "에테리얼 비전술사" }
+type = "humanoid"
+display = 20985
+icon = "Spell_Arcane_Arcane04"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 13748, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3404
+name = { en = "Arcane Golem", de = "Arkaner Golem", fr = "Golem arcanique", es = "Gólem arcano", pt = "Golem Arcano", ru = "Тайный голем", pl = "Magiczny golem", tr = "Gizem Golemi", it = "Golem arcano", ja = "アーケイン・ゴーレム", zh = "奥术魔像", ko = "비전 골렘" }
+type = "mechanical"
+display = 16348
+icon = "Ability_GolemStormBolt"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 3405
+name = { en = "Mana Fiend", de = "Manaungeheuer", fr = "Démon de mana", es = "Maligno de maná", pt = "Demônio de Mana", ru = "Исчадие маны", pl = "Demon many", tr = "Mana Canavarı", it = "Demone del mana", ja = "マナ・フィーンド", zh = "法力怨灵", ko = "마나 마귀" }
+type = "elemental"
+display = 17288
+icon = "Spell_Shadow_ManaFeed"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.95
+role = { exploder = { spell = 9874, burst = 568, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 3406
+name = { en = "Nether Drake", de = "Netherdrache", fr = "Drake du Néant", es = "Draco abisal", pt = "Draco Etéreo", ru = "Дракон Пустоты", pl = "Drake Netheru", tr = "Nether Ejderi", it = "Drago del Nether", ja = "ネザードレイク", zh = "虚空幼龙", ko = "황천의 용" }
+type = "dragonkin"
+display = 17772
+icon = "Ability_Mount_NetherDrakeElite"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.6
+
+[[zone.enemy]]
+entry = 3407
+name = { en = "Ethereal Thief", de = "Astraler Dieb", fr = "Voleur éthérien", es = "Ladrón etéreo", pt = "Ladrão Etéreo", ru = "Эфириал-вор", pl = "Eteryczny złodziej", tr = "Ruhani Hırsız", it = "Ladro etereo", ja = "エセリアルの盗賊", zh = "虚灵窃贼", ko = "에테리얼 도둑" }
+type = "humanoid"
+display = 20984
+icon = "Spell_Arcane_Arcane04"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+
+[[zone.enemy]]
+entry = 3408
+name = { en = "Void Terror", de = "Leerenschrecken", fr = "Terreur du Vide", es = "Terror del Vacío", pt = "Terror do Vazio", ru = "Ужас Бездны", pl = "Zgroza Pustki", tr = "Boşluk Dehşeti", it = "Terrore del Vuoto", ja = "ヴォイド・テラー", zh = "虚空恐魔", ko = "공허의 공포" }
+type = "demon"
+display = 14173
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.4
+
+[[zone.elite]]
+entry = 3410
+name = { en = "Nether Drakonid", de = "Netherdrakonid", fr = "Drakonide du Néant", es = "Drakónido abisal", pt = "Draconiano Etéreo", ru = "Драконид Пустоты", pl = "Drakonid Netheru", tr = "Nether Drakonid", it = "Drakonide del Nether", ja = "ネザー・ドラコニッド", zh = "虚空龙人", ko = "황천 용족" }
+type = "dragonkin"
+display = 20732
+icon = "Ability_Mount_NetherDrakeElite"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16099, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 3411
+name = { en = "Arcane Annihilator", de = "Arkaner Vernichter", fr = "Annihilateur arcanique", es = "Aniquilador arcano", pt = "Aniquilador Arcano", ru = "Тайный истребитель", pl = "Magiczny anihilator", tr = "Gizem Yok Edicisi", it = "Annientatore arcano", ja = "アーケイン・アナイアレイター", zh = "奥术歼灭者", ko = "비전 섬멸자" }
+type = "mechanical"
+display = 16347
+icon = "Ability_GolemStormBolt"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.4
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 1449, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 6.0 } }, { nova = { spell = 1449, radius = 6.0, warn = 1.4 } }], 0.6] }
+
+[[zone.elite]]
+entry = 3412
+name = { en = "Voidlord", de = "Leerenfürst", fr = "Seigneur du Vide", es = "Señor del Vacío", pt = "Senhor do Vazio", ru = "Повелитель Бездны", pl = "Władca Pustki", tr = "Boşluk Lordu", it = "Signore del Vuoto", ja = "ヴォイドロード", zh = "虚空领主", ko = "공허의 군주" }
+type = "demon"
+display = 18170
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.boss]]
+entry = 3490
+name = { en = "Nexus-Prince Shaffar", de = "Nexusprinz Shaffar", fr = "Prince-nexus Shaffar", es = "Príncipe del Nexo Shaffar", pt = "Príncipe do Nexus Shaffar", ru = "Принц Нексуса Шаффар", pl = "Książę Nexusa Shaffar", tr = "Nexus Prensi Shaffar", it = "Principe del Nexus Shaffar", ja = "ネクサス・プリンス・シャファー", zh = "节点亲王沙法尔", ko = "연합왕자 샤파르" }
+type = "humanoid"
+display = 19635
+icon = "Achievement_Boss_Nexus_Prince_Shaffar"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.2
+minute = 4
+yell = { en = "We have not yet been properly introduced.", de = "Wir wurden einander noch nicht richtig vorgestellt.", fr = "Nous n'avons pas encore été dûment présentés.", es = "Aún no nos han presentado como es debido.", pt = "Ainda não fomos devidamente apresentados.", ru = "Нас еще не представили как следует.", pl = "Nie zostaliśmy jeszcze należycie przedstawieni.", tr = "Henüz düzgünce tanışmadık.", it = "Non siamo ancora stati presentati come si deve.", ja = "まだきちんと自己紹介をしていなかったな。", zh = "我们还没有正式介绍过彼此呢。", ko = "아직 제대로 인사를 나누지 못했군." }
+kit = "nexus_prince_shaffar"
+
+[[zone.boss]]
+entry = 3491
+name = { en = "Yor", de = "Yor", fr = "Yor", es = "Yor", pt = "Yor", ru = "Йор", pl = "Yor", tr = "Yor", it = "Yor", ja = "ヨア", zh = "约尔", ko = "요르" }
+type = "demon"
+display = 16635
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.4
+minute = 8
+yell = { en = "Yor tears through the veil!", de = "Yor reißt durch den Schleier!", fr = "Yor déchire le voile !", es = "¡Yor desgarra el velo!", pt = "Yor rasga o véu!", ru = "Йор прорывается сквозь завесу!", pl = "Yor rozrywa zasłonę!", tr = "Yor perdeyi yırtıp geçiyor!", it = "Yor squarcia il velo!", ja = "ヨールがヴェールを引き裂いて現れた！", zh = "约尔撕裂了帷幕！", ko = "요르가 장막을 찢고 나옵니다!" }
+kit = "yor"
+
+# Nuramoc: 3.3.5a's rare chimaera of Netherstorm.
+[[zone.boss]]
+entry = 3492
+name = { en = "Nuramoc", de = "Nuramoc", fr = "Nuramoc", es = "Nuramoc", pt = "Nuramoc", ru = "Нурамок", pl = "Nuramoc", tr = "Nuramoc", it = "Nuramoc", ja = "ヌラモック", zh = "努拉莫克", ko = "누라모크" }
+type = "beast"
+display = 17094
+icon = "Ability_Hunter_Pet_Ravager"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.2
+minute = 12
+yell = { en = "Nuramoc spreads its wings over the field!", de = "Nuramoc breitet seine Schwingen über dem Feld aus!", fr = "Nuramoc déploie ses ailes sur le champ !", es = "¡Nuramoc extiende sus alas sobre el campo!", pt = "Nuramoc abre as asas sobre o campo!", ru = "Нурамок раскидывает крылья над полем!", pl = "Nuramoc rozpościera skrzydła nad polem!", tr = "Nuramoc kanatlarını sahanın üzerine geriyor!", it = "Nuramoc spiega le ali sul campo!", ja = "ヌラモックが戦場に翼を広げた！", zh = "努拉莫克在战场上空展开双翼！", ko = "누라모크가 전장 위로 날개를 펼칩니다!" }
+kit = "nuramoc"
+
+[[zone.boss]]
+entry = 3493
+name = { en = "Nexus-King Salhadaar", de = "Nexuskönig Salhadaar", fr = "Roi-nexus Salhadaar", es = "Rey del Nexo Salhadaar", pt = "Rei do Nexus Salhadaar", ru = "Король Нексуса Салхадаар", pl = "Król Nexusa Salhadaar", tr = "Nexus Kralı Salhadaar", it = "Re del Nexus Salhadaar", ja = "ネクサス・キング・サルハダール", zh = "节点之王萨哈达尔", ko = "연합왕 살하다르" }
+type = "humanoid"
+display = 19637
+icon = "Spell_Arcane_Arcane04"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.2
+minute = 16
+yell = { en = "Bow before the Nexus-King!", de = "Verneigt euch vor dem Nexuskönig!", fr = "Inclinez-vous devant le Roi-nexus !", es = "¡Inclinaos ante el Rey del Nexo!", pt = "Curvem-se diante do Rei do Nexus!", ru = "Склонитесь перед Королем Нексуса!", pl = "Pokłońcie się Królowi Nexusa!", tr = "Nexus Kralı'nın önünde eğilin!", it = "Inchinatevi al Re del Nexus!", ja = "ネクサス・キングにひれ伏せ！", zh = "向节点之王鞠躬！", ko = "연합왕 앞에 엎드려라!" }
+kit = "nexus_king_salhadaar"
+
+[[zone.boss]]
+entry = 2005
+name = { en = "the Fel Reaver", de = "der Teufelshäscher", fr = "le Saccageur gangrené", es = "el Atracador vil", pt = "o Aniquilador Vil", ru = "Губитель Скверны", pl = "Niszczyciel Zła", tr = "Fel Yağmacısı", it = "il Vildevastatore", ja = "フェルリーヴァー", zh = "邪能收割者", ko = "지옥 절단기" }
+type = "demon"
+display = 16630
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 60000
+damage = 66
+speed = 6.0
+size = 0.6
+minute = 20
+yell = { en = "The Fel Reaver thunders across the field!", de = "Der Teufelshäscher donnert über das Feld!", fr = "Le Saccageur gangrené gronde à travers le champ !", es = "¡El Atracador vil truena por el campo!", pt = "O Aniquilador Vil troveja pelo campo!", ru = "Губитель Скверны грохочет по полю!", pl = "Niszczyciel Zła dudni przez pole!", tr = "Fel Yağmacısı sahada gürleyerek ilerliyor!", it = "Il Vildevastatore rimbomba sul campo!", ja = "フェルリーヴァーが轟音を立てて戦場を横切る！", zh = "邪能收割者轰鸣着穿过战场！", ko = "지옥 절단기가 굉음을 내며 전장을 가로지릅니다!" }
+final = true
+kit = "the_fel_reaver"

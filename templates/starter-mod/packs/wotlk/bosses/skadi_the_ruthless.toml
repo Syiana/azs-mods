@@ -1,0 +1,20 @@
+# Skadi the Ruthless: Grauf's Freezing Cloud, Whirlwind, Poisoned Spear.
+
+[[boss]]
+key = "skadi_the_ruthless"
+
+[[boss.kit]]
+every = 10.0
+ability = { line = { spell = 47579, len = 40.0, w = 6.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 50228, radius = 7.0, lasts = 4.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 50255 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

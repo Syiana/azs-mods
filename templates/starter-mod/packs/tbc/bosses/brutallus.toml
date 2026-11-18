@@ -1,0 +1,20 @@
+# Brutallus: Meteor Slash, Stomp, Burn.
+
+[[boss]]
+key = "brutallus"
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 45150, range = 12.0, arc = 70.0, warn = 1.4, factor = 2.8 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 45185, radius = 9.0, warn = 1.8, knock = 13.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { puddle = { spell = 45141, burst = 45141, radius = 5.0, warn = 2.5, factor = 1.8, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

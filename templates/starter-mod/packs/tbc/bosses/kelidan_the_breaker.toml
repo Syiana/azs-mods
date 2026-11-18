@@ -1,0 +1,16 @@
+# Keli'dan the Breaker: Burning Nova, Shadow Bolt Volley.
+
+[[boss]]
+key = "kelidan_the_breaker"
+
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 30940, radius = 10.0, warn = 2.2 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 30510 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 10 }

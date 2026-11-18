@@ -1,0 +1,43 @@
+# The paladin's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "paladin_0"
+profile = 0
+text = { en = "Blessed for the smiting of the wicked.", de = "Gesegnet, um die Frevler niederzustrecken.", fr = "Béni pour châtier les méchants.", es = "Bendecido para castigar a los malvados.", pt = "Abençoado para castigar os perversos.", ru = "Благословлено карать нечестивых.", pl = "Pobłogosławione, by razić niegodziwych.", tr = "Kötüleri cezalandırmak için kutsanmış.", it = "Benedetto per colpire gli empi.", ja = "悪しき者を討つために祝福された。", zh = "受过祝福，专为惩戒邪恶。", ko = "사악한 자를 응징하라는 축복을 받았다." }
+
+[[piece_lore]]
+key = "paladin_1"
+profile = 1
+text = { en = "Consecrated steel: the Light turns the blow aside.", de = "Geweihter Stahl: Das Licht lenkt den Hieb ab.", fr = "Acier consacré : la Lumière détourne le coup.", es = "Acero consagrado: la Luz desvía el golpe.", pt = "Aço consagrado: a Luz desvia o golpe.", ru = "Освящённая сталь: Свет отводит удар.", pl = "Uświęcona stal: Światło odbija cios.", tr = "Kutsanmış çelik: Işık darbeyi saptırır.", it = "Acciaio consacrato: la Luce devia il colpo.", ja = "清められた鋼：聖なる光が一撃を逸らす。", zh = "奉献之钢：圣光为你挡开攻击。", ko = "신성한 강철: 빛이 일격을 비껴 낸다." }
+
+[[piece_lore]]
+key = "paladin_2"
+profile = 2
+text = { en = "The Light answers its bearer's prayers swiftly.", de = "Das Licht erhört die Gebete seines Trägers schnell.", fr = "La Lumière répond vite aux prières de son porteur.", es = "La Luz responde enseguida a las plegarias de su portador.", pt = "A Luz atende depressa às preces de quem o usa.", ru = "Свет быстро отвечает на молитвы владельца.", pl = "Światło szybko odpowiada na modlitwy noszącego.", tr = "Işık, taşıyanın dualarına çabucak karşılık verir.", it = "La Luce esaudisce in fretta le preghiere di chi lo porta.", ja = "聖なる光は持ち主の祈りに素早く応える。", zh = "圣光迅速回应持有者的祈祷。", ko = "빛은 지닌 자의 기도에 빠르게 응답한다." }
+
+[[piece_lore]]
+key = "paladin_3"
+profile = 3
+text = { en = "Swift is the hand of justice, and sure.", de = "Schnell ist die Hand der Gerechtigkeit, und sicher.", fr = "Prompte est la main de la justice, et sûre.", es = "Rápida es la mano de la justicia, y certera.", pt = "Rápida é a mão da justiça, e certeira.", ru = "Скора рука правосудия, и тверда.", pl = "Ręka sprawiedliwości jest szybka i pewna.", tr = "Adaletin eli çabuk ve kesindir.", it = "Rapida è la mano della giustizia, e sicura.", ja = "正義の手は速く、そして確か。", zh = "正义之手迅捷而坚定。", ko = "정의의 손은 빠르고, 확실하다." }
+
+[[piece_lore]]
+key = "paladin_4"
+profile = 4
+text = { en = "Faith mends its bearer between judgements.", de = "Der Glaube heilt seinen Träger zwischen den Urteilen.", fr = "La foi soigne son porteur entre deux jugements.", es = "La fe repara a su portador entre sentencias.", pt = "A fé cura quem o usa entre um julgamento e outro.", ru = "Вера исцеляет владельца между приговорами.", pl = "Wiara leczy noszącego między osądami.", tr = "İnanç, hükümler arasında taşıyanını iyileştirir.", it = "La fede cura chi lo porta tra un giudizio e l'altro.", ja = "信仰がジャッジメントの合間に持ち主を癒やす。", zh = "信仰在审判间隙治愈其持有者。", ko = "심판과 심판 사이, 신앙이 지닌 자를 치유한다." }
+
+[[piece_lore]]
+key = "paladin_5"
+profile = 5
+text = { en = "The Light keeps its bearer standing past mortal limits.", de = "Das Licht hält seinen Träger über sterbliche Grenzen hinaus aufrecht.", fr = "La Lumière garde son porteur debout au-delà des limites mortelles.", es = "La Luz mantiene en pie a su portador más allá de los límites mortales.", pt = "A Luz mantém quem o usa de pé além dos limites mortais.", ru = "Свет держит владельца на ногах сверх смертных пределов.", pl = "Światło utrzymuje noszącego na nogach ponad śmiertelne granice.", tr = "Işık, taşıyanını ölümlü sınırların ötesinde ayakta tutar.", it = "La Luce tiene in piedi chi lo porta oltre i limiti mortali.", ja = "聖なる光が持ち主を限界を超えて立たせ続ける。", zh = "圣光让持有者超越凡人的极限而屹立不倒。", ko = "빛은 지닌 자가 필멸의 한계를 넘어서도 쓰러지지 않게 한다." }
+
+[[piece_lore]]
+key = "paladin_6"
+profile = 6
+text = { en = "For the crusader who rides down the Scourge.", de = "Für den Kreuzfahrer, der die Geißel niederreitet.", fr = "Pour le croisé qui pourchasse le Fléau.", es = "Para el cruzado que arrolla a la Plaga.", pt = "Para o cruzado que atropela o Flagelo.", ru = "Для крестоносца, что топчет Плеть.", pl = "Dla krzyżowca, który rozjeżdża Plagę.", tr = "Scourge'u ezip geçen haçlı için.", it = "Per il crociato che travolge il Flagello.", ja = "スカージを駆逐する聖戦士のために。", zh = "献给踏平天灾军团的十字军。", ko = "스컬지를 짓밟고 달리는 성전사를 위하여." }
+
+[[piece_lore]]
+key = "paladin_7"
+profile = 7
+text = { en = "Its holy radiance spreads wide and burns true.", de = "Sein heiliger Glanz breitet sich weit aus und brennt rein.", fr = "Son rayonnement sacré s'étend loin et brûle juste.", es = "Su resplandor sagrado se extiende a lo lejos y quema certero.", pt = "Seu brilho sagrado se espalha e queima certeiro.", ru = "Его святое сияние разливается широко и жжёт метко.", pl = "Jego święty blask rozchodzi się szeroko i pali celnie.", tr = "Kutsal ışıltısı geniş yayılır ve isabetle yakar.", it = "Il suo splendore sacro si espande e brucia sicuro.", ja = "その聖なる輝きは広く届き、確かに焼く。", zh = "其神圣光辉远播四方，灼烧精准。", ko = "그 신성한 광휘는 넓게 퍼지고 정확히 불태운다." }

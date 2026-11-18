@@ -1,0 +1,237 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "consecration"
+id = 26573
+visual = 910061
+vfx = { source = 26573, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 8.0 } }
+hit = 48
+cooldown = 8.0
+range = 0.0
+name = { en = "Consecration", de = "Weihe", fr = "Consécration", es = "Consagración", pt = "Consagração", ru = "Освящение", pl = "Poświęcenie", tr = "Kutsama", it = "Consacrazione", ja = "コンセクレーション", zh = "奉献", ko = "신성화" }
+tags = ["judges"]
+icon = "Spell_Holy_InnerFire"
+
+[[spell]]
+key = "exorcism"
+id = 879
+visual = 910062
+vfx = { source = 879, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { strike = { targets = 1 } }
+hit = 135
+cooldown = 3.5
+range = 25.0
+name = { en = "Exorcism", de = "Exorzismus", fr = "Exorcisme", es = "Exorcismo", pt = "Exorcismo", ru = "Экзорцизм", pl = "Egzorcyzm", tr = "Şeytan Kovma", it = "Esorcismo", ja = "エクソシズム", zh = "驱邪术", ko = "퇴마술" }
+icon = "Spell_Holy_Excorcism_02"
+
+[[spell]]
+key = "hammer_of_wrath"
+id = 24275
+visual = 910063
+vfx = { source = 24275, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "holy"
+shape = { strike = { targets = 1 } }
+hit = 67
+cooldown = 1.6
+range = 28.0
+name = { en = "Hammer of Wrath", de = "Hammer des Zorns", fr = "Marteau de courroux", es = "Martillo de ira", pt = "Martelo da Ira", ru = "Молот гнева", pl = "Młot gniewu", tr = "Gazap Çekici", it = "Martello dell'ira", ja = "ハンマー・オブ・ラース", zh = "愤怒之锤", ko = "천벌의 망치" }
+icon = "Ability_ThunderClap"
+
+[[spell]]
+key = "holy_shock"
+id = 20473
+visual = 910064
+vfx = { source = 25912, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { missiles = { count = 2 } }
+hit = 84
+cooldown = 3.0
+range = 22.0
+rider = { mend = { pct = 3 } }
+name = { en = "Holy Shock", de = "Heiliger Schock", fr = "Horion sacré", es = "Choque Sagrado", pt = "Choque Sagrado", ru = "Шок небесной силы", pl = "Święty szok", tr = "Kutsal Şok", it = "Folgore sacra", ja = "ホーリー・ショック", zh = "神圣震击", ko = "신성 충격" }
+icon = "Spell_Holy_SearingLight"
+
+[[spell]]
+key = "holy_wrath"
+id = 2812
+visual = 910065
+vfx = { source = 2812, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { nova = { radius = 12.0 } }
+hit = 28
+cooldown = 7.0
+range = 12.0
+name = { en = "Holy Wrath", de = "Heiliger Zorn", fr = "Colère sacrée", es = "Cólera Sagrada", pt = "Ira Sagrada", ru = "Гнев небес", pl = "Gniew bogów", tr = "Kutsal Gazap", it = "Ira sacra", ja = "ホーリー・ラース", zh = "神圣愤怒", ko = "신의 격노" }
+icon = "Spell_Holy_Excorcism"
+
+[[spell]]
+key = "judgement"
+id = 20271
+visual = 910066
+vfx = { source = 20271, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { strike = { targets = 1 } }
+hit = 200
+cooldown = 6.0
+range = 12.0
+name = { en = "Judgement", de = "Richturteil", fr = "Jugement", es = "Juicio", pt = "Julgamento", ru = "Правосудие", pl = "Osąd", tr = "Yargı", it = "Giudizio", ja = "ジャッジメント", zh = "审判", ko = "심판" }
+icon = "Spell_Holy_RighteousFury"
+
+[[spell]]
+key = "hammer_of_justice"
+id = 853
+visual = 910067
+vfx = { source = 853, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { strike = { targets = 2 } }
+hit = 55
+cooldown = 7.0
+range = 12.0
+rider = { stun = { secs = 3.0 } }
+name = { en = "Hammer of Justice", de = "Hammer der Gerechtigkeit", fr = "Marteau de la justice", es = "Martillo de justicia", pt = "Martelo da Justiça", ru = "Молот правосудия", pl = "Młot sprawiedliwości", tr = "Adalet Çekici", it = "Martello della giustizia", ja = "ハンマー・オブ・ジャスティス", zh = "制裁之锤", ko = "심판의 망치" }
+icon = "Spell_Holy_SealOfMight"
+
+[[spell]]
+key = "holy_light"
+id = 635
+visual = 910068
+vfx = { source = 635, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { heal = { share = 30, secs = 0.0 } }
+hit = 0
+cooldown = 12.0
+range = 0.0
+name = { en = "Holy Light", de = "Heiliges Licht", fr = "Lumière sacrée", es = "Luz Sagrada", pt = "Luz Sagrada", ru = "Свет небес", pl = "Święte światło", tr = "Kutsal Işık", it = "Luce sacra", ja = "ホーリー・ライト", zh = "圣光术", ko = "성스러운 빛" }
+icon = "Spell_Holy_HolyBolt"
+
+[[spell]]
+key = "divine_shield"
+id = 642
+visual = 910069
+vfx = { source = 642, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { immune = { secs = 4.0 } }
+hit = 0
+cooldown = 32.0
+range = 0.0
+name = { en = "Divine Shield", de = "Gottesschild", fr = "Bouclier divin", es = "Escudo divino", pt = "Escudo Divino", ru = "Божественный щит", pl = "Boska tarcza", tr = "İlahi Kalkan", it = "Scudo divino", ja = "ディヴァイン・シールド", zh = "圣盾术", ko = "천상의 보호막" }
+icon = "Spell_Holy_DivineIntervention"
+
+[[spell]]
+key = "holy_shield"
+id = 20925
+visual = 910070
+vfx = { source = 20925, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { thorns = { secs = 10.0 } }
+hit = 31
+cooldown = 14.0
+range = 30.0
+name = { en = "Holy Shield", de = "Heiliger Schild", fr = "Bouclier du vertueux", es = "Escudo sagrado", pt = "Escudo Sagrado", ru = "Щит небес", pl = "Święta tarcza", tr = "Kutsal Kalkan", it = "Scudo sacro", ja = "ホーリー・シールド", zh = "神圣之盾", ko = "신성한 방패" }
+icon = "Spell_Holy_BlessingOfProtection"
+
+[[spell]]
+key = "redemption"
+id = 7328
+visual = 910071
+vfx = { source = 25912, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "holy"
+shape = { proc = { kind = "holy_burst", radius = 8.0 } }
+hit = 52
+cooldown = 0.36
+range = 0.0
+name = { en = "Redemption", de = "Erlösung", fr = "Rédemption", es = "Redención", pt = "Redenção", ru = "Искупление", pl = "Odkupienie", tr = "Kurtuluş", it = "Redenzione", ja = "リデンプション", zh = "救赎", ko = "구원" }
+# Its bursts show Holy Shock's strike: its own golden column on every slain enemy reads as a level-up.
+burst_visual = 910071
+icon = "Spell_Holy_Resurrection"
+
+# Wrath of the Lich King.
+[[spell]]
+key = "divine_storm"
+id = 53385
+visual = 910072
+vfx = { source = 53385, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { nova = { radius = 8.0 } }
+hit = 66
+cooldown = 5.0
+range = 8.0
+rider = { drain = { pct = 25 } }
+name = { en = "Divine Storm", de = "Göttlicher Sturm", fr = "Tempête divine", es = "Tormenta divina", pt = "Tempestade Divina", ru = "Божественная буря", pl = "Boska burza", tr = "İlahi Fırtına", it = "Tempesta divina", ja = "ディヴァイン・ストーム", zh = "神圣风暴", ko = "신성한 폭풍" }
+icon = "Ability_Paladin_DivineStorm"
+
+[[spell]]
+key = "hammer_of_the_righteous"
+id = 53595
+visual = 910073
+vfx = { source = 53595, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { strike = { targets = 3 } }
+hit = 77
+cooldown = 4.0
+range = 6.0
+name = { en = "Hammer of the Righteous", de = "Hammer der Rechtschaffenen", fr = "Marteau du vertueux", es = "Martillo del recto", pt = "Martelo do Íntegro", ru = "Молот праведника", pl = "Młot praworządnych", tr = "Doğruların Çekici", it = "Martello del Giusto", ja = "ハンマー・オブ・ザ・ライチャス", zh = "正义之锤", ko = "정의의 망치" }
+icon = "Ability_Paladin_HammeroftheRighteous"
+
+[[spell]]
+key = "avengers_shield"
+id = 31935
+visual = 910074
+vfx = { source = 31935, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { chain = { jumps = 2, radius = 10.0 } }
+hit = 87
+cooldown = 6.0
+range = 30.0
+rider = { slow = { pct = 50, secs = 3.0 } }
+name = { en = "Avenger's Shield", de = "Schild des Rächers", fr = "Bouclier du vengeur", es = "Escudo del vengador", pt = "Escudo do Vingador", ru = "Щит мстителя", pl = "Tarcza mściciela", tr = "İntikamcı Kalkanı", it = "Scudo del vendicatore", ja = "アヴェンジャーズ・シールド", zh = "复仇者之盾", ko = "응징의 방패" }
+icon = "Spell_Holy_AvengersShield"
+
+[[spell]]
+key = "sacred_shield"
+id = 53601
+visual = 910075
+vfx = { source = 53601, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { shield = { share = 20 } }
+hit = 0
+cooldown = 10.0
+range = 0.0
+name = { en = "Sacred Shield", de = "Geheiligter Schild", fr = "Bouclier sacré", es = "Escudo sacro", pt = "Escudo Sacro", ru = "Священный щит", pl = "Sakralna tarcza", tr = "Mukaddes Kalkan", it = "Scudo consacrato", ja = "セイクリッド・シールド", zh = "圣洁护盾", ko = "성스러운 보호막" }
+icon = "Ability_Paladin_BlessedMending"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "avenging_wrath"
+id = 31884
+visual = 910076
+vfx = { source = 31884, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { fury = { pct = 30, secs = 12.0 } }
+hit = 0
+cooldown = 30.0
+range = 30.0
+name = { en = "Avenging Wrath", de = "Zornige Vergeltung", fr = "Courroux vengeur", es = "Cólera vengativa", pt = "Ira Vingativa", ru = "Гнев карателя", pl = "Gniew mściciela", tr = "İntikam Gazabı", it = "Ira del vendicatore", ja = "アヴェンジング・ラース", zh = "复仇之怒", ko = "응징의 격노" }
+icon = "Spell_Holy_AvengineWrath"
+
+[[spell]]
+key = "crusader_strike"
+id = 35395
+visual = 910077
+vfx = { source = 35395, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Holy_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 72
+cooldown = 2.5
+range = 6.0
+name = { en = "Crusader Strike", de = "Kreuzfahrerstoß", fr = "Frappe du croisé", es = "Golpe de cruzado", pt = "Golpe do Cruzado", ru = "Удар воина Света", pl = "Uderzenie krzyżowca", tr = "Haçlı Darbesi", it = "Colpo del crociato", ja = "クルセイダー・ストライク", zh = "十字军打击", ko = "성전사의 일격" }
+icon = "Spell_Holy_CrusaderStrike"

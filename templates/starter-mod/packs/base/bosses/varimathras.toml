@@ -1,0 +1,20 @@
+# Varimathras's abilities, Warsong Gulch.
+
+[[boss]]
+key = "varimathras"
+
+[[boss.kit]]
+every = 8.0
+ability = { puddle = { spell = 5740, burst = 5740, radius = 6.0, warn = 3.0, factor = 2.2, lasts = 8.0, tick = 0.35 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { bomb = { spell = 20475, radius = 7.0, time = 5.0, warn = 1.8, factor = 15.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 10 }

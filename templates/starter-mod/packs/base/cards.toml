@@ -1,0 +1,187 @@
+# What the level-up hands and the jewelry offers are dealt with (`upgrades.rs`, `jewelry.rs`).
+# The code reads each list by place: every entry below, in this order.
+
+# The rarities, Common to Legendary (`rarity.0`-`rarity.4`). A card's rarity is rolled with the
+# weights `coef · x^power`, `x = 1 + luck + min(level/100, 0.3)` plus a hoard's bonus: AS's
+# 60 : 25x : 10x² : 4x³ : x⁴ (`FUN_145dbf930`, 17.3). `lines` are a known spell's rank card's
+# (`FUN_145d40430`); `jewel_gain` a ring's or trinket's pick times its base (17.2);
+# `bonus_scale` a `bonus.*` times its Common amount (`TUNE`); `passive_gain` a passive's rank card
+# (Call of Flame) times one step of the passive (`TUNE`, 2026-11-10: a rarer card was worth no more).
+[[rarity]]
+key = "common"
+name = { en = "Common", de = "Gewöhnlich", fr = "Commun", es = "Común", pt = "Comum", ru = "Обычный", pl = "Zwykły", tr = "Sıradan", it = "Comune", ja = "コモン", zh = "普通", ko = "일반" }
+# The item quality colour.
+color = "ffffff"
+weight = [60.0, 0]
+lines = 1
+jewel_gain = 1.0
+bonus_scale = 1.0
+passive_gain = 1.0
+
+[[rarity]]
+key = "uncommon"
+name = { en = "Uncommon", de = "Ungewöhnlich", fr = "Inhabituel", es = "Poco común", pt = "Incomum", ru = "Необычный", pl = "Niezwykły", tr = "Seçkin", it = "Non comune", ja = "アンコモン", zh = "优秀", ko = "고급" }
+# The item quality colour.
+color = "1eff00"
+weight = [25.0, 1]
+lines = 1
+jewel_gain = 1.4
+bonus_scale = 1.5
+passive_gain = 1.25
+
+[[rarity]]
+key = "rare"
+name = { en = "Rare", de = "Selten", fr = "Rare", es = "Raro", pt = "Raro", ru = "Редкий", pl = "Rzadki", tr = "Nadir", it = "Raro", ja = "レア", zh = "稀有", ko = "희귀" }
+# The item quality colour.
+color = "0070dd"
+weight = [10.0, 2]
+lines = 1
+jewel_gain = 1.8
+bonus_scale = 2.0
+passive_gain = 1.5
+
+[[rarity]]
+key = "epic"
+name = { en = "Epic", de = "Episch", fr = "Épique", es = "Épico", pt = "Épico", ru = "Эпический", pl = "Epicki", tr = "Epik", it = "Epico", ja = "エピック", zh = "史诗", ko = "영웅" }
+# The item quality colour.
+color = "a335ee"
+weight = [4.0, 3]
+lines = 1
+jewel_gain = 2.4
+bonus_scale = 3.0
+passive_gain = 2.0
+
+[[rarity]]
+key = "legendary"
+name = { en = "Legendary", de = "Legendär", fr = "Légendaire", es = "Legendario", pt = "Lendário", ru = "Легендарный", pl = "Legendarny", tr = "Efsanevi", it = "Leggendario", ja = "レジェンダリー", zh = "传说", ko = "전설" }
+# The item quality colour.
+color = "ff8000"
+weight = [1.0, 4]
+lines = 2
+jewel_gain = 3.2
+bonus_scale = 4.0
+passive_gain = 3.0
+
+# A rank card's lines at each rarity (`FUN_145bb59c0`, tables 0x14711259c-0x147112658), compounding
+# on what the spell has: damage +, cooldown −, targets +, area +, duration +. A new spell gets one
+# line a step below. `letter` is the line's on the `AZSCARDS` wire (`d12`).
+[[card_line]]
+key = "damage"
+letter = "d"
+amounts = [18, 25, 34, 46, 65]
+# What the card says, `%d` the amount.
+text = { en = "+%d%% damage", de = "+%d%% Schaden", fr = "+%d%% de dégâts", es = "+%d%% de daño", pt = "+%d%% de dano", ru = "+%d%% урона", pl = "Obrażenia +%d%%", tr = "+%d%% hasar", it = "+%d%% danni", ja = "ダメージ+%d%%", zh = "伤害+%d%%", ko = "피해 +%d%%" }
+
+[[card_line]]
+key = "cooldown"
+letter = "c"
+amounts = [7, 10, 13, 17, 23]
+# What the card says, `%d` the amount.
+text = { en = "-%d%% cooldown", de = "-%d%% Abklingzeit", fr = "-%d%% de recharge", es = "-%d%% de reutilización", pt = "-%d%% de recarga", ru = "-%d%% перезарядки", pl = "Odnowienie -%d%%", tr = "-%d%% bekleme", it = "-%d%% ricarica", ja = "クールダウン-%d%%", zh = "冷却时间-%d%%", ko = "재사용 대기시간 -%d%%" }
+
+[[card_line]]
+key = "targets"
+letter = "t"
+amounts = [1, 1, 1, 2, 2]
+# What the card says, `%d` the amount.
+text = { en = "+%d targets", de = "+%d Ziele", fr = "+%d cibles", es = "+%d objetivos", pt = "+%d alvos", ru = "+%d целей", pl = "Cele: +%d", tr = "+%d hedef", it = "+%d bersagli", ja = "対象+%d", zh = "目标+%d", ko = "대상 +%d" }
+
+[[card_line]]
+key = "area"
+letter = "a"
+amounts = [12, 18, 25, 35, 50]
+# What the card says, `%d` the amount.
+text = { en = "+%d%% area", de = "+%d%% Fläche", fr = "+%d%% de zone", es = "+%d%% de área", pt = "+%d%% de área", ru = "+%d%% области", pl = "Obszar +%d%%", tr = "+%d%% alan", it = "+%d%% area", ja = "範囲+%d%%", zh = "范围+%d%%", ko = "범위 +%d%%" }
+
+[[card_line]]
+key = "duration"
+letter = "u"
+amounts = [15, 22, 30, 40, 60]
+# What the card says, `%d` the amount.
+text = { en = "+%d%% duration", de = "+%d%% Dauer", fr = "+%d%% de durée", es = "+%d%% de duración", pt = "+%d%% de duração", ru = "+%d%% длительности", pl = "Czas trwania +%d%%", tr = "+%d%% süre", it = "+%d%% durata", ja = "持続時間+%d%%", zh = "持续时间+%d%%", ko = "지속시간 +%d%%" }
+
+# The kinds of card a hand draws from, three drawn by weight without putting back. A level-up
+# (`FUN_145d3b880`): a new spell 1.6 while fewer than three are known, then 0.9; a known spell's
+# next rank 1.3. A cache or hoard (17.3): a new piece 0.5, a worn one to grow 2.0, a new amulet
+# 2.5, the worn amulet's empowering 1.0.
+[[card]]
+key = "new_spell"
+hand = "spell"
+weight = 0.9
+early_weight = 1.6
+early_below = 3
+
+[[card]]
+key = "spell_rank"
+hand = "spell"
+weight = 1.3
+
+[[card]]
+key = "new_jewel"
+hand = "jewelry"
+weight = 0.5
+
+[[card]]
+key = "grow_jewel"
+hand = "jewelry"
+weight = 2.0
+
+[[card]]
+key = "amulet"
+hand = "jewelry"
+weight = 2.5
+
+[[card]]
+key = "empower"
+hand = "jewelry"
+weight = 1.0
+
+# AS's bonuses (`bonus.<key>`) at Common; a rarity scales them by its `bonus_scale`, an extra
+# target stays one, two at Legendary. `TUNE`
+[[bonus]]
+key = "damage"
+base = 6
+
+[[bonus]]
+key = "cooldown"
+base = 4
+
+[[bonus]]
+key = "hp"
+base = 25
+
+[[bonus]]
+key = "crit"
+base = 3
+
+[[bonus]]
+key = "crit_damage"
+base = 10
+
+[[bonus]]
+key = "speed"
+base = 4
+
+[[bonus]]
+key = "armor"
+base = 3
+
+[[bonus]]
+key = "regen"
+base = 1
+
+[[bonus]]
+key = "pickup"
+base = 15
+
+[[bonus]]
+key = "gold"
+base = 10
+
+[[bonus]]
+key = "area"
+base = 6
+
+[[bonus]]
+key = "count"
+base = 1

@@ -1,0 +1,25 @@
+# The Fel Reaver: the walking engine's stomp and charge, its fel rockets, its rush across the
+# field and the fel fire round it.
+
+[[boss]]
+key = "the_fel_reaver"
+
+[[boss.kit]]
+every = 10.0
+ability = { combo = [["charge", { stomp = { spell = 20549, radius = 10.0, warn = 1.8, knock = 14.0 } }], 0.6] }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 40633, count = 5, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.4 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { rush = { spell = 26561, len = 40.0, w = 6.0, warn = 1.8, factor = 2.6 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { ring = { spell = 30859, radius = 13.0, warn = 2.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

@@ -1,0 +1,16 @@
+# Slad'ran: Poison Nova, Venom Bolt, his snakes.
+
+[[boss]]
+key = "sladran"
+
+[[boss.kit]]
+every = 10.0
+ability = { nova = { spell = 55081, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 54970 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 6 }

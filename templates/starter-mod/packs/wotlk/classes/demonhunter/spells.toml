@@ -1,0 +1,407 @@
+# The demon hunter's pool; the first is the spell every run starts with. AS has no demon hunter:
+# every number is ours, scaled with the rogue's and the monk's spells. `TUNE`
+# Spell ids are patch-}'s own, 904001 on (tools/demonhunter-patch.js), each built on a row of the
+# Shadowsong client's demon hunter (its Demon's Bite, Chaos Strike, Eye Beam, Throw Glaive, Chaos
+# Nova, Metamorphosis) with the Legion icon and an effect of the source's `cfx_demonhunter_*`
+# models; 900000-903999 stay the monk's.
+#
+# Fury and soul fragments (`builds`/`spends`, the class's `resources`): Demon's Bite, Felblade and
+# Immolation Aura gather fury, Chaos Strike, Blade Dance and Eye Beam spend it; Shear and Fiery
+# Brand gather souls, Soul Cleave and Spirit Bomb spend them. A spender hits the harder (`more`)
+# for what it spends, but never waits for it: like every class's, each spell casts on its
+# cooldown. Spirit Bomb and Demon Spikes are dealt only with Vengeance's Soul Rending (`needs`).
+#
+# Schools: chaos as shadow, fel fire as fire.
+
+[[spell]]
+key = "demons_bite"
+id = 904018
+visual = 910213
+vfx = { source = 904018, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/cfx_demonhunter_chaosstrike_impact.m2", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 36
+cooldown = 0.9
+range = 6.0
+builds = { resource = "fury", n = 2 }
+name = { en = "Demon's Bite", de = "Dämonenbiss", fr = "Morsure du démon", es = "Mordedura de demonio", pt = "Mordida do Demônio", ru = "Укус демона", pl = "Ugryzienie demona", tr = "Şeytan Isırığı", it = "Morso del demone", ja = "デーモンズ・バイト", zh = "恶魔之咬", ko = "악마의 이빨" }
+icon = "INV_Weapon_Glave_01"
+
+[[spell]]
+key = "chaos_strike"
+id = 904019
+visual = 910214
+vfx = { source = 904019, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.55 } }
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 82
+cooldown = 1.6
+range = 6.0
+spends = { resource = "fury", n = 4, more = 0.6 }
+name = { en = "Chaos Strike", de = "Chaosstoß", fr = "Frappe du chaos", es = "Golpe del caos", pt = "Golpe do Caos", ru = "Удар хаоса", pl = "Cios chaosu", tr = "Kaos Darbesi", it = "Colpo del caos", ja = "カオス・ストライク", zh = "混乱打击", ko = "혼돈의 일격" }
+icon = "ability_demonhunter_chaosstrike"
+
+[[spell]]
+key = "blade_dance"
+id = 904001
+visual = 910215
+vfx = { source = 904001, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_chaosstrike_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 8.0 } }
+hit = 46
+cooldown = 4.0
+range = 8.0
+spends = { resource = "fury", n = 3, more = 0.5 }
+name = { en = "Blade Dance", de = "Klingentanz", fr = "Danse des lames", es = "Danza de espadas", pt = "Dança das Lâminas", ru = "Танец клинков", pl = "Taniec ostrzy", tr = "Bıçak Dansı", it = "Danza delle lame", ja = "ブレード・ダンス", zh = "刃舞", ko = "칼춤" }
+icon = "ability_demonhunter_bladedance"
+# After the first spin, three more looks play (patch-}'s 904026-904028, spins 445, 450, 443).
+steps = { looks = [904026, 904027, 904028], every = 0.35 }
+
+[[spell]]
+key = "eye_beam"
+id = 904020
+visual = 910216
+vfx = { source = 904020, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { cone = { length = 20.0 } }
+hit = 72
+cooldown = 8.0
+range = 20.0
+spends = { resource = "fury", n = 3, more = 0.6 }
+name = { en = "Eye Beam", de = "Augenstrahl", fr = "Rayon oculaire", es = "Rayo ocular", pt = "Raio Ocular", ru = "Луч глаз", pl = "Promień oka", tr = "Göz Işını", it = "Raggio oculare", ja = "アイ・ビーム", zh = "眼棱", ko = "안광" }
+icon = "ability_demonhunter_eyebeam"
+# As Legion's Demonic: the hero turns into the demon for a moment while the beam burns.
+form = { id = 22, display = 98955, female = 98956, secs = 2.0 }
+
+[[spell]]
+key = "fel_rush"
+id = 904002
+visual = 910217
+vfx = { source = 904002, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+# Ours: the rush as a line of fel fire ahead, aimed at the nearest.
+shape = { cone = { length = 14.0 } }
+hit = 54
+cooldown = 6.0
+range = 14.0
+name = { en = "Fel Rush", de = "Teufelsansturm", fr = "Ruée gangrenée", es = "Embestida vil", pt = "Investida Vil", ru = "Рывок Скверны", pl = "Pęd Zła", tr = "Fel Atılışı", it = "Carica vile", ja = "フェル・ラッシュ", zh = "邪能冲撞", ko = "지옥 돌진" }
+icon = "ability_demonhunter_felrush"
+
+[[spell]]
+key = "throw_glaive"
+id = 904021
+visual = 910218
+vfx = { source = 904021, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_chaosstrike_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { chain = { jumps = 3, radius = 10.0 } }
+hit = 50
+cooldown = 4.0
+range = 25.0
+name = { en = "Throw Glaive", de = "Gleve werfen", fr = "Lancer de glaive", es = "Lanzar guja", pt = "Arremessar Glaive", ru = "Бросок глефы", pl = "Rzut glewią", tr = "Glaive Fırlat", it = "Lancio del glaive", ja = "スロー・グレイヴ", zh = "投掷利刃", ko = "전투검 투척" }
+icon = "ability_demonhunter_throwglaive"
+
+[[spell]]
+key = "immolation_aura"
+id = 904003
+visual = 910219
+vfx = { source = 904003, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 }, area = { model = "Spells/cfx_demonhunter_immolationaura_statewaist.m2", slot = "base", scale = 0.55 } }
+school = "fire"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 6.0 } }
+hit = 15
+cooldown = 12.0
+range = 0.0
+builds = { resource = "fury", n = 3 }
+name = { en = "Immolation Aura", de = "Feuerbrandaura", fr = "Aura d'immolation", es = "Aura de inmolación", pt = "Aura de Imolação", ru = "Аура самопожертвования", pl = "Aura immolacji", tr = "Yakma Auraı", it = "Aura d'immolazione", ja = "イモレーション・オーラ", zh = "献祭光环", ko = "제물의 오라" }
+icon = "ability_demonhunter_immolation"
+
+[[spell]]
+key = "felblade"
+id = 904004
+visual = 910220
+vfx = { source = 904004, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { strike = { targets = 1 } }
+hit = 62
+cooldown = 7.0
+range = 15.0
+builds = { resource = "fury", n = 3 }
+name = { en = "Felblade", de = "Teufelsklinge", fr = "Lame gangrenée", es = "Hoja vil", pt = "Lâmina Vil", ru = "Клинок Скверны", pl = "Ostrze Zła", tr = "Fel Bıçağı", it = "Lama vile", ja = "フェルブレード", zh = "邪能之刃", ko = "지옥칼날" }
+icon = "ability_demonhunter_felblade"
+
+[[spell]]
+key = "chaos_nova"
+id = 904022
+visual = 910221
+vfx = { source = 904022, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { nova = { radius = 8.0 } }
+hit = 30
+cooldown = 18.0
+range = 8.0
+rider = { stun = { secs = 2.0 } }
+name = { en = "Chaos Nova", de = "Chaosnova", fr = "Nova du chaos", es = "Nova del caos", pt = "Nova do Caos", ru = "Кольцо хаоса", pl = "Nova chaosu", tr = "Kaos Nova", it = "Nova del caos", ja = "カオス・ノヴァ", zh = "混乱新星", ko = "혼돈의 회오리" }
+icon = "ability_demonhunter_chaosnova"
+
+[[spell]]
+key = "dh_metamorphosis"
+id = 904023
+visual = 910222
+vfx = { source = 904023, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "shadow"
+# The demon within for 12 sec: all damage up, and the hero shows as Legion's Havoc demon while it
+# lasts (the Shadowsong client's `Creature\DHMaleDPS` and `dhfemaledps` models, its displays
+# 32755/32782 as patch-}'s 98955/98956, in 3.3.5a's Metamorphosis form id).
+shape = { fury = { pct = 30, secs = 12.0 } }
+hit = 0
+cooldown = 50.0
+range = 30.0
+form = { id = 22, display = 98955, female = 98956 }
+name = { en = "Metamorphosis", de = "Metamorphose", fr = "Métamorphose", es = "Metamorfosis", pt = "Metamorfose", ru = "Метаморфоза", pl = "Metamorfoza", tr = "Başkalaşım", it = "Metamorfosi", ja = "メタモルフォーシス", zh = "恶魔变形", ko = "탈태" }
+icon = "ability_demonhunter_metamorphasisdps"
+
+[[spell]]
+key = "spectral_sight"
+id = 904005
+visual = 910223
+# Its own effect fills the impact kit's chest slot, so there is no impact accent; the stock cast kit is empty.
+vfx = { source = 904005, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.4 } }
+school = "shadow"
+# Ours: Spectral Sight finds the toughest foe; it takes more and bursts as it dies (the hunter's
+# Mark mechanic).
+shape = { proc = { kind = "mark", radius = 10.0 } }
+hit = 200
+cooldown = 1.5
+range = 40.0
+name = { en = "Spectral Sight", de = "Geistersicht", fr = "Vision spectrale", es = "Visión espectral", pt = "Visão Espectral", ru = "Призрачное зрение", pl = "Widmowy wzrok", tr = "Hayalet Görüş", it = "Vista spettrale", ja = "スペクトラル・サイト", zh = "灵魂视界", ko = "영혼 시야" }
+icon = "ability_demonhunter_spectralsight"
+
+[[spell]]
+key = "the_hunt"
+id = 904017
+visual = 910224
+vfx = { source = 904017, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "shadow"
+# The Hunt: the demon hunter falls on the toughest foe in reach (bosses and guardians first, then
+# the most wounded) for a great blow and holds it fast. Ours, after Shadowlands' The Hunt. `TUNE`
+shape = { execute = { targets = 1 } }
+hit = 260
+cooldown = 25.0
+range = 35.0
+rider = { root = { secs = 2.0 } }
+name = { en = "The Hunt", de = "Die Jagd", fr = "La Chasse", es = "La Caza", pt = "A Caçada", ru = "Охота", pl = "Polowanie", tr = "Av", it = "La Caccia", ja = "ザ・ハント", zh = "恶魔追击", ko = "사냥" }
+icon = "inv_ability_demonhunter_thehunt"
+
+[[spell]]
+key = "vengeful_retreat"
+id = 904006
+visual = 910225
+vfx = { source = 904006, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_chaosstrike_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 6.0 } }
+hit = 28
+cooldown = 10.0
+range = 6.0
+rider = { slow = { pct = 50, secs = 3.0 } }
+name = { en = "Vengeful Retreat", de = "Rachsüchtiger Rückzug", fr = "Retraite vengeresse", es = "Retirada vengativa", pt = "Retirada Vingativa", ru = "Мстительное отступление", pl = "Mściwy odwrót", tr = "İntikamcı Geri Çekilme", it = "Ritirata vendicativa", ja = "ヴェンジフル・リトリート", zh = "复仇回避", ko = "복수의 퇴각" }
+icon = "ability_demonhunter_vengefulretreat2"
+
+[[spell]]
+key = "blur"
+id = 904007
+visual = 910226
+vfx = { source = 904007, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_chaosstrike_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { immune = { secs = 3.0 } }
+hit = 0
+cooldown = 40.0
+range = 0.0
+name = { en = "Blur", de = "Verschwimmen", fr = "Flou", es = "Difuminar", pt = "Borrão", ru = "Размытие", pl = "Rozmycie", tr = "Bulanıklık", it = "Sfocatura", ja = "ブラー", zh = "疾影", ko = "흐릿함" }
+icon = "ability_demonhunter_blur"
+
+[[spell]]
+key = "darkness"
+id = 904008
+visual = 910227
+vfx = { source = 904008, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { shield = { share = 25 } }
+hit = 0
+cooldown = 20.0
+range = 0.0
+name = { en = "Darkness", de = "Dunkelheit", fr = "Ténèbres", es = "Oscuridad", pt = "Escuridão", ru = "Мрак", pl = "Ciemność", tr = "Karanlık", it = "Oscurità", ja = "ダークネス", zh = "黑暗", ko = "어둠" }
+icon = "ability_demonhunter_darkness"
+
+[[spell]]
+key = "shear"
+id = 904009
+visual = 910228
+vfx = { source = 904009, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/cfx_demonhunter_chaosstrike_impact.m2", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 40
+cooldown = 1.3
+range = 6.0
+builds = { resource = "soul", n = 1 }
+name = { en = "Shear", de = "Abscheren", fr = "Tonte", es = "Esquilar", pt = "Tosquiar", ru = "Срез", pl = "Ścięcie", tr = "Kes", it = "Cesoiata", ja = "シアー", zh = "裂魂", ko = "베어내기" }
+icon = "ability_demonhunter_hatefulstrike"
+
+[[spell]]
+key = "soul_cleave"
+id = 904010
+visual = 910229
+vfx = { source = 904010, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { cone = { length = 8.0 } }
+hit = 70
+cooldown = 3.0
+range = 8.0
+rider = { mend = { pct = 1 } }
+spends = { resource = "soul", n = 2, more = 0.6 }
+name = { en = "Soul Cleave", de = "Seelenspalter", fr = "Fendre l'âme", es = "Hendedura de alma", pt = "Fender Alma", ru = "Раскол души", pl = "Rozłupanie duszy", tr = "Ruh Yarması", it = "Fendente d'anima", ja = "ソウル・クリーヴ", zh = "灵魂裂劈", ko = "영혼 베어내기" }
+icon = "ability_demonhunter_soulcleave"
+
+[[spell]]
+key = "spirit_bomb"
+id = 904011
+visual = 910230
+vfx = { source = 904011, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { nova = { radius = 8.0 } }
+hit = 82
+cooldown = 8.0
+range = 8.0
+spends = { resource = "soul", n = 3, more = 1.0 }
+needs = "vg_soul_rending"
+name = { en = "Spirit Bomb", de = "Geistbombe", fr = "Bombe spirituelle", es = "Bomba espiritual", pt = "Bomba Espiritual", ru = "Бомба духа", pl = "Bomba duchowa", tr = "Ruh Bombası", it = "Bomba spirituale", ja = "スピリット・ボム", zh = "幽魂炸弹", ko = "영혼 폭탄" }
+icon = "inv_icon_shadowcouncilorb_purple"
+
+[[spell]]
+key = "sigil_of_flame"
+id = 904012
+visual = 910231
+vfx = { source = 904012, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 }, area = { model = "Spells/cfx_demonhunter_sigilofflame_castworld.m2", slot = "base", scale = 0.55 } }
+school = "fire"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 6.0 } }
+hit = 18
+cooldown = 10.0
+range = 25.0
+name = { en = "Sigil of Flame", de = "Siegel der Flamme", fr = "Sceau de flamme", es = "Sigilo de llama", pt = "Sigilo de Chamas", ru = "Печать пламени", pl = "Symbol płomienia", tr = "Alev Sembolü", it = "Sigillo di fiamma", ja = "シジル・オブ・フレイム", zh = "烈焰咒符", ko = "불꽃의 인장" }
+icon = "ability_demonhunter_sigilofinquisition"
+
+[[spell]]
+key = "sigil_of_misery"
+id = 904013
+visual = 910232
+vfx = { source = 904013, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 }, area = { model = "Spells/cfx_demonhunter_sigilofmisery_castworld.m2", slot = "base", scale = 0.55 } }
+school = "shadow"
+shape = { ground = { radius = 8.0, every = 2.0, secs = 4.0 } }
+hit = 6
+cooldown = 20.0
+range = 25.0
+rider = { flee = { secs = 3.0 } }
+name = { en = "Sigil of Misery", de = "Siegel des Elends", fr = "Sceau de misère", es = "Sigilo de miseria", pt = "Sigilo da Miséria", ru = "Печать страдания", pl = "Symbol nędzy", tr = "Sefalet Sembolü", it = "Sigillo di miseria", ja = "シジル・オブ・ミザリー", zh = "悲苦咒符", ko = "불행의 인장" }
+icon = "ability_demonhunter_sigilofmisery"
+
+[[spell]]
+key = "fiery_brand"
+id = 904014
+visual = 910233
+vfx = { source = 904014, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { dot = { targets = 1, secs = 8.0, ticks = 4, cap = 1 } }
+hit = 120
+cooldown = 12.0
+range = 20.0
+rider = { weaken = { pct = 20, secs = 8.0 } }
+builds = { resource = "soul", n = 2 }
+name = { en = "Fiery Brand", de = "Flammendes Brandmal", fr = "Marque de feu", es = "Marca ígnea", pt = "Marca Ígnea", ru = "Огненное клеймо", pl = "Ogniste piętno", tr = "Ateşli Damga", it = "Marchio infuocato", ja = "フィアリー・ブランド", zh = "烈火烙印", ko = "불타는 낙인" }
+icon = "ability_demonhunter_fierybrand"
+
+[[spell]]
+key = "demon_spikes"
+id = 904015
+visual = 910234
+vfx = { source = 904015, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_chaosstrike_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { shield = { share = 15 } }
+hit = 0
+cooldown = 10.0
+range = 0.0
+needs = "vg_soul_rending"
+name = { en = "Demon Spikes", de = "Dämonenstachel", fr = "Pointes démoniaques", es = "Púas de demonio", pt = "Espetos Demoníacos", ru = "Демонические шипы", pl = "Demoniczne kolce", tr = "Şeytan Dikenleri", it = "Aculei demoniaci", ja = "デーモン・スパイク", zh = "恶魔尖刺", ko = "악마 쐐기" }
+icon = "ability_demonhunter_demonspikes"
+
+[[spell]]
+key = "fel_devastation"
+id = 904016
+visual = 910235
+vfx = { source = 904016, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/cfx_demonhunter_shatteredsouls_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { cone = { length = 15.0 } }
+hit = 92
+cooldown = 15.0
+range = 15.0
+rider = { mend = { pct = 2 } }
+name = { en = "Fel Devastation", de = "Teufelsverwüstung", fr = "Dévastation gangrenée", es = "Devastación vil", pt = "Devastação Vil", ru = "Опустошение Скверны", pl = "Spustoszenie Zła", tr = "Fel Yıkımı", it = "Devastazione vile", ja = "フェル・デヴァステーション", zh = "邪能毁灭", ko = "지옥 황폐" }
+icon = "ability_demonhunter_feldevastation"
+
+[[spell]]
+key = "consume"
+id = 904029
+visual = 910236
+vfx = { source = 904029, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 46
+cooldown = 1.5
+range = 25.0
+builds = { resource = "soul", n = 1 }
+needs = "dev_soul_harvest"
+name = { en = "Consume", de = "Verzehren", fr = "Dévorer", es = "Consumir", pt = "Consumir", ru = "Поглощение", it = "Consunzione", pl = "Pożarcie", tr = "Tüket", ja = "コンシューム", zh = "吞噬", ko = "집어삼키기" }
+icon = "inv_12_dh_void_ability_consume"
+
+[[spell]]
+key = "void_ray"
+id = 904030
+visual = 910237
+vfx = { source = 904030, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { cone = { length = 25.0 } }
+hit = 76
+cooldown = 6.0
+range = 25.0
+# Let the client play the beam through its Hold sequence.
+aura = 1.4
+needs = "dev_soul_harvest"
+name = { en = "Void Ray", de = "Leerenstrahl", fr = "Rayon du Vide", es = "Rayo del Vacío", pt = "Raio do Vazio", ru = "Луч Бездны", it = "Raggio del Vuoto", pl = "Promień Pustki", tr = "Hiçlik Işını", ja = "ヴォイド・レイ", zh = "虚空射线", ko = "공허 광선" }
+icon = "inv_12_dh_void_ability_voidray"
+
+[[spell]]
+key = "collapsing_star"
+id = 904031
+visual = 910238
+vfx = { source = 904031, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 }, area = { model = "Spells/Shadow_Fissure_Base.mdx", slot = "base", scale = 0.55 } }
+school = "shadow"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 0.5 } }
+hit = 90
+cooldown = 8.0
+range = 25.0
+spends = { resource = "soul", n = 4, more = 1.0 }
+needs = "dev_soul_harvest"
+name = { en = "Collapsing Star", de = "Kollabierender Stern", fr = "Étoile en effondrement", es = "Estrella colapsante", pt = "Estrela em Colapso", ru = "Коллапс звезды", it = "Stella Collassante", pl = "Zapadająca się Gwiazda", tr = "Çöken Yıldız", ja = "コラプシング・スター", zh = "坍缩之星", ko = "붕괴하는 별" }
+icon = "inv_12_dh_void_ability_collapsingstar"
+
+[[spell]]
+key = "void_metamorphosis"
+id = 904032
+visual = 910239
+vfx = { source = 904032, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { fury = { pct = 30, secs = 10.0 } }
+hit = 0
+cooldown = 32.0
+range = 25.0
+form = { id = 22, display = 98957, female = 98958 }
+needs = "dev_void_metamorphosis"
+name = { en = "Void Metamorphosis", de = "Leerenmetamorphose", fr = "Métamorphose du Vide", es = "Metamorfosis del Vacío", pt = "Metamorfose do Vazio", ru = "Метаморфоза Бездны", it = "Metamorfosi del Vuoto", pl = "Metamorfoza Pustki", tr = "Hiçlik Başkalaşımı", ja = "ヴォイド・メタモルフォーシス", zh = "虚空恶魔变形", ko = "공허 탈태" }
+icon = "inv_112_ability_demonhunter_metamorphasisvoid"

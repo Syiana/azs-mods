@@ -1,0 +1,294 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "karazhan"
+order = 18
+name = { en = "Karazhan", de = "Karazhan", fr = "Karazhan", es = "Karazhan", pt = "Karazhan", ru = "Каражан", pl = "Karazhan", tr = "Karazhan", it = "Karazhan", ja = "カラザン", zh = "卡拉赞", ko = "카라잔" }
+subtitle = { en = "Medivh's Tower", de = "Medivhs Turm", fr = "La tour de Medivh", es = "La Torre de Medivh", pt = "A Torre de Medivh", ru = "Башня Медива", pl = "Wieża Medivha", tr = "Medivh'in Kulesi", it = "La Torre di Medivh", ja = "メディヴの塔", zh = "麦迪文之塔", ko = "메디브의 탑" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_DeadwindPass"
+map = 0
+map_name = "Azeroth"
+area = 3457
+center = [-10683.3, -1183.3]
+radius = 100.0
+# Duskwood's sheet (WorldMapArea 32): the centre stands over Darkshire's ground chunk, so that is the
+# map the client reads the hero's position against, not Deadwind Pass's.
+map_bounds = [833.3333, -1866.6666, -9716.666, -11516.666]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 9.64
+gold_factor = 2.98
+late_factor = 0.4
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+weather = { fine = 75, rain = 25 }
+
+[[zone.enemy]]
+entry = 3600
+name = { en = "Spectral Servant", de = "Spektraler Diener", fr = "Serviteur spectral", es = "Sirviente espectral", pt = "Servo Espectral", ru = "Призрачный слуга", pl = "Widmowy sługa", tr = "Hayalet Hizmetkar", it = "Servitore spettrale", ja = "スペクトラル・サーヴァント", zh = "幽灵仆从", ko = "유령 하인" }
+type = "undead"
+display = 146
+icon = "Achievement_Halloween_Ghost_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 3601
+name = { en = "Mana Feeder", de = "Manasauger", fr = "Mangeur de mana", es = "Devoramaná", pt = "Devorador de Mana", ru = "Пожиратель маны", pl = "Pożeracz many", tr = "Mana Besleyici", it = "Divoratore di mana", ja = "マナ・フィーダー", zh = "法力吸食者", ko = "마나 포식자" }
+type = "beast"
+display = 15501
+icon = "Ability_Hunter_Pet_Moth"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.6
+
+[[zone.enemy]]
+entry = 3602
+name = { en = "Ghostly Steward", de = "Geisterhafter Verwalter", fr = "Intendant fantomatique", es = "Mayordomo fantasmal", pt = "Mordomo Fantasmagórico", ru = "Призрачный управляющий", pl = "Upiorny rządca", tr = "Hayalet Kâhya", it = "Maggiordomo fantasma", ja = "幽霊の執事", zh = "鬼魅管家", ko = "유령 집사" }
+type = "undead"
+display = 10771
+icon = "Achievement_Halloween_Ghost_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 3603
+name = { en = "Ethereal Spellfilcher", de = "Astraler Zauberdieb", fr = "Chapardeur de sorts éthérien", es = "Roahechizos etéreo", pt = "Furta-feitiços Etéreo", ru = "Эфириал-похититель чар", pl = "Eteryczny złodziej czarów", tr = "Ruhani Büyü Hırsızı", it = "Ruba-incantesimi etereo", ja = "エセリアルの呪文泥棒", zh = "虚灵法术窃贼", ko = "에테리얼 주문도둑" }
+type = "humanoid"
+display = 19657
+icon = "Spell_Arcane_Arcane04"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.75
+role = { ranged = { spell = 13748, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3604
+name = { en = "Arcane Anomaly", de = "Arkane Anomalie", fr = "Anomalie arcanique", es = "Anomalía arcana", pt = "Anomalia Arcana", ru = "Тайная аномалия", pl = "Anomalia magiczna", tr = "Gizem Anomalisi", it = "Anomalia arcana", ja = "アーケイン・アノマリー", zh = "奥术畸体", ko = "비전 변칙체" }
+type = "elemental"
+display = 14252
+icon = "Spell_Arcane_Arcane01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+role = { exploder = { spell = 9874, burst = 568, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 3605
+name = { en = "Arcane Protector", de = "Arkaner Beschützer", fr = "Protecteur arcanique", es = "Protector arcano", pt = "Protetor Arcano", ru = "Тайный защитник", pl = "Magiczny protektor", tr = "Gizem Koruyucusu", it = "Protettore arcano", ja = "アーケイン・プロテクター", zh = "奥术保护者", ko = "비전 수호자" }
+type = "mechanical"
+display = 16350
+icon = "Ability_GolemStormBolt"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.9
+
+[[zone.enemy]]
+entry = 3606
+name = { en = "Shadowbat", de = "Schattenfledermaus", fr = "Chauve-souris des ombres", es = "Murciélago de las sombras", pt = "Morcego Sombrio", ru = "Тенекрыл", pl = "Cienisty nietoperz", tr = "Gölge Yarasası", it = "Pipistrello d'ombra", ja = "シャドウバット", zh = "暗影蝙蝠", ko = "그림자 박쥐" }
+type = "beast"
+display = 1954
+icon = "Ability_Hunter_Pet_Bat"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 1.4
+
+[[zone.enemy]]
+entry = 3607
+name = { en = "Phantom Guest", de = "Phantomgast", fr = "Invité fantôme", es = "Invitado fantasma", pt = "Convidado Fantasma", ru = "Призрачный гость", pl = "Widmowy gość", tr = "Hayalet Misafir", it = "Ospite fantasma", ja = "幻影の客", zh = "幽灵宾客", ko = "유령 손님" }
+type = "undead"
+display = 915
+icon = "Achievement_Halloween_Ghost_01"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+
+[[zone.enemy]]
+entry = 3608
+name = { en = "Coldmist Widow", de = "Kaltnebelwitwe", fr = "Veuve brume-glacée", es = "Viuda Brumafría", pt = "Viúva Névoa Fria", ru = "Вдова Холодного Тумана", pl = "Wdowa z Coldmist", tr = "Soğuksis Dulu", it = "Vedova Nebbiafredda", ja = "コールドミスト・ウィドウ", zh = "冷雾寡妇蛛", ko = "차가운 안개 과부거미" }
+type = "beast"
+display = 18043
+icon = "Ability_Hunter_Pet_Spider"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.6
+
+[[zone.elite]]
+entry = 3610
+name = { en = "Phase Hound", de = "Phasenhund", fr = "Chien de phase", es = "Sabueso de fase", pt = "Cão de Fase", ru = "Фазовая гончая", pl = "Ogar fazowy", tr = "Faz Tazısı", it = "Segugio di fase", ja = "フェイズ・ハウンド", zh = "相位猎犬", ko = "위상 사냥개" }
+type = "demon"
+display = 18644
+icon = "Spell_Shadow_SummonFelHunter"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 2.6
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 3611
+name = { en = "Arcane Watchman", de = "Arkaner Wächter", fr = "Guetteur arcanique", es = "Vigía arcano", pt = "Vigia Arcano", ru = "Тайный сторож", pl = "Magiczny strażnik", tr = "Gizem Bekçisi", it = "Guardiano arcano", ja = "アーケイン・ウォッチマン", zh = "奥术守望者", ko = "비전 감시자" }
+type = "mechanical"
+display = 17972
+icon = "Ability_GolemStormBolt"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.5
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 1449, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 6.0 } }, { nova = { spell = 1449, radius = 6.0, warn = 1.4 } }], 0.6] }
+
+[[zone.elite]]
+entry = 3612
+name = { en = "Spectral Retainer", de = "Spektraler Gefolgsmann", fr = "Domestique spectral", es = "Criado espectral", pt = "Criado Espectral", ru = "Призрачный слуга-вассал", pl = "Widmowy lokaj", tr = "Hayalet Uşak", it = "Domestico spettrale", ja = "スペクトラル・リテイナー", zh = "幽灵家臣", ko = "유령 시종" }
+type = "undead"
+display = 10701
+icon = "Achievement_Halloween_Ghost_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.6
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.boss]]
+entry = 3690
+name = { en = "Attumen the Huntsman", de = "Attumen der Jäger", fr = "Attumen le Veneur", es = "Attumen el Montero", pt = "Attumen, o Caçador", ru = "Аттумен Охотник", pl = "Attumen Łowczy", tr = "Avcıbaşı Attumen", it = "Attumen il Cacciatore", ja = "狩人アトゥーメン", zh = "猎手阿图门", ko = "사냥꾼 어튜멘" }
+type = "undead"
+display = 6380
+icon = "INV_Misc_Head_Undead_01"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.4
+minute = 4
+yell = { en = "Cowards! Wretches!", de = "Feiglinge! Elende!", fr = "Lâches ! Misérables !", es = "¡Cobardes! ¡Miserables!", pt = "Covardes! Miseráveis!", ru = "Трусы! Негодяи!", pl = "Tchórze! Nędznicy!", tr = "Korkaklar! Sefiller!", it = "Codardi! Miserabili!", ja = "臆病者め！卑劣漢め！", zh = "懦夫！可怜虫！", ko = "겁쟁이들! 비열한 놈들!" }
+kit = "attumen_the_huntsman"
+
+[[zone.boss]]
+entry = 3691
+name = { en = "Maiden of Virtue", de = "Tugendhafte Maid", fr = "Damoiselle de vertu", es = "Doncella de Virtud", pt = "Donzela da Virtude", ru = "Дева Добродетели", pl = "Dziewica Cnoty", tr = "Erdem Bakiresi", it = "Vergine della Virtù", ja = "美徳の乙女", zh = "贞节圣女", ko = "고결의 여신" }
+type = "giant"
+display = 140
+icon = "INV_Misc_Head_Human_02"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.2
+minute = 8
+yell = { en = "Your behavior will not be tolerated.", de = "Euer Benehmen wird nicht geduldet.", fr = "Votre comportement ne sera pas toléré.", es = "Vuestro comportamiento no será tolerado.", pt = "Seu comportamento não será tolerado.", ru = "Ваше поведение недопустимо.", pl = "Wasze zachowanie nie będzie tolerowane.", tr = "Davranışınıza müsamaha gösterilmeyecek.", it = "Il vostro comportamento non sarà tollerato.", ja = "そのような振る舞いは許されません。", zh = "你的行为不可容忍。", ko = "그런 행동은 용납되지 않습니다." }
+kit = "maiden_of_virtue"
+
+[[zone.boss]]
+entry = 3692
+name = { en = "the Curator", de = "der Kurator", fr = "le Conservateur", es = "el Conservador", pt = "o Curador", ru = "Куратор", pl = "Kurator", tr = "Küratör", it = "il Curatore", ja = "キュレーター", zh = "馆长", ko = "전시 관리인" }
+type = "mechanical"
+display = 16958
+icon = "Ability_GolemStormBolt"
+health = 21000
+damage = 46
+speed = 5.0
+size = 0.7
+minute = 12
+yell = { en = "The menagerie is for guests only.", de = "Die Menagerie ist nur für Gäste.", fr = "La ménagerie est réservée aux invités.", es = "La casa de fieras es solo para invitados.", pt = "O zoológico é só para convidados.", ru = "Зверинец только для гостей.", pl = "Menażeria jest tylko dla gości.", tr = "Hayvanat bahçesi yalnızca misafirler içindir.", it = "La menagerie è riservata agli ospiti.", ja = "動物園はお客様専用です。", zh = "动物园只对宾客开放。", ko = "동물원은 손님 전용입니다." }
+kit = "the_curator"
+
+[[zone.boss]]
+entry = 3693
+name = { en = "Nightbane", de = "Schrecken der Nacht", fr = "Plaie-de-nuit", es = "Perdición de la noche", pt = "Flagelo da Noite", ru = "Ночная Погибель", pl = "Nightbane", tr = "Gecebelası", it = "Nightbane", ja = "ナイトベイン", zh = "夜之魇", ko = "파멸의 어둠" }
+type = "dragonkin"
+display = 23739
+icon = "INV_Misc_Head_Dragon_Black"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.6
+minute = 16
+yell = { en = "Miserable vermin. I shall exterminate you from the air!", de = "Elendes Ungeziefer. Ich werde euch aus der Luft vernichten!", fr = "Misérable vermine. Je vous exterminerai depuis les airs !", es = "Miserable alimaña. ¡Os exterminaré desde el aire!", pt = "Vermes miseráveis. Vou exterminá-los do ar!", ru = "Жалкая мразь. Я истреблю вас с воздуха!", pl = "Nędzne robactwo. Wytępię was z powietrza!", tr = "Sefil haşereler. Sizi havadan yok edeceğim!", it = "Miserabili parassiti. Vi sterminerò dall'aria!", ja = "惨めな害虫どもめ。空から根絶やしにしてくれる！", zh = "可悲的害虫。我要从空中消灭你们！", ko = "하찮은 벌레들. 하늘에서 너희를 박멸해 주마!" }
+kit = "nightbane"
+
+[[zone.boss]]
+entry = 2007
+name = { en = "Prince Malchezaar", de = "Prinz Malchezaar", fr = "Prince Malchezaar", es = "Príncipe Malchezaar", pt = "Príncipe Malchezaar", ru = "Принц Малчезар", pl = "Książę Malchezaar", tr = "Prens Malchezaar", it = "Principe Malchezaar", ja = "マルチェザール王子", zh = "玛克扎尔王子", ko = "공작 말체자르" }
+type = "demon"
+display = 19274
+icon = "Achievement_Boss_Prince_Malchezaar"
+health = 60000
+damage = 66
+speed = 6.0
+size = 0.9
+minute = 20
+yell = { en = "Madness has brought you here to me.", de = "Der Wahnsinn hat euch zu mir geführt.", fr = "La folie vous a menés jusqu'à moi.", es = "La locura os ha traído hasta mí.", pt = "A loucura trouxe vocês até mim.", ru = "Безумие привело вас ко мне.", pl = "Szaleństwo przywiodło was do mnie.", tr = "Çılgınlık sizi buraya, bana getirdi.", it = "La follia vi ha condotto da me.", ja = "狂気が貴様らを我がもとへ導いたのだ。", zh = "是疯狂把你们带到了我面前。", ko = "광기가 너희를 내게 이끌었구나." }
+final = true
+kit = "prince_malchezaar"

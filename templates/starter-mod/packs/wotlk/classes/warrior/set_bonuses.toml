@@ -1,0 +1,14 @@
+# The warrior's 8-piece set bonuses: one change to one of its spells per tier (docs/HOWTO-CONTENT.md "A set bonus").
+
+# The warrior's Mythic 8-piece: its PvP bonus (expose 20% for 4 s) a step up on the same spell (docs/PLAN-SET-BONUSES.md section 5). The numbers are ours: TUNE.
+[[set_bonus]]
+key = "warrior_mythic_8"
+tier = "mythic"
+pieces = 8
+text = { en = "Enemies hit by Mortal Strike take {v}% more damage from everything for 6 sec.", de = "Von Tödlicher Stoß getroffene Feinde erleiden 6 Sek. lang {v}% mehr Schaden aus jeder Quelle.", fr = "Les ennemis touchés par Frappe mortelle subissent {v}% de dégâts en plus de toutes sources pendant 6 s.", es = "Los enemigos alcanzados por Golpe mortal reciben un {v}% más de daño de todo durante 6 s.", pt = "Inimigos atingidos por Golpe Mortal sofrem {v}% a mais de dano de tudo por 6 s.", ru = "Враги, задетые «Смертельным ударом», получают на {v}% больше урона от всего в течение 6 сек.", pl = "Wrogowie trafieni Śmiertelnym Ciosem otrzymują przez 6 s o {v}% więcej obrażeń ze wszystkich źródeł.", tr = "Mortal Strike ile vurulan düşmanlar 6 sn boyunca her şeyden %{v} daha fazla hasar alır.", it = "I nemici colpiti da Colpo mortale subiscono il {v}% di danni in più da tutto per 6 sec.", ja = "モータル・ストライクを受けた敵は、6秒間あらゆるダメージを{v}%多く受けます。", zh = "被致死打击击中的敌人受到的所有伤害提高{v}%，持续6秒。", ko = "필사의 일격에 맞은 적은 6초 동안 모든 피해를 {v}% 더 받습니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.3, play = { expose = { keys = ["mortal_strike"], secs = 6.0 } } }]
+shows = "v"
+percent = true
+

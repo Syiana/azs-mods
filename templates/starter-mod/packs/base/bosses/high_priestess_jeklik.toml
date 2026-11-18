@@ -1,0 +1,21 @@
+# High Priestess Jeklik's abilities, Gurubashi Arena.
+
+[[boss]]
+key = "high_priestess_jeklik"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 133 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { puddle = { spell = 2120, burst = 5740, radius = 5.0, warn = 2.5, factor = 2.0, lasts = 6.0, tick = 0.3 } }
+
+# AS's tag 29 (wards) not in: every 15 s.
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 23918, radius = 9.0, warn = 1.6 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

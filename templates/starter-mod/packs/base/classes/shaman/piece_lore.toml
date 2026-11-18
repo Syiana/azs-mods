@@ -1,0 +1,43 @@
+# The shaman's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "shaman_0"
+profile = 0
+text = { en = "The fury of the storm, bound in its runes.", de = "Die Wut des Sturms, gebunden in seinen Runen.", fr = "La fureur de l'orage, liée dans ses runes.", es = "La furia de la tormenta, atada en sus runas.", pt = "A fúria da tempestade, presa em suas runas.", ru = "Ярость бури, заключённая в рунах.", pl = "Furia burzy zamknięta w jego runach.", tr = "Fırtınanın öfkesi, rünlerine bağlanmış.", it = "La furia della tempesta, vincolata nelle sue rune.", ja = "嵐の怒りがそのルーンに封じられている。", zh = "风暴之怒，封印于其符文之中。", ko = "폭풍의 분노가 그 룬에 묶여 있다." }
+
+[[piece_lore]]
+key = "shaman_1"
+profile = 1
+text = { en = "Blessed by the spirits of the earth.", de = "Gesegnet von den Geistern der Erde.", fr = "Béni par les esprits de la terre.", es = "Bendecido por los espíritus de la tierra.", pt = "Abençoado pelos espíritos da terra.", ru = "Благословлено духами земли.", pl = "Pobłogosławione przez duchy ziemi.", tr = "Toprağın ruhları tarafından kutsanmış.", it = "Benedetto dagli spiriti della terra.", ja = "大地の精霊に祝福されている。", zh = "受到大地之灵的祝福。", ko = "대지의 정령들에게 축복받았다." }
+
+[[piece_lore]]
+key = "shaman_2"
+profile = 2
+text = { en = "The elements answer its wearer without delay.", de = "Die Elemente antworten seinem Träger ohne Verzögerung.", fr = "Les éléments répondent à son porteur sans délai.", es = "Los elementos responden a quien lo lleva sin demora.", pt = "Os elementos atendem a quem o usa sem demora.", ru = "Стихии отвечают владельцу без промедления.", pl = "Żywioły odpowiadają noszącemu bez zwłoki.", tr = "Elementler giyenine gecikmeden karşılık verir.", it = "Gli elementi rispondono subito a chi lo indossa.", ja = "エレメントは持ち主にすぐさま応える。", zh = "元素毫不迟疑地回应其穿戴者。", ko = "정령들은 착용자에게 지체 없이 응답한다." }
+
+[[piece_lore]]
+key = "shaman_3"
+profile = 3
+text = { en = "The wind carries its wearer, and guides the strike.", de = "Der Wind trägt seinen Träger und lenkt den Hieb.", fr = "Le vent porte son porteur, et guide son coup.", es = "El viento lleva a quien lo viste y guía su golpe.", pt = "O vento carrega quem o usa e guia o golpe.", ru = "Ветер несёт владельца и направляет удар.", pl = "Wiatr niesie noszącego i prowadzi jego cios.", tr = "Rüzgâr giyenini taşır ve darbesine yön verir.", it = "Il vento porta chi lo indossa e guida il colpo.", ja = "風が持ち主を運び、一撃を導く。", zh = "风托起穿戴者，并引导其攻击。", ko = "바람이 착용자를 실어 나르고, 일격을 이끈다." }
+
+[[piece_lore]]
+key = "shaman_4"
+profile = 4
+text = { en = "Water's patience: it heals, and it returns.", de = "Die Geduld des Wassers: Es heilt, und es kehrt zurück.", fr = "La patience de l'eau : elle soigne, et elle revient.", es = "La paciencia del agua: sana y regresa.", pt = "A paciência da água: cura, e retorna.", ru = "Терпение воды: она исцеляет и возвращается.", pl = "Cierpliwość wody: leczy i powraca.", tr = "Suyun sabrı: iyileştirir ve geri döner.", it = "La pazienza dell'acqua: cura, e ritorna.", ja = "水の忍耐：癒やし、そして還る。", zh = "水的耐心：它会治愈，也会归来。", ko = "물의 인내: 치유하고, 또 돌아온다." }
+
+[[piece_lore]]
+key = "shaman_5"
+profile = 5
+text = { en = "The tides restore its wearer, again and again.", de = "Die Gezeiten stärken seinen Träger, wieder und wieder.", fr = "Les marées restaurent son porteur, encore et encore.", es = "Las mareas restauran a quien lo lleva, una y otra vez.", pt = "As marés restauram quem o usa, de novo e de novo.", ru = "Приливы восстанавливают владельца снова и снова.", pl = "Pływy wciąż na nowo odnawiają noszącego.", tr = "Gelgitler giyenini tekrar tekrar yeniler.", it = "Le maree ristorano chi lo indossa, ancora e ancora.", ja = "潮が持ち主を何度でも癒やす。", zh = "潮汐一次又一次地恢复其穿戴者。", ko = "물결이 착용자를 되살린다, 몇 번이고." }
+
+[[piece_lore]]
+key = "shaman_6"
+profile = 6
+text = { en = "The spirit wolf runs at its wearer's side.", de = "Der Geisterwolf läuft an der Seite seines Trägers.", fr = "Le loup spirituel court aux côtés de son porteur.", es = "El lobo espiritual corre al lado de quien lo lleva.", pt = "O lobo espiritual corre ao lado de quem o usa.", ru = "Призрачный волк бежит рядом с владельцем.", pl = "Duchowy wilk biegnie u boku noszącego.", tr = "Ruh kurdu giyeninin yanında koşar.", it = "Il lupo spirituale corre al fianco di chi lo indossa.", ja = "精霊の狼が持ち主の傍らを駆ける。", zh = "幽魂之狼在穿戴者身边奔跑。", ko = "정령 늑대가 착용자 곁에서 달린다." }
+
+[[piece_lore]]
+key = "shaman_7"
+profile = 7
+text = { en = "Its lightning leaps far and strikes true.", de = "Sein Blitz springt weit und trifft sicher.", fr = "Sa foudre bondit loin et frappe juste.", es = "Sus relámpagos saltan lejos y golpean certeros.", pt = "Seus raios saltam longe e atingem certeiros.", ru = "Его молнии прыгают далеко и бьют точно.", pl = "Jego błyskawice skaczą daleko i trafiają celnie.", tr = "Şimşeği uzağa sıçrar ve isabetle vurur.", it = "Il suo fulmine balza lontano e colpisce sicuro.", ja = "その稲妻は遠くまで跳び、狙いを外さない。", zh = "其闪电远跃四方，精准命中。", ko = "그 번개는 멀리 튀고 정확히 내리꽂힌다." }

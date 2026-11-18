@@ -1,0 +1,16 @@
+# Ursoc: the bear god's charge and the ground he shakes.
+
+[[boss]]
+key = "ursoc"
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 11.0
+ability = { stomp = { spell = 31277, radius = 10.0, warn = 1.8, knock = 13.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

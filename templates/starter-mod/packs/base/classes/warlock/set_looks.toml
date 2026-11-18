@@ -1,0 +1,60 @@
+# The warlock's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Novice's") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Dreadmist pieces: Dreadmist Raiment, tier 0 (ItemSet 183).
+[[set_look]]
+key = "warlock_uncommon"
+rarity = 1
+pieces = [
+    [0, 31263, 1, "Helmet_29"], [1, 29798, 3, "Misc_Bone_TaurenSkull_01"],
+    [2, 29792, 20, "Chest_Cloth_49"], [3, 29793, 6, "Belt_12"],
+    [4, 29797, 7, "Pants_08"], [5, 29799, 8, "Boots_05"],
+    [6, 29795, 9, "Bracer_13"], [7, 29800, 10, "Gauntlets_32"],
+]
+
+# Felheart pieces: Felheart Raiment, tier 1 (ItemSet 203).
+[[set_look]]
+key = "warlock_rare"
+rarity = 2
+pieces = [
+    [0, 31987, 1, "Helmet_08"], [1, 31974, 3, "Shoulder_23"],
+    [2, 31973, 20, "Chest_Cloth_09"], [3, 31969, 6, "Belt_13"],
+    [4, 31972, 7, "Pants_Cloth_14"], [5, 31975, 8, "Boots_Cloth_05"],
+    [6, 31970, 9, "Bracer_07"], [7, 31971, 10, "Gauntlets_19"],
+]
+
+# Nemesis pieces: Nemesis Raiment, tier 2 (ItemSet 212).
+[[set_look]]
+key = "warlock_epic"
+rarity = 3
+pieces = [
+    [0, 34369, 1, "Helmet_08"], [1, 34022, 3, "Shoulder_19"],
+    [2, 34014, 20, "Chest_Leather_01"], [3, 34011, 6, "Belt_13"],
+    [4, 29857, 7, "Pants_07"], [5, 34015, 8, "Boots_05"],
+    [6, 34012, 9, "Bracer_07"], [7, 34013, 10, "Gauntlets_19"],
+]
+
+# Plagueheart pieces: Plagueheart Raiment, tier 3 (ItemSet 529).
+[[set_look]]
+key = "warlock_legendary"
+rarity = 4
+pieces = [
+    [0, 35182, 1, "Crown_01"], [1, 35187, 3, "Shoulder_25"],
+    [2, 35185, 20, "Chest_Cloth_43"], [3, 35179, 6, "Belt_03"],
+    [4, 35184, 7, "Pants_Cloth_05"], [5, 35186, 8, "Boots_Fabric_01"],
+    [6, 35180, 9, "Bracer_13"], [7, 35183, 10, "Gauntlets_17"],
+]
+
+# Field Marshal's pieces: Field Marshal's Threads, the Alliance's rank 13 PvP set (ItemSet 392).
+[[set_look]]
+key = "warlock_pvp"
+rarity = 5
+pieces = [
+    [0, 32979, 1, "Helmet_24"], [1, 33002, 3, "Shoulder_02"],
+    [2, 33001, 20, "Chest_Cloth_09"], [4, 33007, 7, "Pants_Cloth_09"],
+    [5, 33006, 8, "Boots_07"], [7, 32995, 10, "Gauntlets_14"],
+]

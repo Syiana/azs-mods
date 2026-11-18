@@ -1,0 +1,20 @@
+# Marez Cowl's abilities, Arathi Basin.
+
+[[boss]]
+key = "marez_cowl"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 116 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 122, count = 4, radius = 5.0, spread = 8.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { wander = { spell = 1449, count = 2, radius = 3.0, speed = 4.5, lasts = 7.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

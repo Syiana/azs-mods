@@ -1,0 +1,164 @@
+# Extra looks (survivors-sim looks.rs): patch-V's skin tones and hair colours, a pack per race and kind.
+#
+# Every pack. The first indexes are the counts of stock rows in `CharSections.dbc`: patch-V's
+# rows start there.
+
+[[look_pack]]
+key = "human_skin"
+race = 1
+kind = "skin"
+first = [15, 15]
+achievement = "human_wins_3"
+name = { en = "Human Skin Tones", de = "Menschliche Hauttöne", fr = "Teints humains", es = "Tonos de piel humanos", pt = "Tons de Pele Humanos", ru = "Оттенки кожи людей", pl = "Odcienie skóry człowieka", tr = "İnsan Ten Renkleri", it = "Carnagioni umane", ja = "ヒューマンの肌の色", zh = "人类肤色", ko = "인간 피부색" }
+
+[[look_pack]]
+key = "human_hair"
+race = 1
+kind = "hair_color"
+first = [13, 13]
+achievement = "human_wins_10"
+name = { en = "Human Hair Colours", de = "Menschliche Haarfarben", fr = "Couleurs de cheveux humaines", es = "Colores de pelo humanos", pt = "Cores de Cabelo Humanas", ru = "Цвета волос людей", pl = "Kolory włosów człowieka", tr = "İnsan Saç Renkleri", it = "Colori dei capelli umani", ja = "ヒューマンの髪の色", zh = "人类发色", ko = "인간 머리 색" }
+
+[[look_pack]]
+key = "orc_skin"
+race = 2
+kind = "skin"
+first = [18, 14]
+achievement = "orc_wins_3"
+name = { en = "Orc Skin Tones", de = "Orc-Hauttöne", fr = "Teints orcs", es = "Tonos de piel orcos", pt = "Tons de Pele Orcs", ru = "Оттенки кожи орков", pl = "Odcienie skóry orka", tr = "Ork Ten Renkleri", it = "Carnagioni orchesche", ja = "オークの肌の色", zh = "兽人肤色", ko = "오크 피부색" }
+
+[[look_pack]]
+key = "orc_hair"
+race = 2
+kind = "hair_color"
+first = [11, 11]
+achievement = "orc_wins_10"
+name = { en = "Orc Hair Colours", de = "Orc-Haarfarben", fr = "Couleurs de cheveux orcs", es = "Colores de pelo orcos", pt = "Cores de Cabelo Orcs", ru = "Цвета волос орков", pl = "Kolory włosów orka", tr = "Ork Saç Renkleri", it = "Colori dei capelli orcheschi", ja = "オークの髪の色", zh = "兽人发色", ko = "오크 머리 색" }
+
+[[look_pack]]
+key = "dwarf_skin"
+race = 3
+kind = "skin"
+first = [22, 14]
+achievement = "dwarf_wins_3"
+name = { en = "Dwarf Skin Tones", de = "Zwergen-Hauttöne", fr = "Teints nains", es = "Tonos de piel enanos", pt = "Tons de Pele Anões", ru = "Оттенки кожи дворфов", pl = "Odcienie skóry krasnoluda", tr = "Cüce Ten Renkleri", it = "Carnagioni naniche", ja = "ドワーフの肌の色", zh = "矮人肤色", ko = "드워프 피부색" }
+
+[[look_pack]]
+key = "dwarf_hair"
+race = 3
+kind = "hair_color"
+first = [13, 13]
+achievement = "dwarf_wins_10"
+name = { en = "Dwarf Hair Colours", de = "Zwergen-Haarfarben", fr = "Couleurs de cheveux nains", es = "Colores de pelo enanos", pt = "Cores de Cabelo Anãs", ru = "Цвета волос дворфов", pl = "Kolory włosów krasnoluda", tr = "Cüce Saç Renkleri", it = "Colori dei capelli nanici", ja = "ドワーフの髪の色", zh = "矮人发色", ko = "드워프 머리 색" }
+
+[[look_pack]]
+key = "nightelf_skin"
+race = 4
+kind = "skin"
+first = [12, 12]
+achievement = "nightelf_wins_3"
+name = { en = "Night Elf Skin Tones", de = "Nachtelfen-Hauttöne", fr = "Teints elfes de la nuit", es = "Tonos de piel elfos de la noche", pt = "Tons de Pele Elfos Noturnos", ru = "Оттенки кожи ночных эльфов", pl = "Odcienie skóry nocnego elfa", tr = "Gece Elfi Ten Renkleri", it = "Carnagioni degli Elfi della Notte", ja = "ナイトエルフの肌の色", zh = "暗夜精灵肤色", ko = "나이트 엘프 피부색" }
+
+[[look_pack]]
+key = "nightelf_hair"
+race = 4
+kind = "hair_color"
+first = [13, 13]
+achievement = "nightelf_wins_10"
+name = { en = "Night Elf Hair Colours", de = "Nachtelfen-Haarfarben", fr = "Couleurs de cheveux elfes de la nuit", es = "Colores de pelo elfos de la noche", pt = "Cores de Cabelo Elfos Noturnos", ru = "Цвета волос ночных эльфов", pl = "Kolory włosów nocnego elfa", tr = "Gece Elfi Saç Renkleri", it = "Colori dei capelli degli Elfi della Notte", ja = "ナイトエルフの髪の色", zh = "暗夜精灵发色", ko = "나이트 엘프 머리 색" }
+
+[[look_pack]]
+key = "scourge_skin"
+race = 5
+kind = "skin"
+first = [6, 6]
+achievement = "scourge_wins_3"
+name = { en = "Undead Skin Tones", de = "Untoten-Hauttöne", fr = "Teints morts-vivants", es = "Tonos de piel no-muertos", pt = "Tons de Pele Mortos-vivos", ru = "Оттенки кожи нежити", pl = "Odcienie skóry nieumarłego", tr = "Ölümsüz Ten Renkleri", it = "Carnagioni dei Non Morti", ja = "アンデッドの肌の色", zh = "亡灵肤色", ko = "언데드 피부색" }
+
+[[look_pack]]
+key = "scourge_hair"
+race = 5
+kind = "hair_color"
+first = [10, 10]
+achievement = "scourge_wins_10"
+name = { en = "Undead Hair Colours", de = "Untoten-Haarfarben", fr = "Couleurs de cheveux morts-vivants", es = "Colores de pelo no-muertos", pt = "Cores de Cabelo Mortos-vivos", ru = "Цвета волос нежити", pl = "Kolory włosów nieumarłego", tr = "Ölümsüz Saç Renkleri", it = "Colori dei capelli dei Non Morti", ja = "アンデッドの髪の色", zh = "亡灵发色", ko = "언데드 머리 색" }
+
+[[look_pack]]
+key = "tauren_skin"
+race = 6
+kind = "skin"
+first = [25, 17]
+achievement = "tauren_wins_3"
+name = { en = "Tauren Skin Tones", de = "Tauren-Hauttöne", fr = "Teints taurens", es = "Tonos de piel tauren", pt = "Tons de Pele Taurens", ru = "Оттенки кожи таурен", pl = "Odcienie skóry taurena", tr = "Tauren Ten Renkleri", it = "Carnagioni dei Tauren", ja = "タウレンの肌の色", zh = "牛头人肤色", ko = "타우렌 피부색" }
+
+[[look_pack]]
+key = "gnome_skin"
+race = 7
+kind = "skin"
+first = [10, 10]
+achievement = "gnome_wins_3"
+name = { en = "Gnome Skin Tones", de = "Gnomen-Hauttöne", fr = "Teints gnomes", es = "Tonos de piel gnomos", pt = "Tons de Pele Gnomos", ru = "Оттенки кожи гномов", pl = "Odcienie skóry gnoma", tr = "Gnom Ten Renkleri", it = "Carnagioni gnomesche", ja = "ノームの肌の色", zh = "侏儒肤色", ko = "노움 피부색" }
+
+[[look_pack]]
+key = "gnome_hair"
+race = 7
+kind = "hair_color"
+first = [12, 12]
+achievement = "gnome_wins_10"
+name = { en = "Gnome Hair Colours", de = "Gnomen-Haarfarben", fr = "Couleurs de cheveux gnomes", es = "Colores de pelo gnomos", pt = "Cores de Cabelo Gnomos", ru = "Цвета волос гномов", pl = "Kolory włosów gnoma", tr = "Gnom Saç Renkleri", it = "Colori dei capelli gnomeschi", ja = "ノームの髪の色", zh = "侏儒发色", ko = "노움 머리 색" }
+
+[[look_pack]]
+key = "troll_skin"
+race = 8
+kind = "skin"
+first = [18, 18]
+achievement = "troll_wins_3"
+name = { en = "Troll Skin Tones", de = "Troll-Hauttöne", fr = "Teints trolls", es = "Tonos de piel trols", pt = "Tons de Pele Trolls", ru = "Оттенки кожи троллей", pl = "Odcienie skóry trolla", tr = "Troll Ten Renkleri", it = "Carnagioni dei Troll", ja = "トロールの肌の色", zh = "巨魔肤色", ko = "트롤 피부색" }
+
+[[look_pack]]
+key = "troll_hair"
+race = 8
+kind = "hair_color"
+first = [13, 13]
+achievement = "troll_wins_10"
+name = { en = "Troll Hair Colours", de = "Troll-Haarfarben", fr = "Couleurs de cheveux trolls", es = "Colores de pelo trols", pt = "Cores de Cabelo Trolls", ru = "Цвета волос троллей", pl = "Kolory włosów trolla", tr = "Troll Saç Renkleri", it = "Colori dei capelli dei Troll", ja = "トロールの髪の色", zh = "巨魔发色", ko = "트롤 머리 색" }
+
+[[look_pack]]
+key = "goblin_skin"
+race = 9
+kind = "skin"
+first = [3, 3]
+achievement = "goblin_wins_3"
+name = { en = "Goblin Skin Tones", de = "Goblin-Hauttöne", fr = "Teints gobelins", es = "Tonos de piel goblins", pt = "Tons de Pele Goblins", ru = "Оттенки кожи гоблинов", pl = "Odcienie skóry goblina", tr = "Goblin Ten Renkleri", it = "Carnagioni dei Goblin", ja = "ゴブリンの肌の色", zh = "地精肤色", ko = "고블린 피부색" }
+
+[[look_pack]]
+key = "bloodelf_skin"
+race = 10
+kind = "skin"
+first = [19, 19]
+achievement = "bloodelf_wins_3"
+name = { en = "Blood Elf Skin Tones", de = "Blutelfen-Hauttöne", fr = "Teints elfes de sang", es = "Tonos de piel elfos de sangre", pt = "Tons de Pele Elfos Sangrentos", ru = "Оттенки кожи эльфов крови", pl = "Odcienie skóry krwawego elfa", tr = "Kan Elfi Ten Renkleri", it = "Carnagioni degli Elfi del Sangue", ja = "ブラッドエルフの肌の色", zh = "血精灵肤色", ko = "블러드 엘프 피부색" }
+
+[[look_pack]]
+key = "bloodelf_hair"
+race = 10
+kind = "hair_color"
+first = [13, 13]
+achievement = "bloodelf_wins_10"
+name = { en = "Blood Elf Hair Colours", de = "Blutelfen-Haarfarben", fr = "Couleurs de cheveux elfes de sang", es = "Colores de pelo elfos de sangre", pt = "Cores de Cabelo Elfos Sangrentos", ru = "Цвета волос эльфов крови", pl = "Kolory włosów krwawego elfa", tr = "Kan Elfi Saç Renkleri", it = "Colori dei capelli degli Elfi del Sangue", ja = "ブラッドエルフの髪の色", zh = "血精灵发色", ko = "블러드 엘프 머리 색" }
+
+[[look_pack]]
+key = "draenei_skin"
+race = 11
+kind = "skin"
+first = [17, 15]
+achievement = "draenei_wins_3"
+name = { en = "Draenei Skin Tones", de = "Draenei-Hauttöne", fr = "Teints draeneï", es = "Tonos de piel draenei", pt = "Tons de Pele Draeneis", ru = "Оттенки кожи дренеев", pl = "Odcienie skóry draenei", tr = "Draenei Ten Renkleri", it = "Carnagioni dei Draenei", ja = "ドレナイの肌の色", zh = "德莱尼肤色", ko = "드레나이 피부색" }
+
+[[look_pack]]
+key = "draenei_hair"
+race = 11
+kind = "hair_color"
+first = [10, 10]
+achievement = "draenei_wins_10"
+name = { en = "Draenei Hair Colours", de = "Draenei-Haarfarben", fr = "Couleurs de cheveux draeneï", es = "Colores de pelo draenei", pt = "Cores de Cabelo Draeneis", ru = "Цвета волос дренеев", pl = "Kolory włosów draenei", tr = "Draenei Saç Renkleri", it = "Colori dei capelli dei Draenei", ja = "ドレナイの髪の色", zh = "德莱尼发色", ko = "드레나이 머리 색" }

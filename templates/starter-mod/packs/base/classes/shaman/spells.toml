@@ -1,0 +1,278 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "lightning_bolt"
+id = 403
+visual = 910111
+vfx = { source = 403, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "nature"
+shape = { strike = { targets = 2 } }
+hit = 37
+cooldown = 1.4
+range = 30.0
+name = { en = "Lightning Bolt", de = "Blitzschlag", fr = "Éclair", es = "Descarga de relámpagos", pt = "Relâmpago", ru = "Молния", pl = "Błyskawica", tr = "Yıldırım Oku", it = "Dardo di fulmine", ja = "ライトニング・ボルト", zh = "闪电箭", ko = "번개 화살" }
+icon = "Spell_Nature_Lightning"
+
+[[spell]]
+key = "chain_lightning"
+id = 421
+visual = 910112
+vfx = { source = 421, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "nature"
+shape = { chain = { jumps = 4, radius = 12.0 } }
+hit = 40
+cooldown = 2.4
+range = 28.0
+name = { en = "Chain Lightning", de = "Kettenblitzschlag", fr = "Chaîne d'éclairs", es = "Cadena de relámpagos", pt = "Corrente de Raios", ru = "Цепная молния", pl = "Łańcuch piorunów", tr = "Zincirleme Yıldırım", it = "Catena di fulmini", ja = "チェイン・ライトニング", zh = "闪电链", ko = "연쇄 번개" }
+icon = "Spell_Nature_ChainLightning"
+
+[[spell]]
+key = "earth_shock"
+id = 8042
+visual = 910113
+vfx = { source = 8042, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { strike = { targets = 1 } }
+hit = 94
+cooldown = 3.0
+range = 20.0
+name = { en = "Earth Shock", de = "Erdschock", fr = "Horion de terre", es = "Choque de tierra", pt = "Choque Terrestre", ru = "Земной шок", pl = "Wstrząs ziemi", tr = "Yer Şoku", it = "Folgore tellurica", ja = "アース・ショック", zh = "大地震击", ko = "대지 충격" }
+icon = "Spell_Nature_EarthShock"
+
+[[spell]]
+key = "flame_shock"
+id = 8050
+visual = 910114
+vfx = { source = 8050, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { dot = { targets = 2, secs = 6.0, ticks = 2, cap = 1 } }
+hit = 83
+cooldown = 3.0
+range = 20.0
+name = { en = "Flame Shock", de = "Flammenschock", fr = "Horion de flammes", es = "Choque de llamas", pt = "Choque Flamejante", ru = "Огненный шок", pl = "Płomienny wstrząs", tr = "Alev Şoku", it = "Folgore di fiamma", ja = "フレイム・ショック", zh = "烈焰震击", ko = "화염 충격" }
+icon = "Spell_Fire_FlameShock"
+
+[[spell]]
+key = "frost_shock"
+id = 8056
+visual = 910115
+vfx = { source = 8056, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { strike = { targets = 2 } }
+hit = 58
+cooldown = 3.5
+range = 20.0
+rider = { slow = { pct = 50, secs = 4.0 } }
+name = { en = "Frost Shock", de = "Frostschock", fr = "Horion de givre", es = "Choque de escarcha", pt = "Choque Gélido", ru = "Ледяной шок", pl = "Mroźny wstrząs", tr = "Buz Şoku", it = "Folgore di gelo", ja = "フロスト・ショック", zh = "冰霜震击", ko = "냉기 충격" }
+icon = "Spell_Frost_FrostShock"
+
+[[spell]]
+key = "lightning_shield"
+id = 324
+visual = 910116
+vfx = { source = 324, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { thorns = { secs = 15.0 } }
+hit = 21
+cooldown = 15.0
+range = 30.0
+name = { en = "Lightning Shield", de = "Blitzschlagschild", fr = "Bouclier de foudre", es = "Escudo de relámpagos", pt = "Escudo de Raios", ru = "Щит молний", pl = "Tarcza błyskawic", tr = "Yıldırım Kalkanı", it = "Scudo di fulmini", ja = "ライトニング・シールド", zh = "闪电之盾", ko = "번개 보호막" }
+icon = "Spell_Nature_LightningShield"
+# AS gives it no legendary.
+legendary = false
+
+[[spell]]
+key = "magma_totem"
+id = 8190
+visual = 910117
+vfx = { source = 8190, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+# TUNE 2026-11-10 (tester feedback): the pulse reaches 15 yd, half a Lightning Bolt's range
+# (10 yd was a third of it), and the totem stands 15 sec (12).
+shape = { totem = { radius = 15.0, every = 2.0, secs = 15.0 } }
+hit = 24
+cooldown = 12.0
+range = 25.0
+# Magma Totem's pulse. The stock totem casts 8187 every beat, which draws only hand effects (a
+# totem has no hands) and a burst on each victim; 19823 ("Fire Nova Visual") is a ring of fire at
+# the caster's base, so the totem itself shows the pulse.
+pulse_visual = 19823
+# A model of its own (FireLightTotem), where the Searing Totem keeps the race's fire totem.
+stands = 4683
+name = { en = "Magma Totem", de = "Totem des glühenden Magmas", fr = "Totem de magma", es = "Tótem de magma", pt = "Totem de Magma", ru = "Тотем магмы", pl = "Totem magmy", tr = "Magma Totemi", it = "Totem di magma", ja = "マグマ・トーテム", zh = "熔岩图腾", ko = "용암 토템" }
+icon = "Spell_Fire_SelfDestruct"
+
+[[spell]]
+key = "searing_totem"
+id = 3599
+visual = 910118
+vfx = { source = 3599, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+# TUNE 2026-11-10 (tester feedback): hit 34 -> 38, the totem stands 17 sec (15).
+shape = { totem = { radius = 0.0, every = 1.5, secs = 17.0 } }
+hit = 38
+cooldown = 10.0
+# Match Magma Totem's placement range so Call of the Elements can summon both.
+range = 25.0
+# The fireball the stock totem throws (Searing Totem's "Attack", 3.3.5a spell 3606).
+pulse_visual = 3606
+name = { en = "Searing Totem", de = "Totem der Verbrennung", fr = "Totem incendiaire", es = "Tótem abrasador", pt = "Totem Calcinante", ru = "Опаляющий тотем", pl = "Totem żaru", tr = "Kavurucu Totem", it = "Totem rovente", ja = "シアリング・トーテム", zh = "灼热图腾", ko = "불타는 토템" }
+icon = "Spell_Fire_SearingTotem"
+
+[[spell]]
+key = "fire_nova"
+id = 1535
+visual = 910119
+vfx = { source = 8349, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { nova = { radius = 12.0 } }
+hit = 21
+cooldown = 5.0
+range = 12.0
+name = { en = "Fire Nova", de = "Feuernova", fr = "Nova de feu", es = "Nova de fuego", pt = "Nova Flamejante", ru = "Кольцо огня", pl = "Ognista nova", tr = "Ateş Nova", it = "Nova di fuoco", ja = "ファイア・ノヴァ", zh = "火焰新星", ko = "불꽃 회오리" }
+icon = "Spell_Fire_SealOfFire"
+
+[[spell]]
+key = "healing_wave"
+id = 331
+visual = 910120
+vfx = { source = 331, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Rejuvenation_Impact_Base.mdx", slot = "base", scale = 0.6 } }
+school = "nature"
+shape = { heal = { share = 28, secs = 0.0 } }
+hit = 0
+cooldown = 12.0
+range = 0.0
+name = { en = "Healing Wave", de = "Welle der Heilung", fr = "Vague de soins", es = "Ola de curación", pt = "Onda de Cura", ru = "Волна исцеления", pl = "Fala uzdrowienia", tr = "Şifa Dalgası", it = "Onda di guarigione", ja = "ヒーリング・ウェーブ", zh = "治疗波", ko = "치유의 물결" }
+icon = "Spell_Nature_MagicImmunity"
+# AS gives it no legendary.
+legendary = false
+
+[[spell]]
+key = "call_of_flame"
+id = 16038
+school = "fire"
+shape = { passive = { damage = 10 } }
+hit = 0
+cooldown = 0.0
+range = 0.0
+name = { en = "Call of Flame", de = "Ruf der Flamme", fr = "Appel des flammes", es = "Llamada de las llamas", pt = "Chamado da Chama", ru = "Призыв пламени", pl = "Wezwanie płomieni", tr = "Alevin Çağrısı", it = "Richiamo della fiamma", ja = "コール・オブ・フレイム", zh = "烈焰召唤", ko = "불꽃의 부름" }
+icon = "Spell_Fire_Immolation"
+
+# AS's talents name Rockbiter Weapon (the Enhancement tree is built on it) and Stormstrike; the
+# rest are Wrath of the Lich King's.
+[[spell]]
+key = "rockbiter"
+id = 8017
+visual = 910121
+vfx = { source = 8017, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "nature"
+shape = { strike = { targets = 2 } }
+hit = 132
+cooldown = 1.357
+range = 10.0
+name = { en = "Rockbiter Weapon", de = "Waffe des Felsbeißers", fr = "Arme Croque-roc", es = "Arma Muerdepiedras", pt = "Arma Mordepedra", ru = "Оружие камнедробителя", pl = "Skalny oręż", tr = "Kaya Isıran Silah", it = "Arma Mordirocce", ja = "ロックバイター・ウェポン", zh = "石化武器", ko = "대지의 무기" }
+icon = "Spell_Nature_RockBiter"
+
+[[spell]]
+key = "stormstrike"
+id = 17364
+visual = 910122
+vfx = { source = 17364, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { strike = { targets = 1 } }
+hit = 344
+cooldown = 6.071
+range = 10.0
+name = { en = "Stormstrike", de = "Sturmschlag", fr = "Frappe-tempête", es = "Golpe de tormenta", pt = "Golpe de Tempestade", ru = "Удар бури", pl = "Burzowy cios", tr = "Fırtına Darbesi", it = "Percossa della tempesta", ja = "ストームストライク", zh = "风暴打击", ko = "폭풍의 일격" }
+icon = "Ability_Shaman_Stormstrike"
+
+[[spell]]
+key = "lava_burst"
+id = 51505
+visual = 910123
+vfx = { source = 51505, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { strike = { targets = 1 } }
+hit = 125
+cooldown = 6.0
+range = 30.0
+name = { en = "Lava Burst", de = "Lavaeruption", fr = "Explosion de lave", es = "Ráfaga de lava", pt = "Explosão de Lava", ru = "Выброс лавы", pl = "Wybuch lawy", tr = "Lav Patlaması", it = "Esplosione di lava", ja = "ラヴァ・バースト", zh = "熔岩爆裂", ko = "용암 폭발" }
+icon = "Spell_Shaman_LavaBurst"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "bloodlust"
+id = 2825
+visual = 910124
+vfx = { source = 2825, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { haste = { pct = 40, secs = 10.0 } }
+hit = 0
+cooldown = 30.0
+range = 30.0
+name = { en = "Bloodlust", de = "Kampfrausch", fr = "Furie sanguinaire", es = "Ansia de sangre", pt = "Sede de Sangue", ru = "Жажда крови", pl = "Żądza krwi", tr = "Kan Hırsı", it = "Brama di sangue", ja = "ブラッドラスト", zh = "嗜血狂热", ko = "피의 욕망" }
+icon = "Spell_Nature_BloodLust"
+faction = "horde"
+
+# Bloodlust as the Alliance knows it: only one of the two is dealt (`faction`).
+[[spell]]
+key = "heroism"
+id = 32182
+visual = 910125
+vfx = { source = 32182, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { haste = { pct = 40, secs = 10.0 } }
+hit = 0
+cooldown = 30.0
+range = 30.0
+name = { en = "Heroism", de = "Heldentum", fr = "Héroïsme", es = "Heroísmo", pt = "Heroísmo", ru = "Героизм", pl = "Heroizm", tr = "Kahramanlık", it = "Eroismo", ja = "ヒロイズム", zh = "英勇", ko = "영웅심" }
+icon = "Ability_Shaman_Heroism"
+faction = "alliance"
+
+[[spell]]
+key = "lava_lash"
+id = 60103
+visual = 910126
+vfx = { source = 60103, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { strike = { targets = 1 } }
+hit = 110
+cooldown = 4.5
+range = 6.0
+name = { en = "Lava Lash", de = "Lavapeitsche", fr = "Fouet de lave", es = "Latigazo de lava", pt = "Chicote de Lava", ru = "Лавовый бич", pl = "Smagnięcie lawy", tr = "Lav Kırbacı", it = "Frustata di lava", ja = "ラヴァ・ラッシュ", zh = "熔岩猛击", ko = "용암 채찍" }
+icon = "Ability_Shaman_Lavalash"
+
+[[spell]]
+key = "riptide"
+id = 61295
+visual = 910127
+vfx = { source = 61295, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Rejuvenation_Impact_Base.mdx", slot = "base", scale = 0.6 } }
+school = "nature"
+shape = { heal = { share = 24, secs = 9.0 } }
+hit = 0
+cooldown = 6.0
+range = 0.0
+name = { en = "Riptide", de = "Springflut", fr = "Remous", es = "Mareas vivas", pt = "Correnteza", ru = "Быстрина", pl = "Rwący nurt", tr = "Çekim Akıntısı", it = "Marea impetuosa", ja = "リップタイド", zh = "激流", ko = "성난 해일" }
+icon = "spell_nature_riptide"
+
+[[spell]]
+key = "feral_spirit"
+id = 51533
+visual = 910128
+vfx = { source = 51533, cast = { model = "Spells/Lightning_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/LightningBolt_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+# TUNE 2026-11-10 (tester feedback: too weak): the wolves fight 20 sec (15) and come back after 38
+# (45). Sweeping Storm calls more of them.
+shape = { summon = { pet = "spirit_wolf", count = 2, secs = 20.0 } }
+hit = 0
+cooldown = 38.0
+range = 30.0
+name = { en = "Feral Spirit", de = "Wildgeist", fr = "Esprit farouche", es = "Espíritu feral", pt = "Espírito Selvagem", ru = "Дух дикого зверя", pl = "Dzikie duchy", tr = "Vahşi Ruh", it = "Spirito ferale", ja = "フェラル・スピリット", zh = "野性狼魂", ko = "야수 정령" }
+icon = "Spell_Shaman_FeralSpirit"
+pet = { one = { en = "Spirit Wolf", de = "Geisterwolf", fr = "Loup fantôme", es = "Lobo espiritual", pt = "Lobo Espiritual", ru = "Дух волка", pl = "Duchowy wilk", tr = "Ruh Kurdu", it = "Lupo spirituale", ja = "スピリット・ウルフ", zh = "幽灵狼", ko = "늑대 정령" }, many = { en = "Spirit Wolves", de = "Geisterwölfe", fr = "Loups fantômes", es = "Lobos espirituales", pt = "Lobos Espirituais", ru = "Духи волков", pl = "Duchowe wilki", tr = "Ruh Kurtları", it = "Lupi spirituali", ja = "スピリット・ウルフ", zh = "幽灵狼", ko = "늑대 정령" } }

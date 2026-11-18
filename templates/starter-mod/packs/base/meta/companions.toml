@@ -1,0 +1,144 @@
+# AS's companions in its order (survivors-content companions.rs): key, name and model
+# (`CreatureDisplayInfo.dbc`, 3.3.5a's critter of that name). The order is the wire's: a
+# companion's creature entry is the server's COMPANION_ENTRY plus its place here, so a new one
+# goes at the end. Prices are `cosmetics/pets.toml`.
+
+[[companion]]
+key = "squirrel"
+name = { en = "Squirrel", de = "Eichhörnchen", fr = "Écureuil", es = "Ardilla", pt = "Esquilo", ru = "Белка", pl = "Wiewiórka", tr = "Sincap", it = "Scoiattolo", ja = "リス", zh = "松鼠", ko = "다람쥐" }
+display = 134
+
+[[companion]]
+key = "rabbit"
+name = { en = "Snowshoe Rabbit", de = "Schneehase", fr = "Lapin des neiges", es = "Liebre ártica", pt = "Lebre da Neve", ru = "Заяц-беляк", pl = "Zając bielak", tr = "Kar Ayakkabılı Tavşan", it = "Lepre delle nevi", ja = "カンジキウサギ", zh = "雪兔", ko = "눈덧신토끼" }
+display = 328
+
+[[companion]]
+key = "macaw"
+name = { en = "Crimson Macaw", de = "Purpurroter Ara", fr = "Ara écarlate", es = "Guacamayo carmesí", pt = "Arara Carmesim", ru = "Алый ара", pl = "Szkarłatna ara", tr = "Kızıl Papağan", it = "Ara cremisi", ja = "深紅のコンゴウインコ", zh = "绯红金刚鹦鹉", ko = "진홍 마카우" }
+display = 5505
+
+[[companion]]
+key = "owl"
+name = { en = "Great Horned Owl", de = "Virginia-Uhu", fr = "Grand-duc d'Amérique", es = "Búho cornudo", pt = "Coruja-de-chifres", ru = "Виргинский филин", pl = "Wielka sowa rogata", tr = "Büyük Boynuzlu Baykuş", it = "Gufo reale", ja = "ミミズク", zh = "大角猫头鹰", ko = "큰뿔부엉이" }
+display = 4615
+
+[[companion]]
+key = "frog"
+name = { en = "Tree Frog", de = "Baumfrosch", fr = "Rainette", es = "Rana arborícola", pt = "Perereca", ru = "Древесная лягушка", pl = "Rzekotka drzewna", tr = "Ağaç Kurbağası", it = "Raganella", ja = "アマガエル", zh = "树蛙", ko = "청개구리" }
+display = 6297
+
+[[companion]]
+key = "kingsnake"
+name = { en = "Black Kingsnake", de = "Schwarze Königsnatter", fr = "Serpent-roi noir", es = "Serpiente real negra", pt = "Cobra-real Negra", ru = "Черная королевская змея", pl = "Czarny wąż królewski", tr = "Kara Kral Yılanı", it = "Serpente re nero", ja = "ブラック・キングスネーク", zh = "黑色王蛇", ko = "검은 왕뱀" }
+display = 1206
+
+[[companion]]
+key = "darter"
+name = { en = "Sprite Darter", de = "Feendrachenflitzer", fr = "Libellule fée", es = "Libélula hada", pt = "Libélula-fada", ru = "Стрекоза-фея", pl = "Szlifierz iskrzący", tr = "Peri Yusufçuğu", it = "Libellula folletto", ja = "スプライト・ダーター", zh = "小精灵龙", ko = "요정용" }
+display = 6294
+
+[[companion]]
+key = "whelpling"
+name = { en = "Black Whelpling", de = "Schwarzer Welpling", fr = "Dragonnet noir", es = "Crío negro", pt = "Dragãozinho Negro", ru = "Черный дракончик", pl = "Czarny smoczek", tr = "Kara Ejderha Yavrusu", it = "Draghetto nero", ja = "ブラック・ウェルプリング", zh = "黑色雏龙", ko = "새끼 검은 용" }
+display = 6288
+
+[[companion]]
+key = "zergling"
+name = { en = "Zergling", de = "Zergling", fr = "Zergling", es = "Zergling", pt = "Zergling", ru = "Зерглинг", pl = "Zergling", tr = "Zergling", it = "Zergling", ja = "ザーグリング", zh = "小狗", ko = "저글링" }
+display = 10993
+
+[[companion]]
+key = "chicken"
+name = { en = "Westfall Chicken", de = "Westfall-Huhn", fr = "Poulet de Marche de l'Ouest", es = "Pollo de Páramos de Poniente", pt = "Galinha de Terras Ermas", ru = "Курица Западного Края", pl = "Kurczak z Westfall", tr = "Batı Vadisi Tavuğu", it = "Pollo della Marca dell'Ovest", ja = "ウェストフォールのニワトリ", zh = "西部荒野小鸡", ko = "서부 몰락지대 닭" }
+display = 304
+
+[[companion]]
+key = "cockroach"
+name = { en = "Undercity Cockroach", de = "Unterstadtkakerlake", fr = "Cafard de Fossoyeuse", es = "Cucaracha de Entrañas", pt = "Barata da Cidade Baixa", ru = "Подгородский таракан", pl = "Karaluch z Podmiejskiego Miasta", tr = "Yeraltı Şehri Hamamböceği", it = "Scarafaggio di Sepulcra", ja = "アンダーシティのゴキブリ", zh = "幽暗城蟑螂", ko = "언더시티 바퀴벌레" }
+display = 2177
+
+[[companion]]
+key = "panda"
+name = { en = "Panda Cub", de = "Pandajunges", fr = "Bébé panda", es = "Cachorro de panda", pt = "Filhote de Panda", ru = "Детеныш панды", pl = "Młoda panda", tr = "Panda Yavrusu", it = "Cucciolo di panda", ja = "子パンダ", zh = "熊猫宝宝", ko = "아기 판다" }
+display = 10990
+
+[[companion]]
+key = "diablo"
+name = { en = "Mini Diablo", de = "Mini-Diablo", fr = "Mini Diablo", es = "Mini Diablo", pt = "Mini Diablo", ru = "Мини-Диабло", pl = "Mini Diablo", tr = "Mini Diablo", it = "Mini Diablo", ja = "ミニ・ディアブロ", zh = "小迪亚波罗", ko = "꼬마 디아블로" }
+display = 10992
+
+[[companion]]
+key = "murloc"
+name = { en = "Murloc Hatchling", de = "Murlocbaby", fr = "Bébé murloc", es = "Cría de múrloc", pt = "Filhote de Murloc", ru = "Малыш мурлок", pl = "Mały murlok", tr = "Murloc Yavrusu", it = "Cucciolo di murloc", ja = "子マーロック", zh = "鱼人宝宝", ko = "새끼 멀록" }
+display = 15394
+
+[[companion]]
+key = "penguin"
+name = { en = "Penguin Chick", de = "Pinguinküken", fr = "Bébé manchot", es = "Cría de pingüino", pt = "Filhote de Pinguim", ru = "Пингвинёнок", pl = "Mały pingwin", tr = "Penguen Yavrusu", it = "Pulcino di pinguino", ja = "ペンギンのひな", zh = "企鹅宝宝", ko = "새끼 펭귄" }
+display = 26452
+
+[[companion]]
+key = "frostwyrm"
+name = { en = "Frost Wyrm Whelp", de = "Frostwyrmjunges", fr = "Dragonnet de givre", es = "Cría de vermis de escarcha", pt = "Filhote de Serpe Gélida", ru = "Детёныш ледяного змея", pl = "Mały lodowy żmij", tr = "Buz Ejderi Yavrusu", it = "Cucciolo di dragone del gelo", ja = "フロストワームの幼竜", zh = "冰霜雏龙", ko = "새끼 서리고룡" }
+display = 25750
+
+[[companion]]
+key = "phoenix"
+name = { en = "Phoenix Hatchling", de = "Phönixküken", fr = "Bébé phénix", es = "Cría de fénix", pt = "Filhote de Fênix", ru = "Птенец феникса", pl = "Pisklę feniksa", tr = "Anka Yavrusu", it = "Pulcino di fenice", ja = "フェニックスのひな", zh = "凤凰宝宝", ko = "새끼 불사조" }
+display = 23574
+
+[[companion]]
+key = "corehound"
+name = { en = "Core Hound Pup", de = "Kernhundwelpe", fr = "Chiot du Magma", es = "Cachorro de can del Núcleo", pt = "Filhote de Cão-magma", ru = "Щенок гончей Недр", pl = "Szczenię ogara otchłani", tr = "Çekirdek Tazısı Yavrusu", it = "Cucciolo di segugio del nucleo", ja = "コアハウンドの子犬", zh = "熔火恶犬幼崽", ko = "새끼 화산 사냥개" }
+display = 30462
+
+[[companion]]
+key = "wolpertinger"
+name = { en = "Wolpertinger", de = "Wolpertinger", fr = "Wolpertinger", es = "Wolpertinger", pt = "Wolpertinger", ru = "Wolpertinger", pl = "Wolpertinger", tr = "Wolpertinger", it = "Wolpertinger", ja = "ヴォルパーティンガー", zh = "鹿角小兔", ko = "볼퍼팅어" }
+display = 22349
+
+[[companion]]
+key = "nether_ray_fry"
+name = { en = "Nether Ray Fry", de = "Nether Ray Fry", fr = "Nether Ray Fry", es = "Nether Ray Fry", pt = "Nether Ray Fry", ru = "Nether Ray Fry", pl = "Nether Ray Fry", tr = "Nether Ray Fry", it = "Nether Ray Fry", ja = "ネザーレイの稚魚", zh = "虚空鳐幼崽", ko = "새끼 황천 가오리" }
+display = 25457
+
+[[companion]]
+key = "netherwhelp"
+name = { en = "Netherwhelp", de = "Netherwhelp", fr = "Netherwhelp", es = "Netherwhelp", pt = "Netherwhelp", ru = "Netherwhelp", pl = "Netherwhelp", tr = "Netherwhelp", it = "Netherwhelp", ja = "ネザーウェルプ", zh = "小虚空龙", ko = "새끼 황천 용" }
+display = 17723
+
+[[companion]]
+key = "mini_onyxia"
+name = { en = "Onyxian Whelpling", de = "Onyxian Whelpling", fr = "Onyxian Whelpling", es = "Onyxian Whelpling", pt = "Onyxian Whelpling", ru = "Onyxian Whelpling", pl = "Onyxian Whelpling", tr = "Onyxian Whelpling", it = "Onyxian Whelpling", ja = "オニクシアン・ウェルプリング", zh = "奥妮克希亚雏龙", ko = "새끼 오닉시아 용" }
+display = 30356
+
+[[companion]]
+key = "lil_kt"
+name = { en = "Lil' K.T.", de = "Lil' K.T.", fr = "Lil' K.T.", es = "Lil' K.T.", pt = "Lil' K.T.", ru = "Lil' K.T.", pl = "Lil' K.T.", tr = "Lil' K.T.", it = "Lil' K.T.", ja = "リル・K.T.", zh = "小克", ko = "꼬마 KT" }
+display = 30507
+
+[[companion]]
+key = "pint_sized_pachyderm"
+name = { en = "Pint-Sized Pink Pachyderm", de = "Pint-Sized Pink Pachyderm", fr = "Pint-Sized Pink Pachyderm", es = "Pint-Sized Pink Pachyderm", pt = "Pint-Sized Pink Pachyderm", ru = "Pint-Sized Pink Pachyderm", pl = "Pint-Sized Pink Pachyderm", tr = "Pint-Sized Pink Pachyderm", it = "Pint-Sized Pink Pachyderm", ja = "ちっちゃなピンクの象", zh = "迷你粉红象", ko = "꼬마 분홍 코끼리" }
+display = 22629
+
+[[companion]]
+key = "toothy"
+name = { en = "Toothy", de = "Toothy", fr = "Toothy", es = "Toothy", pt = "Toothy", ru = "Toothy", pl = "Toothy", tr = "Toothy", it = "Toothy", ja = "トゥーシー", zh = "小牙", ko = "이빨이" }
+display = 22388
+
+[[companion]]
+key = "stinker"
+name = { en = "Stinker", de = "Stinker", fr = "Stinker", es = "Stinker", pt = "Stinker", ru = "Stinker", pl = "Stinker", tr = "Stinker", it = "Stinker", ja = "スティンカー", zh = "臭臭", ko = "냄새쟁이" }
+display = 16633
+
+[[companion]]
+key = "captured_firefly"
+name = { en = "Captured Firefly", de = "Captured Firefly", fr = "Captured Firefly", es = "Captured Firefly", pt = "Captured Firefly", ru = "Captured Firefly", pl = "Captured Firefly", tr = "Captured Firefly", it = "Captured Firefly", ja = "捕まえたホタル", zh = "捕获的萤火虫", ko = "잡힌 반딧불이" }
+display = 20042
+
+[[companion]]
+key = "grunty"
+name = { en = "Grunty", de = "Grunty", fr = "Grunty", es = "Grunty", pt = "Grunty", ru = "Grunty", pl = "Grunty", tr = "Grunty", it = "Grunty", ja = "グランティ", zh = "咕噜提", ko = "그런티" }
+display = 29348

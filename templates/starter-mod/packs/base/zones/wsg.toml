@@ -1,0 +1,302 @@
+# Warsong Gulch, "The Burning Legion".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "wsg"
+order = 2
+name = { en = "Warsong Gulch", de = "Kriegshymnenschlucht", fr = "Goulet des Chanteguerres", es = "Garganta Grito de Guerra", pt = "Garganta Brado Guerreiro", ru = "Ущелье Песни Войны", pl = "Wąwóz Pieśni Wojennej", tr = "Savaş Şarkısı Vadisi", it = "Forra Canto di Guerra", ja = "ウォーソング渓谷", zh = "战歌峡谷", ko = "전쟁노래 협곡" }
+subtitle = { en = "The Burning Legion", de = "Die Brennende Legion", fr = "La Légion ardente", es = "La Legión Ardiente", pt = "A Legião Ardente", ru = "Пылающий Легион", pl = "Płonący Legion", tr = "Yanan Lejyon", it = "La Legione Infuocata", ja = "バーニング・レギオン", zh = "燃烧军团", ko = "불타는 군단" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_BG_winWSG"
+map = 489
+map_name = "PVPZone03"
+area = 3277
+center = [1202.5, 1445.8]
+radius = 100.0
+map_bounds = [2041.67, 895.83, 1627.08, 862.5]
+health_factor = 1.17
+gold_factor = 1.22
+late_factor = 0.0
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+weather = { fine = 85, rain = 15 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = 20.0
+pitch = 42.0
+distance = 16.0
+lift = 0.0
+scale = 0.155
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 100
+name = { en = "Burning Imp", de = "Brennender Wichtel", fr = "Diablotin ardent", es = "Diablillo ardiente", pt = "Diabrete Ardente", ru = "Пылающий бес", pl = "Płonący chochlik", tr = "Yanan İmp", it = "Imp infuocato", ja = "燃えるインプ", zh = "燃烧小鬼", ko = "불타는 임프" }
+type = "demon"
+display = 4449
+icon = "Spell_Shadow_SummonImp"
+health = 26
+damage = 4
+swing = 1.6
+speed = 5.2
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 101
+name = { en = "Felhound", de = "Teufelshund", fr = "Gangrechien", es = "Sabueso vil", pt = "Cão Vil", ru = "Гончая Скверны", pl = "Ogar Zła", tr = "Fel Tazısı", it = "Vilsegugio", ja = "フェルハウンド", zh = "地狱犬", ko = "지옥사냥개" }
+type = "demon"
+display = 850
+icon = "Spell_Shadow_SummonFelHunter"
+health = 22
+damage = 4
+swing = 1.4
+speed = 7.6
+cost = 1.0
+from = 0.7
+size = 0.8
+
+[[zone.enemy]]
+entry = 108
+name = { en = "Fel Bat", de = "Teufelsfledermaus", fr = "Chauve-souris gangrenée", es = "Murciélago vil", pt = "Morcego Vil", ru = "Нетопырь Скверны", pl = "Nietoperz Zła", tr = "Fel Yarasası", it = "Pipistrello vile", ja = "フェル・バット", zh = "邪能蝙蝠", ko = "지옥 박쥐" }
+type = "demon"
+display = 4185
+icon = "Ability_Hunter_Pet_Bat"
+health = 22
+damage = 5
+swing = 1.3
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 103
+name = { en = "Satyr Shadowcaster", de = "Schattenwirker der Satyrn", fr = "Satyre lance-ombre", es = "Sátiro lanzasombras", pt = "Sátiro Conjurador de Sombras", ru = "Сатир-чародей Тьмы", pl = "Satyr-czarownik cienia", tr = "Satir Gölge Büyücüsü", it = "Satiro Lanciaombre", ja = "サテュロス・シャドウキャスター", zh = "萨特暗影施法者", ko = "사티로스 그림자술사" }
+type = "demon"
+display = 2011
+icon = "Spell_Shadow_SummonFelHunter"
+health = 34
+damage = 7
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 102
+name = { en = "Satyr Trickster", de = "Satyrschwindler", fr = "Satyre filou", es = "Sátiro embaucador", pt = "Sátiro Trapaceiro", ru = "Сатир-обманщик", pl = "Satyr-oszust", tr = "Satir Düzenbaz", it = "Satiro imbroglione", ja = "サテュロス・トリックスター", zh = "萨特骗子", ko = "사티로스 사기꾼" }
+type = "demon"
+display = 467
+icon = "Spell_Shadow_SummonFelHunter"
+health = 40
+damage = 6
+swing = 1.8
+speed = 5.4
+cost = 1.5
+from = 3.0
+
+[[zone.enemy]]
+entry = 104
+name = { en = "Voidwalker", de = "Leerwandler", fr = "Marcheur du Vide", es = "Abisario", pt = "Emissário do Vácuo", ru = "Демон Бездны", pl = "Wędrowiec Pustki", tr = "Boşluk Yürüyen", it = "Vuotante", ja = "ヴォイドウォーカー", zh = "虚空行者", ko = "보이드워커" }
+type = "demon"
+display = 1130
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 130
+damage = 10
+swing = 2.2
+speed = 4.4
+cost = 3.0
+from = 4.5
+size = 1.1
+
+[[zone.enemy]]
+entry = 105
+name = { en = "Succubus", de = "Sukkubus", fr = "Succube", es = "Súcubo", pt = "Súcubo", ru = "Суккуб", pl = "Sukub", tr = "Succubus", it = "Succube", ja = "サキュバス", zh = "魅魔", ko = "서큐버스" }
+type = "demon"
+display = 4162
+icon = "Spell_Shadow_SummonSuccubus"
+health = 60
+damage = 9
+swing = 1.5
+speed = 6.4
+cost = 2.0
+from = 6.0
+
+[[zone.enemy]]
+entry = 109
+name = { en = "Fire Imp", de = "Feuerwichtel", fr = "Diablotin de feu", es = "Diablillo de fuego", pt = "Diabrete de Fogo", ru = "Огненный бес", pl = "Ognisty chochlik", tr = "Ateş İmpi", it = "Imp del fuoco", ja = "ファイア・インプ", zh = "火焰小鬼", ko = "화염 임프" }
+type = "demon"
+display = 12190
+icon = "Spell_Shadow_SummonImp"
+health = 40
+damage = 8
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.5
+size = 0.17
+role = { exploder = { spell = 9874, burst = 7670, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 110
+name = { en = "Mana Fiend", de = "Manaungeheuer", fr = "Démon de mana", es = "Maligno de maná", pt = "Demônio de Mana", ru = "Исчадие маны", pl = "Demon many", tr = "Mana Canavarı", it = "Demone del mana", ja = "マナ・フィーンド", zh = "法力怨灵", ko = "마나 마귀" }
+type = "demon"
+display = 14252
+icon = "Spell_Shadow_ManaFeed"
+health = 190
+damage = 13
+swing = 2.2
+speed = 5.0
+cost = 3.5
+from = 9.0
+size = 0.5
+
+[[zone.elite]]
+entry = 106
+name = { en = "Felguard Elite", de = "Elite-Teufelswache", fr = "Gangregarde d'élite", es = "Guardia vil de élite", pt = "Guarda Vil de Elite", ru = "Элитный страж Скверны", pl = "Elitarna Straż Zła", tr = "Elit Fel Muhafız", it = "Vilguardia d'élite", ja = "フェルガード・エリート", zh = "恶魔卫士精英", ko = "지옥수호병 정예" }
+type = "demon"
+display = 5047
+icon = "Spell_Shadow_SummonFelGuard"
+health = 650
+damage = 20
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 2.0
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.elite]]
+entry = 107
+name = { en = "Infernal", de = "Höllenbestie", fr = "Infernal", es = "Infernal", pt = "Infernal", ru = "Инфернал", pl = "Piekielnik", tr = "Cehennem Yaratığı", it = "Infernale", ja = "インファーナル", zh = "地狱火", ko = "지옥불정령" }
+type = "demon"
+display = 169
+icon = "Spell_Shadow_SummonInfernal"
+health = 900
+damage = 26
+swing = 2.4
+speed = 4.6
+cost = 14.0
+from = 8.5
+size = 1.25
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 0, burst = 2120, radius = 4.5, warn = 1.6, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { nova = { spell = 8349, radius = 7.0, warn = 1.6 } }
+
+[[zone.elite]]
+entry = 111
+name = { en = "Doomguard", de = "Verdammniswache", fr = "Garde funeste", es = "Guardia apocalíptico", pt = "Guarda da Perdição", ru = "Страж Судьбы", pl = "Strażnik zagłady", tr = "Kıyamet Muhafızı", it = "Guardia Fatale", ja = "ドゥームガード", zh = "末日守卫", ko = "파멸의 수호병" }
+type = "demon"
+display = 433
+icon = "Spell_Shadow_SummonInfernal"
+health = 1100
+damage = 30
+swing = 2.4
+speed = 5.4
+cost = 15.0
+from = 13.0
+size = 0.97
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { rain = { spell = 5740, count = 3, radius = 4.0, spread = 9.0, warn = 1.8, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.boss]]
+entry = 190
+name = { en = "Doomguard Commander", de = "Kommandant der Verdammniswache", fr = "Commandant garde funeste", es = "Comandante guardia apocalíptico", pt = "Comandante Guarda da Perdição", ru = "Командир стражей Судьбы", pl = "Dowódca Strażników zagłady", tr = "Kıyamet Muhafızı Komutanı", it = "Comandante Guardia Fatale", ja = "ドゥームガード・コマンダー", zh = "末日守卫指挥官", ko = "파멸의 수호병 사령관" }
+type = "demon"
+display = 68
+icon = "Spell_Shadow_SummonInfernal"
+health = 3600
+damage = 22
+speed = 5.5
+minute = 3
+yell = { en = "Your world is ours to burn!", de = "Eure Welt gehört uns, um sie zu verbrennen!", fr = "Votre monde est à nous, pour le brûler !", es = "¡Vuestro mundo es nuestro para quemarlo!", pt = "Seu mundo é nosso para queimar!", ru = "Ваш мир наш, чтобы сжечь его!", pl = "Wasz świat jest nasz, by go spalić!", tr = "Dünyanız bizim yakmamız için!", it = "Il vostro mondo è nostro da bruciare!", ja = "貴様らの世界は我らが焼き尽くす！", zh = "你们的世界任由我们焚烧！", ko = "너희 세상은 우리가 불태울 것이다!" }
+kit = "doomguard_commander"
+
+[[zone.boss]]
+entry = 191
+name = { en = "Mannoroth's Herald", de = "Mannoroths Herold", fr = "Héraut de Mannoroth", es = "Heraldo de Mannoroth", pt = "Arauto de Mannoroth", ru = "Вестник Маннорота", pl = "Herold Mannorotha", tr = "Mannoroth'un Müjdecisi", it = "Araldo di Mannoroth", ja = "マノロスの使者", zh = "玛诺洛斯的使者", ko = "만노로스의 전령" }
+type = "demon"
+display = 2879
+icon = "Spell_Shadow_SummonInfernal"
+health = 9000
+damage = 30
+speed = 6.0
+size = 1.8
+minute = 6
+yell = { en = "Kneel before the Legion!", de = "Kniet vor der Legion!", fr = "Agenouillez-vous devant la Légion !", es = "¡Arrodillaos ante la Legión!", pt = "Ajoelhem-se diante da Legião!", ru = "Преклонитесь перед Легионом!", pl = "Padnijcie na kolana przed Legionem!", tr = "Lejyon'un önünde diz çök!", it = "Inginocchiatevi davanti alla Legione!", ja = "リージョンの前にひざまずけ！", zh = "向燃烧军团跪下！", ko = "군단 앞에 무릎 꿇어라!" }
+kit = "mannoroths_herald"
+
+[[zone.boss]]
+entry = 192
+name = { en = "Varimathras", de = "Varimathras", fr = "Varimathras", es = "Varimathras", pt = "Varimathras", ru = "Вариматас", pl = "Varimathras", tr = "Varimathras", it = "Varimathras", ja = "ヴァリマスラス", zh = "瓦里玛萨斯", ko = "바리마트라스" }
+type = "demon"
+display = 130
+icon = "Spell_Shadow_SummonInfernal"
+health = 17000
+damage = 38
+speed = 6.2
+size = 2.7
+minute = 9
+yell = { en = "The dreadlords remember Warsong. Do you?", de = "Die Schreckenslords erinnern sich an die Kriegshymne. Und du?", fr = "Les seigneurs de l'effroi se souviennent des Chanteguerres. Et toi ?", es = "Los señores del terror recuerdan Grito de Guerra. ¿Y tú?", pt = "Os lordes do terror se lembram de Brado Guerreiro. E você?", ru = "Повелители ужаса помнят Песню Войны. А ты?", pl = "Władcy grozy pamiętają Pieśń Wojenną. A ty?", tr = "Dehşet lordları Savaş Şarkısı'nı hatırlar. Siz hatırlıyor musunuz?", it = "I signori del terrore ricordano Canto di Guerra. E voi?", ja = "ドレッドロードたちはウォーソングを覚えている。貴様はどうだ？", zh = "恐惧魔王们记得战歌。你还记得吗？", ko = "공포의 군주들은 전쟁노래를 기억한다. 너는 기억하느냐?" }
+kit = "varimathras"
+
+[[zone.boss]]
+entry = 194
+name = { en = "Lord Hel'nurath", de = "Lord Hel'nurath", fr = "Seigneur Hel'nurath", es = "Señor Hel'nurath", pt = "Lorde Hel'nurath", ru = "Лорд Хел'нурат", pl = "Lord Hel'nurath", tr = "Lord Hel'nurath", it = "Lord Hel'nurath", ja = "ヘルヌラス卿", zh = "赫尔努拉斯领主", ko = "군주 헬누라스" }
+type = "demon"
+display = 8609
+icon = "Spell_Shadow_SummonInfernal"
+health = 28000
+damage = 46
+speed = 6.2
+size = 3.27
+minute = 12
+yell = { en = "Who dares summon Hel'nurath? Your soul is forfeit!", de = "Wer wagt es, Hel'nurath zu beschwören? Deine Seele ist verwirkt!", fr = "Qui ose invoquer Hel'nurath ? Ton âme est perdue !", es = "¿Quién se atreve a invocar a Hel'nurath? ¡Tu alma está perdida!", pt = "Quem ousa invocar Hel'nurath? Sua alma está perdida!", ru = "Кто смеет призывать Хел'нурата? Твоя душа потеряна!", pl = "Kto śmie przyzywać Hel'nuratha? Twoja dusza jest przepadła!", tr = "Hel'nurath'ı çağırmaya kim cüret eder? Ruhun elden gitti!", it = "Chi osa evocare Hel'nurath? La tua anima è perduta!", ja = "ヘルヌラスを呼び出すのは何者だ？貴様の魂はもらった！", zh = "是谁胆敢召唤赫尔努拉斯？你的灵魂归我了！", ko = "누가 감히 헬누라스를 소환했느냐? 네 영혼은 내 것이다!" }
+kit = "lord_helnurath"
+
+[[zone.boss]]
+entry = 193
+name = { en = "Lord Kazzak", de = "Lord Kazzak", fr = "Seigneur Kazzak", es = "Señor Kazzak", pt = "Lorde Kazzak", ru = "Лорд Каззак", pl = "Lord Kazzak", tr = "Lord Kazzak", it = "Lord Kazzak", ja = "カザック卿", zh = "卡扎克领主", ko = "군주 카자크" }
+type = "demon"
+display = 12449
+icon = "Spell_Shadow_SummonInfernal"
+health = 52500
+damage = 54
+speed = 6.0
+size = 1.5
+minute = 16
+yell = { en = "All mortals will perish!", de = "Alle Sterblichen werden vergehen!", fr = "Tous les mortels périront !", es = "¡Todos los mortales perecerán!", pt = "Todos os mortais perecerão!", ru = "Все смертные погибнут!", pl = "Wszyscy śmiertelnicy zginą!", tr = "Tüm ölümlüler yok olacak!", it = "Tutti i mortali periranno!", ja = "定命の者はすべて滅びるのだ！", zh = "所有凡人都将灭亡！", ko = "모든 필멸자는 멸망하리라!" }
+final = true
+kit = "lord_kazzak"

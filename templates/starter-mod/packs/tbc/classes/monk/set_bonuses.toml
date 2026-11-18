@@ -1,0 +1,123 @@
+# The monk's 8-piece set bonuses: one change to one of its spells per tier (docs/HOWTO-CONTENT.md "A set bonus").
+
+# Ours (TUNE): the family of the original's Common bonus (leaps to a second enemy for 50%), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "monk_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Keg Smash leaps to a second enemy for {v}% of its damage.", de = "Fasshieb springt auf einen zweiten Feind über, für {v}% seines Schadens.", fr = "Bris de tonneau bondit sur un second ennemi pour {v}% de ses dégâts.", es = "Machacar barril salta a un segundo enemigo con un {v}% de su daño.", pt = "Barrilada salta para um segundo inimigo com {v}% do seu dano.", ru = "«Удар бочонком» перескакивает на второго врага с {v}% урона.", pl = "Rozbicie beczki przeskakuje na drugiego wroga, zadając {v}% swoich obrażeń.", tr = "Fıçı Parçalama, hasarının %{v}'i ile ikinci bir düşmana sıçrar.", it = "Colpo di barile balza su un secondo nemico per il {v}% dei suoi danni.", ja = "ケグ・スマッシュが2体目の敵に飛び移り、そのダメージの{v}%を与えます。", zh = "醉酿投会跳跃到第二个敌人身上，造成相当于其伤害{v}%的伤害。", ko = "맥주통 휘두르기가 두 번째 적에게 튀어 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.5, play = { cleave = { keys = ["keg_smash"], n = 1, radius = 8.0, stun = 0.0 } } }]
+shows = "v"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Uncommon bonus (comes back and strikes again for 50%), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "monk_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Chi Explosion comes back, striking again for {v}%.", de = "Chiexplosion kehrt zurück und trifft erneut für {v}%.", fr = "Explosion de chi revient et frappe de nouveau pour {v}%.", es = "Explosión de chi regresa y vuelve a golpear con un {v}%.", pt = "Explosão de Chi volta, atingindo de novo com {v}%.", ru = "«Взрыв ци» возвращается и бьёт ещё раз на {v}%.", pl = "Eksplozja chi wraca, uderzając ponownie za {v}%.", tr = "Chi İnfilakı geri döner ve %{v} ile yeniden vurur.", it = "Esplosione di Chi ritorna, colpendo di nuovo per il {v}%.", ja = "チー・エクスプロージョンが戻ってきて、{v}%のダメージで再び命中します。", zh = "真气爆炸会返回，再次打击，造成{v}%的伤害。", ko = "기 폭발이 되돌아와 {v}%의 피해로 다시 적중합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.5, play = { recast = { keys = ["chi_explosion"], delay = 0.3 } } }]
+shows = "v"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Rare bonus (+2 targets, +20% damage), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "monk_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Blackout Kick strikes {v} more enemies and deals {v2}% more damage.", de = "Blackout-Tritt trifft {v} Feinde mehr und verursacht {v2}% mehr Schaden.", fr = "Coup de pied éclipse frappe {v} ennemis de plus et inflige {v2}% de dégâts en plus.", es = "Patada de apagón alcanza a {v} enemigos más e inflige un {v2}% más de daño.", pt = "Chute Apagão atinge mais {v} inimigos e causa {v2}% a mais de dano.", ru = "«Затмевающий удар» поражает больше врагов (+{v}) и наносит на {v2}% больше урона.", pl = "Kopnięcie zaćmienia trafia o {v} wrogów więcej i zadaje {v2}% więcej obrażeń.", tr = "Karartma Tekmesi {v} düşmana daha vurur ve %{v2} daha fazla hasar verir.", it = "Calcio Blackout colpisce {v} nemici in più e infligge il {v2}% di danni in più.", ja = "ブラックアウト・キックが追加で{v}体の敵に命中し、ダメージが{v2}%増加します。", zh = "幻灭踢额外击中{v}个敌人，造成的伤害提高{v2}%。", ko = "후려차기가 적을 {v}명 더 공격하고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["blackout_kick"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["blackout_kick"] }]
+mods_v = 0.2
+shows = "v2"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Epic bonus (moves with the hero, lasts 50% longer), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "monk_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Rushing Jade Wind moves with you and lasts {v}% longer.", de = "Rauschender Jadewind wandert mit dir und hält {v}% länger an.", fr = "Vent de jade impétueux se déplace avec vous et dure {v}% plus longtemps.", es = "Viento de jade impetuoso se mueve contigo y dura un {v}% más.", pt = "Vento de Jade Impetuoso se move com você e dura {v}% a mais.", ru = "«Порыв нефритового ветра» движется вместе с вами и длится на {v}% дольше.", pl = "Pędzący nefrytowy wiatr porusza się razem z tobą i trwa o {v}% dłużej.", tr = "Hücum Eden Yeşim Rüzgarı seninle birlikte hareket eder ve %{v} daha uzun sürer.", it = "Vento di giada impetuoso si muove con te e dura il {v}% in più.", ja = "ラッシング・ジェイド・ウィンドが自分と共に移動し、持続時間が{v}%延びます。", zh = "碧玉疾风会随你移动，持续时间延长{v}%。", ko = "비취 돌풍이 당신을 따라 움직이며 지속시간이 {v}% 길어집니다." }
+
+[[set_bonus.part]]
+mods = [{ follow = ["rushing_jade_wind"] }]
+mods_v = 0.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ duration = ["rushing_jade_wind"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Legendary bonus (leaps to 3 more enemies for 75%), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "monk_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Rising Sun Kick leaps to {v} more enemies for 75% of its damage.", de = "Tritt der aufgehenden Sonne springt auf {v} weitere Feinde über, für 75% seines Schadens.", fr = "Coup de pied du soleil levant bondit sur {v} ennemis de plus pour 75% de ses dégâts.", es = "Patada del sol naciente salta a {v} enemigos más con un 75% de su daño.", pt = "Chute do Sol Nascente salta para mais {v} inimigos com 75% do seu dano.", ru = "«Удар восходящего солнца» перескакивает на дополнительных врагов ({v}) с 75% урона.", pl = "Kopnięcie wschodzącego słońca przeskakuje na {v} kolejnych wrogów, zadając 75% swoich obrażeń.", tr = "Doğan Güneş Tekmesi, hasarının %75'i ile {v} düşmana daha sıçrar.", it = "Calcio del sole nascente balza su {v} nemici in più per il 75% dei suoi danni.", ja = "ライジング・サン・キックが追加で{v}体の敵に飛び移り、そのダメージの75%を与えます。", zh = "旭日东升踢会跳跃到{v}个额外的敌人身上，造成相当于其伤害75%的伤害。", ko = "해오름차기가 적 {v}명에게 더 튀어 피해의 75%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 3.0, play = { splash = { keys = ["rising_sun_kick"], share = 0.75, radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+
+# Ours (TUNE): plan section 5, the PvP bonus: a nova widens in place of striking more (+50% wider, +200% damage, 40% sooner, +100% against held enemies).
+[[set_bonus]]
+key = "monk_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Leg Sweep is {v}% wider, deals 200% more damage and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Fußfeger ist {v}% weiter, verursacht 200% mehr Schaden und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Balayage de jambe est {v}% plus large, inflige 200% de dégâts en plus et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Barrido de pierna es un {v}% más amplio, inflige un 200% más de daño y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Rasteira é {v}% mais ampla, causa 200% mais dano e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Круговой удар ногой шире на {v}%, наносит на 200% больше урона и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Podcięcie nogą jest o {v}% szersze, zadaje o 200% więcej obrażeń i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Bacak Süpürme %{v} daha geniştir, %200 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Spazzata di gambe è più ampia del {v}%, infligge il 200% di danni in più e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "レッグ・スウィープの範囲が{v}%広がり、ダメージが200%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "扫堂腿的范围扩大{v}%，造成的伤害提高200%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "팽이차기의 범위가 {v}% 넓어지고, 피해가 200% 증가하며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["leg_sweep"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["leg_sweep"] }]
+mods_v = 2.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["leg_sweep"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true
+
+
+[[set_bonus]]
+key = "monk_exotic_8"
+tier = "exotic"
+pieces = 8
+mechanic = { kind = "return_orb", spell = "leg_sweep", delay = 2.0, speed = 18.0, radius = 1.5, damage = 1.2, cap = 20 }
+marker = { entry = 990101, display = 90103, scale = 0.65 }
+text = { en = "Backswing: Leg Sweep leaves a Chi Orb that rolls back to you after 2 seconds. It deals 120% of Leg Sweep damage once to each enemy it passes. Up to 20 orbs can be active at a time.", de = "Rückschwung: Fußfeger hinterlässt eine Chi-Kugel, die nach 2 Sekunden zu dir zurückrollt. Sie fügt jedem Gegner auf dem Rückweg einmal 120 % Fußfeger-Schaden zu. Bis zu 20 Kugeln können gleichzeitig aktiv sein.", fr = "Retour de chi : Balayage de jambe laisse un orbe de chi qui revient vers vous après 2 s et inflige une fois 120 % des dégâts du balayage à chaque ennemi sur son trajet. Maximum 20 orbes actifs.", es = "Barrido de vuelta: Barrido de pierna deja un orbe de chi que regresa tras 2 s e inflige una vez el 120 % del daño del barrido a cada enemigo que atraviesa. Hasta 20 orbes activos.", pt = "Retorno do Chi: Rasteira deixa um orbe de chi que volta após 2 s, causando uma vez 120% do dano da Rasteira a cada inimigo no caminho. Até 20 orbes ativos.", ru = "Обратный взмах: Круговой удар ногой оставляет сферу ци, которая возвращается через 2 с и наносит каждому врагу на пути 120% урона удара один раз. До 20 сфер одновременно.", it = "Powrotny zamach: Podcięcie nogą zostawia kulę chi, która wraca po 2 s i raz zadaje każdemu wrogowi po drodze 120% obrażeń podcięcia. Maksymalnie 20 aktywnych kul.", pl = "Geri Savuruş: Ayak Süpürme 2 sn sonra sana dönen bir Chi Küresi bırakır. Küre, geçtiği her düşmana bir kez Ayak Süpürme hasarının %120'sini verir. En fazla 20 küre etkin olabilir.", tr = "Ritorno del Chi: Spazzata di gambe lascia una sfera di chi che torna dopo 2 s e infligge una volta il 120% dei danni della spazzata a ciascun nemico sul percorso. Fino a 20 sfere attive.", ja = "バックスウィング：レッグ・スウィープがチー・オーブを残し、2秒後にあなたのもとへ転がり戻ります。通過した敵それぞれに1回ずつレッグ・スウィープの120%のダメージを与えます。同時に最大20個まで存在できます。", zh = "回旋：扫堂腿会留下一个真气球，2秒后滚回你身边。它对经过的每个敌人造成一次相当于扫堂腿120%的伤害。最多同时存在20个真气球。", ko = "되돌아치기: 팽이차기가 기의 구슬을 남기며, 구슬은 2초 후 당신에게 굴러 돌아옵니다. 지나가는 적마다 한 번씩 팽이차기 피해의 120%를 줍니다. 구슬은 동시에 최대 20개까지 존재할 수 있습니다." }
+
+[[set_bonus]]
+key = "monk_exotic_4"
+tier = "exotic"
+pieces = 4
+mechanic = { kind = "nova", spell = "leg_sweep", radius = 13.12336, cooldown = 6.0 }
+text = { en = "Leg Sweep has a 12 m radius and a 6-second base cooldown instead of 18 seconds. It no longer stuns.", de = "Fußfeger hat 12 m Radius und 6 statt 18 Sekunden Grundabklingzeit. Er betäubt nicht mehr.", fr = "Balayage de jambe a un rayon de 12 m et un temps de recharge de base de 6 s au lieu de 18 s. Il n’étourdit plus.", es = "Barrido de pierna tiene un radio de 12 m y 6 s de reutilización base en vez de 18 s. Ya no aturde.", pt = "Rasteira tem 12 m de raio e recarga base de 6 s em vez de 18 s. Não atordoa mais.", ru = "Круговой удар ногой действует в радиусе 12 м, восстанавливается за 6 с вместо 18 с и больше не оглушает.", it = "Podcięcie nogą ma promień 12 m i odnawia się po 6 s zamiast 18 s. Nie ogłusza już.", pl = "Ayak Süpürme'nin yarıçapı 12 m, temel bekleme süresi 18 yerine 6 sn olur. Artık sersemletmez.", tr = "Spazzata di gambe ha un raggio di 12 m e un recupero base di 6 s anziché 18 s. Non stordisce più.", ja = "レッグ・スウィープの半径が12メートルになり、基本クールダウンが18秒から6秒になります。スタン効果はなくなります。", zh = "扫堂腿的半径为12码，基础冷却时间为6秒而非18秒。它不再造成昏迷。", ko = "팽이차기의 반경이 12미터가 되고 기본 재사용 대기시간이 18초 대신 6초가 됩니다. 더 이상 기절시키지 않습니다." }

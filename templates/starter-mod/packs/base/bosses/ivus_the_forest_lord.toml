@@ -1,0 +1,21 @@
+# Ivus the Forest Lord's abilities, Alterac Valley.
+
+[[boss]]
+key = "ivus_the_forest_lord"
+
+[[boss.kit]]
+every = 7.0
+ability = { pool = { spell = 16914, burst = 339, radius = 9.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 5176 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { rain = { spell = 2912, count = 3, radius = 5.0, spread = 8.0, warn = 2.8, factor = 1.8 } }
+
+# AS's tag 22 kind 1 (totems) not in: every 19 s.
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

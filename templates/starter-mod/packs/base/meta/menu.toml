@@ -1,0 +1,135 @@
+# The hero menu's look (`survivors_content::menu`): the dressing over the menu's stage, the 3D
+# map preview's framing and the platform the heroes stand on in front of a map.
+#
+# The Menu Designer (dev build, Ctrl+Shift+H in the hero menu) edits all of it live and saves
+# here; a zone's own framing goes into its zone file as `[zone.menu_view]`. Stage yards are the
+# menu scene's yards; screen places are -1..1 with y up; each `alpha` is at `azsMenuStage` 1.
+# `over_map = true` keeps a piece while a map preview shows. The numbers are ours.
+key = "hero"
+# The time of day the land is lit at: "real" is the hour it is where the player sits (to the minute),
+# "zone" each zone's own `hour`. A view's own `hour` pins its zone either way; the Video window's
+# Time of Day, once the player holds an hour there, wins over both.
+clock = "real"
+
+# Every zone's preview unless its zone file names its own `menu_view` (same fields; a `focus` there
+# is the world point the view centres on, the arena's centre when left out).
+[map_view]
+# Quarter turns of the land about the focus (0..3, 0 looks north) and a further turn in degrees.
+turn = 0
+yaw = 0.0
+# The tilt toward the camera in degrees; how far behind the platform the terrain begins; a raise
+# or drop on screen; terrain yards to stage yards.
+pitch = 26.0
+distance = 16.0
+lift = 0.0
+scale = 0.14
+# The slow circle: radius and seconds per round.
+orbit = [1.4, 32.0]
+# The zone's fog start held within this band (a share of the depth), and the full haze's depth.
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[vignette]
+alpha = 0.51
+height = 1.85
+lift = -0.4
+reach = 0.45
+curve = 0.6
+over_map = true
+# Over a map: behind the platform and the heroes, darkening the landscape only.
+behind_platform = false
+
+[contact_shadow]
+alpha = 0.6
+width = 1.5
+length = 1.05
+over_map = true
+
+[cast_shadow]
+alpha = 0.4
+width = 0.95
+length = 2.1
+over_map = false
+
+[halo]
+alpha = 0.45
+size = 3.4
+rgb = [0.36, 0.33, 0.3]
+over_map = false
+
+[shafts]
+alpha = 0.3
+rgb = [0.74, 0.78, 0.84]
+over_map = false
+
+[mist]
+alpha = 0.06
+rgb = [1.0, 1.0, 1.0]
+# The banks' width and drift pace over the drawn ones; how much they differ (0 alike, 1 as drawn).
+width = 2.6
+speed = 2.5
+variation = 2.5
+over_map = true
+
+[aurora]
+alpha = 0.45
+rgb = [1.0, 1.0, 1.0]
+over_map = false
+
+[moon]
+alpha = 0.75
+size = 0.34
+at = [0.66, 0.7]
+over_map = false
+
+# The stage model's own particle streams: their strength (0 takes them away) and, with
+# `hue = <degrees>`, one colour for all of them.
+[stage_effects]
+alpha = 0.59
+over_map = true
+hue = 20.0
+
+# A colour over the map's landscape only, behind the platform and the heroes: black darkens it,
+# another colour tints it; `alpha` 0 leaves the land as it is.
+[map_overlay]
+alpha = 0.1
+rgb = [0.0, 0.0, 0.0]
+
+[platform]
+stone = "dungeons/textures/walls/mm_irnfg_stone_02.blp"
+# Stage yards one picture of the stone covers: smaller is finer and sharper; 0 stretches one picture
+# over the whole platform.
+stone_tile = 2.0
+shade = [0.65, 0.47]
+margin = 0.95
+# The two stone rings; without them a prop can be the floor.
+rings = true
+
+[[platform.prop]]
+model = "world/kalimdor/orgrimmar/passivedoodads/orgrimmarbonfire/orgrimmarbonfire01.m2"
+at = [-0.6, -0.37]
+nudge = [0.0, 0.0, 0.0]
+size = 0.34
+yaw = 0.0
+effects = true
+shown = true
+
+# A sword planted beside the fire.
+[[platform.prop]]
+model = "World/Azeroth/Elwynn/PassiveDoodads/BattleGladeSword/BattleGladeSword.m2"
+at = [-0.62, -0.37]
+nudge = [0.95, -0.65, 0.0]
+size = 0.75
+yaw = 1.0
+effects = false
+shown = true
+
+[[platform.prop]]
+model = "world/generic/goblin/passivedoodads/food/goblin_food_01.m2"
+at = [0.75, 0.0]
+nudge = [0.0, 0.0, 0.0]
+size = 0.8
+yaw = 0.0
+effects = false
+shown = true

@@ -1,0 +1,43 @@
+# The flavor line of a piece's profile that Common to Rare pieces show (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "plain_0"
+profile = 0
+text = { en = "Plain work, but it helps a blow land where it hurts.", de = "Schlichte Arbeit, aber sie hilft, dass ein Hieb dort trifft, wo er schmerzt.", fr = "Un travail simple, mais il aide un coup à porter là où ça fait mal.", es = "Trabajo sencillo, pero ayuda a que el golpe caiga donde duele.", pt = "Trabalho simples, mas ajuda o golpe a acertar onde dói.", ru = "Простая работа, но помогает удару попасть туда, где больно.", pl = "Prosta robota, ale pomaga trafić tam, gdzie boli.", tr = "Sade bir iş, ama darbenin canı acıtan yere inmesine yardım eder.", it = "Lavoro semplice, ma aiuta il colpo ad andare dove fa male.", ja = "簡素な作りだが、急所に一撃を届かせる助けになる。", zh = "做工朴实，却能让攻击落在要害。", ko = "평범한 솜씨지만, 일격이 아픈 곳에 꽂히도록 돕는다." }
+
+[[piece_lore]]
+key = "plain_1"
+profile = 1
+text = { en = "Sturdy, if nothing much to look at.", de = "Robust, wenn auch nicht sonderlich ansehnlich.", fr = "Solide, même si ça ne paie pas de mine.", es = "Resistente, aunque no sea gran cosa a la vista.", pt = "Resistente, ainda que sem graça.", ru = "Прочно, хоть и не на что посмотреть.", pl = "Solidne, choć nie ma na co patrzeć.", tr = "Sağlam, görünüşü pek bir şey olmasa da.", it = "Robusto, anche se non bello a vedersi.", ja = "見た目はともかく、頑丈。", zh = "结实耐用，只是不太好看。", ko = "튼튼하다. 볼품은 없지만." }
+
+[[piece_lore]]
+key = "plain_2"
+profile = 2
+text = { en = "Well fitted; it keeps its wearer fresh and ready.", de = "Gut angepasst; hält seinen Träger frisch und bereit.", fr = "Bien ajusté ; il garde son porteur frais et dispos.", es = "Bien ajustado; mantiene a quien lo lleva fresco y listo.", pt = "Bem ajustado; mantém quem o usa disposto e pronto.", ru = "Хорошо подогнано; хранит владельца бодрым и готовым.", pl = "Dobrze dopasowane; utrzymuje noszącego w gotowości.", tr = "İyi oturuyor; giyeni dinç ve hazır tutar.", it = "Ben calzato; mantiene chi lo indossa fresco e pronto.", ja = "よく体に合い、持ち主を常に万全に保つ。", zh = "非常合身；让穿戴者保持精力充沛。", ko = "몸에 잘 맞는다. 착용자를 상쾌하고 준비된 상태로 지켜 준다." }
+
+[[piece_lore]]
+key = "plain_3"
+profile = 3
+text = { en = "Light and well cut; it never slows you down.", de = "Leicht und gut geschnitten; bremst dich nie.", fr = "Léger et bien coupé ; il ne vous ralentit jamais.", es = "Ligero y bien cortado; nunca te frena.", pt = "Leve e bem cortado; nunca atrasa você.", ru = "Лёгкое и хорошо скроенное; никогда вас не замедлит.", pl = "Lekkie i dobrze skrojone; nigdy cię nie spowalnia.", tr = "Hafif ve iyi kesilmiş; seni asla yavaşlatmaz.", it = "Leggero e ben tagliato; non ti rallenta mai.", ja = "軽く仕立てが良く、決して動きを妨げない。", zh = "轻便合体；从不拖慢你的脚步。", ko = "가볍고 잘 재단되었다. 결코 발목을 잡지 않는다." }
+
+[[piece_lore]]
+key = "plain_4"
+profile = 4
+text = { en = "Simple, comfortable, and easy to rest in.", de = "Einfach, bequem und gut zum Ausruhen.", fr = "Simple, confortable, et reposant.", es = "Sencillo, cómodo y fácil para descansar.", pt = "Simples, confortável e fácil de descansar.", ru = "Простое, удобное, в нём легко отдыхать.", pl = "Proste, wygodne i dobre do odpoczynku.", tr = "Sade, rahat ve içinde dinlenmesi kolay.", it = "Semplice, comodo e ottimo per riposare.", ja = "簡素で着心地が良く、休むのに向いている。", zh = "简单舒适，便于休息。", ko = "단순하고 편안해서 쉬기에 좋다." }
+
+[[piece_lore]]
+key = "plain_5"
+profile = 5
+text = { en = "Thick and warm, made for long days on the road.", de = "Dick und warm, gemacht für lange Tage auf der Straße.", fr = "Épais et chaud, fait pour les longues journées sur la route.", es = "Grueso y abrigado, hecho para largos días de camino.", pt = "Grosso e quente, feito para longos dias na estrada.", ru = "Плотное и тёплое, для долгих дней в пути.", pl = "Grube i ciepłe, na długie dni w drodze.", tr = "Kalın ve sıcak, yolda geçen uzun günler için yapılmış.", it = "Spesso e caldo, fatto per lunghe giornate di viaggio.", ja = "厚く暖かい、長い旅路の日々のために作られた。", zh = "厚实温暖，为长途跋涉而制。", ko = "두껍고 따뜻하다. 길 위의 긴 나날을 위해 만들어졌다." }
+
+[[piece_lore]]
+key = "plain_6"
+profile = 6
+text = { en = "Cut for moving quickly and hitting hard.", de = "Geschnitten für schnelle Bewegung und harte Schläge.", fr = "Coupé pour bouger vite et frapper fort.", es = "Cortado para moverse rápido y golpear fuerte.", pt = "Cortado para se mover rápido e bater forte.", ru = "Скроено, чтобы двигаться быстро и бить сильно.", pl = "Skrojone do szybkiego ruchu i mocnych ciosów.", tr = "Hızlı hareket edip sert vurmak için biçilmiş.", it = "Tagliato per muoversi in fretta e colpire duro.", ja = "素早く動き、強く打つために仕立てられた。", zh = "剪裁利落，便于快速移动、重拳出击。", ko = "빠르게 움직이고 세게 치도록 재단되었다." }
+
+[[piece_lore]]
+key = "plain_7"
+profile = 7
+text = { en = "Its maker had a good eye, and so will its wearer.", de = "Sein Hersteller hatte ein gutes Auge, und sein Träger wird es auch haben.", fr = "Son artisan avait l'œil, et son porteur l'aura aussi.", es = "Su creador tenía buen ojo, y también lo tendrá quien lo lleve.", pt = "Quem o fez tinha bom olho, e quem o usa também terá.", ru = "У мастера был зоркий глаз — будет и у владельца.", pl = "Jego twórca miał dobre oko, i ty też będziesz mieć.", tr = "Yapanın gözü keskindi, giyeninki de öyle olacak.", it = "Chi lo ha fatto aveva buon occhio, e lo avrà anche chi lo indossa.", ja = "作り手は目利きだった。持ち主もそうなるだろう。", zh = "制作者眼光独到，穿戴者亦然。", ko = "만든 이의 눈썰미가 좋았으니, 입는 이도 그러하리라." }

@@ -1,0 +1,16 @@
+# Exarch Maladaar: Soul Scream, Ribbon of Souls, the Avatar of the Martyred.
+
+[[boss]]
+key = "exarch_maladaar"
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 32421, range = 12.0, arc = 90.0, warn = 1.4, factor = 2.2 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 32422 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

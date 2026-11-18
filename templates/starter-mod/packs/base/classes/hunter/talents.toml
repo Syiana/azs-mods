@@ -1,0 +1,550 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "hunter_beast_mastery"
+index = 0
+icon = "Ability_Hunter_BeastTaming"
+background = "HunterBeastMastery"
+name = { en = "Beast Mastery", de = "Tierherrschaft", fr = "Maîtrise des bêtes", es = "Dominio de las bestias", pt = "Domínio das Feras", ru = "Повелитель зверей", pl = "Władca zwierząt", tr = "Canavar Hakimiyeti", it = "Padronanza delle bestie", ja = "ビースト・マスタリー", zh = "野兽控制", ko = "야수" }
+
+[[talent_tree]]
+key = "hunter_marksmanship"
+index = 1
+icon = "Ability_Marksmanship"
+background = "HunterMarksmanship"
+name = { en = "Marksmanship", de = "Treffsicherheit", fr = "Précision", es = "Puntería", pt = "Precisão", ru = "Стрельба", pl = "Strzelectwo", tr = "Nişancılık", it = "Precisione di tiro", ja = "マークスマンシップ", zh = "射击", ko = "사격" }
+
+[[talent_tree]]
+key = "hunter_survival"
+index = 2
+icon = "Ability_Hunter_SwiftStrike"
+background = "HunterSurvival"
+name = { en = "Survival", de = "Überleben", fr = "Survie", es = "Supervivencia", pt = "Sobrevivência", ru = "Выживание", pl = "Przetrwanie", tr = "Hayatta Kalma", it = "Sopravvivenza", ja = "サバイバル", zh = "生存", ko = "생존" }
+
+[[talent]]
+key = "imp_hawk"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [1, 0.015] }]
+icon = "Spell_Nature_RavenForm"
+name = { en = "Improved Aspect of the Hawk", de = "Verbesserter Aspekt des Falken", fr = "Aspect du faucon amélioré", es = "Aspecto del halcón mejorado", pt = "Aspecto do Falcão Aprimorado", ru = "Улучшенный дух ястреба", pl = "Ulepszony Aspekt sokoła", tr = "Gelişmiş Şahin Görünümü", it = "Aspetto del falco migliorato", ja = "改良型アスペクト・オブ・ザ・ホーク", zh = "强化雄鹰守护", ko = "매의 상 연마" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "endurance_training"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.03] }]
+icon = "Spell_Nature_Reincarnation"
+name = { en = "Endurance Training", de = "Ausdauertraining", fr = "Entraînement à l'endurance", es = "Entrenamiento de resistencia", pt = "Treinamento de Resistência", ru = "Тренировка выносливости", pl = "Trening wytrzymałości", tr = "Dayanıklılık Eğitimi", it = "Addestramento alla resistenza", ja = "エンデュランス・トレーニング", zh = "耐久训练", ko = "지구력 훈련" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "imp_monkey"
+tree = 0
+row = 1
+col = 0
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "Ability_Hunter_AspectOfTheMonkey"
+name = { en = "Improved Aspect of the Monkey", de = "Verbesserter Aspekt des Affen", fr = "Aspect du singe amélioré", es = "Aspecto del mono mejorado", pt = "Aspecto do Macaco Aprimorado", ru = "Улучшенный дух обезьяны", pl = "Ulepszony Aspekt małpy", tr = "Gelişmiş Maymun Görünümü", it = "Aspetto della scimmia migliorato", ja = "改良型アスペクト・オブ・ザ・モンキー", zh = "强化灵猴守护", ko = "원숭이의 상 연마" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "pathfinding"
+tree = 0
+row = 1
+col = 2
+ranks = 2
+effects = [{ stat = [7, 0.04] }]
+icon = "Ability_Mount_JungleTiger"
+name = { en = "Pathfinding", de = "Pfadfinder", fr = "Éclaireur", es = "Rastreador", pt = "Desbravador", ru = "Следопыт", pl = "Tropiciel", tr = "Yol Bulma", it = "Orientamento", ja = "パスファインディング", zh = "寻路", ko = "길잡이" }
+text = { en = "Increases your movement speed by {v}%.", de = "Erhöht dein Bewegungstempo um {v}%.", fr = "Augmente ta vitesse de déplacement de {v}%.", es = "Aumenta tu velocidad de movimiento un {v}%.", pt = "Aumenta sua velocidade de movimento em {v}%.", ru = "Увеличивает твою скорость движения на {v}%.", pl = "Zwiększa szybkość ruchu o {v}%.", tr = "Hareket hızını {v}% artırır.", it = "Aumenta la tua velocità di movimento del {v}%.", ja = "移動速度が{v}%上昇します。", zh = "使你的移动速度提高{v}%。", ko = "이동 속도가 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "tame_beast"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_Hunter_BeastTaming"
+name = { en = "Tame Beast", de = "Wildtier zähmen", fr = "Apprivoisement", es = "Domar bestia", pt = "Domar Fera", ru = "Приручение", pl = "Oswajanie zwierząt", tr = "Canavar Evcilleştir", it = "Addomesticare bestia", ja = "テイム・ビースト", zh = "驯服野兽", ko = "야수 길들이기" }
+text = { en = "Milestone. A wolf fights at your side, biting what you shoot.", de = "Meilenstein. Ein Wolf kämpft an deiner Seite und beißt, worauf du schießt.", fr = "Jalon. Un loup combat à tes côtés et mord ce que tu vises.", es = "Hito. Un lobo lucha a tu lado y muerde lo que disparas.", pt = "Marco. Um lobo luta ao seu lado, mordendo o que você atira.", ru = "Веха. Волк сражается рядом с тобой и кусает тех, в кого ты стреляешь.", pl = "Kamień milowy. Wilk walczy u twego boku i gryzie to, do czego strzelasz.", tr = "Dönüm noktası. Yanında bir kurt savaşır, vurduğun şeyi ısırır.", it = "Traguardo. Un lupo combatte al tuo fianco e morde ciò che colpisci.", ja = "【マイルストーン】狼が共に戦い、あなたが射た敵に噛みつきます。", zh = "里程碑：一头狼在你身边作战，撕咬你射击的目标。", ko = "이정표. 늑대가 곁에서 싸우며, 당신이 쏜 적을 물어뜯습니다." }
+plays = [
+    { v = 0.0, play = { pet = { pet = "wolf", cleave = false } } },
+]
+
+[[talent]]
+key = "unleashed_fury"
+tree = 0
+row = 2
+col = 2
+ranks = 5
+effects = [{ stat = [17, 0.2] }]
+icon = "Ability_BullRush"
+name = { en = "Unleashed Fury", de = "Entfesselte Wut", fr = "Furie déchaînée", es = "Furia desatada", pt = "Fúria Libertada", ru = "Высвобожденная ярость", pl = "Rozpętana furia", tr = "Salınan Öfke", it = "Furia scatenata", ja = "アンリーシュド・フューリー", zh = "狂怒释放", ko = "해방된 분노" }
+text = { en = "Your pets deal {v}% more damage.", de = "Deine Begleiter verursachen {v}% mehr Schaden.", fr = "Tes familiers infligent {v}% de dégâts en plus.", es = "Tus mascotas infligen un {v}% más de daño.", pt = "Seus bichos de estimação causam {v}% a mais de dano.", ru = "Твои питомцы наносят на {v}% больше урона.", pl = "Twoje zwierzaki zadają o {v}% więcej obrażeń.", tr = "Evcil hayvanların {v}% daha fazla hasar verir.", it = "I tuoi animali infliggono il {v}% di danni in più.", ja = "ペットのダメージが{v}%増加します。", zh = "你的宠物造成的伤害提高{v}%。", ko = "소환수의 피해가 {v}% 증가합니다." }
+menu_v = 0.2
+
+[[talent]]
+key = "ferocity_hunter"
+tree = 0
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "INV_Misc_MonsterClaw_04"
+name = { en = "Ferocity", de = "Wildheit", fr = "Férocité", es = "Ferocidad", pt = "Ferocidade", ru = "Свирепость", pl = "Dzikość", tr = "Yırtıcılık", it = "Ferocia", ja = "フェロシティ", zh = "凶猛", ko = "흉포함" }
+text = { en = "Increases your and your pets' critical strike chance by {v}%.", de = "Erhöht die kritische Trefferchance von dir und deinen Begleitern um {v}%.", fr = "Augmente de {v}% les chances de coup critique de toi et de tes familiers.", es = "Aumenta un {v}% la probabilidad de golpe crítico tuya y de tus mascotas.", pt = "Aumenta em {v}% a chance de acerto crítico sua e dos seus bichos de estimação.", ru = "Увеличивает шанс критического удара у тебя и твоих питомцев на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne twoją i twoich zwierzaków o {v}%.", tr = "Senin ve evcil hayvanlarının kritik vuruş şansını {v}% artırır.", it = "Aumenta del {v}% la probabilità di colpo critico tua e dei tuoi animali.", ja = "自分とペットのクリティカル率が{v}%増加します。", zh = "使你和你的宠物的暴击几率提高{v}%。", ko = "당신과 소환수의 치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "spirit_bond"
+tree = 0
+row = 3
+col = 2
+ranks = 2
+req = "tame_beast"
+effects = [{ stat = [6, 0.8] }]
+icon = "Ability_Druid_DemoralizingRoar"
+name = { en = "Spirit Bond", de = "Geistbande", fr = "Lien spirituel", es = "Vínculo espiritual", pt = "Vínculo Espiritual", ru = "Духовная связь", pl = "Duchowa więź", tr = "Ruh Bağı", it = "Legame spirituale", ja = "スピリット・ボンド", zh = "灵魂联结", ko = "영혼의 유대" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.8
+
+[[talent]]
+key = "frenzy_hunter"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "INV_Misc_MonsterClaw_03"
+name = { en = "Frenzy", de = "Raserei", fr = "Frénésie", es = "Frenesí", pt = "Frenesi", ru = "Бешенство", pl = "Szał", tr = "Çılgınlık Anı", it = "Frenesia", ja = "フレンジー", zh = "狂乱", ko = "광기" }
+text = { en = "Milestone. Your pets' bites have a {v}% chance to fire a free Multi-Shot.", de = "Meilenstein. Die Bisse deiner Begleiter haben eine Chance von {v}%, einen kostenlosen Mehrfachschuss abzufeuern.", fr = "Jalon. Les morsures de tes familiers ont {v}% de chances de tirer une Fusillade gratuite.", es = "Hito. Los mordiscos de tus mascotas tienen un {v}% de probabilidad de disparar un Multidisparo gratis.", pt = "Marco. As mordidas dos seus bichos de estimação têm {v}% de chance de disparar um Tiro Múltiplo grátis.", ru = "Веха. Укусы твоих питомцев с шансом {v}% запускают бесплатный «Залп».", pl = "Kamień milowy. Ugryzienia twoich zwierzaków mają {v}% szansy na darmowy Strzał wielokrotny.", tr = "Dönüm noktası. Evcil hayvanlarının ısırıkları {v}% ihtimalle bedava bir Çoklu Atış tetikler.", it = "Traguardo. I morsi dei tuoi animali hanno il {v}% di probabilità di lanciare uno Sparo multiplo gratuito.", ja = "【マイルストーン】ペットの噛みつきが{v}%の確率で無料のマルチショットを放ちます。", zh = "里程碑：你的宠物的撕咬有{v}%的几率免费发射一次多重射击。", ko = "이정표. 소환수가 물 때마다 {v}% 확률로 일제 사격을 무료로 발사합니다." }
+menu_v = 0.75
+plays = [
+    { v = 0.75, play = { pet_bite = "multi_shot" } },
+]
+
+[[talent]]
+key = "bestial_discipline"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = [{ stat = [17, 0.2] }]
+icon = "Spell_Nature_AbolishMagic"
+name = { en = "Bestial Discipline", de = "Tierische Disziplin", fr = "Discipline bestiale", es = "Disciplina bestial", pt = "Disciplina Bestial", ru = "Звериная дисциплина", pl = "Bestialska dyscyplina", tr = "Vahşi Disiplin", it = "Disciplina bestiale", ja = "ビースティアル・ディシプリン", zh = "野兽戒律", ko = "야수 조련술" }
+text = { en = "Your pets deal {v}% more damage.", de = "Deine Begleiter verursachen {v}% mehr Schaden.", fr = "Tes familiers infligent {v}% de dégâts en plus.", es = "Tus mascotas infligen un {v}% más de daño.", pt = "Seus bichos de estimação causam {v}% a mais de dano.", ru = "Твои питомцы наносят на {v}% больше урона.", pl = "Twoje zwierzaki zadają o {v}% więcej obrażeń.", tr = "Evcil hayvanların {v}% daha fazla hasar verir.", it = "I tuoi animali infliggono il {v}% di danni in più.", ja = "ペットのダメージが{v}%増加します。", zh = "你的宠物造成的伤害提高{v}%。", ko = "소환수의 피해가 {v}% 증가합니다." }
+menu_v = 0.2
+
+[[talent]]
+key = "intimidation"
+tree = 0
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "Ability_Devour"
+name = { en = "Intimidation", de = "Einschüchterung", fr = "Intimidation", es = "Intimidación", pt = "Intimidação", ru = "Устрашение", pl = "Zastraszenie", tr = "Yıldırma", it = "Intimidazione", ja = "インティミデーション", zh = "胁迫", ko = "위협" }
+text = { en = "Auto Shot, Multi-Shot and Steady Shot deal {v}% more damage.", de = "Automatischer Schuss, Mehrfachschuss und Zuverlässiger Schuss verursachen {v}% mehr Schaden.", fr = "Tir automatique, Fusillade et Tir assuré infligent {v}% de dégâts en plus.", es = "Disparo automático, Multidisparo y Disparo firme infligen un {v}% más de daño.", pt = "Tiro Automático, Tiro Múltiplo e Tiro Firme causam {v}% a mais de dano.", ru = "«Автоматическая стрельба», «Залп» и «Верный выстрел» наносят на {v}% больше урона.", pl = "Strzał automatyczny, Strzał wielokrotny i Pewny strzał zadają o {v}% więcej obrażeń.", tr = "Otomatik Atış, Çoklu Atış ve Sabit Atış {v}% daha fazla hasar verir.", it = "Sparo automatico, Sparo multiplo e Sparo fermo infliggono il {v}% di danni in più.", ja = "オート・ショット、マルチショット、ステディ・ショットのダメージが{v}%増加します。", zh = "自动射击、多重射击和稳固射击造成的伤害提高{v}%。", ko = "자동 사격, 일제 사격, 고정 사격의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["auto_shot", "multi_shot", "steady_shot"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "ferocious_inspiration"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "frenzy_hunter"
+effects = [{ stat = [0, 0.03] }]
+icon = "Ability_Hunter_BeastCall"
+name = { en = "Ferocious Inspiration", de = "Wilde Inspiration", fr = "Inspiration féroce", es = "Inspiración feroz", pt = "Inspiração Feroz", ru = "Свирепое вдохновение", pl = "Dzikie natchnienie", tr = "Yırtıcı İlham", it = "Ispirazione feroce", ja = "フェロシャス・インスピレーション", zh = "凶暴灵感", ko = "흉포한 영감" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "bestial_wrath"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_Druid_FerociousBite"
+name = { en = "Bestial Wrath", de = "Zorn des Wildtiers", fr = "Courroux bestial", es = "Ira bestial", pt = "Ira Bestial", ru = "Звериный гнев", pl = "Bestialski gniew", tr = "Canavar Gazabı", it = "Ira bestiale", ja = "ビースティアル・ラース", zh = "狂野怒火", ko = "야수의 격노" }
+text = { en = "Capstone. A raptor joins your wolf, and your pets' bites tear through 2 more enemies nearby for {v}% of the bite.", de = "Schlussstein. Ein Raptor gesellt sich zu deinem Wolf, und die Bisse deiner Begleiter reißen durch 2 weitere Feinde in der Nähe für {v}% des Bisses.", fr = "Apogée. Un raptor rejoint ton loup, et les morsures de tes familiers déchirent 2 ennemis proches de plus pour {v}% de la morsure.", es = "Cúspide. Un raptor se une a tu lobo, y los mordiscos de tus mascotas desgarran a 2 enemigos cercanos más por un {v}% del mordisco.", pt = "Ápice. Um raptor se junta ao seu lobo, e as mordidas dos seus bichos de estimação rasgam mais 2 inimigos próximos por {v}% da mordida.", ru = "Вершина. К твоему волку присоединяется ящер, а укусы питомцев рвут еще 2 врагов рядом на {v}% от укуса.", pl = "Zwieńczenie. Do twojego wilka dołącza raptor, a ugryzienia zwierzaków przebijają się przez 2 kolejnych pobliskich przeciwników za {v}% ugryzienia.", tr = "Zirve. Kurduna bir yırtıcı kuş katılır ve evcil hayvanlarının ısırıkları yakındaki 2 düşmanı daha ısırığın {v}%'si kadar yırtar.", it = "Vertice. Un raptor si unisce al tuo lupo e i morsi dei tuoi animali dilaniano altri 2 nemici vicini per il {v}% del morso.", ja = "【キャップストーン】狼にラプターが加わり、ペットの噛みつきが近くの敵さらに2体を引き裂いて噛みつきの{v}%のダメージを与えます。", zh = "终极天赋：一头迅猛龙加入你的狼，你的宠物的撕咬会撕裂附近另外2个敌人，造成相当于撕咬{v}%的伤害。", ko = "궁극 특성. 랩터가 늑대와 합류하며, 소환수가 물면 근처의 적 2명을 더 찢어 물기 피해의 {v}%를 줍니다." }
+menu_v = 0.5
+plays = [
+    { v = 0.5, play = { pet = { pet = "raptor", cleave = true } } },
+]
+
+[[talent]]
+key = "lethal_shots"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "Ability_SearingArrow"
+name = { en = "Lethal Shots", de = "Tödliche Schüsse", fr = "Tirs mortels", es = "Disparos letales", pt = "Tiros Letais", ru = "Смертоносные выстрелы", pl = "Zabójcze strzały", tr = "Ölümcül Atışlar", it = "Colpi letali", ja = "リーサル・ショット", zh = "致命射击", ko = "치명적인 사격" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "efficiency"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.015] }]
+icon = "Spell_Frost_WizardMark"
+name = { en = "Efficiency", de = "Effizienz", fr = "Efficacité", es = "Eficiencia", pt = "Eficiência", ru = "Эффективность", pl = "Skuteczność", tr = "Verimlilik", it = "Efficienza", ja = "エフィシェンシー", zh = "效率", ko = "효율성" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "imp_arcane_shot"
+tree = 1
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "Ability_ImpalingBolt"
+name = { en = "Improved Arcane Shot", de = "Verbesserter arkaner Schuss", fr = "Tir des arcanes amélioré", es = "Disparo arcano mejorado", pt = "Tiro Arcano Aprimorado", ru = "Улучшенный чародейский выстрел", pl = "Ulepszony Magiczny strzał", tr = "Gelişmiş Gizemli Atış", it = "Sparo arcano migliorato", ja = "改良型アーケイン・ショット", zh = "强化奥术射击", ko = "신비한 사격 연마" }
+text = { en = "Arcane Shot, Chimera Shot and Explosive Shot cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Arkaner Schuss, Schimärenschuss und Explosivschuss sind {v}% kürzer.", fr = "Les recharges de Tir des arcanes, Tir de la chimère et Tir explosif sont réduites de {v}%.", es = "Las reutilizaciones de Disparo arcano, Disparo de quimera y Disparo explosivo son un {v}% más cortas.", pt = "As recargas de Tiro Arcano, Tiro da Quimera e Tiro Explosivo são {v}% menores.", ru = "Перезарядка «Чародейского выстрела», «Выстрела химеры» и «Разрывного выстрела» короче на {v}%.", pl = "Czasy odnowienia Magicznego strzału, Strzału chimery i Strzału wybuchowego są krótsze o {v}%.", tr = "Gizemli Atış, Kimera Atışı ve Patlayıcı Atış bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Sparo arcano, Sparo della Chimera e Sparo esplosivo sono più brevi del {v}%.", ja = "アーケイン・ショット、キメラ・ショット、エクスプローシブ・ショットのクールダウンが{v}%短くなります。", zh = "奥术射击、奇美拉射击和爆炸射击的冷却时间缩短{v}%。", ko = "신비한 사격, 키메라 사격, 폭발 사격의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.06
+mods = [{ cooldown = ["arcane_shot", "chimera_shot", "explosive_shot"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "imp_serpent_sting"
+tree = 1
+row = 1
+col = 2
+ranks = 5
+effects = []
+icon = "Ability_Hunter_Quickshot"
+name = { en = "Improved Serpent Sting", de = "Verbesserter Schlangenbiss", fr = "Morsure de serpent améliorée", es = "Picadura de serpiente mejorada", pt = "Ferroada de Serpente Aprimorada", ru = "Улучшенный укус змеи", pl = "Ulepszone Użądlenie węża", tr = "Gelişmiş Yılan Sokması", it = "Puntura di serpente migliorata", ja = "改良型サーペント・スティング", zh = "强化毒蛇钉刺", ko = "독사 쐐기 연마" }
+text = { en = "Serpent Sting and Black Arrow deal {v}% more damage.", de = "Schlangenbiss und Schwarzer Pfeil verursachen {v}% mehr Schaden.", fr = "Morsure de serpent et Flèche noire infligent {v}% de dégâts en plus.", es = "Picadura de serpiente y Flecha negra infligen un {v}% más de daño.", pt = "Ferroada de Serpente e Flecha Negra causam {v}% a mais de dano.", ru = "«Укус змеи» и «Черная стрела» наносят на {v}% больше урона.", pl = "Użądlenie węża i Czarna strzała zadają o {v}% więcej obrażeń.", tr = "Yılan Sokması ve Kara Ok {v}% daha fazla hasar verir.", it = "Puntura di serpente e Freccia nera infliggono il {v}% di danni in più.", ja = "サーペント・スティングとブラック・アローのダメージが{v}%増加します。", zh = "毒蛇钉刺和黑箭造成的伤害提高{v}%。", ko = "독사 쐐기와 검은 화살의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["serpent_sting", "black_arrow"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "piercing_shots"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_PierceDamage"
+name = { en = "Piercing Shots", de = "Durchdringende Schüsse", fr = "Tirs perforants", es = "Disparos perforantes", pt = "Tiros Perfurantes", ru = "Пронзающие выстрелы", pl = "Przebijające strzały", tr = "Delici Atışlar", it = "Colpi perforanti", ja = "ピアシング・ショット", zh = "穿刺射击", ko = "관통 사격" }
+text = { en = "Milestone. Auto Shot pierces: every arrow also strikes 1 enemy beyond its target for {v}% of it.", de = "Meilenstein. Automatischer Schuss durchdringt: Jeder Pfeil trifft zudem 1 Feind hinter seinem Ziel für {v}% davon.", fr = "Jalon. Tir automatique perce : chaque flèche frappe aussi 1 ennemi derrière sa cible pour {v}% de ses dégâts.", es = "Hito. Disparo automático perfora: cada flecha golpea además a 1 enemigo tras su objetivo por un {v}% de su daño.", pt = "Marco. Tiro Automático perfura: cada flecha também atinge 1 inimigo além do alvo por {v}% do dano.", ru = "Веха. «Автоматическая стрельба» пронзает: каждая стрела также бьет 1 врага за целью на {v}% от своего урона.", pl = "Kamień milowy. Strzał automatyczny przebija: każda strzała trafia też 1 przeciwnika za celem za {v}% obrażeń.", tr = "Dönüm noktası. Otomatik Atış deler: her ok hedefinin ardındaki 1 düşmana da hasarının {v}%'si kadar vurur.", it = "Traguardo. Sparo automatico trafigge: ogni freccia colpisce anche 1 nemico oltre il bersaglio per il {v}% del danno.", ja = "【マイルストーン】オート・ショットが貫通します：すべての矢が対象の先の敵1体にもその{v}%のダメージを与えます。", zh = "里程碑：自动射击可穿透：每支箭还会击中目标后方的1个敌人，造成相当于其伤害{v}%的伤害。", ko = "이정표. 자동 사격이 관통합니다: 모든 화살이 대상 뒤의 적 1명에게도 피해의 {v}%를 줍니다." }
+menu_v = 0.8
+plays = [
+    { v = 0.8, play = { cleave = { keys = ["auto_shot"], n = 1, radius = 10.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "mortal_shots"
+tree = 1
+row = 2
+col = 2
+ranks = 5
+effects = [{ stat = [4, 0.04] }]
+icon = "INV_Spear_07"
+name = { en = "Mortal Shots", de = "Vernichtende Schüsse", fr = "Tirs fatals", es = "Disparos mortales", pt = "Tiros Mortais", ru = "Смертельные выстрелы", pl = "Śmiertelne strzały", tr = "Ölümcül Nişan", it = "Colpi mortali", ja = "モータル・ショット", zh = "致死射击", ko = "필사의 사격" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "ranged_spec"
+tree = 1
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [0, 0.015] }]
+icon = "INV_Weapon_Rifle_06"
+name = { en = "Ranged Weapon Specialization", de = "Distanzwaffen-Spezialisierung", fr = "Spécialisation Armes à distance", es = "Especialización en armas a distancia", pt = "Especialização em Armas de Longo Alcance", ru = "Специализация на дальнем оружии", pl = "Specjalizacja: broń dystansowa", tr = "Menzilli Silah Uzmanlığı", it = "Specializzazione nelle armi a distanza", ja = "レンジド・ウェポン・スペシャライゼーション", zh = "远程武器专精", ko = "원거리 무기 전문화" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "imp_multi_shot"
+tree = 1
+row = 3
+col = 2
+ranks = 2
+req = "piercing_shots"
+effects = []
+icon = "Ability_UpgradeMoonGlaive"
+name = { en = "Improved Multi-Shot", de = "Verbesserter Mehrfachschuss", fr = "Fusillade améliorée", es = "Multidisparo mejorado", pt = "Tiro Múltiplo Aprimorado", ru = "Улучшенный залп", pl = "Ulepszony Strzał wielokrotny", tr = "Gelişmiş Çoklu Atış", it = "Sparo multiplo migliorato", ja = "改良型マルチショット", zh = "强化多重射击", ko = "일제 사격 연마" }
+text = { en = "Multi-Shot fires at {v} more targets.", de = "Mehrfachschuss feuert auf {v} weitere Ziele.", fr = "Fusillade vise {v} cibles de plus.", es = "Multidisparo dispara a {v} objetivos más.", pt = "Tiro Múltiplo atira em {v} alvos a mais.", ru = "«Залп» бьет еще {v} целей.", pl = "Strzał wielokrotny trafia dodatkowe cele: {v}.", tr = "Çoklu Atış {v} hedefe daha ateşler.", it = "Sparo multiplo colpisce {v} bersagli in più.", ja = "マルチショットが追加で{v}体の対象に放たれます。", zh = "多重射击额外射向{v}个目标。", ko = "일제 사격이 대상을 {v}명 더 공격합니다." }
+menu_v = 1
+mods = [{ targets = ["multi_shot"] }]
+mods_v = 1.0
+
+[[talent]]
+key = "rapid_fire"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_Hunter_RunningShot"
+name = { en = "Rapid Fire", de = "Schnellfeuer", fr = "Tir rapide", es = "Fuego rápido", pt = "Tiro Rápido", ru = "Быстрая стрельба", pl = "Szybki ogień", tr = "Seri Atış", it = "Fuoco rapido", ja = "ラピッド・ファイア", zh = "急速射击", ko = "속사" }
+text = { en = "Milestone. Every {v}th shot you fire is followed by a free Aimed Shot.", de = "Meilenstein. Auf jeden {v}. Schuss, den du abfeuerst, folgt ein kostenloser Gezielter Schuss.", fr = "Jalon. Chaque {v}e tir que tu effectues est suivi d'une Visée gratuite.", es = "Hito. Cada {v}.º disparo que efectúas va seguido de un Disparo apuntado gratis.", pt = "Marco. Todo {v}º tiro que você dispara é seguido por um Tiro Certeiro grátis.", ru = "Веха. За каждым {v}-м выстрелом следует бесплатный «Прицельный выстрел».", pl = "Kamień milowy. Po co {v}. wystrzelonym strzale następuje darmowy Strzał mierzony.", tr = "Dönüm noktası. Attığın her {v}. atışın ardından bedava bir Nişanlı Atış gelir.", it = "Traguardo. Ogni {v}° sparo che effettui è seguito da uno Sparo mirato gratuito.", ja = "【マイルストーン】{v}発ごとに無料のエイムド・ショットが続けて放たれます。", zh = "里程碑：你每射出{v}发，随后便会免费施放一次瞄准射击。", ko = "이정표. {v}번째 사격마다 조준 사격이 무료로 이어집니다." }
+menu_v = 6
+plays = [
+    { v = 6.0, play = { nth_cast = { keys = ["auto_shot", "arcane_shot", "multi_shot", "aimed_shot", "kill_shot", "chimera_shot", "explosive_shot", "steady_shot"], cast = "aimed_shot" } } },
+]
+
+[[talent]]
+key = "barrage"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Ability_Marksmanship"
+name = { en = "Barrage", de = "Sperrfeuer", fr = "Barrage", es = "Aluvión", pt = "Barragem", ru = "Шквал", pl = "Ostrzał", tr = "Baraj", it = "Sbarramento", ja = "バラージ", zh = "弹幕", ko = "탄막" }
+text = { en = "Multi-Shot and Volley deal {v}% more damage.", de = "Mehrfachschuss und Salve verursachen {v}% mehr Schaden.", fr = "Fusillade et Volée infligent {v}% de dégâts en plus.", es = "Multidisparo y Descarga infligen un {v}% más de daño.", pt = "Tiro Múltiplo e Saraivada causam {v}% a mais de dano.", ru = "«Залп» и «Град стрел» наносят на {v}% больше урона.", pl = "Strzał wielokrotny i Salwa zadają o {v}% więcej obrażeń.", tr = "Çoklu Atış ve Ok Yağmuru {v}% daha fazla hasar verir.", it = "Sparo multiplo e Raffica infliggono il {v}% di danni in più.", ja = "マルチショットとボレーのダメージが{v}%増加します。", zh = "多重射击和乱射造成的伤害提高{v}%。", ko = "일제 사격과 연발 사격의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["multi_shot", "volley"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "hawk_eye"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [19, 0.05] }]
+icon = "Ability_TownWatch"
+name = { en = "Hawk Eye", de = "Falkenauge", fr = "Œil de faucon", es = "Ojo de halcón", pt = "Olho de Falcão", ru = "Соколиный глаз", pl = "Sokole oko", tr = "Şahin Gözü", it = "Occhio di falco", ja = "ホーク・アイ", zh = "鹰眼", ko = "매의 눈" }
+text = { en = "You deal {v}% more damage to elites and bosses.", de = "Du verursachst {v}% mehr Schaden an Elitegegnern und Bossen.", fr = "Tu infliges {v}% de dégâts en plus aux élites et aux boss.", es = "Infliges un {v}% más de daño a élites y jefes.", pt = "Você causa {v}% a mais de dano a elites e chefes.", ru = "Ты наносишь на {v}% больше урона элите и боссам.", pl = "Zadajesz o {v}% więcej obrażeń elitom i bossom.", tr = "Elitlere ve boss'lara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più a élite e boss.", ja = "エリートとボスに与えるダメージが{v}%増加します。", zh = "你对精英和首领造成的伤害提高{v}%。", ko = "정예와 우두머리에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "ricochet_shots"
+tree = 1
+row = 5
+col = 2
+ranks = 3
+req = "rapid_fire"
+effects = []
+icon = "Ability_Hunter_CriticalShot"
+name = { en = "Ricochet Shots", de = "Abprallende Schüsse", fr = "Tirs ricochets", es = "Disparos de rebote", pt = "Tiros Ricocheteantes", ru = "Рикошетные выстрелы", pl = "Rykoszetujące strzały", tr = "Sekme Atışları", it = "Colpi di rimbalzo", ja = "リコシェ・ショット", zh = "跳弹射击", ko = "도탄 사격" }
+text = { en = "Arcane Shot, Steady Shot and Kill Shot also strike up to 2 more enemies near their target for {v}% of the hit.", de = "Arkaner Schuss, Zuverlässiger Schuss und Tödlicher Schuss treffen zudem bis zu 2 weitere Feinde nahe ihrem Ziel für {v}% des Treffers.", fr = "Tir des arcanes, Tir assuré et Tir mortel frappent aussi jusqu'à 2 ennemis de plus près de leur cible pour {v}% du coup.", es = "Disparo arcano, Disparo firme y Disparo mortal golpean además hasta a 2 enemigos más cerca de su objetivo por un {v}% del golpe.", pt = "Tiro Arcano, Tiro Firme e Tiro Mortal também atingem até 2 inimigos a mais perto do alvo por {v}% do golpe.", ru = "«Чародейский выстрел», «Верный выстрел» и «Убийственный выстрел» также бьют до 2 врагов рядом с целью на {v}% от удара.", pl = "Magiczny strzał, Pewny strzał i Strzał dobijający trafiają też do 2 kolejnych przeciwników w pobliżu celu za {v}% trafienia.", tr = "Gizemli Atış, Sabit Atış ve Öldürücü Atış hedeflerinin yakınındaki 2 düşmana daha vuruşun {v}%'si kadar vurur.", it = "Sparo arcano, Sparo fermo e Sparo letale colpiscono anche fino a 2 nemici vicini al bersaglio per il {v}% del colpo.", ja = "アーケイン・ショット、ステディ・ショット、キル・ショットが対象の近くの敵最大2体にもその{v}%のダメージを与えます。", zh = "奥术射击、稳固射击和杀戮射击还会击中目标附近最多2个敌人，造成相当于该次攻击{v}%的伤害。", ko = "신비한 사격, 고정 사격, 마무리 사격이 대상 근처의 적을 최대 2명 더 공격하여 피해의 {v}%를 줍니다." }
+menu_v = 0.2
+plays = [
+    { v = 0.2, play = { cleave = { keys = ["arcane_shot", "steady_shot", "kill_shot"], n = 2, radius = 8.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "kill_shot"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "aimed_shot" }]
+icon = "INV_Weapon_Rifle_08"
+name = { en = "Kill Shot", de = "Tödlicher Schuss", fr = "Tir mortel", es = "Disparo mortal", pt = "Tiro Mortal", ru = "Убийственный выстрел", pl = "Strzał dobijający", tr = "Öldürücü Atış", it = "Sparo letale", ja = "キル・ショット", zh = "杀戮射击", ko = "마무리 사격" }
+text = { en = "Capstone. You start every run with Aimed Shot, and its cooldown is {v}% shorter.", de = "Schlussstein. Du beginnst jeden Lauf mit Gezielter Schuss, und seine Abklingzeit ist {v}% kürzer.", fr = "Apogée. Tu commences chaque partie avec Visée, et sa recharge est réduite de {v}%.", es = "Cúspide. Empiezas cada partida con Disparo apuntado, y su reutilización es un {v}% más corta.", pt = "Ápice. Você começa cada partida com Tiro Certeiro, e a recarga dele é {v}% menor.", ru = "Вершина. Каждый забег ты начинаешь с «Прицельного выстрела», и его перезарядка короче на {v}%.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz ze Strzałem mierzonym, a jego czas odnowienia jest krótszy o {v}%.", tr = "Zirve. Her oyuna Nişanlı Atış ile başlarsın ve bekleme süresi {v}% daha kısadır.", it = "Vertice. Inizi ogni partita con Sparo mirato e la sua ricarica è più breve del {v}%.", ja = "【キャップストーン】毎ランをエイムド・ショットを持って始め、そのクールダウンが{v}%短くなります。", zh = "终极天赋：你在每场对局开始时拥有瞄准射击，其冷却时间缩短{v}%。", ko = "궁극 특성. 모든 런을 조준 사격을 가지고 시작하며, 조준 사격의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.3
+mods = [{ cooldown = ["aimed_shot"] }]
+mods_v = 0.3
+
+[[talent]]
+key = "monster_slaying"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [19, 0.03] }]
+icon = "INV_Misc_Head_Dragon_Black"
+name = { en = "Monster Slaying", de = "Monstertöten", fr = "Tueur de monstres", es = "Matamonstruos", pt = "Matador de Monstros", ru = "Истребитель чудовищ", pl = "Pogromca potworów", tr = "Canavar Avcılığı", it = "Uccisione di mostri", ja = "モンスター・スレイング", zh = "怪物杀手", ko = "괴물 사냥" }
+text = { en = "You deal {v}% more damage to elites and bosses.", de = "Du verursachst {v}% mehr Schaden an Elitegegnern und Bossen.", fr = "Tu infliges {v}% de dégâts en plus aux élites et aux boss.", es = "Infliges un {v}% más de daño a élites y jefes.", pt = "Você causa {v}% a mais de dano a elites e chefes.", ru = "Ты наносишь на {v}% больше урона элите и боссам.", pl = "Zadajesz o {v}% więcej obrażeń elitom i bossom.", tr = "Elitlere ve boss'lara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più a élite e boss.", ja = "エリートとボスに与えるダメージが{v}%増加します。", zh = "你对精英和首领造成的伤害提高{v}%。", ko = "정예와 우두머리에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "deflection_hunter"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "Ability_Parry"
+name = { en = "Deflection", de = "Abwehr", fr = "Déviation", es = "Desvío", pt = "Deflexão", ru = "Отражение ударов", pl = "Odbicie", tr = "Savuşturma", it = "Deviazione", ja = "ディフレクション", zh = "偏斜", ko = "튕겨내기" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "clever_traps"
+tree = 2
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Nature_TimeStop"
+name = { en = "Clever Traps", de = "Raffinierte Fallen", fr = "Pièges ingénieux", es = "Trampas ingeniosas", pt = "Armadilhas Engenhosas", ru = "Хитрые ловушки", pl = "Sprytne pułapki", tr = "Kurnaz Tuzaklar", it = "Trappole ingegnose", ja = "クレバー・トラップ", zh = "巧妙陷阱", ko = "영리한 덫" }
+text = { en = "Your traps cover {v}% more ground.", de = "Deine Fallen decken {v}% mehr Fläche ab.", fr = "Tes pièges couvrent {v}% de terrain en plus.", es = "Tus trampas cubren un {v}% más de terreno.", pt = "Suas armadilhas cobrem {v}% a mais de terreno.", ru = "Твои ловушки накрывают на {v}% больше земли.", pl = "Twoje pułapki pokrywają o {v}% więcej terenu.", tr = "Tuzakların {v}% daha fazla alan kaplar.", it = "Le tue trappole coprono il {v}% di terreno in più.", ja = "罠の効果範囲が{v}%広がります。", zh = "你的陷阱覆盖的范围扩大{v}%。", ko = "덫의 범위가 {v}% 넓어집니다." }
+menu_v = 0.1
+mods = [{ area = ["explosive_trap", "immolation_trap", "frost_trap"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "survivalist"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.02] }]
+icon = "Spell_Shadow_Twilight"
+name = { en = "Survivalist", de = "Überlebenskünstler", fr = "Survivaliste", es = "Superviviente", pt = "Sobrevivente", ru = "Выживальщик", pl = "Mistrz przetrwania", tr = "Hayatta Kalma Ustası", it = "Sopravvissuto", ja = "サバイバリスト", zh = "生存专家", ko = "생존 전문가" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.02
+
+# TUNE 2026-11-08: root chance 2% -> 6% a trap hit: a milestone that barely showed.
+[[talent]]
+key = "entrapment"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Nature_StrangleVines"
+name = { en = "Entrapment", de = "Einschließen", fr = "Piégeage", es = "Atrapamiento", pt = "Aprisionamento", ru = "Западня", pl = "Usidlenie", tr = "Tuzağa Düşürme", it = "Intrappolamento", ja = "エントラップメント", zh = "诱捕", ko = "함정" }
+text = { en = "Milestone. Your traps hold what they hit: every hit of a trap has a {v}% chance to root the enemy for 2 sec.", de = "Meilenstein. Deine Fallen halten fest, was sie treffen: Jeder Treffer einer Falle hat eine Chance von {v}%, den Feind 2 Sek. lang festzuwurzeln.", fr = "Jalon. Tes pièges retiennent ce qu'ils touchent : chaque coup d'un piège a {v}% de chances d'enraciner l'ennemi pendant 2 s.", es = "Hito. Tus trampas retienen lo que golpean: cada impacto de una trampa tiene un {v}% de probabilidad de inmovilizar al enemigo durante 2 s.", pt = "Marco. Suas armadilhas prendem o que atingem: cada acerto de uma armadilha tem {v}% de chance de imobilizar o inimigo por 2 s.", ru = "Веха. Твои ловушки удерживают пойманных: каждое попадание ловушки с шансом {v}% опутывает врага на 2 сек.", pl = "Kamień milowy. Twoje pułapki więzią trafionych: każde trafienie pułapki ma {v}% szansy na unieruchomienie przeciwnika na 2 s.", tr = "Dönüm noktası. Tuzakların vurduğunu tutar: tuzağın her vuruşu {v}% ihtimalle düşmanı 2 sn köklendirir.", it = "Traguardo. Le tue trappole trattengono ciò che colpiscono: ogni colpo di una trappola ha il {v}% di probabilità di immobilizzare il nemico per 2 s.", ja = "【マイルストーン】罠が命中した敵を捕らえます：罠の命中ごとに{v}%の確率で敵を2秒間移動不能にします。", zh = "里程碑：你的陷阱会困住击中的目标：陷阱的每次攻击都有{v}%的几率使敌人定身2秒。", ko = "이정표. 덫이 맞힌 적을 붙잡습니다: 덫이 적중할 때마다 {v}% 확률로 적을 2초 동안 속박합니다." }
+menu_v = 6
+plays = [
+    { v = 0.06, play = { hit_root = { keys = ["explosive_trap", "immolation_trap", "frost_trap"], secs = 2.0 } } },
+]
+
+[[talent]]
+key = "savage_strikes"
+tree = 2
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [3, 0.012] }]
+icon = "Ability_Racial_BloodRage"
+name = { en = "Savage Strikes", de = "Wilde Stöße", fr = "Frappes sauvages", es = "Golpes salvajes", pt = "Golpes Selvagens", ru = "Дикие удары", pl = "Dzikie ciosy", tr = "Vahşi Darbeler", it = "Colpi selvaggi", ja = "サベージ・ストライク", zh = "野蛮打击", ko = "야만적인 일격" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.012
+
+[[talent]]
+key = "trap_mastery"
+tree = 2
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "Ability_Ensnare"
+name = { en = "Trap Mastery", de = "Fallenbeherrschung", fr = "Maîtrise des pièges", es = "Maestría con trampas", pt = "Maestria em Armadilhas", ru = "Мастер ловушек", pl = "Mistrzostwo pułapek", tr = "Tuzak Ustalığı", it = "Maestria nelle trappole", ja = "トラップ・マスタリー", zh = "陷阱掌握", ko = "덫 숙련" }
+text = { en = "Your traps' cooldowns are {v}% shorter.", de = "Die Abklingzeiten deiner Fallen sind {v}% kürzer.", fr = "Les recharges de tes pièges sont réduites de {v}%.", es = "Las reutilizaciones de tus trampas son un {v}% más cortas.", pt = "As recargas das suas armadilhas são {v}% menores.", ru = "Перезарядка твоих ловушек короче на {v}%.", pl = "Czasy odnowienia twoich pułapek są krótsze o {v}%.", tr = "Tuzaklarının bekleme süreleri {v}% daha kısa.", it = "Le ricariche delle tue trappole sono più brevi del {v}%.", ja = "罠のクールダウンが{v}%短くなります。", zh = "你的陷阱的冷却时间缩短{v}%。", ko = "덫의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["explosive_trap", "immolation_trap", "frost_trap"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "surefooted"
+tree = 2
+row = 3
+col = 2
+ranks = 3
+req = "entrapment"
+effects = [{ stat = [7, 0.03] }]
+icon = "Ability_Kick"
+name = { en = "Surefooted", de = "Trittsicherheit", fr = "Pied sûr", es = "Pie firme", pt = "Pé Firme", ru = "Твердая поступь", pl = "Pewny krok", tr = "Sağlam Adım", it = "Passo sicuro", ja = "シュアフッテッド", zh = "稳固", ko = "확고한 발걸음" }
+text = { en = "Increases your movement speed by {v}%.", de = "Erhöht dein Bewegungstempo um {v}%.", fr = "Augmente ta vitesse de déplacement de {v}%.", es = "Aumenta tu velocidad de movimiento un {v}%.", pt = "Aumenta sua velocidade de movimento em {v}%.", ru = "Увеличивает твою скорость движения на {v}%.", pl = "Zwiększa szybkość ruchu o {v}%.", tr = "Hareket hızını {v}% artırır.", it = "Aumenta la tua velocità di movimento del {v}%.", ja = "移動速度が{v}%上昇します。", zh = "使你的移动速度提高{v}%。", ko = "이동 속도가 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "explosive_ammo"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Fire_SelfDestruct"
+name = { en = "Explosive Ammunition", de = "Explosivmunition", fr = "Munitions explosives", es = "Munición explosiva", pt = "Munição Explosiva", ru = "Взрывные боеприпасы", pl = "Wybuchowa amunicja", tr = "Patlayıcı Mühimmat", it = "Munizioni esplosive", ja = "エクスプローシブ・アミュニション", zh = "爆炸弹药", ko = "폭발 탄환" }
+text = { en = "Milestone. Enemies killed by your Auto Shot or Multi-Shot explode for {v}% of their maximum health on everything within 6 yd.", de = "Meilenstein. Durch deinen Automatischen Schuss oder Mehrfachschuss getötete Feinde explodieren für {v}% ihrer maximalen Gesundheit auf alles im Umkreis von 6 m.", fr = "Jalon. Les ennemis tués par ton Tir automatique ou ta Fusillade explosent pour {v}% de leur santé maximale sur tout ce qui est à 6 m.", es = "Hito. Los enemigos muertos por tu Disparo automático o Multidisparo explotan por un {v}% de su salud máxima sobre todo lo que esté a 6 m.", pt = "Marco. Inimigos mortos pelo seu Tiro Automático ou Tiro Múltiplo explodem por {v}% da vida máxima sobre tudo num raio de 6 m.", ru = "Веха. Враги, убитые твоей «Автоматической стрельбой» или «Залпом», взрываются, нанося {v}% своего макс. здоровья всем в радиусе 6 м.", pl = "Kamień milowy. Przeciwnicy zabici Strzałem automatycznym lub wielokrotnym wybuchają za {v}% swojego maksymalnego zdrowia, raniąc wszystko w promieniu 6 m.", tr = "Dönüm noktası. Otomatik Atış veya Çoklu Atış ile öldürdüğün düşmanlar patlar ve 6 m içindeki her şeye azami canlarının {v}%'si kadar hasar verir.", it = "Traguardo. I nemici uccisi dal tuo Sparo automatico o Sparo multiplo esplodono per il {v}% della loro salute massima su tutto entro 6 m.", ja = "【マイルストーン】オート・ショットかマルチショットで倒した敵が爆発し、6ヤード以内のすべてに最大体力の{v}%のダメージを与えます。", zh = "里程碑：被你的自动射击或多重射击杀死的敌人会爆炸，对6码内的所有目标造成相当于其最大生命值{v}%的伤害。", ko = "이정표. 자동 사격이나 일제 사격으로 처치한 적이 폭발하여 6미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 줍니다." }
+menu_v = 0.2
+plays = [
+    { v = 0.2, play = { kill_burst = { keys = ["auto_shot", "multi_shot"], dotted = false, radius = 6.0, gap = 0.0 } } },
+]
+
+[[talent]]
+key = "killer_instinct"
+tree = 2
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Holy_BlessingOfStamina"
+name = { en = "Killer Instinct", de = "Killerinstinkt", fr = "Instinct de tueur", es = "Instinto asesino", pt = "Instinto Assassino", ru = "Инстинкт убийцы", pl = "Instynkt zabójcy", tr = "Katil İçgüdüsü", it = "Istinto assassino", ja = "キラー・インスティンクト", zh = "杀手本能", ko = "살수의 본능" }
+text = { en = "Fire spells deal {v}% more damage.", de = "Feuerzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de Feu infligent {v}% de dégâts en plus.", es = "Los hechizos de Fuego infligen un {v}% más de daño.", pt = "Feitiços de Fogo causam {v}% a mais de dano.", ru = "Заклинания огня наносят на {v}% больше урона.", pl = "Czary ognia zadają o {v}% więcej obrażeń.", tr = "Ateş büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Fuoco infliggono il {v}% di danni in più.", ja = "炎の呪文のダメージが{v}%増加します。", zh = "火焰法术造成的伤害提高{v}%。", ko = "화염 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ school = 4 }]
+mods_v = 0.08
+
+[[talent]]
+key = "lightning_reflexes"
+tree = 2
+row = 5
+col = 0
+ranks = 5
+effects = [{ stat = [0, 0.02] }]
+icon = "Spell_Nature_Invisibilty"
+name = { en = "Lightning Reflexes", de = "Blitzartige Reflexe", fr = "Réflexes éclairs", es = "Reflejos rápidos", pt = "Reflexos Rápidos", ru = "Молниеносные рефлексы", pl = "Błyskawiczne refleksy", tr = "Şimşek Refleksleri", it = "Riflessi fulminei", ja = "ライトニング・リフレックス", zh = "闪电反射", ko = "번개 같은 반사신경" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "counterattack"
+tree = 2
+row = 5
+col = 2
+ranks = 2
+req = "explosive_ammo"
+effects = []
+icon = "Ability_Warrior_Challange"
+name = { en = "Counterattack", de = "Gegenangriff", fr = "Contre-attaque", es = "Contraataque", pt = "Contra-ataque", ru = "Контратака", pl = "Kontratak", tr = "Karşı Saldırı", it = "Contrattacco", ja = "カウンターアタック", zh = "反击", ko = "역습" }
+text = { en = "When an enemy strikes you in melee, {v}% chance to set off a free Explosive Trap.", de = "Wenn ein Feind dich im Nahkampf trifft, besteht eine Chance von {v}%, eine kostenlose Sprengfalle auszulösen.", fr = "Quand un ennemi te frappe en mêlée, {v}% de chances de déclencher un Piège explosif gratuit.", es = "Cuando un enemigo te golpea cuerpo a cuerpo, {v}% de probabilidad de activar una Trampa explosiva gratis.", pt = "Quando um inimigo atinge você em combate corpo a corpo, {v}% de chance de acionar uma Armadilha Explosiva grátis.", ru = "Когда враг бьет тебя в ближнем бою, с шансом {v}% срабатывает бесплатная «Взрывная ловушка».", pl = "Gdy przeciwnik uderzy cię wręcz, {v}% szansy na darmową Pułapkę wybuchową.", tr = "Bir düşman sana yakın dövüşte vurduğunda {v}% ihtimalle bedava bir Patlayıcı Tuzak kurulur.", it = "Quando un nemico ti colpisce in mischia, {v}% di probabilità di innescare una Trappola esplosiva gratuita.", ja = "敵から近接攻撃を受けると、{v}%の確率で無料のエクスプローシブ・トラップを発動します。", zh = "当敌人对你进行近战攻击时，有{v}%的几率触发一个免费的爆炸陷阱。", ko = "적이 근접 공격으로 당신을 때리면 {v}% 확률로 폭발의 덫을 무료로 작동시킵니다." }
+menu_v = 0.15
+plays = [
+    { v = 0.15, play = { struck = "explosive_trap" } },
+]
+
+[[talent]]
+key = "wyvern_sting"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "frost_trap" }]
+icon = "INV_Spear_02"
+name = { en = "Wyvern Sting", de = "Stich des Flügeldrachen", fr = "Piqûre de wyverne", es = "Picadura de dragón alado", pt = "Ferrão de Serpente Alada", ru = "Укус виверны", pl = "Użądlenie wyverny", tr = "Kanatlı Ejder Sokması", it = "Puntura di viverna", ja = "ワイバーン・スティング", zh = "翼龙钉刺", ko = "비룡 쐐기" }
+text = { en = "Capstone. You start every run with Frost Trap, and an Explosive Trap sets itself at your feet every 5 sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Eiskältefalle, und alle 5 Sek. legt sich eine Sprengfalle zu deinen Füßen.", fr = "Apogée. Tu commences chaque partie avec Piège de givre, et un Piège explosif se pose à tes pieds toutes les 5 s.", es = "Cúspide. Empiezas cada partida con Trampa de escarcha, y una Trampa explosiva se coloca a tus pies cada 5 s.", pt = "Ápice. Você começa cada partida com Armadilha de Gelo, e uma Armadilha Explosiva se arma aos seus pés a cada 5 s.", ru = "Вершина. Каждый забег ты начинаешь с «Ледяной ловушки», а «Взрывная ловушка» сама ставится у твоих ног каждые 5 сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Mroźną pułapką, a Pułapka wybuchowa zakłada się sama pod twoimi stopami co 5 s.", tr = "Zirve. Her oyuna Buz Tuzağı ile başlarsın ve her 5 sn'de ayaklarının dibinde bir Patlayıcı Tuzak kurulur.", it = "Vertice. Inizi ogni partita con Trappola di ghiaccio e una Trappola esplosiva si piazza ai tuoi piedi ogni 5 s.", ja = "【キャップストーン】毎ランをフロスト・トラップを持って始め、5秒ごとにエクスプローシブ・トラップが足元に自動で仕掛けられます。", zh = "终极天赋：你在每场对局开始时拥有冰霜陷阱，并且每5秒会在你脚下自动布置一个爆炸陷阱。", ko = "궁극 특성. 모든 런을 냉기의 덫을 가지고 시작하며, 5초마다 발밑에 폭발의 덫이 저절로 설치됩니다." }
+plays = [
+    { v = 5.0, play = { every = "explosive_trap" } },
+]

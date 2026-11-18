@@ -1,0 +1,105 @@
+# The shop's kill effects (survivors-sim killfx.rs). `kit` is the SpellVisualKit.dbc kit played on the corpse.
+#
+# Every kill effect, in the shop's order (`SurvivorsWings.lua` lists the same); the save and
+# the Game Pass name them by key. `TUNE` the prices. The kits, checked against the stock
+# 3.3.5a `SpellVisualKit.dbc` and `SpellVisualEffectName.dbc` (their effect models in the
+# comments):
+
+# BloodyExplosion on head, chest, base and both hands.
+[[kill_fx]]
+key = "blood"
+name = { en = "Blood Burst", de = "Blutfontäne", fr = "Gerbe de sang", es = "Chorro de sangre", pt = "Jato de Sangue", ru = "Кровавый фонтан", pl = "Wybuch krwi", tr = "Kan Patlaması", it = "Esplosione di sangue", ja = "血しぶき", zh = "鲜血迸发", ko = "피 폭발" }
+price = 3000
+kit = 902
+
+# particles\lootfx: the golden glitter of a lootable corpse (3.3.5a has no coin-burst kit).
+[[kill_fx]]
+key = "gold"
+name = { en = "Golden Glitter", de = "Goldglanz", fr = "Éclat doré", es = "Brillo dorado", pt = "Brilho Dourado", ru = "Золотой блеск", pl = "Złoty brokat", tr = "Altın Parıltı", it = "Scintillii dorati", ja = "黄金のきらめき", zh = "金色闪光", ko = "황금 반짝이" }
+price = 4000
+kit = 8213
+
+# Poison_ImpactDot_Med_Base, Plague Cloud's (3256) impact.
+[[kill_fx]]
+key = "plague"
+name = { en = "Plague Cloud", de = "Seuchenwolke", fr = "Nuage de peste", es = "Nube de peste", pt = "Nuvem de Peste", ru = "Облако чумы", pl = "Obłok plagi", tr = "Veba Bulutu", it = "Nube di peste", ja = "疫病の雲", zh = "瘟疫之云", ko = "역병 구름" }
+price = 5000
+kit = 805
+
+# Ice_ImpactDD_Uber on five attachments and Frost_Nova_area at the base.
+[[kill_fx]]
+key = "shatter"
+name = { en = "Shatter", de = "Zersplittern", fr = "Brise", es = "Quebrar", pt = "Estilhaçar", ru = "Дробление", pl = "Rozbicie", tr = "Parçalanma", it = "Frantumare", ja = "シャッター", zh = "碎冰", ko = "산산조각" }
+price = 6000
+kit = 6452
+
+# shadowword_death_impact, Shadow Word: Death's (32379) impact.
+[[kill_fx]]
+key = "shadow"
+name = { en = "Shadow Dissolve", de = "Schattenzerfall", fr = "Dissolution d'ombre", es = "Disolución sombría", pt = "Dissolução Sombria", ru = "Растворение во тьме", pl = "Rozpad w cieniu", tr = "Gölge Çözülmesi", it = "Dissolvenza d'ombra", ja = "シャドウの消散", zh = "暗影消融", ko = "그림자 소멸" }
+price = 6000
+kit = 6898
+
+# LightningBolt_Impact_Chest and CallLightning_Impact: a bolt from above.
+[[kill_fx]]
+key = "lightning"
+name = { en = "Lightning Strike", de = "Blitzschlag", fr = "Coup de foudre", es = "Rayo", pt = "Raio", ru = "Удар молнии", pl = "Uderzenie pioruna", tr = "Yıldırım Çarpması", it = "Fulmine", ja = "落雷", zh = "闪电打击", ko = "번개 강타" }
+price = 8000
+kit = 123
+
+# fel_firenova_area at the chest.
+[[kill_fx]]
+key = "fel"
+name = { en = "Fel Burst", de = "Teufelsflammen", fr = "Explosion gangrenée", es = "Estallido vil", pt = "Explosão Vil", ru = "Вспышка Скверны", pl = "Wybuch Zła", tr = "Fel Patlaması", it = "Esplosione vile", ja = "フェルの炸裂", zh = "邪能爆发", ko = "지옥 폭발" }
+price = 8000
+kit = 7356
+
+# beacon_of_light_impact at the base: a pillar of light.
+[[kill_fx]]
+key = "holy"
+name = { en = "Pillar of Light", de = "Lichtsäule", fr = "Pilier de lumière", es = "Pilar de luz", pt = "Pilar de Luz", ru = "Столп света", pl = "Filar światła", tr = "Işık Sütunu", it = "Pilastro di luce", ja = "光の柱", zh = "光之柱", ko = "빛의 기둥" }
+price = 10000
+kit = 10994
+
+# DeathKnight_CorpseExplosion at the base.
+[[kill_fx]]
+key = "bone"
+name = { en = "Corpse Explosion", de = "Leichenexplosion", fr = "Explosion de cadavre", es = "Explosión de cadáver", pt = "Explosão de Cadáver", ru = "Взрыв трупа", pl = "Eksplozja zwłok", tr = "Ceset Patlaması", it = "Esplosione di cadavere", ja = "死体爆発", zh = "尸体爆炸", ko = "시체 폭발" }
+price = 12000
+kit = 10290
+
+# Fireworks_RWB_01 as a world effect.
+[[kill_fx]]
+key = "fireworks"
+name = { en = "Fireworks", de = "Feuerwerk", fr = "Feu d'artifice", es = "Fuegos artificiales", pt = "Fogos de Artifício", ru = "Фейерверк", pl = "Fajerwerki", tr = "Havai Fişek", it = "Fuochi d'artificio", ja = "花火", zh = "烟花", ko = "불꽃놀이" }
+price = 15000
+kit = 2087
+
+# Hallow's End's own (price 0: not sold for gold), in its Event Shop alone (`crate::events`).
+# rainofcandys_impact_base, Rain of Candy's impact.
+[[kill_fx]]
+key = "candy_rain"
+name = { en = "Rain of Candy", de = "Süßigkeitenregen", fr = "Pluie de bonbons", es = "Lluvia de caramelos", pt = "Chuva de Doces", ru = "Дождь из конфет", pl = "Deszcz cukierków", tr = "Şeker Yağmuru", it = "Pioggia di caramelle", ja = "キャンディの雨", zh = "糖果雨", ko = "사탕 비" }
+price = 0
+kit = 9398
+
+# World\Generic\PassiveDoodads\Oktoberfest\FlamingPumpkinHead at the base.
+[[kill_fx]]
+key = "pumpkin"
+name = { en = "Flaming Pumpkin", de = "Flammender Kürbis", fr = "Citrouille enflammée", es = "Calabaza en llamas", pt = "Abóbora em Chamas", ru = "Пылающая тыква", pl = "Płonąca dynia", tr = "Alevli Balkabağı", it = "Zucca fiammeggiante", ja = "燃えるカボチャ", zh = "燃烧的南瓜", ko = "불타는 호박" }
+price = 0
+kit = 8061
+
+# soulshatter_impact at the base, Soulshatter's impact.
+[[kill_fx]]
+key = "soul_shatter"
+name = { en = "Soul Shatter", de = "Seelenzerschmettern", fr = "Brisure d'âme", es = "Alma hecha añicos", pt = "Alma Estilhaçada", ru = "Раскол души", pl = "Rozbicie duszy", tr = "Ruh Parçalanması", it = "Frantumazione dell'anima", ja = "魂の粉砕", zh = "灵魂粉碎", ko = "영혼 파쇄" }
+price = 0
+kit = 9921
+
+# Ghost_state on head, chest, base and both hands: the spirit leaving the body.
+[[kill_fx]]
+key = "haunt"
+name = { en = "Departing Spirit", de = "Entweichender Geist", fr = "Esprit qui s'envole", es = "Espíritu que parte", pt = "Espírito Partindo", ru = "Уходящий дух", pl = "Odchodzący duch", tr = "Giden Ruh", it = "Spirito in partenza", ja = "旅立つ魂", zh = "离去之魂", ko = "떠나는 영혼" }
+price = 0
+kit = 6757

@@ -1,0 +1,304 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "grizzly"
+order = 27
+name = { en = "Grizzly Hills", de = "Grizzlyhügel", fr = "Grisonnes", es = "Colinas Pardas", pt = "Colinas Pardacentas", ru = "Седые холмы", pl = "Wzgórza Grizzly", tr = "Boz Ayı Tepeleri", it = "Colli Bradi", ja = "グリズリー・ヒルズ", zh = "灰熊丘陵", ko = "회색 구릉지" }
+subtitle = { en = "Drak'Tharon Keep", de = "Feste Drak'Tharon", fr = "Donjon de Drak'Tharon", es = "Fortaleza de Drak'Tharon", pt = "Fortaleza de Drak'Tharon", ru = "Крепость Драк'Тарон", pl = "Twierdza Drak'Tharon", tr = "Drak'Tharon Kalesi", it = "Forte Drak'Tharon", ja = "ドラク・サロン・キープ", zh = "达克萨隆要塞", ko = "드락타론 성채" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_GrizzlyHills_01"
+map = 571
+map_name = "Northrend"
+area = 394
+center = [3700.0, -3700.0]
+radius = 100.0
+map_bounds = [-1110.42, -6360.42, 5516.67, 2016.67]
+health_factor = 21.41
+gold_factor = 3.97
+late_factor = 0.4
+hour = 19
+weather = { fine = 65, rain = 20, snow = 15 }
+# The jungle, the hills and the fjord's shore are mild: no cold, no bonfires.
+mild = true
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [3976.7288, -3809.1936]
+turn = 0
+yaw = 0.0
+pitch = 26.0
+distance = 0.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 4500
+name = { en = "Frostpaw Trapper", de = "Fallensteller der Frostpfoten", fr = "Trappeur patte-de-givre", es = "Trampero Zarpa Gélida", pt = "Caçador Pata Gélida", ru = "Охотник Ледяной Лапы", pl = "Traper z Frostpaw", tr = "Buzpençe Tuzakçısı", it = "Cacciatore di trappole Zampagelo", ja = "フロストポーの罠師", zh = "霜爪捕兽者", ko = "서리발 덫사냥꾼" }
+type = "humanoid"
+display = 145
+icon = "Ability_Hunter_Pet_Wolf"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 4501
+name = { en = "Bloodcrazed Worg", de = "Blutrünstiger Worg", fr = "Worg fou de sang", es = "Huargo enloquecido de sangre", pt = "Worg Enlouquecido por Sangue", ru = "Обезумевший от крови ворг", pl = "Worg owładnięty żądzą krwi", tr = "Kan Delisi Worg", it = "Worg impazzito di sangue", ja = "血に狂ったウォーグ", zh = "嗜血座狼", ko = "피에 굶주린 늑대" }
+type = "beast"
+display = 22003
+icon = "Ability_Hunter_Pet_Wolf"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.6
+
+[[zone.enemy]]
+entry = 4502
+name = { en = "Bloodmoon Worgen", de = "Worgen des Blutmonds", fr = "Worgen de la Lune sanglante", es = "Huargen Luna de Sangre", pt = "Worgen Lua Sangrenta", ru = "Ворген Кровавой Луны", pl = "Worgen Krwawego Księżyca", tr = "Kanay Worgen'i", it = "Worgen Lunasangue", ja = "ブラッドムーン・ウォーゲン", zh = "血月狼人", ko = "핏빛달 늑대인간" }
+type = "humanoid"
+display = 26269
+icon = "Ability_Hunter_Pet_Wolf"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.95
+
+[[zone.enemy]]
+entry = 4503
+name = { en = "Drakkari Shaman", de = "Schamane der Drakkari", fr = "Chaman drakkari", es = "Chamán drakkari", pt = "Xamã Drakkari", ru = "Шаман драккари", pl = "Szaman Drakkari", tr = "Drakkari Şamanı", it = "Sciamano Drakkari", ja = "ドラッカリ・シャーマン", zh = "达卡莱萨满祭司", ko = "드라카리 주술사" }
+type = "humanoid"
+display = 24415
+icon = "INV_Misc_Head_Troll_02"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9532, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4504
+name = { en = "Iron Dwarf Assailant", de = "Angreifer der Eisenzwerge", fr = "Assaillant nain de fer", es = "Asaltante enano de hierro", pt = "Agressor Anão de Ferro", ru = "Железный дворф-нападающий", pl = "Napastnik Żelaznych Krasnoludów", tr = "Demir Cüce Saldırganı", it = "Assalitore Nano di Ferro", ja = "アイアン・ドワーフの襲撃者", zh = "铁矮人袭击者", ko = "무쇠 드워프 습격자" }
+type = "humanoid"
+display = 25754
+icon = "INV_Misc_Head_Dwarf_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+
+[[zone.enemy]]
+entry = 4505
+name = { en = "Grizzly Bear", de = "Grizzlybär", fr = "Grizzly", es = "Oso pardo", pt = "Urso Pardo", ru = "Гризли", pl = "Niedźwiedź grizzly", tr = "Boz Ayı", it = "Orso grizzly", ja = "グリズリー・ベア", zh = "灰熊", ko = "회색곰" }
+type = "beast"
+display = 14316
+icon = "Ability_Hunter_Pet_Bear"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.75
+
+[[zone.enemy]]
+entry = 4506
+name = { en = "Grizzly Hills Stag", de = "Hirsch der Grizzlyhügel", fr = "Cerf des Grisonnes", es = "Ciervo de las Colinas Pardas", pt = "Cervo das Colinas Pardacentas", ru = "Олень Седых холмов", pl = "Jeleń ze Wzgórz Grizzly", tr = "Boz Ayı Tepeleri Geyiği", it = "Cervo dei Colli Bradi", ja = "グリズリー・ヒルズの雄鹿", zh = "灰熊丘陵雄鹿", ko = "회색 구릉지 수사슴" }
+type = "beast"
+display = 1917
+icon = "Ability_Hunter_Pet_TallStrider"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+
+[[zone.enemy]]
+entry = 4507
+name = { en = "Iron Rune-Weaver", de = "Eisenrunenwirker", fr = "Tisse-runes de fer", es = "Tejerruna de hierro", pt = "Tecelão de Runas de Ferro", ru = "Плетущий железные руны", pl = "Runiczny tkacz Żelaznych", tr = "Demir Rün Dokuyucusu", it = "Tessirune Runa di Ferro", ja = "アイアン・ルーンウィーヴァー", zh = "铁符文织造者", ko = "무쇠 룬직조사" }
+type = "humanoid"
+display = 25756
+icon = "INV_Misc_Head_Dwarf_02"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 13748, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4508
+name = { en = "Shardhorn Rhino", de = "Splitterhornnashorn", fr = "Rhinocéros corne-d'éclat", es = "Rinoceronte Cuernoastilla", pt = "Rinoceronte Chifre de Estilhaço", ru = "Носорог Острого Рога", pl = "Nosorożec Shardhorn", tr = "Kıymıkboynuz Gergedanı", it = "Rinoceronte Cornoschegge", ja = "シャードホーン・ライノ", zh = "碎角犀牛", ko = "파편뿔 코뿔소" }
+type = "beast"
+display = 26266
+icon = "Ability_Hunter_Pet_Rhino"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.95
+
+[[zone.elite]]
+entry = 4510
+name = { en = "Corrupted Ancient", de = "Verderbtes Urtum", fr = "Ancien corrompu", es = "Anciano corrupto", pt = "Ancião Corrompido", ru = "Осквернённый древень", pl = "Skażony starożytny", tr = "Yozlaşmış Kadim", it = "Antico corrotto", ja = "堕落したエンシェント", zh = "腐化的古树", ko = "타락한 고대정령" }
+type = "elemental"
+display = 2078
+icon = "Ability_Druid_ForceofNature"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.7
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { pool = { spell = 0, burst = 339, radius = 5.0, warn = 1.6, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { stomp = { spell = 20549, radius = 6.0, warn = 1.6, knock = 8.0 } }
+
+[[zone.elite]]
+entry = 4511
+name = { en = "Ironhide Giant", de = "Eisenhautriese", fr = "Géant peau-de-fer", es = "Gigante Piel de Hierro", pt = "Gigante Couro de Ferro", ru = "Великан Железной Шкуры", pl = "Olbrzym Ironhide", tr = "Demirpost Devi", it = "Gigante Pellediferro", ja = "アイアンハイド・ジャイアント", zh = "铁皮巨人", ko = "무쇠가죽 거인" }
+type = "giant"
+display = 22652
+icon = "Achievement_Reputation_Ogre"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.5
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 4512
+name = { en = "Bloodmoon Alpha", de = "Alpha des Blutmonds", fr = "Alpha de la Lune sanglante", es = "Alfa Luna de Sangre", pt = "Alfa Lua Sangrenta", ru = "Вожак Кровавой Луны", pl = "Alfa Krwawego Księżyca", tr = "Kanay Alfası", it = "Alfa Lunasangue", ja = "ブラッドムーン・アルファ", zh = "血月首领", ko = "핏빛달 우두머리" }
+type = "humanoid"
+display = 26314
+icon = "Ability_Hunter_Pet_Wolf"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.boss]]
+entry = 4590
+name = { en = "Ursoc", de = "Ursoc", fr = "Ursoc", es = "Ursoc", pt = "Ursoc", ru = "Урсок", pl = "Ursoc", tr = "Ursoc", it = "Ursoc", ja = "アーソック", zh = "乌索克", ko = "우르속" }
+type = "beast"
+display = 27567
+icon = "Ability_Hunter_Pet_Bear"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.0
+minute = 4
+yell = { en = "Ursoc roars across the hills!", de = "Ursocs Brüllen hallt über die Hügel!", fr = "Le rugissement d'Ursoc résonne sur les collines !", es = "¡El rugido de Ursoc resuena por las colinas!", pt = "O rugido de Ursoc ecoa pelas colinas!", ru = "Рёв Урсока разносится над холмами!", pl = "Ursoc ryczy nad wzgórzami!", tr = "Ursoc tepelerde kükrüyor!", it = "Ursoc ruggisce sulle colline!", ja = "アーソックの咆哮が丘に響き渡る！", zh = "乌索克的咆哮响彻群山！", ko = "우르속의 포효가 언덕을 가로질러 울려 퍼집니다!" }
+kit = "ursoc"
+
+[[zone.boss]]
+entry = 4591
+name = { en = "Trollgore", de = "Trollgrind", fr = "Trollgore", es = "Trollgore", pt = "Trollgore", ru = "Троллегор", pl = "Trollgore", tr = "Trollgore", it = "Trollgore", ja = "トロルゴア", zh = "托尔戈", ko = "트롤고어" }
+type = "undead"
+display = 26857
+icon = "Achievement_Boss_trollgore"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.4
+minute = 8
+yell = { en = "More grunts, more glory!", de = "Mehr Grunzer, mehr Ruhm!", fr = "Plus de grunts, plus de gloire !", es = "¡Más grunts, más gloria!", pt = "Mais grunts, mais glória!", ru = "Больше грантов - больше славы!", pl = "Więcej pachołków, więcej chwały!", tr = "Daha çok asker, daha çok şan!", it = "Più reclute, più gloria!", ja = "兵が増えれば栄光も増える！", zh = "更多的步兵，更多的荣耀！", ko = "졸개가 많을수록 영광도 크다!" }
+kit = "trollgore"
+
+[[zone.boss]]
+entry = 4592
+name = { en = "Novos the Summoner", de = "Novos der Beschwörer", fr = "Novos l'Invocateur", es = "Novos el Invocador", pt = "Novos, o Evocador", ru = "Новос Призыватель", pl = "Novos Przyzywacz", tr = "Çağırıcı Novos", it = "Novos l'Evocatore", ja = "召喚者ノヴォス", zh = "召唤者诺沃斯", ko = "소환사 노보스" }
+type = "undead"
+display = 26859
+icon = "Achievement_Boss_novos"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.2
+minute = 12
+yell = { en = "The chill you feel is the herald of your doom!", de = "Die Kälte, die ihr spürt, kündet von eurem Untergang!", fr = "Le froid que vous ressentez annonce votre perte !", es = "¡El frío que sentís es el heraldo de vuestra perdición!", pt = "O frio que vocês sentem é o arauto da sua perdição!", ru = "Холод, что вы чувствуете, - предвестник вашей гибели!", pl = "Chłód, który czujesz, zwiastuje twoją zgubę!", tr = "Hissettiğiniz ürperti sonunuzun habercisi!", it = "Il gelo che senti è l'araldo della tua rovina!", ja = "その寒気こそ、貴様の破滅の前触れだ！", zh = "你感受到的寒意，正是你末日的先兆！", ko = "네가 느끼는 한기는 파멸의 전조다!" }
+kit = "novos_the_summoner"
+
+[[zone.boss]]
+entry = 4593
+name = { en = "King Dred", de = "König Dred", fr = "Roi Dred", es = "Rey Dred", pt = "Rei Dred", ru = "Король Дред", pl = "Król Dred", tr = "Kral Dred", it = "Re Dred", ja = "キング・ドレッド", zh = "暴龙之王爵德", ko = "왕 드레드" }
+type = "beast"
+display = 19732
+icon = "Achievement_Boss_kingdred"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.6
+minute = 16
+yell = { en = "King Dred bursts from the undergrowth!", de = "König Dred bricht aus dem Unterholz hervor!", fr = "Le roi Dred jaillit des sous-bois !", es = "¡El rey Dred irrumpe de entre la maleza!", pt = "O Rei Dred irrompe do matagal!", ru = "Король Дред выскакивает из зарослей!", pl = "Król Dred wyłamuje się z podszycia!", tr = "Kral Dred çalılıktan fırlıyor!", it = "Re Dred irrompe dal sottobosco!", ja = "キング・ドレッドが下生えから飛び出してきた！", zh = "暴龙之王爵德从灌木丛中冲出！", ko = "왕 드레드가 덤불을 뚫고 튀어나옵니다!" }
+kit = "king_dred"
+
+[[zone.boss]]
+entry = 2104
+name = { en = "the Prophet Tharon'ja", de = "der Prophet Tharon'ja", fr = "le prophète Tharon'ja", es = "el Profeta Tharon'ja", pt = "o Profeta Tharon'ja", ru = "Пророк Тарон'джа", pl = "Prorok Tharon'ja", tr = "Peygamber Tharon'ja", it = "il Profeta Tharon'ja", ja = "預言者サロンジャ", zh = "先知萨隆亚", ko = "예언자 타론자" }
+type = "undead"
+display = 26856
+icon = "Spell_Shadow_AnimateDead"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.6
+minute = 20
+yell = { en = "Tharon'ja sees all! The work of mortals shall not end the eternal dynasty!", de = "Tharon'ja sieht alles! Das Werk Sterblicher wird die ewige Dynastie nicht beenden!", fr = "Tharon'ja voit tout ! L'œuvre des mortels ne mettra pas fin à l'éternelle dynastie !", es = "¡Tharon'ja lo ve todo! ¡La obra de los mortales no acabará con la dinastía eterna!", pt = "Tharon'ja vê tudo! A obra dos mortais não porá fim à dinastia eterna!", ru = "Тарон'джа видит всё! Смертным не положить конец вечной династии!", pl = "Tharon'ja widzi wszystko! Dzieło śmiertelników nie zakończy wiecznej dynastii!", tr = "Tharon'ja her şeyi görür! Ölümlülerin işi ebedi hanedanı sonlandırmayacak!", it = "Tharon'ja vede tutto! L'opera dei mortali non porrà fine alla dinastia eterna!", ja = "サロンジャはすべてを見ている！定命の者の業で永遠の王朝が終わることはない！", zh = "塔隆亚洞察一切！凡人的所作所为无法终结永恒的王朝！", ko = "타론자는 모든 것을 본다! 필멸자의 손으로는 영원한 왕조를 끝낼 수 없다!" }
+final = true
+kit = "the_prophet_tharonja"

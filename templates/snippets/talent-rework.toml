@@ -1,0 +1,20 @@
+# Snippet: rework a talent the game already has (here the mage's Arcane Focus).
+#
+# Goes in:  packs/<your package>/talent-rework.toml (any .toml file of your package).
+# Lock:     profile.json, in your package's "overrides":
+#             { "dependency": "base", "entity": "talent:arcane_focus" }
+# Rules:    - `kind` is "talent" (or "talent_tree", "class" for a tree or a class), `key` the
+#             game's key.
+#           - A field replaces the old one whole: `effects`, `mods` and `plays` are lists and are
+#             replaced as a list; a `name` or `text` carries all twelve languages.
+#           - A talent moved to another `row` / `col` is put among that row's talents.
+#           - A mod cannot remove a talent, only change what it does.
+#           - Your mod has saves of its own, so a rework never shifts an official hero's build.
+# Checked:  in a copy of templates/starter-mod with `azs-content profile-check`.
+
+[[override]]
+kind = "talent"
+key = "arcane_focus"
+ranks = 3
+menu_v = 0.08
+mods_v = 0.08

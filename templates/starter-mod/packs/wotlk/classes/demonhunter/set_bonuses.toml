@@ -1,0 +1,140 @@
+# The demonhunter's 8-piece set bonuses: one change to one of its spells per tier (docs/HOWTO-CONTENT.md "A set bonus").
+
+# Ours (TUNE): the family of the original's Common bonus (leaps to 2 more enemies for 50%), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "demonhunter_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Chaos Strike leaps to {v} more enemies for 50% of its damage.", de = "Chaosstoß springt auf {v} weitere Feinde über, für 50% seines Schadens.", fr = "Frappe du chaos bondit sur {v} ennemis de plus pour 50% de ses dégâts.", es = "Golpe del caos salta a {v} enemigos más con un 50% de su daño.", pt = "Golpe do Caos salta para mais {v} inimigos com 50% do seu dano.", ru = "«Удар хаоса» перескакивает на дополнительных врагов ({v}) с 50% урона.", pl = "Cios chaosu przeskakuje na {v} kolejnych wrogów, zadając 50% swoich obrażeń.", tr = "Kaos Darbesi, hasarının %50'i ile {v} düşmana daha sıçrar.", it = "Colpo del caos balza su {v} nemici in più per il 50% dei suoi danni.", ja = "カオス・ストライクが追加で{v}体の敵に飛び移り、そのダメージの50%を与えます。", zh = "混乱打击会跳跃到{v}个额外的敌人身上，造成相当于其伤害50%的伤害。", ko = "혼돈의 일격이 적 {v}명에게 더 튀어 피해의 50%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 2.0, play = { splash = { keys = ["chaos_strike"], share = 0.5, radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+
+# Ours (TUNE): the family of the original's Uncommon bonus (+2 targets, the glaive jumps 2 times more), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "demonhunter_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Throw Glaive strikes {v} more enemies.", de = "Gleve werfen trifft {v} Feinde mehr.", fr = "Lancer de glaive frappe {v} ennemis de plus.", es = "Lanzar guja alcanza a {v} enemigos más.", pt = "Arremessar Glaive atinge mais {v} inimigos.", ru = "«Бросок глефы» поражает больше врагов (+{v}).", pl = "Rzut glewią trafia o {v} wrogów więcej.", tr = "Glaive Fırlat {v} düşmana daha vurur.", it = "Lancio del glaive colpisce {v} nemici in più.", ja = "スロー・グレイヴが追加で{v}体の敵に命中します。", zh = "投掷利刃额外击中{v}个敌人。", ko = "전투검 투척이 적을 {v}명 더 공격합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["throw_glaive"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+
+# Ours (TUNE): the family of the original's Rare bonus (+50% wider, +30% damage), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "demonhunter_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Eye Beam is {v}% wider and deals {v2}% more damage.", de = "Augenstrahl ist {v}% breiter und verursacht {v2}% mehr Schaden.", fr = "Rayon oculaire est {v}% plus large et inflige {v2}% de dégâts en plus.", es = "Rayo ocular es un {v}% más amplio e inflige un {v2}% más de daño.", pt = "Raio Ocular fica {v}% mais largo e causa {v2}% a mais de dano.", ru = "«Луч глаз» на {v}% шире и наносит на {v2}% больше урона.", pl = "Promień oka jest szerszy o {v}% i zadaje o {v2}% więcej obrażeń.", tr = "Göz Işını %{v} daha geniştir ve %{v2} daha fazla hasar verir.", it = "Raggio oculare è più ampio del {v}% e infligge il {v2}% di danni in più.", ja = "アイ・ビームの範囲が{v}%広がり、ダメージが{v2}%増加します。", zh = "眼棱的范围扩大{v}%，造成的伤害提高{v2}%。", ko = "안광의 범위가 {v}% 넓어지고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["eye_beam"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["eye_beam"] }]
+mods_v = 0.3
+shows = "v2"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Epic bonus (sets enemies burning for 30% of its hit over 3 s), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "demonhunter_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Immolation Aura sets enemies burning for {v}% of its hit over 3 sec.", de = "Feuerbrandaura setzt Feinde in Brand, für {v}% ihres Treffers über 3 Sek.", fr = "Aura d'immolation enflamme les ennemis pour {v}% de son impact en 3 s.", es = "Aura de inmolación hace arder a los enemigos por el {v}% de su golpe durante 3 s.", pt = "Aura de Imolação incendeia os inimigos por {v}% do golpe ao longo de 3 s.", ru = "«Аура самопожертвования» поджигает врагов на {v}% своего удара в течение 3 сек.", pl = "Aura immolacji podpala wrogów, zadając {v}% swojego trafienia przez 3 s.", tr = "Yakma Auraı düşmanları 3 sn boyunca vuruşunun %{v}'i kadar yakar.", it = "Aura d'immolazione incendia i nemici per il {v}% del suo colpo in 3 sec.", ja = "イモレーション・オーラが敵を燃やし、3秒かけてその攻撃の{v}%のダメージを与えます。", zh = "献祭光环会点燃敌人，在3秒内造成相当于其伤害{v}%的伤害。", ko = "제물의 오라가 적을 불태워 3초에 걸쳐 그 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.3, play = { hit_dot = { keys = ["immolation_aura"], secs = 3.0 } } }]
+shows = "v"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Legendary bonus (comes back and strikes again for 75%), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "demonhunter_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "The Hunt comes back, striking again for {v}%.", de = "Die Jagd kehrt zurück und trifft erneut für {v}%.", fr = "La Chasse revient et frappe de nouveau pour {v}%.", es = "La Caza regresa y vuelve a golpear con un {v}%.", pt = "A Caçada volta, atingindo de novo com {v}%.", ru = "«Охота» возвращается и бьёт ещё раз на {v}%.", pl = "Polowanie wraca, uderzając ponownie za {v}%.", tr = "Av geri döner ve %{v} ile yeniden vurur.", it = "La Caccia ritorna, colpendo di nuovo per il {v}%.", ja = "ザ・ハントが戻ってきて、{v}%のダメージで再び命中します。", zh = "恶魔追击会返回，再次打击，造成{v}%的伤害。", ko = "사냥이 되돌아와 {v}%의 피해로 다시 적중합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.75, play = { recast = { keys = ["the_hunt"], delay = 0.3 } } }]
+shows = "v"
+percent = true
+
+
+# Ours (TUNE): plan section 5, the PvP bonus: a nova widens in place of striking more (+50% wider, +200% damage, 40% sooner, +100% against held enemies).
+[[set_bonus]]
+key = "demonhunter_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Chaos Nova is {v}% wider, deals 200% more damage and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Chaosnova ist {v}% weiter, verursacht 200% mehr Schaden und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Nova du chaos est {v}% plus large, inflige 200% de dégâts en plus et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Nova del caos es un {v}% más amplia, inflige un 200% más de daño y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Nova do Caos é {v}% mais ampla, causa 200% mais dano e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Кольцо хаоса шире на {v}%, наносит на 200% больше урона и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Nova chaosu jest o {v}% szersza, zadaje o 200% więcej obrażeń i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Kaos Nova %{v} daha geniştir, %200 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Nova del caos è più ampia del {v}%, infligge il 200% di danni in più e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "カオス・ノヴァの範囲が{v}%広がり、ダメージが200%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "混乱新星的范围扩大{v}%，造成的伤害提高200%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "혼돈의 회오리의 범위가 {v}% 넓어지고, 피해가 200% 증가하며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["chaos_nova"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["chaos_nova"] }]
+mods_v = 2.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["chaos_nova"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true
+
+
+# The demonhunter's Mythic set, Illidari's Pride (the balance team's concept of 2026-11-15, the PDF "DH Exotic
+# Mythic Konzept"). `with_set` lets a 4-piece part empower with the set's 8-piece (all eight pieces at 5 stars).
+#
+# 4 pieces: Demon's Bite hits {v} (4, 6) more targets (a `targets` mod) and deals {v2}% (60, 35) less damage: the
+# malus is a `damage_times` of -0.6 (a factor of 0.4) that shrinks to -0.35 when empowered, a window number is
+# shown without its sign.
+[[set_bonus]]
+key = "demonhunter_mythic_4"
+tier = "mythic"
+pieces = 4
+text = { en = "Illidari's Pride: Demon's Bite hits {v} additional targets and deals {v2}% less damage.", de = "Stolz der Illidari: Dämonenbiss trifft {v} zusätzliche Ziele und verursacht {v2}% weniger Schaden.", fr = "Fierté des Illidari : Morsure du démon touche {v} cibles supplémentaires et inflige {v2} % de dégâts en moins.", es = "Orgullo de los Illidari: Mordedura de demonio golpea a {v} objetivos adicionales e inflige un {v2} % menos de daño.", pt = "Orgulho dos Illidari: Mordida do Demônio atinge {v} alvos adicionais e causa {v2}% a menos de dano.", ru = "Гордость Иллидари: «Укус демона» поражает ещё {v} целей, но наносит на {v2}% меньше урона.", pl = "Duma Illidari: Ugryzienie demona trafia {v} dodatkowych celów i zadaje o {v2}% mniej obrażeń.", tr = "Illidari'nin Gururu: Şeytan Isırığı {v} ek hedefe vurur ve %{v2} daha az hasar verir.", it = "Orgoglio degli Illidari: Morso del demone colpisce {v} bersagli aggiuntivi e infligge il {v2}% di danni in meno.", ja = "イリダリの誇り：デーモンズ・バイトが追加で{v}体の対象に命中し、ダメージが{v2}%減少します。", zh = "伊利达雷之傲：恶魔之咬额外击中{v}个目标，造成的伤害降低{v2}%。", ko = "일리다리의 긍지: 악마의 이빨이 대상을 {v}명 더 공격하며 피해가 {v2}% 감소합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["demons_bite"] }]
+mods_v = 4.0
+whole = true
+with_set = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage_times = ["demons_bite"] }]
+mods_v = -0.6
+empowered = -0.35
+with_set = true
+shows = "v2"
+percent = true
+
+# 8 pieces: each Demon's Bite hit has {v}% (5, 7.5) to cast a free Chaos Strike for {v2}% (50, 75) of its hit, at most
+# 3 a second; a Chaos Strike crit (cast or free) has a fixed 2% for a free Blade Dance for a fixed 50%, at most
+# 2 a second (`proc_cast`).
+[[set_bonus]]
+key = "demonhunter_mythic_8"
+tier = "mythic"
+pieces = 8
+mechanic = { kind = "proc_cast", spell = "demons_bite", cast = "chaos_strike", chance = 0.05, damage = 0.5, most = 3, empowers = true, then = { cast = "blade_dance", chance = 0.02, damage = 0.5, most = 2 } }
+text = { en = "Illidari's Pride: Each Demon's Bite hit has a {v}% chance to cast a free Chaos Strike at {v2}% damage, up to 3 times per second. Chaos Strike critical hits have a 2% chance to cast a free Blade Dance at 50% damage, up to twice per second.", de = "Stolz der Illidari: Jeder Treffer mit Dämonenbiss hat eine Chance von {v}%, einen kostenlosen Chaosstoß mit {v2}% Schaden zu wirken, maximal dreimal pro Sekunde. Kritische Treffer mit Chaosstoß haben eine Chance von 2%, einen kostenlosen Klingentanz mit 50% Schaden zu wirken, maximal zweimal pro Sekunde.", fr = "Fierté des Illidari : chaque coup de Morsure du démon a {v} % de chances de déclencher une Frappe du chaos gratuite à {v2} % de ses dégâts, jusqu’à 3 fois par seconde. Les coups critiques de Frappe du chaos ont 2 % de chances de déclencher une Danse des lames gratuite à 50 % de ses dégâts, au maximum deux fois par seconde.", es = "Orgullo de los Illidari: cada golpe de Mordedura de demonio tiene un {v} % de probabilidad de lanzar un Golpe del caos gratuito al {v2} % de su daño, hasta 3 veces por segundo. Los golpes críticos de Golpe del caos tienen un 2 % de probabilidad de lanzar una Danza de espadas gratuita al 50 % de su daño, hasta dos veces por segundo.", pt = "Orgulho dos Illidari: cada acerto de Mordida do Demônio tem {v}% de chance de lançar um Golpe do Caos gratuito com {v2}% do dano, até 3 vezes por segundo. Acertos críticos de Golpe do Caos têm 2% de chance de lançar uma Dança das Lâminas gratuita com 50% do dano, até duas vezes por segundo.", ru = "Гордость Иллидари: каждое попадание «Укуса демона» с вероятностью {v}% вызывает бесплатный «Удар хаоса» с {v2}% урона, до 3 раз в секунду. Критические попадания «Удара хаоса» с вероятностью 2% вызывают бесплатный «Танец клинков» с 50% урона, до двух раз в секунду.", pl = "Duma Illidari: każde trafienie Ugryzieniem demona ma {v}% szansy na darmowy Cios chaosu zadający {v2}% obrażeń, do 3 razy na sekundę. Krytyczne trafienia Ciosem chaosu mają 2% szansy na darmowy Taniec ostrzy zadający 50% obrażeń, do dwóch razy na sekundę.", tr = "Illidari'nin Gururu: Her Şeytan Isırığı isabeti %{v} ihtimalle %{v2} hasarlı ücretsiz bir Kaos Darbesi kullanır, saniyede en fazla 3 kez. Kaos Darbesi kritik isabetleri %2 ihtimalle %50 hasarlı ücretsiz bir Bıçak Dansı kullanır, saniyede en fazla iki kez.", it = "Orgoglio degli Illidari: ogni colpo di Morso del demone ha il {v}% di probabilità di lanciare gratis un Colpo del caos al {v2}% dei danni, fino a 3 volte al secondo. I colpi critici di Colpo del caos hanno il 2% di probabilità di lanciare gratis una Danza delle lame al 50% dei danni, fino a due volte al secondo.", ja = "イリダリの誇り：デーモンズ・バイトの各命中が{v}%の確率で{v2}%ダメージの無料のカオス・ストライクを唱えます（1秒に3回まで）。カオス・ストライクのクリティカルが2%の確率で50%ダメージの無料のブレード・ダンスを唱えます（1秒に2回まで）。", zh = "伊利达雷之傲：恶魔之咬每次命中有{v}%的几率免费施放一次伤害为{v2}%的混乱打击，每秒最多3次。混乱打击暴击时有2%的几率免费施放一次伤害为50%的刃舞，每秒最多两次。", ko = "일리다리의 긍지: 악마의 이빨이 적중할 때마다 {v}% 확률로 {v2}% 피해의 혼돈의 일격을 무료로 시전하며, 초당 최대 3번입니다. 혼돈의 일격이 치명타로 적중하면 2% 확률로 50% 피해의 칼춤을 무료로 시전하며, 초당 최대 2번입니다." }

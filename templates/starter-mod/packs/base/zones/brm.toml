@@ -1,0 +1,303 @@
+# Blackrock Mountain, "The Lord of Blackrock".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "brm"
+order = 9
+name = { en = "Blackrock Mountain", de = "Der Schwarzfels", fr = "Mont Rochenoire", es = "Montaña Roca Negra", pt = "Montanha Rocha Negra", ru = "Черная гора", pl = "Góra Czarnej Skały", tr = "Karakaya Dağı", it = "Massiccio Roccianera", ja = "ブラックロック・マウンテン", zh = "黑石山", ko = "검은바위 산" }
+subtitle = { en = "The Lord of Blackrock", de = "Der Herr des Schwarzfels", fr = "Le Seigneur du Mont Rochenoire", es = "El Señor de Roca Negra", pt = "O Senhor da Rocha Negra", ru = "Повелитель Черной горы", pl = "Pan Czarnej Skały", tr = "Karakaya'nın Lordu", it = "Il Signore di Roccianera", ja = "ブラックロックの王", zh = "黑石之王", ko = "검은바위의 군주" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_BurningSteppes_01"
+map = 0
+map_name = "Azeroth"
+area = 46
+center = [-7760.0, -1800.0]
+radius = 100.0
+map_bounds = [-266.67, -3195.83, -7031.25, -8983.33]
+health_factor = 4.14
+gold_factor = 1.99
+late_factor = 0.25
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = 15.0
+pitch = 26.0
+distance = 16.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 1000
+name = { en = "Dark Iron Slaver", de = "Sklaventreiber der Dunkeleisenzwerge", fr = "Esclavagiste Sombrefer", es = "Esclavista Hierro Negro", pt = "Escravagista Ferro Negro", ru = "Работорговец Черного Железа", pl = "Niewolnik Mrocznego Żelaza", tr = "Kara Demir Köle Taciri", it = "Schiavista Ferroscuro", ja = "ダークアイアンの奴隷商人", zh = "黑铁奴隶主", ko = "검은무쇠 노예감독관" }
+type = "humanoid"
+display = 8673
+icon = "INV_Misc_Head_Dwarf_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.2
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 1001
+name = { en = "Black Broodling", de = "Schwarzer Brutling", fr = "Dragonnet de la couvée noire", es = "Cría negra", pt = "Cria Negra", ru = "Черный отпрыск", pl = "Czarny smoczek", tr = "Kara Yavru", it = "Draghetto nero", ja = "ブラック・ブルードリング", zh = "黑色龙崽", ko = "새끼 검은용" }
+type = "dragonkin"
+display = 387
+icon = "INV_Misc_Head_Dragon_Black"
+health = 24
+damage = 5
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+
+[[zone.enemy]]
+entry = 1002
+name = { en = "Blackrock Grunt", de = "Grunzer der Schwarzfelsen", fr = "Grunt Rochenoire", es = "Grunt Roca Negra", pt = "Grunt da Rocha Negra", ru = "Рядовой Черной горы", pl = "Pachołek z Czarnej Skały", tr = "Karakaya Askeri", it = "Soldato Roccianera", ja = "ブラックロック・グラント", zh = "黑石步兵", ko = "검은바위 전투병" }
+type = "humanoid"
+display = 8699
+icon = "INV_Misc_Head_Orc_01"
+health = 36
+damage = 6
+swing = 1.7
+speed = 5.6
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 1003
+name = { en = "Dark Iron Geomancer", de = "Geomant der Dunkeleisenzwerge", fr = "Géomancien Sombrefer", es = "Geomántico Hierro Negro", pt = "Geomante Ferro Negro", ru = "Геомант Черного Железа", pl = "Geomanta Mrocznego Żelaza", tr = "Kara Demir Yer Büyücüsü", it = "Geomante Ferroscuro", ja = "ダークアイアン・ジオマンサー", zh = "黑铁地卜师", ko = "검은무쇠 대지술사" }
+type = "humanoid"
+display = 8799
+icon = "INV_Misc_Head_Dwarf_02"
+health = 38
+damage = 8
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1004
+name = { en = "Anvilrage Guardsman", de = "Wache der Ambosszorn", fr = "Garde Rage-d'enclume", es = "Guardia Rabiayunque", pt = "Guarda Fúria da Bigorna", ru = "Страж Яростной Наковальни", pl = "Strażnik z klanu Anvilrage", tr = "Örsöfke Muhafızı", it = "Guardia Furia dell'Incudine", ja = "アンヴィルレイジの衛兵", zh = "铁怒卫兵", ko = "모루분노 경비병" }
+type = "humanoid"
+display = 8681
+icon = "INV_Misc_Head_Dwarf_01"
+health = 80
+damage = 10
+swing = 2.0
+speed = 5.0
+cost = 2.0
+from = 3.0
+
+[[zone.enemy]]
+entry = 1005
+name = { en = "Blazing Elemental", de = "Lodernder Elementar", fr = "Élémentaire flamboyant", es = "Elemental llameante", pt = "Elemental Flamejante", ru = "Пылающий элементаль", pl = "Płonący żywiołak", tr = "Alevli Elemental", it = "Elementale infuocato", ja = "燃え盛るエレメンタル", zh = "炽热元素", ko = "타오르는 정령" }
+type = "elemental"
+display = 1070
+icon = "Spell_Fire_Elemental_Totem"
+health = 55
+damage = 9
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.8
+role = { exploder = { spell = 9874, burst = 7670, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 1006
+name = { en = "Firegut Ogre", de = "Feuerwanstoger", fr = "Ogre Boyaux-de-feu", es = "Ogro Tripasfuego", pt = "Ogro Tripa de Fogo", ru = "Огр Огненное Брюхо", pl = "Ogr z klanu Firegut", tr = "Ateşbağır Ogresi", it = "Ogre Pancia di fuoco", ja = "ファイアガット・オーガ", zh = "火腹食人魔", ko = "불꽃배 오우거" }
+type = "humanoid"
+display = 10707
+icon = "Achievement_Reputation_Ogre"
+health = 170
+damage = 13
+swing = 2.2
+speed = 4.8
+cost = 3.0
+from = 5.5
+size = 0.55
+
+[[zone.enemy]]
+entry = 1007
+name = { en = "Black Wyrmkin", de = "Schwarzer Wyrmkin", fr = "Wyrmide noir", es = "Wyrmkin negro", pt = "Wyrmkin Negro", ru = "Черный змеелюд", pl = "Czarny wyrmin", tr = "Kara Ejder Soyu", it = "Dragonide nero", ja = "ブラック・ワームキン", zh = "黑色龙人", ko = "검은용혈족" }
+type = "dragonkin"
+display = 8249
+icon = "INV_Misc_Head_Dragon_Black"
+health = 60
+damage = 10
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.9
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1008
+name = { en = "Fireguard Destroyer", de = "Feuerwachenzerstörer", fr = "Destructeur Garde-feu", es = "Destructor Guardia de Fuego", pt = "Destruidor Guarda-fogo", ru = "Разрушитель Огненной Стражи", pl = "Niszczyciel z Ognistej Straży", tr = "Ateş Muhafızı Yıkıcı", it = "Distruttore Guardia del Fuoco", ja = "ファイアガード・デストロイヤー", zh = "火焰卫士毁灭者", ko = "화염경비대 파괴자" }
+type = "humanoid"
+display = 8686
+icon = "INV_Misc_Head_Dwarf_01"
+health = 210
+damage = 15
+swing = 2.4
+speed = 4.6
+cost = 3.5
+from = 9.0
+size = 0.75
+
+[[zone.elite]]
+entry = 1009
+name = { en = "Core Hound", de = "Kernhund", fr = "Chien du Magma", es = "Can del Núcleo", pt = "Cão do Núcleo", ru = "Гончая Недр", pl = "Ogar Rdzenia", tr = "Çekirdek Tazısı", it = "Segugio del Nucleo", ja = "コアハウンド", zh = "熔火恶犬", ko = "화산 사냥개" }
+type = "beast"
+display = 10193
+icon = "Ability_Hunter_Pet_CoreHound"
+health = 850
+damage = 26
+swing = 1.8
+speed = 6.0
+cost = 12.0
+from = 4.0
+size = 0.9
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 1010
+name = { en = "Black Drake", de = "Schwarzer Drache", fr = "Drake noir", es = "Draco negro", pt = "Draco Negro", ru = "Черный дрейк", pl = "Czarny drake", tr = "Kara Ejder", it = "Drago nero", ja = "ブラック・ドレイク", zh = "黑龙", ko = "검은 비룡" }
+type = "dragonkin"
+display = 6377
+icon = "INV_Misc_Head_Dragon_Black"
+health = 1000
+damage = 28
+swing = 2.2
+speed = 6.2
+cost = 13.0
+from = 8.5
+size = 0.4
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 22539, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 2120, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 1011
+name = { en = "Molten Giant", de = "Geschmolzener Riese", fr = "Géant en fusion", es = "Gigante fundido", pt = "Gigante Derretido", ru = "Расплавленный великан", pl = "Roztopiony olbrzym", tr = "Erimiş Dev", it = "Gigante fuso", ja = "モルテン・ジャイアント", zh = "熔岩巨人", ko = "용암 거인" }
+type = "giant"
+display = 12162
+icon = "Spell_Fire_Elemental_Totem"
+health = 1250
+damage = 34
+swing = 2.6
+speed = 4.4
+cost = 15.0
+from = 13.0
+size = 0.6
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 0, burst = 2120, radius = 4.5, warn = 1.6, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { nova = { spell = 8349, radius = 7.0, warn = 1.6 } }
+
+[[zone.boss]]
+entry = 1090
+name = { en = "General Angerforge", de = "General Zornesschmied", fr = "Général Forge-colère", es = "General Forjafuria", pt = "General Forja Furiosa", ru = "Генерал Гневокузн", pl = "Generał Angerforge", tr = "General Angerforge", it = "Generale Fucinira", ja = "アンガーフォージ将軍", zh = "安格弗将军", ko = "장군 분노벼림" }
+type = "humanoid"
+display = 8756
+icon = "INV_Misc_Head_Dwarf_01"
+health = 4200
+damage = 26
+speed = 6.0
+size = 2.8799999
+minute = 4
+yell = { en = "Dark Iron! To arms! Crush the intruders!", de = "Dunkeleisen! Zu den Waffen! Zerschmettert die Eindringlinge!", fr = "Sombrefer ! Aux armes ! Écrasez les intrus !", es = "¡Hierro Negro! ¡A las armas! ¡Aplastad a los intrusos!", pt = "Ferro Negro! Às armas! Esmaguem os intrusos!", ru = "Черное Железо! К оружию! Раздавите чужаков!", pl = "Mroczne Żelazo! Do broni! Zmiażdżcie najeźdźców!", tr = "Kara Demir! Silaha sarılın! Davetsiz misafirleri ezin!", it = "Ferroscuro! All'armi! Schiacciate gli intrusi!", ja = "ダークアイアン！武器を取れ！侵入者を叩き潰せ！", zh = "黑铁矮人！拿起武器！粉碎入侵者！", ko = "검은무쇠여! 무기를 들어라! 침입자들을 짓밟아라!" }
+kit = "general_angerforge"
+
+[[zone.boss]]
+entry = 1091
+name = { en = "Warchief Rend Blackhand", de = "Kriegshäuptling Rend Schwarzfaust", fr = "Chef de guerre Rend Main-noire", es = "Jefe de Guerra Rend Mano Negra", pt = "Chefe Guerreiro Rend Mão Negra", ru = "Вождь Рэнд Чернорук", pl = "Wódz Rend Czarna Ręka", tr = "Savaş Başbuğu Rend Karayumruk", it = "Capoguerra Rend Manonera", ja = "大族長レンド・ブラックハンド", zh = "大酋长雷德·黑手", ko = "대족장 렌드 블랙핸드" }
+type = "humanoid"
+display = 9778
+icon = "INV_Misc_Head_Orc_02"
+health = 10500
+damage = 34
+speed = 6.4
+size = 2.9999998
+minute = 8
+yell = { en = "Blackrock will never fall! For the true Horde!", de = "Der Schwarzfels wird niemals fallen! Für die wahre Horde!", fr = "Rochenoire ne tombera jamais ! Pour la vraie Horde !", es = "¡Roca Negra nunca caerá! ¡Por la verdadera Horda!", pt = "A Rocha Negra jamais cairá! Pela verdadeira Horda!", ru = "Черная гора никогда не падет! За истинную Орду!", pl = "Czarna Skała nigdy nie upadnie! Za prawdziwą Hordę!", tr = "Karakaya asla düşmeyecek! Gerçek Horde için!", it = "Roccianera non cadrà mai! Per la vera Orda!", ja = "ブラックロックは決して落ちぬ！真のホードのために！", zh = "黑石永不陷落！为了真正的部落！", ko = "검은바위는 절대 무너지지 않는다! 진정한 호드를 위하여!" }
+kit = "warchief_rend_blackhand"
+
+[[zone.boss]]
+entry = 1092
+name = { en = "Emperor Dagran Thaurissan", de = "Imperator Dagran Thaurissan", fr = "Empereur Dagran Thaurissan", es = "Emperador Dagran Thaurissan", pt = "Imperador Dagran Thaurissan", ru = "Император Дагран Тауриссан", pl = "Imperator Dagran Thaurissan", tr = "İmparator Dagran Thaurissan", it = "Imperatore Dagran Thaurissan", ja = "ダグラン・サウリッサン皇帝", zh = "达格兰·索瑞森大帝", ko = "제왕 다그란 타우릿산" }
+type = "humanoid"
+display = 8807
+icon = "Achievement_Boss_EmperorDagranThaurissan"
+health = 19500
+damage = 42
+speed = 5.8
+size = 2.9999998
+minute = 12
+yell = { en = "Come to aid the Throne!", de = "Kommt, verteidigt den Thron!", fr = "Venez défendre le Trône !", es = "¡Venid a defender el Trono!", pt = "Venham defender o Trono!", ru = "Защитите трон!", pl = "Przybywajcie na pomoc Tronowi!", tr = "Tahtın yardımına gelin!", it = "Accorrete in aiuto del Trono!", ja = "玉座を守りに来い！", zh = "前来守护王座！", ko = "왕좌를 수호하라!" }
+kit = "emperor_dagran_thaurissan"
+
+[[zone.boss]]
+entry = 1093
+name = { en = "Majordomo Executus", de = "Majordomus Exekutus", fr = "Chambellan Executus", es = "Mayordomo Executus", pt = "Mordomo Executus", ru = "Мажордом Экзекутус", pl = "Majordomus Executus", tr = "Kahya Executus", it = "Maggiordomo Executus", ja = "執事エグゼキュータス", zh = "管理者埃克索图斯", ko = "청지기 이그젝큐투스" }
+type = "elemental"
+display = 12029
+icon = "Spell_Fire_Elemental_Totem"
+health = 24000
+damage = 50
+speed = 5.8
+size = 0.9
+minute = 16
+yell = { en = "Reckless mortals! None may challenge the sons of the living flame!", de = "Leichtsinnige Sterbliche! Niemand fordert die Söhne der lebenden Flamme heraus!", fr = "Mortels téméraires ! Nul ne peut défier les fils de la flamme vivante !", es = "¡Mortales temerarios! ¡Nadie puede desafiar a los hijos de la llama viva!", pt = "Mortais imprudentes! Ninguém pode desafiar os filhos da chama viva!", ru = "Безрассудные смертные! Никто не смеет бросить вызов сынам живого пламени!", pl = "Lekkomyślni śmiertelnicy! Nikt nie rzuci wyzwania synom żywego płomienia!", tr = "Pervasız ölümlüler! Yaşayan alevin evlatlarına kimse meydan okuyamaz!", it = "Mortali sconsiderati! Nessuno può sfidare i figli della fiamma vivente!", ja = "無謀な定命の者どもめ！生ける炎の息子たちに挑める者などおらぬ！", zh = "鲁莽的凡人！没有人可以挑战活体火焰之子！", ko = "무모한 필멸자들! 살아 있는 불꽃의 아들들에게 감히 도전할 자는 없다!" }
+kit = "majordomo_executus"
+
+[[zone.boss]]
+entry = 1094
+name = { en = "Nefarian", de = "Nefarian", fr = "Nefarian", es = "Nefarian", pt = "Nefarian", ru = "Нефариан", pl = "Nefarian", tr = "Nefarian", it = "Nefarian", ja = "ネファリアン", zh = "奈法利安", ko = "네파리안" }
+type = "dragonkin"
+display = 11380
+icon = "Achievement_Boss_Nefarion"
+health = 60000
+damage = 62
+speed = 6.2
+size = 0.91
+minute = 20
+yell = { en = "Well done, my minions. The mortals' courage begins to wane! Now let's see how they contend with the true Lord of Blackrock Spire!", de = "Gut gemacht, meine Diener. Der Mut der Sterblichen beginnt zu schwinden! Nun wollen wir sehen, wie sie sich gegen den wahren Herrn der Schwarzfelsspitze schlagen!", fr = "Bien joué, mes serviteurs. Le courage des mortels commence à faiblir ! Voyons maintenant comment ils se mesurent au véritable seigneur du Pic Rochenoire !", es = "¡Bien hecho, mis esbirros! El valor de los mortales empieza a flaquear. ¡Veamos ahora cómo se enfrentan al verdadero Señor de la Cumbre Roca Negra!", pt = "Muito bem, meus lacaios. A coragem dos mortais começa a diminuir! Vamos ver como eles lidam com o verdadeiro Lorde do Pico da Rocha Negra!", ru = "Отлично, мои слуги. Мужество смертных слабеет! Посмотрим, как они справятся с истинным повелителем Вершины Черной горы!", pl = "Dobra robota, moi słudzy. Odwaga śmiertelników zaczyna słabnąć! Zobaczmy teraz, jak poradzą sobie z prawdziwym Panem Czarnej Skały!", tr = "Aferin uşaklarım. Ölümlülerin cesareti sönmeye başladı! Şimdi Karakaya Kulesi'nin gerçek Lordu ile nasıl başa çıkacaklarını görelim!", it = "Ben fatto, miei servi. Il coraggio dei mortali comincia a vacillare! Ora vediamo come se la cavano con il vero Signore della Cima Roccianera!", ja = "よくやった、我が手下どもよ。定命の者どもの勇気がくじけ始めたぞ！さて、真のブラックロック・スパイアの王を相手にどう戦うか見せてもらおう！", zh = "干得好，我的仆从们。凡人的勇气开始动摇了！现在让我们看看，他们如何对抗真正的黑石塔之王！", ko = "잘했다, 내 하수인들아. 필멸자들의 용기가 꺾이기 시작했군! 이제 검은바위 첨탑의 진정한 군주를 어떻게 상대하는지 보자!" }
+final = true
+kit = "nefarian"

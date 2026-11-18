@@ -1,0 +1,16 @@
+# Avatar of Freya: Nature Bombs, Starfire, the treants.
+
+[[boss]]
+key = "avatar_of_freya"
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 64587, count = 4, radius = 5.0, spread = 10.0, warn = 1.8, factor = 2.2 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 2912 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

@@ -1,0 +1,296 @@
+# Elwynn Forest, "The Defias Uprising": AS's first zone.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "elwynn"
+order = 0
+name = { en = "Elwynn Forest", de = "Wald von Elwynn", fr = "Forêt d'Elwynn", es = "Bosque de Elwynn", pt = "Floresta de Elwynn", ru = "Элвиннский лес", pl = "Las Elwynn", tr = "Elwynn Ormanı", it = "Foresta di Elwynn", ja = "エルウィンの森", zh = "艾尔文森林", ko = "엘윈 숲" }
+subtitle = { en = "The Defias Uprising", de = "Der Aufstand der Defias", fr = "Le soulèvement des Défias", es = "La rebelión de los Defias", pt = "A Rebelião dos Defias", ru = "Восстание Справедливости", pl = "Powstanie Defiasów", tr = "Defias İsyanı", it = "La rivolta dei Defias", ja = "デファイアスの反乱", zh = "迪菲亚起义", ko = "데피아스단의 봉기" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_ElwynnForest"
+map = 0
+map_name = "Azeroth"
+area = 12
+# The open fields south of Goldshire, between the farms and the river. `TUNE`
+center = [-9530.0, 40.0]
+# AS's own Elwynn radius is 120 (`re/NUMBERS.md` 1); ours starts a little inside it and
+# widens past it.
+radius = 100.0
+# WorldMapArea 30, "Elwynn".
+map_bounds = [1535.4166, -1935.4166, -7939.583, -10254.166]
+health_factor = 0.82
+gold_factor = 1.0
+late_factor = 0.0
+hour = 10
+# How often each kind of weather comes, in weights (`weather::climate`); a zone without it
+# stays clear. `TUNE`
+weather = { fine = 85, rain = 15 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = -35.5199
+pitch = 48.0
+distance = 8.0
+lift = 0.2
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+focus = [-9334.567, 173.0373]
+
+[[zone.enemy]]
+entry = 600
+name = { en = "Kobold Vermin", de = "Koboldungeziefer", fr = "Vermine kobold", es = "Alimaña kobold", pt = "Praga Kobold", ru = "Кобольд-вредитель", pl = "Kobold-szkodnik", tr = "Kobold Haşeresi", it = "Kobold parassita", ja = "コボルド・ヴァーミン", zh = "狗头人苦工", ko = "코볼트 졸개" }
+type = "humanoid"
+display = 26
+icon = "INV_Misc_Head_Kobold_01"
+health = 24
+damage = 3
+swing = 1.6
+speed = 5.0
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 601
+name = { en = "Young Wolf", de = "Junger Wolf", fr = "Jeune loup", es = "Lobo joven", pt = "Lobo Jovem", ru = "Молодой волк", pl = "Młody wilk", tr = "Genç Kurt", it = "Giovane lupo", ja = "若い狼", zh = "小狼", ko = "어린 늑대" }
+type = "beast"
+display = 165
+icon = "Ability_Hunter_Pet_Wolf"
+health = 18
+damage = 3
+swing = 1.3
+speed = 7.4
+cost = 1.0
+from = 0.5
+
+[[zone.enemy]]
+entry = 602
+name = { en = "Murloc Streamrunner", de = "Murlocbachläufer", fr = "Coursier de ruisseau murloc", es = "Corredor de arroyos múrloc", pt = "Corredor de Riachos Murloc", ru = "Мурлок-ручейник", pl = "Murlok-zwiadowca", tr = "Murloc Dere Koşucusu", it = "Corriruscello murloc", ja = "マーロック・ストリームランナー", zh = "鱼人溪行者", ko = "멀록 개울질주자" }
+type = "humanoid"
+display = 31
+icon = "INV_Misc_Head_Murloc_01"
+health = 30
+damage = 4
+swing = 1.6
+speed = 5.6
+cost = 1.0
+from = 1.2
+
+[[zone.enemy]]
+entry = 603
+name = { en = "Kobold Geomancer", de = "Koboldgeomant", fr = "Géomancien kobold", es = "Geomántico kobold", pt = "Geomante Kobold", ru = "Геомант-кобольд", pl = "Kobold-geomanta", tr = "Kobold Yer Büyücüsü", it = "Geomante kobold", ja = "コボルド・ジオマンサー", zh = "狗头人地卜师", ko = "코볼트 대지술사" }
+type = "humanoid"
+display = 163
+icon = "INV_Misc_Head_Kobold_01"
+health = 30
+damage = 6
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 604
+name = { en = "Defias Thug", de = "Defiasschläger", fr = "Brute défias", es = "Matón Defias", pt = "Bandido Defias", ru = "Головорез Справедливости", pl = "Zbir Defiasów", tr = "Defias Külhanbeyi", it = "Teppista Defias", ja = "デファイアスの悪漢", zh = "迪菲亚暴徒", ko = "데피아스단 폭력배" }
+type = "humanoid"
+display = 2323
+icon = "INV_Misc_Head_Human_01"
+health = 44
+damage = 6
+swing = 1.8
+speed = 5.4
+cost = 1.5
+from = 3.0
+
+[[zone.enemy]]
+entry = 605
+name = { en = "Riverpaw Brute", de = "Rohling der Flusspfoten", fr = "Brute Patte-du-fleuve", es = "Bruto Zarpa Fluvial", pt = "Bruto Pata do Rio", ru = "Громила Речных Лап", pl = "Brutal z Riverpaw", tr = "Nehirpençe Vahşisi", it = "Bruto Zampafiume", ja = "リバーポー・ブルート", zh = "河爪蛮兵", ko = "강가발톱 야수" }
+type = "humanoid"
+display = 175
+icon = "INV_Misc_Head_Gnoll_01"
+health = 120
+damage = 9
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 4.5
+
+[[zone.enemy]]
+entry = 606
+name = { en = "Prowler", de = "Streuner", fr = "Rôdeur", es = "Merodeador", pt = "Espreitador", ru = "Хищник", pl = "Włóczęga", tr = "Sinsi Gezgin", it = "Predatore", ja = "プラウラー", zh = "潜伏者", ko = "배회자" }
+type = "beast"
+display = 644
+icon = "Ability_Hunter_Pet_Cat"
+health = 50
+damage = 7
+swing = 1.3
+speed = 7.6
+cost = 1.5
+from = 6.0
+
+[[zone.enemy]]
+entry = 607
+name = { en = "Defias Rogue Wizard", de = "Abtrünniger Hexer der Defias", fr = "Mage renégat défias", es = "Mago renegado Defias", pt = "Feiticeiro Renegado Defias", ru = "Отступник-чародей Справедливости", pl = "Czarodziej-łotr Defiasów", tr = "Defias Haydut Büyücü", it = "Mago rinnegato Defias", ja = "デファイアスのならず者魔術師", zh = "迪菲亚流氓巫师", ko = "데피아스단 무법 마법사" }
+type = "humanoid"
+display = 2315
+icon = "INV_Misc_Head_Human_02"
+health = 40
+damage = 7
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.5
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 608
+name = { en = "Defias Enforcer", de = "Vollstrecker der Defias", fr = "Homme de main défias", es = "Esbirro Defias", pt = "Capanga Defias", ru = "Вышибала Справедливости", pl = "Egzekutor Defiasów", tr = "Defias Zorbası", it = "Esecutore Defias", ja = "デファイアス・エンフォーサー", zh = "迪菲亚执行者", ko = "데피아스단 집행자" }
+type = "humanoid"
+display = 2324
+icon = "INV_Misc_Head_Human_01"
+health = 170
+damage = 12
+swing = 2.2
+speed = 4.8
+cost = 3.0
+from = 9.0
+
+[[zone.elite]]
+entry = 609
+name = { en = "Kobold Taskmaster", de = "Koboldzuchtmeister", fr = "Chef kobold", es = "Capataz kobold", pt = "Feitor Kobold", ru = "Надсмотрщик-кобольд", pl = "Nadzorca koboldów", tr = "Kobold Angaryacısı", it = "Sorvegliante kobold", ja = "コボルドの監督", zh = "狗头人监工", ko = "코볼트 감독관" }
+type = "humanoid"
+display = 163
+icon = "INV_Misc_Head_Kobold_01"
+health = 600
+damage = 18
+swing = 2.0
+speed = 5.4
+cost = 12.0
+from = 3.5
+size = 2.03
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 610
+name = { en = "Gruff Swiftbite", de = "Gruff Flinkbiss", fr = "Gruff Mordrapide", es = "Gruff Mordiscorápido", pt = "Gruff Mordida Veloz", ru = "Груфф Быстроклык", pl = "Gruff Swiftbite", tr = "Gruff Çabukısırık", it = "Gruff Morsorapido", ja = "グラフ・スウィフトバイト", zh = "暴躁的快牙", ko = "그러프 스위프트바이트" }
+type = "beast"
+display = 246
+icon = "Ability_Hunter_Pet_Wolf"
+health = 800
+damage = 22
+swing = 1.6
+speed = 6.6
+cost = 13.0
+from = 8.0
+size = 1.62
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 611
+name = { en = "Bellygrub", de = "Schmerbauch", fr = "Bellygrub", es = "Bellygrub", pt = "Bellygrub", ru = "Брюхожор", pl = "Bellygrub", tr = "Karınkurt", it = "Bellygrub", ja = "ベリーグラブ", zh = "贝利格拉布", ko = "벨리그럽" }
+type = "beast"
+display = 377
+icon = "Ability_Hunter_Pet_Boar"
+health = 1000
+damage = 26
+swing = 2.4
+speed = 5.0
+cost = 14.0
+from = 13.0
+size = 2.97
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 6.0, warn = 1.4, knock = 9.0 } }], 1.0] }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 690
+name = { en = "Hogger", de = "Hogger", fr = "Hogger", es = "Hogger", pt = "Hogger", ru = "Хоггер", pl = "Hogger", tr = "Hogger", it = "Hogger", ja = "ホガー", zh = "霍格", ko = "호거" }
+type = "humanoid"
+display = 384
+icon = "INV_Misc_Head_Gnoll_01"
+health = 3600
+damage = 22
+speed = 5.6
+minute = 3
+yell = { en = "Grrr... fresh meat!", de = "Grrr... Frischfleisch!", fr = "Grrr... de la viande fraîche !", es = "Grrr... ¡carne fresca!", pt = "Grrr... carne fresca!", ru = "Грр... свежее мясо!", pl = "Grrr... świeże mięso!", tr = "Grrr... taze et!", it = "Grrr... carne fresca!", ja = "グルル…新鮮な肉だ！", zh = "呜……新鲜的肉！", ko = "크르르... 신선한 고기다!" }
+kit = "hogger"
+
+[[zone.boss]]
+entry = 691
+name = { en = "Mother Fang", de = "Mutter Fang", fr = "Mère Croc", es = "Madre Colmillo", pt = "Mãe Presa", ru = "Матушка Клык", pl = "Matka Fang", tr = "Ana Diş", it = "Madre Zanna", ja = "マザー・ファング", zh = "狼母", ko = "어미 송곳니" }
+type = "beast"
+display = 7536
+icon = "Ability_Hunter_Pet_Spider"
+health = 9000
+damage = 30
+speed = 6.0
+minute = 6
+yell = { en = "Mother Fang skitters out of the mine!", de = "Mutter Fang krabbelt aus der Mine!", fr = "Mère Croc sort de la mine en trottinant !", es = "¡Madre Colmillo sale correteando de la mina!", pt = "Mãe Presa sai correndo da mina!", ru = "Матушка Клык выбегает из шахты!", pl = "Matka Fang wypełza z kopalni!", tr = "Ana Diş madenden dışarı fırlıyor!", it = "Madre Zanna sguscia fuori dalla miniera!", ja = "マザー・ファングが鉱山から這い出てきた！", zh = "狼母从矿洞里窜了出来！", ko = "어미 송곳니가 광산에서 기어 나옵니다!" }
+kit = "mother_fang"
+
+[[zone.boss]]
+entry = 692
+name = { en = "Rhahk'Zor", de = "Rhahk'Zor", fr = "Rhahk'Zor", es = "Rhahk'Zor", pt = "Rhahk'Zor", ru = "Рахк'Зор", pl = "Rhahk'Zor", tr = "Rhahk'Zor", it = "Rhahk'Zor", ja = "ラーク・ゾア", zh = "拉克佐", ko = "라크조르" }
+type = "humanoid"
+display = 14403
+icon = "Achievement_Reputation_Ogre"
+health = 17000
+damage = 38
+speed = 5.4
+minute = 9
+yell = { en = "VanCleef pay big for your heads!", de = "VanCleef zahlt viel für eure Köpfe!", fr = "VanCleef payer cher pour vos têtes !", es = "¡VanCleef pagar mucho por vuestras cabezas!", pt = "VanCleef pagar muito pelas suas cabeças!", ru = "Ван Клиф дорого заплатить за ваши головы!", pl = "VanCleef zapłacić dużo za wasze głowy!", tr = "VanCleef kelleniz için çok öder!", it = "VanCleef pagare bene per le vostre teste!", ja = "ヴァンクリーフ、お前らの首に大金払う！", zh = "范克里夫出大价钱买你们的脑袋！", ko = "밴클리프가 네 머리에 큰돈을 걸었다!" }
+kit = "rhahkzor"
+
+[[zone.boss]]
+entry = 693
+name = { en = "Mr. Smite", de = "Mr. Smite", fr = "M. Smite", es = "Sr. Smite", pt = "Sr. Smite", ru = "Мистер Смайт", pl = "Pan Smite", tr = "Bay Smite", it = "Signor Smite", ja = "ミスター・スマイト", zh = "重拳先生", ko = "미스터 스마이트" }
+type = "humanoid"
+display = 2026
+icon = "INV_Misc_Head_Human_01"
+health = 28000
+damage = 46
+speed = 6.2
+minute = 12
+yell = { en = "We're under attack! Avast, ye swabs! Repel the invaders!", de = "Wir werden angegriffen! Ahoi, ihr Landratten! Schlagt die Eindringlinge zurück!", fr = "On nous attaque ! Holà, bande de mousses ! Repoussez les envahisseurs !", es = "¡Nos atacan! ¡Alto ahí, gandules! ¡Repeled a los invasores!", pt = "Estamos sob ataque! Alto lá, seus marujos! Repilam os invasores!", ru = "На нас напали! Эй, салаги! Отбейте захватчиков!", pl = "Atakują nas! Hej, wy szczury lądowe! Odeprzeć najeźdźców!", tr = "Saldırı altındayız! Durun, ahmaklar! İstilacıları püskürtün!", it = "Siamo sotto attacco! Alt, marmaglia! Respingete gli invasori!", ja = "襲撃だ！野郎ども、侵入者を撃退しろ！", zh = "我们遭到攻击了！喂，你们这些水手！击退入侵者！", ko = "공격이다! 이놈들아, 정신 차려! 침입자를 물리쳐라!" }
+kit = "mr_smite"
+
+# AS's VanCleef comes at 16:00 (`re/NUMBERS.md` 9).
+[[zone.boss]]
+entry = 694
+name = { en = "Edwin VanCleef", de = "Edwin VanCleef", fr = "Edwin VanCleef", es = "Edwin VanCleef", pt = "Edwin VanCleef", ru = "Эдвин Ван Клиф", pl = "Edwin VanCleef", tr = "Edwin VanCleef", it = "Edwin VanCleef", ja = "エドウィン・ヴァンクリーフ", zh = "艾德温·范克里夫", ko = "에드윈 밴클리프" }
+type = "humanoid"
+display = 2029
+icon = "Achievement_Boss_EdwinVancleef"
+health = 52500
+damage = 54
+speed = 6.6
+minute = 16
+yell = { en = "Lapdogs, all of you!", de = "Schoßhündchen, allesamt!", fr = "Des toutous, tous autant que vous êtes !", es = "¡Perritos falderos, todos vosotros!", pt = "Cachorrinhos de colo, todos vocês!", ru = "Комнатные собачки, все до единого!", pl = "Pieski na smyczy, wszyscy co do jednego!", tr = "Hepiniz birer evcil köpeksiniz!", it = "Cagnolini, tutti voi!", ja = "どいつもこいつも飼い犬め！", zh = "你们全是走狗！", ko = "죄다 주인 발밑에서 꼬리 치는 개들이로군!" }
+final = true
+kit = "edwin_vancleef"

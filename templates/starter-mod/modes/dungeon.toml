@@ -1,0 +1,182 @@
+# Random Dungeon: each arena is laid out anew, with locked doors, key bosses, chests, traps and
+# rockfalls. For now only Icecrown Citadel carries the doors and keys (see docs/HOWTO-CONTENT.md),
+# so every run starts there: `start_zone` picks the zone for the hero and locks the menu's picker.
+
+name = "Random Dungeon"
+extends = "standard"
+
+[card]
+order = 4
+icon = "INV_Misc_Key_14"
+color = [0.55, 0.45, 0.25]
+tag = "SOLO · CO-OP"
+text = "Every run lays out its arenas anew: locked doors, bosses that carry the keys, hidden chests, traps and falling rocks. For now every run is played in Icecrown Citadel, the only zone with doors and keys."
+rules = [
+    "Doors open only with the key a boss carries",
+    "Chests and traps lie hidden in the arena",
+    "Runs stay off the leaderboards",
+]
+rewards = [
+    ["INV_Misc_Coin_01", "Gold"],
+    ["INV_Box_02", "Chests"],
+    ["INV_Misc_Book_11", "Experience"],
+]
+
+[i18n.de]
+name = "Zufallsverlies"
+tag = "SOLO · KOOP"
+text = "Jeder Lauf legt seine Arenen neu an: verschlossene Türen, Bosse mit den Schlüsseln, versteckte Truhen, Fallen und fallende Felsen. Vorerst spielt jeder Lauf in der Eiskronenzitadelle, der einzigen Zone mit Türen und Schlüsseln."
+rules = [
+    "Türen öffnen sich nur mit dem Schlüssel eines Bosses",
+    "Truhen und Fallen liegen versteckt in der Arena",
+    "Läufe zählen nicht für die Ranglisten",
+]
+rewards = ["Gold", "Truhen", "Erfahrung"]
+
+[i18n.fr]
+name = "Donjon aléatoire"
+tag = "SOLO · COOP"
+text = "Chaque partie redessine ses arènes : portes verrouillées, boss porteurs de clés, coffres cachés, pièges et chutes de pierres. Pour l'instant, chaque partie se joue dans la citadelle de la Couronne de glace, la seule zone avec des portes et des clés."
+rules = [
+    "Les portes ne s'ouvrent qu'avec la clé d'un boss",
+    "Coffres et pièges sont cachés dans l'arène",
+    "Les parties restent hors des classements",
+]
+rewards = ["Or", "Coffres", "Expérience"]
+
+[i18n.es]
+name = "Mazmorra aleatoria"
+tag = "SOLO · COOP"
+text = "Cada partida dispone sus arenas de nuevo: puertas cerradas, jefes con las llaves, cofres ocultos, trampas y desprendimientos. Por ahora cada partida se juega en la Ciudadela de la Corona de Hielo, la única zona con puertas y llaves."
+rules = [
+    "Las puertas solo se abren con la llave de un jefe",
+    "Cofres y trampas se esconden en la arena",
+    "Las partidas no cuentan para las clasificaciones",
+]
+rewards = ["Oro", "Cofres", "Experiencia"]
+
+[i18n.pt]
+name = "Masmorra Aleatória"
+tag = "SOLO · COOP"
+text = "Cada partida monta suas arenas de novo: portas trancadas, chefes com as chaves, baús escondidos, armadilhas e queda de pedras. Por enquanto cada partida é jogada na Cidadela da Coroa de Gelo, a única zona com portas e chaves."
+rules = [
+    "As portas só abrem com a chave de um chefe",
+    "Baús e armadilhas ficam escondidos na arena",
+    "As partidas ficam fora dos rankings",
+]
+rewards = ["Ouro", "Baús", "Experiência"]
+
+[i18n.ru]
+name = "Случайное подземелье"
+tag = "СОЛО · КООП"
+text = "Каждый забег заново строит арены: запертые двери, боссы с ключами, скрытые сундуки, ловушки и камнепады. Пока каждый забег проходит в Цитадели Ледяной Короны — единственной зоне с дверями и ключами."
+rules = [
+    "Двери открываются только ключом босса",
+    "Сундуки и ловушки спрятаны на арене",
+    "Забеги не попадают в таблицы лидеров",
+]
+rewards = ["Золото", "Сундуки", "Опыт"]
+
+[i18n.it]
+name = "Dungeon casuale"
+tag = "SOLO · CO-OP"
+text = "Ogni partita ridisegna le sue arene: porte chiuse a chiave, boss con le chiavi, forzieri nascosti, trappole e frane. Per ora ogni partita si gioca nella Cittadella della Corona di Ghiaccio, l'unica zona con porte e chiavi."
+rules = [
+    "Le porte si aprono solo con la chiave di un boss",
+    "Forzieri e trappole sono nascosti nell'arena",
+    "Le partite restano fuori dalle classifiche",
+]
+rewards = ["Oro", "Forzieri", "Esperienza"]
+
+[i18n.pl]
+name = "Losowy loch"
+tag = "SOLO · CO-OP"
+text = "Każda rozgrywka układa areny od nowa: zamknięte drzwi, bossowie z kluczami, ukryte skrzynie, pułapki i spadające skały. Na razie każda rozgrywka toczy się w Cytadeli Lodowej Korony, jedynej strefie z drzwiami i kluczami."
+rules = [
+    "Drzwi otwiera tylko klucz bossa",
+    "Skrzynie i pułapki są ukryte na arenie",
+    "Rozgrywki nie trafiają do rankingów",
+]
+rewards = ["Złoto", "Skrzynie", "Doświadczenie"]
+
+[i18n.tr]
+name = "Rastgele Zindan"
+tag = "SOLO · CO-OP"
+text = "Her oyun arenalarını yeniden kurar: kilitli kapılar, anahtar taşıyan patronlar, gizli sandıklar, tuzaklar ve düşen kayalar. Şimdilik her oyun, kapı ve anahtar taşıyan tek bölge olan Buz Tacı Kalesi'nde oynanır."
+rules = [
+    "Kapılar yalnızca bir patronun anahtarıyla açılır",
+    "Sandıklar ve tuzaklar arenada gizlidir",
+    "Oyunlar sıralamalara girmez",
+]
+rewards = ["Altın", "Sandıklar", "Tecrübe"]
+
+[i18n.ja]
+name = "ランダムダンジョン"
+tag = "ソロ・協力プレイ"
+text = "ランごとにアリーナが作り直されます。鍵のかかった扉、鍵を持つボス、隠れた宝箱、罠、落石。今のところ、すべてのランは扉と鍵がある唯一のゾーン、アイスクラウン・シタデルで行われます。"
+rules = [
+    "扉はボスの持つ鍵でしか開きません",
+    "宝箱と罠はアリーナに隠れています",
+    "ランはランキングに記録されません",
+]
+rewards = ["ゴールド", "宝箱", "経験値"]
+
+[i18n.zh]
+name = "随机地下城"
+tag = "单人 · 合作"
+text = "每局对局都会重新布置竞技场：上锁的门、持有钥匙的首领、隐藏的宝箱、陷阱和落石。目前每局都在冰冠堡垒进行，这是唯一带有门和钥匙的区域。"
+rules = [
+    "门只能用首领持有的钥匙打开",
+    "宝箱和陷阱藏在竞技场中",
+    "对局不计入排行榜",
+]
+rewards = ["金币", "宝箱", "经验值"]
+
+[i18n.ko]
+name = "무작위 던전"
+tag = "솔로 · 협동"
+text = "런마다 투기장이 새로 짜입니다. 잠긴 문, 열쇠를 든 우두머리, 숨겨진 상자, 함정, 떨어지는 바위. 지금은 모든 런이 문과 열쇠가 있는 유일한 지역인 얼음왕관 성채에서 진행됩니다."
+rules = [
+    "문은 우두머리의 열쇠로만 열립니다",
+    "상자와 함정은 투기장에 숨어 있습니다",
+    "런은 순위표에 기록되지 않습니다",
+]
+rewards = ["골드", "상자", "경험치"]
+
+# Icecrown Citadel's enemies are built for a hero at the end of the campaign (the zone's health
+# factor is 39.63), and the mode opens it to a hero that has not got that far: health and hit are
+# factors on the campaign's numbers. TUNE
+[horde]
+enemy_health = 0.6
+enemy_damage = 0.75
+
+[dungeon]
+enabled = true
+start_zone = "icc"
+locks = [1, 2]
+chests = [1, 2]
+traps = [1, 3]
+rockfalls = [0, 1]
+key_seconds = 90.0
+chest_reveal = 6.0
+
+[dungeon.trap]
+hit = 0.15
+warn = 1.2
+rearm = 20.0
+reveal = 8.0
+knock = 4.0
+
+[dungeon.rockfall]
+first = 20.0
+every = 25.0
+count = 3
+radius = 6.0
+warn = 2.0
+hit = 0.12
+spell = 0
+knock = 3.0
+lasts = 0.0
+tick = 1.0
+burn = 0.0
+color = "8a7a60"

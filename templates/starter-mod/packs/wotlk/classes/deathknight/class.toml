@@ -1,0 +1,81 @@
+# The death knight, Wrath of the Lich King's own class: frost, unholy and blood, starting with
+# Icy Touch.
+key = "deathknight"
+# The `ChrClasses` id.
+id = 6
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [2, 3, 4, 5, 6, 7, 0, 1]
+# Health at level 1: AS lacks the class, so it sits between warrior and hunter. `TUNE`
+health = 235
+power = "runic_power"
+starter = "icy_touch"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's.
+races = [1, 3, 4, 7, 11, 12, 2, 5, 6, 8, 10, 9]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    38707, # Runed Soulblade
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 49576
+dash_legend = { en = "Your Death Grip's mark lasts twice as long and raises three ghouls.", de = "Das Mal deines Todesgriffs hält doppelt so lange und erweckt drei Ghule.", fr = "La marque de ton Poigne de la mort dure deux fois plus longtemps et relève trois goules.", es = "La marca de tu Agarre de la muerte dura el doble y levanta tres necrófagos.", pt = "A marca do seu Agarre da Morte dura o dobro do tempo e ergue três carniçais.", ru = "Метка твоей Хватки смерти действует вдвое дольше и поднимает трех вурдалаков.", pl = "Znak twojego Uchwytu śmierci trwa dwa razy dłużej i wznosi trzy ghule.", tr = "Ölüm Kavrayışı'nın işareti iki kat uzun sürer ve üç gulyabani diriltir.", it = "Il marchio della tua Presa mortale dura il doppio ed evoca tre ghoul.", ja = "デス・グリップの印の持続時間が2倍になり、3体のグールを蘇らせます。", zh = "你的死亡之握印记持续时间翻倍，并会唤起三个食尸鬼。", ko = "죽음의 손아귀의 표식이 두 배 오래 지속되며 구울 셋을 일으킵니다." }
+bot_name = "Botknight"
+bot_order = 6
+# Its own mount in the victory scene (`CreatureDisplayInfo`).
+mount = { alliance = 25280, horde = 25280 }
+name = { en = "Death Knight", de = "Todesritter", fr = "Chevalier de la mort", es = "Caballero de la Muerte", pt = "Cavaleiro da Morte", ru = "Рыцарь смерти", pl = "Rycerz Śmierci", tr = "Ölüm Şövalyesi", it = "Cavaliere della Morte", ja = "デスナイト", zh = "死亡骑士", ko = "죽음의 기사" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [0.77, 0.12, 0.23]
+# Played once a hero of the account has beaten Wrath of the Lich King's last zone; a mode's
+# `[unlocks]` may say otherwise.
+unlock = "wotlk"
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "deathknight_frost"
+tone = 8
+price = 12000
+name = { en = "Frostforged", de = "Frostgeschmiedet", fr = "Givreforgé", es = "Forjado en escarcha", pt = "Forjado no Gelo", ru = "Ледяной ковки", pl = "Wykuty w mrozie", tr = "Buzda Dövülmüş", it = "Forgiato dal gelo", ja = "霜鍛え", zh = "冰霜铸造", ko = "서리벼림" }
+
+[[colors]]
+key = "deathknight_blood"
+tone = 1
+price = 12000
+name = { en = "Blood Plague", de = "Blutseuche", fr = "Peste de sang", es = "Peste de sangre", pt = "Peste de Sangue", ru = "Кровавая чума", pl = "Krwawa plaga", tr = "Kan Vebası", it = "Piaga di sangue", ja = "ブラッド・プレイグ", zh = "血之疫病", ko = "피의 역병" }
+
+[[colors]]
+key = "deathknight_fel"
+tone = 5
+price = 15000
+name = { en = "Unholy Blight", de = "Unheilige Fäulnis", fr = "Flétrissure impie", es = "Añublo profano", pt = "Praga Profana", ru = "Нечестивая порча", pl = "Nieświęta plaga", tr = "Kutsal Olmayan Kırağı", it = "Morbo empio", ja = "アンホーリー・ブライト", zh = "邪恶虫群", ko = "부정의 역병" }
+
+[[colors]]
+key = "deathknight_void"
+tone = 11
+price = 15000
+name = { en = "Void Rune", de = "Leerenrune", fr = "Rune du Vide", es = "Runa del vacío", pt = "Runa do Vazio", ru = "Руна Бездны", pl = "Runa Pustki", tr = "Boşluk Rünü", it = "Runa del Vuoto", ja = "ヴォイドのルーン", zh = "虚空符文", ko = "공허 룬" }
+
+[[colors]]
+key = "deathknight_ember"
+tone = 2
+price = 18000
+name = { en = "Hellfire Rune", de = "Höllenfeuerrune", fr = "Rune des flammes infernales", es = "Runa del Fuego Infernal", pt = "Runa das Chamas Infernais", ru = "Руна Адского Пламени", pl = "Runa Ognistej Pożogi", tr = "Cehennem Ateşi Rünü", it = "Runa del fuoco infernale", ja = "ヘルファイアのルーン", zh = "地狱火符文", ko = "지옥불 룬" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "deathknight_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "deathknight_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

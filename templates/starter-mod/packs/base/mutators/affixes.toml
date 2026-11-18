@@ -1,0 +1,24 @@
+# The horde's affixes (re/NUMBERS.md 16.7), AS's order: from Heroic III the week picks one per zone,
+# from Heroic V two (survivors-sim heroic.rs); the daily challenge draws from them (modes/daily.toml).
+# Their numbers are AS's and live with their behaviours (survivors-sim game/horde.rs).
+
+[[mutator]]
+key = "bolstering"
+icon = "Ability_Warrior_BattleShout"
+behaviors = [{ behavior = "bolster" }]
+name = { en = "Bolstering", de = "Anstachelnd", fr = "Stimulant", es = "Fortalecedor", pt = "Fortalecedor", ru = "Воодушевляющий", pl = "Wzmocnienie", tr = "Destekleyen", it = "Rinvigorente", ja = "ボルスタリング", zh = "激励", ko = "강화" }
+text = { en = "a slain enemy empowers the enemies near it", de = "ein getöteter Gegner stärkt die Gegner in seiner Nähe", fr = "un ennemi tué renforce les ennemis proches", es = "un enemigo abatido fortalece a los enemigos cercanos", pt = "um inimigo morto fortalece os inimigos próximos", ru = "убитый враг усиливает врагов рядом", pl = "zabity przeciwnik wzmacnia przeciwników w pobliżu", tr = "öldürülen düşman yakınındaki düşmanları güçlendirir", it = "un nemico ucciso potenzia i nemici vicini", ja = "倒された敵が周囲の敵を強化する", zh = "被消灭的敌人会强化其附近的敌人", ko = "처치된 적이 주위의 적을 강화함" }
+
+[[mutator]]
+key = "sanguine"
+icon = "Spell_Shadow_BloodBoil"
+behaviors = [{ behavior = "sanguine_pool" }]
+name = { en = "Sanguine", de = "Blutig", fr = "Sanguin", es = "Sanguíneo", pt = "Sanguíneo", ru = "Кровавый", pl = "Krwista", tr = "Kanlı", it = "Sanguinario", ja = "サングイン", zh = "血池", ko = "피웅덩이" }
+text = { en = "a slain elite leaves a pool that heals enemies", de = "ein getöteter Elitegegner hinterlässt eine Lache, die Gegner heilt", fr = "une élite tuée laisse une flaque qui soigne les ennemis", es = "un élite abatido deja un charco que cura a los enemigos", pt = "um elite morto deixa uma poça que cura os inimigos", ru = "убитый элитный враг оставляет лужу, которая лечит врагов", pl = "zabita elita zostawia kałużę, która leczy przeciwników", tr = "öldürülen elit, düşmanları iyileştiren bir gölet bırakır", it = "un'élite uccisa lascia una pozza che cura i nemici", ja = "倒されたエリートが敵を回復する水たまりを残す", zh = "被消灭的精英会留下一滩治疗敌人的池子", ko = "처치된 정예가 적을 치유하는 웅덩이를 남김" }
+
+[[mutator]]
+key = "explosive"
+icon = "Spell_Fire_SelfDestruct"
+behaviors = [{ behavior = "explosive_orbs" }]
+name = { en = "Explosive", de = "Explosiv", fr = "Explosif", es = "Explosivo", pt = "Explosivo", ru = "Взрывной", pl = "Wybuchowe", tr = "Patlayıcı", it = "Esplosivo", ja = "エクスプローシブ", zh = "易爆", ko = "폭탄" }
+text = { en = "orbs appear; destroy them before they burst", de = "Kugeln erscheinen; zerstöre sie, bevor sie platzen", fr = "des orbes apparaissent ; détruis-les avant qu'ils n'explosent", es = "aparecen esferas; destrúyelas antes de que estallen", pt = "esferas aparecem; destrua-as antes que estourem", ru = "появляются сферы; уничтожь их, пока они не взорвались", pl = "pojawiają się kule; zniszcz je, zanim pękną", tr = "küreler belirir; patlamadan önce yok et", it = "compaiono delle sfere: distruggile prima che esplodano", ja = "オーブが出現する。破裂する前に破壊せよ", zh = "会出现法球；在它们爆裂前将其摧毁", ko = "구슬이 나타남. 터지기 전에 파괴할 것" }

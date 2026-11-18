@@ -1,0 +1,79 @@
+key = "mage"
+# The `ChrClasses` id.
+id = 8
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [0, 1, 2, 3, 4, 5, 6, 7]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 215
+# Balance (2026-11-08): a little less damage.
+damage_pct = -5
+# A smaller pickup radius keeps collecting orbs part of fighting at range.
+pickup_pct = -25
+power = "mana"
+starter = "fireball"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's,
+# the pandaren (15 Horde, 17 Alliance) as Mists of Pandaria's.
+races = [1, 7, 11, 12, 5, 8, 10, 9, 15, 17]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    35, # Bent Staff
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 1953
+dash_legend = { en = "Blink thrice: every Blink is followed by two more.", de = "Dreifaches Blinzeln: Jedem Blinzeln folgen zwei weitere.", fr = "Triple transfert : chaque Transfert est suivi de deux autres.", es = "Parpadeo triple: cada Parpadeo va seguido de otros dos.", pt = "Piscar triplo: cada Piscar é seguido por mais dois.", ru = "Тройная вспышка: за каждой «Вспышкой» следуют еще две.", pl = "Potrójne Mrugnięcie: po każdym Mrugnięciu następują dwa kolejne.", tr = "Üç kez ışınlan: her Işınlanma'yı iki tane daha izler.", it = "Blink triplo: ogni Blink è seguito da altri due.", ja = "3連ブリンク：ブリンクのたびにさらに2回続きます。", zh = "三重闪现：每次闪现术之后会再闪现两次。", ko = "점멸 3연속: 점멸할 때마다 두 번 더 이어집니다." }
+bot_name = "Botmage"
+bot_order = 0
+name = { en = "Mage", de = "Magier", fr = "Mage", es = "Mago", pt = "Mago", ru = "Маг", pl = "Mag", tr = "Büyücü", it = "Mago", ja = "メイジ", zh = "法师", ko = "마법사" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [0.41, 0.8, 0.94]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "mage_frost"
+tone = 8
+price = 12000
+name = { en = "Glacial", de = "Gletscher", fr = "Glaciaire", es = "Glacial", pt = "Glacial", ru = "Ледник", pl = "Lodowy", tr = "Buzul", it = "Glaciale", ja = "氷河", zh = "冰川", ko = "빙하" }
+
+[[colors]]
+key = "mage_arcane"
+tone = 10
+price = 12000
+name = { en = "Arcane Surge", de = "Arkanflut", fr = "Afflux arcanique", es = "Oleada arcana", pt = "Surto Arcano", ru = "Тайный прилив", pl = "Magiczny przypływ", tr = "Gizem Dalgası", it = "Impeto arcano", ja = "アーケイン・サージ", zh = "奥术涌动", ko = "비전 쇄도" }
+
+[[colors]]
+key = "mage_ember"
+tone = 2
+price = 15000
+name = { en = "Pyromancy", de = "Pyromantie", fr = "Pyromancie", es = "Piromancia", pt = "Piromancia", ru = "Пиромантия", pl = "Piromancja", tr = "Ateş Büyüsü", it = "Piromanzia", ja = "炎術", zh = "炎术", ko = "화염술" }
+
+[[colors]]
+key = "mage_emerald"
+tone = 6
+price = 15000
+name = { en = "Emerald Sorcery", de = "Smaragdmagie", fr = "Sorcellerie d'émeraude", es = "Hechicería esmeralda", pt = "Feitiçaria Esmeralda", ru = "Изумрудное колдовство", pl = "Szmaragdowa magia", tr = "Zümrüt Büyücülük", it = "Stregoneria di smeraldo", ja = "エメラルドの魔術", zh = "翡翠法术", ko = "에메랄드 마법" }
+
+[[colors]]
+key = "mage_void"
+tone = 11
+price = 18000
+name = { en = "Void Sorcery", de = "Leerenmagie", fr = "Sorcellerie du Vide", es = "Hechicería del Vacío", pt = "Feitiçaria do Vácuo", ru = "Колдовство Бездны", pl = "Magia Pustki", tr = "Boşluk Büyücülüğü", it = "Stregoneria del Vuoto", ja = "ヴォイドの魔術", zh = "虚空法术", ko = "공허 마법" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "mage_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "mage_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

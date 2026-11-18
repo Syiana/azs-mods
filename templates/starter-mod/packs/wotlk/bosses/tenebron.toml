@@ -1,0 +1,16 @@
+# Tenebron: Shadow Breath, the twilight eggs.
+
+[[boss]]
+key = "tenebron"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 57570, range = 14.0, arc = 70.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 18.0
+ability = { eggs = { hatch = 2, count = 3, radius = 6.0, health = 0.03, lasts = 10.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

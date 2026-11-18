@@ -1,0 +1,51 @@
+# The death knight's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). Ebon Blade
+# (Uncommon) is no real set and keeps plate's icons; Darkruned has no belt, boots or bracers, and
+# the PvP set no look: those keep plate's icons too.
+
+# Acherus Knight's pieces: Acherus Knight's set, Ebon Hold's starting gear (Item.dbc 34648-34656).
+[[set_look]]
+key = "deathknight_common"
+rarity = 0
+pieces = [
+    [0, 51495, 1, "Helmet_125"], [1, 51501, 3, "Shoulder_92"],
+    [2, 51494, 5, "Chest_Plate11"], [3, 51497, 6, "Belt_12"],
+    [4, 51499, 7, "Pants_Cloth_27"], [5, 51496, 8, "Boots_Plate_05"],
+    [6, 51500, 9, "Bracer_17"], [7, 51498, 10, "Gauntlets_32"],
+]
+
+# Scourgeborne pieces: Valorous Scourgeborne Battlegear, tier 7 with its matching belt, boots and
+# bracers (the wardrobe's `scourgeborne`).
+[[set_look]]
+key = "deathknight_rare"
+rarity = 2
+pieces = [
+    [0, 55493, 1, "Helmet_58"], [1, 55499, 3, "Shoulder_29"],
+    [2, 55492, 5, "Chest_Plate02"], [3, 63980, 6, "Belt_17"],
+    [4, 55497, 7, "Pants_Plate_05"], [5, 56996, 8, "Boots_Plate_02"],
+    [6, 63982, 9, "Bracer_28"], [7, 55494, 10, "Gauntlets_28"],
+]
+
+# Darkruned pieces: Darkruned Plate, tier 8 (ItemSet 835).
+[[set_look]]
+key = "deathknight_epic"
+rarity = 3
+pieces = [
+    [0, 58231, 1, "Helmet_58"], [1, 58233, 3, "Shoulder_29"],
+    [2, 58229, 5, "Chest_Plate02"], [4, 58330, 7, "Pants_Plate_05"],
+    [7, 58230, 10, "Gauntlets_28"],
+]
+
+# Scourgelord pieces: Scourgelord's Battlegear, tier 10 with its matching belt, boots and bracers
+# (the wardrobe's `scourgelord`).
+[[set_look]]
+key = "deathknight_legendary"
+rarity = 4
+pieces = [
+    [0, 64594, 1, "helmet_151"], [1, 64705, 3, "shoulder_130"],
+    [2, 64592, 5, "chest_plate_26"], [3, 64786, 6, "belt_63"],
+    [4, 64595, 7, "pants_plate_31"], [5, 64781, 8, "boots_plate_13"],
+    [6, 64782, 9, "bracer_43"], [7, 64593, 10, "gauntlets_87"],
+]

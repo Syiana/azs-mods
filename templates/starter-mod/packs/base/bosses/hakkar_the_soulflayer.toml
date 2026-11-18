@@ -1,0 +1,32 @@
+# Hakkar the Soulflayer's abilities, Gurubashi Arena.
+
+[[boss]]
+key = "hakkar_the_soulflayer"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 686 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 8122, radius = 11.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { rain = { spell = 27810, count = 5, radius = 5.0, spread = 11.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { rush = { spell = 24327, len = 40.0, w = 6.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 18.0
+ability = { tether = { spell = 24324, reach = 18.0, warn = 1.8, lasts = 5.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 24.0
+ability = { towers = { spell = 24324, count = 3, radius = 4.0, spacing = 12.0, time = 4.5, factor = 5.0 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

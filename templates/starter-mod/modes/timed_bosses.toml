@@ -1,0 +1,6 @@
+# Editor practice mode with bosses on the selected zone's encounter schedule.
+name = "Timed Bosses"
+extends = "test"
+
+[rift_bar]
+enabled = false

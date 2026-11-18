@@ -1,0 +1,16 @@
+# Mutators written as data alone, from the behaviours the server already plays: a mode lists them
+# (`mutators = [...]`, survivors-sim modes/*.toml). Numbers `TUNE`.
+
+[[mutator]]
+key = "volatile_dead"
+icon = "Spell_Fire_Incinerate"
+behaviors = [{ behavior = "explode_on_death", radius = 6, pct = 30 }]
+name = { en = "Volatile Dead", de = "Explosive Tote", fr = "Morts volatils", es = "Muertos volátiles", pt = "Mortos Voláteis", ru = "Взрывные мертвецы", pl = "Niestabilni zmarli", tr = "Uçucu Ölüler", it = "Morti instabili", ja = "爆ぜる死者", zh = "不稳定的亡者", ko = "불안정한 시체" }
+text = { en = "a slain enemy bursts, hurting a hero within 6 yards for 30% of its hit", de = "ein getöteter Gegner birst und trifft einen Helden in 6 Metern mit 30% seines Schlags", fr = "un ennemi tué explose et blesse un héros à moins de 6 mètres pour 30% de son coup", es = "un enemigo abatido estalla y hiere a un héroe a menos de 6 metros con el 30% de su golpe", pt = "um inimigo morto explode e fere um herói a até 6 metros com 30% do seu golpe", ru = "убитый враг взрывается и ранит героя в радиусе 6 м на 30% своего удара", pl = "zabity przeciwnik wybucha, raniąc bohatera w promieniu 6 m za 30% swojego trafienia", tr = "öldürülen düşman patlar, 6 m içindeki kahramana vuruşunun 30%'u kadar hasar verir", it = "un nemico ucciso esplode e ferisce un eroe entro 6 m per il 30% del suo colpo", ja = "倒された敵が破裂し、6ヤード以内のヒーローにその攻撃の30%のダメージを与える", zh = "被消灭的敌人会爆裂，对6码内的一名英雄造成相当于其攻击30%的伤害", ko = "처치된 적이 터져서 6미터 안의 영웅에게 그 적이 주는 피해의 30%를 줌" }
+
+[[mutator]]
+key = "glass_hero"
+icon = "INV_Misc_Gem_Diamond_02"
+behaviors = [{ behavior = "dealt_scale", pct = 200 }, { behavior = "taken_scale", pct = 200 }]
+name = { en = "Glass Hero", de = "Gläserner Held", fr = "Héros de verre", es = "Héroe de cristal", pt = "Herói de Vidro", ru = "Стеклянный герой", pl = "Szklany bohater", tr = "Cam Kahraman", it = "Eroe di vetro", ja = "ガラスのヒーロー", zh = "玻璃英雄", ko = "유리 영웅" }
+text = { en = "the heroes deal and take double damage", de = "die Helden verursachen und erleiden doppelten Schaden", fr = "les héros infligent et subissent le double de dégâts", es = "los héroes infligen y reciben el doble de daño", pt = "os heróis causam e sofrem o dobro de dano", ru = "герои наносят и получают двойной урон", pl = "bohaterowie zadają i otrzymują podwójne obrażenia", tr = "kahramanlar çift hasar verir ve çift hasar alır", it = "gli eroi infliggono e subiscono il doppio dei danni", ja = "ヒーローの与えるダメージと受けるダメージが2倍になる", zh = "英雄造成和受到的伤害加倍", ko = "영웅이 두 배의 피해를 주고 받음" }

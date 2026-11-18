@@ -1,0 +1,16 @@
+# Nuramoc: a chimaera's Arcane Breath and a swoop on its wings.
+
+[[boss]]
+key = "nuramoc"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 38866, range = 14.0, arc = 70.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { leap = { spell = 18500, radius = 6.0, reach = 16.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

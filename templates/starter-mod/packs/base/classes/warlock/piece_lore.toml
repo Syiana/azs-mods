@@ -1,0 +1,43 @@
+# The warlock's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "warlock_0"
+profile = 0
+text = { en = "Fel runes along its seams hunger for the kill.", de = "Teufelsrunen an seinen Nähten hungern nach dem Kill.", fr = "Des runes gangrenées le long de ses coutures ont soif de sang.", es = "Las runas viles de sus costuras ansían la muerte.", pt = "Runas vis ao longo das costuras anseiam pela matança.", ru = "Руны Скверны по швам жаждут убийства.", pl = "Spaczone runy wzdłuż szwów łakną zabijania.", tr = "Dikişlerindeki fel rünleri öldürmeye aç.", it = "Le rune vili lungo le cuciture hanno fame di uccisioni.", ja = "縫い目に沿ったフェルのルーンが殺戮に飢えている。", zh = "接缝处的邪能符文渴求着杀戮。", ko = "솔기를 따라 새겨진 지옥 룬이 살육에 굶주려 있다." }
+
+[[piece_lore]]
+key = "warlock_1"
+profile = 1
+text = { en = "Bound with a demon's hide.", de = "Gebunden mit der Haut eines Dämons.", fr = "Relié de peau de démon.", es = "Atado con piel de demonio.", pt = "Encadernado com couro de demônio.", ru = "Переплетено кожей демона.", pl = "Oprawione w skórę demona.", tr = "Bir iblis derisiyle ciltlenmiş.", it = "Legato con la pelle di un demone.", ja = "デーモンの皮で綴じられている。", zh = "以恶魔之皮装订。", ko = "악마의 가죽으로 엮었다." }
+
+[[piece_lore]]
+key = "warlock_2"
+profile = 2
+text = { en = "The pact grants life, and spells that return sooner.", de = "Der Pakt gewährt Leben und Zauber, die schneller zurückkehren.", fr = "Le pacte accorde la vie, et des sorts qui reviennent plus tôt.", es = "El pacto concede vida y hechizos que vuelven antes.", pt = "O pacto concede vida, e feitiços que voltam mais cedo.", ru = "Договор дарует жизнь и заклинания, что возвращаются раньше.", pl = "Pakt daje życie i zaklęcia, które szybciej wracają.", tr = "Antlaşma hayat verir ve daha çabuk dönen büyüler.", it = "Il patto dona vita e incantesimi che tornano prima.", ja = "契約は命と、より早く戻る呪文を授ける。", zh = "契约赐予生命，让法术更快恢复。", ko = "계약은 생명을, 그리고 더 빨리 돌아오는 주문을 내린다." }
+
+[[piece_lore]]
+key = "warlock_3"
+profile = 3
+text = { en = "Shadow hastens its wearer and guides the curse home.", de = "Schatten beschleunigt seinen Träger und lenkt den Fluch ins Ziel.", fr = "L'ombre presse son porteur et guide la malédiction vers sa cible.", es = "La sombra acelera a quien lo lleva y guía la maldición a su destino.", pt = "A sombra acelera quem o usa e guia a maldição até o alvo.", ru = "Тьма ускоряет владельца и ведёт проклятие к цели.", pl = "Cień przyspiesza noszącego i prowadzi klątwę do celu.", tr = "Gölge giyenini hızlandırır ve laneti hedefine ulaştırır.", it = "L'ombra accelera chi lo indossa e guida la maledizione a segno.", ja = "影が持ち主を急がせ、呪いを標的へ導く。", zh = "暗影加快穿戴者的脚步，引导诅咒命中。", ko = "어둠이 착용자를 재촉하고 저주를 과녁으로 이끈다." }
+
+[[piece_lore]]
+key = "warlock_4"
+profile = 4
+text = { en = "Life siphoned from the dying mends its wearer.", de = "Den Sterbenden entzogenes Leben heilt seinen Träger.", fr = "La vie siphonnée aux mourants soigne son porteur.", es = "La vida absorbida de los moribundos repara a quien lo lleva.", pt = "A vida sugada dos moribundos cura quem o usa.", ru = "Жизнь, выпитая у умирающих, исцеляет владельца.", pl = "Życie wyssane z umierających leczy noszącego.", tr = "Ölenlerden emilen hayat giyenini iyileştirir.", it = "La vita risucchiata ai morenti cura chi lo indossa.", ja = "死にゆく者から吸い取った命が持ち主を癒やす。", zh = "从垂死者身上汲取的生命治愈着穿戴者。", ko = "죽어 가는 자에게서 빨아들인 생명이 착용자를 치유한다." }
+
+[[piece_lore]]
+key = "warlock_5"
+profile = 5
+text = { en = "Its wearer's life is anchored by a bound soul.", de = "Das Leben seines Trägers ist an eine gebundene Seele geknüpft.", fr = "La vie de son porteur est ancrée par une âme liée.", es = "La vida de quien lo lleva está anclada a un alma atada.", pt = "A vida de quem o usa está ancorada a uma alma aprisionada.", ru = "Жизнь владельца закреплена связанной душой.", pl = "Życie noszącego zakotwiczone jest w spętanej duszy.", tr = "Giyenin hayatı bağlı bir ruhla demirlenmiş.", it = "La vita di chi lo indossa è ancorata a un'anima vincolata.", ja = "持ち主の命は縛られた魂につなぎとめられている。", zh = "穿戴者的生命由一个被束缚的灵魂所维系。", ko = "착용자의 생명은 속박된 영혼에 닻을 내리고 있다." }
+
+[[piece_lore]]
+key = "warlock_6"
+profile = 6
+text = { en = "Felhunter leather, made for the chase.", de = "Teufelsjägerleder, gemacht für die Jagd.", fr = "Cuir de chasseur corrompu, fait pour la traque.", es = "Cuero de manáfago, hecho para la persecución.", pt = "Couro de caçador vil, feito para a perseguição.", ru = "Кожа охотника Скверны, сшитая для погони.", pl = "Skóra łowcy spaczenia, stworzona do pościgu.", tr = "Felhunter derisi, kovalamaca için yapılmış.", it = "Cuoio di Vilcacciatore, fatto per l'inseguimento.", ja = "フェルハンターの革、追跡のために作られた。", zh = "地狱猎犬皮革，为追猎而制。", ko = "추격을 위해 만든 지옥사냥개 가죽." }
+
+[[piece_lore]]
+key = "warlock_7"
+profile = 7
+text = { en = "Its shadowflame spreads far and burns deep.", de = "Seine Schattenflamme breitet sich weit aus und brennt tief.", fr = "Sa flamme d'ombre se répand loin et brûle profond.", es = "Su llama de las sombras se extiende a lo lejos y quema hondo.", pt = "Sua chama sombria se espalha longe e queima fundo.", ru = "Его тёмное пламя расходится далеко и жжёт глубоко.", pl = "Jego płomień cienia sięga daleko i pali głęboko.", tr = "Gölge alevi uzağa yayılır ve derin yakar.", it = "Le sue fiamme d'ombra si espandono e bruciano a fondo.", ja = "その影の炎は遠くまで広がり、深く焼く。", zh = "其暗影烈焰蔓延甚远，灼烧极深。", ko = "그 어둠의 불꽃은 멀리 번지고 깊이 태운다." }

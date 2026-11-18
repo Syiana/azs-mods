@@ -1,0 +1,53 @@
+# Snippet: the new class's talent trees and talents (see class.toml in this folder).
+#
+# Goes in:  packs/<your package>/classes/frost_knight/talents.toml
+# Rules:    - A class has three trees (`index` 0, 1, 2) of seven rows (`row` 0 to 6).
+#           - Every tree and talent names its class by the class's whole key.
+#           - Keys carry your package's name. Names and texts carry all twelve languages.
+#           - The build string reads a tree talent by talent in file order: add new talents at
+#             the end of their tree, or saved builds shift.
+#           - `background` names the stock talent window's art and the hero menu does not read
+#             it; the hero menu draws class.toml's `talent_art`, else the dark ground alone.
+#           - A talent whose English `text` starts with "Milestone." or "Capstone." is drawn as
+#             one; the run's capstone is a one-rank talent of row 6.
+#           - Every talent field (effects, mods, plays, behaviors, exclusive, req): the content
+#             reference, "A talent".
+
+[[talent_tree]]
+key = "yourname.example:frost_knight_rime"
+class = "yourname.example:frost_knight"
+index = 0
+icon = "Spell_Frost_FrostArmor02"
+background = "DeathKnightFrost"
+name = { en = "Rime", de = "Raureif", fr = "Givre", es = "Escarcha", pt = "Geada", ru = "Иней", pl = "Szron", tr = "Kırağı", it = "Brina", ja = "霧氷", zh = "霜凇", ko = "상고대" }
+
+[[talent_tree]]
+key = "yourname.example:frost_knight_glacier"
+class = "yourname.example:frost_knight"
+index = 1
+icon = "Spell_Frost_Glacier"
+background = "DeathKnightFrost"
+name = { en = "Glacier", de = "Gletscher", fr = "Glacier", es = "Glaciar", pt = "Geleira", ru = "Ледник", pl = "Lodowiec", tr = "Buzul", it = "Ghiacciaio", ja = "氷河", zh = "冰川", ko = "빙하" }
+
+[[talent_tree]]
+key = "yourname.example:frost_knight_winter"
+class = "yourname.example:frost_knight"
+index = 2
+icon = "Spell_Frost_IceStorm"
+background = "DeathKnightFrost"
+name = { en = "Winter", de = "Winter", fr = "Hiver", es = "Invierno", pt = "Inverno", ru = "Зима", pl = "Zima", tr = "Kış", it = "Inverno", ja = "冬", zh = "凛冬", ko = "겨울" }
+
+[[talent]]
+key = "yourname.example:biting_cold"
+class = "yourname.example:frost_knight"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Spell_Frost_FrostShock"
+name = { en = "Biting Cold", de = "Beißende Kälte", fr = "Froid mordant", es = "Frío cortante", pt = "Frio Cortante", ru = "Пронизывающий холод", pl = "Kąsający chłód", tr = "Isıran Soğuk", it = "Freddo pungente", ja = "刺すような寒さ", zh = "刺骨严寒", ko = "살을 에는 추위" }
+text = { en = "Frost spells deal {v}% more damage.", de = "Frostzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de Givre infligent {v}% de dégâts en plus.", es = "Los hechizos de Escarcha infligen un {v}% más de daño.", pt = "Feitiços de Gelo causam {v}% a mais de dano.", ru = "Заклинания льда наносят на {v}% больше урона.", pl = "Czary mrozu zadają o {v}% więcej obrażeń.", tr = "Buz büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Gelo infliggono il {v}% di danni in più.", ja = "冷気の呪文のダメージが{v}%増加します。", zh = "冰霜法术造成的伤害提高{v}%。", ko = "냉기 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = [{ school = 16 }]
+mods_v = 0.04

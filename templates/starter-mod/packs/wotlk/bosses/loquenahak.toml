@@ -1,0 +1,16 @@
+# Loque'nahak: the spirit leopard's Pounce and Rend.
+
+[[boss]]
+key = "loquenahak"
+
+[[boss.kit]]
+every = 9.0
+ability = { leap = { spell = 55077, radius = 5.0, reach = 14.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 11977, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.2 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

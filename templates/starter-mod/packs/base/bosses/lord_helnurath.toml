@@ -1,0 +1,20 @@
+# Lord Hel'nurath's abilities, Warsong Gulch.
+
+[[boss]]
+key = "lord_helnurath"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 686 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 22539, range = 14.0, arc = 60.0, warn = 1.4, factor = 2.2 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 6.0 } }, { rush = { spell = 22539, len = 30.0, w = 5.0, warn = 2.1, factor = 1.8 } }], 0.5] }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

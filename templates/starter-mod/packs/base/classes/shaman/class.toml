@@ -1,0 +1,79 @@
+key = "shaman"
+# The `ChrClasses` id.
+id = 7
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [5, 6, 7, 0, 1, 2, 3, 4]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 195
+# Casters walk to their orbs and coins (2026-11-10); a hybrid only by a quarter (10 yd -> 7.5 yd),
+# and a melee build gives it back with the talent stat 35.
+pickup_pct = -25
+power = "mana"
+starter = "lightning_bolt"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's,
+# the pandaren (15 Horde, 17 Alliance) as Mists of Pandaria's.
+races = [11, 2, 6, 8, 9, 15, 17]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    36, # Worn Mace
+    2362, # Worn Wooden Shield
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 2645
+dash_legend = { en = "Ghost Wolf's sparks jump on to two more enemies each.", de = "Die Funken von Geisterwolf springen auf je zwei weitere Feinde über.", fr = "Les étincelles de Loup fantôme bondissent chacune sur deux ennemis de plus.", es = "Las chispas de Lobo fantasma saltan cada una a dos enemigos más.", pt = "As faíscas de Lobo Fantasma saltam, cada uma, para mais dois inimigos.", ru = "Искры Призрачного волка перескакивают каждая еще на двух врагов.", pl = "Iskry Widmowego wilka przeskakują dodatkowo na dwóch kolejnych przeciwników.", tr = "Hayalet Kurt'un kıvılcımları her biri iki düşmana daha sıçrar.", it = "Le scintille di Lupo fantasma saltano ciascuna su altri due nemici.", ja = "ゴースト・ウルフの火花がそれぞれさらに2体の敵に飛び移ります。", zh = "幽魂之狼的电火花各自再跳到另外两个敌人身上。", ko = "늑대 정령의 불꽃이 각각 적 2명에게 더 튑니다." }
+bot_name = "Botshaman"
+bot_order = 7
+name = { en = "Shaman", de = "Schamane", fr = "Chaman", es = "Chamán", pt = "Xamã", ru = "Шаман", pl = "Szaman", tr = "Şaman", it = "Sciamano", ja = "シャーマン", zh = "萨满祭司", ko = "주술사" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [0, 0.44, 0.87]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "shaman_azure"
+tone = 9
+price = 12000
+name = { en = "Thunder Azure", de = "Donnerazur", fr = "Azur tonnerre", es = "Azur trueno", pt = "Azur Trovejante", ru = "Грозовая лазурь", pl = "Lazurowy grom", tr = "Gök Gürültüsü Mavisi", it = "Tuono azzurro", ja = "紺碧の雷", zh = "蔚蓝雷霆", ko = "천둥 하늘빛" }
+
+[[colors]]
+key = "shaman_teal"
+tone = 7
+price = 12000
+name = { en = "Tidal Storm", de = "Gezeitensturm", fr = "Tempête des marées", es = "Tormenta de mareas", pt = "Tempestade das Marés", ru = "Приливная буря", pl = "Przypływowa burza", tr = "Gelgit Fırtınası", it = "Tempesta di marea", ja = "潮の嵐", zh = "潮汐风暴", ko = "해일 폭풍" }
+
+[[colors]]
+key = "shaman_gold"
+tone = 3
+price = 15000
+name = { en = "Golden Storm", de = "Goldsturm", fr = "Tempête dorée", es = "Tormenta dorada", pt = "Tempestade Dourada", ru = "Золотая буря", pl = "Złota burza", tr = "Altın Fırtına", it = "Tempesta dorata", ja = "黄金の嵐", zh = "金色风暴", ko = "황금 폭풍" }
+
+[[colors]]
+key = "shaman_crimson"
+tone = 13
+price = 15000
+name = { en = "Crimson Storm", de = "Karmesinsturm", fr = "Tempête cramoisie", es = "Tormenta carmesí", pt = "Tempestade Carmesim", ru = "Багровая буря", pl = "Szkarłatna burza", tr = "Kızıl Fırtına", it = "Tempesta cremisi", ja = "深紅の嵐", zh = "赤红风暴", ko = "진홍 폭풍" }
+
+[[colors]]
+key = "shaman_fel"
+tone = 5
+price = 18000
+name = { en = "Fel Storm", de = "Teufelssturm", fr = "Tempête gangrenée", es = "Tormenta vil", pt = "Tempestade Vil", ru = "Буря Скверны", pl = "Burza Zła", tr = "Fel Fırtınası", it = "Tempesta vile", ja = "フェルの嵐", zh = "邪能风暴", ko = "지옥 폭풍" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "shaman_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "shaman_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

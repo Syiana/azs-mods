@@ -1,0 +1,16 @@
+# Serfex the Reaver: a worm that bursts from the ground and spits acid.
+
+[[boss]]
+key = "serfex_the_reaver"
+
+[[boss.kit]]
+every = 8.0
+ability = { pool = { spell = 0, burst = 53454, radius = 6.0, warn = 2.5, factor = 2.6 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 12884, range = 12.0, arc = 60.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

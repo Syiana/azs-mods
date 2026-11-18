@@ -1,0 +1,233 @@
+# The rings and trinkets of AS's jewelry table (`re/NUMBERS.md` 17), in the order a cache's offer
+# draws from. `behavior` plays the piece (`jewelry.rs`); `base` is its worth B, `growth` its rule
+# (17.2), `ceiling` or `ceiling_x` (times B) its hard ceiling. Bases are AS's; ours are `TUNE`.
+[[jewel]]
+key = "accuria"
+slot = "ring"
+behavior = "damage"
+base = 0.17
+growth = "a"
+icon = "INV_Jewelry_Ring_15"
+name = { en = "Band of Accuria", de = "Band von Accuria", fr = "Anneau d'Accuria", es = "Banda de Accuria", pt = "Aliança de Accuria", ru = "Кольцо Аккурии", pl = "Obrączka Accurii", tr = "Accuria Yüzüğü", it = "Fascia di Accuria", ja = "アキュリアの指輪", zh = "埃库利亚指环", ko = "아쿠리아의 반지" }
+
+[[jewel]]
+key = "quick_strike"
+slot = "ring"
+behavior = "cooldown"
+base = 0.09
+growth = "a"
+icon = "INV_Jewelry_Ring_07"
+name = { en = "Quick Strike Ring", de = "Ring des schnellen Schlags", fr = "Anneau de frappe rapide", es = "Anillo de golpe rápido", pt = "Anel do Golpe Rápido", ru = "Кольцо быстрого удара", pl = "Pierścień szybkiego ciosu", tr = "Çabuk Vuruş Yüzüğü", it = "Anello del colpo rapido", ja = "クイックストライク・リング", zh = "迅击之戒", ko = "신속한 일격의 반지" }
+
+[[jewel]]
+key = "dark_iron"
+group = "sustain"
+slot = "ring"
+behavior = "max_health"
+base = 0.2
+growth = "b"
+icon = "INV_Jewelry_Ring_14"
+name = { en = "Heavy Dark Iron Ring", de = "Schwerer Dunkeleisenring", fr = "Lourde bague de sombrefer", es = "Anillo pesado de hierro negro", pt = "Anel Pesado de Ferro Negro", ru = "Тяжёлое кольцо из черного железа", pl = "Ciężki pierścień z mrocznego żelaza", tr = "Ağır Kara Demir Yüzük", it = "Pesante anello di ferro oscuro", ja = "重いダークアイアンの指輪", zh = "沉重的黑铁戒指", ko = "묵직한 검은무쇠 반지" }
+
+[[jewel]]
+key = "dragonslayer"
+slot = "ring"
+behavior = "crit"
+base = 0.04
+growth = "a"
+icon = "INV_Jewelry_Ring_41"
+name = { en = "Master Dragonslayer's Ring", de = "Ring des Meisterdrachentöters", fr = "Anneau du maître tueur de dragons", es = "Anillo del maestro matadragones", pt = "Anel do Mestre Mata-dragões", ru = "Кольцо мастера-драконоборца", pl = "Pierścień mistrza zabójców smoków", tr = "Usta Ejderha Avcısı Yüzüğü", it = "Anello del maestro ammazzadraghi", ja = "ドラゴンスレイヤーの達人の指輪", zh = "屠龙大师之戒", ko = "용사냥꾼의 반지" }
+
+[[jewel]]
+key = "archimtiros"
+group = "sustain"
+slot = "ring"
+behavior = "reduction_and_health"
+base = 0.035
+growth = "b"
+icon = "INV_Jewelry_Ring_40"
+name = { en = "Archimtiros' Ring of Reckoning", de = "Archimtiros' Ring der Abrechnung", fr = "Anneau du jugement d'Archimtiros", es = "Anillo de ajuste de cuentas de Archimtiros", pt = "Anel do Ajuste de Contas de Archimtiros", ru = "Кольцо расплаты Архимтироса", pl = "Pierścień rozliczenia Archimtirosa", tr = "Archimtiros'un Hesaplaşma Yüzüğü", it = "Anello del giudizio di Archimtiros", ja = "アーキムティロスの報いの指輪", zh = "阿基米蒂罗斯的清算之戒", ko = "아키미티로스의 응징의 반지" }
+
+[[jewel]]
+key = "devoured"
+group = "sustain"
+slot = "ring"
+behavior = "regen"
+base = 1.5
+growth = "c"
+ceiling_x = 3.0
+icon = "INV_Jewelry_Ring_AhnQiraj_05"
+name = { en = "Ring of the Devoured", de = "Ring der Verschlungenen", fr = "Anneau des dévorés", es = "Anillo de los devorados", pt = "Anel dos Devorados", ru = "Кольцо пожранных", pl = "Pierścień pożartych", tr = "Yutulanların Yüzüğü", it = "Anello dei divorati", ja = "喰われし者の指輪", zh = "被吞噬者之戒", ko = "집어삼켜진 자의 반지" }
+
+[[jewel]]
+key = "spell_power"
+slot = "ring"
+behavior = "area"
+base = 0.14
+growth = "a"
+icon = "INV_Jewelry_Ring_38"
+name = { en = "Ring of Spell Power", de = "Ring der Zaubermacht", fr = "Anneau de puissance des sorts", es = "Anillo de poder con hechizos", pt = "Anel do Poder Mágico", ru = "Кольцо силы заклинаний", pl = "Pierścień mocy czarów", tr = "Büyü Gücü Yüzüğü", it = "Anello del potere magico", ja = "呪文力の指輪", zh = "法术能量之戒", ko = "주문력의 반지" }
+
+[[jewel]]
+key = "seal_damned"
+slot = "ring"
+behavior = "dot_haste"
+base = 0.1
+growth = "c"
+ceiling_x = 10.0
+needs = "dot"
+icon = "INV_Jewelry_Ring_51Naxxramas"
+name = { en = "Seal of the Damned", de = "Siegel der Verdammten", fr = "Sceau des damnés", es = "Sello de los condenados", pt = "Selo dos Condenados", ru = "Печать проклятых", pl = "Pieczęć potępionych", tr = "Lanetlilerin Mührü", it = "Sigillo dei dannati", ja = "呪われし者の印章", zh = "诅咒之印", ko = "저주받은 자의 인장" }
+
+[[jewel]]
+key = "blooddrinker"
+group = "sustain"
+slot = "ring"
+behavior = "lifesteal"
+base = 0.01
+growth = "c"
+ceiling_x = 3.0
+icon = "INV_Jewelry_Ring_49Naxxramas"
+name = { en = "Blooddrinker's Band", de = "Band des Bluttrinkers", fr = "Anneau du buveur de sang", es = "Banda del bebesangre", pt = "Aliança do Bebedor de Sangue", ru = "Кольцо кровопийцы", pl = "Obrączka pijącego krew", tr = "Kan İçicinin Yüzüğü", it = "Fascia del bevisangue", ja = "血を飲む者の指輪", zh = "饮血者指环", ko = "피를 마시는 자의 반지" }
+
+[[jewel]]
+key = "earthstrike"
+slot = "trinket"
+behavior = "damage"
+base = 0.13
+growth = "a"
+icon = "Spell_Nature_AbolishMagic"
+name = { en = "Earthstrike", de = "Erdschlag", fr = "Frappe-terre", es = "Golpe de tierra", pt = "Golpe da Terra", ru = "Удар земли", pl = "Uderzenie Ziemi", tr = "Yer Darbesi", it = "Percossa della terra", ja = "アースストライク", zh = "大地打击", ko = "대지의 일격" }
+
+[[jewel]]
+key = "tep"
+slot = "trinket"
+behavior = "cooldown"
+base = 0.07
+growth = "a"
+icon = "INV_Misc_StoneTablet_11"
+name = { en = "Talisman of Ephemeral Power", de = "Talisman der flüchtigen Macht", fr = "Talisman de puissance éphémère", es = "Talismán de poder efímero", pt = "Talismã do Poder Efêmero", ru = "Талисман эфемерной силы", pl = "Talizman ulotnej mocy", tr = "Geçici Güç Tılsımı", it = "Talismano del potere effimero", ja = "束の間の力のタリスマン", zh = "短暂能量护符", ko = "순간의 힘의 부적" }
+
+[[jewel]]
+key = "lifegiving"
+group = "sustain"
+slot = "trinket"
+behavior = "max_health"
+base = 0.16
+growth = "b"
+icon = "INV_Misc_Gem_Pearl_05"
+name = { en = "Lifegiving Gem", de = "Lebensspendender Edelstein", fr = "Gemme de vie", es = "Gema dadora de vida", pt = "Gema Doadora de Vida", ru = "Живительный самоцвет", pl = "Klejnot dający życie", tr = "Can Veren Mücevher", it = "Gemma datrice di vita", ja = "命を授けるジュエル", zh = "生命宝石", ko = "생명의 보석" }
+
+[[jewel]]
+key = "hoj"
+slot = "trinket"
+behavior = "echo"
+base = 0.06
+growth = "a"
+ceiling = 0.6
+offered_below = 0.54
+icon = "INV_Jewelry_Talisman_01"
+name = { en = "Hand of Justice", de = "Hand der Gerechtigkeit", fr = "Main de justice", es = "Mano de justicia", pt = "Mão da Justiça", ru = "Рука Правосудия", pl = "Ręka sprawiedliwości", tr = "Adaletin Eli", it = "Mano della giustizia", ja = "正義の手", zh = "正义之手", ko = "정의의 손" }
+
+[[jewel]]
+key = "blackhand"
+slot = "trinket"
+behavior = "crit_damage"
+base = 0.195
+growth = "a"
+icon = "INV_Misc_ArmorKit_09"
+name = { en = "Blackhand's Breadth", de = "Schwarzfausts Breite", fr = "Envergure de Blackhand", es = "Amplitud de Puño Negro", pt = "Amplitude de Mão Negra", ru = "Размах Чёрной Руки", pl = "Oddech Blackhanda", tr = "Karayumruk'un Soluğu", it = "Ampiezza di Blackhand", ja = "ブラックハンドの幅", zh = "黑手的宽容", ko = "블랙핸드의 손바닥" }
+
+[[jewel]]
+key = "carrot"
+slot = "trinket"
+behavior = "speed"
+base = 0.08
+growth = "c"
+ceiling_x = 5.0
+icon = "INV_Misc_Food_54"
+name = { en = "Carrot on a Stick", de = "Karotte am Stiel", fr = "Carotte au bout d'un bâton", es = "Zanahoria con palo", pt = "Cenoura na Vara", ru = "Морковка на палочке", pl = "Marchewka na kiju", tr = "Sopadaki Havuç", it = "Carota su un bastone", ja = "棒付きニンジン", zh = "棍子上的胡萝卜", ko = "막대 당근" }
+
+[[jewel]]
+key = "remote"
+slot = "trinket"
+behavior = "pickup"
+base = 0.35
+growth = "c"
+ceiling_x = 5.0
+icon = "INV_Misc_PocketWatch_01"
+name = { en = "Gnomish Universal Remote", de = "Gnomische Universalfernbedienung", fr = "Télécommande universelle gnome", es = "Mando a distancia universal gnómico", pt = "Controle Remoto Universal Gnômico", ru = "Гномский универсальный пульт", pl = "Gnomi uniwersalny pilot", tr = "Gnom Evrensel Kumandası", it = "Telecomando universale gnomesco", ja = "ノームの万能リモコン", zh = "侏儒通用遥控器", ko = "노움 만능 리모컨" }
+
+[[jewel]]
+key = "insignia"
+slot = "trinket"
+behavior = "xp"
+base = 0.12
+growth = "c"
+ceiling_x = 5.0
+icon = "INV_Jewelry_TrinketPVP_02"
+name = { en = "Insignia of the Horde", de = "Insignie der Horde", fr = "Insigne de la Horde", es = "Insignia de la Horda", pt = "Insígnia da Horda", ru = "Знак Орды", pl = "Insygnia Hordy", tr = "Horde Nişanı", it = "Insegna dell'Orda", ja = "ホードの記章", zh = "部落徽记", ko = "호드의 휘장" }
+
+[[jewel]]
+key = "eldre_thalas"
+slot = "trinket"
+behavior = "gold"
+base = 0.25
+growth = "c"
+ceiling_x = 5.0
+icon = "INV_Jewelry_Talisman_10"
+name = { en = "Royal Seal of Eldre'Thalas", de = "Königliches Siegel von Eldre'Thalas", fr = "Sceau royal d'Eldre'Thalas", es = "Sello real de Eldre'Thalas", pt = "Selo Real de Eldre'Thalas", ru = "Королевская печать Эльдре'Таласа", pl = "Królewska pieczęć Eldre'Thalas", tr = "Eldre'Thalas Kraliyet Mührü", it = "Sigillo reale di Eldre'Thalas", ja = "エルドレ・サラスの王家の印章", zh = "埃尔德拉斯皇家印记", ko = "엘드레탈라스의 왕실 인장" }
+
+[[jewel]]
+key = "chosen"
+slot = "trinket"
+behavior = "luck"
+base = 0.15
+growth = "c"
+ceiling_x = 5.0
+icon = "INV_Jewelry_Talisman_08"
+name = { en = "Mark of the Chosen", de = "Mal der Erwählten", fr = "Marque des élus", es = "Marca de los elegidos", pt = "Marca dos Escolhidos", ru = "Знак избранных", pl = "Znak wybrańca", tr = "Seçilmişin İşareti", it = "Marchio dell'Eletto", ja = "選ばれし者の証", zh = "天选者印记", ko = "선택받은 자의 징표" }
+
+[[jewel]]
+key = "onyxia_blood"
+group = "sustain"
+slot = "trinket"
+behavior = "kill_heal"
+base = 2.0
+growth = "c"
+ceiling_x = 3.0
+icon = "Spell_Shadow_LifeDrain"
+name = { en = "Onyxia Blood Talisman", de = "Onyxiablut-Talisman", fr = "Talisman en sang d'Onyxia", es = "Talismán de sangre de Onyxia", pt = "Talismã de Sangue de Onyxia", ru = "Талисман из крови Ониксии", pl = "Talizman krwi Onyxii", tr = "Onyxia Kanı Tılsımı", it = "Talismano del sangue di Onyxia", ja = "オニクシアの血のタリスマン", zh = "奥妮克希亚之血护符", ko = "오닉시아 피의 부적" }
+
+[[jewel]]
+key = "war_horn"
+slot = "trinket"
+behavior = "buff"
+base = 0.15
+growth = "c"
+ceiling_x = 5.0
+needs = "buff"
+icon = "INV_Misc_Horn_01"
+name = { en = "Horn of the Warchief", de = "Horn des Kriegshäuptlings", fr = "Corne du chef de guerre", es = "Cuerno del Jefe de Guerra", pt = "Chifre do Chefe Guerreiro", ru = "Рог вождя", pl = "Róg wodza wojennego", tr = "Savaş Başbuğu'nun Borusu", it = "Corno del Capoguerra", ja = "大族長の角笛", zh = "酋长的号角", ko = "대족장의 뿔피리" }
+
+[[jewel]]
+key = "soulstone"
+group = "sustain"
+slot = "trinket"
+behavior = "lives"
+base = 1.0
+growth = "lives"
+ceiling = 2.0
+offered_below = 2.0
+icon = "INV_Misc_Orb_04"
+name = { en = "Major Soulstone", de = "Großer Seelenstein", fr = "Grande pierre d'âme", es = "Piedra de alma superior", pt = "Pedra da Alma Superior", ru = "Великий камень души", pl = "Wielki kamień dusz", tr = "Büyük Ruh Taşı", it = "Pietra dell'anima maggiore", ja = "上級ソウルストーン", zh = "特效灵魂石", ko = "상급 영혼석" }
+
+[[jewel]]
+key = "star_of_mystaria"
+group = "sustain"
+slot = "trinket"
+behavior = "health_and_reduction"
+base = 0.16666667
+growth = "b"
+icon = "INV_Enchant_EssenceMagicLarge"
+name = { en = "Star of Mystaria", de = "Stern von Mystaria", fr = "Étoile de Mystaria", es = "Estrella de Mystaria", pt = "Estrela de Mystaria", ru = "Звезда Мистарии", pl = "Gwiazda Mystarii", tr = "Mystaria Yıldızı", it = "Stella di Mystaria", ja = "ミスタリアの星", zh = "米斯特拉之星", ko = "미스타리아의 별" }

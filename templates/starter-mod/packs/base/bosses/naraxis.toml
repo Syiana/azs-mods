@@ -1,0 +1,20 @@
+# Naraxis's abilities, Duskwood.
+
+[[boss]]
+key = "naraxis"
+
+[[boss.kit]]
+every = 8.0
+ability = { nova = { spell = 339, radius = 8.0, warn = 1.2 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { rain = { spell = 6917, count = 3, radius = 3.0, spread = 7.0, warn = 1.6, factor = 1.6 } }
+
+[[boss.kit]]
+every = 17.0
+ability = { eggs = { hatch = 2, count = 2, radius = 6.0, health = 0.03, lasts = 10.0 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { adds = 5 }

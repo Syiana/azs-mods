@@ -1,0 +1,19 @@
+# Class set: Breath of the Storm / Atem des Sturms.
+[[set_bonus]]
+key = "monk_mythic_4"
+tier = "mythic"
+pieces = 4
+text = { en = "Breath of the Storm: Tiger Palm hits one additional enemy.", de = "Atem des Sturms: Treffer von Tigerklaue springen auf einen weiteren Feind über.", fr = "Souffle de la tempête : Paume du tigre touche un ennemi supplémentaire.", es = "Aliento de la tormenta: Palma del tigre golpea a un enemigo adicional.", pt = "Sopro da Tempestade: Palma do Tigre atinge um inimigo adicional.", ru = "Дыхание бури: Ладонь тигра поражает ещё одного врага.", it = "Respiro della tempesta: Palmo della Tigre colpisce un nemico aggiuntivo.", pl = "Oddech burzy: Dłoń tygrysa trafia jednego dodatkowego wroga.", tr = "Fırtınanın Nefesi: Kaplan Avucu bir ek düşmana vurur.", ja = "嵐の吐息：タイガー・パームが追加で1体の敵に命中します。", zh = "风暴之息：猛虎掌额外击中一个敌人。", ko = "폭풍의 숨결: 범의 장풍이 적을 1명 더 공격합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["tiger_palm"] }]
+mods_v = 1.0
+whole = true
+fixed = true
+
+[[set_bonus]]
+key = "monk_mythic_8"
+tier = "mythic"
+pieces = 8
+scripted = true
+text = { en = "Breath of the Storm: Hits with different abilities gather Storm Chi. At full Storm Chi, the next Tiger Palm creates a storm ring around you. When you leave the ring, it follows you once and pulls normal enemies along.", de = "Atem des Sturms: Treffer mit unterschiedlichen Fähigkeiten sammeln Sturm-Chi. Bei voller Anzeige erzeugt deine nächste Tigerklaue einen Sturmring um dich. Beim Verlassen folgt dir der Ring einmal und zieht normale Gegner mit.", fr = "Souffle de la tempête : Toucher avec des techniques différentes génère du chi de tempête. Une fois la jauge pleine, la prochaine Paume du tigre crée un anneau de tempête autour de vous. Quand vous en sortez, il vous suit une fois et entraîne les ennemis ordinaires.", es = "Aliento de la tormenta: Golpear con habilidades diferentes acumula chi de tormenta. Al llenar el medidor, tu siguiente Palma del tigre crea un anillo de tormenta a tu alrededor. Al salir del anillo, te sigue una vez y arrastra a los enemigos normales.", pt = "Sopro da Tempestade: Acertar com habilidades diferentes gera chi da tempestade. Quando o medidor enche, sua próxima Palma do Tigre cria um anel de tempestade ao seu redor. Ao sair do anel, ele segue você uma vez e arrasta inimigos comuns.", ru = "Дыхание бури: Попадания разными способностями накапливают ци бури. Когда шкала заполнится, следующая Ладонь тигра создаст вокруг вас кольцо бури. Когда вы выйдете из кольца, оно один раз последует за вами и потянет за собой обычных врагов.", it = "Respiro della tempesta: Colpire con abilità diverse accumula chi della tempesta. A indicatore pieno, il successivo Palmo della Tigre crea un anello di tempesta attorno a te. Quando esci dall'anello, questo ti segue una volta e trascina i nemici normali.", pl = "Oddech burzy: Trafienia różnymi zdolnościami gromadzą chi burzy. Po zapełnieniu wskaźnika następna Dłoń tygrysa tworzy wokół ciebie pierścień burzy. Gdy go opuścisz, pierścień raz podąży za tobą, pociągając zwykłych wrogów.", tr = "Fırtınanın Nefesi: Farklı yeteneklerle vurmak fırtına çisi biriktirir. Gösterge dolduğunda bir sonraki Kaplan Avucu etrafında bir fırtına halkası oluşturur. Halkadan çıktığında seni bir kez takip eder ve normal düşmanları beraberinde sürükler.", ja = "嵐の吐息：異なるアビリティの命中でストーム・チーが溜まります。ストーム・チーが満タンになると、次のタイガー・パームが周囲に嵐の輪を作ります。輪から出ると、輪が一度だけあなたを追いかけ、通常の敵を引き寄せます。", zh = "风暴之息：用不同技能命中敌人可积攒风暴真气。风暴真气满时，下一次猛虎掌会在你周围形成一个风暴之环。你离开风暴之环时，它会跟随你一次，并将普通敌人一并拉走。", ko = "폭풍의 숨결: 서로 다른 능력으로 적중하면 폭풍 기가 모입니다. 폭풍 기가 가득 차면 다음 범의 장풍이 주위에 폭풍의 고리를 만듭니다. 고리를 벗어나면 고리가 한 번 당신을 따라오며 일반 적을 함께 끌고 갑니다." }

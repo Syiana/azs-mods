@@ -1,0 +1,81 @@
+# The shop's footstep trails (survivors-sim trails.rs). A trail's place plus one is its wire id: new ones go at the end.
+#
+# Every trail, in the client's table order: `wire_id` is the index plus one, so new ones go at
+# the end. `TUNE` the prices; price 0 is not sold: only Recruit a Friend gives it
+# (`crate::referral::MILESTONES`).
+
+[[trail]]
+key = "prints"
+name = "Footprints"
+price = 2000
+
+[[trail]]
+key = "fire"
+name = "Fire Steps"
+price = 10000
+
+[[trail]]
+key = "frost"
+name = "Frost Steps"
+price = 10000
+
+[[trail]]
+key = "fel"
+name = "Fel Steps"
+price = 12000
+
+[[trail]]
+key = "arcane"
+name = "Arcane Steps"
+price = 12000
+
+[[trail]]
+key = "blood"
+name = "Blood Steps"
+price = 6000
+
+[[trail]]
+key = "shadow"
+name = "Shadow Steps"
+price = 15000
+
+[[trail]]
+key = "banner"
+name = "Banner Steps"
+price = 0
+
+# Hallow's End's own (price 0: not sold for gold), in its Event Shop alone (`crate::events`).
+[[trail]]
+key = "pumpkin"
+name = "Pumpkin Steps"
+price = 0
+
+[[trail]]
+key = "ghost"
+name = "Ghostly Steps"
+price = 0
+
+[[trail]]
+key = "runeforge"
+name = "Runeforge Steps"
+price = 18000
+
+[[trail]]
+key = "glacier"
+name = "Glacier Shards"
+price = 18000
+
+[[trail]]
+key = "cinder"
+name = "Cinder Scatter"
+price = 16000
+
+[[trail]]
+key = "moonwell"
+name = "Moonwell Ripples"
+price = 20000
+
+[[trail]]
+key = "rift"
+name = "Rift Fractures"
+price = 22000

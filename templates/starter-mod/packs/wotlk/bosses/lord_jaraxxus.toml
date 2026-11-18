@@ -1,0 +1,16 @@
+# Lord Jaraxxus: Fel Fireball, Legion Flame, the Infernal Eruptions and Nether Portals.
+
+[[boss]]
+key = "lord_jaraxxus"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 66532 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { trail = { spell = 66197, count = 5, radius = 5.0, warn = 1.6, gap = 0.8, factor = 1.8 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

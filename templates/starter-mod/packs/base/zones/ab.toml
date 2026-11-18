@@ -1,0 +1,302 @@
+# Arathi Basin, "The Highlands Rise".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "ab"
+order = 4
+name = { en = "Arathi Basin", de = "Arathibecken", fr = "Bassin d'Arathi", es = "Cuenca de Arathi", pt = "Bacia Arathi", ru = "Низина Арати", pl = "Kotlina Arathi", tr = "Arathi Havzası", it = "Bacino degli Arathi", ja = "アラシ盆地", zh = "阿拉希盆地", ko = "아라시 분지" }
+subtitle = { en = "The Highlands Rise", de = "Das Hochland erhebt sich", fr = "Les Hautes-terres se soulèvent", es = "Las Tierras Altas se alzan", pt = "As Terras Altas se Levantam", ru = "Нагорье восстает", pl = "Wzgórza się wznoszą", tr = "Yaylalar Yükseliyor", it = "Gli Altipiani si levano", ja = "高地の蜂起", zh = "高地崛起", ko = "고원의 봉기" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_BG_winAB"
+map = 529
+map_name = "PVPZone04"
+area = 3358
+center = [975.0, 1030.0]
+radius = 100.0
+map_bounds = [1858.33, 102.08, 1508.33, 337.5]
+health_factor = 1.5
+gold_factor = 1.44
+late_factor = 0.0
+hour = 19
+weather = { fine = 85, rain = 15 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = 0.0
+pitch = 39.0
+distance = 16.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 1500
+name = { en = "Witherbark Troll", de = "Troll der Bleichborken", fr = "Troll Écorce-flétrie", es = "Troll Secacorteza", pt = "Troll Cascasseca", ru = "Тролль Сухой Коры", pl = "Troll z klanu Witherbark", tr = "Kurukabuk Trolü", it = "Troll Scorzaseccata", ja = "ウィザーバーク・トロール", zh = "枯木巨魔", ko = "마른가지 트롤" }
+type = "humanoid"
+display = 3986
+icon = "INV_Misc_Head_Troll_01"
+health = 28
+damage = 4
+swing = 1.6
+speed = 5.0
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 1501
+name = { en = "Plains Creeper", de = "Prärieschleicher", fr = "Rampeur des plaines", es = "Reptador de las llanuras", pt = "Rastejante da Planície", ru = "Равнинный ползун", pl = "Pełzacz równin", tr = "Ova Sürüngeni", it = "Strisciante delle pianure", ja = "プレインズ・クリーパー", zh = "平原爬行者", ko = "평원 잠복거미" }
+type = "beast"
+display = 1103
+icon = "Ability_Hunter_Pet_Spider"
+health = 30
+damage = 5
+swing = 1.5
+speed = 7.4
+cost = 1.0
+from = 0.5
+size = 0.9
+
+[[zone.enemy]]
+entry = 1502
+name = { en = "Mesa Buzzard", de = "Tafellandbussard", fr = "Buse du plateau", es = "Buitre de la meseta", pt = "Urubu da Mesa", ru = "Канюк плато", pl = "Myszołów mesy", tr = "Mesa Akbabası", it = "Poiana dell'altopiano", ja = "メサ・バザード", zh = "平顶山秃鹫", ko = "고원 대머리수리" }
+type = "beast"
+display = 1105
+icon = "Ability_Hunter_Pet_Vulture"
+health = 24
+damage = 5
+swing = 1.4
+speed = 7.8
+cost = 1.2
+from = 1.0
+size = 0.4
+
+[[zone.enemy]]
+entry = 1503
+name = { en = "Witherbark Shadowcaster", de = "Schattenwirker der Bleichborken", fr = "Mage des ombres Écorce-flétrie", es = "Lanzasombras Secacorteza", pt = "Lançador de Sombras Cascasseca", ru = "Заклинатель теней Сухой Коры", pl = "Czarownik cienia z klanu Witherbark", tr = "Kurukabuk Gölge Büyücüsü", it = "Lanciaombre Scorzaseccata", ja = "ウィザーバーク・シャドウキャスター", zh = "枯木暗影施法者", ko = "마른가지 그림자술사" }
+type = "humanoid"
+display = 3993
+icon = "INV_Misc_Head_Troll_02"
+health = 32
+damage = 7
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1504
+name = { en = "Syndicate Mercenary", de = "Söldner des Syndikats", fr = "Mercenaire du Syndicat", es = "Mercenario del Sindicato", pt = "Mercenário do Sindicato", ru = "Наемник Синдиката", pl = "Najemnik Syndykatu", tr = "Sendika Paralı Askeri", it = "Mercenario del Sindacato", ja = "シンジケートの傭兵", zh = "辛迪加佣兵", ko = "비밀결사 용병" }
+type = "humanoid"
+display = 3987
+icon = "INV_Misc_Head_Human_01"
+health = 36
+damage = 6
+swing = 1.4
+speed = 6.6
+cost = 1.5
+from = 3.0
+size = 1.1
+
+[[zone.enemy]]
+entry = 1505
+name = { en = "Boulderfist Ogre", de = "Oger der Felsfäuste", fr = "Ogre Rochepoing", es = "Ogro Puño de Roca", pt = "Ogro Punho Rochoso", ru = "Огр Валунного Кулака", pl = "Ogr z klanu Boulderfist", tr = "Kayayumruk Ogresi", it = "Ogre Pugnomasso", ja = "ボルダーフィスト・オーガ", zh = "石拳食人魔", ko = "돌주먹 오우거" }
+type = "humanoid"
+display = 1052
+icon = "Achievement_Reputation_Ogre"
+health = 150
+damage = 11
+swing = 2.4
+speed = 4.2
+cost = 3.0
+from = 4.5
+
+[[zone.enemy]]
+entry = 1506
+name = { en = "Feral Mountain Lion", de = "Wilder Berglöwe", fr = "Lion des montagnes sauvage", es = "León de montaña salvaje", pt = "Leão da Montanha Selvagem", ru = "Дикий горный лев", pl = "Dziki lew górski", tr = "Vahşi Dağ Aslanı", it = "Puma di montagna ferale", ja = "野生のマウンテンライオン", zh = "野生山狮", ko = "야생 산사자" }
+type = "beast"
+display = 1056
+icon = "Ability_Hunter_Pet_Cat"
+health = 46
+damage = 8
+swing = 1.3
+speed = 7.4
+cost = 2.0
+from = 6.0
+size = 1.2
+
+[[zone.enemy]]
+entry = 1507
+name = { en = "Boulderfist Magus", de = "Magus der Felsfäuste", fr = "Magus Rochepoing", es = "Magus Puño de Roca", pt = "Magus Punho Rochoso", ru = "Магус Валунного Кулака", pl = "Magus z klanu Boulderfist", tr = "Kayayumruk Büyücüsü", it = "Magus Pugnomasso", ja = "ボルダーフィスト・メイガス", zh = "石拳魔导师", ko = "돌주먹 마법사" }
+type = "humanoid"
+display = 6170
+icon = "Achievement_Reputation_Ogre"
+health = 52
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.5
+size = 0.8
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1508
+name = { en = "Boulderfist Brute", de = "Schläger der Felsfäuste", fr = "Brute Rochepoing", es = "Bruto Puño de Roca", pt = "Bruto Punho Rochoso", ru = "Громила Валунного Кулака", pl = "Brutal z klanu Boulderfist", tr = "Kayayumruk Vahşisi", it = "Bruto Pugnomasso", ja = "ボルダーフィスト・ブルート", zh = "石拳蛮兵", ko = "돌주먹 야수" }
+type = "humanoid"
+display = 3193
+icon = "Achievement_Reputation_Ogre"
+health = 200
+damage = 13
+swing = 2.2
+speed = 5.0
+cost = 3.5
+from = 9.0
+size = 0.9
+
+[[zone.elite]]
+entry = 1509
+name = { en = "Witherbark Headhunter", de = "Kopfjäger der Bleichborken", fr = "Chasseur de têtes Écorce-flétrie", es = "Cazacabezas Secacorteza", pt = "Caçador de Cabeças Cascasseca", ru = "Охотник за головами Сухой Коры", pl = "Łowca głów z klanu Witherbark", tr = "Kurukabuk Kelle Avcısı", it = "Cacciatore di teste Scorzaseccata", ja = "ウィザーバーク・ヘッドハンター", zh = "枯木猎头者", ko = "마른가지 머리사냥꾼" }
+type = "humanoid"
+display = 3995
+icon = "INV_Misc_Head_Troll_01"
+health = 700
+damage = 21
+swing = 2.0
+speed = 5.4
+cost = 12.0
+from = 4.0
+size = 1.9
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 1510
+name = { en = "Rumbling Exile", de = "Grollender Verbannter", fr = "Exilé grondant", es = "Exiliado retumbante", pt = "Exilado Estrondoso", ru = "Грохочущий изгнанник", pl = "Dudniący wygnaniec", tr = "Gürleyen Sürgün", it = "Esule rombante", ja = "轟く流刑者", zh = "轰鸣的流放者", ko = "우르릉대는 추방자" }
+type = "elemental"
+display = 9587
+icon = "Spell_Nature_EarthElemental_Totem"
+health = 950
+damage = 27
+swing = 2.4
+speed = 4.6
+cost = 14.0
+from = 8.5
+size = 1.19
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { stomp = { spell = 31277, radius = 7.0, warn = 1.8, knock = 9.0 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 6524, count = 3, radius = 4.0, spread = 8.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 1511
+name = { en = "Boulderfist Enforcer", de = "Vollstrecker der Felsfäuste", fr = "Bourreau Rochepoing", es = "Déspota Puño de Roca", pt = "Capanga Punho Rochoso", ru = "Вышибала Валунного Кулака", pl = "Egzekutor z klanu Boulderfist", tr = "Kayayumruk Zorbası", it = "Esecutore Pugnomasso", ja = "ボルダーフィスト・エンフォーサー", zh = "石拳执行者", ko = "돌주먹 집행자" }
+type = "humanoid"
+display = 1054
+icon = "Achievement_Reputation_Ogre"
+health = 1150
+damage = 31
+swing = 2.2
+speed = 5.6
+cost = 15.0
+from = 13.0
+size = 2.1
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.boss]]
+entry = 1590
+name = { en = "Kovork", de = "Kovork", fr = "Kovork", es = "Kovork", pt = "Kovork", ru = "Коворк", pl = "Kovork", tr = "Kovork", it = "Kovork", ja = "コヴォーク", zh = "科沃克", ko = "코보크" }
+type = "humanoid"
+display = 448
+icon = "INV_Misc_Head_Troll_01"
+health = 3800
+damage = 24
+speed = 5.4
+size = 2.0571427
+minute = 4
+yell = { en = "Kovork crush little ones! Basin belong to Boulderfist!", de = "Kovork zerquetscht kleine Leute! Becken gehört Felsfaust!", fr = "Kovork écraser petits ! Bassin appartenir à Rochepoing !", es = "¡Kovork aplasta a los pequeños! ¡La cuenca es de Puño de Roca!", pt = "Kovork esmaga pequenos! Bacia pertence ao Punho Rochoso!", ru = "Коворк давить мелких! Низина принадлежать Валунному Кулаку!", pl = "Kovork zgnieść małych! Kotlina należeć do Boulderfist!", tr = "Kovork küçükleri ezer! Havza Kayayumruk'un!", it = "Kovork schiacciare piccoli! Bacino appartenere a Pugnomasso!", ja = "コヴォーク、ちびども潰す！盆地はボルダーフィストのもの！", zh = "科沃克碾碎小东西！盆地属于石拳！", ko = "코보크 꼬맹이들 부숴! 분지는 돌주먹 거!" }
+kit = "kovork"
+
+[[zone.boss]]
+entry = 1591
+name = { en = "Nimar the Slayer", de = "Nimar der Töter", fr = "Nimar le Tueur", es = "Nimar el Matador", pt = "Nimar, o Algoz", ru = "Нимар Убийца", pl = "Nimar Zabójca", tr = "Katil Nimar", it = "Nimar l'Assassino", ja = "殺戮者ニマー", zh = "杀手尼玛尔", ko = "학살자 니마르" }
+type = "humanoid"
+display = 3995
+icon = "INV_Misc_Head_Troll_01"
+health = 9400
+damage = 30
+speed = 6.4
+size = 3.3
+minute = 7
+yell = { en = "Your head will hang in Witherbark Village!", de = "Euer Kopf wird im Dorf der Bleichborken hängen!", fr = "Ta tête ornera le village Écorce-flétrie !", es = "¡Tu cabeza colgará en la Aldea Secacorteza!", pt = "Sua cabeça vai pender na Vila Cascasseca!", ru = "Твоя голова будет висеть в деревне Сухой Коры!", pl = "Twoja głowa zawiśnie we wsi Witherbark!", tr = "Kellen Kurukabuk Köyü'nde asılacak!", it = "La tua testa penderà nel Villaggio Scorzaseccata!", ja = "貴様の首はウィザーバーク村に吊るされるのだ！", zh = "你的脑袋会挂在枯木村！", ko = "네 머리는 마른나무껍질 마을에 매달릴 거다!" }
+kit = "nimar_the_slayer"
+
+[[zone.boss]]
+entry = 1592
+name = { en = "Marez Cowl", de = "Marez Cowl", fr = "Marez Cowl", es = "Marez Cowl", pt = "Marez Cowl", ru = "Марез Каул", pl = "Marez Cowl", tr = "Marez Cowl", it = "Marez Cappuccio", ja = "マレズ・カウル", zh = "马雷兹·考尔", ko = "마레즈 카울" }
+type = "humanoid"
+display = 4018
+icon = "INV_Misc_Head_Human_01"
+health = 17500
+damage = 40
+speed = 6.0
+size = 3.6
+minute = 11
+yell = { en = "The Syndicate thanks you for your sacrifice.", de = "Das Syndikat dankt Euch für Euer Opfer.", fr = "Le Syndicat te remercie de ton sacrifice.", es = "El Sindicato te agradece tu sacrificio.", pt = "O Sindicato agradece o seu sacrifício.", ru = "Синдикат благодарит тебя за жертву.", pl = "Syndykat dziękuje za twoją ofiarę.", tr = "Sendika fedakarlığın için teşekkür eder.", it = "Il Sindacato ti ringrazia per il tuo sacrificio.", ja = "シンジケートは貴様の犠牲に感謝する。", zh = "辛迪加感谢你的牺牲。", ko = "비밀결사단이 너의 희생에 감사하지." }
+kit = "marez_cowl"
+
+[[zone.boss]]
+entry = 1593
+name = { en = "Lord Falconcrest", de = "Lord Falkenwacht", fr = "Seigneur Crête-faucon", es = "Lord Crestahalcón", pt = "Lorde Crista-de-Falcão", ru = "Лорд Соколиный Гребень", pl = "Lord Falconcrest", tr = "Lord Falconcrest", it = "Lord Falconcresta", ja = "ファルコンクレスト卿", zh = "法尔考雷斯特领主", ko = "군주 팔콘크레스트" }
+type = "humanoid"
+display = 2051
+icon = "INV_Misc_Head_Human_01"
+health = 29000
+damage = 46
+speed = 6.6
+size = 3.6
+minute = 14
+yell = { en = "The Basin was always Alterac's. We are only taking it back.", de = "Das Becken gehörte immer Alterac. Wir holen es uns nur zurück.", fr = "Le Bassin a toujours appartenu à Alterac. Nous ne faisons que le reprendre.", es = "La cuenca siempre fue de Alterac. Solo la estamos recuperando.", pt = "A Bacia sempre foi de Alterac. Estamos apenas a retomando.", ru = "Низина всегда принадлежала Альтераку. Мы лишь возвращаем ее.", pl = "Kotlina zawsze należała do Alterac. My tylko ją odbieramy.", tr = "Havza her zaman Alterac'ındı. Biz yalnızca geri alıyoruz.", it = "Il Bacino è sempre appartenuto ad Alterac. Ce lo stiamo solo riprendendo.", ja = "盆地は昔からアルトラックのものだった。我々は取り戻しているだけだ。", zh = "盆地一直属于奥特兰克。我们只是把它夺回来。", ko = "분지는 언제나 알터랙의 것이었다. 우리는 되찾을 뿐이다." }
+kit = "lord_falconcrest"
+
+[[zone.boss]]
+entry = 1594
+name = { en = "Lord Aliden Perenolde", de = "Lord Aliden Perenolde", fr = "Seigneur Aliden Perenolde", es = "Lord Aliden Perenolde", pt = "Lorde Aliden Perenolde", ru = "Лорд Алиден Перенольд", pl = "Lord Aliden Perenolde", tr = "Lord Aliden Perenolde", it = "Lord Aliden Perenolde", ja = "アライデン・ペレノルド卿", zh = "艾利丁·佩伦诺德领主", ko = "군주 알리덴 페레놀드" }
+type = "humanoid"
+display = 6572
+icon = "INV_Misc_Head_Human_01"
+health = 54000
+damage = 56
+speed = 6.0
+size = 3.6
+minute = 18
+yell = { en = "Alterac will rise again, and the Highlands will kneel to it!", de = "Alterac wird sich wieder erheben, und das Hochland wird vor ihm knien!", fr = "Alterac se relèvera, et les Hautes-terres s'agenouilleront devant lui !", es = "¡Alterac se alzará de nuevo y las Tierras Altas se arrodillarán ante él!", pt = "Alterac se erguerá de novo, e as Terras Altas se ajoelharão diante dele!", ru = "Альтерак восстанет вновь, и Нагорье преклонится перед ним!", pl = "Alterac powstanie znowu, a Wyżyny padną przed nim na kolana!", tr = "Alterac yeniden yükselecek ve Yaylalar ona diz çökecek!", it = "Alterac risorgerà e gli Altipiani si inginocchieranno!", ja = "アルトラックは再び立ち上がり、高地はひざまずくことになる！", zh = "奥特兰克必将再次崛起，高地都将向它屈膝！", ko = "알터랙은 다시 일어설 것이며, 고원은 그 앞에 무릎 꿇으리라!" }
+final = true
+kit = "lord_aliden_perenolde"

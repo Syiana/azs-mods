@@ -1,0 +1,43 @@
+# Outland's gear tier (`gear.rs` in survivors-sim reads it, `docs/HOWTO-CONTENT.md` "A gear tier"):
+# a whole set above Legendary that drops only in Outland, in its last pair of zones (Quel'Danas and
+# Shadowmoon Valley), beside the Legendary set. Its rarity is its place among all the packs' tiers
+# in load order (6): saves name pieces by it, so never reorder or remove it. `TUNE`
+[[gear_tier]]
+key = "exotic"
+name = { en = "Exotic", de = "der Exotik", fr = "de l'Exotique", es = "del Exotismo", pt = "do Exótico", ru = "экзотики", it = "dell'Esotico", pl = "Egzotyki", tr = "Egzotik", ja = "エキゾチック", zh = "异域", ko = "이국적" }
+weapon = { en = "Exotic weapon", de = "Exotische Waffe", fr = "Arme exotique", es = "Arma exótica", pt = "Arma exótica", ru = "Экзотическое оружие", it = "Arma esotica", pl = "Egzotyczna broń", tr = "Egzotik silah", ja = "エキゾチック武器", zh = "异域武器", ko = "이국적 무기" }
+color = "ff4fd8"
+rank = 7
+# What its pieces add (`gear/piece_scale.toml` holds the code's six: Legendary 4.6 and 3.4, stars 0.12 and 0.12):
+slot_scale = 5.6
+profile_scale = 4.2
+star_step = 0.1
+star_last = 0.1
+drop_chance = 0.15
+duplicate_gold = 400
+star_factor = 5.8
+chest_price = 40000
+chest_shop_cap = 150000
+look_price = 500
+pair = 5
+
+[gear_tier.armor_icons]
+cloth = ["helmet_168", "shoulder_127", "chest_cloth_85", "belt_78", "pants_cloth_37", "boots_cloth_32", "bracer_50", "gauntlets_95"]
+leather = ["helmet_161", "shoulder_128", "chest_leather_25", "belt_74", "pants_leather_36", "boots_cloth_29", "bracer_57", "gauntlets_97"]
+mail = ["helmet_160", "shoulder_123", "chest_mail_13", "belt_72", "pants_mail_34", "boots_mail_08", "bracer_51", "gauntlets_96"]
+plate = ["helmet_164", "shoulder_126", "chest_plate26", "belt_48b", "pants_plate_37", "boots_plate_15", "bracer_56", "gauntlets_91"]
+
+# One icon per weapon of the class; the demon hunter, whose glaives are patch icons, shows its
+# Legendary ones.
+[gear_tier.weapon_icons]
+warrior = ["sword_157"]
+paladin = ["mace_111"]
+hunter = ["weapon_bow_54"]
+rogue = ["weapon_shortblade_107", "weapon_shortblade_106"]
+priest = ["staff_112"]
+shaman = ["mace_110", "shield_73"]
+mage = ["staff_111"]
+warlock = ["staff_105"]
+druid = ["staff_103"]
+deathknight = ["sword_149"]
+monk = ["staff_102"]

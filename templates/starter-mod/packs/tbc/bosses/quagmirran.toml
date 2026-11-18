@@ -1,0 +1,20 @@
+# Quagmirran: Acid Spray, Uppercut, Poison Bolt Volley.
+
+[[boss]]
+key = "quagmirran"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 38153, range = 12.0, arc = 70.0, warn = 1.4, factor = 2.2 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 32055, radius = 8.0, warn = 1.6, knock = 14.0 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 34780 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

@@ -1,0 +1,20 @@
+# King Mosh's abilities, Un'Goro Crater.
+
+[[boss]]
+key = "king_mosh"
+
+[[boss.kit]]
+every = 8.0
+ability = "charge"
+
+[[boss.kit]]
+every = 12.0
+ability = { trail = { spell = 19798, count = 5, radius = 5.0, warn = 1.6, gap = 0.7, factor = 2.0 } }
+
+[[boss.kit]]
+every = 6.0
+ability = { cone = { spell = 18435, range = 16.0, arc = 60.0, warn = 1.4, factor = 2.6 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

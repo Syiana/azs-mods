@@ -1,0 +1,41 @@
+name: Problem with a package
+description: A listed mod or map is broken, misleading or harmful.
+labels: ["package problem"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach an exploit or a harmful file here: send it privately through https://azreborn.com/contact.
+        Rights holders reach us there too.
+  - type: input
+    id: package
+    attributes:
+      label: Package and version
+      description: As the Mods window shows it.
+      placeholder: Example Mod v2
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - It breaks saves or does not start
+        - It does something its description does not say
+        - Its texts are offensive or advertise
+        - It carries files it must not (game files, files the author may not share)
+        - Its script stalls or harms the game
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happens, and how to see it
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game version
+      description: The version the launcher shows.

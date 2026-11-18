@@ -1,0 +1,60 @@
+# The paladin's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Squire's") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Lightforge pieces: Lightforge Armor, tier 0 (ItemSet 188).
+[[set_look]]
+key = "paladin_uncommon"
+rarity = 1
+pieces = [
+    [0, 31207, 1, "Helmet_08"], [1, 29971, 3, "Shoulder_10"],
+    [2, 29969, 5, "Chest_Plate03"], [3, 29966, 6, "Belt_11"],
+    [4, 29972, 7, "Pants_04"], [5, 29967, 8, "Boots_Plate_03"],
+    [6, 29968, 9, "Bracer_14"], [7, 29970, 10, "Gauntlets_19"],
+]
+
+# Lawbringer pieces: Lawbringer Armor, tier 1 (ItemSet 208).
+[[set_look]]
+key = "paladin_rare"
+rarity = 2
+pieces = [
+    [0, 31506, 1, "Helmet_05"], [1, 31510, 3, "Shoulder_20"],
+    [2, 31505, 5, "Chest_Plate03"], [3, 31353, 6, "Belt_27"],
+    [4, 31352, 7, "Pants_04"], [5, 31354, 8, "Boots_Plate_09"],
+    [6, 31509, 9, "Bracer_18"], [7, 31507, 10, "Gauntlets_29"],
+]
+
+# Judgement pieces: Judgement Armor, tier 2 (ItemSet 217).
+[[set_look]]
+key = "paladin_epic"
+rarity = 3
+pieces = [
+    [0, 45888, 1, "Helmet_74"], [1, 34258, 3, "Shoulder_37"],
+    [2, 33635, 5, "Chest_Plate03"], [3, 33633, 6, "Belt_27"],
+    [4, 33637, 7, "Pants_04"], [5, 33639, 8, "Boots_Plate_09"],
+    [6, 33634, 9, "Bracer_18"], [7, 33636, 10, "Gauntlets_29"],
+]
+
+# Redemption pieces: Redemption Armor, tier 3 (ItemSet 528).
+[[set_look]]
+key = "paladin_legendary"
+rarity = 4
+pieces = [
+    [0, 36972, 1, "Helmet_15"], [1, 35617, 3, "Shoulder_14"],
+    [2, 35618, 5, "Chest_Chain_15"], [3, 35614, 6, "Belt_22"],
+    [4, 35616, 7, "Pants_Mail_15"], [5, 35613, 8, "Boots_Chain_05"],
+    [6, 35619, 9, "Bracer_02"], [7, 35615, 10, "Gauntlets_25"],
+]
+
+# Field Marshal's pieces: Field Marshal's Aegis, the Alliance's rank 13 PvP set (ItemSet 402).
+[[set_look]]
+key = "paladin_pvp"
+rarity = 5
+pieces = [
+    [0, 30316, 1, "Helmet_05"], [1, 30318, 3, "Shoulder_20"],
+    [2, 30315, 5, "Chest_Plate03"], [4, 30317, 7, "Pants_04"],
+    [5, 30319, 8, "Boots_Plate_09"], [7, 30321, 10, "Gauntlets_29"],
+]

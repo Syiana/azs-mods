@@ -1,0 +1,20 @@
+# Herald Volazj: Mind Flay, Shadow Bolt Volley, Shiver, Insanity's visages.
+
+[[boss]]
+key = "herald_volazj"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 57941 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { nova = { spell = 57942, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { pool = { spell = 57949, burst = 0, radius = 6.0, warn = 2.0, factor = 2.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

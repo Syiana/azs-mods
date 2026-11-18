@@ -1,0 +1,20 @@
+# The 4-piece bonus of the wotlk pack's gear tier `mythic`: two stats, the same for every class (the numbers are ours: TUNE).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# mythic: damage and cooldowns
+[[set_bonus]]
+key = "mythic_4"
+tier = "mythic"
+pieces = 4
+text = { en = "+{v}% damage, -{v2}% cooldowns", de = "+{v}% Schaden, -{v2}% Abklingzeiten", fr = "+{v}% de dégâts, -{v2}% de temps de recharge", es = "+{v}% de daño, -{v2}% de tiempos de reutilización", pt = "+{v}% de dano, -{v2}% de recarga", ru = "+{v}% к урону, -{v2}% к времени восстановления", pl = "+{v}% obrażeń, -{v2}% czasu odnowienia", tr = "+%{v} hasar, -%{v2} bekleme süresi", it = "+{v}% danni, -{v2}% tempi di recupero", ja = "ダメージ+{v}%、クールダウン-{v2}%", zh = "伤害+{v}%，冷却时间-{v2}%", ko = "피해 +{v}%, 재사용 대기시간 -{v2}%" }
+
+[[set_bonus.part]]
+effects = [{ stat = [0, 0.4] }]
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+effects = [{ stat = [1, 0.2] }]
+shows = "v2"
+percent = true

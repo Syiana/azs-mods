@@ -1,0 +1,16 @@
+# Shadron: Shadow Breath, Shadow Fissure, the Acolyte.
+
+[[boss]]
+key = "shadron"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 57570, range = 14.0, arc = 70.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { pool = { spell = 57579, burst = 0, radius = 6.0, warn = 2.5, factor = 2.8 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

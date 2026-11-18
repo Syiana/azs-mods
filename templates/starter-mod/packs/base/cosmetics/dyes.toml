@@ -1,0 +1,649 @@
+# The shop's gear dyes (survivors-sim dyes.rs, docs/PLAN-RECOLOR.md): a hero's armour and weapons
+# recoloured slot by slot, bought in packs with the account's gold, owned for every hero.
+#
+# dye: the palette, in wire order: the first 32 use place plus one; later entries skip reserved glow
+# indices 33-46 (0 none), so new ones go at the end. Each: the hue in degrees (0 red, 120 green, 240
+# blue), the saturation 0-1, the luminance gain, and the pack that holds it. The canonical table
+# for code is `benilla_formats::dye::DYES`; a survivors-sim test checks the two agree.
+#
+# dye_pack: the packs and their prices in gold; `basic` costs nothing and every account owns it.
+# The pack with `glow = true` holds no gear dye: it unlocks the glow colours (wire index 33 on,
+# benilla_formats::dye::GLOW_DYES) that paint the wings, and the shop sells it beside them.
+
+[[dye_pack]]
+key = "basic"
+name = { en = "Basic Dyes", de = "Grundfarben", fr = "Teintures de base", es = "Tintes básicos", pt = "Tinturas Básicas", ru = "Базовые краски", pl = "Barwniki podstawowe", tr = "Temel Boyalar", it = "Tinture base", ja = "基本の染料", zh = "基础染料", ko = "기본 염료" }
+price = 0
+
+[[dye_pack]]
+key = "noble"
+name = { en = "Noble Dyes", de = "Edle Farben", fr = "Teintures nobles", es = "Tintes nobles", pt = "Tinturas Nobres", ru = "Благородные краски", pl = "Barwniki szlachetne", tr = "Asil Boyalar", it = "Tinture nobili", ja = "高貴な染料", zh = "贵族染料", ko = "고귀한 염료" }
+price = 15000
+
+[[dye_pack]]
+key = "wild"
+name = { en = "Wild Dyes", de = "Wilde Farben", fr = "Teintures sauvages", es = "Tintes salvajes", pt = "Tinturas Selvagens", ru = "Дикие краски", pl = "Barwniki dzikie", tr = "Vahşi Boyalar", it = "Tinture selvagge", ja = "野生の染料", zh = "狂野染料", ko = "야생 염료" }
+price = 12000
+
+[[dye_pack]]
+key = "shadow"
+name = { en = "Shadow Dyes", de = "Schattenfarben", fr = "Teintures d'ombre", es = "Tintes sombríos", pt = "Tinturas Sombrias", ru = "Теневые краски", pl = "Barwniki cieni", tr = "Gölge Boyaları", it = "Tinture d'ombra", ja = "シャドウの染料", zh = "暗影染料", ko = "그림자 염료" }
+price = 12000
+
+[[dye_pack]]
+key = "royal"
+name = { en = "Royal Pigments", de = "Königliche Pigmente", fr = "Pigments royaux", es = "Pigmentos reales", pt = "Pigmentos Reais", ru = "Королевские пигменты", pl = "Królewskie pigmenty", tr = "Kraliyet Pigmentleri", it = "Pigmenti reali", ja = "王家の顔料", zh = "皇家颜料", ko = "왕실 안료" }
+price = 250000
+
+[[dye_pack]]
+key = "arcane_light"
+name = { en = "Arcanlight", de = "Arkanlicht", fr = "Lueur arcanique", es = "Luz arcana", pt = "Luz Arcana", ru = "Чародейское сияние", pl = "Blask tajemnej magii", tr = "Gizem Işığı", it = "Luce arcana", ja = "アーケインライト", zh = "奥光", ko = "비전빛" }
+price = 250000
+
+[[dye_pack]]
+key = "fel_glow"
+name = { en = "Fel Ember", de = "Teufelsglut", fr = "Braise gangrenée", es = "Brasa vil", pt = "Brasa Vil", ru = "Пламя Скверны", pl = "Żar spaczenia", tr = "Fel Koru", it = "Brace vile", ja = "フェルの残り火", zh = "邪能余烬", ko = "지옥 잿불" }
+price = 250000
+
+[[dye_pack]]
+key = "frost_light"
+name = { en = "Frostlight", de = "Frostlicht", fr = "Lueur de givre", es = "Luz de escarcha", pt = "Luz Gélida", ru = "Морозное сияние", pl = "Mroźny blask", tr = "Buz Işığı", it = "Luce glaciale", ja = "フロストライト", zh = "霜光", ko = "서리빛" }
+price = 250000
+
+[[dye_pack]]
+key = "sunfire"
+name = { en = "Sunfire", de = "Sonnenfeuer", fr = "Feu solaire", es = "Fuego solar", pt = "Fogo Solar", ru = "Солнечный огонь", pl = "Słoneczny ogień", tr = "Güneş Ateşi", it = "Fuoco solare", ja = "サンファイア", zh = "太阳之火", ko = "태양불꽃" }
+price = 250000
+
+[[dye_pack]]
+key = "glow"
+name = { en = "Glow Colours", de = "Leuchtfarben", fr = "Couleurs lumineuses", es = "Colores luminosos", pt = "Cores brilhantes", ru = "Светящиеся цвета", pl = "Świecące kolory", tr = "Parlak Renkler", it = "Colori luminosi", ja = "光彩カラー", zh = "发光色彩", ko = "발광 색상" }
+price = 20000
+glow = true
+
+[[dye]]
+key = "red"
+name = { en = "Red", de = "Rot", fr = "Rouge", es = "Rojo", pt = "Vermelho", ru = "Красный", pl = "Czerwony", tr = "Kırmızı", it = "Rosso", ja = "赤", zh = "红色", ko = "빨강" }
+hue = 0
+sat = 0.75
+lum = 1.0
+pack = "basic"
+
+[[dye]]
+key = "orange"
+name = { en = "Orange", de = "Orange", fr = "Orange", es = "Naranja", pt = "Laranja", ru = "Оранжевый", pl = "Pomarańczowy", tr = "Turuncu", it = "Arancione", ja = "オレンジ", zh = "橙色", ko = "주황" }
+hue = 25
+sat = 0.8
+lum = 1.0
+pack = "basic"
+
+[[dye]]
+key = "yellow"
+name = { en = "Yellow", de = "Gelb", fr = "Jaune", es = "Amarillo", pt = "Amarelo", ru = "Жёлтый", pl = "Żółty", tr = "Sarı", it = "Giallo", ja = "黄", zh = "黄色", ko = "노랑" }
+hue = 50
+sat = 0.75
+lum = 1.05
+pack = "basic"
+
+[[dye]]
+key = "green"
+name = { en = "Green", de = "Grün", fr = "Vert", es = "Verde", pt = "Verde", ru = "Зелёный", pl = "Zielony", tr = "Yeşil", it = "Verde", ja = "緑", zh = "绿色", ko = "초록" }
+hue = 120
+sat = 0.6
+lum = 1.0
+pack = "basic"
+
+[[dye]]
+key = "blue"
+name = { en = "Blue", de = "Blau", fr = "Bleu", es = "Azul", pt = "Azul", ru = "Синий", pl = "Niebieski", tr = "Mavi", it = "Blu", ja = "青", zh = "蓝色", ko = "파랑" }
+hue = 220
+sat = 0.7
+lum = 1.0
+pack = "basic"
+
+[[dye]]
+key = "purple"
+name = { en = "Purple", de = "Lila", fr = "Violet", es = "Morado", pt = "Roxo", ru = "Пурпурный", pl = "Fioletowy", tr = "Mor", it = "Viola", ja = "紫", zh = "紫色", ko = "보라" }
+hue = 275
+sat = 0.6
+lum = 1.0
+pack = "basic"
+
+[[dye]]
+key = "black"
+name = { en = "Black", de = "Schwarz", fr = "Noir", es = "Negro", pt = "Preto", ru = "Чёрный", pl = "Czarny", tr = "Siyah", it = "Nero", ja = "黒", zh = "黑色", ko = "검정" }
+hue = 0
+sat = 0.0
+lum = 0.35
+pack = "basic"
+
+[[dye]]
+key = "white"
+name = { en = "White", de = "Weiß", fr = "Blanc", es = "Blanco", pt = "Branco", ru = "Белый", pl = "Biały", tr = "Beyaz", it = "Bianco", ja = "白", zh = "白色", ko = "하양" }
+hue = 0
+sat = 0.0
+lum = 1.6
+pack = "basic"
+
+[[dye]]
+key = "gold"
+name = { en = "Gold", de = "Gold", fr = "Or", es = "Oro", pt = "Ouro", ru = "Золото", pl = "Złoto", tr = "Altın", it = "Oro", ja = "金色", zh = "金色", ko = "금색" }
+hue = 45
+sat = 0.65
+lum = 1.15
+pack = "noble"
+
+[[dye]]
+key = "silver"
+name = { en = "Silver", de = "Silber", fr = "Argent", es = "Plata", pt = "Prata", ru = "Серебро", pl = "Srebrny", tr = "Gümüş", it = "Argento", ja = "銀色", zh = "银色", ko = "은색" }
+hue = 210
+sat = 0.08
+lum = 1.25
+pack = "noble"
+
+[[dye]]
+key = "bronze"
+name = { en = "Bronze", de = "Bronze", fr = "Bronze", es = "Bronce", pt = "Bronze", ru = "Бронза", pl = "Brązowy", tr = "Bronz", it = "Bronzo", ja = "ブロンズ", zh = "青铜色", ko = "청동색" }
+hue = 30
+sat = 0.5
+lum = 0.85
+pack = "noble"
+
+[[dye]]
+key = "royal"
+name = { en = "Royal Blue", de = "Königsblau", fr = "Bleu royal", es = "Azul real", pt = "Azul Real", ru = "Королевский синий", pl = "Królewski błękit", tr = "Kraliyet Mavisi", it = "Blu reale", ja = "ロイヤルブルー", zh = "皇家蓝", ko = "로열 블루" }
+hue = 230
+sat = 0.85
+lum = 0.9
+pack = "noble"
+
+[[dye]]
+key = "crimson"
+name = { en = "Crimson", de = "Karmesin", fr = "Cramoisi", es = "Carmesí", pt = "Carmesim", ru = "Багровый", pl = "Karmazyn", tr = "Kızıl", it = "Cremisi", ja = "深紅", zh = "深红", ko = "진홍색" }
+hue = 350
+sat = 0.85
+lum = 0.8
+pack = "noble"
+
+[[dye]]
+key = "emerald"
+name = { en = "Emerald", de = "Smaragd", fr = "Émeraude", es = "Esmeralda", pt = "Esmeralda", ru = "Изумрудный", pl = "Szmaragd", tr = "Zümrüt", it = "Smeraldo", ja = "エメラルド", zh = "翡翠绿", ko = "에메랄드" }
+hue = 145
+sat = 0.75
+lum = 0.9
+pack = "noble"
+
+[[dye]]
+key = "ivory"
+name = { en = "Ivory", de = "Elfenbein", fr = "Ivoire", es = "Marfil", pt = "Marfim", ru = "Слоновая кость", pl = "Kość słoniowa", tr = "Fildişi", it = "Avorio", ja = "アイボリー", zh = "象牙白", ko = "상아색" }
+hue = 40
+sat = 0.2
+lum = 1.4
+pack = "noble"
+
+[[dye]]
+key = "onyx"
+name = { en = "Onyx", de = "Onyx", fr = "Onyx", es = "Ónice", pt = "Ônix", ru = "Оникс", pl = "Onyks", tr = "Oniks", it = "Onice", ja = "オニキス", zh = "玛瑙黑", ko = "오닉스" }
+hue = 240
+sat = 0.15
+lum = 0.45
+pack = "noble"
+
+[[dye]]
+key = "lime"
+name = { en = "Lime", de = "Limette", fr = "Citron vert", es = "Lima", pt = "Limão", ru = "Лаймовый", pl = "Limonka", tr = "Limon Yeşili", it = "Lime", ja = "ライムグリーン", zh = "青柠绿", ko = "라임" }
+hue = 90
+sat = 0.8
+lum = 1.1
+pack = "wild"
+
+[[dye]]
+key = "teal"
+name = { en = "Teal", de = "Türkis", fr = "Sarcelle", es = "Verdeazulado", pt = "Verde-azulado", ru = "Бирюзовый", pl = "Turkus", tr = "Deniz Mavisi", it = "Verde acqua", ja = "ティール", zh = "青绿色", ko = "청록색" }
+hue = 175
+sat = 0.7
+lum = 1.0
+pack = "wild"
+
+[[dye]]
+key = "sky"
+name = { en = "Sky", de = "Himmel", fr = "Ciel", es = "Cielo", pt = "Céu", ru = "Небесный", pl = "Niebo", tr = "Gökyüzü", it = "Cielo", ja = "空色", zh = "天蓝", ko = "하늘색" }
+hue = 200
+sat = 0.6
+lum = 1.2
+pack = "wild"
+
+[[dye]]
+key = "pink"
+name = { en = "Pink", de = "Rosa", fr = "Rose", es = "Rosa", pt = "Rosa", ru = "Розовый", pl = "Róż", tr = "Pembe", it = "Rosa", ja = "ピンク", zh = "粉红", ko = "분홍" }
+hue = 325
+sat = 0.6
+lum = 1.15
+pack = "wild"
+
+[[dye]]
+key = "magenta"
+name = { en = "Magenta", de = "Magenta", fr = "Magenta", es = "Magenta", pt = "Magenta", ru = "Маджента", pl = "Magenta", tr = "Eflatun", it = "Magenta", ja = "マゼンタ", zh = "品红", ko = "마젠타" }
+hue = 300
+sat = 0.8
+lum = 1.0
+pack = "wild"
+
+[[dye]]
+key = "fel"
+name = { en = "Fel", de = "Teufel", fr = "Gangre", es = "Vil", pt = "Vil", ru = "Скверна", pl = "Zło", tr = "Fel", it = "Vile", ja = "フェル", zh = "邪能", ko = "지옥" }
+hue = 110
+sat = 0.9
+lum = 1.1
+pack = "wild"
+
+[[dye]]
+key = "arcane"
+name = { en = "Arcane", de = "Arkan", fr = "Arcanes", es = "Arcano", pt = "Arcano", ru = "Тайная магия", pl = "Magia tajemna", tr = "Gizem", it = "Arcano", ja = "アーケイン", zh = "奥术", ko = "비전" }
+hue = 265
+sat = 0.85
+lum = 1.1
+pack = "wild"
+
+[[dye]]
+key = "lava"
+name = { en = "Lava", de = "Lava", fr = "Lave", es = "Lava", pt = "Lava", ru = "Лава", pl = "Lawa", tr = "Lav", it = "Lava", ja = "溶岩", zh = "熔岩", ko = "용암" }
+hue = 15
+sat = 0.95
+lum = 1.1
+pack = "wild"
+
+[[dye]]
+key = "midnight"
+name = { en = "Midnight", de = "Mitternacht", fr = "Minuit", es = "Medianoche", pt = "Meia-noite", ru = "Полночь", pl = "Północ", tr = "Gece Yarısı", it = "Mezzanotte", ja = "ミッドナイト", zh = "午夜", ko = "자정" }
+hue = 240
+sat = 0.6
+lum = 0.55
+pack = "shadow"
+
+[[dye]]
+key = "blood"
+name = { en = "Blood", de = "Blut", fr = "Sang", es = "Sangre", pt = "Sangue", ru = "Кровь", pl = "Krew", tr = "Kan", it = "Sangue", ja = "ブラッド", zh = "鲜血", ko = "혈기" }
+hue = 355
+sat = 0.8
+lum = 0.55
+pack = "shadow"
+
+[[dye]]
+key = "moss"
+name = { en = "Moss", de = "Moos", fr = "Mousse", es = "Musgo", pt = "Musgo", ru = "Мох", pl = "Mech", tr = "Yosun", it = "Muschio", ja = "苔色", zh = "苔绿", ko = "이끼" }
+hue = 95
+sat = 0.45
+lum = 0.6
+pack = "shadow"
+
+[[dye]]
+key = "plum"
+name = { en = "Plum", de = "Pflaume", fr = "Prune", es = "Ciruela", pt = "Ameixa", ru = "Слива", pl = "Śliwka", tr = "Erik", it = "Prugna", ja = "プラム", zh = "梅紫", ko = "자두" }
+hue = 290
+sat = 0.5
+lum = 0.6
+pack = "shadow"
+
+[[dye]]
+key = "rust"
+name = { en = "Rust", de = "Rost", fr = "Rouille", es = "Óxido", pt = "Ferrugem", ru = "Ржавчина", pl = "Rdza", tr = "Pas", it = "Ruggine", ja = "錆色", zh = "铁锈", ko = "녹" }
+hue = 20
+sat = 0.65
+lum = 0.7
+pack = "shadow"
+
+[[dye]]
+key = "slate"
+name = { en = "Slate", de = "Schiefer", fr = "Ardoise", es = "Pizarra", pt = "Ardósia", ru = "Сланец", pl = "Łupek", tr = "Arduvaz", it = "Ardesia", ja = "スレート", zh = "石板灰", ko = "슬레이트" }
+hue = 210
+sat = 0.2
+lum = 0.7
+pack = "shadow"
+
+[[dye]]
+key = "forest"
+name = { en = "Forest", de = "Wald", fr = "Forêt", es = "Bosque", pt = "Floresta", ru = "Лес", pl = "Las", tr = "Orman", it = "Foresta", ja = "フォレスト", zh = "森林绿", ko = "숲" }
+hue = 130
+sat = 0.55
+lum = 0.55
+pack = "shadow"
+
+[[dye]]
+key = "ash"
+name = { en = "Ash", de = "Asche", fr = "Cendre", es = "Ceniza", pt = "Cinza", ru = "Пепел", pl = "Popiół", tr = "Kül", it = "Cenere", ja = "灰色", zh = "灰烬", ko = "재" }
+hue = 0
+sat = 0.0
+lum = 0.75
+pack = "shadow"
+
+[[dye]]
+key = "champagne"
+name = { en = "Champagne Gold", de = "Champagnergold", fr = "Or champagne", es = "Oro champán", pt = "Ouro Champanhe", ru = "Шампанское золото", pl = "Szampańskie złoto", tr = "Şampanya Altını", it = "Oro champagne", ja = "シャンパンゴールド", zh = "香槟金", ko = "샴페인 골드" }
+hue = 42
+sat = 0.32
+lum = 1.3
+pack = "royal"
+
+[[dye]]
+key = "rose_gold"
+name = { en = "Rose Gold", de = "Roségold", fr = "Or rose", es = "Oro rosa", pt = "Ouro Rosé", ru = "Розовое золото", pl = "Różowe złoto", tr = "Pembe Altın", it = "Oro rosa", ja = "ローズゴールド", zh = "玫瑰金", ko = "로즈 골드" }
+hue = 18
+sat = 0.38
+lum = 1.2
+pack = "royal"
+
+[[dye]]
+key = "platinum"
+name = { en = "Platinum", de = "Platin", fr = "Platine", es = "Platino", pt = "Platina", ru = "Платина", pl = "Platyna", tr = "Platin", it = "Platino", ja = "プラチナ", zh = "铂金", ko = "백금" }
+hue = 205
+sat = 0.04
+lum = 1.48
+pack = "royal"
+
+[[dye]]
+key = "pearl"
+name = { en = "Pearl", de = "Perlmutt", fr = "Nacre", es = "Nácar", pt = "Madrepérola", ru = "Перламутр", pl = "Masa perłowa", tr = "Sedef", it = "Madreperla", ja = "パール", zh = "珍珠", ko = "진주" }
+hue = 285
+sat = 0.1
+lum = 1.5
+pack = "royal"
+
+[[dye]]
+key = "royal_ruby"
+name = { en = "Royal Ruby", de = "Königsrubin", fr = "Rubis royal", es = "Rubí real", pt = "Rubi Real", ru = "Королевский рубин", pl = "Królewski rubin", tr = "Kraliyet Yakutu", it = "Rubino reale", ja = "ロイヤルルビー", zh = "皇家红宝石", ko = "로열 루비" }
+hue = 345
+sat = 0.72
+lum = 0.68
+pack = "royal"
+
+[[dye]]
+key = "deep_sapphire"
+name = { en = "Deep Sapphire", de = "Tiefsaphir", fr = "Saphir profond", es = "Zafiro profundo", pt = "Safira Profunda", ru = "Глубокий сапфир", pl = "Głęboki szafir", tr = "Derin Safir", it = "Zaffiro profondo", ja = "ディープサファイア", zh = "深海蓝宝石", ko = "딥 사파이어" }
+hue = 225
+sat = 0.65
+lum = 0.65
+pack = "royal"
+
+[[dye]]
+key = "jade"
+name = { en = "Jade", de = "Jade", fr = "Jade", es = "Jade", pt = "Jade", ru = "Нефрит", pl = "Jadeit", tr = "Yeşim", it = "Giada", ja = "翡翠", zh = "玉石", ko = "비취" }
+hue = 160
+sat = 0.75
+lum = 0.95
+pack = "royal"
+
+[[dye]]
+key = "amethyst"
+name = { en = "Amethyst", de = "Amethyst", fr = "Améthyste", es = "Amatista", pt = "Ametista", ru = "Аметист", pl = "Ametyst", tr = "Ametist", it = "Ametista", ja = "アメジスト", zh = "紫水晶", ko = "자수정" }
+hue = 280
+sat = 0.48
+lum = 0.86
+pack = "royal"
+
+[[dye]]
+key = "arcane_light"
+name = { en = "Arcanlight", de = "Arkanlicht", fr = "Lueur arcanique", es = "Luz arcana", pt = "Luz Arcana", ru = "Чародейское сияние", pl = "Blask tajemnej magii", tr = "Gizem Işığı", it = "Luce arcana", ja = "アーケインライト", zh = "奥光", ko = "비전빛" }
+hue = 265
+sat = 0.48
+lum = 1.18
+pack = "arcane_light"
+
+[[dye]]
+key = "fel_glow"
+name = { en = "Fel Ember", de = "Teufelsglut", fr = "Braise gangrenée", es = "Brasa vil", pt = "Brasa Vil", ru = "Пламя Скверны", pl = "Żar spaczenia", tr = "Fel Koru", it = "Brace vile", ja = "フェルの残り火", zh = "邪能余烬", ko = "지옥 잿불" }
+hue = 110
+sat = 0.78
+lum = 1.16
+pack = "fel_glow"
+
+[[dye]]
+key = "frost_light"
+name = { en = "Frostlight", de = "Frostlicht", fr = "Lueur de givre", es = "Luz de escarcha", pt = "Luz Gélida", ru = "Морозное сияние", pl = "Mroźny blask", tr = "Buz Işığı", it = "Luce glaciale", ja = "フロストライト", zh = "霜光", ko = "서리빛" }
+hue = 195
+sat = 0.52
+lum = 1.35
+pack = "frost_light"
+
+[[dye]]
+key = "sunfire"
+name = { en = "Sunfire", de = "Sonnenfeuer", fr = "Feu solaire", es = "Fuego solar", pt = "Fogo Solar", ru = "Солнечный огонь", pl = "Słoneczny ogień", tr = "Güneş Ateşi", it = "Fuoco solare", ja = "サンファイア", zh = "太阳之火", ko = "태양불꽃" }
+hue = 35
+sat = 0.72
+lum = 1.3
+pack = "sunfire"
+
+# Independent account-wide material styles; mode is the five appearance bits above the colour.
+
+[[dye_style]]
+key = "classic"
+mode = 0
+family_order = 0
+family = { en = "Materials", de = "Materialien", fr = "Matériaux", es = "Materiales", pt = "Materiais", ru = "Материалы", pl = "Materiały", tr = "Malzemeler", it = "Materiali", ja = "素材", zh = "材质", ko = "재질" }
+price = 0
+icon = "INV_Misc_Dye_01"
+name = { en = "Classic", de = "Klassisch", fr = "Classique", es = "Clásico", pt = "Clássico", ru = "Классический", pl = "Klasyczny", tr = "Klasik", it = "Classico", ja = "クラシック", zh = "经典", ko = "클래식" }
+description = { en = "The original material finish.", de = "Die ursprüngliche Materialoberfläche.", fr = "La finition originale du matériau.", es = "El acabado original del material.", pt = "O acabamento original do material.", ru = "Исходная поверхность материала.", pl = "Oryginalne wykończenie materiału.", tr = "Orijinal malzeme görünümü.", it = "La finitura originale del materiale.", ja = "元の素材の質感。", zh = "原始的材质效果。", ko = "원래 재질의 마감." }
+
+[[dye_style]]
+key = "glaze"
+mode = 1
+family_order = 0
+family = { en = "Materials", de = "Materialien", fr = "Matériaux", es = "Materiales", pt = "Materiais", ru = "Материалы", pl = "Materiały", tr = "Malzemeler", it = "Materiali", ja = "素材", zh = "材质", ko = "재질" }
+price = 300000
+icon = "INV_Potion_54"
+name = { en = "Glaze", de = "Glasur", fr = "Glaçage", es = "Esmalte", pt = "Esmalte", ru = "Глазурь", pl = "Glazura", tr = "Sır", it = "Smalto", ja = "グレーズ", zh = "釉面", ko = "유약" }
+description = { en = "A smooth, glossy finish.", de = "Eine glatte, glänzende Oberfläche.", fr = "Une finition lisse et brillante.", es = "Un acabado liso y brillante.", pt = "Um acabamento liso e brilhante.", ru = "Гладкая блестящая поверхность.", pl = "Gładkie, błyszczące wykończenie.", tr = "Pürüzsüz ve parlak bir yüzey.", it = "Una finitura liscia e lucida.", ja = "なめらかで光沢のある仕上げ。", zh = "光滑而有光泽的表面。", ko = "매끄럽고 윤기 나는 마감." }
+
+[[dye_style]]
+key = "darksteel"
+mode = 2
+family_order = 0
+family = { en = "Materials", de = "Materialien", fr = "Matériaux", es = "Materiales", pt = "Materiais", ru = "Материалы", pl = "Materiały", tr = "Malzemeler", it = "Materiali", ja = "素材", zh = "材质", ko = "재질" }
+price = 500000
+icon = "INV_Ingot_Thorium"
+name = { en = "Darksteel", de = "Dunkelstahl", fr = "Acier sombre", es = "Acero oscuro", pt = "Aço Escuro", ru = "Тёмная сталь", pl = "Ciemna stal", tr = "Kara Çelik", it = "Acciaio oscuro", ja = "ダークスチール", zh = "暗钢", ko = "암흑강철" }
+description = { en = "A dark metallic finish.", de = "Eine dunkle metallische Oberfläche.", fr = "Une finition métallique sombre.", es = "Un acabado metálico oscuro.", pt = "Um acabamento metálico escuro.", ru = "Тёмная металлическая поверхность.", pl = "Ciemne, metaliczne wykończenie.", tr = "Koyu metalik bir yüzey.", it = "Una finitura metallica scura.", ja = "暗い金属の仕上げ。", zh = "深色的金属质感。", ko = "어두운 금속 마감." }
+
+[[dye_style]]
+key = "ghost"
+mode = 3
+family_order = 2
+family = { en = "Spectral Armour", de = "Geisterrüstung", fr = "Armure spectrale", es = "Armadura espectral", pt = "Armadura Espectral", ru = "Призрачная броня", pl = "Widmowy pancerz", tr = "Hayalet Zırh", it = "Armatura spettrale", ja = "霊体の鎧", zh = "幽灵护甲", ko = "유령 갑옷" }
+price = 1000000
+icon = "Spell_Shadow_GhostKey"
+name = { en = "Ghost Armour", de = "Geisterrüstung", fr = "Armure fantôme", es = "Armadura fantasmal", pt = "Armadura Fantasma", ru = "Призрачная броня", pl = "Widmowy pancerz", tr = "Hayalet Zırh", it = "Armatura spettrale", ja = "ゴーストアーマー", zh = "鬼魂护甲", ko = "망령 갑옷" }
+description = { en = "Translucent armour over your natural skin.", de = "Durchscheinende Rüstung über deiner natürlichen Haut.", fr = "Une armure translucide sur votre peau naturelle.", es = "Armadura translúcida sobre tu piel natural.", pt = "Armadura translúcida sobre sua pele natural.", ru = "Полупрозрачная броня поверх естественной кожи.", pl = "Półprzezroczysty pancerz na naturalnej skórze.", tr = "Doğal teninizin üzerinde yarı saydam zırh.", it = "Armatura traslucida sulla pelle naturale.", ja = "素肌の上に透き通った鎧。", zh = "覆盖在你的皮肤上的半透明护甲。", ko = "맨살 위로 비치는 반투명 갑옷." }
+
+[[dye_style]]
+key = "starveil"
+mode = 4
+family_order = 1
+family = { en = "Living Light", de = "Lebendiges Licht", fr = "Lumière vivante", es = "Luz viviente", pt = "Luz Viva", ru = "Живой свет", pl = "Żywe światło", tr = "Canlı Işık", it = "Luce vivente", ja = "リビングライト", zh = "活体圣光", ko = "살아있는 빛" }
+price = 1000000
+icon = "Spell_Arcane_StarFire"
+name = { en = "Starveil", de = "Sternenschleier", fr = "Voile stellaire", es = "Velo estelar", pt = "Véu Estelar", ru = "Звёздная вуаль", pl = "Gwiezdny welon", tr = "Yıldız Örtüsü", it = "Velo stellare", ja = "星のヴェール", zh = "星幕", ko = "별의 장막" }
+description = { en = "Small stars drift across your armour.", de = "Kleine Sterne wandern über deine Rüstung.", fr = "De petites étoiles glissent sur votre armure.", es = "Pequeñas estrellas recorren tu armadura.", pt = "Pequenas estrelas percorrem sua armadura.", ru = "Маленькие звёзды скользят по вашей броне.", pl = "Małe gwiazdy przesuwają się po pancerzu.", tr = "Küçük yıldızlar zırhınızın üzerinde süzülür.", it = "Piccole stelle scorrono sulla tua armatura.", ja = "小さな星々が鎧の上を漂います。", zh = "点点星光在你的护甲上飘动。", ko = "작은 별들이 갑옷 위를 떠다닙니다." }
+
+[[dye_style]]
+key = "astral"
+mode = 5
+family_order = 1
+family = { en = "Living Light", de = "Lebendiges Licht", fr = "Lumière vivante", es = "Luz viviente", pt = "Luz Viva", ru = "Живой свет", pl = "Żywe światło", tr = "Canlı Işık", it = "Luce vivente", ja = "リビングライト", zh = "活体圣光", ko = "살아있는 빛" }
+price = 1000000
+icon = "Spell_Nature_AstralRecal"
+name = { en = "Astral", de = "Astral", fr = "Astral", es = "Astral", pt = "Astral", ru = "Астральный", pl = "Astralny", tr = "Astral", it = "Astrale", ja = "アストラル", zh = "星界", ko = "천체" }
+description = { en = "Drifting mist and stars cover your armour.", de = "Wandernder Nebel und Sterne bedecken deine Rüstung.", fr = "Brume et étoiles flottent sur votre armure.", es = "Niebla y estrellas flotan sobre tu armadura.", pt = "Névoa e estrelas flutuam sobre sua armadura.", ru = "Туман и звёзды плывут по вашей броне.", pl = "Mgła i gwiazdy płyną po pancerzu.", tr = "Sis ve yıldızlar zırhınızın üzerinde süzülür.", it = "Nebbia e stelle fluttuano sulla tua armatura.", ja = "漂う霧と星々が鎧を覆います。", zh = "飘渺的雾气和星光笼罩着你的护甲。", ko = "떠도는 안개와 별이 갑옷을 뒤덮습니다." }
+
+[[dye_style]]
+key = "runeflow"
+mode = 6
+family_order = 1
+family = { en = "Living Light", de = "Lebendiges Licht", fr = "Lumière vivante", es = "Luz viviente", pt = "Luz Viva", ru = "Живой свет", pl = "Żywe światło", tr = "Canlı Işık", it = "Luce vivente", ja = "リビングライト", zh = "活体圣光", ko = "살아있는 빛" }
+price = 1000000
+icon = "Spell_Arcane_Rune"
+name = { en = "Runeflow", de = "Runenfluss", fr = "Flux runique", es = "Flujo rúnico", pt = "Fluxo Rúnico", ru = "Поток рун", pl = "Strumień run", tr = "Rün Akışı", it = "Flusso runico", ja = "ルーンの流れ", zh = "符文流", ko = "룬의 흐름" }
+description = { en = "Geometric runes flow across your armour.", de = "Geometrische Runen fließen über deine Rüstung.", fr = "Des runes géométriques parcourent votre armure.", es = "Runas geométricas fluyen por tu armadura.", pt = "Runas geométricas fluem pela sua armadura.", ru = "Геометрические руны текут по вашей броне.", pl = "Geometryczne runy płyną po pancerzu.", tr = "Geometrik rünler zırhınızın üzerinde akar.", it = "Rune geometriche scorrono sulla tua armatura.", ja = "幾何学模様のルーンが鎧の上を流れます。", zh = "几何符文在你的护甲上流动。", ko = "기하학적인 룬이 갑옷 위를 흐릅니다." }
+
+[[dye_style]]
+key = "energy_pulse"
+mode = 7
+family_order = 1
+family = { en = "Living Light", de = "Lebendiges Licht", fr = "Lumière vivante", es = "Luz viviente", pt = "Luz Viva", ru = "Живой свет", pl = "Żywe światło", tr = "Canlı Işık", it = "Luce vivente", ja = "リビングライト", zh = "活体圣光", ko = "살아있는 빛" }
+price = 1000000
+icon = "Spell_Arcane_ArcaneResilience"
+name = { en = "Energy Pulse", de = "Energiepuls", fr = "Pulsation énergétique", es = "Pulso de energía", pt = "Pulso de Energia", ru = "Пульс энергии", pl = "Puls energii", tr = "Enerji Darbesi", it = "Impulso di energia", ja = "エネルギーパルス", zh = "能量脉冲", ko = "에너지 파동" }
+description = { en = "Waves of energy travel across your armour.", de = "Energiewellen wandern über deine Rüstung.", fr = "Des vagues d’énergie parcourent votre armure.", es = "Ondas de energía recorren tu armadura.", pt = "Ondas de energia percorrem sua armadura.", ru = "Волны энергии проходят по вашей броне.", pl = "Fale energii przemieszczają się po pancerzu.", tr = "Enerji dalgaları zırhınızın üzerinde ilerler.", it = "Onde di energia attraversano la tua armatura.", ja = "エネルギーの波が鎧の上を走ります。", zh = "能量波在你的护甲上流转。", ko = "에너지의 물결이 갑옷 위를 지나갑니다." }
+
+[[dye_style]]
+key = "spectral"
+mode = 8
+family_order = 2
+family = { en = "Spectral Armour", de = "Geisterrüstung", fr = "Armure spectrale", es = "Armadura espectral", pt = "Armadura Espectral", ru = "Призрачная броня", pl = "Widmowy pancerz", tr = "Hayalet Zırh", it = "Armatura spettrale", ja = "霊体の鎧", zh = "幽灵护甲", ko = "유령 갑옷" }
+price = 1000000
+icon = "Spell_Shadow_GhostKey"
+name = { en = "Spectral", de = "Spektral", fr = "Spectral", es = "Espectral", pt = "Espectral", ru = "Спектральный", pl = "Widmowy", tr = "Spektral", it = "Spettrale", ja = "スペクトラル", zh = "幽灵", ko = "유령" }
+description = { en = "Glowing edges trace translucent armour.", de = "Leuchtende Kanten zeichnen durchscheinende Rüstung nach.", fr = "Des contours lumineux dessinent une armure translucide.", es = "Bordes luminosos delinean la armadura translúcida.", pt = "Bordas luminosas contornam a armadura translúcida.", ru = "Светящиеся края очерчивают полупрозрачную броню.", pl = "Świetliste krawędzie obrysowują półprzezroczysty pancerz.", tr = "Parlayan kenarlar yarı saydam zırhı çevreler.", it = "Bordi luminosi delineano l’armatura traslucida.", ja = "光る縁取りが透き通った鎧をなぞります。", zh = "发光的边缘勾勒出半透明的护甲。", ko = "빛나는 테두리가 반투명 갑옷의 윤곽을 그립니다." }
+
+[[dye_style]]
+key = "ethereal"
+mode = 9
+family_order = 2
+family = { en = "Spectral Armour", de = "Geisterrüstung", fr = "Armure spectrale", es = "Armadura espectral", pt = "Armadura Espectral", ru = "Призрачная броня", pl = "Widmowy pancerz", tr = "Hayalet Zırh", it = "Armatura spettrale", ja = "霊体の鎧", zh = "幽灵护甲", ko = "유령 갑옷" }
+price = 1000000
+icon = "Spell_Arcane_Blink"
+name = { en = "Ethereal", de = "Ätherisch", fr = "Éthéré", es = "Etéreo", pt = "Etéreo", ru = "Эфирный", pl = "Eteryczny", tr = "Eterik", it = "Etereo", ja = "エーテル", zh = "虚灵", ko = "에테리얼" }
+description = { en = "A gentle shimmer drifts over ghostly armour.", de = "Ein sanftes Schimmern zieht über geisterhafte Rüstung.", fr = "Un doux scintillement glisse sur une armure fantomatique.", es = "Un suave brillo recorre la armadura fantasmal.", pt = "Um brilho suave percorre a armadura fantasmagórica.", ru = "Мягкое мерцание скользит по призрачной броне.", pl = "Delikatny blask przesuwa się po widmowym pancerzu.", tr = "Hafif bir ışıltı hayalet zırhın üzerinde süzülür.", it = "Un lieve bagliore scorre sull’armatura spettrale.", ja = "かすかなきらめきが幽霊のような鎧の上を漂います。", zh = "柔和的微光在幽灵般的护甲上飘动。", ko = "유령 같은 갑옷 위로 은은한 빛이 일렁입니다." }
+
+[[dye_style]]
+key = "phase_ghost"
+mode = 10
+family_order = 2
+family = { en = "Spectral Armour", de = "Geisterrüstung", fr = "Armure spectrale", es = "Armadura espectral", pt = "Armadura Espectral", ru = "Призрачная броня", pl = "Widmowy pancerz", tr = "Hayalet Zırh", it = "Armatura spettrale", ja = "霊体の鎧", zh = "幽灵护甲", ko = "유령 갑옷" }
+price = 1000000
+icon = "Spell_Shadow_Shadowform"
+name = { en = "Phase Ghost", de = "Phasengeist", fr = "Fantôme de phase", es = "Fantasma de fase", pt = "Fantasma de Fase", ru = "Фазовый призрак", pl = "Fazowe widmo", tr = "Faz Hayaleti", it = "Fantasma di fase", ja = "位相ゴースト", zh = "相位幽魂", ko = "위상 유령" }
+description = { en = "Moving bands phase through translucent armour.", de = "Wandernde Bänder durchziehen durchscheinende Rüstung.", fr = "Des bandes mobiles traversent une armure translucide.", es = "Bandas móviles atraviesan la armadura translúcida.", pt = "Faixas móveis atravessam a armadura translúcida.", ru = "Движущиеся полосы проходят сквозь полупрозрачную броню.", pl = "Ruchome pasma przenikają półprzezroczysty pancerz.", tr = "Hareketli şeritler yarı saydam zırhın içinden geçer.", it = "Bande mobili attraversano l’armatura traslucida.", ja = "動く帯が透き通った鎧を通り抜けます。", zh = "流动的光带穿过半透明的护甲。", ko = "움직이는 띠가 반투명 갑옷을 스쳐 지나갑니다." }
+
+[[dye_style]]
+key = "stormveins"
+mode = 11
+family_order = 3
+family = { en = "Elemental Currents", de = "Elementarströme", fr = "Courants élémentaires", es = "Corrientes elementales", pt = "Correntes Elementais", ru = "Стихийные потоки", pl = "Prądy żywiołów", tr = "Element Akımları", it = "Correnti elementali", ja = "エレメンタルの奔流", zh = "元素洪流", ko = "원소의 흐름" }
+price = 1000000
+icon = "Spell_Nature_Lightning"
+name = { en = "Stormveins", de = "Sturmadern", fr = "Veines orageuses", es = "Venas de tormenta", pt = "Veios da Tempestade", ru = "Грозовые жилы", pl = "Burzowe żyły", tr = "Fırtına Damarları", it = "Vene tempestose", ja = "嵐の脈", zh = "风暴之脉", ko = "폭풍 줄기" }
+description = { en = "Branching lightning flashes across your armour.", de = "Verzweigte Blitze zucken über deine Rüstung.", fr = "Des éclairs ramifiés parcourent votre armure.", es = "Relámpagos ramificados recorren tu armadura.", pt = "Raios ramificados percorrem sua armadura.", ru = "Ветвящиеся молнии вспыхивают на вашей броне.", pl = "Rozgałęzione błyskawice migoczą na pancerzu.", tr = "Dallanan şimşekler zırhınızın üzerinde çakar.", it = "Fulmini ramificati guizzano sulla tua armatura.", ja = "枝分かれする稲妻が鎧の上を走ります。", zh = "分叉的闪电在你的护甲上闪烁。", ko = "갈라지는 번개가 갑옷 위로 번쩍입니다." }
+
+[[dye_style]]
+key = "solar_rings"
+mode = 12
+family_order = 3
+family = { en = "Elemental Currents", de = "Elementarströme", fr = "Courants élémentaires", es = "Corrientes elementales", pt = "Correntes Elementais", ru = "Стихийные потоки", pl = "Prądy żywiołów", tr = "Element Akımları", it = "Correnti elementali", ja = "エレメンタルの奔流", zh = "元素洪流", ko = "원소의 흐름" }
+price = 1000000
+icon = "Spell_Holy_SearingLight"
+name = { en = "Solar Rings", de = "Sonnenringe", fr = "Anneaux solaires", es = "Anillos solares", pt = "Anéis Solares", ru = "Солнечные кольца", pl = "Słoneczne kręgi", tr = "Güneş Halkaları", it = "Anelli solari", ja = "太陽の輪", zh = "太阳光环", ko = "태양 고리" }
+description = { en = "Radiant rings expand across your armour.", de = "Strahlende Ringe breiten sich über deine Rüstung aus.", fr = "Des anneaux rayonnants s’étendent sur votre armure.", es = "Anillos radiantes se expanden por tu armadura.", pt = "Anéis radiantes se expandem pela sua armadura.", ru = "Сияющие кольца расходятся по вашей броне.", pl = "Promienne kręgi rozszerzają się na pancerzu.", tr = "Işıltılı halkalar zırhınızın üzerinde genişler.", it = "Anelli radiosi si espandono sulla tua armatura.", ja = "輝く輪が鎧の上に広がります。", zh = "璀璨的光环在你的护甲上扩散。", ko = "빛나는 고리가 갑옷 위로 퍼져 나갑니다." }
+
+[[dye_style]]
+key = "arcane_vortex"
+mode = 13
+family_order = 3
+family = { en = "Elemental Currents", de = "Elementarströme", fr = "Courants élémentaires", es = "Corrientes elementales", pt = "Correntes Elementais", ru = "Стихийные потоки", pl = "Prądy żywiołów", tr = "Element Akımları", it = "Correnti elementali", ja = "エレメンタルの奔流", zh = "元素洪流", ko = "원소의 흐름" }
+price = 1000000
+icon = "Spell_Arcane_ArcaneTorrent"
+name = { en = "Arcane Vortex", de = "Arkaner Wirbel", fr = "Vortex arcanique", es = "Vórtice arcano", pt = "Vórtice Arcano", ru = "Тайный вихрь", pl = "Tajemny wir", tr = "Gizemli Girdap", it = "Vortice arcano", ja = "アーケイン・ヴォルテックス", zh = "奥术漩涡", ko = "비전 소용돌이" }
+description = { en = "Spiralling currents swirl across your armour.", de = "Spiralförmige Ströme wirbeln über deine Rüstung.", fr = "Des courants en spirale tourbillonnent sur votre armure.", es = "Corrientes espirales giran por tu armadura.", pt = "Correntes espirais giram pela sua armadura.", ru = "Спиральные потоки кружат по вашей броне.", pl = "Spiralne prądy wirują na pancerzu.", tr = "Sarmal akımlar zırhınızın üzerinde döner.", it = "Correnti a spirale turbinano sulla tua armatura.", ja = "渦巻く流れが鎧の上を巡ります。", zh = "螺旋状的气流在你的护甲上旋转。", ko = "소용돌이치는 흐름이 갑옷 위를 맴돕니다." }
+
+[[dye_style]]
+key = "cometfall"
+mode = 14
+family_order = 3
+family = { en = "Elemental Currents", de = "Elementarströme", fr = "Courants élémentaires", es = "Corrientes elementales", pt = "Correntes Elementais", ru = "Стихийные потоки", pl = "Prądy żywiołów", tr = "Element Akımları", it = "Correnti elementali", ja = "エレメンタルの奔流", zh = "元素洪流", ko = "원소의 흐름" }
+price = 1000000
+icon = "Spell_Arcane_StarFire"
+name = { en = "Cometfall", de = "Kometenfall", fr = "Chute de comètes", es = "Lluvia de cometas", pt = "Chuva de Cometas", ru = "Кометопад", pl = "Deszcz komet", tr = "Kuyruklu Yıldız Yağmuru", it = "Pioggia di comete", ja = "彗星落下", zh = "彗星坠落", ko = "혜성 낙하" }
+description = { en = "Bright comet trails sweep across your armour.", de = "Helle Kometenspuren ziehen über deine Rüstung.", fr = "Des traînées de comètes balayent votre armure.", es = "Estelas brillantes de cometas cruzan tu armadura.", pt = "Rastros brilhantes de cometas cruzam sua armadura.", ru = "Яркие кометные следы проносятся по вашей броне.", pl = "Jasne smugi komet przemykają po pancerzu.", tr = "Parlak kuyruklu yıldız izleri zırhınızın üzerinden geçer.", it = "Scie luminose di comete attraversano la tua armatura.", ja = "明るい彗星の尾が鎧の上をかすめます。", zh = "明亮的彗尾划过你的护甲。", ko = "밝은 혜성의 꼬리가 갑옷 위를 휩쓸고 지나갑니다." }
+
+[[dye_style]]
+key = "crystal_lattice"
+mode = 15
+family_order = 4
+family = { en = "Arcane Patterns", de = "Arkane Muster", fr = "Motifs arcaniques", es = "Patrones arcanos", pt = "Padrões Arcanos", ru = "Тайные узоры", pl = "Tajemne wzory", tr = "Gizemli Desenler", it = "Motivi arcani", ja = "アーケインの模様", zh = "奥术纹样", ko = "비전 문양" }
+price = 1000000
+icon = "INV_Misc_Gem_Crystal_02"
+name = { en = "Crystal Lattice", de = "Kristallgitter", fr = "Réseau cristallin", es = "Red cristalina", pt = "Rede Cristalina", ru = "Кристальная решётка", pl = "Kryształowa sieć", tr = "Kristal Kafes", it = "Reticolo di cristallo", ja = "クリスタルの格子", zh = "水晶晶格", ko = "수정 격자" }
+description = { en = "Faceted crystal lines glimmer across your armour.", de = "Facettierte Kristalllinien schimmern über deine Rüstung.", fr = "Des lignes cristallines scintillent sur votre armure.", es = "Líneas de cristal facetado brillan por tu armadura.", pt = "Linhas de cristal facetado brilham pela sua armadura.", ru = "Грани кристальной решётки мерцают на вашей броне.", pl = "Fasetowane kryształowe linie migoczą na pancerzu.", tr = "Fasetli kristal çizgiler zırhınızın üzerinde parıldar.", it = "Linee di cristallo sfaccettato brillano sulla tua armatura.", ja = "結晶の切子模様が鎧の上で輝きます。", zh = "多面的水晶纹路在你的护甲上闪烁。", ko = "깎인 수정의 선이 갑옷 위에서 반짝입니다." }
+
+[[dye_style]]
+key = "magma_veins"
+mode = 16
+family_order = 4
+family = { en = "Arcane Patterns", de = "Arkane Muster", fr = "Motifs arcaniques", es = "Patrones arcanos", pt = "Padrões Arcanos", ru = "Тайные узоры", pl = "Tajemne wzory", tr = "Gizemli Desenler", it = "Motivi arcani", ja = "アーケインの模様", zh = "奥术纹样", ko = "비전 문양" }
+price = 1000000
+icon = "Spell_Fire_LavaSpawn"
+name = { en = "Magma Veins", de = "Magmaadern", fr = "Veines de magma", es = "Venas de magma", pt = "Veios de Magma", ru = "Магматические жилы", pl = "Magmowe żyły", tr = "Magma Damarları", it = "Vene di magma", ja = "マグマの脈", zh = "岩浆之脉", ko = "마그마 줄기" }
+description = { en = "Molten light pulses through cracks across your armour.", de = "Geschmolzenes Licht pulsiert durch Risse in deiner Rüstung.", fr = "Une lumière en fusion pulse dans les fissures de votre armure.", es = "Luz fundida pulsa por las grietas de tu armadura.", pt = "Luz fundida pulsa pelas fissuras da sua armadura.", ru = "Расплавленный свет пульсирует в трещинах вашей брони.", pl = "Roztopione światło pulsuje w pęknięciach pancerza.", tr = "Erimiş ışık zırhınızın çatlaklarında titreşir.", it = "Luce fusa pulsa nelle crepe della tua armatura.", ja = "溶けた光が鎧のひび割れを脈打ちます。", zh = "熔融的光芒在你护甲的裂缝中脉动。", ko = "녹아내린 빛이 갑옷의 균열 사이로 고동칩니다." }
+
+[[dye_style]]
+key = "void_ripples"
+mode = 17
+family_order = 4
+family = { en = "Arcane Patterns", de = "Arkane Muster", fr = "Motifs arcaniques", es = "Patrones arcanos", pt = "Padrões Arcanos", ru = "Тайные узоры", pl = "Tajemne wzory", tr = "Gizemli Desenler", it = "Motivi arcani", ja = "アーケインの模様", zh = "奥术纹样", ko = "비전 문양" }
+price = 1000000
+icon = "Spell_Shadow_Shadowfury"
+name = { en = "Void Ripples", de = "Leerenwellen", fr = "Ondulations du Vide", es = "Ondas del Vacío", pt = "Ondulações do Vazio", ru = "Рябь Бездны", pl = "Fale Pustki", tr = "Hiçlik Dalgaları", it = "Increspature del Vuoto", ja = "ヴォイドの波紋", zh = "虚空涟漪", ko = "공허의 물결" }
+description = { en = "Dark ripples spread beneath luminous armour edges.", de = "Dunkle Wellen breiten sich unter leuchtenden Rüstungskanten aus.", fr = "Des ondulations sombres se propagent sous les contours lumineux de l’armure.", es = "Ondas oscuras se extienden bajo los bordes luminosos de la armadura.", pt = "Ondulações escuras se espalham sob as bordas luminosas da armadura.", ru = "Тёмная рябь расходится под светящимися краями брони.", pl = "Ciemne fale rozchodzą się pod świetlistymi krawędziami pancerza.", tr = "Karanlık dalgalar parlak zırh kenarlarının altında yayılır.", it = "Increspature oscure si diffondono sotto i bordi luminosi dell’armatura.", ja = "光る鎧の縁の下に暗い波紋が広がります。", zh = "暗色涟漪在发光的护甲边缘下扩散。", ko = "빛나는 갑옷 테두리 아래로 어두운 물결이 퍼집니다." }
+
+[[dye_style]]
+key = "prism_shards"
+mode = 18
+family_order = 4
+family = { en = "Arcane Patterns", de = "Arkane Muster", fr = "Motifs arcaniques", es = "Patrones arcanos", pt = "Padrões Arcanos", ru = "Тайные узоры", pl = "Tajemne wzory", tr = "Gizemli Desenler", it = "Motivi arcani", ja = "アーケインの模様", zh = "奥术纹样", ko = "비전 문양" }
+price = 1000000
+icon = "INV_Misc_Gem_Variety_02"
+name = { en = "Prism Shards", de = "Prismensplitter", fr = "Éclats de prisme", es = "Fragmentos de prisma", pt = "Fragmentos de Prisma", ru = "Осколки призмы", pl = "Odłamki pryzmatu", tr = "Prizma Parçaları", it = "Schegge di prisma", ja = "プリズムの欠片", zh = "棱镜碎片", ko = "프리즘 파편" }
+description = { en = "Sharp facets flash like moving prism shards.", de = "Scharfe Facetten blitzen wie wandernde Prismensplitter.", fr = "Des facettes vives brillent comme des éclats de prisme mobiles.", es = "Facetas afiladas brillan como fragmentos de prisma móviles.", pt = "Facetas nítidas brilham como fragmentos móveis de prisma.", ru = "Острые грани вспыхивают словно движущиеся осколки призмы.", pl = "Ostre fasety błyskają jak ruchome odłamki pryzmatu.", tr = "Keskin yüzeyler hareketli prizma parçaları gibi parlar.", it = "Sfaccettature affilate brillano come schegge di prisma in movimento.", ja = "鋭い切子面が動くプリズムの破片のようにきらめきます。", zh = "锐利的切面如移动的棱镜碎片般闪耀。", ko = "날카로운 단면이 움직이는 프리즘 조각처럼 번쩍입니다." }
+
+# Living Metal: a polished base the shader lights with a reflection of the sky, sun and horizon
+# (`dye_view_light` in wow_model.wgsl), coloured by the dye worn with it.
+
+[[dye_style]]
+key = "mirror_polish"
+mode = 19
+family_order = 5
+family = { en = "Living Metal", de = "Lebendiges Metall", fr = "Métal vivant", es = "Metal vivo", pt = "Metal Vivo", ru = "Живой металл", pl = "Żywy metal", tr = "Canlı Metal", it = "Metallo vivo", ja = "リビングメタル", zh = "活体金属", ko = "살아있는 금속" }
+price = 1000000
+icon = "INV_Ingot_Platinum"
+name = { en = "Mirror Polish", de = "Spiegelglanz", fr = "Poli miroir", es = "Pulido espejo", pt = "Polimento Espelhado", ru = "Зеркальная полировка", pl = "Lustrzany połysk", tr = "Ayna Cilası", it = "Lucidatura a specchio", ja = "鏡面仕上げ", zh = "镜面抛光", ko = "거울 광택" }
+description = { en = "Polished metal that mirrors the sky and catches the sun.", de = "Polierter Metallglanz, der den Himmel spiegelt und das Sonnenlicht einfängt.", fr = "Un métal poli qui reflète le ciel et capte le soleil.", es = "Metal pulido que refleja el cielo y atrapa el sol.", pt = "Metal polido que reflete o céu e captura o sol.", ru = "Полированный металл отражает небо и ловит солнечные блики.", pl = "Polerowany metal odbija niebo i łapie promienie słońca.", tr = "Gökyüzünü yansıtan ve güneşi yakalayan cilalı metal.", it = "Metallo lucidato che riflette il cielo e cattura il sole.", ja = "空を映し、陽光をとらえる磨かれた金属。", zh = "抛光的金属映照着天空，捕捉着阳光。", ko = "하늘을 비추고 햇빛을 받아 반짝이는 광택 금속." }
+
+[[dye_style]]
+key = "brushed_metal"
+mode = 20
+family_order = 5
+family = { en = "Living Metal", de = "Lebendiges Metall", fr = "Métal vivant", es = "Metal vivo", pt = "Metal Vivo", ru = "Живой металл", pl = "Żywy metal", tr = "Canlı Metal", it = "Metallo vivo", ja = "リビングメタル", zh = "活体金属", ko = "살아있는 금속" }
+price = 1000000
+icon = "INV_Ingot_Steel"
+name = { en = "Brushed Metal", de = "Gebürstetes Metall", fr = "Métal brossé", es = "Metal cepillado", pt = "Metal Escovado", ru = "Шлифованный металл", pl = "Szczotkowany metal", tr = "Fırçalanmış Metal", it = "Metallo spazzolato", ja = "ヘアライン金属", zh = "拉丝金属", ko = "헤어라인 금속" }
+description = { en = "A soft, streaked sheen of worked steel.", de = "Ein weicher, gestreifter Schimmer von bearbeitetem Stahl.", fr = "Un éclat doux et strié d’acier travaillé.", es = "Un brillo suave y veteado de acero trabajado.", pt = "Um brilho suave e riscado de aço trabalhado.", ru = "Мягкий полосчатый блеск обработанной стали.", pl = "Miękki, prążkowany połysk obrabianej stali.", tr = "İşlenmiş çeliğin yumuşak, çizgili parıltısı.", it = "Un riflesso morbido e striato di acciaio lavorato.", ja = "鍛えられた鋼のやわらかな筋目の光沢。", zh = "精工钢材的柔和条纹光泽。", ko = "가공한 강철의 부드러운 결무늬 광택." }
+
+[[dye_style]]
+key = "quicksilver"
+mode = 21
+family_order = 5
+family = { en = "Living Metal", de = "Lebendiges Metall", fr = "Métal vivant", es = "Metal vivo", pt = "Metal Vivo", ru = "Живой металл", pl = "Żywy metal", tr = "Canlı Metal", it = "Metallo vivo", ja = "リビングメタル", zh = "活体金属", ko = "살아있는 금속" }
+price = 1000000
+icon = "INV_Ingot_Mithril"
+name = { en = "Quicksilver", de = "Quecksilber", fr = "Vif-argent", es = "Azogue", pt = "Mercúrio", ru = "Ртуть", pl = "Rtęć", tr = "Cıva", it = "Argento vivo", ja = "水銀", zh = "水银", ko = "수은" }
+description = { en = "Liquid metal whose reflections flow across your armour.", de = "Flüssiges Metall, dessen Spiegelungen über deine Rüstung fließen.", fr = "Un métal liquide dont les reflets coulent sur votre armure.", es = "Metal líquido cuyos reflejos fluyen sobre tu armadura.", pt = "Metal líquido cujos reflexos fluem pela sua armadura.", ru = "Жидкий металл, отражения которого текут по вашей броне.", pl = "Płynny metal, którego odbicia spływają po pancerzu.", tr = "Yansımaları zırhınızın üzerinde akan sıvı metal.", it = "Metallo liquido i cui riflessi scorrono sulla tua armatura.", ja = "映り込みが鎧の上を流れる液体金属。", zh = "液态金属的倒影在你的护甲上流动。", ko = "반사광이 갑옷 위를 흐르는 액체 금속." }
+
+[[dye_style]]
+key = "pearl_sheen"
+mode = 22
+family_order = 5
+family = { en = "Living Metal", de = "Lebendiges Metall", fr = "Métal vivant", es = "Metal vivo", pt = "Metal Vivo", ru = "Живой металл", pl = "Żywy metal", tr = "Canlı Metal", it = "Metallo vivo", ja = "リビングメタル", zh = "活体金属", ko = "살아있는 금속" }
+price = 1000000
+icon = "INV_Misc_Gem_Pearl_04"
+name = { en = "Pearl Sheen", de = "Perlmuttglanz", fr = "Éclat nacré", es = "Brillo nacarado", pt = "Brilho Perolado", ru = "Перламутровый блеск", pl = "Perłowy połysk", tr = "İnci Parıltısı", it = "Riflesso perlato", ja = "真珠の光沢", zh = "珍珠光泽", ko = "진주 광택" }
+description = { en = "Iridescent colours that shift as you turn.", de = "Schillernde Farben, die sich mit jeder Drehung wandeln.", fr = "Des couleurs irisées qui changent à chaque mouvement.", es = "Colores iridiscentes que cambian al girar.", pt = "Cores iridescentes que mudam conforme você se move.", ru = "Переливающиеся цвета меняются при каждом повороте.", pl = "Opalizujące barwy zmieniają się przy każdym obrocie.", tr = "Döndükçe değişen yanardöner renkler.", it = "Colori iridescenti che cambiano a ogni movimento.", ja = "向きを変えるたびに色が移ろう玉虫色。", zh = "随你转身而变幻的虹彩。", ko = "몸을 돌릴 때마다 색이 바뀌는 무지갯빛." }

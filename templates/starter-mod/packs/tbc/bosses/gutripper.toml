@@ -1,0 +1,16 @@
+# Gutripper: a ravager's Ravage and its rush.
+
+[[boss]]
+key = "gutripper"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 24213, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.2 } }
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

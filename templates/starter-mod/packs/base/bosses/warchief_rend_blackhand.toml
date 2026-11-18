@@ -1,0 +1,20 @@
+# Warchief Rend Blackhand's abilities, Blackrock Mountain.
+
+[[boss]]
+key = "warchief_rend_blackhand"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 16390, range = 14.0, arc = 60.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { sweep = { spell = 16396, len = 26.0, w = 5.0, warn = 1.8, lasts = 5.0, tick = 0.7 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { stomp = { spell = 18500, radius = 9.0, warn = 1.6, knock = 14.0 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 8 }

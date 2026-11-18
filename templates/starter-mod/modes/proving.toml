@@ -1,0 +1,160 @@
+# Proving Grounds: a practice field with training dummies, where every spell, ring, trinket,
+# amulet and legendary is free to pick, any number of legendaries at once. Nothing it gains goes
+# home: no gold, gear, achievements or experience.
+
+name = "Proving Grounds"
+extends = "standard"
+
+[card]
+order = 5
+icon = "Ability_Warrior_DefensiveStance"
+color = [0.55, 0.42, 0.85]
+tag = "SOLO · PRACTICE"
+text = "A practice field with training dummies. Pick any spell, ring, trinket, amulet and legendary you like, as many legendaries as you want, call the horde when you are ready, or simulate a whole run with waves and bosses."
+rules = [
+    "Everything is free to pick, any time",
+    "Any number of legendaries at once",
+    "Training dummies; the horde comes when you call it",
+    "You cannot fall; nothing is kept",
+]
+rewards = [
+    ["INV_Misc_PocketWatch_01", "Practice"],
+]
+
+[i18n.de]
+name = "Prüfgelände"
+tag = "SOLO · ÜBUNG"
+text = "Ein Übungsfeld mit Trainingspuppen. Wähle jeden Zauber, jeden Ring, jedes Schmuckstück, jedes Amulett und jedes Legendary, so viele Legendarys wie du willst, rufe die Horde, wenn du bereit bist, oder simuliere einen ganzen Lauf mit Wellen und Bossen."
+rules = [
+    "Alles ist jederzeit frei wählbar",
+    "Beliebig viele Legendarys gleichzeitig",
+    "Trainingspuppen; die Horde kommt, wenn du sie rufst",
+    "Du kannst nicht fallen; nichts wird behalten",
+]
+rewards = ["Übung"]
+
+[i18n.fr]
+name = "Terrain d'épreuve"
+tag = "SOLO · ENTRAÎNEMENT"
+text = "Un terrain d'entraînement avec des mannequins. Choisis n'importe quel sort, anneau, bijou, amulette et légendaire, autant de légendaires que tu veux, appelle la horde quand tu es prêt, ou simule une partie entière avec vagues et boss."
+rules = [
+    "Tout se choisit librement, à tout moment",
+    "Autant de légendaires que tu veux à la fois",
+    "Mannequins d'entraînement ; la horde vient quand tu l'appelles",
+    "Tu ne peux pas tomber ; rien n'est conservé",
+]
+rewards = ["Entraînement"]
+
+[i18n.es]
+name = "Campo de pruebas"
+tag = "SOLO · PRÁCTICA"
+text = "Un campo de prácticas con muñecos de entrenamiento. Elige cualquier hechizo, anillo, abalorio, amuleto y legendario, tantos legendarios como quieras, llama a la horda cuando estés listo o simula una partida entera con oleadas y jefes."
+rules = [
+    "Todo se elige libremente, en cualquier momento",
+    "Cualquier número de legendarios a la vez",
+    "Muñecos de entrenamiento; la horda viene cuando la llamas",
+    "No puedes caer; no se conserva nada",
+]
+rewards = ["Práctica"]
+
+[i18n.pt]
+name = "Campo de Provas"
+tag = "SOLO · PRÁTICA"
+text = "Um campo de treino com bonecos de treinamento. Escolha qualquer feitiço, anel, berloque, amuleto e lendário que quiser, quantos lendários quiser, chame a horda quando estiver pronto ou simule uma partida inteira com ondas e chefes."
+rules = [
+    "Tudo é livre para escolher, a qualquer hora",
+    "Qualquer número de lendários ao mesmo tempo",
+    "Bonecos de treinamento; a horda vem quando você a chama",
+    "Você não pode cair; nada é mantido",
+]
+rewards = ["Prática"]
+
+[i18n.ru]
+name = "Испытательный полигон"
+tag = "СОЛО · ТРЕНИРОВКА"
+text = "Тренировочное поле с манекенами. Выбирай любые заклинания, кольца, аксессуары, амулеты и легендарки, сколько угодно легендарок, зови орду, когда будешь готов, или смоделируй целый забег с волнами и боссами."
+rules = [
+    "Всё можно выбрать свободно и в любой момент",
+    "Любое число легендарок одновременно",
+    "Манекены; орда приходит, когда ты её позовёшь",
+    "Ты не можешь пасть; ничего не сохраняется",
+]
+rewards = ["Тренировка"]
+
+[i18n.it]
+name = "Campo di prova"
+tag = "SOLO · ALLENAMENTO"
+text = "Un campo d'allenamento con manichini. Scegli qualsiasi incantesimo, anello, ciondolo, amuleto e leggendario, tutti i leggendari che vuoi, chiama l'orda quando sei pronto, oppure simula una partita intera con ondate e boss."
+rules = [
+    "Tutto si sceglie liberamente, in qualsiasi momento",
+    "Quanti leggendari vuoi, insieme",
+    "Manichini da allenamento; l'orda arriva quando la chiami",
+    "Non puoi cadere; non si conserva nulla",
+]
+rewards = ["Allenamento"]
+
+[i18n.pl]
+name = "Pole treningowe"
+tag = "SOLO · TRENING"
+text = "Pole ćwiczeń z manekinami treningowymi. Wybierz dowolny czar, pierścień, talizman, amulet i legendarny przedmiot, tyle legendarnych, ile chcesz; przywołaj hordę, gdy będziesz gotów, albo zasymuluj całą rozgrywkę z falami i bossami."
+rules = [
+    "Wszystko wybierasz swobodnie, w każdej chwili",
+    "Dowolna liczba legendarnych naraz",
+    "Manekiny treningowe; horda przychodzi na twoje wezwanie",
+    "Nie możesz polec; nic nie zostaje zapisane",
+]
+rewards = ["Trening"]
+
+[i18n.tr]
+name = "Deneme Alanı"
+tag = "SOLO · ANTRENMAN"
+text = "Antrenman mankenlerinin olduğu bir alıştırma alanı. İstediğin büyüyü, yüzüğü, tılsımı, muskayı ve efsanevi eşyayı seç, istediğin kadar efsanevi al; hazır olunca sürüyü çağır ya da dalgalar ve bosslarla tam bir oyunu simüle et."
+rules = [
+    "Her şey her an serbestçe seçilir",
+    "Aynı anda istediğin kadar efsanevi",
+    "Antrenman mankenleri; sürü sen çağırınca gelir",
+    "Düşemezsin; hiçbir şey saklanmaz",
+]
+rewards = ["Antrenman"]
+
+[i18n.ja]
+name = "試練場"
+tag = "ソロ・練習"
+text = "訓練用ダミーのいる練習場です。好きな呪文、指輪、トリンケット、アミュレット、レジェンダリーを選べ、レジェンダリーはいくつでも持てます。準備ができたら群れを呼ぶか、ウェーブとボスのあるランを丸ごとシミュレートできます。"
+rules = [
+    "すべていつでも自由に選べます",
+    "レジェンダリーを同時にいくつでも",
+    "訓練用ダミー。群れは呼んだときに来ます",
+    "倒れることはなく、何も持ち帰れません",
+]
+rewards = ["練習"]
+
+[i18n.zh]
+name = "试炼场"
+tag = "单人 · 练习"
+text = "一片摆放着训练假人的练习场。随意挑选任何法术、戒指、饰品、护符和传说物品，传说物品想要多少都行；准备好后召唤怪潮，或者模拟一场包含波次和首领的完整对局。"
+rules = [
+    "一切随时自由挑选",
+    "可同时拥有任意数量的传说物品",
+    "训练假人；怪潮在你召唤时才会到来",
+    "你不会倒下；什么也不会保留",
+]
+rewards = ["练习"]
+
+[i18n.ko]
+name = "시험의 전장"
+tag = "솔로 · 연습"
+text = "훈련용 허수아비가 있는 연습장입니다. 원하는 주문, 반지, 장신구, 부적, 전설 아이템을 마음대로 고를 수 있고 전설 아이템은 몇 개든 가질 수 있습니다. 준비되면 무리를 부르거나, 웨이브와 우두머리가 있는 런 전체를 시뮬레이션하십시오."
+rules = [
+    "언제든 모든 것을 자유롭게 고를 수 있습니다",
+    "전설 아이템을 동시에 몇 개든",
+    "훈련용 허수아비, 무리는 부를 때 옵니다",
+    "쓰러지지 않으며 아무것도 남지 않습니다",
+]
+rewards = ["연습"]
+
+[coop]
+max_heroes = 1
+
+[proving]
+enabled = true

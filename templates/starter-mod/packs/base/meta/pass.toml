@@ -1,0 +1,70 @@
+# The Game Pass seasons (survivors-sim pass.rs): each with its two 30-tier tracks, tier 1 first.
+# `duplicate_cap` is the most an owned cosmetic of its premium track pays instead (none: half price).
+#
+# Every season written, the first first. A season past the last is an encore of
+# `SEASONS[(season - 1) % len]` (`season_info`): rotate, not repeat the latest, so every theme
+# comes round again.
+#
+# Season 1: the free track, tier 1 first. Left as it shipped for the accounts in it. `TUNE`
+#
+# Season 1: the premium track, tier 1 first; it ends in the two sets only the pass gives. `TUNE`
+#
+# Season 2, Secrets of Ulduar: the free track. Its gold is season 1's, tier for tier (16 600 in
+# all), its cosmetics the shop's, in Titan gold, Ulduar's runes and Yogg-Saron's void. `TUNE`
+#
+# Season 2, Secrets of Ulduar: the premium track. Five rewards only this pass gives: the
+# Starcaller title (tier 14, Algalon's), the Void Dancing Steel (20), the Herald of the Titans
+# name (25), the Deadly Gladiator's Frost Wyrm (29) and Conqueror's Siegebreaker Battlegear (30).
+# Its gold and every other cosmetic at `DUPLICATE_CAP` stay under
+# `PREMIUM_PRICE` (`payback`). `TUNE`
+
+[[season]]
+key = "s1"
+name = "Heroes of Azeroth"
+free = [
+    { gold = 300 }, { gold = 300 }, { trail = "prints" }, { gold = 400 }, { gold = 500 },
+    { gold = 400 }, { emote = "tavern_cheer" }, { gold = 500 }, { gold = 500 }, { wings = "angel_white" },
+    { gold = 600 }, { gold = 600 }, { emote = "cackle" }, { gold = 700 }, { name_style = "pure_white" },
+    { gold = 700 }, { gold = 800 }, { emote = "firework_salute" }, { gold = 800 }, { wings = "butterfly_blue" },
+    { gold = 900 }, { gold = 900 }, { trail = "blood" }, { gold = 1000 }, { set = "judgement" },
+    { gold = 1000 }, { gold = 1200 }, { emote = "lovestruck" }, { gold = 1500 }, { gold = 3000 },
+]
+premium = [
+    { gold = 1000 }, { emote = "pirate_shanty" }, { gold = 1000 }, { wings = "demon_red" }, { gold = 1200 },
+    { trail = "fire" }, { gold = 1200 }, { emote = "dwarf_jig" }, { gold = 1500 }, { name_style = "royal_gold" },
+    { gold = 1500 }, { wings = "phoenix_fire" }, { gold = 1500 }, { emote = "goblin_party" }, { trail = "frost" },
+    { gold = 2000 }, { emote = "rock_concert" }, { gold = 2000 }, { wings = "aurora_rainbow" }, { set = "dreadnaught" },
+    { gold = 2500 }, { name_style = "holy_radiance" }, { gold = 2500 }, { emote = "disco" }, { wings = "phoenix_void" },
+    { gold = 3000 }, { trail = "shadow" }, { gold = 3000 }, { name_style = "prismatic" }, { set = "scourgelord" },
+]
+stand_ins = [
+    [{ set = "dreadnaught" }, { set = "wrath" }], [{ set = "scourgelord" }, { set = "ymirjar" }],
+]
+
+[[season]]
+key = "ulduar"
+name = "Secrets of Ulduar"
+free = [
+    { gold = 300 }, { gold = 300 }, { horns = "gold" }, { gold = 400 }, { gold = 500 },
+    { gold = 400 }, { emote = "victory_roar" }, { gold = 500 }, { gold = 500 }, { wings = "angel_purple" },
+    { gold = 600 }, { gold = 600 }, { emote = "pirate_shanty" }, { gold = 700 }, { name_style = "ancient_bronze" },
+    { gold = 700 }, { gold = 800 }, { enchant = "glow_purple_bright" }, { gold = 800 }, { wings = "twotone_gold" },
+    { gold = 900 }, { gold = 900 }, { trail = "arcane" }, { gold = 1000 }, { set = "wrath" },
+    { gold = 1000 }, { gold = 1200 }, { emote = "dwarf_jig" }, { gold = 1500 }, { gold = 3000 },
+]
+premium = [
+    { gold = 300 }, { emote = "rock_concert" }, { gold = 300 }, { wings = "demon_purple" }, { gold = 400 },
+    { horns = "helm_rune" }, { gold = 400 }, { enchant = "flame_purple" }, { gold = 400 }, { name_style = "void_touched" },
+    { gold = 500 }, { wings = "dragon_purple" }, { gold = 500 }, { title = "starcaller" }, { horns = "halo_purple" },
+    { gold = 500 }, { trail = "fel" }, { gold = 500 }, { wings = "archon_violet" }, { enchant = "void" },
+    { gold = 600 }, { horns = "helm_void" }, { gold = 600 }, { wings = "sky_celestial" }, { name_style = "herald_titans" },
+    { gold = 600 }, { wings = "knight_gilded" }, { gold = 600 }, { mount = "deadly_gladiator_frost_wyrm" }, { set = "siegebreaker" },
+]
+stand_ins = [
+    [{ set = "siegebreaker" }, { set = "lightsworn" }],
+    [{ enchant = "void" }, { enchant = "purple" }],
+    [{ name_style = "herald_titans" }, { name_style = "arcane_surge" }],
+    [{ title = "starcaller" }, { title = "explorer" }],
+    [{ mount = "deadly_gladiator_frost_wyrm" }, { gold = 700 }],
+]
+duplicate_cap = 400

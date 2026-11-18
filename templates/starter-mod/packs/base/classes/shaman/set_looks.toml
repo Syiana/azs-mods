@@ -1,0 +1,61 @@
+# The shaman's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Primal") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Elements pieces: The Elements, tier 0 (ItemSet 187).
+[[set_look]]
+key = "shaman_uncommon"
+rarity = 1
+pieces = [
+    [0, 45174, 1, "Helmet_04"], [1, 30925, 3, "Shoulder_29"],
+    [2, 31416, 5, "Chest_Chain_11"], [3, 31413, 6, "Belt_16"],
+    [4, 31415, 7, "Pants_03"], [5, 31412, 8, "Boots_Wolf"],
+    [6, 31411, 9, "Bracer_02"], [7, 31414, 10, "Gauntlets_11"],
+]
+
+# Earthfury pieces: The Earthfury, tier 1 (ItemSet 207).
+[[set_look]]
+key = "shaman_rare"
+rarity = 2
+pieces = [
+    [0, 31835, 1, "Helmet_09"], [1, 31833, 3, "Shoulder_29"],
+    [2, 31832, 20, "Chest_Chain_11"], [3, 31829, 6, "Belt_14"],
+    [4, 31836, 7, "Pants_03"], [5, 31830, 8, "Boots_Plate_06"],
+    [6, 31831, 9, "Bracer_16"], [7, 31834, 10, "Gauntlets_11"],
+]
+
+# Ten Storms pieces: The Ten Storms, tier 2 (ItemSet 216).
+[[set_look]]
+key = "shaman_epic"
+rarity = 3
+pieces = [
+    [0, 34217, 1, "Helmet_69"], [1, 34255, 3, "Shoulder_33"],
+    [2, 34081, 5, "Chest_Chain_11"], [3, 34078, 6, "Belt_14"],
+    [4, 34084, 7, "Pants_03"], [5, 34083, 8, "Boots_Plate_06"],
+    [6, 34079, 9, "Bracer_16"], [7, 34082, 10, "Gauntlets_11"],
+]
+
+# Earthshatter pieces: The Earthshatterer, tier 3 (ItemSet 527).
+[[set_look]]
+key = "shaman_legendary"
+rarity = 4
+pieces = [
+    [0, 42115, 1, "Helmet_15"], [1, 35751, 3, "Shoulder_14"],
+    [2, 35752, 5, "Chest_Chain_15"], [3, 35747, 6, "Belt_22"],
+    [4, 35754, 7, "Pants_Mail_15"], [5, 35746, 8, "Boots_Chain_05"],
+    [6, 35753, 9, "Bracer_02"], [7, 35748, 10, "Gauntlets_25"],
+]
+
+# Field Marshal's pieces: Field Marshal's Earthshaker, the Alliance's rank 13 PvP set (ItemSet
+# 717).
+[[set_look]]
+key = "shaman_pvp"
+rarity = 5
+pieces = [
+    [0, 32133, 1, "Helmet_09"], [1, 32128, 3, "Shoulder_29"],
+    [2, 32103, 5, "Chest_Chain_11"], [4, 32127, 7, "Pants_Mail_15"],
+    [5, 32126, 8, "Boots_Plate_06"], [7, 32100, 10, "Gauntlets_11"],
+]

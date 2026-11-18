@@ -1,0 +1,543 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "icc"
+order = 35
+name = { en = "Icecrown Citadel", de = "Eiskronenzitadelle", fr = "Citadelle de la Couronne de glace", es = "Ciudadela de la Corona de Hielo", pt = "Cidadela da Coroa de Gelo", ru = "Цитадель Ледяной Короны", pl = "Cytadela Lodowej Korony", tr = "Buz Tacı Kalesi", it = "Cittadella della Corona di Ghiaccio", ja = "アイスクラウン・シタデル", zh = "冰冠堡垒", ko = "얼음왕관 성채" }
+subtitle = { en = "The Frozen Throne", de = "Der Frostthron", fr = "Le Trône de glace", es = "El Trono Helado", pt = "O Trono Gélido", ru = "Ледяной Трон", pl = "Lodowy Tron", tr = "Donmuş Taht", it = "Il Trono di Ghiaccio", ja = "フローズン・スローン", zh = "冰封王座", ko = "얼어붙은 왕좌" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "achievement_dungeon_icecrown_icecrownentrance"
+map = 571
+map_name = "Northrend"
+area = 4812
+center = [6326.0, 2287.0]
+radius = 100.0
+map_bounds = [5443.75, -827.08, 9427.08, 5245.83]
+health_factor = 39.63
+gold_factor = 4.85
+late_factor = 0.4
+hour = 12
+weather = { fine = 50, snow = 50 }
+# The clock stands at noon so the night dimming (Night Darkness) never darkens the run on top of the
+# citadel's own skies, which are dark at any hour; the edge stays the night's.
+dark_sky = true
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [6377.5273, 2225.7488]
+turn = 0
+yaw = 0.0
+pitch = 26.0
+distance = 174.5
+lift = 8.96
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 5300
+name = { en = "Plagued Zombie", de = "Verseuchter Zombie", fr = "Zombie pestiféré", es = "Zombi apestado", pt = "Zumbi Empesteado", ru = "Чумной зомби", pl = "Zombie dotknięty plagą", tr = "Vebalı Zombi", it = "Zombi appestato", ja = "疫病のゾンビ", zh = "瘟疫僵尸", ko = "역병 좀비" }
+type = "undead"
+display = 22122
+icon = "INV_Misc_Head_Undead_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+# The runners (Wrathbringer, Deathbringer, Gargoyle) stay at or under the hero's base pace (7.0 yd/s,
+# enemies run at 1.05 times their `speed`), so outrunning them needs no speed stacking; they come later.
+[[zone.enemy]]
+entry = 5301
+name = { en = "Nerub'ar Broodkeeper", de = "Bruthüter der Nerub'ar", fr = "Gardien de couvée nérub'ar", es = "Guardacría Nerub'ar", pt = "Guardião de Ninhada Nerub'ar", ru = "Хранитель выводка нерубов", pl = "Opiekun lęgu nerubów", tr = "Nerub'ar Yavru Bakıcısı", it = "Custode della covata Nerub'ar", ja = "ネルバールの巣守り", zh = "尼鲁巴尔巢穴守护者", ko = "네룹아르 부화지기" }
+type = "humanoid"
+display = 23915
+icon = "INV_Misc_Head_Nerubian_01"
+health = 28
+damage = 6
+swing = 1.3
+speed = 6.6
+cost = 1.0
+from = 3.0
+size = 0.8
+role = { ranged = { spell = 21067, range = 16.0, every = 3.0, speed = 40.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 5302
+name = { en = "Ymirjar Battle-Maiden", de = "Schlachtmaid der Ymirjar", fr = "Vierge guerrière ymirjar", es = "Doncella de batalla Ymirjar", pt = "Donzela de Batalha Ymirjar", ru = "Боевая дева Имирьяр", pl = "Bitewna dziewica Ymirjar", tr = "Ymirjar Savaş Bakiresi", it = "Fanciulla di battaglia Ymirjar", ja = "イミアジャーの戦乙女", zh = "依米亚尔战斗少女", ko = "이미야르 전투처녀" }
+type = "humanoid"
+display = 25208
+icon = "INV_Misc_Head_Vrykul"
+health = 26
+damage = 6
+swing = 1.4
+speed = 6.6
+cost = 1.2
+from = 5.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 5303
+name = { en = "Darkfallen Blood Knight", de = "Blutritter der Dunkelgefallenen", fr = "Chevalier de sang sombrechute", es = "Caballero de sangre Caído Oscuro", pt = "Cavaleiro de Sangue Caído Sombrio", ru = "Рыцарь крови Падших во Тьме", pl = "Rycerz krwi Darkfallen", tr = "Karanlığa Düşmüş Kan Şövalyesi", it = "Cavaliere del Sangue Oscurocaduto", ja = "ダークフォールン・ブラッドナイト", zh = "暗堕血骑士", ko = "암흑몰락 혈기사" }
+type = "undead"
+display = 26209
+icon = "Spell_DeathKnight_ArmyOfTheDead"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.7
+
+[[zone.enemy]]
+entry = 5304
+name = { en = "Spire Gargoyle", de = "Gargoyle der Spitze", fr = "Gargouille de la Flèche", es = "Gárgola de la Cumbre", pt = "Gárgula do Pináculo", ru = "Гаргулья Шпиля", pl = "Gargulec iglicy", tr = "Kule Gargoyle'u", it = "Gargoyle della Guglia", ja = "尖塔のガーゴイル", zh = "尖塔石像鬼", ko = "첨탑 가고일" }
+type = "undead"
+display = 7854
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 5305
+name = { en = "Blighted Abomination", de = "Verseuchte Monstrosität der Spitze", fr = "Abomination flétrie de la Flèche", es = "Abominación infestada de la Cumbre", pt = "Abominação Assolada do Pináculo", ru = "Заражённое поганище Шпиля", pl = "Skażona poczwara", tr = "Çürümüş Canavar", it = "Abominio flagellato", ja = "荒廃したアボミネーション", zh = "荒疫憎恶", ko = "마름병 누더기골렘" }
+type = "undead"
+display = 1061
+icon = "Spell_Shadow_AbominationExplosion"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 1.05
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 5306
+name = { en = "Val'kyr Herald", de = "Herold der Val'kyr", fr = "Héraut val'kyr", es = "Heraldo Val'kyr", pt = "Arauto Val'kyr", ru = "Вестник валь'киров", pl = "Herold Val'kyr", tr = "Val'kyr Müjdecisi", it = "Araldo Val'kyr", ja = "ヴァルキールの使者", zh = "瓦格里传令官", ko = "발키르 전령" }
+type = "undead"
+display = 26077
+icon = "inv_helm_armor_spiritvalkyr_d_01_blue"
+health = 62
+damage = 10
+swing = 1.4
+speed = 6.4
+cost = 1.5
+from = 4.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 5307
+name = { en = "Darkfallen Noble", de = "Adliger der Dunkelgefallenen", fr = "Noble sombrechute", es = "Noble Caído Oscuro", pt = "Nobre Caído Sombrio", ru = "Дворянин Падших во Тьме", pl = "Szlachcic Darkfallen", tr = "Karanlığa Düşmüş Asilzade", it = "Nobile Oscurocaduto", ja = "ダークフォールンの貴族", zh = "暗堕贵族", ko = "암흑몰락 귀족" }
+type = "undead"
+display = 26210
+icon = "Spell_DeathKnight_ArmyOfTheDead"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.7
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 5308
+name = { en = "Deathbound Ward", de = "Todgeweihter Wächter", fr = "Gardien lié à la mort", es = "Guardián ligado a la muerte", pt = "Guardião Preso à Morte", ru = "Страж, связанный смертью", pl = "Śmiertelna osłona", tr = "Ölüme Bağlı Muhafız", it = "Custode legato alla morte", ja = "デスバウンド・ウォード", zh = "死缚守卫", ko = "죽음에 묶인 수호병" }
+type = "undead"
+display = 30810
+icon = "INV_Misc_Head_Undead_01"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 1.3
+
+[[zone.elite]]
+entry = 5310
+name = { en = "Spire Frostwyrm", de = "Frostwyrm der Spitze", fr = "Wyrm de givre de la Flèche", es = "Vermis de escarcha de la Cumbre", pt = "Dracogelo do Pináculo", ru = "Ледяной змей Шпиля", pl = "Lodowy wyrm iglicy", tr = "Kule Buz Ejderi", it = "Viverna del gelo della Guglia", ja = "尖塔のフロストワーム", zh = "尖塔冰霜巨龙", ko = "첨탑 서리고룡" }
+type = "dragonkin"
+display = 27652
+icon = "INV_PET_FROSTWYRM"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.5
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16099, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 5311
+name = { en = "Rotting Frost Giant", de = "Verrottender Frostriese", fr = "Géant du givre putréfié", es = "Gigante de escarcha putrefacto", pt = "Gigante do Gelo Apodrecido", ru = "Гниющий ледяной великан", pl = "Gnijący lodowy olbrzym", tr = "Çürüyen Buz Devi", it = "Gigante del gelo putrescente", ja = "腐りゆくフロスト・ジャイアント", zh = "腐烂的冰霜巨人", ko = "썩어가는 서리 거인" }
+type = "giant"
+display = 22652
+icon = "Achievement_Dungeon_UlduarRaid_IceGiant_01"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.55
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 5312
+name = { en = "Val'kyr Shadowguard", de = "Schattenwache der Val'kyr", fr = "Garde-ombre val'kyr", es = "Guardia de las sombras Val'kyr", pt = "Guarda-sombra Val'kyr", ru = "Страж теней валь'киров", pl = "Cienista straż Val'kyr", tr = "Val'kyr Gölge Muhafızı", it = "Guardia d'ombra Val'kyr", ja = "ヴァルキール・シャドウガード", zh = "瓦格里暗影卫士", ko = "발키르 어둠수호병" }
+type = "undead"
+display = 29240
+icon = "inv_helm_armor_spiritvalkyr_d_01_blue"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.1
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.boss]]
+entry = 5390
+name = { en = "Lord Marrowgar", de = "Lord Mark'gar", fr = "Seigneur Gargamoelle", es = "Lord Tuétano", pt = "Lorde Tutano", ru = "Лорд Ребрад", pl = "Lord Marrowgar", tr = "Lord Marrowgar", it = "Lord Marrowgar", ja = "マローガー卿", zh = "玛洛加尔领主", ko = "군주 마로우가르" }
+type = "undead"
+display = 31119
+icon = "Achievement_Boss_LordMarrowgar"
+health = 4600
+damage = 28
+speed = 5.8
+size = 0.79999995
+minute = 4
+yell = { en = "The Scourge will wash over this world as a swarm of death and destruction!", de = "Die Geißel wird als Schwarm aus Tod und Zerstörung über diese Welt hinwegfegen!", fr = "Le Fléau déferlera sur ce monde en un essaim de mort et de destruction !", es = "¡La Plaga arrasará este mundo como un enjambre de muerte y destrucción!", pt = "O Flagelo varrerá este mundo como um enxame de morte e destruição!", ru = "Плеть накроет этот мир роем смерти и разрушения!", pl = "Plaga zaleje ten świat rojem śmierci i zniszczenia!", tr = "Yıkım ordusu bu dünyayı bir ölüm ve yıkım sürüsü gibi kaplayacak!", it = "Il Flagello travolgerà questo mondo come uno sciame di morte e distruzione!", ja = "スカージは死と破壊の群れとなってこの世界を覆い尽くすのだ！", zh = "天灾军团将如死亡与毁灭的狂潮般席卷这个世界！", ko = "스컬지가 죽음과 파멸의 무리가 되어 이 세상을 휩쓸리라!" }
+kit = "lord_marrowgar"
+
+[[zone.boss]]
+entry = 5391
+name = { en = "Lady Deathwhisper", de = "Lady Todeswisper", fr = "Dame Murmemort", es = "Lady Susurramuerte", pt = "Lady Sussurromorte", ru = "Леди Смертный Шепот", pl = "Lady Szept Śmierci", tr = "Leydi Ölüfısıltı", it = "Lady Deathwhisper", ja = "レディ・デスウィスパー", zh = "亡语者女士", ko = "여군주 데스위스퍼" }
+type = "undead"
+display = 30893
+icon = "Achievement_Boss_LadyDeathwhisper"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.1
+minute = 8
+yell = { en = "What is this disturbance? You dare trespass upon this hallowed ground?", de = "Was ist das für eine Störung? Ihr wagt es, diesen geweihten Boden zu betreten?", fr = "Quel est ce vacarme ? Vous osez profaner ce lieu sacré ?", es = "¿Qué es este alboroto? ¿Osáis profanar este suelo sagrado?", pt = "O que é esta perturbação? Vocês ousam invadir este solo sagrado?", ru = "Что за шум? Вы посмели вторгнуться на эту священную землю?", pl = "Co to za zakłócenie? Śmiecie wtargnąć na tę świętą ziemię?", tr = "Bu kargaşa da ne? Bu kutsal topraklara girmeye cüret mi ediyorsunuz?", it = "Che cos'è questo disturbo? Osate invadere questo suolo sacro?", ja = "何の騒ぎだ？この神聖な地に踏み入るというのか？", zh = "这是什么骚动？你们竟敢闯入这片神圣之地？", ko = "웬 소란이냐? 감히 이 신성한 땅에 발을 들이느냐?" }
+kit = "lady_deathwhisper"
+
+[[zone.boss]]
+entry = 5392
+name = { en = "Festergut", de = "Fauldarm", fr = "Pulentraille", es = "Panzachancro", pt = "Intestino Pútrido", ru = "Тухлопуз", pl = "Festergut", tr = "Festergut", it = "Festergut", ja = "フェスターガット", zh = "烂肠", ko = "구린속" }
+type = "undead"
+display = 31006
+icon = "Achievement_Boss_FestergutRotface"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.4
+minute = 12
+yell = { en = "Fun time?", de = "Spaßzeit?", fr = "On s'amuse ?", es = "¿Hora de jugar?", pt = "Hora da diversão?", ru = "Время забав?", pl = "Zabawa?", tr = "Eğlence zamanı mı?", it = "Ora di giocare?", ja = "お楽しみの時間？", zh = "好玩的时间？", ko = "놀 시간?" }
+kit = "festergut"
+
+[[zone.boss]]
+entry = 5393
+name = { en = "Blood-Queen Lana'thel", de = "Blutkönigin Lana'thel", fr = "Reine de sang Lana'thel", es = "Reina de sangre Lana'thel", pt = "Rainha de Sangue Lana'thel", ru = "Кровавая королева Лана'тель", pl = "Krwawa Królowa Lana'thel", tr = "Kan Kraliçesi Lana'thel", it = "Regina del Sangue Lana'thel", ja = "ブラッドクイーン・ラナセル", zh = "鲜血女王兰娜瑟尔", ko = "피의 여왕 라나텔" }
+type = "undead"
+display = 31093
+icon = "Achievement_Boss_Lanathel"
+health = 26000
+damage = 54
+speed = 5.8
+size = 0.8
+minute = 16
+yell = { en = "You have made an... unwise... decision.", de = "Ihr habt eine... unkluge... Entscheidung getroffen.", fr = "Vous avez pris une... mauvaise... décision.", es = "Habéis tomado una... mala... decisión.", pt = "Vocês tomaram uma... péssima... decisão.", ru = "Вы приняли... неразумное... решение.", pl = "Podjęliście... nierozsądną... decyzję.", tr = "Pek... akıllıca olmayan... bir karar verdiniz.", it = "Avete preso una decisione... poco saggia...", ja = "貴様らは…愚かな…決断をした。", zh = "你们做出了一个……不明智的……决定。", ko = "너희는... 현명하지 못한... 선택을 했다." }
+kit = "blood_queen_lanathel"
+
+[[zone.boss]]
+entry = 2112
+name = { en = "the Lich King", de = "der Lichkönig", fr = "le Roi-liche", es = "el Rey Exánime", pt = "o Rei Lich", ru = "Король-лич", pl = "Król Lisz", tr = "Lich King", it = "il Re dei Lich", ja = "リッチキング", zh = "巫妖王", ko = "리치 왕" }
+type = "undead"
+display = 30721
+icon = "Achievement_Boss_LichKing"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.3
+minute = 20
+yell = { en = "So the Light's vaunted justice has finally arrived.", de = "So ist die gepriesene Gerechtigkeit des Lichts also endlich eingetroffen.", fr = "Ainsi, la justice tant vantée de la Lumière est enfin arrivée.", es = "Así que la cacareada justicia de la Luz por fin ha llegado.", pt = "Então a tão aclamada justiça da Luz finalmente chegou.", ru = "Итак, хвалёное правосудие Света наконец явилось.", pl = "Więc wychwalana sprawiedliwość Światła w końcu nadeszła.", tr = "Demek Işığın övülen adaleti sonunda geldi.", it = "Dunque la tanto decantata giustizia della Luce è finalmente arrivata.", ja = "ついに、名高き聖なる光の正義のお出ましか。", zh = "看来圣光引以为傲的正义终于来了。", ko = "그래, 빛이 자랑하는 정의가 마침내 도착했구나." }
+final = true
+kit = "the_lich_king"
+
+# Icecrown Citadel, Wrath's last world: Lord Marrowgar in the Court of Bones, Lady Deathwhisper
+# at the Cathedral of Darkness, then a choice of wing, the Plagueworks in the Vile Hold
+# (Festergut) or the Crimson Hall on the Rise of Suffering (the Blood-Queen), and at last the
+# Frozen Throne, the Lich King's own platform atop the citadel's spire.
+[[zone.arena]]
+name = { en = "The Cathedral of Darkness", de = "Die Kathedrale der Finsternis", fr = "La cathédrale des Ténèbres", es = "La Catedral de la Oscuridad", pt = "A Catedral das Trevas", ru = "Собор Тьмы", pl = "Katedra Ciemności", tr = "Karanlık Katedrali", it = "La Cattedrale dell'Oscurità", ja = "闇の大聖堂", zh = "黑暗大教堂", ko = "어둠의 대성당" }
+center = [6129.0, 2720.0]
+radius = 80.0
+from_boss = 1
+indoors = true
+
+[[zone.arena]]
+name = { en = "The Plagueworks", de = "Die Seuchenwerke", fr = "La Fabrique de peste", es = "Las Obras de la Plaga", pt = "As Obras da Peste", ru = "Комплекс Чумы", pl = "Fabryka Plag", tr = "Veba İşleri", it = "Le Officine della Peste", ja = "プレイグワークス", zh = "瘟疫工坊", ko = "역병작업장" }
+center = [6365.0, 1869.0]
+radius = 85.0
+from_boss = 2
+choice = true
+indoors = true
+
+[[zone.arena]]
+name = { en = "The Crimson Hall", de = "Die Blutrote Halle", fr = "La salle Cramoisie", es = "El Salón Carmesí", pt = "O Salão Carmesim", ru = "Багровый зал", pl = "Szkarłatna Sala", tr = "Kızıl Salon", it = "La Sala Cremisi", ja = "クリムゾン・ホール", zh = "赤红大厅", ko = "진홍 전당" }
+center = [6617.0, 2064.0]
+radius = 85.0
+from_boss = 3
+
+[[zone.arena]]
+name = { en = "The Frozen Throne", de = "Der Frostthron", fr = "Le Trône de glace", es = "El Trono Helado", pt = "O Trono Gélido", ru = "Ледяной Трон", pl = "Lodowy Tron", tr = "Donmuş Taht", it = "Il Trono di Ghiaccio", ja = "フローズン・スローン", zh = "冰封王座", ko = "얼어붙은 왕좌" }
+# The round ice platform on the spire's top, some 117 yd across: its middle on the navmesh floor
+# (97 % of the 52 yd round it is platform), the rim 58 to 60 yd out. `floor` is the plateau's
+# height; the ADT ground lies at some 505 under it. The navmesh (patch-7) is baked for this centre.
+center = [5641.5, 2002.5]
+radius = 55.0
+from_boss = 4
+floor = 1544.0
+
+# Sites of a dungeon run (`[[zone.site]]`), picked from `py -I tools/dungeon-sites.py` on the
+# navmeshes of arenas 1 to 3 (the Frozen Throne and the zone's own arena get none), on each
+# arena's own floor (the scout prints its z: 574.4, 508.8 and 578.4; the meshes stack other floors
+# over the same x/y). Of the scout's doorways only those that also close the run's walk grid hold:
+# a navmesh neck cut by a slope (the Crimson Hall's hollow) gates nothing there, so the doors of
+# arenas 1 and 2 sit on narrow floor polygons whose disc closes off a nook on the grid, and their
+# pockets are under the scout's default 150 yd2. A door's `along` is the heading (degrees, atan2 of
+# y over x) from the arena side of its doorway into the pocket.
+
+# --- Arena 1: The Cathedral of Darkness (floor z 574.4) ---
+
+# PROVISIONAL display: placeholder chest model, replace after the client door spike
+[[zone.site]]  # pocket poly 1048 in the neck of a 79 yd2 alcove (3 polys), z 574.1
+arena = 1
+kind = "door"
+at = [6105.2, 2672.2]
+radius = 5.0
+along = 192.9
+display = 259
+key = "a"
+
+[[zone.site]]  # z 574.1
+arena = 1
+kind = "key_boss"
+at = [6176.0, 2698.7]
+entry = 5310
+key = "a"
+
+[[zone.site]]  # open ground, z 574.1
+arena = 1
+kind = "key_boss"
+at = [6086.6, 2732.8]
+entry = 5311
+key = "a"
+
+[[zone.site]]  # chest nook, poly 812, z 574.1, at the back of the door's alcove
+arena = 1
+kind = "chest"
+at = [6097.2, 2671.2]
+key = "a"
+
+[[zone.site]]  # corridor poly 1045, z 574.1
+arena = 1
+kind = "trap"
+at = [6121.3, 2680.2]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # corridor poly 920, z 574.1
+arena = 1
+kind = "trap"
+at = [6094.2, 2753.0]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # corridor poly 1411, z 574.1
+arena = 1
+kind = "trap"
+at = [6138.3, 2787.7]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # open region of 1034 yd2, z 574.1
+arena = 1
+kind = "rockfall"
+at = [6151.2, 2704.2]
+radius = 8.0
+
+# --- Arena 2: The Plagueworks (floor z 508.8) ---
+
+# PROVISIONAL display: placeholder chest model, replace after the client door spike
+[[zone.site]]  # corridor neck by poly 116 (z 513.9), the way into the nook of poly 144
+arena = 2
+kind = "door"
+at = [6405.5, 1909.9]
+radius = 4.0
+along = 93.4
+display = 259
+key = "a"
+
+[[zone.site]]  # z 508.8
+arena = 2
+kind = "key_boss"
+at = [6368.0, 1909.3]
+entry = 5310
+key = "a"
+
+[[zone.site]]  # z 508.8
+arena = 2
+kind = "key_boss"
+at = [6410.7, 1888.0]
+entry = 5312
+key = "a"
+
+[[zone.site]]  # z 508.8, behind the door
+arena = 2
+kind = "chest"
+at = [6404.5, 1926.9]
+key = "a"
+
+[[zone.site]]  # corridor poly 362, z 511.2
+arena = 2
+kind = "trap"
+at = [6439.6, 1897.3]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # corridor poly 1503, z 518.4
+arena = 2
+kind = "trap"
+at = [6294.5, 1854.7]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # corridor poly 2031, z 508.8
+arena = 2
+kind = "trap"
+at = [6354.9, 1810.8]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # open region of 1820 yd2, z 508.8
+arena = 2
+kind = "rockfall"
+at = [6410.7, 1850.7]
+radius = 8.0
+
+# --- Arena 3: The Crimson Hall (floor z 578.4) ---
+
+# PROVISIONAL display: placeholder chest model, replace after the client door spike
+[[zone.site]]  # doorway poly 772, 3.2 yd wide, z 581.4, pocket 129 yd2 (7 polys) up a stair
+arena = 3
+kind = "door"
+at = [6564.5, 2013.3]
+radius = 4.0
+along = 292.4
+display = 259
+key = "a"
+
+[[zone.site]]  # open region, z 578.4
+arena = 3
+kind = "key_boss"
+at = [6656.9, 2081.7]
+entry = 5311
+key = "a"
+
+[[zone.site]]  # open region, z 578.4
+arena = 3
+kind = "key_boss"
+at = [6614.2, 2036.5]
+entry = 5312
+key = "a"
+
+[[zone.site]]  # chest nook, poly 838, z 588.4, in the pocket of the door
+arena = 3
+kind = "chest"
+at = [6574.9, 2000.2]
+key = "a"
+
+[[zone.site]]  # chest nook, poly 768, z 584.7, in the pocket of the door
+arena = 3
+kind = "chest"
+at = [6559.9, 2009.8]
+key = "a"
+
+[[zone.site]]  # chest nook, poly 786, z 569.5, down in an open hollow: free-standing
+arena = 3
+kind = "chest"
+at = [6554.8, 2108.9]
+
+[[zone.site]]  # corridor poly 1151, z 578.5
+arena = 3
+kind = "trap"
+at = [6641.5, 2025.4]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # corridor poly 1205, z 578.4
+arena = 3
+kind = "trap"
+at = [6651.6, 2093.0]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # corridor poly 777, z 577.2
+arena = 3
+kind = "trap"
+at = [6551.0, 2072.9]
+radius = 3.0
+spell = 27810
+
+[[zone.site]]  # open region of 910 yd2, z 578.5
+arena = 3
+kind = "rockfall"
+at = [6592.0, 2058.7]
+radius = 8.0

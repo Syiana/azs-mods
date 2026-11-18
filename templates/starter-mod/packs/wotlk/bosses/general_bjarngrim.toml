@@ -1,0 +1,20 @@
+# General Bjarngrim: Whirlwind, Charge, Mortal Strike.
+
+[[boss]]
+key = "general_bjarngrim"
+
+[[boss.kit]]
+every = 11.0
+ability = { whirlwind = { spell = 52027, radius = 7.0, lasts = 4.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 8.0
+ability = "charge"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 16856, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

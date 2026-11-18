@@ -1,0 +1,177 @@
+# The holidays (survivors-sim events.rs). The schedule that runs them is web/events.json; `when` is
+# WoW's own dates, a hint for it. `looks` dress part of the waves (creature_type: 1 beast, 2 dragonkin,
+# 4 elemental, 7 humanoid, 9 mechanical, 10 not specified, 6 undead); `elite` comes every few minutes;
+# `token` is the currency pile (GameObjectDisplayInfo.dbc id, scale); `shop` sells (item, price in the
+# holiday's currency). `TUNE` the prices.
+#
+# Every holiday. Their order makes the creature entries of their looks (`ENTRY_BASE`) and the
+# currency piles' object entries (`TOKEN_ENTRY`): new ones go at the end. The displays are the
+# stock 3.3.5a `CreatureDisplayInfo.dbc`'s (their models in the comments).
+
+[[holiday]]
+key = "hallows_end"
+name = { en = "Hallow's End", de = "Schlotternächte", fr = "Sanssaint", es = "Noche de Brujas", pt = "Dia das Bruxas", ru = "Тыквовин", pl = "Noc Duchów", tr = "Cadılar Bayramı", it = "Veglia delle Streghe", ja = "ハロウズ・エンド", zh = "万圣节", ko = "할로윈 축제" }
+currency = { en = "Candy Corn", de = "Zuckermais", fr = "Maïs bonbon", es = "Caramelo de maíz", pt = "Milho Doce", ru = "Конфетная кукуруза", pl = "Cukrowa kukurydza", tr = "Mısır Şekeri", it = "Mais candito", ja = "キャンディコーン", zh = "玉米糖", ko = "사탕옥수수" }
+when = { yearly = { from = [10, 18], to = [11, 1] } }
+looks = [
+    { name = { en = "Pumpkin Soldier", de = "Kürbissoldat", fr = "Soldat citrouille", es = "Soldado calabaza", pt = "Soldado Abóbora", ru = "Тыквенный солдат", pl = "Dyniowy żołnierz", tr = "Balkabağı Askeri", it = "Soldato zucca", ja = "カボチャの兵士", zh = "南瓜士兵", ko = "호박 병사" }, display_id = 21822, creature_type = 6, size = 1.0 },
+    { name = { en = "Restless Skeleton", de = "Ruheloses Skelett", fr = "Squelette agité", es = "Esqueleto inquieto", pt = "Esqueleto Inquieto", ru = "Беспокойный скелет", pl = "Niespokojny szkielet", tr = "Huzursuz İskelet", it = "Scheletro inquieto", ja = "さまようスケルトン", zh = "不安的骷髅", ko = "안식 없는 해골" }, display_id = 158, creature_type = 6, size = 1.0 },
+    { name = { en = "Wailing Banshee", de = "Heulende Banshee", fr = "Banshee gémissante", es = "Alma en pena gemebunda", pt = "Banshee Lamuriante", ru = "Воющая банши", pl = "Zawodząca banshee", tr = "Ağlayan Banşi", it = "Banshee urlante", ja = "嘆きのバンシー", zh = "哀嚎女妖", ko = "울부짖는 밴시" }, display_id = 915, creature_type = 6, size = 1.0 },
+    { name = { en = "Hallowed Spirit", de = "Geweihter Geist", fr = "Esprit sanctifié", es = "Espíritu santificado", pt = "Espírito Consagrado", ru = "Освященный дух", pl = "Poświęcony duch", tr = "Kutsanmış Ruh", it = "Spirito santificato", ja = "聖別された霊", zh = "万圣之灵", ko = "축성된 영혼" }, display_id = 146, creature_type = 6, size = 1.0 },
+]
+elite = { name = { en = "Headless Horseman", de = "Kopfloser Reiter", fr = "Cavalier sans tête", es = "Jinete sin cabeza", pt = "Cavaleiro sem Cabeça", ru = "Всадник без головы", pl = "Jeździec bez Głowy", tr = "Başsız Süvari", it = "Cavaliere Senza Testa", ja = "ヘッドレス・ホースマン", zh = "无头骑士", ko = "저주받은 기사" }, display_id = 22351, creature_type = 6, size = 1.3 }
+token = [6404, 0.9]
+snow = false
+shop = [
+    [{ mount = "spectral_gryphon" }, 1500], [{ wings = "demonlord_shadow" }, 1000],
+    [{ wings = "venthyr_blades" }, 900], [{ horns = "hat_witch" }, 600],
+    [{ horns = "mask_skull" }, 600], [{ horns = "antler_skull" }, 700],
+    [{ horns = "dreadlord" }, 700], [{ name_style = "bloodmoon" }, 700],
+    [{ name_style = "jack_o_lantern" }, 900], [{ name_style = "witching_hour" }, 1000],
+    [{ name_style = "restless_spirit" }, 900], [{ trail = "shadow" }, 800],
+    [{ trail = "pumpkin" }, 1000], [{ trail = "ghost" }, 1000], [{ kill_fx = "bone" }, 700],
+    [{ kill_fx = "candy_rain" }, 900], [{ kill_fx = "pumpkin" }, 1000],
+    [{ kill_fx = "soul_shatter" }, 900], [{ kill_fx = "haunt" }, 1100], [{ emote = "cackle" }, 300],
+    [{ spell_color = "pumpkin_hex" }, 1400], [{ spell_color = "witchfire" }, 1400],
+    [{ emote = "witch_broom" }, 500], [{ emote = "pumpkin_dance" }, 600],
+]
+
+[[holiday]]
+key = "winter_veil"
+name = { en = "Feast of Winter Veil", de = "Winterhauchfest", fr = "Voile d'hiver", es = "Festival de Invierno", pt = "Festa do Véu de Inverno", ru = "Зимний Покров", pl = "Święto Zimowego Welonu", tr = "Kış Perdesi Şöleni", it = "Festa del Velo Invernale", ja = "ウィンターヴェイルの祝祭", zh = "冬幕节", ko = "겨울맞이 축제" }
+currency = { en = "Snowflakes", de = "Schneeflocken", fr = "Flocons de neige", es = "Copos de nieve", pt = "Flocos de Neve", ru = "Снежинки", pl = "Płatki śniegu", tr = "Kar Taneleri", it = "Fiocchi di neve", ja = "雪の結晶", zh = "雪花", ko = "눈송이" }
+when = { yearly = { from = [12, 15], to = [1, 2] } }
+looks = [
+    { name = { en = "Snowman", de = "Schneemann", fr = "Bonhomme de neige", es = "Muñeco de nieve", pt = "Boneco de Neve", ru = "Снеговик", pl = "Bałwan", tr = "Kardan Adam", it = "Pupazzo di neve", ja = "雪だるま", zh = "雪人", ko = "눈사람" }, display_id = 13610, creature_type = 4, size = 1.0 },
+    { name = { en = "Rowdy Reindeer", de = "Wildes Rentier", fr = "Renne turbulent", es = "Reno alborotador", pt = "Rena Arruaceira", ru = "Буйный олень", pl = "Hałaśliwy renifer", tr = "Yaramaz Geyik", it = "Renna scatenata", ja = "暴れトナカイ", zh = "喧闹的驯鹿", ko = "난폭한 순록" }, display_id = 15903, creature_type = 1, size = 1.0 },
+    { name = { en = "Snowflake Elemental", de = "Schneeflockenelementar", fr = "Élémentaire de flocon", es = "Elemental de copo de nieve", pt = "Elemental de Floco de Neve", ru = "Элементаль снежинки", pl = "Żywiołak płatków śniegu", tr = "Kar Tanesi Elementali", it = "Elementale del fiocco di neve", ja = "雪の結晶のエレメンタル", zh = "雪花元素", ko = "눈송이 정령" }, display_id = 25144, creature_type = 4, size = 1.0 },
+    { name = { en = "Frost Sprite", de = "Frostgeist", fr = "Esprit de givre", es = "Espíritu de escarcha", pt = "Fada do Gelo", ru = "Морозный дух", pl = "Mroźny chochlik", tr = "Buz Perisi", it = "Folletto del gelo", ja = "フロスト・スプライト", zh = "冰霜精灵", ko = "서리 요정" }, display_id = 23398, creature_type = 4, size = 1.0 },
+]
+elite = { name = { en = "Abominable Snowman", de = "Scheußlicher Schneemann", fr = "Abominable homme des neiges", es = "Abominable hombre de las nieves", pt = "Abominável Homem das Neves", ru = "Отвратительный снеговик", pl = "Straszliwy bałwan", tr = "Korkunç Kar Adam", it = "Abominevole Uomo delle Nevi", ja = "雪男", zh = "可憎雪人", ko = "무시무시한 설인" }, display_id = 13730, creature_type = 4, size = 1.8 }
+token = [5254, 1.0]
+snow = true
+shop = [
+    [{ mount = "reindeer" }, 600], [{ wings = "phoenix_frost" }, 450],
+    [{ horns = "hat_party" }, 200], [{ name_style = "glacier" }, 300], [{ trail = "frost" }, 350],
+    [{ kill_fx = "shatter" }, 250], [{ emote = "tavern_cheer" }, 120],
+]
+
+[[holiday]]
+key = "lunar_festival"
+name = { en = "Lunar Festival", de = "Mondfest", fr = "Fête lunaire", es = "Festival Lunar", pt = "Festival Lunar", ru = "Лунный фестиваль", pl = "Święto Księżyca", tr = "Ay Festivali", it = "Festival Lunare", ja = "ルナ・フェスティバル", zh = "春节", ko = "달의 축제" }
+currency = { en = "Coins of Ancestry", de = "Münzen der Ahnen", fr = "Pièces ancestrales", es = "Monedas de ascendencia", pt = "Moedas de Ancestralidade", ru = "Монеты предков", pl = "Monety przodków", tr = "Ata Sikkeleri", it = "Monete degli antenati", ja = "祖先のコイン", zh = "祖先硬币", ko = "선조의 주화" }
+when = { yearly = { from = [1, 23], to = [2, 6] } }
+looks = [
+    { name = { en = "Lantern Dragon", de = "Laternendrache", fr = "Dragon-lanterne", es = "Dragón farol", pt = "Dragão Lanterna", ru = "Дракон-фонарь", pl = "Smok lampionowy", tr = "Fener Ejderi", it = "Drago lanterna", ja = "ランタン・ドラゴン", zh = "灯笼龙", ko = "등불 용" }, display_id = 14779, creature_type = 2, size = 1.0 },
+    { name = { en = "Jade Lantern Dragon", de = "Jadelaternendrache", fr = "Dragon-lanterne de jade", es = "Dragón farol de jade", pt = "Dragão Lanterna de Jade", ru = "Нефритовый дракон-фонарь", pl = "Nefrytowy smok lampionowy", tr = "Yeşim Fener Ejderi", it = "Drago lanterna di giada", ja = "翡翠のランタン・ドラゴン", zh = "玉石灯笼龙", ko = "비취 등불 용" }, display_id = 14778, creature_type = 2, size = 1.0 },
+    { name = { en = "Ancestral Spirit", de = "Ahnengeist", fr = "Esprit ancestral", es = "Espíritu ancestral", pt = "Espírito Ancestral", ru = "Дух предков", pl = "Duch przodka", tr = "Ata Ruhu", it = "Spirito ancestrale", ja = "祖先の霊", zh = "先祖之魂", ko = "선조의 영혼" }, display_id = 1824, creature_type = 10, size = 1.4 },
+    { name = { en = "Moonglade Owl", de = "Mondlichtungseule", fr = "Chouette de Reflet-de-Lune", es = "Búho de Claro de la Luna", pt = "Coruja de Clareira da Lua", ru = "Сова Лунной поляны", pl = "Sowa z Moonglade", tr = "Ayvadisi Baykuşu", it = "Gufo di Selva Lunare", ja = "ムーングレイドのフクロウ", zh = "月光林地猫头鹰", ko = "달의 숲 올빼미" }, display_id = 6212, creature_type = 1, size = 1.0 },
+]
+elite = { name = { en = "Omen", de = "Omen", fr = "Omen", es = "Omen", pt = "Omen", ru = "Предвестник", pl = "Omen", tr = "Alamet", it = "Omen", ja = "オーメン", zh = "欧门", ko = "오멘" }, display_id = 15879, creature_type = 1, size = 0.8 }
+token = [6536, 1.4]
+snow = false
+shop = [
+    [{ mount = "lunar_dragonhawk" }, 600], [{ wings = "sky_celestial" }, 450],
+    [{ horns = "hat_firework" }, 200], [{ name_style = "celestial" }, 350],
+    [{ kill_fx = "fireworks" }, 400], [{ emote = "firework_salute" }, 120],
+]
+
+[[holiday]]
+key = "love_in_the_air"
+name = { en = "Love is in the Air", de = "Liebe liegt in der Luft", fr = "De l'amour dans l'air", es = "Amor en el aire", pt = "Amor no Ar", ru = "Любовная лихорадка", pl = "Miłość wisi w powietrzu", tr = "Aşk Havada", it = "Amore nell'Aria", ja = "恋の季節", zh = "情人节", ko = "온누리에 사랑을" }
+currency = { en = "Love Tokens", de = "Liebesmarken", fr = "Jetons d'amour", es = "Fichas de amor", pt = "Fichas do Amor", ru = "Жетоны любви", pl = "Żetony miłości", tr = "Aşk Jetonları", it = "Gettoni d'amore", ja = "ラブ・トークン", zh = "爱情代币", ko = "사랑의 징표" }
+when = { yearly = { from = [2, 7], to = [2, 20] } }
+looks = [
+    { name = { en = "Lovestruck Cupid", de = "Verliebter Amor", fr = "Cupidon amoureux", es = "Cupido enamorado", pt = "Cupido Apaixonado", ru = "Влюбленный купидон", pl = "Zakochany amorek", tr = "Aşka Tutulmuş Kupid", it = "Cupido innamorato", ja = "恋するキューピッド", zh = "痴情丘比特", ko = "사랑에 빠진 큐피드" }, display_id = 15990, creature_type = 7, size = 1.0 },
+    { name = { en = "Sweetheart Pig", de = "Schatzischwein", fr = "Cochon doux-cœur", es = "Cerdo amoroso", pt = "Porco Namorado", ru = "Милая свинка", pl = "Słodka świnka", tr = "Tatlım Domuz", it = "Maialino innamorato", ja = "恋人のブタ", zh = "甜心小猪", ko = "연인 돼지" }, display_id = 16358, creature_type = 1, size = 1.0 },
+    { name = { en = "Lovesick Bunny", de = "Liebeskranker Hase", fr = "Lapin transi d'amour", es = "Conejito mal de amores", pt = "Coelho Apaixonado", ru = "Кролик, больной любовью", pl = "Rozmiłowany króliczek", tr = "Aşk Hastası Tavşan", it = "Coniglietto innamorato", ja = "恋わずらいのウサギ", zh = "害相思的兔子", ko = "상사병 토끼" }, display_id = 6302, creature_type = 1, size = 1.3 },
+    { name = { en = "Sweetheart Faerie Dragon", de = "Herzensfeendrache", fr = "Dragon féerique doux-cœur", es = "Dragón feérico del amor", pt = "Dragão Feérico Namorado", ru = "Дракон-фея влюбленных", pl = "Słodki chochlik-smok", tr = "Tatlım Peri Ejderi", it = "Drago fatato innamorato", ja = "恋人のフェアリー・ドラゴン", zh = "甜心精灵龙", ko = "연인 요정용" }, display_id = 15991, creature_type = 2, size = 0.8 },
+]
+elite = { name = { en = "Peddlefeet the Lovebringer", de = "Peddlefuß der Liebesbringer", fr = "Colporpied le Porte-amour", es = "Pasomercader el Portador de amor", pt = "Pés-ligeiros, o Trazedor do Amor", ru = "Скороног Любвеносец", pl = "Peddlefeet, Niosący Miłość", tr = "Aşk Getiren Peddlefeet", it = "Piedeambulante il Portatore d'Amore", ja = "愛を運ぶペドルフィート", zh = "爱神佩德菲特", ko = "사랑의 전달자 페들피트" }, display_id = 15989, creature_type = 7, size = 2.4 }
+token = [7600, 1.0]
+snow = false
+shop = [
+    [{ mount = "love_rocket" }, 600], [{ wings = "butterfly_pink" }, 300],
+    [{ horns = "heart_pink" }, 200], [{ horns = "heart_red" }, 200], [{ name_style = "rose" }, 250],
+    [{ name_style = "rose_gold" }, 300], [{ emote = "lovestruck" }, 120],
+]
+
+[[holiday]]
+key = "noblegarden"
+name = { en = "Noblegarden", de = "Nobelgarten", fr = "Jardin des nobles", es = "Jardín Noble", pt = "Jardim Nobre", ru = "Благородный сад", pl = "Ogrody Szlachetnych", tr = "Asil Bahçe", it = "Giardino Nobile", ja = "ノーブルガーデン", zh = "复活节", ko = "귀족의 정원" }
+currency = { en = "Noblegarden Chocolate", de = "Nobelgartenschokolade", fr = "Chocolat du Jardin des nobles", es = "Chocolate de Jardín Noble", pt = "Chocolate do Jardim Nobre", ru = "Шоколад Благородного сада", pl = "Czekolada z Ogrodów Szlachetnych", tr = "Asil Bahçe Çikolatası", it = "Cioccolato del Giardino Nobile", ja = "ノーブルガーデン・チョコレート", zh = "复活节巧克力", ko = "귀족의 정원 초콜릿" }
+when = { yearly = { from = [4, 1], to = [4, 14] } }
+looks = [
+    { name = { en = "Noblegarden Rabbit", de = "Nobelgartenhase", fr = "Lapin du Jardin des nobles", es = "Conejo de Jardín Noble", pt = "Coelho do Jardim Nobre", ru = "Кролик Благородного сада", pl = "Królik z Ogrodów Szlachetnych", tr = "Asil Bahçe Tavşanı", it = "Coniglio del Giardino Nobile", ja = "ノーブルガーデンのウサギ", zh = "复活节兔子", ko = "귀족의 정원 토끼" }, display_id = 328, creature_type = 1, size = 1.3 },
+    { name = { en = "Spring Bunny", de = "Frühlingshase", fr = "Lapin de printemps", es = "Conejito primaveral", pt = "Coelho da Primavera", ru = "Весенний кролик", pl = "Wiosenny króliczek", tr = "Bahar Tavşanı", it = "Coniglietto primaverile", ja = "春のウサギ", zh = "春季兔子", ko = "봄 토끼" }, display_id = 1560, creature_type = 1, size = 1.5 },
+    { name = { en = "Wandering Egg", de = "Wanderndes Ei", fr = "Œuf vagabond", es = "Huevo errante", pt = "Ovo Errante", ru = "Странствующее яйцо", pl = "Wędrujące jajko", tr = "Gezgin Yumurta", it = "Uovo vagante", ja = "さまよう卵", zh = "漫游彩蛋", ko = "떠도는 알" }, display_id = 10056, creature_type = 10, size = 1.0 },
+    { name = { en = "Spring Chicken", de = "Frühlingshuhn", fr = "Poulet de printemps", es = "Pollito primaveral", pt = "Pinto da Primavera", ru = "Весенний цыпленок", pl = "Wiosenny kurczak", tr = "Bahar Piliç", it = "Pollo primaverile", ja = "春のヒヨコ", zh = "春季小鸡", ko = "봄 병아리" }, display_id = 304, creature_type = 1, size = 1.3 },
+]
+elite = { name = { en = "The Golden Hare", de = "Der Goldene Hase", fr = "Le Lièvre d'or", es = "La Liebre Dorada", pt = "A Lebre Dourada", ru = "Золотой заяц", pl = "Złoty zając", tr = "Altın Yaban Tavşanı", it = "La Lepre dorata", ja = "黄金の野ウサギ", zh = "金色野兔", ko = "황금 산토끼" }, display_id = 25340, creature_type = 1, size = 3.0 }
+token = [1407, 1.6]
+snow = false
+shop = [
+    [{ mount = "noble_rooster" }, 600], [{ wings = "butterfly_spring" }, 300],
+    [{ horns = "ears_bunny" }, 200], [{ horns = "hat_spring" }, 200],
+    [{ horns = "crown_flower" }, 250], [{ name_style = "emerald_dream" }, 300],
+]
+
+[[holiday]]
+key = "midsummer"
+name = { en = "Midsummer Fire Festival", de = "Sonnenwendfest", fr = "Fête du Feu du solstice d'été", es = "Festival de Fuego del Solsticio de Verano", pt = "Festival do Fogo do Solstício", ru = "Огненный праздник солнцестояния", pl = "Święto Ognia Środka Lata", tr = "Yaz Ortası Ateş Festivali", it = "Fuochi di Mezz'Estate", ja = "真夏の炎祭り", zh = "仲夏火焰节", ko = "한여름 불꽃축제" }
+currency = { en = "Burning Blossoms", de = "Brennende Blüten", fr = "Fleurs brûlantes", es = "Flores ardientes", pt = "Flores Ardentes", ru = "Пылающие цветы", pl = "Płonące kwiaty", tr = "Yanan Çiçekler", it = "Fiori ardenti", ja = "燃える花", zh = "燃烧之花", ko = "불타는 꽃" }
+when = { yearly = { from = [6, 21], to = [7, 5] } }
+looks = [
+    { name = { en = "Summer Flamekin", de = "Sommerflammenwesen", fr = "Flamboyant estival", es = "Flamígero estival", pt = "Chamejante de Verão", ru = "Летний огненный дух", pl = "Letni ognik", tr = "Yaz Alev Yaratığı", it = "Fiammella estiva", ja = "夏のフレイムキン", zh = "仲夏火焰精灵", ko = "여름 불꽃정령" }, display_id = 1070, creature_type = 4, size = 1.0 },
+    { name = { en = "Ember Revenant", de = "Glutwiedergänger", fr = "Revenant de braise", es = "Revenante de ascuas", pt = "Aparição de Brasa", ru = "Тлеющий призрак", pl = "Widmo żaru", tr = "Kor Hortlağı", it = "Spettro di brace", ja = "残り火のレヴナント", zh = "余烬亡魂", ko = "잿불 망령" }, display_id = 24905, creature_type = 4, size = 1.0 },
+    { name = { en = "Fire Sprite", de = "Feuergeist", fr = "Esprit de feu", es = "Espíritu de fuego", pt = "Fada do Fogo", ru = "Огненный дух", pl = "Ognisty chochlik", tr = "Ateş Perisi", it = "Folletto del fuoco", ja = "ファイア・スプライト", zh = "火焰精灵", ko = "불꽃 요정" }, display_id = 22715, creature_type = 4, size = 1.2 },
+    { name = { en = "Fire Dancer", de = "Feuertänzer", fr = "Danseur du feu", es = "Bailarín del fuego", pt = "Dançarino do Fogo", ru = "Танцор огня", pl = "Ognisty tancerz", tr = "Ateş Dansçısı", it = "Danzatore del fuoco", ja = "炎の踊り手", zh = "火焰舞者", ko = "불꽃 무희" }, display_id = 23523, creature_type = 4, size = 2.0 },
+]
+elite = { name = { en = "Ahune the Frost Lord", de = "Ahune der Frostfürst", fr = "Ahune le Seigneur du givre", es = "Ahune el Señor de la Escarcha", pt = "Ahune, o Senhor do Gelo", ru = "Ахюн Морозный Владыка", pl = "Ahune, Pan Mrozu", tr = "Buz Lordu Ahune", it = "Ahune il Signore del Gelo", ja = "フロストロード・アフーン", zh = "冰霜之王埃霍恩", ko = "서리 군주 아훈" }, display_id = 23344, creature_type = 4, size = 1.4 }
+token = [7710, 1.4]
+snow = false
+shop = [
+    [{ mount = "sunfire_cockatrice" }, 600], [{ wings = "firebird_fire" }, 400],
+    [{ horns = "helm_fire_shaman" }, 300], [{ horns = "hat_sun" }, 200],
+    [{ name_style = "ember" }, 250], [{ trail = "fire" }, 350],
+]
+
+[[holiday]]
+key = "brewfest"
+name = { en = "Brewfest", de = "Braufest", fr = "Fête de la bière", es = "Fiesta de la Cerveza", pt = "Festival da Cerveja", ru = "Хмельной фест", pl = "Piwne Święto", tr = "Bira Festivali", it = "Festa della Birra", ja = "ブルーフェスト", zh = "美酒节", ko = "가을 축제" }
+currency = { en = "Brewfest Tokens", de = "Braufestmarken", fr = "Jetons de la fête de la bière", es = "Fichas de la Fiesta de la Cerveza", pt = "Fichas do Festival da Cerveja", ru = "Жетоны Хмельного феста", pl = "Żetony Piwnego Święta", tr = "Bira Festivali Jetonları", it = "Gettoni della Festa della Birra", ja = "ブルーフェスト・トークン", zh = "美酒节代币", ko = "가을 축제 주화" }
+when = { yearly = { from = [9, 20], to = [10, 6] } }
+looks = [
+    { name = { en = "Thirsty Ram", de = "Durstiger Widder", fr = "Bélier assoiffé", es = "Carnero sediento", pt = "Carneiro Sedento", ru = "Жаждущий баран", pl = "Spragniony baran", tr = "Susamış Koç", it = "Ariete assetato", ja = "喉の渇いたラム", zh = "口渴的公羊", ko = "목마른 산양" }, display_id = 10000, creature_type = 1, size = 1.0 },
+    { name = { en = "Rowdy Ram", de = "Rüpelhafter Widder", fr = "Bélier tapageur", es = "Carnero alborotador", pt = "Carneiro Arruaceiro", ru = "Буйный баран", pl = "Hałaśliwy baran", tr = "Yaramaz Koç", it = "Ariete scatenato", ja = "暴れラム", zh = "喧闹的公羊", ko = "난폭한 산양" }, display_id = 10001, creature_type = 1, size = 1.0 },
+    { name = { en = "Brewfest Kodo", de = "Braufestkodo", fr = "Kodo de la fête de la bière", es = "Kodo de la Fiesta de la Cerveza", pt = "Kodo do Festival da Cerveja", ru = "Кодо Хмельного феста", pl = "Kodo Piwnego Święta", tr = "Bira Festivali Kodosu", it = "Kodo della Festa della Birra", ja = "ブルーフェストのコド", zh = "美酒节科多兽", ko = "가을 축제 코도" }, display_id = 179, creature_type = 1, size = 0.6 },
+    { name = { en = "Dark Iron Reveler", de = "Dunkeleisenzecher", fr = "Fêtard Sombrefer", es = "Juerguista Hierro Negro", pt = "Festeiro Ferro Negro", ru = "Гуляка Черного Железа", pl = "Hulaka z Mrocznego Żelaza", tr = "Kara Demir Eğlenceci", it = "Gozzovigliatore Ferroscuro", ja = "ダークアイアンの酔客", zh = "黑铁狂欢者", ko = "검은무쇠 술꾼" }, display_id = 19321, creature_type = 7, size = 1.0 },
+]
+elite = { name = { en = "Coren Direbrew", de = "Coren Düsterbräu", fr = "Coren Navrebière", es = "Coren Cerveza Funesta", pt = "Coren Cerveja Sinistra", ru = "Корен Худовар", pl = "Coren Strasznopiwny", tr = "Coren Direbrew", it = "Coren Malbirra", ja = "コレン・ダイアブルー", zh = "科林·烈酒", ko = "코렌 다이어브루" }, display_id = 21824, creature_type = 7, size = 1.3 }
+token = [3091, 1.6]
+snow = false
+shop = [
+    [{ mount = "brewfest_ram" }, 600], [{ horns = "ram" }, 250],
+    [{ name_style = "ancient_bronze" }, 250], [{ kill_fx = "gold" }, 250],
+    [{ emote = "dwarf_jig" }, 120], [{ emote = "tavern_cheer" }, 120],
+]
+
+[[holiday]]
+key = "darkmoon"
+name = { en = "Darkmoon Faire", de = "Dunkelmond-Jahrmarkt", fr = "Foire de Sombrelune", es = "Feria de la Luna Negra", pt = "Feira da Lua Negra", ru = "Ярмарка Новолуния", pl = "Jarmark Mrocznego Księżyca", tr = "Kararay Panayırı", it = "Fiera di Lunacupa", ja = "ダークムーン・フェア", zh = "暗月马戏团", ko = "다크문 축제" }
+currency = { en = "Darkmoon Tickets", de = "Dunkelmondlose", fr = "Tickets de Sombrelune", es = "Entradas de la Luna Negra", pt = "Bilhetes da Lua Negra", ru = "Билеты Новолуния", pl = "Bilety Mrocznego Księżyca", tr = "Kararay Biletleri", it = "Biglietti di Lunacupa", ja = "ダークムーン・チケット", zh = "暗月奖券", ko = "다크문 입장권" }
+when = "monthly"
+looks = [
+    { name = { en = "Darkmoon Tonk", de = "Dunkelmondpanzer", fr = "Tonk de Sombrelune", es = "Tonk de la Luna Negra", pt = "Tonk da Lua Negra", ru = "Тонк Новолуния", pl = "Czołg z Mrocznego Księżyca", tr = "Kararay Tankı", it = "Tonk di Lunacupa", ja = "ダークムーン・トンク", zh = "暗月坦克", ko = "다크문 탱크" }, display_id = 15381, creature_type = 9, size = 1.0 },
+    { name = { en = "Rigged Tonk", de = "Manipulierter Panzer", fr = "Tonk truqué", es = "Tonk trucado", pt = "Tonk Viciado", ru = "Подстроенный тонк", pl = "Sfuszerowany czołg", tr = "Hileli Tank", it = "Tonk truccato", ja = "イカサマ・トンク", zh = "被操纵的坦克", ko = "조작된 탱크" }, display_id = 15382, creature_type = 9, size = 1.0 },
+    { name = { en = "Murloc Mascot", de = "Murlocmaskottchen", fr = "Mascotte murloc", es = "Mascota múrloc", pt = "Mascote Murloc", ru = "Мурлок-талисман", pl = "Maskotka murloków", tr = "Murloc Maskotu", it = "Mascotte murloc", ja = "マーロックのマスコット", zh = "鱼人吉祥物", ko = "멀록 마스코트" }, display_id = 21723, creature_type = 7, size = 1.0 },
+    { name = { en = "Prize Frog", de = "Preisfrosch", fr = "Grenouille-trophée", es = "Rana premiada", pt = "Sapo Premiado", ru = "Призовая лягушка", pl = "Nagrodowa żaba", tr = "Ödül Kurbağası", it = "Rana premio", ja = "景品のカエル", zh = "奖品青蛙", ko = "경품 개구리" }, display_id = 1924, creature_type = 1, size = 1.5 },
+]
+elite = { name = { en = "Big Top Tonk", de = "Zirkuspanzer", fr = "Tonk de chapiteau", es = "Tonk de carpa de circo", pt = "Tonk do Circo", ru = "Цирковой тонк", pl = "Czołg z wielkiego namiotu", tr = "Sirk Çadırı Tankı", it = "Tonk del tendone", ja = "大テントのトンク", zh = "大帐篷坦克", ko = "서커스 탱크" }, display_id = 17563, creature_type = 9, size = 0.8 }
+token = [6142, 0.35]
+snow = false
+shop = [
+    [{ mount = "darkmoon_zhevra" }, 400], [{ horns = "mask_darkmoon" }, 150],
+    [{ horns = "hat_jester" }, 150], [{ name_style = "prismatic" }, 350],
+    [{ kill_fx = "lightning" }, 200], [{ emote = "goblin_party" }, 100],
+]

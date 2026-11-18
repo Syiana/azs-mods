@@ -1,0 +1,16 @@
+# Hungarfen: Foul Spores, the Underbog's acid.
+
+[[boss]]
+key = "hungarfen"
+
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 31673, radius = 9.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 38739, burst = 38739, radius = 5.0, warn = 2.5, factor = 1.8, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

@@ -1,0 +1,5 @@
+# The base game: classic classes, zones and everything every other pack builds on.
+key = "base"
+requires = []
+expansion = "classic"
+order = 0

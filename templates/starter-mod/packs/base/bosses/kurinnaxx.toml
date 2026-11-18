@@ -1,0 +1,20 @@
+# Kurinnaxx's abilities, Gates of Ahn'Qiraj.
+
+[[boss]]
+key = "kurinnaxx"
+
+[[boss.kit]]
+every = 7.0
+ability = { pool = { spell = 25648, burst = 0, radius = 5.0, warn = 2.6, factor = 2.4 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 25656, count = 4, radius = 4.0, spread = 10.0, warn = 1.4, factor = 2.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

@@ -1,0 +1,105 @@
+# The warlock's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: play splash [shadow_bolt] share 0.50, +round(2p) enemies
+[[set_bonus]]
+key = "warlock_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Shadow Bolt pierces to {v} more enemies for 50% of its damage.", de = "Schattenblitz durchschlägt {v} weitere Feinde, für 50% seines Schadens.", fr = "Trait de l'ombre transperce {v} ennemis de plus pour 50% de ses dégâts.", es = "Descarga de las Sombras atraviesa a {v} enemigos más con un 50% de su daño.", pt = "Seta Sombria atravessa mais {v} inimigos com 50% do seu dano.", ru = "«Стрела Тьмы» пробивает дополнительных врагов ({v}) с 50% урона.", pl = "Pocisk Cienia przebija się do {v} kolejnych wrogów, zadając 50% swoich obrażeń.", tr = "Shadow Bolt, hasarının %50'si ile {v} düşmanı daha deler.", it = "Dardo d'ombra trapassa {v} nemici in più per il 50% dei suoi danni.", ja = "シャドウ・ボルトが追加で{v}体の敵を貫通し、そのダメージの50%を与えます。", zh = "暗影箭可穿透{v}个额外的敌人，造成相当于其伤害50%的伤害。", ko = "어둠의 화살이 적을 {v}명 더 관통하며 피해의 50%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 2.0, play = { splash = { keys = ["shadow_bolt"], share = 0.5, radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+# Original: play dot_spread [curse_of_agony] to round(2p) enemies on death
+[[set_bonus]]
+key = "warlock_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "When its victim dies, Curse of Agony leaps to {v} enemies near it.", de = "Stirbt sein Opfer, springt Fluch der Pein auf {v} Feinde in dessen Nähe über.", fr = "Quand sa victime meurt, Malédiction d'agonie saute sur {v} ennemis proches.", es = "Cuando su víctima muere, Maldición de agonía salta a {v} enemigos cercanos.", pt = "Quando a vítima morre, Maldição da Agonia salta para {v} inimigos próximos.", ru = "Когда жертва умирает, «Проклятие агонии» перескакивает на ближайших к ней врагов: {v}.", pl = "Gdy ofiara ginie, Klątwa Agonii przeskakuje na {v} pobliskich wrogów.", tr = "Kurbanı öldüğünde Curse of Agony yakınındaki {v} düşmana sıçrar.", it = "Quando la sua vittima muore, Maledizione dell'agonia balza su {v} nemici vicini.", ja = "カース・オブ・アゴニーの対象が死ぬと、近くの敵{v}体に飛び移ります。", zh = "当目标死亡时，痛苦诅咒会跳跃到附近的{v}个敌人身上。", ko = "고통의 저주에 걸린 적이 죽으면 근처의 적 {v}명에게 옮겨 갑니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 2.0, play = { dot_spread = { keys = ["curse_of_agony"], radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+# Original: mod targets [drain_life] +v
+[[set_bonus]]
+key = "warlock_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Drain Life drains {v} more enemies at once.", de = "Blutsauger entzieht {v} weiteren Feinden gleichzeitig Leben.", fr = "Drain de vie draine {v} ennemis de plus à la fois.", es = "Drenar vida drena a {v} enemigos más a la vez.", pt = "Drenar Vida drena mais {v} inimigos ao mesmo tempo.", ru = "«Похищение жизни» вытягивает жизнь сразу из дополнительных врагов: {v}.", pl = "Wyssanie Życia wysysa naraz o {v} wrogów więcej.", tr = "Drain Life aynı anda {v} düşmanı daha emer.", it = "Risucchio vitale risucchia {v} nemici in più contemporaneamente.", ja = "ドレイン・ライフが同時に吸い取る敵が{v}体増えます。", zh = "吸取生命可同时额外吸取{v}个敌人。", ko = "생명력 흡수가 적 {v}명에게서 더 동시에 흡수합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["drain_life"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+# Original: play hit_dot [rain_of_fire] 0.30p of the hit over 3 s
+[[set_bonus]]
+key = "warlock_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Rain of Fire sets enemies burning for {v}% of its hit over 3 sec.", de = "Feuerregen setzt Feinde in Brand, für {v}% seines Treffers über 3 Sek.", fr = "Pluie de feu enflamme les ennemis pour {v}% de son impact en 3 s.", es = "Lluvia de Fuego hace arder a los enemigos por el {v}% de su golpe durante 3 s.", pt = "Chuva de Fogo incendeia os inimigos por {v}% do golpe ao longo de 3 s.", ru = "«Огненный ливень» поджигает врагов на {v}% своего удара в течение 3 сек.", pl = "Deszcz Ognia podpala wrogów, zadając {v}% swojego trafienia przez 3 s.", tr = "Rain of Fire düşmanları 3 sn boyunca vuruşunun %{v}'i kadar yakar.", it = "Pioggia di fuoco incendia i nemici per il {v}% del suo colpo in 3 sec.", ja = "レイン・オブ・ファイアが敵を燃やし、3秒かけてその攻撃の{v}%のダメージを与えます。", zh = "火焰之雨会点燃敌人，在3秒内造成相当于其伤害{v}%的伤害。", ko = "불의 비가 적을 불태워 3초에 걸쳐 그 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.3, play = { hit_dot = { keys = ["rain_of_fire"], secs = 3.0 } } }]
+shows = "v"
+percent = true
+
+# Original: mod targets [corruption] +v; mod damage +0.25p
+[[set_bonus]]
+key = "warlock_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Corruption strikes {v} more enemies and deals {v2}% more damage.", de = "Verderbnis trifft {v} Feinde mehr und verursacht {v2}% mehr Schaden.", fr = "Corruption frappe {v} ennemis de plus et inflige {v2}% de dégâts en plus.", es = "Corrupción alcanza a {v} enemigos más e inflige un {v2}% más de daño.", pt = "Corrupção atinge mais {v} inimigos e causa {v2}% a mais de dano.", ru = "«Порча» поражает больше врагов (+{v}) и наносит на {v2}% больше урона.", pl = "Zepsucie trafia o {v} wrogów więcej i zadaje {v2}% więcej obrażeń.", tr = "Corruption {v} düşmana daha vurur ve %{v2} daha fazla hasar verir.", it = "Corruzione colpisce {v} nemici in più e infligge il {v2}% di danni in più.", ja = "コラプションが追加で{v}体の敵に命中し、ダメージが{v2}%増加します。", zh = "腐蚀术额外击中{v}个敌人，造成的伤害提高{v2}%。", ko = "부패가 적을 {v}명 더 공격하고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["corruption"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["corruption"] }]
+mods_v = 0.25
+shows = "v2"
+percent = true
+
+# Original: mod targets +v; damage +0.5; cooldown 0.40; play hit_rider flee 3 s; stat vs_held +0.6p
+[[set_bonus]]
+key = "warlock_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Death Coil strikes {v} more enemies, deals 50% more damage, horrifies them for 3 sec and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Todesmantel trifft {v} weitere Feinde, verursacht 50% mehr Schaden, entsetzt sie 3 Sek. lang und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Voile mortel frappe {v} ennemis de plus, inflige 50% de dégâts en plus, les horrifie 3 s et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Espiral de la muerte golpea a {v} enemigos más, inflige un 50% más de daño, los horroriza 3 s y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Espiral da Morte atinge {v} inimigos a mais, causa 50% mais dano, os horroriza por 3 s e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Лик смерти поражает ещё {v} противников, наносит на 50% больше урона, ужасает их на 3 сек. и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Zwój śmierci trafia {v} kolejnych wrogów, zadaje o 50% więcej obrażeń, przeraża ich na 3 s i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Ölüm Sarmalı {v} düşmana daha vurur, %50 daha fazla hasar verir, onları 3 sn dehşete düşürür ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Spira della morte colpisce {v} nemici in più, infligge il 50% di danni in più, li terrorizza per 3 sec e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "デス・コイルが追加で{v}体の敵に命中し、ダメージが50%増加し、敵を3秒間恐慌させ、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "死亡缠绕额外击中{v}个敌人，造成的伤害提高50%，使其惊骇3秒，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "죽음의 고리가 적을 {v}명 더 공격하고, 피해가 50% 증가하며, 3초 동안 적을 공포에 빠뜨리고, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["death_coil"] }]
+mods_v = 5.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["death_coil"] }]
+mods_v = 0.5
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["death_coil"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+plays = [{ v = 1.0, play = { hit_rider = { keys = ["death_coil"], rider = { flee = { secs = 3.0 } } } } }]
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 0.6] }]
+shows = "v2"
+percent = true

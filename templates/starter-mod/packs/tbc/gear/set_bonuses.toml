@@ -1,0 +1,20 @@
+# The 4-piece bonus of the tbc pack's gear tier `exotic`: two stats, the same for every class (the numbers are ours: TUNE).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# exotic: area of effect and movement speed
+[[set_bonus]]
+key = "exotic_4"
+tier = "exotic"
+pieces = 4
+text = { en = "+{v}% area of effect, +{v2}% movement speed", de = "+{v}% Wirkungsbereich, +{v2}% Bewegungstempo", fr = "+{v}% de zone d'effet, +{v2}% de vitesse de déplacement", es = "+{v}% de área de efecto, +{v2}% de velocidad de movimiento", pt = "+{v}% de área de efeito, +{v2}% de velocidade de movimento", ru = "+{v}% к области действия, +{v2}% к скорости передвижения", pl = "+{v}% obszaru działania, +{v2}% szybkości ruchu", tr = "+%{v} etki alanı, +%{v2} hareket hızı", it = "+{v}% area d'effetto, +{v2}% velocità di movimento", ja = "効果範囲+{v}%、移動速度+{v2}%", zh = "效果范围+{v}%，移动速度+{v2}%", ko = "효과 범위 +{v}%, 이동 속도 +{v2}%" }
+
+[[set_bonus.part]]
+effects = [{ stat = [40, 0.4] }]
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+effects = [{ stat = [7, 0.25] }]
+shows = "v2"
+percent = true

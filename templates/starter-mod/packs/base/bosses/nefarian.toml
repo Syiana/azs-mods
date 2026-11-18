@@ -1,0 +1,21 @@
+# Nefarian's abilities, Blackrock Mountain.
+
+[[boss]]
+key = "nefarian"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 686 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { cone = { spell = 22539, range = 40.0, arc = 180.0, warn = 2.0, factor = 3.2 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ nova = { spell = 22686, radius = 10.0, warn = 2.0 } }, { leap = { spell = 22686, radius = 7.0, reach = 18.0, warn = 1.6, factor = 2.2 } }], 1.6] }
+
+# AS's tag 29 (wards) not in: every 16 s.
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

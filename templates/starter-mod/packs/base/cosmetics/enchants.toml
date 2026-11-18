@@ -1,0 +1,513 @@
+# The shop's weapon enchants (survivors-sim enchants.rs): SpellItemEnchantment `id` and ItemVisuals `visual`.
+# patch-Q's Dancing Steel colours count from enchant 9201. `admin = true`: an admin's device alone.
+#
+# Every enchant: the Dancing Steel colours in patch-Q's order, then the stock glows, one enchant
+# to a visual (the shop's groups, SurvivorsWings.lua). `TUNE` the prices; price 0 is not sold:
+# the admins' (`ADMIN_ENCHANTS`) and the Game Pass's (`pass_only`, `crate::pass`).
+
+[[enchant]]
+key = "red"
+name = "Dancing Steel (Red)"
+price = 5000
+id = 9201
+visual = 9201
+
+[[enchant]]
+key = "gold"
+name = "Dancing Steel (Gold)"
+price = 6000
+id = 9202
+visual = 9202
+
+[[enchant]]
+key = "green"
+name = "Dancing Steel (Green)"
+price = 6000
+id = 9203
+visual = 9203
+
+[[enchant]]
+key = "cyan"
+name = "Dancing Steel (Cyan)"
+price = 6000
+id = 9204
+visual = 9204
+
+[[enchant]]
+key = "blue"
+name = "Dancing Steel (Blue)"
+price = 6000
+id = 9205
+visual = 9205
+
+[[enchant]]
+key = "purple"
+name = "Dancing Steel (Purple)"
+price = 7500
+id = 9206
+visual = 9206
+
+[[enchant]]
+key = "pink"
+name = "Dancing Steel (Pink)"
+price = 7500
+id = 9207
+visual = 9207
+
+[[enchant]]
+key = "white"
+name = "Dancing Steel (White)"
+price = 10000
+id = 9208
+visual = 9208
+
+[[enchant]]
+key = "crimson"
+name = "Dancing Steel (Crimson)"
+price = 7500
+id = 9209
+visual = 9209
+
+[[enchant]]
+key = "crusader"
+name = "Crusader"
+price = 2500
+id = 1900
+visual = 103
+
+[[enchant]]
+key = "fiery"
+name = "Fiery Weapon"
+price = 2500
+id = 803
+visual = 25
+
+[[enchant]]
+key = "icy"
+name = "Icy Weapon"
+price = 2500
+id = 1894
+visual = 126
+
+[[enchant]]
+key = "lifestealing"
+name = "Lifestealing"
+price = 2500
+id = 1898
+visual = 107
+
+[[enchant]]
+key = "unholy"
+name = "Unholy Weapon"
+price = 3500
+id = 1899
+visual = 161
+
+[[enchant]]
+key = "frost_oil"
+name = "Frost Oil"
+price = 1500
+id = 26
+visual = 27
+
+[[enchant]]
+key = "sharpened"
+name = "Sharpened"
+price = 1000
+id = 13
+visual = 28
+
+[[enchant]]
+key = "poison"
+name = "Deadly Poison"
+price = 1500
+id = 7
+visual = 26
+
+[[enchant]]
+key = "mongoose"
+name = "Mongoose"
+price = 6000
+id = 2673
+visual = 155
+
+[[enchant]]
+key = "battlemaster"
+name = "Battlemaster"
+price = 6000
+id = 2675
+visual = 159
+
+[[enchant]]
+key = "spellsurge"
+name = "Spellsurge"
+price = 6000
+id = 2674
+visual = 160
+
+[[enchant]]
+key = "executioner"
+name = "Executioner"
+price = 6000
+id = 3225
+visual = 165
+
+[[enchant]]
+key = "soulfrost"
+name = "Soulfrost"
+price = 6000
+id = 2672
+visual = 157
+
+[[enchant]]
+key = "sunfire"
+name = "Sunfire"
+price = 6000
+id = 2671
+visual = 158
+
+[[enchant]]
+key = "savagery"
+name = "Savagery"
+price = 6000
+id = 2667
+visual = 156
+
+[[enchant]]
+key = "azure_flame"
+name = "Azure Flame"
+price = 6000
+id = 425
+visual = 139
+
+[[enchant]]
+key = "berserking"
+name = "Berserking"
+price = 8000
+id = 3789
+visual = 178
+
+[[enchant]]
+key = "blood_draining"
+name = "Blood Draining"
+price = 8000
+id = 3870
+visual = 164
+
+[[enchant]]
+key = "blade_ward"
+name = "Blade Ward"
+price = 8000
+id = 3869
+visual = 186
+
+[[enchant]]
+key = "deathfrost"
+name = "Deathfrost"
+price = 8000
+id = 3273
+visual = 166
+
+[[enchant]]
+key = "frozen_rune"
+name = "Frozen Rune Weapon"
+price = 8000
+id = 3322
+visual = 1
+
+[[enchant]]
+key = "flametongue"
+name = "Flametongue"
+price = 4000
+id = 5
+visual = 32
+
+[[enchant]]
+key = "frostbrand"
+name = "Frostbrand"
+price = 4000
+id = 2
+visual = 33
+
+[[enchant]]
+key = "rockbiter"
+name = "Rockbiter"
+price = 4000
+id = 29
+visual = 61
+
+[[enchant]]
+key = "windfury"
+name = "Windfury"
+price = 4000
+id = 283
+visual = 81
+
+[[enchant]]
+key = "earthliving"
+name = "Earthliving"
+price = 4000
+id = 3345
+visual = 106
+
+[[enchant]]
+key = "glow_blue_faint"
+name = "Faint Blue Glow"
+price = 1000
+id = 943
+visual = 42
+
+[[enchant]]
+key = "glow_blue"
+name = "Blue Glow"
+price = 1500
+id = 805
+visual = 2
+
+[[enchant]]
+key = "glow_blue_bright"
+name = "Bright Blue Glow"
+price = 2500
+id = 1896
+visual = 24
+
+[[enchant]]
+key = "glow_green"
+name = "Green Glow"
+price = 1500
+id = 1103
+visual = 125
+
+[[enchant]]
+key = "glow_red"
+name = "Red Glow"
+price = 1500
+id = 249
+visual = 31
+
+[[enchant]]
+key = "glow_red_bright"
+name = "Bright Red Glow"
+price = 2500
+id = 1606
+visual = 101
+
+[[enchant]]
+key = "glow_yellow"
+name = "Yellow Glow"
+price = 1500
+id = 1890
+visual = 29
+
+[[enchant]]
+key = "glow_yellow_bright"
+name = "Bright Yellow Glow"
+price = 2500
+id = 3846
+visual = 102
+
+[[enchant]]
+key = "glow_white_bright"
+name = "Bright White Glow"
+price = 2500
+id = 3093
+visual = 104
+
+[[enchant]]
+key = "glow_purple_bright"
+name = "Bright Purple Glow"
+price = 2500
+id = 1743
+visual = 105
+
+[[enchant]]
+key = "flame_purple"
+name = "Purple Flame"
+price = 3000
+id = 3855
+visual = 128
+
+[[enchant]]
+key = "holy_light"
+name = "Holy Light"
+price = 3000
+id = 2343
+visual = 151
+
+[[enchant]]
+key = "admin"
+name = "Dancing Steel (Frost)"
+price = 0
+id = 9210
+visual = 9210
+admin = true
+
+[[enchant]]
+key = "admin_void"
+name = "Dancing Steel (Void)"
+price = 0
+id = 9211
+visual = 9211
+admin = true
+
+[[enchant]]
+key = "admin_starfall"
+name = "Dancing Steel (Starfall)"
+price = 0
+id = 9212
+visual = 9212
+admin = true
+
+[[enchant]]
+key = "admin_storm"
+name = "Dancing Steel (Storm)"
+price = 0
+id = 9213
+visual = 9213
+admin = true
+
+[[enchant]]
+key = "admin_runes"
+name = "Dancing Steel (Arcane Runes)"
+price = 0
+id = 9214
+visual = 9214
+admin = true
+
+[[enchant]]
+key = "admin_seraph"
+name = "Dancing Steel (Seraph Light)"
+price = 0
+id = 9215
+visual = 9215
+admin = true
+
+[[enchant]]
+key = "admin_sakura"
+name = "Dancing Steel (Sakura)"
+price = 0
+id = 9216
+visual = 9216
+admin = true
+
+# Game Pass season 2 (Secrets of Ulduar): Yogg-Saron's dark saronite violet. Its key stays
+[[enchant]]
+key = "void"
+name = "Dancing Steel (Saronite)"
+price = 0
+id = 9217
+visual = 9217
+
+# The second set (patch-Q from index 17): more hues, three streams (the smoothed glow) and
+# four with pictures of their own (embers, venom drops, sea foam, thorned vines).
+[[enchant]]
+key = "orange"
+name = "Dancing Steel (Orange)"
+price = 6000
+id = 9218
+visual = 9218
+
+[[enchant]]
+key = "lime"
+name = "Dancing Steel (Lime)"
+price = 6000
+id = 9219
+visual = 9219
+
+[[enchant]]
+key = "teal"
+name = "Dancing Steel (Teal)"
+price = 6000
+id = 9220
+visual = 9220
+
+[[enchant]]
+key = "sky"
+name = "Dancing Steel (Sky)"
+price = 6000
+id = 9221
+visual = 9221
+
+[[enchant]]
+key = "indigo"
+name = "Dancing Steel (Indigo)"
+price = 7500
+id = 9222
+visual = 9222
+
+[[enchant]]
+key = "magenta"
+name = "Dancing Steel (Magenta)"
+price = 7500
+id = 9223
+visual = 9223
+
+[[enchant]]
+key = "rose_steel"
+name = "Dancing Steel (Rose)"
+price = 7500
+id = 9224
+visual = 9224
+
+[[enchant]]
+key = "dusk"
+name = "Dancing Steel (Dusk)"
+price = 7500
+id = 9225
+visual = 9225
+
+[[enchant]]
+key = "obsidian_steel"
+name = "Dancing Steel (Obsidian)"
+price = 10000
+id = 9226
+visual = 9226
+
+[[enchant]]
+key = "amber"
+name = "Dancing Steel (Amber Stream)"
+price = 9000
+id = 9227
+visual = 9227
+
+[[enchant]]
+key = "azure"
+name = "Dancing Steel (Azure Stream)"
+price = 9000
+id = 9228
+visual = 9228
+
+[[enchant]]
+key = "verdant"
+name = "Dancing Steel (Verdant Stream)"
+price = 9000
+id = 9229
+visual = 9229
+
+[[enchant]]
+key = "ember_steel"
+name = "Dancing Steel (Ember)"
+price = 12000
+id = 9230
+visual = 9230
+
+[[enchant]]
+key = "venom_steel"
+name = "Dancing Steel (Venom)"
+price = 12000
+id = 9231
+visual = 9231
+
+[[enchant]]
+key = "tide"
+name = "Dancing Steel (Tide)"
+price = 12000
+id = 9232
+visual = 9232
+
+[[enchant]]
+key = "thorn"
+name = "Dancing Steel (Thorn)"
+price = 12000
+id = 9233
+visual = 9233

@@ -1,0 +1,303 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "zulaman"
+order = 20
+name = { en = "Zul'Aman", de = "Zul'Aman", fr = "Zul'Aman", es = "Zul'Aman", pt = "Zul'Aman", ru = "Зул'Аман", pl = "Zul'Aman", tr = "Zul'Aman", it = "Zul'Aman", ja = "ズル・アマン", zh = "祖阿曼", ko = "줄아만" }
+subtitle = { en = "The Amani Return", de = "Die Rückkehr der Amani", fr = "Le retour des Amani", es = "El regreso de los Amani", pt = "O Retorno dos Amani", ru = "Возвращение Амани", pl = "Powrót Amani", tr = "Amani Geri Dönüyor", it = "Gli Amani ritornano", ja = "アマニの帰還", zh = "阿曼尼的归来", ko = "아마니의 귀환" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Ghostlands"
+map = 530
+map_name = "Expansion01"
+area = 3805
+center = [7016.7, -7233.3]
+radius = 100.0
+map_bounds = [-5283.33, -8583.33, 8266.67, 6066.67]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 11.24
+gold_factor = 3.2
+late_factor = 0.4
+hour = 19
+weather = { fine = 75, rain = 25 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [7023.9653, -7433.519]
+turn = 0
+yaw = 0.0
+pitch = 26.0
+distance = 23.5
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 3800
+name = { en = "Amani'shi Scout", de = "Späher der Amani'shi", fr = "Éclaireur amani'shi", es = "Explorador amani'shi", pt = "Batedor Amani'shi", ru = "Разведчик Амани'ши", pl = "Zwiadowca Amani'shi", tr = "Amani'shi Gözcüsü", it = "Esploratore Amani'shi", ja = "アマニシの斥候", zh = "阿曼尼斥候", ko = "아마니쉬 정찰병" }
+type = "humanoid"
+display = 10434
+icon = "INV_Misc_Head_Troll_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 3801
+name = { en = "Amani Dragonhawk", de = "Drachenfalke der Amani", fr = "Faucon-dragon amani", es = "Halcón dragón amani", pt = "Falcodrago Amani", ru = "Дракондор Амани", pl = "Smoczy jastrząb Amani", tr = "Amani Ejderşahini", it = "Falcodrago Amani", ja = "アマニ・ドラゴンホーク", zh = "阿曼尼龙鹰", ko = "아마니 용매" }
+type = "beast"
+display = 17545
+icon = "Ability_Hunter_Pet_DragonHawk"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.8
+
+[[zone.enemy]]
+entry = 3802
+name = { en = "Amani Lynx", de = "Luchs der Amani", fr = "Lynx amani", es = "Lince amani", pt = "Lince Amani", ru = "Рысь Амани", pl = "Ryś Amani", tr = "Amani Vaşağı", it = "Lince Amani", ja = "アマニ・リンクス", zh = "阿曼尼山猫", ko = "아마니 스라소니" }
+type = "beast"
+display = 15591
+icon = "Ability_Hunter_Pet_Cat"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.9
+
+[[zone.enemy]]
+entry = 3803
+name = { en = "Amani'shi Flame Caster", de = "Flammenwirker der Amani'shi", fr = "Lance-flammes amani'shi", es = "Lanzallamas amani'shi", pt = "Lança-chamas Amani'shi", ru = "Огнеметатель Амани'ши", pl = "Miotacz płomieni Amani'shi", tr = "Amani'shi Alev Büyücüsü", it = "Incantatore di fiamme Amani'shi", ja = "アマニシ・フレイムキャスター", zh = "阿曼尼火焰施法者", ko = "아마니쉬 화염술사" }
+type = "humanoid"
+display = 22259
+icon = "INV_Misc_Head_Troll_02"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3804
+name = { en = "Amani Bear", de = "Bär der Amani", fr = "Ours amani", es = "Oso amani", pt = "Urso Amani", ru = "Медведь Амани", pl = "Niedźwiedź Amani", tr = "Amani Ayısı", it = "Orso Amani", ja = "アマニ・ベア", zh = "阿曼尼熊", ko = "아마니 곰" }
+type = "beast"
+display = 820
+icon = "Ability_Hunter_Pet_Bear"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 3805
+name = { en = "Amani'shi Guardian", de = "Wächter der Amani'shi", fr = "Gardien amani'shi", es = "Guardián amani'shi", pt = "Guardião Amani'shi", ru = "Хранитель Амани'ши", pl = "Strażnik Amani'shi", tr = "Amani'shi Muhafızı", it = "Guardiano Amani'shi", ja = "アマニシ・ガーディアン", zh = "阿曼尼守护者", ko = "아마니쉬 수호병" }
+type = "humanoid"
+display = 22301
+icon = "INV_Misc_Head_Troll_01"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+
+[[zone.enemy]]
+entry = 3806
+name = { en = "Amani Eagle", de = "Adler der Amani", fr = "Aigle amani", es = "Águila amani", pt = "Águia Amani", ru = "Орел Амани", pl = "Orzeł Amani", tr = "Amani Kartalı", it = "Aquila Amani", ja = "アマニ・イーグル", zh = "阿曼尼雄鹰", ko = "아마니 독수리" }
+type = "beast"
+display = 22254
+icon = "Ability_Hunter_Pet_Owl"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.6
+
+[[zone.enemy]]
+entry = 3807
+name = { en = "Amani'shi Hexer", de = "Verhexer der Amani'shi", fr = "Jeteur de sorts amani'shi", es = "Brujo amani'shi", pt = "Enfeitiçador Amani'shi", ru = "Колдун Амани'ши", pl = "Rzucający uroki Amani'shi", tr = "Amani'shi Büyücüsü", it = "Maledicente Amani'shi", ja = "アマニシの呪術師", zh = "阿曼尼妖术师", ko = "아마니쉬 주술사" }
+type = "humanoid"
+display = 22313
+icon = "INV_Misc_Head_Troll_02"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3808
+name = { en = "Amani Crocolisk", de = "Krokilisk der Amani", fr = "Crocolisque amani", es = "Crocolisco amani", pt = "Crocolisco Amani", ru = "Кроколиск Амани", pl = "Krokodyl Amani", tr = "Amani Timsahı", it = "Crocolisco Amani", ja = "アマニ・クロコリスク", zh = "阿曼尼鳄鱼", ko = "아마니 악어" }
+type = "beast"
+display = 1609
+icon = "Ability_Hunter_Pet_Crocolisk"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 1.1
+
+[[zone.elite]]
+entry = 3810
+name = { en = "Amani'shi Warbringer", de = "Kriegshetzer der Amani'shi", fr = "Porteguerre amani'shi", es = "Belicista amani'shi", pt = "Belicista Amani'shi", ru = "Несущий войну Амани'ши", pl = "Zwiastun wojny Amani'shi", tr = "Amani'shi Savaş Getiren", it = "Araldo di guerra Amani'shi", ja = "アマニシ・ウォーブリンガー", zh = "阿曼尼战争使者", ko = "아마니쉬 전쟁인도자" }
+type = "humanoid"
+display = 22322
+icon = "INV_Misc_Head_Troll_01"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.6
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 3811
+name = { en = "Amani Elder Bear", de = "Uralter Bär der Amani", fr = "Ours ancien amani", es = "Oso anciano amani", pt = "Urso Ancião Amani", ru = "Древний медведь Амани", pl = "Starszy niedźwiedź Amani", tr = "Amani Yaşlı Ayısı", it = "Orso anziano Amani", ja = "アマニ・エルダーベア", zh = "阿曼尼老熊", ko = "늙은 아마니 곰" }
+type = "beast"
+display = 1082
+icon = "Ability_Hunter_Pet_Bear"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.2
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 6.0, warn = 1.4, knock = 9.0 } }], 1.0] }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 3812
+name = { en = "Amani Dragonhawk Matriarch", de = "Drachenfalkenmatriarchin der Amani", fr = "Matriarche faucon-dragon amani", es = "Matriarca de halcones dragón amani", pt = "Matriarca Falcodrago Amani", ru = "Матриарх дракондоров Амани", pl = "Matriarchini smoczych jastrzębi Amani", tr = "Amani Ejderşahini Matriği", it = "Matriarca dei falcodraghi Amani", ja = "アマニ・ドラゴンホークの女家長", zh = "阿曼尼龙鹰女族长", ko = "아마니 용매 여왕" }
+type = "beast"
+display = 19259
+icon = "Ability_Hunter_Pet_DragonHawk"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.1
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16396, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 2120, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.boss]]
+entry = 3890
+name = { en = "Nalorakk", de = "Nalorakk", fr = "Nalorakk", es = "Nalorakk", pt = "Nalorakk", ru = "Налоракк", pl = "Nalorakk", tr = "Nalorakk", it = "Nalorakk", ja = "ナロラック", zh = "纳洛拉克", ko = "날로라크" }
+type = "beast"
+display = 706
+icon = "Ability_Hunter_Pet_Bear"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.6
+minute = 4
+yell = { en = "You be dead soon enough!", de = "Ihr seid bald tot!", fr = "Vous serez bientôt morts !", es = "¡Pronto estaréis muertos!", pt = "Vocês logo estarão mortos!", ru = "Скоро вы будете мертвы!", pl = "Wkrótce będziecie martwi!", tr = "Çok yakında ölmüş olacaksınız!", it = "Presto sarete morti!", ja = "お前、すぐに死ぬ！", zh = "你们很快就会死！", ko = "너 곧 죽는다!" }
+kit = "nalorakk"
+
+[[zone.boss]]
+entry = 3891
+name = { en = "Akil'zon", de = "Akil'zon", fr = "Akil'zon", es = "Akil'zon", pt = "Akil'zon", ru = "Акил'зон", pl = "Akil'zon", tr = "Akil'zon", it = "Akil'zon", ja = "アキルゾン", zh = "埃基尔松", ko = "아킬존" }
+type = "beast"
+display = 22106
+icon = "Ability_Hunter_Pet_Owl"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.0
+minute = 8
+yell = { en = "I be da predator! You da prey!", de = "Ich bin der Jäger! Ihr seid die Beute!", fr = "Moi être le prédateur ! Vous être la proie !", es = "¡Yo soy el depredador! ¡Vosotros, la presa!", pt = "Eu sou o predador! Vocês são a presa!", ru = "Я хищник! Вы добыча!", pl = "Ja drapieżnik! Wy zdobycz!", tr = "Ben avcıyım! Siz avsınız!", it = "Io essere predatore! Voi essere prede!", ja = "オレが捕食者！お前が獲物！", zh = "我是猎手！你们是猎物！", ko = "나 사냥꾼! 너 사냥감!" }
+kit = "akilzon"
+
+[[zone.boss]]
+entry = 3892
+name = { en = "Jan'alai", de = "Jan'alai", fr = "Jan'alai", es = "Jan'alai", pt = "Jan'alai", ru = "Джан'алай", pl = "Jan'alai", tr = "Jan'alai", it = "Jan'alai", ja = "ジャナライ", zh = "加亚莱", ko = "잔알라이" }
+type = "beast"
+display = 19259
+icon = "Ability_Hunter_Pet_DragonHawk"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.0
+minute = 12
+yell = { en = "Spirits of da wind be your doom!", de = "Die Geister des Windes sein euer Verderben!", fr = "Les esprits du vent être votre perte !", es = "¡Los espíritus del viento serán vuestra perdición!", pt = "Os espíritos do vento serão a sua ruína!", ru = "Духи ветра станут вашей погибелью!", pl = "Duchy wiatru będą waszą zgubą!", tr = "Rüzgarın ruhları sizin sonunuz olacak!", it = "Spiriti del vento essere la vostra rovina!", ja = "風の精霊がお前の破滅だ！", zh = "风之灵会带来你们的末日！", ko = "바람의 혼령이 너의 파멸이다!" }
+kit = "janalai"
+
+[[zone.boss]]
+entry = 3893
+name = { en = "Halazzi", de = "Halazzi", fr = "Halazzi", es = "Halazzi", pt = "Halazzi", ru = "Халаззи", pl = "Halazzi", tr = "Halazzi", it = "Halazzi", ja = "ハラッジ", zh = "哈尔拉兹", ko = "할라지" }
+type = "beast"
+display = 16244
+icon = "Ability_Hunter_Pet_Cat"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.4
+minute = 16
+yell = { en = "Get on ya knees and bow to da fang and claw!", de = "Auf die Knie und verneigt euch vor Fang und Klaue!", fr = "À genoux et inclinez-vous devant croc et griffe !", es = "¡De rodillas e inclinaos ante el colmillo y la garra!", pt = "De joelhos e curvem-se diante da presa e da garra!", ru = "На колени и склонитесь перед клыком и когтем!", pl = "Na kolana i pokłońcie się kłom i pazurom!", tr = "Diz çökün ve diş ile pençenin önünde eğilin!", it = "Mettetevi in ginocchio e inchinatevi a zanna e artiglio!", ja = "ひざまずけ、牙と爪にひれ伏せ！", zh = "跪下，向獠牙与利爪低头吧！", ko = "무릎 꿇고 송곳니와 발톱에 절해라!" }
+kit = "halazzi"
+
+[[zone.boss]]
+entry = 2009
+name = { en = "Zul'jin", de = "Zul'jin", fr = "Zul'jin", es = "Zul'jin", pt = "Zul'jin", ru = "Зул'джин", pl = "Zul'jin", tr = "Zul'jin", it = "Zul'jin", ja = "ズルジン", zh = "祖尔金", ko = "줄진" }
+type = "humanoid"
+display = 21899
+icon = "Achievement_Boss_Zuljin"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.1999999
+minute = 20
+yell = { en = "Nobody badduh dan me!", de = "Keiner is' härter als ich!", fr = "Personne être plus coriace que moi !", es = "¡Nadie es más duro que yo!", pt = "Ninguém é mais durão que eu!", ru = "Никто не круче меня!", pl = "Nikt nie jest gorszy ode mnie!", tr = "Kimse benden daha beter değil!", it = "Nessuno più cattivo di me!", ja = "オレより悪いヤツはいねえ！", zh = "没人比我更狠！", ko = "나보다 센 놈 없다!" }
+final = true
+kit = "zuljin"

@@ -1,0 +1,272 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "shadow_bolt"
+id = 686
+visual = 910129
+vfx = { source = 686, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 34
+cooldown = 1.4
+range = 30.0
+name = { en = "Shadow Bolt", de = "Schattenblitz", fr = "Trait de l'ombre", es = "Descarga de las Sombras", pt = "Seta Sombria", ru = "Стрела Тьмы", pl = "Strzała cienia", tr = "Gölge Oku", it = "Dardo d'ombra", ja = "シャドウ・ボルト", zh = "暗影箭", ko = "어둠의 화살" }
+icon = "Spell_Shadow_ShadowBolt"
+
+[[spell]]
+key = "corruption"
+id = 172
+visual = 910130
+vfx = { source = 172, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "shadow"
+shape = { dot = { targets = 2, secs = 6.0, ticks = 2, cap = 3 } }
+hit = 63
+cooldown = 1.4
+range = 30.0
+name = { en = "Corruption", de = "Verderbnis", fr = "Corruption", es = "Corrupción", pt = "Corrupção", ru = "Порча", pl = "Zepsucie", tr = "Yozlaştırma", it = "Corruzione", ja = "コラプション", zh = "腐蚀术", ko = "부패" }
+icon = "Spell_Shadow_AbominationExplosion"
+
+[[spell]]
+key = "immolate"
+id = 348
+visual = 910131
+vfx = { source = 348, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.4 }, impact = { model = "spells/fel_fire_impactdd_high_chest.mdx", slot = "chest", scale = 0.55 } }
+school = "fire"
+shape = { dot = { targets = 2, secs = 5.0, ticks = 2, cap = 3 } }
+hit = 69
+cooldown = 2.5
+range = 30.0
+name = { en = "Immolate", de = "Feuerbrand", fr = "Immolation", es = "Inmolar", pt = "Imolação", ru = "Жертвенный огонь", pl = "Podpalenie", tr = "Yak", it = "Immolazione", ja = "イモレート", zh = "献祭", ko = "제물" }
+icon = "Spell_Fire_Immolation"
+
+[[spell]]
+key = "curse_of_agony"
+id = 980
+visual = 910132
+vfx = { source = 980, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { dot = { targets = 3, secs = 9.0, ticks = 3, cap = 3 } }
+hit = 104
+cooldown = 3.0
+range = 30.0
+name = { en = "Curse of Agony", de = "Fluch der Pein", fr = "Malédiction d'agonie", es = "Maldición de agonía", pt = "Maldição da Agonia", ru = "Проклятие агонии", pl = "Klątwa agonii", tr = "Azap Laneti", it = "Maledizione dell'agonia", ja = "カース・オブ・アゴニー", zh = "痛苦诅咒", ko = "고통의 저주" }
+icon = "Spell_Shadow_CurseOfSargeras"
+
+[[spell]]
+key = "rain_of_fire"
+id = 5740
+visual = 910133
+vfx = { source = 5740, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "spells/fel_fire_impactdd_high_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 8.0 } }
+hit = 26
+cooldown = 8.0
+range = 30.0
+name = { en = "Rain of Fire", de = "Feuerregen", fr = "Pluie de feu", es = "Lluvia de fuego", pt = "Chuva de Fogo", ru = "Огненный ливень", pl = "Deszcz ognia", tr = "Ateş Yağmuru", it = "Pioggia di fuoco", ja = "レイン・オブ・ファイア", zh = "火焰之雨", ko = "불의 비" }
+icon = "Spell_Shadow_RainOfFire"
+
+[[spell]]
+key = "hellfire"
+id = 1949
+visual = 910134
+vfx = { source = 1949, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.4 }, impact = { model = "spells/fel_fire_impactdd_high_chest.mdx", slot = "chest", scale = 0.55 } }
+school = "fire"
+shape = { nova = { radius = 7.0 } }
+hit = 6
+cooldown = 1.5
+range = 7.0
+name = { en = "Hellfire", de = "Höllenfeuer", fr = "Flammes infernales", es = "Fuego infernal", pt = "Fogo do Inferno", ru = "Адское пламя", pl = "Piekielny ogień", tr = "Cehennem Ateşi", it = "Fuoco infernale", ja = "ヘルファイア", zh = "地狱烈焰", ko = "지옥의 불길" }
+icon = "Spell_Fire_Incinerate"
+
+[[spell]]
+key = "death_coil"
+id = 6789
+visual = 910135
+vfx = { source = 6789, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 75
+cooldown = 6.0
+range = 25.0
+rider = { drain = { pct = 100 } }
+name = { en = "Death Coil", de = "Todesmantel", fr = "Voile mortel", es = "Espiral de muerte", pt = "Espiral da Morte", ru = "Лик смерти", pl = "Splot śmierci", tr = "Ölüm Sarmalı", it = "Spira della morte", ja = "デス・コイル", zh = "死亡缠绕", ko = "죽음의 고리" }
+icon = "Spell_Shadow_DeathCoil"
+
+[[spell]]
+key = "searing_pain"
+id = 5676
+visual = 910136
+vfx = { source = 5676, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.4 }, impact = { model = "spells/fel_fire_impactdd_high_chest.mdx", slot = "chest", scale = 0.55 } }
+school = "fire"
+shape = { missiles = { count = 1 } }
+hit = 50
+cooldown = 1.6
+range = 26.0
+name = { en = "Searing Pain", de = "Sengender Schmerz", fr = "Douleur brûlante", es = "Dolor abrasador", pt = "Dor Lancinante", ru = "Жгучая боль", pl = "Palący ból", tr = "Kavurucu Acı", it = "Dolore bruciante", ja = "シアリング・ペイン", zh = "灼热之痛", ko = "불타는 고통" }
+icon = "Spell_Fire_SoulBurn"
+
+[[spell]]
+key = "drain_life"
+id = 689
+visual = 910137
+vfx = { source = 689, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { dot = { targets = 1, secs = 3.0, ticks = 3, cap = 1 } }
+hit = 58
+cooldown = 4.0
+range = 22.0
+rider = { drain = { pct = 60 } }
+name = { en = "Drain Life", de = "Blutsauger", fr = "Drain de vie", es = "Drenar vida", pt = "Drenar Vida", ru = "Похищение жизни", pl = "Wysysanie życia", tr = "Can Emme", it = "Risucchio vitale", ja = "ドレイン・ライフ", zh = "吸取生命", ko = "생명력 흡수" }
+icon = "Spell_Shadow_LifeDrain02"
+
+[[spell]]
+key = "fear"
+id = 5782
+visual = 910138
+vfx = { source = 5782, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { strike = { targets = 3 } }
+hit = 6
+cooldown = 6.0
+range = 20.0
+rider = { flee = { secs = 4.0 } }
+name = { en = "Fear", de = "Furcht", fr = "Peur", es = "Miedo", pt = "Medo", ru = "Страх", pl = "Strach", tr = "Korku", it = "Paura", ja = "フィアー", zh = "恐惧术", ko = "공포" }
+icon = "Spell_Shadow_Possession"
+
+[[spell]]
+key = "soul_fire"
+id = 6353
+visual = 910139
+vfx = { source = 6353, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "spells/fel_fire_impactdd_high_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { proc = { kind = "shards", radius = 0.0 } }
+hit = 600
+cooldown = 4.29
+range = 35.0
+name = { en = "Soulfire", de = "Seelenfeuer", fr = "Feu d'âme", es = "Fuego de alma", pt = "Fogo da Alma", ru = "Ожог души", pl = "Ogień duszy", tr = "Ruh Ateşi", it = "Fuoco dell'anima", ja = "ソウルファイア", zh = "灵魂之火", ko = "영혼의 불꽃" }
+icon = "Spell_Fire_Fireball02"
+
+# Wrath of the Lich King.
+[[spell]]
+key = "chaos_bolt"
+id = 50796
+visual = 910140
+vfx = { source = 50796, cast = { model = "spells/fel_fire_precast_hand.m2", slot = "rhand", scale = 0.6 }, impact = { model = "spells/fel_fire_impactdd_high_chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { strike = { targets = 1 } }
+hit = 158
+cooldown = 10.0
+range = 35.0
+name = { en = "Chaos Bolt", de = "Chaosblitz", fr = "Trait du chaos", es = "Descarga de caos", pt = "Seta do Caos", ru = "Стрела Хаоса", pl = "Pocisk chaosu", tr = "Kaos Oku", it = "Dardo del caos", ja = "カオス・ボルト", zh = "混乱之箭", ko = "혼돈의 화살" }
+icon = "Ability_Warlock_ChaosBolt"
+
+[[spell]]
+key = "haunt"
+id = 48181
+visual = 910141
+vfx = { source = 48181, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 68
+cooldown = 6.0
+range = 30.0
+rider = { drain = { pct = 50 } }
+name = { en = "Haunt", de = "Heimsuchung", fr = "Hanter", es = "Atormentar", pt = "Assombrar", ru = "Блуждающий дух", pl = "Nawiedzenie", tr = "Ürküt", it = "Infestare", ja = "ホーント", zh = "鬼影缠身", ko = "유령 출몰" }
+icon = "Ability_Warlock_Haunt"
+
+# Demonic Knowledge (replaces the pool's Seed of Corruption, a fourth damage over time beside
+# Corruption, Agony and Unstable Affliction): always on, never cast. A demon has no cards of its own,
+# so this spell's cards are the demons' level-ups: the damage lines make their blows hit harder, the
+# cooldown lines shorten the beat between blows (20 % at the most in all: `haste_cap`), the targets
+# lines make each blow strike that many more enemies, each for the whole blow. Dealt with the Imp's
+# talent, like Demonic Empowerment. The port's own, `TUNE`
+[[spell]]
+key = "demonic_knowledge"
+id = 35691
+school = "shadow"
+shape = { bond = { haste_cap = 20 } }
+hit = 0
+cooldown = 0.0
+range = 0.0
+needs = "demonic_familiar"
+legendary = false
+pet = { one = { en = "demon", de = "Dämon", fr = "démon", es = "demonio", pt = "demônio", ru = "демон", pl = "demon", tr = "şeytan", it = "demone", ja = "デーモン", zh = "恶魔", ko = "악마" }, many = { en = "demons", de = "Dämonen", fr = "démons", es = "demonios", pt = "demônios", ru = "демоны", pl = "demony", tr = "şeytanlar", it = "demoni", ja = "デーモン", zh = "恶魔", ko = "악마" } }
+name = { en = "Demonic Knowledge", de = "Dämonisches Wissen", fr = "Connaissance démoniaque", es = "Conocimiento demoníaco", pt = "Conhecimento Demoníaco", ru = "Знание демонов", pl = "Demoniczna wiedza", tr = "Şeytani Bilgi", it = "Conoscenza demoniaca", ja = "デモニック・ナレッジ", zh = "恶魔知识", ko = "악마의 지식" }
+icon = "Spell_Shadow_ImprovedVampiricEmbrace"
+
+[[spell]]
+key = "unstable_affliction"
+id = 30108
+visual = 910142
+vfx = { source = 30108, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { dot = { targets = 2, secs = 15.0, ticks = 5, cap = 3 } }
+hit = 96
+cooldown = 5.0
+range = 30.0
+name = { en = "Unstable Affliction", de = "Instabiles Gebrechen", fr = "Affliction instable", es = "Aflicción inestable", pt = "Sofrimento Instável", ru = "Нестабильное колдовство", pl = "Niestabilne cierpienie", tr = "Dengesiz Dert", it = "Afflizione instabile", ja = "アンステイブル・アフリクション", zh = "痛苦无常", ko = "불안정한 고통" }
+icon = "Spell_Shadow_UnstableAffliction_3"
+
+[[spell]]
+key = "shadowfury"
+id = 30283
+visual = 910143
+vfx = { source = 30283, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 }, area = { model = "Spells/Shadow_Fissure_Base.mdx", slot = "base", scale = 0.55 } }
+school = "shadow"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 1.0 } }
+hit = 51
+cooldown = 12.0
+range = 30.0
+rider = { stun = { secs = 2.0 } }
+name = { en = "Shadowfury", de = "Schattenfuror", fr = "Furie de l'ombre", es = "Furia de las Sombras", pt = "Fúria Sombria", ru = "Неистовство Тьмы", pl = "Furia cienia", tr = "Gölge Öfkesi", it = "Furia dell'ombra", ja = "シャドウフューリー", zh = "暗影之怒", ko = "어둠의 격노" }
+icon = "Spell_Shadow_Shadowfury"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "metamorphosis"
+id = 47241
+visual = 910144
+vfx = { source = 47241, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { fury = { pct = 35, secs = 12.0 } }
+hit = 0
+cooldown = 35.0
+range = 30.0
+name = { en = "Metamorphosis", de = "Metamorphose", fr = "Métamorphose", es = "Metamorfosis", pt = "Metamorfose", ru = "Метаморфоза", pl = "Metamorfoza", tr = "Başkalaşım", it = "Metamorfosi", ja = "メタモルフォーシス", zh = "恶魔变形", ko = "탈태" }
+icon = "Spell_Shadow_DemonForm"
+
+[[spell]]
+key = "shadowflame"
+id = 47897
+visual = 910145
+vfx = { source = 47897, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { cone = { length = 10.0 } }
+hit = 48
+cooldown = 6.0
+range = 10.0
+name = { en = "Shadowflame", de = "Schattenflamme", fr = "Flamme d'ombre", es = "Llama de las Sombras", pt = "Chama Sombria", ru = "Пламя Тьмы", pl = "Płomień cienia", tr = "Gölge Alevi", it = "Fiamma d'ombra", ja = "シャドウフレイム", zh = "暗影烈焰", ko = "어둠의 불꽃" }
+icon = "Ability_Warlock_ShadowFlame"
+
+# AS's own spell, which the port lacked: it comes with the Imp the Demonology tree gives. The
+# numbers are ours (`TUNE`): the demons hit 20% harder and 30% faster for 11 sec.
+[[spell]]
+key = "demonic_empowerment"
+id = 47193
+visual = 910146
+vfx = { source = 47193, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDD_High_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { empower = { more = 20, haste = 30, secs = 11.0 } }
+hit = 0
+cooldown = 30.0
+range = 0.0
+needs = "demonic_familiar"
+pet = { one = { en = "demon", de = "Dämon", fr = "démon", es = "demonio", pt = "demônio", ru = "демон", pl = "demon", tr = "şeytan", it = "demone", ja = "デーモン", zh = "恶魔", ko = "악마" }, many = { en = "demons", de = "Dämonen", fr = "démons", es = "demonios", pt = "demônios", ru = "демоны", pl = "demony", tr = "şeytanlar", it = "demoni", ja = "デーモン", zh = "恶魔", ko = "악마" } }
+name = { en = "Demonic Empowerment", de = "Dämonische Ermächtigung", fr = "Renforcement démoniaque", es = "Potenciación demoníaca", pt = "Fortalecimento Demoníaco", ru = "Демоническое усиление", pl = "Demoniczne Wzmocnienie", tr = "Şeytani Güçlendirme", it = "Potenziamento demoniaco", ja = "デモニック・エンパワーメント", zh = "恶魔增效", ko = "악마 강화" }
+icon = "Ability_Warlock_DemonicEmpowerment"

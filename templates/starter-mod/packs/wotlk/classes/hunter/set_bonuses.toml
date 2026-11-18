@@ -1,0 +1,24 @@
+# Class set: The Great Hunt / Die große Jagd.
+[[set_bonus]]
+key = "hunter_mythic_8"
+tier = "mythic"
+pieces = 8
+scripted = true
+text = { en = "The Great Hunt: The first Kill Shot to hit an elite marks it as prey. Subsequent Concussive Shot hits reveal weaknesses. On its death, each weakness fires a random Aimed Shot, Concussive Shot or Arcane Shot at a nearby enemy.", de = "Die große Jagd: Der erste Treffer mit Tödlicher Schuss erklärt einen Elitegegner zur Beute. Weitere Treffer mit Erschütternder Schuss legen Schwachstellen frei. Beim Tod löst jede Schwachstelle einen zufälligen Gezielten Schuss, Erschütternden Schuss oder Arkanen Schuss auf einen Gegner in der Nähe aus.", fr = "La grande chasse : Le premier Tir mortel qui touche un ennemi d'élite le désigne comme proie. Les Traits de choc suivants révèlent ses points faibles. À sa mort, chaque point faible déclenche aléatoirement une Visée, un Trait de choc ou un Tir des arcanes sur un ennemi proche.", es = "La gran cacería: El primer Disparo mortal que golpea a un enemigo de élite lo marca como presa. Los impactos posteriores de Disparo de conmoción revelan puntos débiles. Al morir, cada punto débil lanza al azar un Disparo apuntado, un Disparo de conmoción o un Disparo arcano a un enemigo cercano.", pt = "A Grande Caçada: O primeiro Tiro Mortal a acertar um inimigo de elite o marca como presa. Tiros Concussivos subsequentes revelam pontos fracos. Ao morrer, cada ponto fraco dispara aleatoriamente um Tiro Certeiro, Tiro Concussivo ou Tiro Arcano contra um inimigo próximo.", ru = "Великая охота: Первый Убийственный выстрел по элитному противнику помечает его как добычу. Последующие попадания Контузящим выстрелом выявляют уязвимые места. После его гибели каждое уязвимое место запускает случайный Прицельный, Контузящий или Чародейский выстрел по ближайшему врагу.", it = "La grande caccia: Il primo Sparo letale che colpisce un nemico élite lo marchia come preda. I successivi Spari stordenti rivelano punti deboli. Alla sua morte, ogni punto debole scaglia casualmente un Tiro mirato, uno Sparo stordente o un Sparo arcano contro un nemico vicino.", pl = "Wielkie łowy: Pierwszy Strzał dobijający, który trafi elitarnego wroga, oznacza go jako zdobycz. Kolejne trafienia Wstrząsającym strzałem ujawniają słabe punkty. Po śmierci celu każdy słaby punkt wystrzeliwuje losowy Strzał mierzony, Wstrząsający strzał lub Magiczny strzał we wroga w pobliżu.", tr = "Büyük Av: Seçkin bir düşmana isabet eden ilk Öldürücü Atış onu av olarak işaretler. Sonraki Sarsıcı Atış isabetleri zayıf noktaları ortaya çıkarır. Av öldüğünde her zayıf nokta yakındaki bir düşmana rastgele Nişanlı Atış, Sarsıcı Atış veya Gizemli Atış yapar.", ja = "大いなる狩り：エリートに最初に命中したキル・ショットがその敵を獲物としてマークします。その後のコンカッシブ・ショットの命中で弱点が暴かれます。獲物が死ぬと、弱点1つごとにエイムド・ショット、コンカッシブ・ショット、アーケイン・ショットのいずれかが近くの敵に放たれます。", zh = "伟大狩猎：第一次击中精英的杀戮射击会将其标记为猎物。之后的震荡射击命中会揭示其弱点。它死亡时，每个弱点都会向附近的敌人随机发射一次瞄准射击、震荡射击或奥术射击。", ko = "위대한 사냥: 정예에게 처음 적중한 마무리 사격이 그 정예를 사냥감으로 표시합니다. 이후 충격포가 적중할 때마다 약점이 드러납니다. 사냥감이 죽으면 약점마다 근처의 적에게 조준 사격, 충격포, 신비한 사격 중 하나를 무작위로 발사합니다." }
+
+[[set_bonus]]
+key = "hunter_mythic_4"
+tier = "mythic"
+pieces = 4
+text = { en = "Concussive Shot and Arcane Shot deal 30% more damage and hit one additional target.", de = "Erschütternder Schuss und Arkaner Schuss verursachen 30% mehr Schaden und treffen ein weiteres Ziel.", fr = "Trait de choc et Tir des arcanes infligent 30 % de dégâts supplémentaires et touchent une cible supplémentaire.", es = "Disparo de conmoción y Disparo arcano infligen un 30 % más de daño y alcanzan un objetivo adicional.", pt = "Tiro Concussivo e Tiro Arcano causam 30% mais dano e atingem um alvo adicional.", ru = "Контузящий и Чародейский выстрелы наносят на 30% больше урона и поражают ещё одну цель.", it = "Sparo stordente e Sparo arcano infliggono il 30% di danni in più e colpiscono un bersaglio aggiuntivo.", pl = "Wstrząsający strzał i Magiczny strzał zadają o 30% więcej obrażeń i trafiają jeden dodatkowy cel.", tr = "Sarsıcı Atış ve Gizemli Atış %30 daha fazla hasar verir ve bir ek hedefi vurur.", ja = "コンカッシブ・ショットとアーケイン・ショットのダメージが30%増加し、追加で1体の対象に命中します。", zh = "震荡射击和奥术射击造成的伤害提高30%，并额外击中一个目标。", ko = "충격포와 신비한 사격의 피해가 30% 증가하고 대상을 1명 더 공격합니다." }
+
+[[set_bonus.part]]
+mods = [{ damage = ["concussive_shot", "arcane_shot"] }]
+mods_v = 0.30
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ targets = ["concussive_shot", "arcane_shot"] }]
+mods_v = 1.0
+whole = true
+fixed = true

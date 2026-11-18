@@ -1,0 +1,62 @@
+# Creeping Death, the rogue's Mythic set (the balance team's document of 2026-11-15, "Schleichender Tod
+# (Schurke, Mythic) - Ausarbeitung"). It replaces the old Mythic 8-piece (a Kidney Shot a step up from the PvP
+# set's) and gives the set a 4-piece of its own, which takes the place of the tier's shared one (+40% damage,
+# +20% cooldown: the text names none of those, so the rogue's gives none). The whole set works only in a run
+# whose talents took Deadly Poison (`needs`): without the talent neither bonus gives anything, and the hero
+# menu shows them asleep with the hint. Bleeds have no part in it.
+#
+# 4 pieces: Deadly Poison is laid only by Envenom, and it stacks: every hit of Envenom lays a stack of its
+# own (the talent's 40% a second of exactly that hit, for the talent's 8 sec), up to 5 on an enemy, a sixth replacing the stack
+# with the least time left (`poison_stacks`); Envenom goes for the enemies with the most stacks first. The run
+# starts with Envenom as well as the class's first spell (a card with no boosts, like the starter).
+[[set_bonus]]
+key = "rogue_mythic_4"
+tier = "mythic"
+pieces = 4
+needs = "deadly_poison"
+mechanic = { kind = "poison_stacks", spell = "envenom", talent = "deadly_poison", stacks = 5 }
+text = { en = "Creeping Death: Deadly Poison is now only triggered by Envenom and stacks up to 5 times per enemy. You also start every run with Envenom.", de = "Schleichender Tod: Tödliches Gift wird nur noch von Vergiften ausgelöst und stapelt sich bis zu 5-mal je Gegner. Du beginnst zusätzlich mit Vergiften.", fr = "Mort rampante : Poison mortel n'est plus déclenché que par Envenimer et se cumule jusqu'à 5 fois par ennemi. Vous commencez aussi chaque partie avec Envenimer.", es = "Muerte progresiva: Veneno mortal solo se activa con Envenenar y se acumula hasta 5 veces por enemigo. También empiezas cada partida con Envenenar.", pt = "Morte Rastejante: Veneno Letal agora só é ativado por Envenenar e se acumula até 5 vezes por inimigo. Você também começa cada partida com Envenenar.", ru = "Ползучая смерть: «Смертельный яд» теперь накладывается только «Отравлением» и суммируется до 5 раз на каждом противнике. Вы также начинаете каждый забег с «Отравлением».", pl = "Pełzająca śmierć: Zabójcza trucizna jest teraz nakładana tylko przez Zatrucie i kumuluje się do 5 razy na każdym wrogu. Zaczynasz też każdą rozgrywkę z Zatruciem.", tr = "Sinsi Ölüm: Ölümcül Zehir artık yalnızca Zehirle tarafından tetiklenir ve her düşmanda en fazla 5 kez birikir. Ayrıca her oyuna Zehirle ile başlarsın.", it = "Morte strisciante: Veleno letale viene ora attivato solo da Avvelenare e si accumula fino a 5 volte per nemico. Inizi anche ogni partita con Avvelenare.", ja = "忍び寄る死：デッドリー・ポイズンはエンヴェノムでのみ発動するようになり、敵1体につき最大5回まで重なります。さらに、毎回エンヴェノムを持った状態で始めます。", zh = "蔓延之死：致命药膏现在只会由毒伤触发，并且对每个敌人最多叠加5层。你还会在每场对局开始时拥有毒伤。", ko = "스며드는 죽음: 맹독성 독은 이제 독살로만 발동하며 적 하나당 최대 5번까지 중첩됩니다. 또한 매 런을 독살과 함께 시작합니다." }
+
+[[set_bonus.part]]
+effects = [{ start_with = "envenom" }]
+fixed = true
+
+# 8 pieces: Envenom deals {v2}% more damage (200%, empowered 300%): a factor of its own on the finished hit
+# (x3, empowered x4), multiplied with every other bonus, so the stacks, which carry 40% of that hit, and the
+# pools they feed grow with it. An enemy with all 5 stacks overdoses and becomes a Plague Carrier for 5 sec
+# (each own Envenom on it starts that over), at most 3 at a time (a higher rank displaces the lowest). At once
+# and then every second its stacks jump to {v} enemies (2, empowered 3) within 8 yd. A Plague Carrier that
+# dies leaves a Poison Pool for 6 sec, 5 yd wide, that slows by 30% and deals 30% of the Deadly Poison damage
+# the carrier took over its carrier time, in 6 ticks (`poison_carrier`); the pool's 30% does not empower. The
+# looks are 3.3.5a's: a carrier wears Unbound Plague (70911), a jump is Chain Lightning's bolt (421) turned
+# toward green, and the pool is the stock acid pool of Toxic Pool (38718: a persistent area of AcidBurn.mdx,
+# nothing else) turned toward turquoise. Acidmaw's Slime Pool (66883) was the first choice, but its visual
+# is a nature cast hand on the caster and no pool (Acidmaw's pool is a summoned creature), so the area the
+# pool is drawn from was empty and the pool invisible.
+[[set_bonus]]
+key = "rogue_mythic_8"
+tier = "mythic"
+pieces = 8
+needs = "deadly_poison"
+mechanic = { kind = "poison_carrier", spell = "envenom", talent = "deadly_poison", secs = 5.0, every = 1.0, jumps = 2, radius = 8.0, most = 3, pool_secs = 6.0, pool_radius = 5.0, pool_slow = 30, pool_share = 0.3, pool_ticks = 6, pool_most = 8, empowers = true, glow = 70911, jump_visual = 910909, pool_visual = 910910 }
+text = { en = "Creeping Death: Envenom deals {v2}% more damage. An enemy with 5 stacks of Deadly Poison overdoses and becomes a Plague Carrier for 5 sec; each further Envenom on it refreshes this. Every second its stacks jump to {v} enemies within 8 yd. Up to 3 Plague Carriers at once. When a Plague Carrier dies, it leaves a Poison Pool that slows enemies in it by 30% and deals them 30% of the Deadly Poison damage it took as a Plague Carrier over 6 sec. Up to 8 pools.", de = "Schleichender Tod: Vergiften verursacht {v2}% mehr Schaden. Ein Gegner mit 5 Stapeln Tödlichem Gift bekommt eine Überdosis und wird 5 Sek. lang zum Giftherd; jedes weitere Vergiften auf ihn frischt die Dauer auf. Jede Sekunde springen seine Stapel auf {v} Gegner im Umkreis von 8 m. Höchstens 3 Giftherde gleichzeitig. Stirbt ein Giftherd, hinterlässt er eine Giftlache, die Gegner darin um 30% verlangsamt und ihnen über 6 Sek. 30% des Schadens zufügt, den er als Giftherd durch Tödliches Gift erlitten hat. Höchstens 8 Lachen.", fr = "Mort rampante : Envenimer inflige {v2} % de dégâts en plus. Un ennemi avec 5 cumuls de Poison mortel subit une surdose et devient un Foyer de poison pendant 5 s ; chaque Envenimer supplémentaire sur lui prolonge cette durée. Chaque seconde, ses cumuls sautent sur {v} ennemis dans un rayon de 8 m. 3 Foyers de poison au maximum en même temps. Quand un Foyer de poison meurt, il laisse une Flaque de poison qui ralentit de 30 % les ennemis qui s'y trouvent et leur inflige, sur 6 s, 30 % des dégâts de Poison mortel qu'il a subis en tant que Foyer de poison. 8 flaques au maximum.", es = "Muerte progresiva: Envenenar inflige un {v2} % más de daño. Un enemigo con 5 acumulaciones de Veneno mortal sufre una sobredosis y se convierte durante 5 s en un Foco de veneno; cada Envenenar adicional sobre él renueva esa duración. Cada segundo, sus acumulaciones saltan a {v} enemigos en un radio de 8 m. Como máximo 3 Focos de veneno a la vez. Cuando un Foco de veneno muere, deja un Charco de veneno que ralentiza un 30 % a los enemigos en su interior y les inflige durante 6 s el 30 % del daño de Veneno mortal que sufrió como Foco de veneno. Como máximo 8 charcos.", pt = "Morte Rastejante: Envenenar causa {v2}% a mais de dano. Um inimigo com 5 acúmulos de Veneno Letal sofre uma overdose e vira um Foco de Veneno por 5 s; cada Envenenar adicional nele renova essa duração. A cada segundo, seus acúmulos saltam para {v} inimigos em um raio de 8 m. No máximo 3 Focos de Veneno ao mesmo tempo. Quando um Foco de Veneno morre, ele deixa uma Poça de Veneno que retarda em 30% os inimigos dentro dela e causa a eles, ao longo de 6 s, 30% do dano de Veneno Letal que ele sofreu como Foco de Veneno. No máximo 8 poças.", ru = "Ползучая смерть: «Отравление» наносит на {v2}% больше урона. Противник с 5 зарядами «Смертельного яда» получает передозировку и на 5 сек. становится Очагом яда; каждое следующее «Отравление» продлевает это время. Каждую секунду его заряды перескакивают на {v} противников в радиусе 8 м. Одновременно не более 3 Очагов яда. Когда Очаг яда погибает, он оставляет Лужу яда, которая замедляет находящихся в ней противников на 30% и в течение 6 сек. наносит им 30% урона от «Смертельного яда», полученного им как Очагом яда. Не более 8 луж.", pl = "Pełzająca śmierć: Zatrucie zadaje o {v2}% więcej obrażeń. Wróg z 5 ładunkami Zabójczej trucizny przedawkowuje i na 5 sek. staje się Ogniskiem trucizny; każde kolejne Zatrucie na nim odświeża ten czas. Co sekundę jego ładunki przeskakują na {v} wrogów w promieniu 8 m. Jednocześnie najwyżej 3 Ogniska trucizny. Gdy Ognisko trucizny ginie, zostawia Kałużę trucizny, która spowalnia wrogów w niej o 30% i zadaje im przez 6 sek. 30% obrażeń od Zabójczej trucizny, które poniosło jako Ognisko trucizny. Najwyżej 8 kałuż.", tr = "Sinsi Ölüm: Zehirle %{v2} daha fazla hasar verir. Ölümcül Zehir'in 5 birikimine sahip bir düşman aşırı doz alır ve 5 sn. boyunca Zehir Odağı olur; üzerindeki her yeni Zehirle bu süreyi yeniler. Her saniye birikimleri 8 m çevresindeki {v} düşmana sıçrar. Aynı anda en fazla 3 Zehir Odağı bulunur. Bir Zehir Odağı öldüğünde, içindeki düşmanları %30 yavaşlatan ve onlara 6 sn. boyunca Zehir Odağı olarak aldığı Ölümcül Zehir hasarının %30'unu veren bir Zehir Birikintisi bırakır. En fazla 8 birikinti.", it = "Morte strisciante: Avvelenare infligge il {v2}% di danni in più. Un nemico con 5 accumuli di Veleno letale va in overdose e diventa un Focolaio di veleno per 5 s; ogni Avvelenare successivo su di lui rinnova questa durata. Ogni secondo i suoi accumuli saltano su {v} nemici entro 8 m. Al massimo 3 Focolai di veleno alla volta. Quando un Focolaio di veleno muore, lascia una Pozza di veleno che rallenta del 30% i nemici al suo interno e infligge loro, in 6 s, il 30% dei danni di Veleno letale subiti come Focolaio di veleno. Al massimo 8 pozze.", ja = "忍び寄る死：エンヴェノムのダメージが{v2}%増加します。デッドリー・ポイズンが5重になった敵は過剰摂取状態になり、5秒間「毒の感染源」になります。その敵に再度エンヴェノムを当てると持続時間が更新されます。毎秒、その重なりは8m以内の{v}体の敵に飛び移ります。毒の感染源は同時に最大3体までです。毒の感染源が死ぬと「毒だまり」を残し、中の敵を30%減速させ、6秒かけて、その敵が毒の感染源だった間にデッドリー・ポイズンから受けたダメージの30%を与えます。毒だまりは最大8つまでです。", zh = "蔓延之死：毒伤造成的伤害提高{v2}%。拥有5层致命药膏的敌人会用药过量，并在5秒内成为毒源；对其再次使用毒伤会刷新持续时间。每秒，其层数会跳到8米内的{v}个敌人身上。同时最多有3个毒源。毒源死亡时会留下毒池，使池中的敌人减速30%，并在6秒内对其造成该敌人作为毒源时承受的致命药膏伤害的30%。最多8个毒池。", ko = "스며드는 죽음: 독살의 피해가 {v2}% 증가합니다. 맹독성 독이 5중첩된 적은 과다 복용 상태가 되어 5초 동안 독 보균자가 되며, 그 적에게 독살을 다시 맞히면 지속시간이 갱신됩니다. 매초 그 중첩이 8m 안의 적 {v}명에게 옮겨 갑니다. 독 보균자는 동시에 최대 3명까지입니다. 독 보균자가 죽으면 독 웅덩이를 남기며, 그 안의 적을 30% 감속시키고 6초에 걸쳐 독 보균자였던 동안 맹독성 독으로 입은 피해의 30%를 줍니다. 웅덩이는 최대 8개입니다." }
+
+# Envenom's damage factor: +200% (x3), empowered +300% (x4); the text shows it as `{v2}`.
+[[set_bonus.part]]
+mods = [{ damage_times = ["envenom"] }]
+mods_v = 2.0
+empowered = 3.0
+shows = "v2"
+percent = true
+
+# The bolt from a carrier to each target of a jump: Chain Lightning's, turned from blue toward green.
+[[set_bonus.look]]
+visual = 910909
+source = 421
+turn = -90
+
+# The Poison Pool: Toxic Pool's acid pool (AcidBurn.mdx), turned from green toward turquoise.
+[[set_bonus.look]]
+visual = 910910
+source = 38718
+turn = 80

@@ -1,0 +1,588 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "shaman_elemental"
+index = 0
+icon = "Spell_Nature_Lightning"
+background = "ShamanElementalCombat"
+name = { en = "Elemental", de = "Elementar", fr = "Élémentaire", es = "Elemental", pt = "Elemental", ru = "Стихии", pl = "Żywiołak", tr = "Elementler", it = "Elementale", ja = "エレメンタル", zh = "元素", ko = "정기" }
+
+[[talent_tree]]
+key = "shaman_enhancement"
+index = 1
+icon = "Spell_Nature_LightningShield"
+background = "ShamanEnhancement"
+name = { en = "Enhancement", de = "Verstärkung", fr = "Amélioration", es = "Mejora", pt = "Aperfeiçoamento", ru = "Совершенствование", pl = "Potęga żywiołów", tr = "Güçlendirme", it = "Potenziamento", ja = "エンハンスメント", zh = "增强", ko = "고양" }
+
+[[talent_tree]]
+key = "shaman_restoration"
+index = 2
+icon = "Spell_Nature_MagicImmunity"
+background = "ShamanRestoration"
+name = { en = "Restoration", de = "Wiederherstellung", fr = "Restauration", es = "Restauración", pt = "Restauração", ru = "Исцеление", pl = "Odnowa", tr = "Şifa", it = "Rigenerazione", ja = "レストレーション", zh = "恢复", ko = "회복" }
+
+[[talent]]
+key = "convection"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [1, 0.015] }]
+icon = "Spell_Nature_WispSplode"
+name = { en = "Convection", de = "Konvektion", fr = "Convection", es = "Convección", pt = "Convecção", ru = "Конвекция", pl = "Konwekcja", tr = "Konveksiyon", it = "Convezione", ja = "コンヴェクション", zh = "传导", ko = "대류" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.015
+
+# TUNE 2026-11-08: all damage 4% -> 2% a rank (row 0 peers give 1-2.5%).
+[[talent]]
+key = "concussion"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [0, 0.02] }]
+icon = "Spell_Fire_Fireball"
+name = { en = "Concussion", de = "Erschütterung", fr = "Commotion", es = "Conmoción", pt = "Concussão", ru = "Сотрясение", pl = "Wstrząśnienie", tr = "Sarsıntı", it = "Contusione", ja = "コンカッション", zh = "震荡", ko = "진탕" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "earths_grasp"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = [{ stat = [5, 0.02] }]
+icon = "Spell_Nature_StoneClawTotem"
+name = { en = "Elemental Warding", de = "Elementarschutz", fr = "Protection élémentaire", es = "Resguardo elemental", pt = "Resguardo Elemental", ru = "Защита стихий", pl = "Ochrona żywiołów", tr = "Elemental Koruma", it = "Protezione elementale", ja = "エレメンタル・ウォーディング", zh = "元素防护", ko = "원소 수호" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.02
+
+# TUNE 2026-11-10 (tester feedback): Searing Totem, the one fire spell it lacked, joins the list.
+[[talent]]
+key = "call_of_flame"
+tree = 0
+row = 1
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Fire_Immolation"
+name = { en = "Call of Flame", de = "Ruf der Flamme", fr = "Appel des flammes", es = "Llamada de las llamas", pt = "Chamado da Chama", ru = "Призыв пламени", pl = "Wezwanie płomieni", tr = "Alevin Çağrısı", it = "Richiamo della fiamma", ja = "コール・オブ・フレイム", zh = "烈焰召唤", ko = "불꽃의 부름" }
+text = { en = "Fire Nova, Searing Totem, Magma Totem, Flame Shock, Lava Burst and Lava Lash deal {v}% more damage.", de = "Feuernova, Totem der Verbrennung, Totem der glühenden Magma, Flammenschock, Lavaeruption und Lavapeitsche verursachen {v}% mehr Schaden.", fr = "Nova de feu, Totem incendiaire, Totem de magma, Horion de flammes, Explosion de lave et Fouet de lave infligent {v}% de dégâts en plus.", es = "Nova de fuego, Tótem abrasador, Tótem de magma, Choque de llamas, Ráfaga de lava y Latigazo de lava infligen un {v}% más de daño.", pt = "Nova Flamejante, Totem Calcinante, Totem de Magma, Choque Flamejante, Explosão de Lava e Chicote de Lava causam {v}% a mais de dano.", ru = "Кольцо огня, Опаляющий тотем, Тотем магмы, Огненный шок, Выброс лавы и Лавовый бич наносят на {v}% больше урона.", pl = "Ognista nova, Totem żaru, Totem magmy, Płomienny wstrząs, Wybuch lawy i Smagnięcie lawy zadają o {v}% więcej obrażeń.", tr = "Ateş Nova, Kavurucu Totem, Magma Totemi, Alev Şoku, Lav Patlaması ve Lav Kırbacı {v}% daha fazla hasar verir.", it = "Nova di fuoco, Totem rovente, Totem di magma, Folgore di fiamma, Esplosione di lava e Frustata di lava infliggono il {v}% di danni in più.", ja = "ファイア・ノヴァ、シアリング・トーテム、マグマ・トーテム、フレイム・ショック、ラヴァ・バースト、ラヴァ・ラッシュのダメージが{v}%増加します。", zh = "火焰新星、灼热图腾、熔岩图腾、烈焰震击、熔岩爆裂和熔岩猛击造成的伤害提高{v}%。", ko = "불꽃 회오리, 불타는 토템, 용암 토템, 화염 충격, 용암 폭발, 용암 채찍의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["fire_nova", "searing_totem", "magma_totem", "flame_shock", "lava_burst", "lava_lash"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "lightning_overload"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Nature_CallStorm"
+name = { en = "Lightning Overload", de = "Blitzüberladung", fr = "Surcharge de foudre", es = "Sobrecarga de relámpagos", pt = "Sobrecarga de Raios", ru = "Перегрузка молнии", pl = "Przeciążenie błyskawicą", tr = "Yıldırım Aşırı Yükü", it = "Sovraccarico di fulmini", ja = "ライトニング・オーバーロード", zh = "闪电超载", ko = "번개 과부하" }
+text = { en = "Milestone. Lightning Bolt and Chain Lightning have a {v}% chance to strike again for free.", de = "Meilenstein. Blitzschlag und Kettenblitzschlag haben eine Chance von {v}%, kostenlos erneut zuzuschlagen.", fr = "Jalon. Éclair et Chaîne d'éclairs ont {v}% de chances de frapper de nouveau gratuitement.", es = "Hito. Descarga de relámpagos y Cadena de relámpagos tienen un {v}% de probabilidad de golpear de nuevo gratis.", pt = "Marco. Relâmpago e Corrente de Raios têm {v}% de chance de golpear de novo de graça.", ru = "Веха. Молния и Цепная молния с вероятностью {v}% бьют еще раз бесплатно.", pl = "Kamień milowy. Błyskawica i Łańcuch piorunów mają {v}% szansy, by uderzyć ponownie za darmo.", tr = "Dönüm noktası. Yıldırım Oku ve Zincirleme Yıldırım {v}% ihtimalle bedavaya bir kez daha vurur.", it = "Traguardo. Dardo di fulmine e Catena di fulmini hanno il {v}% di probabilità di colpire di nuovo gratis.", ja = "【マイルストーン】ライトニング・ボルトとチェイン・ライトニングが{v}%の確率で無料でもう一度命中します。", zh = "里程碑：闪电箭和闪电链有{v}%的几率免费再打击一次。", ko = "이정표. 번개 화살과 연쇄 번개가 {v}% 확률로 무료로 한 번 더 적중합니다." }
+menu_v = 0.4
+plays = [
+    { v = 0.4, play = { cast_cast = { keys = ["lightning_bolt", "chain_lightning"], gap = 0.0 } } },
+]
+
+[[talent]]
+key = "reverberation"
+tree = 0
+row = 2
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Frost_FrostWard"
+name = { en = "Reverberation", de = "Nachhall", fr = "Réverbération", es = "Reverberación", pt = "Reverberação", ru = "Отзвук", pl = "Pogłos", tr = "Yankılanma", it = "Riverberazione", ja = "リヴァーバレーション", zh = "回响", ko = "반향" }
+text = { en = "Your shocks' cooldowns are {v}% shorter.", de = "Die Abklingzeiten deiner Schocks sind {v}% kürzer.", fr = "Les temps de recharge de tes horions sont réduits de {v}%.", es = "Los tiempos de reutilización de tus choques se reducen un {v}%.", pt = "Os tempos de recarga dos seus choques são {v}% menores.", ru = "Время восстановления твоих шоков сокращается на {v}%.", pl = "Czasy odnowienia twoich wstrząsów są krótsze o {v}%.", tr = "Şoklarının bekleme süreleri {v}% daha kısa.", it = "Le ricariche delle tue folgori sono più brevi del {v}%.", ja = "ショック系呪文のクールダウンが{v}%短くなります。", zh = "你的震击法术的冷却时间缩短{v}%。", ko = "충격 주문의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.06
+mods = [{ cooldown = ["earth_shock", "flame_shock", "frost_shock"] }]
+mods_v = 0.06
+
+# TUNE 2026-11-08: crit 2% -> 1.5% a rank (peers 0.8-1.5%).
+[[talent]]
+key = "call_of_thunder"
+tree = 0
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [3, 0.015] }]
+icon = "Spell_Nature_Lightning"
+name = { en = "Call of Thunder", de = "Ruf des Donners", fr = "Appel du tonnerre", es = "Llamada del trueno", pt = "Chamado do Trovão", ru = "Зов грома", pl = "Wezwanie gromu", tr = "Gök Gürültüsünün Çağrısı", it = "Richiamo del tuono", ja = "コール・オブ・サンダー", zh = "雷霆召唤", ko = "천둥의 부름" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "imp_fire_totems"
+tree = 0
+row = 3
+col = 2
+ranks = 2
+req = "lightning_overload"
+effects = []
+icon = "Spell_Fire_SealOfFire"
+name = { en = "Improved Fire Totems", de = "Verbesserte Feuertotems", fr = "Totems de feu améliorés", es = "Tótems de fuego mejorados", pt = "Totens de Fogo Aprimorados", ru = "Улучшенные огненные тотемы", pl = "Ulepszone totemy ognia", tr = "Gelişmiş Ateş Totemleri", it = "Totem di fuoco migliorati", ja = "改良型ファイア・トーテム", zh = "强化火焰图腾", ko = "화염 토템 연마" }
+text = { en = "Searing and Magma Totem cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Totem der Verbrennung und Totem der glühenden Magma sind {v}% kürzer.", fr = "Les temps de recharge de Totem incendiaire et de Totem de magma sont réduits de {v}%.", es = "Los tiempos de reutilización de Tótem abrasador y Tótem de magma se reducen un {v}%.", pt = "Os tempos de recarga de Totem Calcinante e Totem de Magma são {v}% menores.", ru = "Время восстановления Опаляющего тотема и Тотема магмы сокращается на {v}%.", pl = "Czasy odnowienia Totemu żaru i Totemu magmy są krótsze o {v}%.", tr = "Kavurucu Totem ve Magma Totemi bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Totem rovente e Totem di magma sono più brevi del {v}%.", ja = "シアリング・トーテムとマグマ・トーテムのクールダウンが{v}%短くなります。", zh = "灼热图腾和熔岩图腾的冷却时间缩短{v}%。", ko = "불타는 토템과 용암 토템의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.1
+mods = [{ cooldown = ["searing_totem", "magma_totem"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "elemental_fury"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Fire_Volcano"
+name = { en = "Elemental Fury", de = "Elementarfuror", fr = "Furie élémentaire", es = "Furia elemental", pt = "Fúria Elemental", ru = "Неистовство стихий", pl = "Furia żywiołów", tr = "Elemental Öfke", it = "Furia elementale", ja = "エレメンタル・フューリー", zh = "元素之怒", ko = "정기의 격노" }
+text = { en = "Milestone. Chain Lightning jumps to 3 more enemies and loses nothing with each jump.", de = "Meilenstein. Kettenblitzschlag springt auf 3 weitere Feinde über und verliert bei keinem Sprung an Kraft.", fr = "Jalon. Chaîne d'éclairs bondit sur 3 ennemis de plus et ne perd rien à chaque saut.", es = "Hito. Cadena de relámpagos salta a 3 enemigos más y no pierde nada con cada salto.", pt = "Marco. Corrente de Raios salta para mais 3 inimigos e não perde nada a cada salto.", ru = "Веха. Цепная молния перескакивает еще на 3 врагов и ничего не теряет с каждым прыжком.", pl = "Kamień milowy. Łańcuch piorunów przeskakuje na 3 kolejnych przeciwników i nic nie traci z każdym skokiem.", tr = "Dönüm noktası. Zincirleme Yıldırım 3 düşmana daha sıçrar ve her sıçrayışta hiçbir şey kaybetmez.", it = "Traguardo. Catena di fulmini salta su altri 3 nemici e non perde nulla a ogni salto.", ja = "【マイルストーン】チェイン・ライトニングがさらに3体の敵に跳躍し、跳躍ごとの減衰がなくなります。", zh = "里程碑：闪电链额外跳跃到3个敌人身上，并且每次跳跃不再衰减。", ko = "이정표. 연쇄 번개가 적 3명에게 더 튀며, 튈 때마다 피해가 줄어들지 않습니다." }
+menu_v = 3
+mods = [{ targets = ["chain_lightning"] }, { no_falloff = ["chain_lightning"] }]
+mods_v = 3.0
+
+[[talent]]
+key = "lightning_mastery"
+tree = 0
+row = 4
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Lightning_LightningBolt01"
+name = { en = "Lightning Mastery", de = "Blitzbeherrschung", fr = "Maîtrise de la foudre", es = "Maestría con relámpagos", pt = "Maestria em Raios", ru = "Мастерство молний", pl = "Mistrzostwo błyskawic", tr = "Yıldırım Ustalığı", it = "Maestria nei fulmini", ja = "ライトニング・マスタリー", zh = "闪电掌握", ko = "번개 숙련" }
+text = { en = "Nature spells deal {v}% more damage.", de = "Naturzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de nature infligent {v}% de dégâts en plus.", es = "Los hechizos de naturaleza infligen un {v}% más de daño.", pt = "Feitiços da Natureza causam {v}% a mais de dano.", ru = "Заклинания природы наносят на {v}% больше урона.", pl = "Czary natury zadają o {v}% więcej obrażeń.", tr = "Doğa büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Natura infliggono il {v}% di danni in più.", ja = "自然の呪文のダメージが{v}%増加します。", zh = "自然法术造成的伤害提高{v}%。", ko = "자연 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.07
+mods = [{ school = 8 }]
+mods_v = 0.07
+
+[[talent]]
+key = "storm_reach"
+tree = 0
+row = 5
+col = 0
+ranks = 2
+effects = []
+icon = "Spell_Nature_StormReach"
+name = { en = "Storm Reach", de = "Sturmreichweite", fr = "Allonge de la tempête", es = "Alcance de la tormenta", pt = "Alcance da Tempestade", ru = "Дальность бури", pl = "Zasięg burzy", tr = "Fırtına Erişimi", it = "Portata della tempesta", ja = "ストーム・リーチ", zh = "风暴延伸", ko = "폭풍 범위 확대" }
+text = { en = "Chain Lightning reaches {v}% farther.", de = "Kettenblitzschlag reicht {v}% weiter.", fr = "La portée de Chaîne d'éclairs augmente de {v}%.", es = "Cadena de relámpagos alcanza un {v}% más lejos.", pt = "Corrente de Raios alcança {v}% mais longe.", ru = "Дальность Цепной молнии увеличивается на {v}%.", pl = "Łańcuch piorunów sięga o {v}% dalej.", tr = "Zincirleme Yıldırım {v}% daha uzağa erişir.", it = "Catena di fulmini arriva il {v}% più lontano.", ja = "チェイン・ライトニングの射程が{v}%延びます。", zh = "闪电链的范围扩大{v}%。", ko = "연쇄 번개의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.2
+mods = [{ area = ["chain_lightning"] }]
+mods_v = 0.2
+
+# TUNE 2026-11-08: crit damage 12% -> 10% a rank (peers 4-10%).
+[[talent]]
+key = "elemental_devastation"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "elemental_fury"
+effects = [{ stat = [4, 0.1] }]
+icon = "Spell_Fire_ElementalDevastation"
+name = { en = "Elemental Devastation", de = "Elementare Verwüstung", fr = "Dévastation élémentaire", es = "Devastación elemental", pt = "Devastação Elemental", ru = "Стихийное опустошение", pl = "Spustoszenie żywiołów", tr = "Elemental Yıkım", it = "Devastazione elementale", ja = "エレメンタル・デヴァステーション", zh = "元素毁灭", ko = "정기의 황폐" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+
+[[talent]]
+key = "elemental_mastery"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "chain_lightning" }]
+icon = "Spell_Nature_WispHeal"
+name = { en = "Elemental Mastery", de = "Elementarbeherrschung", fr = "Maîtrise élémentaire", es = "Maestría elemental", pt = "Maestria Elemental", ru = "Покорение стихий", pl = "Mistrzostwo żywiołów", tr = "Elemental Ustalık", it = "Maestria elementale", ja = "エレメンタル・マスタリー", zh = "元素掌握", ko = "정기의 숙련" }
+text = { en = "Capstone. You start every run with Chain Lightning, and a second Chain Lightning casts itself every 3 sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Kettenblitzschlag, und alle 3 Sek. wirkt sich ein zweiter Kettenblitzschlag von selbst.", fr = "Clé de voûte. Tu commences chaque partie avec Chaîne d'éclairs, et une seconde Chaîne d'éclairs se lance toute seule toutes les 3 s.", es = "Piedra angular. Empiezas cada partida con Cadena de relámpagos, y una segunda Cadena de relámpagos se lanza sola cada 3 s.", pt = "Pedra angular. Você começa cada partida com Corrente de Raios, e uma segunda Corrente de Raios se lança sozinha a cada 3 s.", ru = "Вершина. Ты начинаешь каждый забег с Цепной молнии, и вторая Цепная молния запускается сама каждые 3 сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Łańcuchem piorunów, a drugi Łańcuch piorunów rzuca się sam co 3 s.", tr = "Zirve. Her oyuna Zincirleme Yıldırım ile başlarsın ve her 3 sn'de ikinci bir Zincirleme Yıldırım kendiliğinden yapılır.", it = "Vertice. Inizi ogni partita con Catena di fulmini e una seconda Catena di fulmini si lancia da sola ogni 3 s.", ja = "【キャップストーン】毎ランをチェイン・ライトニングを持って始め、3秒ごとに2発目のチェイン・ライトニングが自動で放たれます。", zh = "终极天赋：你在每场对局开始时拥有闪电链，并且每3秒会自动施放第二道闪电链。", ko = "궁극 특성. 모든 런을 연쇄 번개를 가지고 시작하며, 3초마다 두 번째 연쇄 번개가 저절로 시전됩니다." }
+plays = [
+    { v = 3.0, play = { every = "chain_lightning" } },
+]
+
+[[talent]]
+key = "enh_thundering_strikes"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Ability_ThunderBolt"
+name = { en = "Thundering Strikes", de = "Donnernde Stöße", fr = "Frappes tonitruantes", es = "Golpes atronadores", pt = "Golpes Trovejantes", ru = "Громовые удары", pl = "Grzmiące uderzenia", tr = "Gürleyen Darbeler", it = "Colpi tonanti", ja = "サンダリング・ストライク", zh = "雷霆打击", ko = "천둥의 일격" }
+text = { en = "Rockbiter and Stormstrike gain +{v}% critical chance.", de = "Felsbeißer und Sturmschlag erhalten +{v}% kritische Trefferchance.", fr = "Croque-roc et Frappe-tempête gagnent +{v}% de chances de coup critique.", es = "Muerdepiedras y Golpe de tormenta ganan +{v}% de probabilidad de golpe crítico.", pt = "Mordepedra e Golpe de Tempestade ganham +{v}% de chance de acerto crítico.", ru = "Камнедробитель и Удар бури получают +{v}% к шансу критического удара.", pl = "Skalny oręż i Burzowy cios zyskują +{v}% szansy na trafienie krytyczne.", tr = "Kaya Isıran ve Fırtına Darbesi +{v}% kritik şansı kazanır.", it = "Mordirocce e Percossa della tempesta ottengono +{v}% probabilità di colpo critico.", ja = "ロックバイターとストームストライクのクリティカル率が+{v}%。", zh = "石化武器和风暴打击的暴击几率+{v}%。", ko = "대지의 무기와 폭풍의 일격의 치명타율이 {v}% 증가합니다." }
+menu_v = 0.03
+# The exe's table gives the Enhancement talents no numbers (the menu shows none either):
+# ours. `TUNE`
+mods = [{ crit = ["rockbiter", "stormstrike"] }]
+mods_v = 0.03
+
+# TUNE 2026-11-10 (tester feedback): the reach is 10 yd (7), named by the `bulwark` mod.
+[[talent]]
+key = "enh_earthen_bulwark"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Nature_StoneSkinTotem"
+name = { en = "Earthen Bulwark", de = "Erdbollwerk", fr = "Rempart de terre", es = "Baluarte de tierra", pt = "Baluarte Terrestre", ru = "Земной бастион", pl = "Ziemny bastion", tr = "Toprak Siper", it = "Bastione di terra", ja = "アーセン・ブルワーク", zh = "大地壁垒", ko = "대지의 보루" }
+text = { en = "Gain {v}% Damage Reduction while an enemy is within 10 yards, up to the normal 60% cap.", de = "Erhalte {v}% Schadensreduktion, solange ein Feind innerhalb von 10 Metern ist, bis zur normalen Obergrenze von 60%.", fr = "Gagne {v}% de réduction des dégâts tant qu'un ennemi est à moins de 10 m, jusqu'au plafond normal de 60%.", es = "Ganas un {v}% de reducción de daño mientras un enemigo esté a menos de 10 m, hasta el límite normal del 60%.", pt = "Ganhe {v}% de redução de dano enquanto um inimigo estiver a até 10 m, até o limite normal de 60%.", ru = "Ты получаешь {v}% снижения урона, пока враг находится в радиусе 10 м, до обычного предела в 60%.", pl = "Zyskujesz {v}% redukcji obrażeń, gdy przeciwnik jest w promieniu 10 m, do zwykłego limitu 60%.", tr = "10 m içinde bir düşman varken {v}% Hasar Azaltma kazanırsın, olağan 60% sınırına kadar.", it = "Ottieni {v}% di riduzione dei danni mentre un nemico è entro 10 m, fino al limite normale del 60%.", ja = "10ヤード以内に敵がいる間、被ダメージ軽減が{v}%増加します（通常の上限60%まで）。", zh = "10码内有敌人时，获得{v}%的伤害减免，不超过正常的60%上限。", ko = "10미터 안에 적이 있는 동안 피해 감소가 {v}% 증가합니다. 일반 상한인 60%까지 적용됩니다." }
+menu_v = 0.02
+# The exe's table gives the Enhancement talents no numbers: ours. `TUNE`
+mods = [{ bulwark = 10.0 }]
+mods_v = 0.02
+
+[[talent]]
+key = "enh_resonant_shocks"
+tree = 1
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Nature_EarthShock"
+name = { en = "Resonant Shocks", de = "Widerhallende Schocks", fr = "Horions résonants", es = "Choques resonantes", pt = "Choques Ressonantes", ru = "Резонирующие шоки", pl = "Rezonujące wstrząsy", tr = "Yankılı Şoklar", it = "Folgori risonanti", ja = "レゾナント・ショック", zh = "共鸣震击", ko = "공명하는 충격" }
+text = { en = "Your next Shock strikes {v} extra nearby enemies for 35% damage after two different Shocks.", de = "Dein nächster Schock nach zwei verschiedenen trifft {v} weitere Feinde in der Nähe für 35% Schaden.", fr = "Ton prochain horion frappe {v} ennemis proches de plus pour 35% de dégâts après deux horions différents.", es = "Tu siguiente Choque golpea a {v} enemigos cercanos más con un 35% de daño tras dos Choques distintos.", pt = "Seu próximo Choque atinge {v} inimigos próximos a mais com 35% de dano após dois Choques diferentes.", ru = "Твой следующий шок после двух разных поражает дополнительно ближайших врагов: {v}, с уроном 35%.", pl = "Po dwóch różnych Wstrząsach twój następny Wstrząs trafia dodatkowych pobliskich przeciwników: {v}, za 35% obrażeń.", tr = "İki farklı Şok'tan sonra sıradaki Şok'un yakındaki {v} düşmana daha 35% hasarla vurur.", it = "Dopo due Folgori diverse, la tua prossima Folgore colpisce {v} nemici vicini in più con il 35% dei danni.", ja = "異なるショックを2種類使った後、次のショックが近くの敵さらに{v}体に35%のダメージを与えます。", zh = "施放两种不同的震击后，你的下一次震击额外击中附近{v}个敌人，造成35%的伤害。", ko = "서로 다른 충격 주문을 두 번 쓰면 다음 충격 주문이 근처의 적 {v}명을 추가로 공격하여 35%의 피해를 줍니다." }
+menu_v = 1
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 1.0, play = { shock_echo = { share = 0.35, keys = ["earth_shock", "flame_shock", "frost_shock"] } } },
+]
+
+[[talent]]
+key = "enh_shattering_elements"
+tree = 1
+row = 1
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Frost_FrostShock"
+name = { en = "Shattering Elements", de = "Zersplitternde Elemente", fr = "Éléments fracassants", es = "Elementos devastadores", pt = "Elementos Estilhaçantes", ru = "Разрушительные стихии", pl = "Rozbijające żywioły", tr = "Parçalayan Elementler", it = "Elementi frantumanti", ja = "シャタリング・エレメンツ", zh = "碎裂元素", ko = "부서지는 정령" }
+text = { en = "Your next different Shock within 6 sec deals +{v}% damage.", de = "Dein nächster anderer Schock innerhalb von 6 Sek. verursacht +{v}% Schaden.", fr = "Ton prochain horion différent dans les 6 s inflige +{v}% de dégâts.", es = "Tu siguiente Choque distinto en 6 s inflige +{v}% de daño.", pt = "Seu próximo Choque diferente em até 6 s causa +{v}% de dano.", ru = "Твой следующий другой шок в течение 6 сек. наносит +{v}% урона.", pl = "Twój następny inny Wstrząs w ciągu 6 s zadaje +{v}% obrażeń.", tr = "6 sn içindeki sıradaki farklı Şok'un +{v}% hasar verir.", it = "La tua prossima Folgore diversa entro 6 s infligge +{v}% di danni.", ja = "6秒以内に使う次の異なるショックのダメージが+{v}%。", zh = "6秒内施放的下一个不同震击伤害+{v}%。", ko = "6초 안에 시전하는 다른 종류의 충격 주문이 피해 +{v}%를 줍니다." }
+menu_v = 0.1
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 0.1, play = { shock_boost = { secs = 6.0, keys = ["earth_shock", "flame_shock", "frost_shock"] } } },
+]
+
+[[talent]]
+key = "rockbiter_initiation"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_instead = "rockbiter" }]
+icon = "Spell_Nature_RockBiter"
+name = { en = "Rockbiter Initiation", de = "Felsbeißer-Einweihung", fr = "Initiation Croque-roc", es = "Iniciación Muerdepiedras", pt = "Iniciação Mordepedra", ru = "Посвящение камнедробителя", pl = "Wtajemniczenie Skalnego oręża", tr = "Kaya Isıran Başlangıcı", it = "Iniziazione Mordirocce", ja = "ロックバイター・イニシエーション", zh = "石化启蒙", ko = "대지의 무기 입문" }
+text = { en = "Milestone. Start each run with Rockbiter Weapon instead of Lightning Bolt.", de = "Meilenstein. Du beginnst jeden Lauf mit der Waffe des Felsbeißers statt Blitzschlag.", fr = "Jalon. Commence chaque partie avec Arme Croque-roc au lieu d'Éclair.", es = "Hito. Empiezas cada partida con Arma Muerdepiedras en lugar de Descarga de relámpagos.", pt = "Marco. Comece cada partida com Arma Mordepedra em vez de Relâmpago.", ru = "Веха. Начинай каждый забег с Оружия камнедробителя вместо Молнии.", pl = "Kamień milowy. Zaczynasz każdą rozgrywkę ze Skalnym orężem zamiast Błyskawicy.", tr = "Dönüm noktası. Her oyuna Yıldırım Oku yerine Kaya Isıran Silah ile başla.", it = "Traguardo. Inizia ogni partita con Arma Mordirocce invece di Dardo di fulmine.", ja = "【マイルストーン】毎ランをライトニング・ボルトの代わりにロックバイター・ウェポンを持って始めます。", zh = "里程碑：每场对局开始时拥有石化武器而非闪电箭。", ko = "이정표. 모든 런을 번개 화살 대신 대지의 무기를 가지고 시작합니다." }
+
+[[talent]]
+key = "enh_windfury_weapon"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Nature_Cyclone"
+name = { en = "Windfury Weapon", de = "Waffe des Windzorns", fr = "Arme Furie-des-vents", es = "Arma Viento Furioso", pt = "Arma Fúria dos Ventos", ru = "Оружие неистовства ветра", pl = "Oręż wściekłego wiatru", tr = "Rüzgarfuri Silahı", it = "Arma Furia del vento", ja = "ウィンドフューリー・ウェポン", zh = "风怒武器", ko = "질풍의 무기" }
+text = { en = "Rockbiter and Stormstrike have a {v}% chance to strike two additional times.", de = "Felsbeißer und Sturmschlag haben eine Chance von {v}%, zweimal zusätzlich zuzuschlagen.", fr = "Croque-roc et Frappe-tempête ont {v}% de chances de frapper deux fois de plus.", es = "Muerdepiedras y Golpe de tormenta tienen un {v}% de probabilidad de golpear dos veces más.", pt = "Mordepedra e Golpe de Tempestade têm {v}% de chance de golpear mais duas vezes.", ru = "Камнедробитель и Удар бури с вероятностью {v}% бьют еще два раза.", pl = "Skalny oręż i Burzowy cios mają {v}% szansy, by uderzyć dwa dodatkowe razy.", tr = "Kaya Isıran ve Fırtına Darbesi {v}% ihtimalle iki kez daha vurur.", it = "Mordirocce e Percossa della tempesta hanno il {v}% di probabilità di colpire due volte in più.", ja = "ロックバイターとストームストライクが{v}%の確率でさらに2回命中します。", zh = "石化武器和风暴打击有{v}%的几率额外打击两次。", ko = "대지의 무기와 폭풍의 일격이 {v}% 확률로 두 번 추가 적중합니다." }
+menu_v = 0.08
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 0.08, play = { triple = ["rockbiter", "stormstrike"] } },
+]
+
+[[talent]]
+key = "enh_flametongue_weapon"
+tree = 1
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Fire_FlameTounge"
+name = { en = "Flametongue Weapon", de = "Waffe der Flammenzunge", fr = "Arme Langue de feu", es = "Arma Lengua de Fuego", pt = "Arma Língua de Fogo", ru = "Оружие языка пламени", pl = "Oręż płomiennego języka", tr = "Alevdil Silahı", it = "Arma Lingua di fuoco", ja = "フレイムタン・ウェポン", zh = "火舌武器", ko = "불꽃의 무기" }
+text = { en = "Every fourth Rockbiter casts a free Fire Nova with +{v}% damage.", de = "Jeder vierte Felsbeißer wirkt eine kostenlose Feuernova mit +{v}% Schaden.", fr = "Un Croque-roc sur quatre lance une Nova de feu gratuite avec +{v}% de dégâts.", es = "Cada cuarto Muerdepiedras lanza una Nova de fuego gratis con +{v}% de daño.", pt = "A cada quarto Mordepedra, lança-se uma Nova Flamejante grátis com +{v}% de dano.", ru = "Каждый четвертый Камнедробитель запускает бесплатное Кольцо огня с +{v}% урона.", pl = "Co czwarty Skalny oręż rzuca darmową Ognistą novę z +{v}% obrażeń.", tr = "Her dördüncü Kaya Isıran, +{v}% hasarlı bedava bir Ateş Nova yapar.", it = "Ogni quarto Mordirocce lancia una Nova di fuoco gratuita con +{v}% di danni.", ja = "ロックバイター4回ごとに、ダメージ+{v}%の無料のファイア・ノヴァを唱えます。", zh = "每第四次石化武器会免费施放一次火焰新星，伤害+{v}%。", ko = "대지의 무기를 4번 쓸 때마다 피해가 {v}% 증가한 불꽃 회오리를 무료로 시전합니다." }
+menu_v = 0.15
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 0.15, play = { nth_cast_more = { keys = ["rockbiter"], n = 4.0, cast = "fire_nova" } } },
+]
+
+[[talent]]
+key = "enh_frostbrand_weapon"
+tree = 1
+row = 3
+col = 2
+ranks = 3
+req = "rockbiter_initiation"
+effects = []
+icon = "Spell_Frost_FrostBrand"
+name = { en = "Frostbrand Weapon", de = "Waffe des Frostbrands", fr = "Arme de givre", es = "Arma Estigma de escarcha", pt = "Arma Marca de Gelo", ru = "Оружие ледяного клейма", pl = "Oręż mroźnej pieczęci", tr = "Buzdamga Silahı", it = "Arma Marchio del gelo", ja = "フロストブランド・ウェポン", zh = "冰封武器", ko = "냉기의 무기" }
+text = { en = "Stormstrike has a {v}% chance to cast Frost Shock on up to three enemies.", de = "Sturmschlag hat eine Chance von {v}%, Frostschock auf bis zu drei Feinde zu wirken.", fr = "Frappe-tempête a {v}% de chances de lancer Horion de givre sur jusqu'à trois ennemis.", es = "Golpe de tormenta tiene un {v}% de probabilidad de lanzar Choque de escarcha sobre hasta tres enemigos.", pt = "Golpe de Tempestade tem {v}% de chance de lançar Choque Gélido em até três inimigos.", ru = "Удар бури с вероятностью {v}% запускает Ледяной шок по трем врагам.", pl = "Burzowy cios ma {v}% szansy, by rzucić Mroźny wstrząs na maksymalnie trzech przeciwników.", tr = "Fırtına Darbesi {v}% ihtimalle en fazla üç düşmana Buz Şoku yapar.", it = "Percossa della tempesta ha il {v}% di probabilità di lanciare Folgore di gelo su un massimo di tre nemici.", ja = "ストームストライクが{v}%の確率で最大3体の敵にフロスト・ショックを唱えます。", zh = "风暴打击有{v}%的几率对最多三个敌人施放冰霜震击。", ko = "폭풍의 일격이 {v}% 확률로 적 최대 3명에게 냉기 충격을 시전합니다." }
+menu_v = 0.1
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 0.1, play = { cast_on = { keys = ["stormstrike"], cast = "frost_shock", targets = 3 } } },
+]
+
+[[talent]]
+key = "enh_unleashed_weapons"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_DualWield"
+name = { en = "Unleashed Weapons", de = "Entfesselte Waffen", fr = "Armes déchaînées", es = "Armas desatadas", pt = "Armas Liberadas", ru = "Освобожденное оружие", pl = "Uwolnione bronie", tr = "Salınan Silahlar", it = "Armi scatenate", ja = "アンリーシュド・ウェポン", zh = "武器释放", ko = "해방된 무기" }
+text = { en = "Milestone. Every fourth melee cast empowers your next Rockbiter and Stormstrike: +45% damage and +1 target each.", de = "Meilenstein. Jeder vierte Nahkampfzauber stärkt deinen nächsten Felsbeißer und Sturmschlag: je +45% Schaden und +1 Ziel.", fr = "Jalon. Un sort de mêlée sur quatre renforce tes prochains Croque-roc et Frappe-tempête : +45% de dégâts et +1 cible chacun.", es = "Hito. Cada cuarto hechizo cuerpo a cuerpo potencia tu siguiente Muerdepiedras y Golpe de tormenta: +45% de daño y +1 objetivo cada uno.", pt = "Marco. A cada quarto feitiço corpo a corpo, seu próximo Mordepedra e Golpe de Tempestade são reforçados: +45% de dano e +1 alvo cada.", ru = "Веха. Каждое четвертое заклинание ближнего боя усиливает твои следующие Камнедробитель и Удар бури: +45% урона и +1 цель каждому.", pl = "Kamień milowy. Co czwarty rzut wręcz wzmacnia twój następny Skalny oręż i Burzowy cios: +45% obrażeń i +1 cel każdy.", tr = "Dönüm noktası. Her dördüncü yakın dövüş büyüsü sıradaki Kaya Isıran ve Fırtına Darbesi'ni güçlendirir: her biri +45% hasar ve +1 hedef.", it = "Traguardo. Ogni quarto lancio in mischia potenzia il tuo prossimo Mordirocce e la tua prossima Percossa della tempesta: +45% di danni e +1 bersaglio ciascuno.", ja = "【マイルストーン】近接技を4回使うごとに、次のロックバイターとストームストライクが強化されます：それぞれダメージ+45%、対象+1。", zh = "里程碑：每第四次近战施法会强化你的下一次石化武器和风暴打击：各自伤害+45%，目标+1。", ko = "이정표. 근접 주문을 4번 시전할 때마다 다음 대지의 무기와 폭풍의 일격이 강화됩니다: 각각 피해 +45%, 대상 +1." }
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 1.0, play = { unleashed = { keys = ["rockbiter", "stormstrike"], more = 0.45, n = 4.0 } } },
+]
+
+[[talent]]
+key = "enh_ancestral_fortitude"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Nature_UndyingStrength"
+name = { en = "Ancestral Fortitude", de = "Seelenstärke der Ahnen", fr = "Robustesse ancestrale", es = "Entereza ancestral", pt = "Fortitude Ancestral", ru = "Стойкость предков", pl = "Wytrwałość przodków", tr = "Ata Sebatı", it = "Fortezza ancestrale", ja = "アンセストラル・フォーティチュード", zh = "先祖坚韧", ko = "선조의 인내" }
+behaviors = [{ behavior = "free_heal", spell = "healing_wave", share = 0.5 }]
+text = { en = "Every 7 Stormstrikes, {v} fewer with this talent, cast a free Healing Wave at 50% effectiveness.", de = "Alle 7 Sturmschläge, mit diesem Talent {v} weniger, wird eine kostenlose Welle der Heilung mit 50% Wirkung gewirkt.", fr = "Toutes les 7 Frappes-tempête, {v} de moins avec ce talent, une Vague de soins gratuite est lancée à 50% d'efficacité.", es = "Cada 7 Golpes de tormenta, {v} menos con este talento, se lanza una Ola de curación gratis con un 50% de eficacia.", pt = "A cada 7 Golpes de Tempestade, {v} a menos com este talento, uma Onda de Cura grátis é lançada com 50% de eficácia.", ru = "Каждые 7 Ударов бури, на {v} меньше с этим талантом, запускается бесплатная Волна исцеления с эффективностью 50%.", pl = "Co 7. Burzowy cios (o {v} mniej z tym talentem) rzuca darmową Falę uzdrowienia o skuteczności 50%.", tr = "Her 7 Fırtına Darbesi'nde, bu yetenekle {v} eksik, 50% etkiyle bedava bir Şifa Dalgası yapılır.", it = "Ogni 7 Percosse della tempesta, {v} in meno con questo talento, lanci un'Onda di guarigione gratuita al 50% di efficacia.", ja = "ストームストライク7回ごと（このタレントで{v}回減少）に、効果50%の無料のヒーリング・ウェーブを唱えます。", zh = "每7次风暴打击（此天赋每级减少{v}次）免费施放一次效果为50%的治疗波。", ko = "폭풍의 일격을 7번(이 특성으로 {v}번 줄어듦) 할 때마다 효과 50%의 치유의 물결을 무료로 시전합니다." }
+menu_v = 1
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 1.0, play = { heal_every = { key = "stormstrike", base = 7.0 } } },
+]
+
+[[talent]]
+key = "enh_flurry"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "Ability_GhoulFrenzy"
+name = { en = "Flurry", de = "Schlaghagel", fr = "Rafale", es = "Frenesí", pt = "Rajada", ru = "Шквал", pl = "Szał", tr = "Hamle Fırtınası", it = "Raffica", ja = "フラーリー", zh = "乱舞", ko = "질풍" }
+text = { en = "Melee critical strikes make Rockbiter and Stormstrike cooldowns recover {v}% faster for 4 sec.", de = "Kritische Nahkampftreffer lassen die Abklingzeiten von Felsbeißer und Sturmschlag 4 Sek. lang um {v}% schneller ablaufen.", fr = "Les coups critiques en mêlée font récupérer {v}% plus vite les temps de recharge de Croque-roc et de Frappe-tempête pendant 4 s.", es = "Los golpes críticos cuerpo a cuerpo hacen que los tiempos de reutilización de Muerdepiedras y Golpe de tormenta se recuperen un {v}% más rápido durante 4 s.", pt = "Acertos críticos corpo a corpo fazem os tempos de recarga de Mordepedra e Golpe de Tempestade se recuperarem {v}% mais rápido por 4 s.", ru = "Критические удары в ближнем бою ускоряют восстановление Камнедробителя и Удара бури на {v}% в течение 4 сек.", pl = "Trafienia krytyczne wręcz skracają czasy odnowienia Skalnego oręża i Burzowego ciosu o {v}% szybciej przez 4 s.", tr = "Yakın dövüş kritik vuruşları 4 sn boyunca Kaya Isıran ve Fırtına Darbesi bekleme sürelerini {v}% daha hızlı yeniler.", it = "I colpi critici in mischia fanno recuperare le ricariche di Mordirocce e Percossa della tempesta il {v}% più in fretta per 4 s.", ja = "近接クリティカルで、4秒間ロックバイターとストームストライクのクールダウン回復が{v}%速くなります。", zh = "近战暴击使石化武器和风暴打击的冷却速度加快{v}%，持续4秒。", ko = "근접 치명타가 4초 동안 대지의 무기와 폭풍의 일격의 재사용 대기시간을 {v}% 빠르게 회복시킵니다." }
+menu_v = 0.08
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 0.08, play = { flurry = { keys = ["rockbiter", "stormstrike"], secs = 4.0 } } },
+]
+
+[[talent]]
+key = "enh_sweeping_storm"
+tree = 1
+row = 5
+col = 2
+ranks = 3
+req = "enh_unleashed_weapons"
+effects = []
+icon = "Spell_Holy_SealOfMight"
+name = { en = "Sweeping Storm", de = "Fegender Sturm", fr = "Tempête balayante", es = "Tormenta barredora", pt = "Tempestade Varredora", ru = "Сметающая буря", pl = "Zamiatająca burza", tr = "Süpüren Fırtına", it = "Tempesta spazzante", ja = "スウィーピング・ストーム", zh = "横扫风暴", ko = "휩쓰는 폭풍" }
+text = { en = "Stormstrike hits {v} additional nearby enemies, and Feral Spirit calls {v} more wolves.", de = "Sturmschlag trifft {v} weitere Feinde in der Nähe, und Wildgeist ruft {v} weitere Wölfe.", fr = "Frappe-tempête touche {v} ennemis proches de plus, et Esprit farouche appelle {v} loups de plus.", es = "Golpe de tormenta golpea a {v} enemigos cercanos más, y Espíritu feral invoca {v} lobos más.", pt = "Golpe de Tempestade atinge {v} inimigos próximos a mais, e Espírito Selvagem chama {v} lobos a mais.", ru = "Удар бури поражает дополнительно ближайших врагов: {v}, а Дух дикого зверя призывает еще волков: {v}.", pl = "Burzowy cios trafia dodatkowych pobliskich przeciwników: {v}, a Dzikie duchy przyzywają dodatkowe wilki: {v}.", tr = "Fırtına Darbesi yakındaki {v} düşmana daha vurur, Vahşi Ruh ise {v} kurt daha çağırır.", it = "Percossa della tempesta colpisce {v} nemici vicini in più e Spirito ferale evoca {v} lupi in più.", ja = "ストームストライクが近くの敵さらに{v}体に命中し、フェラル・スピリットが呼ぶ狼が{v}体増えます。", zh = "风暴打击额外击中附近{v}个敌人，野性狼魂额外召唤{v}只狼。", ko = "폭풍의 일격이 근처의 적 {v}명을 추가로 공격하며, 야수 정령이 늑대를 {v}마리 더 부릅니다." }
+menu_v = 1
+mods = [{ targets = ["stormstrike", "feral_spirit"] }]
+mods_v = 1.0
+
+# TUNE 2026-11-10 (tester feedback): lifesteal 1% -> 1.5% of the damage dealt.
+[[talent]]
+key = "enh_stormbound_echoes"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = [{ stat = [14, 0.015] }]
+icon = "Spell_Nature_CallStorm"
+name = { en = "Stormbound Echoes", de = "Sturmgebundene Echos", fr = "Échos liés à la tempête", es = "Ecos ligados a la tormenta", pt = "Ecos Presos à Tempestade", ru = "Эхо бури", pl = "Echa burzy", tr = "Fırtına Yankıları", it = "Echi della tempesta", ja = "ストームバウンド・エコー", zh = "风暴回响", ko = "폭풍의 메아리" }
+text = { en = "Capstone. All Enhancement Shaman procs have a {v}% chance to trigger one additional time. 1.5% of all the damage you deal heals you.", de = "Schlussstein. Alle Procs des Verstärkungsschamanen lösen mit {v}% Chance ein weiteres Mal aus. 1,5% des gesamten Schadens, den du verursachst, heilt dich.", fr = "Clé de voûte. Tous les déclenchements du chaman Amélioration ont {v}% de chances de se produire une fois de plus. 1,5% de tous les dégâts que tu infliges te soigne.", es = "Piedra angular. Todos los efectos del chamán de Mejora tienen un {v}% de probabilidad de activarse una vez más. El 1,5% de todo el daño que infliges te cura.", pt = "Pedra angular. Todos os efeitos do Xamã Aperfeiçoamento têm {v}% de chance de ocorrer mais uma vez. 1,5% de todo o dano que você causa cura você.", ru = "Вершина. Все срабатывания шамана Совершенствования с вероятностью {v}% происходят еще один раз. 1,5% всего наносимого тобой урона лечит тебя.", pl = "Zwieńczenie. Wszystkie efekty Szamana Potęgi żywiołów mają {v}% szansy, by zadziałać jeszcze raz. 1,5% wszystkich zadanych obrażeń leczy cię.", tr = "Zirve. Tüm Güçlendirme Şaman tetiklenmeleri {v}% ihtimalle bir kez daha tetiklenir. Verdiğin tüm hasarın 1,5%'i seni iyileştirir.", it = "Vertice. Tutti i proc dello Sciamano Potenziamento hanno il {v}% di probabilità di attivarsi una volta in più. L'1,5% di tutti i danni che infliggi ti cura.", ja = "【キャップストーン】エンハンスメント・シャーマンのすべての発動効果が{v}%の確率でもう1回発動します。与えたすべてのダメージの1.5%だけ体力を回復します。", zh = "终极天赋：所有增强萨满祭司的触发效果都有{v}%的几率额外触发一次。你造成的所有伤害的1.5%会治疗你。", ko = "궁극 특성. 모든 고양 주술사 발동 효과가 {v}% 확률로 한 번 더 발동합니다. 주는 모든 피해의 1.5%만큼 생명력을 회복합니다." }
+menu_v = 0.2
+plays = [
+    # The Enhancement talents' numbers are ours (the exe's table has none). `TUNE`
+    { v = 0.2, play = "echo" },
+]
+
+[[talent]]
+key = "imp_healing_wave"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Spell_Nature_MagicImmunity"
+name = { en = "Improved Healing Wave", de = "Verbesserte Welle der Heilung", fr = "Vague de soins améliorée", es = "Ola de curación mejorada", pt = "Onda de Cura Aprimorada", ru = "Улучшенная волна исцеления", pl = "Ulepszona Fala uzdrowienia", tr = "Gelişmiş Şifa Dalgası", it = "Onda di guarigione migliorata", ja = "改良型ヒーリング・ウェーブ", zh = "强化治疗波", ko = "치유의 물결 연마" }
+text = { en = "Healing Wave and Riptide cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Welle der Heilung und Springflut sind {v}% kürzer.", fr = "Les temps de recharge de Vague de soins et de Remous sont réduits de {v}%.", es = "Los tiempos de reutilización de Ola de curación y Mareas vivas se reducen un {v}%.", pt = "Os tempos de recarga de Onda de Cura e Correnteza são {v}% menores.", ru = "Время восстановления Волны исцеления и Быстрины сокращается на {v}%.", pl = "Czasy odnowienia Fali uzdrowienia i Rwącego nurtu są krótsze o {v}%.", tr = "Şifa Dalgası ve Çekim Akıntısı bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Onda di guarigione e Marea impetuosa sono più brevi del {v}%.", ja = "ヒーリング・ウェーブとリップタイドのクールダウンが{v}%短くなります。", zh = "治疗波和激流的冷却时间缩短{v}%。", ko = "치유의 물결과 성난 해일의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.06
+mods = [{ cooldown = ["healing_wave", "riptide"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "tidal_focus"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [6, 0.4] }]
+icon = "Spell_Frost_ManaRecharge"
+name = { en = "Tidal Focus", de = "Gezeitenfokus", fr = "Focalisation des marées", es = "Enfoque de mareas", pt = "Foco das Marés", ru = "Приливная концентрация", pl = "Skupienie przypływu", tr = "Gelgit Odağı", it = "Concentrazione della marea", ja = "タイダル・フォーカス", zh = "潮汐集中", ko = "해일 집중" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.4
+
+[[talent]]
+key = "totemic_focus"
+tree = 2
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "Spell_Nature_MoonGlow"
+name = { en = "Totemic Focus", de = "Totemfokus", fr = "Focalisation totémique", es = "Enfoque totémico", pt = "Foco Totêmico", ru = "Тотемная концентрация", pl = "Skupienie totemów", tr = "Totem Odağı", it = "Concentrazione totemica", ja = "トーテミック・フォーカス", zh = "图腾集中", ko = "토템 집중" }
+text = { en = "Your totems' cooldowns are {v}% shorter.", de = "Die Abklingzeiten deiner Totems sind {v}% kürzer.", fr = "Les temps de recharge de tes totems sont réduits de {v}%.", es = "Los tiempos de reutilización de tus tótems se reducen un {v}%.", pt = "Os tempos de recarga dos seus totens são {v}% menores.", ru = "Время восстановления твоих тотемов сокращается на {v}%.", pl = "Czasy odnowienia twoich totemów są krótsze o {v}%.", tr = "Totemlerinin bekleme süreleri {v}% daha kısa.", it = "Le ricariche dei tuoi totem sono più brevi del {v}%.", ja = "トーテムのクールダウンが{v}%短くなります。", zh = "你的图腾的冷却时间缩短{v}%。", ko = "토템의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.03
+mods = [{ cooldown = ["searing_totem", "magma_totem"] }]
+mods_v = 0.03
+
+[[talent]]
+key = "natures_guidance"
+tree = 2
+row = 1
+col = 2
+ranks = 3
+effects = [{ stat = [3, 0.012] }]
+icon = "Spell_Frost_Stun"
+name = { en = "Nature's Guidance", de = "Führung der Natur", fr = "Guidance de la nature", es = "Guía de la naturaleza", pt = "Orientação da Natureza", ru = "Наставление природы", pl = "Prowadzenie natury", tr = "Doğanın Rehberliği", it = "Guida della natura", ja = "ネイチャーズ・ガイダンス", zh = "自然指引", ko = "자연의 인도" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.012
+
+[[talent]]
+key = "twin_totems"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "searing_totem" }]
+icon = "Spell_Totem_WardOfDraining"
+name = { en = "Call of the Elements", de = "Ruf der Elemente", fr = "Appel des éléments", es = "Llamada de los elementos", pt = "Chamado dos Elementos", ru = "Зов стихий", pl = "Wezwanie żywiołów", tr = "Elementlerin Çağrısı", it = "Richiamo degli elementi", ja = "コール・オブ・ジ・エレメンツ", zh = "元素召唤", ko = "정령의 부름" }
+text = { en = "Milestone. You start every run with Searing Totem, and every totem you set down sets a second one beside it.", de = "Meilenstein. Du beginnst jeden Lauf mit Totem der Verbrennung, und jedes Totem, das du aufstellst, stellt ein zweites daneben.", fr = "Jalon. Tu commences chaque partie avec Totem incendiaire, et chaque totem que tu poses en pose un second à côté.", es = "Hito. Empiezas cada partida con Tótem abrasador, y cada tótem que colocas coloca un segundo a su lado.", pt = "Marco. Você começa cada partida com Totem Calcinante, e cada totem que você planta planta um segundo ao lado.", ru = "Веха. Ты начинаешь каждый забег с Опаляющего тотема, и каждый ставимый тобой тотем ставит рядом второй.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Totemem żaru, a każdy postawiony totem stawia obok drugi.", tr = "Dönüm noktası. Her oyuna Kavurucu Totem ile başlarsın ve diktiğin her totem yanına ikincisini dikir.", it = "Traguardo. Inizi ogni partita con Totem rovente e ogni totem che piazzi ne piazza un secondo accanto.", ja = "【マイルストーン】毎ランをシアリング・トーテムを持って始め、トーテムを置くたびにその隣にもう1本置かれます。", zh = "里程碑：你在每场对局开始时拥有灼热图腾，你放置的每个图腾都会在旁边再放置一个。", ko = "이정표. 모든 런을 불타는 토템을 가지고 시작하며, 토템을 세울 때마다 그 옆에 하나가 더 세워집니다." }
+plays = [
+    { v = 1.0, play = { cast_cast = { keys = ["searing_totem"], cast = "magma_totem", gap = 0.0 } } },
+    { v = 1.0, play = { cast_cast = { keys = ["magma_totem"], cast = "searing_totem", gap = 0.0 } } },
+]
+
+[[talent]]
+key = "restorative_totems"
+tree = 2
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Nature_ManaRegenTotem"
+name = { en = "Restorative Totems", de = "Heilende Totems", fr = "Totems restaurateurs", es = "Tótems restauradores", pt = "Totens Restauradores", ru = "Восстанавливающие тотемы", pl = "Totemy odnowy", tr = "Onarıcı Totemler", it = "Totem rigenerativi", ja = "レストラティヴ・トーテム", zh = "恢复图腾", ko = "회복의 토템" }
+text = { en = "Your totems deal {v}% more damage.", de = "Deine Totems verursachen {v}% mehr Schaden.", fr = "Tes totems infligent {v}% de dégâts en plus.", es = "Tus tótems infligen un {v}% más de daño.", pt = "Seus totens causam {v}% a mais de dano.", ru = "Твои тотемы наносят на {v}% больше урона.", pl = "Twoje totemy zadają o {v}% więcej obrażeń.", tr = "Totemlerin {v}% daha fazla hasar verir.", it = "I tuoi totem infliggono il {v}% di danni in più.", ja = "トーテムのダメージが{v}%増加します。", zh = "你的图腾造成的伤害提高{v}%。", ko = "토템의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["searing_totem", "magma_totem"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "tidal_mastery"
+tree = 2
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [0, 0.02] }]
+icon = "Spell_Nature_Tranquility"
+name = { en = "Tidal Mastery", de = "Gezeitenbeherrschung", fr = "Maîtrise des marées", es = "Maestría de las mareas", pt = "Maestria das Marés", ru = "Мастерство приливов", pl = "Mistrzostwo przypływu", tr = "Gelgit Ustalığı", it = "Maestria della marea", ja = "タイダル・マスタリー", zh = "潮汐掌握", ko = "해일 숙련" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "healing_way"
+tree = 2
+row = 3
+col = 2
+ranks = 3
+req = "twin_totems"
+effects = []
+icon = "Spell_Nature_HealingWay"
+name = { en = "Healing Way", de = "Pfad der Heilung", fr = "Voie de guérison", es = "Camino de curación", pt = "Caminho da Cura", ru = "Путь исцеления", pl = "Droga uzdrowienia", tr = "Şifa Yolu", it = "Via della guarigione", ja = "ヒーリング・ウェイ", zh = "治疗之道", ko = "치유의 길" }
+text = { en = "Healing Wave heals {v}% more.", de = "Welle der Heilung heilt {v}% mehr.", fr = "Vague de soins soigne {v}% de plus.", es = "Ola de curación cura un {v}% más.", pt = "Onda de Cura cura {v}% a mais.", ru = "Волна исцеления лечит на {v}% больше.", pl = "Fala uzdrowienia leczy o {v}% więcej.", tr = "Şifa Dalgası {v}% daha fazla iyileştirir.", it = "Onda di guarigione cura il {v}% in più.", ja = "ヒーリング・ウェーブの回復量が{v}%増加します。", zh = "治疗波的治疗效果提高{v}%。", ko = "치유의 물결의 치유량이 {v}% 증가합니다." }
+menu_v = 0.15
+mods = [{ damage = ["healing_wave"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "reincarnation"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Nature_Reincarnation"
+name = { en = "Reincarnation", de = "Reinkarnation", fr = "Réincarnation", es = "Reencarnación", pt = "Reencarnação", ru = "Перерождение", pl = "Reinkarnacja", tr = "Yeniden Doğuş", it = "Reincarnazione", ja = "リインカーネーション", zh = "复生", ko = "윤회" }
+text = { en = "Milestone. A blow that would kill you leaves you at 50% health instead, once every 2 min.", de = "Meilenstein. Ein Hieb, der dich töten würde, lässt dich stattdessen mit 50% Gesundheit zurück, einmal alle 2 Min.", fr = "Jalon. Un coup qui te tuerait te laisse à 50% de vie, une fois toutes les 2 min.", es = "Hito. Un golpe que te mataría te deja con el 50% de salud, una vez cada 2 min.", pt = "Marco. Um golpe que mataria você o deixa com 50% de vida, uma vez a cada 2 min.", ru = "Веха. Удар, который убил бы тебя, оставляет тебе 50% здоровья, раз в 2 мин.", pl = "Kamień milowy. Cios, który by cię zabił, zostawia cię przy 50% zdrowia, raz na 2 min.", tr = "Dönüm noktası. Seni öldürecek bir darbe seni 50% canla bırakır, 2 dakikada bir.", it = "Traguardo. Un colpo che ti ucciderebbe ti lascia invece al 50% di salute, una volta ogni 2 min.", ja = "【マイルストーン】致命的な一撃を受けると代わりに体力50%で踏みとどまります。2分に1回まで。", zh = "里程碑：致命的一击会使你保留50%的生命值，每2分钟一次。", ko = "이정표. 치명적인 일격을 받으면 대신 생명력 50%로 남습니다. 2분에 한 번 발동합니다." }
+menu_v = 120
+plays = [
+    { v = 120.0, play = { save = { health = 0.5, immune = 0.0, shield = 0.0, cast = [] } } },
+]
+
+[[talent]]
+key = "purification"
+tree = 2
+row = 4
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.02] }]
+icon = "Spell_Frost_WizardMark"
+name = { en = "Purification", de = "Läuterung", fr = "Purification", es = "Purificación", pt = "Purificação", ru = "Очищение", pl = "Oczyszczenie", tr = "Arınma", it = "Purificazione", ja = "ピュリフィケーション", zh = "净化", ko = "정화" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "totemic_mastery"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Nature_NullWard"
+name = { en = "Totemic Mastery", de = "Totembeherrschung", fr = "Maîtrise totémique", es = "Maestría totémica", pt = "Maestria Totêmica", ru = "Мастерство тотемов", pl = "Mistrzostwo totemów", tr = "Totem Ustalığı", it = "Maestria totemica", ja = "トーテミック・マスタリー", zh = "图腾掌握", ko = "토템 숙련" }
+text = { en = "Magma Totem reaches {v}% farther and Searing Totem fires at 1 more target per rank.", de = "Totem der glühenden Magma reicht {v}% weiter, und Totem der Verbrennung feuert pro Rang auf 1 weiteres Ziel.", fr = "La portée de Totem de magma augmente de {v}% et Totem incendiaire tire sur 1 cible de plus par rang.", es = "Tótem de magma alcanza un {v}% más lejos y Tótem abrasador dispara a 1 objetivo más por rango.", pt = "Totem de Magma alcança {v}% mais longe e Totem Calcinante atira em 1 alvo a mais por nível.", ru = "Дальность Тотема магмы увеличивается на {v}%, а Опаляющий тотем стреляет еще по 1 цели за каждый ранг.", pl = "Totem magmy sięga o {v}% dalej, a Totem żaru strzela do 1 dodatkowego celu za każdą rangę.", tr = "Magma Totemi {v}% daha uzağa erişir ve Kavurucu Totem her derece için 1 hedef daha fazlasına ateş eder.", it = "Totem di magma arriva il {v}% più lontano e Totem rovente colpisce 1 bersaglio in più per rango.", ja = "マグマ・トーテムの範囲が{v}%広がり、シアリング・トーテムがランクごとに追加で1体の対象を攻撃します。", zh = "熔岩图腾的范围扩大{v}%，灼热图腾每级额外攻击1个目标。", ko = "용암 토템의 사거리가 {v}% 늘어나고, 불타는 토템이 단계마다 대상을 1명 더 공격합니다." }
+menu_v = 0.1
+mods = [{ area = ["magma_totem"] }, { rank_targets = ["searing_totem"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "ancestral_healing"
+tree = 2
+row = 5
+col = 2
+ranks = 3
+req = "reincarnation"
+effects = [{ stat = [5, 0.012] }]
+icon = "Spell_Nature_UndyingStrength"
+name = { en = "Ancestral Healing", de = "Heilung der Ahnen", fr = "Soins ancestraux", es = "Curación ancestral", pt = "Cura Ancestral", ru = "Исцеление предков", pl = "Uzdrowienie przodków", tr = "Ata Şifası", it = "Guarigione ancestrale", ja = "アンセストラル・ヒーリング", zh = "先祖治疗", ko = "선조의 치유" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.012
+
+[[talent]]
+key = "totemic_call"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "magma_totem" }]
+icon = "Spell_Fire_SealOfFire"
+name = { en = "Totemic Wrath", de = "Totemischer Zorn", fr = "Courroux totémique", es = "Cólera totémica", pt = "Ira Totêmica", ru = "Гнев тотемов", pl = "Gniew totemów", tr = "Totem Gazabı", it = "Ira totemica", ja = "トーテミック・ラース", zh = "图腾之怒", ko = "토템의 격노" }
+text = { en = "Capstone. You start every run with Magma Totem, and a second Searing Totem drops on its own every 14 sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Totem der glühenden Magma, und alle 14 Sek. erscheint von selbst ein zweites Totem der Verbrennung.", fr = "Clé de voûte. Tu commences chaque partie avec Totem de magma, et un second Totem incendiaire se pose tout seul toutes les 14 s.", es = "Piedra angular. Empiezas cada partida con Tótem de magma, y un segundo Tótem abrasador cae solo cada 14 s.", pt = "Pedra angular. Você começa cada partida com Totem de Magma, e um segundo Totem Calcinante surge sozinho a cada 14 s.", ru = "Вершина. Ты начинаешь каждый забег с Тотема магмы, и второй Опаляющий тотем сам появляется каждые 14 сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Totemem magmy, a drugi Totem żaru upada sam co 14 s.", tr = "Zirve. Her oyuna Magma Totemi ile başlarsın ve her 14 sn'de ikinci bir Kavurucu Totem kendiliğinden düşer.", it = "Vertice. Inizi ogni partita con Totem di magma e un secondo Totem rovente si posa da solo ogni 14 s.", ja = "【キャップストーン】毎ランをマグマ・トーテムを持って始め、14秒ごとに2本目のシアリング・トーテムが自動で置かれます。", zh = "终极天赋：你在每场对局开始时拥有熔岩图腾，并且每14秒会自动落下第二个灼热图腾。", ko = "궁극 특성. 모든 런을 용암 토템을 가지고 시작하며, 14초마다 두 번째 불타는 토템이 저절로 세워집니다." }
+plays = [
+    { v = 14.0, play = { every = "searing_totem" } },
+]

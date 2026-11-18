@@ -1,0 +1,16 @@
+# Nexus-Prince Shaffar: Fireball, Blink and Frost Nova, his Ethereal Beacons.
+
+[[boss]]
+key = "nexus_prince_shaffar"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 32363 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ blink = { spell = 34605, distance = 6.0 } }, { nova = { spell = 32365, radius = 9.0, warn = 2.0 } }], 0.5] }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

@@ -1,0 +1,20 @@
+# Devourer of Souls: Wailing Souls, Well of Souls, Phantom Blast.
+
+[[boss]]
+key = "devourer_of_souls"
+
+[[boss.kit]]
+every = 16.0
+ability = { sweep = { spell = 68873, len = 30.0, w = 6.0, warn = 2.0, lasts = 6.0, tick = 0.8 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 68820, burst = 68820, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 68982 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

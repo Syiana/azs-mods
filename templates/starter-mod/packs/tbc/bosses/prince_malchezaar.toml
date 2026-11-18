@@ -1,0 +1,25 @@
+# Prince Malchezaar: Cleave into Shadow Nova, the falling Infernals' Hellfire, Enfeeble, the
+# flying axes.
+
+[[boss]]
+key = "prince_malchezaar"
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ cone = { spell = 31436, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.4 } }, { nova = { spell = 30852, radius = 12.0, warn = 2.2 } }], 1.2] }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 30834, burst = 30859, radius = 7.0, warn = 3.0, factor = 2.2, lasts = 8.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 30843 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 17207, count = 2, radius = 3.0, speed = 4.5, lasts = 7.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

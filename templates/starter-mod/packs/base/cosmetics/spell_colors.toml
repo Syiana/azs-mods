@@ -1,0 +1,233 @@
+# The shop's spell colours (survivors-sim spellcolors.rs).
+#
+# palette_tone: the class colours' hues; a tone's place plus one is its wire value.
+#
+# The class colours' hues, by palette place − 1 (the wire value is the place): key, EN, DE, the
+# hue in degrees in the client's sense (0 red, 120 green, 240 blue). The client keeps the same
+# hues (`benilla-app` `entities/spell_fx/hue.rs` `PALETTE_HUES`).
+
+[[palette_tone]]
+key = "blood"
+name = { en = "Blood Red", de = "Blutrot", fr = "Rouge sang", es = "Rojo sangre", pt = "Vermelho-sangue", ru = "Кроваво-красный", pl = "Krwista czerwień", tr = "Kan Kırmızısı", it = "Rosso sangue", ja = "血の赤", zh = "血红", ko = "핏빛 빨강" }
+hue = 0
+
+[[palette_tone]]
+key = "ember"
+name = { en = "Ember", de = "Glut", fr = "Braise", es = "Ascua", pt = "Brasa", ru = "Тлеющий уголь", pl = "Żar", tr = "Kor", it = "Brace", ja = "残り火", zh = "余烬", ko = "잿불" }
+hue = 25
+
+[[palette_tone]]
+key = "gold"
+name = { en = "Gold", de = "Gold", fr = "Or", es = "Oro", pt = "Ouro", ru = "Золото", pl = "Złoto", tr = "Altın", it = "Oro", ja = "金色", zh = "金色", ko = "금색" }
+hue = 48
+
+[[palette_tone]]
+key = "venom"
+name = { en = "Venom", de = "Gift", fr = "Venin", es = "Veneno", pt = "Veneno", ru = "Яд", pl = "Jad", tr = "Zehir", it = "Veleno", ja = "毒液", zh = "毒液", ko = "독액" }
+hue = 85
+
+[[palette_tone]]
+key = "fel"
+name = { en = "Fel", de = "Teufel", fr = "Gangre", es = "Vil", pt = "Vil", ru = "Скверна", pl = "Zło", tr = "Fel", it = "Vile", ja = "フェル", zh = "邪能", ko = "지옥" }
+hue = 115
+
+[[palette_tone]]
+key = "emerald"
+name = { en = "Emerald", de = "Smaragd", fr = "Émeraude", es = "Esmeralda", pt = "Esmeralda", ru = "Изумрудный", pl = "Szmaragd", tr = "Zümrüt", it = "Smeraldo", ja = "エメラルド", zh = "翡翠绿", ko = "에메랄드" }
+hue = 145
+
+[[palette_tone]]
+key = "teal"
+name = { en = "Teal", de = "Türkis", fr = "Sarcelle", es = "Verdeazulado", pt = "Verde-azulado", ru = "Бирюзовый", pl = "Turkus", tr = "Deniz Mavisi", it = "Verde acqua", ja = "ティール", zh = "青绿色", ko = "청록색" }
+hue = 175
+
+[[palette_tone]]
+key = "frost"
+name = { en = "Frost", de = "Frost", fr = "Givre", es = "Escarcha", pt = "Gelo", ru = "Лед", pl = "Mróz", tr = "Buz", it = "Gelo", ja = "フロスト", zh = "冰霜", ko = "냉기" }
+hue = 200
+
+[[palette_tone]]
+key = "azure"
+name = { en = "Azure", de = "Azur", fr = "Azur", es = "Azur", pt = "Azul-celeste", ru = "Лазурный", pl = "Lazur", tr = "Gök Mavisi", it = "Azzurro", ja = "紺碧", zh = "蔚蓝", ko = "하늘빛" }
+hue = 225
+
+[[palette_tone]]
+key = "arcane"
+name = { en = "Arcane", de = "Arkan", fr = "Arcanes", es = "Arcano", pt = "Arcano", ru = "Тайная магия", pl = "Magia tajemna", tr = "Gizem", it = "Arcano", ja = "アーケイン", zh = "奥术", ko = "비전" }
+hue = 262
+
+[[palette_tone]]
+key = "void"
+name = { en = "Void", de = "Leere", fr = "Vide", es = "Vacío", pt = "Vácuo", ru = "Бездна", pl = "Pustka", tr = "Boşluk", it = "Vuoto", ja = "ヴォイド", zh = "虚空", ko = "공허" }
+hue = 285
+
+[[palette_tone]]
+key = "rose"
+name = { en = "Rose", de = "Rose", fr = "Rose", es = "Rosa", pt = "Rosa", ru = "Розовый цвет", pl = "Róża", tr = "Gül", it = "Rosa", ja = "薔薇", zh = "玫瑰", ko = "장미" }
+hue = 320
+
+[[palette_tone]]
+key = "crimson"
+name = { en = "Crimson", de = "Karmesin", fr = "Cramoisi", es = "Carmesí", pt = "Carmesim", ru = "Багровый", pl = "Karmazyn", tr = "Kızıl", it = "Cremisi", ja = "深紅", zh = "深红", ko = "진홍색" }
+hue = 345
+
+# Hallow's End's two-tone colours (`dark`): a spell's bright parts take `hue`, its dim parts
+# `dark`. Sold only in the holiday's shop, for every class at once (class.toml `holiday`).
+
+[[palette_tone]]
+key = "pumpkin_hex"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+hue = 28
+dark = 278
+
+[[palette_tone]]
+key = "witchfire"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }
+hue = 100
+dark = 288
+
+# spell_color: a school's colour variants (school 0 fire, 1 frost, 2 arcane, 3 shadow, 4 holy, 5 nature).
+# Every variant, by school, in the client's and the menu's order; a school's place in its
+# school plus one is its wire value. `TUNE` the prices.
+
+# Fel fire: Fireball as Fel Fireball (35913, `fel_fireball_missile_high`), Pyroblast and Soul
+# Fire as Fel Cannon Blast (36238), Immolate as Fel Immolation (36051), Fire Blast as Heat Mold
+# (38202, `fel_fireblast_impact_chest`), Hellfire as Flames of Chaos (39055,
+# `fel_hellfire_impact_caster_base`). Speeds 24/24/0/0/0, as the bases'.
+[[spell_color]]
+key = "fire_fel"
+school = 0
+name = { en = "Fel Fire", de = "Teufelsfeuer", fr = "Feu gangrené", es = "Fuego vil", pt = "Fogo Vil", ru = "Огонь Скверны", pl = "Ogień Zła", tr = "Fel Ateşi", it = "Vilfuoco", ja = "フェル・ファイア", zh = "邪火", ko = "지옥불" }
+price = 15000
+hue = 100
+swaps = [[133, 35913], [11366, 36238], [6353, 36238], [348, 36051], [2136, 38202], [1949, 39055]]
+
+# Azure flame: Fireball, Pyroblast and Soul Fire as Chaotic Retribution (41039,
+# `FireBolt_Blue_Missile_Low`, `Fire_Blue_*` precast and impact, Speed 24), Immolate as
+# Agonizing Flames (40932, `Immolate_Blue_Impact_Chest`), Fire Blast as Warp Rift (40433,
+# `FireBlast_Blue_Impact_Chest`), Hellfire as Eye Blast (40018, `HellfIre_Blue_Impact_Base`).
+[[spell_color]]
+key = "fire_azure"
+school = 0
+name = { en = "Azure Flame", de = "Azurflamme", fr = "Flamme azur", es = "Llama azur", pt = "Chama Azul-celeste", ru = "Лазурное пламя", pl = "Lazurowy płomień", tr = "Gök Alevi", it = "Fiamma azzurra", ja = "紺碧の炎", zh = "蔚蓝火焰", ko = "하늘빛 불꽃" }
+price = 12000
+hue = 180
+swaps = [[133, 41039], [11366, 41039], [6353, 41039], [348, 40932], [2136, 40433], [1949, 40018]]
+
+[[spell_color]]
+key = "fire_shadow"
+school = 0
+name = { en = "Shadowflame", de = "Schattenflamme", fr = "Flamme d'ombre", es = "Llama de las Sombras", pt = "Chama Sombria", ru = "Пламя Тьмы", pl = "Płomień cienia", tr = "Gölge Alevi", it = "Fiamma d'ombra", ja = "シャドウフレイム", zh = "暗影烈焰", ko = "어둠의 불꽃" }
+price = 18000
+hue = -110
+
+[[spell_color]]
+key = "frost_void"
+school = 1
+name = { en = "Void Frost", de = "Leerenfrost", fr = "Givre du Vide", es = "Escarcha del Vacío", pt = "Gelo do Vácuo", ru = "Лёд Бездны", pl = "Mróz Pustki", tr = "Boşluk Buzu", it = "Gelo del Vuoto", ja = "ヴォイド・フロスト", zh = "虚空冰霜", ko = "공허 서리" }
+price = 15000
+hue = 80
+
+[[spell_color]]
+key = "frost_blood"
+school = 1
+name = { en = "Blood Frost", de = "Blutfrost", fr = "Givre de sang", es = "Escarcha de sangre", pt = "Gelo Sangrento", ru = "Кровавый лёд", pl = "Krwawy mróz", tr = "Kan Buzu", it = "Gelo di sangue", ja = "血のフロスト", zh = "鲜血冰霜", ko = "피 서리" }
+price = 15000
+hue = 160
+
+[[spell_color]]
+key = "frost_emerald"
+school = 1
+name = { en = "Emerald Frost", de = "Smaragdfrost", fr = "Givre émeraude", es = "Escarcha esmeralda", pt = "Gelo Esmeralda", ru = "Изумрудный лёд", pl = "Szmaragdowy mróz", tr = "Zümrüt Buz", it = "Gelo di smeraldo", ja = "エメラルド・フロスト", zh = "翡翠冰霜", ko = "에메랄드 서리" }
+price = 12000
+hue = -80
+
+[[spell_color]]
+key = "arcane_rose"
+school = 2
+name = { en = "Rose Arcane", de = "Rosenarkan", fr = "Arcane rose", es = "Arcano rosa", pt = "Arcano Rosa", ru = "Розовая тайная магия", pl = "Różana magia tajemna", tr = "Gül Gizemi", it = "Arcano rosa", ja = "薔薇のアーケイン", zh = "玫瑰奥术", ko = "장미 비전" }
+price = 12000
+hue = 40
+
+[[spell_color]]
+key = "arcane_ethereal"
+school = 2
+name = { en = "Ethereal Arcane", de = "Astralarkan", fr = "Arcane éthérée", es = "Arcano etéreo", pt = "Arcano Etéreo", ru = "Эфирная тайная магия", pl = "Eteryczna magia tajemna", tr = "Ruhani Gizem", it = "Arcano etereo", ja = "エーテルのアーケイン", zh = "虚灵奥术", ko = "에테리얼 비전" }
+price = 15000
+hue = -110
+
+[[spell_color]]
+key = "arcane_celestial"
+school = 2
+name = { en = "Celestial Arcane", de = "Himmelsarkan", fr = "Arcane céleste", es = "Arcano celestial", pt = "Arcano Celestial", ru = "Небесная тайная магия", pl = "Niebiańska magia tajemna", tr = "Göksel Gizem", it = "Arcano celeste", ja = "天上のアーケイン", zh = "天界奥术", ko = "천상 비전" }
+price = 18000
+hue = 115
+
+# Shadow Bolt (Speed 20) as a fel firebolt (30000, `fel_firebolt_missile_low`, fel precast).
+[[spell_color]]
+key = "shadow_fel"
+school = 3
+name = { en = "Fel Shadow", de = "Teufelsschatten", fr = "Ombre gangrenée", es = "Sombra vil", pt = "Sombra Vil", ru = "Тень Скверны", pl = "Cień Zła", tr = "Fel Gölgesi", it = "Ombra vile", ja = "フェル・シャドウ", zh = "邪能暗影", ko = "지옥 암흑" }
+price = 15000
+hue = -160
+swaps = [[686, 30000]]
+
+# Shadow Bolt as Blood Nova's bolt (72379, `bloodbolt_missile_low`, `BloodyExplosion`).
+[[spell_color]]
+key = "shadow_blood"
+school = 3
+name = { en = "Blood Shadow", de = "Blutschatten", fr = "Ombre de sang", es = "Sombra de sangre", pt = "Sombra Sangrenta", ru = "Кровавая тень", pl = "Krwawy cień", tr = "Kan Gölgesi", it = "Ombra di sangue", ja = "血のシャドウ", zh = "鲜血暗影", ko = "피 암흑" }
+price = 15000
+hue = 90
+swaps = [[686, 72379]]
+
+# Shadow Bolt as Void Blast (46161, `Shadow_*_Uber` precast, missile and impact).
+[[spell_color]]
+key = "shadow_void"
+school = 3
+name = { en = "Void Shadow", de = "Leerenschatten", fr = "Ombre du Vide", es = "Sombra del Vacío", pt = "Sombra do Vácuo", ru = "Тень Бездны", pl = "Cień Pustki", tr = "Boşluk Gölgesi", it = "Ombra del Vuoto", ja = "ヴォイド・シャドウ", zh = "虚空暗影", ko = "공허 암흑" }
+price = 18000
+hue = -40
+swaps = [[686, 46161]]
+
+[[spell_color]]
+key = "holy_shadow"
+school = 4
+name = { en = "Shadowlight", de = "Schattenlicht", fr = "Ombre-lumière", es = "Luz sombría", pt = "Luz Sombria", ru = "Теневой свет", pl = "Światłocień", tr = "Gölge Işığı", it = "Luce d'ombra", ja = "シャドウライト", zh = "暗影圣光", ko = "그림자빛" }
+price = 18000
+hue = -130
+
+[[spell_color]]
+key = "holy_dawn"
+school = 4
+name = { en = "Dawnlight", de = "Morgenrot", fr = "Lueur de l'aube", es = "Luz del alba", pt = "Luz da Alvorada", ru = "Свет зари", pl = "Światło świtu", tr = "Şafak Işığı", it = "Luce dell'alba", ja = "暁光", zh = "晨光", ko = "여명빛" }
+price = 12000
+hue = -70
+
+[[spell_color]]
+key = "holy_azure"
+school = 4
+name = { en = "Azure Light", de = "Azurlicht", fr = "Lumière azur", es = "Luz azur", pt = "Luz Azur", ru = "Лазурный свет", pl = "Lazurowe światło", tr = "Gök Işık", it = "Luce azzurra", ja = "紺碧の光", zh = "蔚蓝圣光", ko = "하늘빛 광휘" }
+price = 15000
+hue = 160
+
+[[spell_color]]
+key = "nature_storm"
+school = 5
+name = { en = "Storm Nature", de = "Sturmnatur", fr = "Nature de tempête", es = "Naturaleza de tormenta", pt = "Natureza da Tempestade", ru = "Природа бури", pl = "Natura burzy", tr = "Fırtına Doğası", it = "Natura tempestosa", ja = "嵐の自然", zh = "风暴自然", ko = "폭풍 자연" }
+price = 12000
+hue = 110
+
+[[spell_color]]
+key = "nature_crimson"
+school = 5
+name = { en = "Crimson Nature", de = "Karmesinnatur", fr = "Nature cramoisie", es = "Naturaleza carmesí", pt = "Natureza Carmesim", ru = "Багровая природа", pl = "Szkarłatna natura", tr = "Kızıl Doğa", it = "Natura cremisi", ja = "深紅の自然", zh = "赤红自然", ko = "진홍 자연" }
+price = 15000
+hue = -110
+
+[[spell_color]]
+key = "nature_gold"
+school = 5
+name = { en = "Golden Nature", de = "Goldnatur", fr = "Nature dorée", es = "Naturaleza dorada", pt = "Natureza Dourada", ru = "Золотая природа", pl = "Złota natura", tr = "Altın Doğa", it = "Natura dorata", ja = "黄金の自然", zh = "金色自然", ko = "황금 자연" }
+price = 15000
+hue = -60

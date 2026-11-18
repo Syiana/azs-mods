@@ -1,0 +1,584 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "paladin_holy"
+index = 0
+icon = "Spell_Holy_HolyBolt"
+background = "PaladinHoly"
+name = { en = "Holy", de = "Heilig", fr = "Sacré", es = "Sagrado", pt = "Sagrado", ru = "Свет", pl = "Światłość", tr = "Kutsal", it = "Sacro", ja = "ホーリー", zh = "神圣", ko = "신성" }
+
+[[talent_tree]]
+key = "paladin_protection"
+index = 1
+icon = "Spell_Holy_DevotionAura"
+background = "PaladinProtection"
+name = { en = "Protection", de = "Schutz", fr = "Protection", es = "Protección", pt = "Proteção", ru = "Защита", pl = "Ochrona", tr = "Koruma", it = "Protezione", ja = "プロテクション", zh = "防护", ko = "보호" }
+
+[[talent_tree]]
+key = "paladin_retribution"
+index = 2
+icon = "Spell_Holy_AuraOfLight"
+background = "PaladinCombat"
+name = { en = "Retribution", de = "Vergeltung", fr = "Vindicte", es = "Reprensión", pt = "Retribuição", ru = "Возмездие", pl = "Pokuta", tr = "Mukabele", it = "Castigo", ja = "レトリビューション", zh = "惩戒", ko = "징벌" }
+
+[[talent]]
+key = "divine_strength"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [0, 0.015] }]
+icon = "Ability_GolemThunderClap"
+name = { en = "Divine Strength", de = "Göttliche Stärke", fr = "Force divine", es = "Fuerza divina", pt = "Força Divina", ru = "Божественная сила", pl = "Boska siła", tr = "İlahi Güç", it = "Forza divina", ja = "ディヴァイン・ストレングス", zh = "神圣之力", ko = "신성한 힘" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "divine_intellect"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [6, 0.4] }]
+icon = "Spell_Nature_Sleep"
+name = { en = "Divine Intellect", de = "Göttliche Intelligenz", fr = "Intellect divin", es = "Intelecto divino", pt = "Intelecto Divino", ru = "Божественный интеллект", pl = "Boski intelekt", tr = "İlahi Zeka", it = "Intelletto divino", ja = "ディヴァイン・インテレクト", zh = "神圣智慧", ko = "신성한 지능" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.4
+
+[[talent]]
+key = "healing_light"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Holy_HolyBolt"
+name = { en = "Healing Light", de = "Heilendes Licht", fr = "Lumière guérisseuse", es = "Luz sanadora", pt = "Luz Curativa", ru = "Целительный свет", pl = "Uzdrawiające światło", tr = "Şifa Işığı", it = "Luce guaritrice", ja = "ヒーリング・ライト", zh = "治疗之光", ko = "치유의 빛" }
+text = { en = "Holy Light heals and Sacred Shield holds {v}% more.", de = "Heiliges Licht heilt und Geheiligter Schild hält {v}% mehr.", fr = "Lumière sacrée soigne et Bouclier sacré retient {v}% de plus.", es = "Luz Sagrada cura y Escudo sacro aguanta un {v}% más.", pt = "Luz Sagrada cura e Escudo Sacro segura {v}% a mais.", ru = "Свет небес исцеляет, а Священный щит вмещает на {v}% больше.", pl = "Święte światło leczy, a Sakralna tarcza chroni o {v}% więcej.", tr = "Kutsal Işık ve Mukaddes Kalkan {v}% daha fazla iyileştirir ve tutar.", it = "Luce sacra cura e Scudo consacrato regge il {v}% in più.", ja = "ホーリー・ライトの回復量とセイクリッド・シールドの吸収量が{v}%増加します。", zh = "圣光术的治疗量和圣洁护盾的吸收量提高{v}%。", ko = "성스러운 빛의 치유량과 성스러운 보호막의 흡수량이 {v}% 증가합니다." }
+menu_v = 0.2
+mods = [{ damage = ["holy_light", "sacred_shield"] }]
+mods_v = 0.2
+
+[[talent]]
+key = "imp_seal"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = []
+icon = "Ability_ThunderBolt"
+name = { en = "Improved Seal of Righteousness", de = "Verbessertes Siegel der Rechtschaffenheit", fr = "Sceau de piété amélioré", es = "Sello de rectitud mejorado", pt = "Selo de Retidão Aprimorado", ru = "Улучшенная печать праведности", pl = "Ulepszona Pieczęć prawości", tr = "Gelişmiş Doğruluk Mührü", it = "Sigillo di rettitudine migliorato", ja = "改良型シール・オブ・ライチャスネス", zh = "强化正义圣印", ko = "정의의 문장 연마" }
+text = { en = "Judgement, Exorcism, Crusader Strike and Divine Storm deal {v}% more damage.", de = "Richturteil, Exorzismus, Kreuzfahrerstoß und Göttlicher Sturm verursachen {v}% mehr Schaden.", fr = "Jugement, Exorcisme, Frappe du croisé et Tempête divine infligent {v}% de dégâts en plus.", es = "Juicio, Exorcismo, Golpe de cruzado y Tormenta divina infligen un {v}% más de daño.", pt = "Julgamento, Exorcismo, Golpe do Cruzado e Tempestade Divina causam {v}% a mais de dano.", ru = "Правосудие, Экзорцизм, Удар воина Света и Божественная буря наносят на {v}% больше урона.", pl = "Osąd, Egzorcyzm, Uderzenie krzyżowca i Boska burza zadają o {v}% więcej obrażeń.", tr = "Yargı, Şeytan Kovma, Haçlı Darbesi ve İlahi Fırtına {v}% daha fazla hasar verir.", it = "Giudizio, Esorcismo, Colpo del crociato e Tempesta divina infliggono il {v}% di danni in più.", ja = "ジャッジメント、エクソシズム、クルセイダー・ストライク、ディヴァイン・ストームのダメージが{v}%増加します。", zh = "审判、驱邪术、十字军打击和神圣风暴造成的伤害提高{v}%。", ko = "심판, 퇴마술, 성전사의 일격, 신성한 폭풍의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["judgement", "exorcism", "crusader_strike", "divine_storm"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "divine_favor"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "holy_shock" }]
+icon = "Spell_Holy_Heal"
+name = { en = "Divine Favor", de = "Göttliche Gunst", fr = "Faveur divine", es = "Favor divino", pt = "Favor Divino", ru = "Божественное одобрение", pl = "Boska łaska", tr = "İlahi Lütuf", it = "Favore divino", ja = "ディヴァイン・フェイバー", zh = "神恩术", ko = "신의 은총" }
+text = { en = "Milestone. You start every run with Holy Shock, and each of its bolts leaps to 2 more enemies for {v}% of it.", de = "Meilenstein. Du beginnst jeden Lauf mit Heiligem Schock, und jedes seiner Geschosse springt auf 2 weitere Feinde für {v}% davon über.", fr = "Jalon. Tu commences chaque partie avec Horion sacré, et chacun de ses traits bondit sur 2 ennemis de plus pour {v}% de ses dégâts.", es = "Hito. Empiezas cada partida con Choque Sagrado, y cada uno de sus rayos salta a 2 enemigos más con un {v}% de su daño.", pt = "Marco. Você começa cada partida com Choque Sagrado, e cada um dos seus raios salta para mais 2 inimigos com {v}% do seu dano.", ru = "Веха. Ты начинаешь каждый забег с Шока небесной силы, и каждая его молния перескакивает еще на 2 врагов с {v}% урона.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz ze Świętym szokiem, a każdy jego pocisk przeskakuje na 2 kolejnych przeciwników za {v}% obrażeń.", tr = "Dönüm noktası. Her oyuna Kutsal Şok ile başlarsın ve her oku hasarının {v}%'si kadar 2 düşmana daha sıçrar.", it = "Traguardo. Inizi ogni partita con Folgore sacra e ognuno dei suoi dardi salta su altri 2 nemici per il {v}% del danno.", ja = "【マイルストーン】毎ランをホーリー・ショックを持って始め、その各ボルトが別の敵2体に飛び移ってその{v}%のダメージを与えます。", zh = "里程碑：你在每场对局开始时拥有神圣震击，它的每道光束会跳跃到另外2个敌人身上，造成相当于其伤害{v}%的伤害。", ko = "이정표. 모든 런을 신성 충격을 가지고 시작하며, 신성 충격의 화살이 적 2명에게 더 튀어 그 피해의 {v}%를 줍니다." }
+menu_v = 0.5
+plays = [
+    # The share the exe leaves unread (the talent window shows it from VALUES in
+    # SurvivorsTalentsWotlk.lua): ours. `TUNE`
+    { v = 0.5, play = { cleave = { keys = ["holy_shock"], n = 2, radius = 10.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "unyielding_faith"
+tree = 0
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [5, 0.012] }]
+icon = "Spell_Holy_UnyieldingFaith"
+name = { en = "Unyielding Faith", de = "Unerschütterlicher Glaube", fr = "Foi inébranlable", es = "Fe inquebrantable", pt = "Fé Inabalável", ru = "Непоколебимая вера", pl = "Niezłomna wiara", tr = "Sarsılmaz İnanç", it = "Fede incrollabile", ja = "アンイールディング・フェイス", zh = "坚定信念", ko = "굳건한 신념" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.012
+
+[[talent]]
+key = "holy_power"
+tree = 0
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "Spell_Holy_Power"
+name = { en = "Holy Power", de = "Heilige Macht", fr = "Puissance sacrée", es = "Poder sagrado", pt = "Poder Sagrado", ru = "Священная сила", pl = "Święta moc", tr = "Kutsal Güç", it = "Potere sacro", ja = "ホーリー・パワー", zh = "神圣能量", ko = "신성한 권능" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "lasting_judgement"
+tree = 0
+row = 3
+col = 2
+ranks = 3
+req = "divine_favor"
+effects = []
+icon = "Spell_Holy_HealingAura"
+name = { en = "Lasting Judgement", de = "Anhaltendes Richturteil", fr = "Jugement durable", es = "Juicio duradero", pt = "Julgamento Duradouro", ru = "Долгое правосудие", pl = "Trwały osąd", tr = "Kalıcı Yargı", it = "Giudizio duraturo", ja = "ラスティング・ジャッジメント", zh = "持久审判", ko = "지속되는 심판" }
+text = { en = "Holy Shock's cooldown is {v}% shorter.", de = "Die Abklingzeit von Heiliger Schock ist {v}% kürzer.", fr = "Le temps de recharge d'Horion sacré est réduit de {v}%.", es = "El tiempo de reutilización de Choque Sagrado se reduce un {v}%.", pt = "O tempo de recarga de Choque Sagrado é {v}% menor.", ru = "Время восстановления Шока небесной силы сокращается на {v}%.", pl = "Czas odnowienia Świętego szoku jest krótszy o {v}%.", tr = "Kutsal Şok'un bekleme süresi {v}% daha kısa.", it = "La ricarica di Folgore sacra è più breve del {v}%.", ja = "ホーリー・ショックのクールダウンが{v}%短くなります。", zh = "神圣震击的冷却时间缩短{v}%。", ko = "신성 충격의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["holy_shock"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "daybreak"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_Excorcism"
+name = { en = "Daybreak", de = "Tagesanbruch", fr = "Aube", es = "Amanecer", pt = "Alvorada", ru = "Рассвет", pl = "Brzask", tr = "Gün Doğumu", it = "Alba", ja = "デイブレイク", zh = "破晓", ko = "새벽빛" }
+text = { en = "Milestone. Holy Shock's critical strikes call down a free Holy Wrath around you, at most once every 3 sec.", de = "Meilenstein. Kritische Treffer von Heiliger Schock rufen einen kostenlosen Heiligen Zorn um dich herab, höchstens einmal alle 3 Sek.", fr = "Jalon. Les coups critiques d'Horion sacré font tomber une Colère sacrée gratuite autour de toi, au plus une fois toutes les 3 s.", es = "Hito. Los golpes críticos de Choque Sagrado hacen caer una Cólera Sagrada gratis a tu alrededor, como máximo una vez cada 3 s.", pt = "Marco. Os acertos críticos de Choque Sagrado fazem cair uma Ira Sagrada grátis ao seu redor, no máximo uma vez a cada 3 s.", ru = "Веха. Критические удары Шока небесной силы обрушивают вокруг тебя бесплатный Гнев небес, не чаще одного раза в 3 сек.", pl = "Kamień milowy. Trafienia krytyczne Świętego szoku zsyłają wokół ciebie darmowy Gniew bogów, najwyżej raz na 3 s.", tr = "Dönüm noktası. Kutsal Şok'un kritik vuruşları çevrene bedava bir Kutsal Gazap indirir, 3 sn'de en fazla bir kez.", it = "Traguardo. I colpi critici di Folgore sacra evocano un'Ira sacra gratuita attorno a te, al massimo una volta ogni 3 s.", ja = "【マイルストーン】ホーリー・ショックのクリティカルが周囲に無料のホーリー・ラースを呼び下ろします（3秒に1回まで）。", zh = "里程碑：神圣震击的暴击会在你周围降下一次免费的神圣愤怒，每3秒最多一次。", ko = "이정표. 신성 충격이 치명타로 적중하면 주위에 신의 격노가 무료로 내립니다. 3초에 최대 한 번입니다." }
+menu_v = 1
+plays = [
+    { v = 1.0, play = { crit_cast = { keys = ["holy_shock"], school = 0, cast = "holy_wrath", gap = 3.0 } } },
+]
+
+[[talent]]
+key = "sanctified_light"
+tree = 0
+row = 4
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Holy_HealingFocus"
+name = { en = "Sanctified Light", de = "Geheiligtes Licht", fr = "Lumière sanctifiée", es = "Luz santificada", pt = "Luz Santificada", ru = "Освященный свет", pl = "Uświęcone światło", tr = "Kutsanmış Işık", it = "Luce santificata", ja = "サンクティファイド・ライト", zh = "圣洁之光", ko = "축성된 빛" }
+text = { en = "Holy spells deal {v}% more damage.", de = "Heilige Zauber verursachen {v}% mehr Schaden.", fr = "Les sorts sacrés infligent {v}% de dégâts en plus.", es = "Los hechizos sagrados infligen un {v}% más de daño.", pt = "Feitiços Sagrados causam {v}% a mais de dano.", ru = "Заклинания Света наносят на {v}% больше урона.", pl = "Czary światłości zadają o {v}% więcej obrażeń.", tr = "Kutsal büyüler {v}% daha fazla hasar verir.", it = "Gli incantesimi Sacri infliggono il {v}% di danni in più.", ja = "聖の呪文のダメージが{v}%増加します。", zh = "神圣法术造成的伤害提高{v}%。", ko = "신성 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+mods = [{ school = 2 }]
+mods_v = 0.02
+
+[[talent]]
+key = "holy_guidance"
+tree = 0
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [2, 0.03] }]
+icon = "Spell_Holy_SealOfSalvation"
+name = { en = "Holy Guidance", de = "Heilige Führung", fr = "Guidance sacrée", es = "Guía sagrada", pt = "Orientação Sagrada", ru = "Священное наставление", pl = "Święte prowadzenie", tr = "Kutsal Rehberlik", it = "Guida sacra", ja = "ホーリー・ガイダンス", zh = "神圣指引", ko = "신성한 인도" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "purifying_power"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "daybreak"
+effects = []
+icon = "Spell_Holy_Purify"
+name = { en = "Purifying Power", de = "Läuternde Macht", fr = "Puissance purificatrice", es = "Poder purificador", pt = "Poder Purificador", ru = "Очищающая сила", pl = "Oczyszczająca moc", tr = "Arındıran Güç", it = "Potere purificatore", ja = "ピュリファイング・パワー", zh = "纯净之力", ko = "정화의 힘" }
+text = { en = "Holy Wrath and Consecration reach {v}% farther.", de = "Heiliger Zorn und Weihe reichen {v}% weiter.", fr = "La portée de Colère sacrée et de Consécration augmente de {v}%.", es = "Cólera Sagrada y Consagración alcanzan un {v}% más lejos.", pt = "Ira Sagrada e Consagração alcançam {v}% mais longe.", ru = "Дальность Гнева небес и Освящения увеличивается на {v}%.", pl = "Gniew bogów i Poświęcenie sięgają o {v}% dalej.", tr = "Kutsal Gazap ve Kutsama {v}% daha uzağa erişir.", it = "Ira sacra e Consacrazione arrivano il {v}% più lontano.", ja = "ホーリー・ラースとコンセクレーションの範囲が{v}%広がります。", zh = "神圣愤怒和奉献的范围扩大{v}%。", ko = "신의 격노와 신성화의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.08
+mods = [{ area = ["holy_wrath", "consecration"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "lights_grace"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_SearingLight"
+name = { en = "Light's Grace", de = "Gnade des Lichts", fr = "Grâce de la Lumière", es = "Gracia de la Luz", pt = "Graça da Luz", ru = "Милость Света", pl = "Łaska światła", tr = "Işığın Lütfu", it = "Grazia della Luce", ja = "ライツ・グレイス", zh = "圣光之赐", ko = "빛의 은총" }
+text = { en = "Capstone. A Holy Wrath bursts from you on its own every 14 sec.", de = "Schlussstein. Alle 14 Sek. bricht von selbst ein Heiliger Zorn aus dir hervor.", fr = "Clé de voûte. Une Colère sacrée jaillit de toi toute seule toutes les 14 s.", es = "Piedra angular. Una Cólera Sagrada estalla de ti por sí sola cada 14 s.", pt = "Pedra angular. Uma Ira Sagrada explode de você sozinha a cada 14 s.", ru = "Вершина. Гнев небес сам вырывается из тебя каждые 14 сек.", pl = "Zwieńczenie. Gniew bogów wybucha z ciebie sam co 14 s.", tr = "Zirve. Her 14 sn'de senden kendiliğinden bir Kutsal Gazap patlar.", it = "Vertice. Un'Ira sacra esplode da te da sola ogni 14 s.", ja = "【キャップストーン】14秒ごとにホーリー・ラースが自動で炸裂します。", zh = "终极天赋：每14秒会自动从你身上爆发一次神圣愤怒。", ko = "궁극 특성. 14초마다 신의 격노가 저절로 터져 나옵니다." }
+menu_v = 14
+plays = [
+    { v = 14.0, play = { every = "holy_wrath" } },
+]
+
+[[talent]]
+key = "imp_devotion"
+tree = 1
+row = 0
+col = 0
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "Spell_Holy_DevotionAura"
+name = { en = "Improved Devotion Aura", de = "Verbesserte Aura der Hingabe", fr = "Aura de dévotion améliorée", es = "Aura de devoción mejorada", pt = "Aura da Devoção Aprimorada", ru = "Улучшенная аура набожности", pl = "Ulepszona Aura pobożności", tr = "Gelişmiş Adanmışlık Auraı", it = "Aura di devozione migliorata", ja = "改良型ディヴォーション・オーラ", zh = "强化虔诚光环", ko = "기원의 오라 연마" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "redoubt"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.04] }]
+icon = "Ability_Defend"
+name = { en = "Redoubt", de = "Verschanzen", fr = "Redoute", es = "Reducto", pt = "Reduto", ru = "Оплот", pl = "Redut", tr = "Siper", it = "Ridotto", ja = "リダウト", zh = "坚守", ko = "보루" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "imp_consecration"
+tree = 1
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Holy_InnerFire"
+name = { en = "Improved Consecration", de = "Verbesserte Weihe", fr = "Consécration améliorée", es = "Consagración mejorada", pt = "Consagração Aprimorada", ru = "Улучшенное Освящение", pl = "Ulepszone Poświęcenie", tr = "Gelişmiş Kutsama", it = "Consacrazione migliorata", ja = "改良型コンセクレーション", zh = "强化奉献", ko = "신성화 연마" }
+text = { en = "Every tick of Consecration deals an extra {v}% of your maximum health.", de = "Jeder Tick von Weihe verursacht zusätzlich {v}% deiner maximalen Gesundheit.", fr = "Chaque impulsion de Consécration inflige en plus {v}% de tes points de vie maximums.", es = "Cada pulso de Consagración inflige además un {v}% de tu salud máxima.", pt = "Cada pulso de Consagração causa adicionalmente {v}% da sua vida máxima.", ru = "Каждый такт Освящения наносит дополнительно {v}% твоего максимального здоровья.", pl = "Każde tyknięcie Poświęcenia zadaje dodatkowo {v}% twojego maksymalnego zdrowia.", tr = "Kutsama'nın her vuruşu azami canının fazladan {v}%'si kadar hasar verir.", it = "Ogni tick di Consacrazione infligge un ulteriore {v}% della tua salute massima.", ja = "コンセクレーションの各ティックが最大体力の{v}%の追加ダメージを与えます。", zh = "奉献每跳额外造成相当于你最大生命值{v}%的伤害。", ko = "신성화가 피해를 줄 때마다 최대 생명력의 {v}%만큼 추가 피해를 줍니다." }
+menu_v = 0.0025
+mods = [{ health_hit = ["consecration"] }]
+mods_v = 0.0025
+
+[[talent]]
+key = "spiritual_attunement"
+tree = 1
+row = 1
+col = 2
+ranks = 3
+effects = [{ stat = [14, 0.0025] }]
+icon = "Spell_Holy_BlessedRecovery"
+name = { en = "Spiritual Attunement", de = "Spirituelle Einstimmung", fr = "Harmonisation spirituelle", es = "Sintonía espiritual", pt = "Sintonia Espiritual", ru = "Духовная гармония", pl = "Duchowe zestrojenie", tr = "Ruhani Uyum", it = "Sintonia spirituale", ja = "スピリチュアル・アチューンメント", zh = "精神协调", ko = "영적 조율" }
+text = { en = "{v}% of all the damage you deal heals you.", de = "{v}% des gesamten Schadens, den du verursachst, heilt dich.", fr = "{v}% de tous les dégâts que tu infliges te soignent.", es = "El {v}% de todo el daño que infliges te cura.", pt = "{v}% de todo o dano que você causa cura você.", ru = "{v}% всего наносимого тобой урона лечит тебя.", pl = "{v}% wszystkich zadanych obrażeń leczy cię.", tr = "Verdiğin tüm hasarın {v}%'si seni iyileştirir.", it = "Il {v}% di tutti i danni che infliggi ti cura.", ja = "与えたすべてのダメージの{v}%だけ体力を回復します。", zh = "你造成的所有伤害的{v}%会治疗你。", ko = "주는 모든 피해의 {v}%만큼 생명력을 회복합니다." }
+menu_v = 0.0025
+
+[[talent]]
+key = "weighted_hammer"
+tree = 1
+row = 2
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Holy_SealOfMight"
+name = { en = "Weighted Hammer", de = "Gewichteter Hammer", fr = "Marteau lesté", es = "Martillo lastrado", pt = "Martelo Pesado", ru = "Утяжеленный молот", pl = "Ciężki młot", tr = "Ağırlıklı Çekiç", it = "Martello appesantito", ja = "ウェイテッド・ハンマー", zh = "重锤", ko = "무거운 망치" }
+text = { en = "Hammer of Justice and Hammer of the Righteous deal an extra {v}% of your maximum health.", de = "Hammer der Gerechtigkeit und Hammer der Rechtschaffenen verursachen zusätzlich {v}% deiner maximalen Gesundheit.", fr = "Marteau de la justice et Marteau du vertueux infligent en plus {v}% de tes points de vie maximums.", es = "Martillo de justicia y Martillo del recto infligen además un {v}% de tu salud máxima.", pt = "Martelo da Justiça e Martelo do Íntegro causam adicionalmente {v}% da sua vida máxima.", ru = "Молот правосудия и Молот праведника наносят дополнительно {v}% твоего максимального здоровья.", pl = "Młot sprawiedliwości i Młot praworządnych zadają dodatkowo {v}% twojego maksymalnego zdrowia.", tr = "Adalet Çekici ve Doğruların Çekici azami canının fazladan {v}%'si kadar hasar verir.", it = "Martello della giustizia e Martello del Giusto infliggono un ulteriore {v}% della tua salute massima.", ja = "ハンマー・オブ・ジャスティスとハンマー・オブ・ザ・ライチャスが最大体力の{v}%の追加ダメージを与えます。", zh = "制裁之锤和正义之锤额外造成相当于你最大生命值{v}%的伤害。", ko = "심판의 망치와 정의의 망치가 최대 생명력의 {v}%만큼 추가 피해를 줍니다." }
+menu_v = 0.03
+mods = [{ health_hit = ["hammer_of_justice", "hammer_of_the_righteous"] }]
+mods_v = 0.03
+
+[[talent]]
+key = "hallowed_ground"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_SealOfProtection"
+name = { en = "Hallowed Ground", de = "Geweihter Boden", fr = "Terre sanctifiée", es = "Tierra consagrada", pt = "Solo Sagrado", ru = "Священная земля", pl = "Poświęcona ziemia", tr = "Kutsal Zemin", it = "Terreno consacrato", ja = "ハロウド・グラウンド", zh = "神圣之地", ko = "신성한 땅" }
+text = { en = "Milestone. Every Hammer of Justice that lands hallows the ground beneath you: a free Consecration, at most once every 4 sec.", de = "Meilenstein. Jeder treffende Hammer der Gerechtigkeit weiht den Boden unter dir: eine kostenlose Weihe, höchstens einmal alle 4 Sek.", fr = "Jalon. Chaque Marteau de la justice qui touche sanctifie le sol sous tes pieds : une Consécration gratuite, au plus une fois toutes les 4 s.", es = "Hito. Cada Martillo de justicia que acierta consagra el suelo bajo tus pies: una Consagración gratis, como máximo una vez cada 4 s.", pt = "Marco. Cada Martelo da Justiça que acerta consagra o chão sob você: uma Consagração grátis, no máximo uma vez a cada 4 s.", ru = "Веха. Каждый попавший Молот правосудия освящает землю под тобой: бесплатное Освящение, не чаще одного раза в 4 сек.", pl = "Kamień milowy. Każdy trafiający Młot sprawiedliwości poświęca ziemię pod tobą: darmowe Poświęcenie, najwyżej raz na 4 s.", tr = "Dönüm noktası. İsabet eden her Adalet Çekici ayağının altındaki zemini kutsar: bedava bir Kutsama, 4 sn'de en fazla bir kez.", it = "Traguardo. Ogni Martello della giustizia a segno santifica il terreno sotto di te: una Consacrazione gratuita, al massimo una volta ogni 4 s.", ja = "【マイルストーン】ハンマー・オブ・ジャスティスが命中するたびに足元の大地が清められます：無料のコンセクレーション（4秒に1回まで）。", zh = "里程碑：每次命中的制裁之锤都会圣化你脚下的地面：施放一次免费的奉献，每4秒最多一次。", ko = "이정표. 심판의 망치가 적중할 때마다 발밑의 땅이 축성됩니다: 신성화를 무료로 시전하며, 4초에 최대 한 번입니다." }
+menu_v = 1
+plays = [
+    { v = 1.0, play = { cast_cast = { keys = ["hammer_of_justice"], cast = "consecration", gap = 4.0 } } },
+]
+
+[[talent]]
+key = "judgement_crusader"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Holy_HolySmite"
+name = { en = "Judgement of the Crusader", de = "Richturteil des Kreuzfahrers", fr = "Jugement du croisé", es = "Juicio del cruzado", pt = "Julgamento do Cruzado", ru = "Правосудие воина", pl = "Osąd krzyżowca", tr = "Haçlının Yargısı", it = "Giudizio del crociato", ja = "ジャッジメント・オブ・ザ・クルセイダー", zh = "十字军审判", ko = "성전사의 심판" }
+text = { en = "Enemies burning in your Consecration take {v}% more damage from you for 3 sec.", de = "In deiner Weihe brennende Feinde erleiden 3 Sek. lang {v}% mehr Schaden durch dich.", fr = "Les ennemis qui brûlent dans ta Consécration subissent {v}% de dégâts en plus de ta part pendant 3 s.", es = "Los enemigos que arden en tu Consagración reciben un {v}% más de daño tuyo durante 3 s.", pt = "Inimigos queimando na sua Consagração sofrem {v}% a mais de dano seu por 3 s.", ru = "Враги, горящие в твоем Освящении, получают от тебя на {v}% больше урона в течение 3 сек.", pl = "Przeciwnicy płonący w twoim Poświęceniu otrzymują od ciebie o {v}% więcej obrażeń przez 3 s.", tr = "Kutsama'nda yanan düşmanlar 3 sn boyunca senden {v}% daha fazla hasar alır.", it = "I nemici che bruciano nella tua Consacrazione subiscono da te il {v}% di danni in più per 3 s.", ja = "コンセクレーションで焼かれている敵は、3秒間あなたから受けるダメージが{v}%増加します。", zh = "在你的奉献中燃烧的敌人受到你的伤害提高{v}%，持续3秒。", ko = "신성화 안에서 불타는 적은 3초 동안 당신에게서 받는 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = ["judged"]
+mods_v = 0.04
+
+[[talent]]
+key = "righteous_fury"
+tree = 1
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Holy_SealOfFury"
+name = { en = "Righteous Fury", de = "Zorn der Gerechtigkeit", fr = "Fureur vertueuse", es = "Furia recta", pt = "Fúria Justa", ru = "Праведное неистовство", pl = "Prawa furia", tr = "Doğru Öfke", it = "Furia del giusto", ja = "ライチャス・フューリー", zh = "正义之怒", ko = "정의의 격노" }
+text = { en = "Every spell you cast deals an extra {v}% of your maximum health.", de = "Jeder Zauber, den du wirkst, verursacht zusätzlich {v}% deiner maximalen Gesundheit.", fr = "Chaque sort que tu lances inflige en plus {v}% de tes points de vie maximums.", es = "Cada hechizo que lanzas inflige además un {v}% de tu salud máxima.", pt = "Cada feitiço que você lança causa adicionalmente {v}% da sua vida máxima.", ru = "Каждое твое заклинание наносит дополнительно {v}% твоего максимального здоровья.", pl = "Każdy rzucony czar zadaje dodatkowo {v}% twojego maksymalnego zdrowia.", tr = "Yaptığın her büyü azami canının fazladan {v}%'si kadar hasar verir.", it = "Ogni incantesimo che lanci infligge un ulteriore {v}% della tua salute massima.", ja = "呪文を唱えるたびに最大体力の{v}%の追加ダメージを与えます。", zh = "你施放的每个法术额外造成相当于你最大生命值{v}%的伤害。", ko = "주문을 시전할 때마다 최대 생명력의 {v}%만큼 추가 피해를 줍니다." }
+menu_v = 0.004
+mods = [{ health_hit = [] }]
+mods_v = 0.004
+
+[[talent]]
+key = "imp_hoj"
+tree = 1
+row = 3
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Holy_SealOfWrath"
+name = { en = "Improved Hammer of Justice", de = "Verbesserter Hammer der Gerechtigkeit", fr = "Marteau de la justice amélioré", es = "Martillo de justicia mejorado", pt = "Martelo da Justiça Aprimorado", ru = "Улучшенный Молот правосудия", pl = "Ulepszony Młot sprawiedliwości", tr = "Gelişmiş Adalet Çekici", it = "Martello della giustizia migliorato", ja = "改良型ハンマー・オブ・ジャスティス", zh = "强化制裁之锤", ko = "심판의 망치 연마" }
+text = { en = "Hammer of Justice and Avenger's Shield deal {v}% more damage and recover faster.", de = "Hammer der Gerechtigkeit und Schild des Rächers verursachen {v}% mehr Schaden und laden schneller.", fr = "Marteau de la justice et Bouclier du vengeur infligent {v}% de dégâts en plus et se rechargent plus vite.", es = "Martillo de justicia y Escudo del vengador infligen un {v}% más de daño y se recuperan antes.", pt = "Martelo da Justiça e Escudo do Vingador causam {v}% a mais de dano e se recuperam mais rápido.", ru = "Молот правосудия и Щит мстителя наносят на {v}% больше урона и быстрее восстанавливаются.", pl = "Młot sprawiedliwości i Tarcza mściciela zadają o {v}% więcej obrażeń i odnawiają się szybciej.", tr = "Adalet Çekici ve İntikamcı Kalkanı {v}% daha fazla hasar verir ve daha hızlı yenilenir.", it = "Martello della giustizia e Scudo del vendicatore infliggono il {v}% di danni in più e si ricaricano più in fretta.", ja = "ハンマー・オブ・ジャスティスとアヴェンジャーズ・シールドのダメージが{v}%増加し、回復が速くなります。", zh = "制裁之锤和复仇者之盾造成的伤害提高{v}%，冷却速度更快。", ko = "심판의 망치와 응징의 방패의 피해가 {v}% 증가하고 더 빨리 회복됩니다." }
+menu_v = 0.15
+mods = [{ damage = ["hammer_of_justice", "avengers_shield"] }, { cooldown = ["hammer_of_justice", "avengers_shield"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "blessed_life"
+tree = 1
+row = 4
+col = 0
+ranks = 3
+req = "hallowed_ground"
+effects = []
+icon = "Spell_Holy_GreaterBlessingofSanctuary"
+name = { en = "Blessed Life", de = "Gesegnetes Leben", fr = "Vie bénie", es = "Vida bendita", pt = "Vida Abençoada", ru = "Благословенная жизнь", pl = "Błogosławione życie", tr = "Kutsanmış Hayat", it = "Vita benedetta", ja = "ブレスド・ライフ", zh = "祝福生命", ko = "축복받은 생명" }
+text = { en = "Consecration's shield holds {v}% more of your maximum health.", de = "Der Schild von Weihe hält {v}% mehr deiner maximalen Gesundheit.", fr = "Le bouclier de Consécration retient {v}% de plus de tes points de vie maximums.", es = "El escudo de Consagración aguanta un {v}% más de tu salud máxima.", pt = "O escudo de Consagração segura {v}% a mais da sua vida máxima.", ru = "Щит Освящения вмещает на {v}% больше твоего максимального здоровья.", pl = "Tarcza Poświęcenia chroni o {v}% więcej twojego maksymalnego zdrowia.", tr = "Kutsama'nın kalkanı azami canının {v}% daha fazlasını tutar.", it = "Lo scudo di Consacrazione regge il {v}% in più della tua salute massima.", ja = "コンセクレーションのシールドが最大体力の{v}%分多く吸収します。", zh = "奉献的护盾吸收量提高，额外吸收相当于你最大生命值{v}%的伤害。", ko = "신성화 보호막의 흡수량이 최대 생명력의 {v}%만큼 증가합니다." }
+menu_v = 0.03
+mods = [{ shield_cap = ["consecration"] }]
+mods_v = 0.03
+
+[[talent]]
+key = "ardent_defender"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "hammer_of_justice" }, { stat = [28, 0.2] }]
+icon = "Spell_Holy_HolyProtection"
+name = { en = "Ardent Defender", de = "Unermüdlicher Verteidiger", fr = "Défenseur ardent", es = "Defensor ardiente", pt = "Defensor Ardente", ru = "Ревностный защитник", pl = "Żarliwy obrońca", tr = "Ateşli Savunucu", it = "Difensore ardente", ja = "アーデント・ディフェンダー", zh = "炽热防御者", ko = "열성적인 수호자" }
+text = { en = "Milestone. You start every run with Hammer of Justice. Every Consecration raises a shield of {v}% of your maximum health, stacking up to 30% (39% with Blessed Life), and while a shield holds, you deal 20% more damage.", de = "Meilenstein. Du beginnst jeden Lauf mit Hammer der Gerechtigkeit. Jede Weihe errichtet einen Schild von {v}% deiner maximalen Gesundheit, stapelbar bis 30% (39% mit Gesegnetes Leben), und solange ein Schild hält, verursachst du 20% mehr Schaden.", fr = "Jalon. Tu commences chaque partie avec Marteau de la justice. Chaque Consécration dresse un bouclier de {v}% de tes points de vie maximums, cumulable jusqu'à 30% (39% avec Vie bénie), et tant qu'un bouclier tient, tu infliges 20% de dégâts en plus.", es = "Hito. Empiezas cada partida con Martillo de justicia. Cada Consagración levanta un escudo del {v}% de tu salud máxima, acumulable hasta el 30% (39% con Vida bendita), y mientras un escudo aguante, infliges un 20% más de daño.", pt = "Marco. Você começa cada partida com Martelo da Justiça. Cada Consagração ergue um escudo de {v}% da sua vida máxima, acumulável até 30% (39% com Vida Abençoada), e enquanto um escudo se mantém, você causa 20% a mais de dano.", ru = "Веха. Ты начинаешь каждый забег с Молота правосудия. Каждое Освящение возводит щит в {v}% твоего максимального здоровья, суммируется до 30% (39% с Благословенной жизнью), и пока щит держится, ты наносишь на 20% больше урона.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Młotem sprawiedliwości. Każde Poświęcenie wznosi tarczę o wartości {v}% twojego maksymalnego zdrowia, kumulującą się do 30% (39% z Błogosławionym życiem), a gdy tarcza trzyma, zadajesz o 20% więcej obrażeń.", tr = "Dönüm noktası. Her oyuna Adalet Çekici ile başlarsın. Her Kutsama azami canının {v}%'si kadar bir kalkan kaldırır, en fazla 30%'a kadar birikir (Kutsanmış Hayat ile 39%) ve kalkan dururken 20% daha fazla hasar verirsin.", it = "Traguardo. Inizi ogni partita con Martello della giustizia. Ogni Consacrazione erige uno scudo pari al {v}% della tua salute massima, cumulabile fino al 30% (39% con Vita benedetta), e finché uno scudo regge infliggi il 20% di danni in più.", ja = "【マイルストーン】毎ランをハンマー・オブ・ジャスティスを持って始めます。コンセクレーションのたびに最大体力の{v}%のシールドが張られ、30%まで重ねられます（ブレスド・ライフがあれば39%）。シールドがある間、与えるダメージが20%増加します。", zh = "里程碑：你在每场对局开始时拥有制裁之锤。每次奉献都会生成一个吸收相当于你最大生命值{v}%伤害的护盾，最多叠加至30%（拥有祝福生命时为39%），护盾存在期间，你造成的伤害提高20%。", ko = "이정표. 모든 런을 심판의 망치를 가지고 시작합니다. 신성화마다 최대 생명력의 {v}%에 해당하는 보호막이 생기며 최대 30%(축복받은 생명이 있으면 39%)까지 중첩됩니다. 보호막이 유지되는 동안 주는 피해가 20% 증가합니다." }
+menu_v = 0.1
+plays = [
+    # Its text's share is unread: Fortified's. `TUNE`
+    { v = 0.1, play = { shield_stack = { keys = ["consecration"], cap = 0.3 } } },
+]
+
+[[talent]]
+key = "divine_intervention"
+tree = 1
+row = 5
+col = 0
+ranks = 1
+effects = []
+icon = "Spell_Nature_TimeStop"
+name = { en = "Divine Intervention", de = "Göttliches Eingreifen", fr = "Intervention divine", es = "Intervención divina", pt = "Intervenção Divina", ru = "Божественное вмешательство", pl = "Boska interwencja", tr = "İlahi Müdahale", it = "Intervento divino", ja = "ディヴァイン・インターヴェンション", zh = "神圣干涉", ko = "신의 중재" }
+text = { en = "A blow that would kill you leaves you at 30% health instead, wrapped in a free Divine Shield and a free Consecration. Once every 90 sec.", de = "Ein Hieb, der dich töten würde, lässt dich stattdessen mit 30% Gesundheit zurück, gehüllt in ein kostenloses Gottesschild und eine kostenlose Weihe. Einmal alle 90 Sek.", fr = "Un coup qui te tuerait te laisse à 30% de vie, enveloppé d'un Bouclier divin gratuit et d'une Consécration gratuite. Une fois toutes les 90 s.", es = "Un golpe que te mataría te deja con el 30% de salud, envuelto en un Escudo divino gratis y una Consagración gratis. Una vez cada 90 s.", pt = "Um golpe que mataria você o deixa com 30% de vida, envolto em um Escudo Divino grátis e uma Consagração grátis. Uma vez a cada 90 s.", ru = "Удар, который убил бы тебя, оставляет тебе 30% здоровья, укутывая бесплатным Божественным щитом и бесплатным Освящением. Раз в 90 сек.", pl = "Cios, który by cię zabił, zostawia cię przy 30% zdrowia, w darmowej Boskiej tarczy i darmowym Poświęceniu. Raz na 90 s.", tr = "Seni öldürecek bir darbe, seni 30% canla bırakır; bedava bir İlahi Kalkan ve bedava bir Kutsama ile sarılırsın. 90 sn'de bir.", it = "Un colpo che ti ucciderebbe ti lascia invece al 30% di salute, avvolto in uno Scudo divino e in una Consacrazione gratuiti. Una volta ogni 90 s.", ja = "致命的な一撃を受けると代わりに体力30%で踏みとどまり、無料のディヴァイン・シールドと無料のコンセクレーションに包まれます。90秒に1回まで。", zh = "致命的一击会使你保留30%的生命值，并为你施放一次免费的圣盾术和一次免费的奉献。每90秒一次。", ko = "치명적인 일격을 받으면 대신 생명력 30%로 남으며, 천상의 보호막과 신성화가 무료로 펼쳐집니다. 90초에 한 번 발동합니다." }
+menu_v = 90
+plays = [
+    { v = 90.0, play = { save = { health = 0.3, immune = 0.0, shield = 0.0, cast = ["divine_shield", "consecration"] } } },
+]
+
+[[talent]]
+key = "sacred_duty"
+tree = 1
+row = 5
+col = 2
+ranks = 3
+req = "ardent_defender"
+effects = [{ stat = [28, 0.05] }]
+icon = "Spell_Holy_DivineIntervention"
+name = { en = "Sacred Duty", de = "Heilige Pflicht", fr = "Devoir sacré", es = "Deber sagrado", pt = "Dever Sagrado", ru = "Священный долг", pl = "Święty obowiązek", tr = "Kutsal Görev", it = "Dovere sacro", ja = "セイクリッド・デューティ", zh = "神圣使命", ko = "신성한 의무" }
+text = { en = "While a shield holds, you deal {v}% more damage.", de = "Solange ein Schild hält, verursachst du {v}% mehr Schaden.", fr = "Tant qu'un bouclier tient, tu infliges {v}% de dégâts en plus.", es = "Mientras un escudo aguante, infliges un {v}% más de daño.", pt = "Enquanto um escudo se mantém, você causa {v}% a mais de dano.", ru = "Пока щит держится, ты наносишь на {v}% больше урона.", pl = "Gdy tarcza trzyma, zadajesz o {v}% więcej obrażeń.", tr = "Kalkan dururken {v}% daha fazla hasar verirsin.", it = "Finché uno scudo regge, infliggi il {v}% di danni in più.", ja = "シールドがある間、与えるダメージが{v}%増加します。", zh = "护盾存在期间，你造成的伤害提高{v}%。", ko = "보호막이 유지되는 동안 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "hammer_righteous"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = [{ stat = [2, 0.15] }]
+icon = "Spell_Holy_BlessingOfProtection"
+name = { en = "Hammer of the Righteous", de = "Hammer der Rechtschaffenen", fr = "Marteau du vertueux", es = "Martillo del recto", pt = "Martelo do Íntegro", ru = "Молот праведника", pl = "Młot praworządnych", tr = "Doğruların Çekici", it = "Martello del Giusto", ja = "ハンマー・オブ・ザ・ライチャス", zh = "正义之锤", ko = "정의의 망치" }
+text = { en = "Capstone. Your maximum health is 15% higher, every spell you cast deals an extra 1% of your maximum health, Hammer of Justice also strikes for 1.5% of its target's maximum health, and a shield that breaks bursts in holy light: half of what it absorbed, up to half the most it held, strikes every enemy within 10 yd.", de = "Schlussstein. Deine maximale Gesundheit ist 15% höher, jeder Zauber, den du wirkst, verursacht zusätzlich 1% deiner maximalen Gesundheit, Hammer der Gerechtigkeit trifft zudem für 1,5% der maximalen Gesundheit seines Ziels, und ein brechender Schild zerbirst in heiligem Licht: die Hälfte dessen, was er absorbiert hat, bis zur Hälfte seines Höchstwerts, trifft jeden Feind im Umkreis von 10 m.", fr = "Clé de voûte. Tes points de vie maximums augmentent de 15%, chaque sort que tu lances inflige en plus 1% de tes points de vie maximums, Marteau de la justice frappe aussi pour 1,5% des points de vie maximums de sa cible, et un bouclier qui se brise éclate en lumière sacrée : la moitié de ce qu'il a absorbé, jusqu'à la moitié de son maximum, frappe chaque ennemi à moins de 10 m.", es = "Piedra angular. Tu salud máxima aumenta un 15%, cada hechizo que lanzas inflige además un 1% de tu salud máxima, Martillo de justicia también golpea con el 1,5% de la salud máxima de su objetivo, y un escudo que se rompe estalla en luz sagrada: la mitad de lo que absorbió, hasta la mitad de su máximo, golpea a cada enemigo a menos de 10 m.", pt = "Pedra angular. Sua vida máxima é 15% maior, cada feitiço que você lança causa adicionalmente 1% da sua vida máxima, Martelo da Justiça também golpeia com 1,5% da vida máxima do alvo, e um escudo que se quebra explode em luz sagrada: metade do que absorveu, até metade do seu máximo, atinge cada inimigo a até 10 m.", ru = "Вершина. Твое максимальное здоровье выше на 15%, каждое твое заклинание наносит дополнительно 1% максимального здоровья, Молот правосудия также бьет на 1,5% максимального здоровья цели, а разбитый щит взрывается священным светом: половина поглощенного им урона, но не больше половины его максимума, поражает каждого врага в радиусе 10 м.", pl = "Zwieńczenie. Twoje maksymalne zdrowie jest o 15% wyższe, każdy rzucony czar zadaje dodatkowo 1% twojego maksymalnego zdrowia, Młot sprawiedliwości uderza też za 1,5% maksymalnego zdrowia celu, a pękająca tarcza wybucha świętym światłem: połowa pochłoniętych obrażeń, do połowy jej maksymalnej wartości, uderza każdego przeciwnika w promieniu 10 m.", tr = "Zirve. Azami canın 15% yüksektir, yaptığın her büyü azami canının fazladan 1%'i kadar hasar verir, Adalet Çekici ayrıca hedefinin azami canının 1,5%'i kadar vurur ve kırılan kalkan kutsal ışıkla patlar: emdiğinin yarısı, tuttuğu en yüksek miktarın yarısına kadar, 10 m içindeki her düşmana vurur.", it = "Vertice. La tua salute massima è più alta del 15%, ogni incantesimo che lanci infligge un ulteriore 1% della tua salute massima, Martello della giustizia colpisce anche per l'1,5% della salute massima del bersaglio e uno scudo che si rompe esplode in luce sacra: metà di ciò che ha assorbito, fino a metà del massimo che ha retto, colpisce ogni nemico entro 10 m.", ja = "【キャップストーン】最大体力が15%増加し、呪文を唱えるたびに最大体力の1%の追加ダメージを与え、ハンマー・オブ・ジャスティスは対象の最大体力の1.5%のダメージも与えます。さらにシールドが壊れると聖なる光が炸裂し、吸収した量の半分（保持していた最大量の半分まで）が10ヤード以内のすべての敵に命中します。", zh = "终极天赋：你的最大生命值提高15%，你施放的每个法术额外造成相当于你最大生命值1%的伤害，制裁之锤还会造成相当于目标最大生命值1.5%的伤害，护盾破碎时会迸发圣光：将其吸收量的一半（最多为其最大吸收量的一半）作为伤害，打击10码内的所有敌人。", ko = "궁극 특성. 최대 생명력이 15% 증가하고, 주문을 시전할 때마다 최대 생명력의 1%만큼 추가 피해를 주며, 심판의 망치가 대상의 최대 생명력의 1.5%만큼 추가 피해를 줍니다. 보호막이 깨지면 신성한 빛으로 터집니다: 흡수한 양의 절반이 최대 흡수량의 절반까지 10미터 안의 모든 적에게 피해를 줍니다." }
+menu_v = 0.15
+mods = [{ health_hit = [] }]
+mods_v = 0.01
+plays = [
+    { v = 0.015, play = { max_health_hit = { school = 0, keys = ["hammer_of_justice"] } } },
+    { v = 0.5, play = { shield_burst = { radius = 10.0 } } },
+]
+
+[[talent]]
+key = "imp_might"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [0, 0.01] }]
+icon = "Spell_Holy_FistOfJustice"
+name = { en = "Improved Blessing of Might", de = "Verbesserter Segen der Macht", fr = "Bénédiction de puissance améliorée", es = "Bendición de poderío mejorada", pt = "Bênção do Poder Aprimorada", ru = "Улучшенное благословение могущества", pl = "Ulepszone Błogosławieństwo potęgi", tr = "Gelişmiş Kudret Nimeti", it = "Benedizione della potenza migliorata", ja = "改良型ブレッシング・オブ・マイト", zh = "强化力量祝福", ko = "힘의 축복 연마" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "benediction"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.015] }]
+icon = "Spell_Frost_WindWalkOn"
+name = { en = "Benediction", de = "Segnung", fr = "Bénédiction", es = "Bendición", pt = "Benção", ru = "Благословение", pl = "Błogosławieństwo", tr = "Dua", it = "Benedizione", ja = "ベネディクション", zh = "祈福", ko = "축도" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "imp_judgement"
+tree = 2
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Holy_RighteousFury"
+name = { en = "Improved Judgement", de = "Verbessertes Richturteil", fr = "Jugement amélioré", es = "Juicio mejorado", pt = "Julgamento Aprimorado", ru = "Улучшенное правосудие", pl = "Ulepszony Osąd", tr = "Gelişmiş Yargı", it = "Giudizio migliorato", ja = "改良型ジャッジメント", zh = "强化审判", ko = "심판 연마" }
+text = { en = "Judgement's cooldown is {v}% shorter.", de = "Die Abklingzeit von Richturteil ist {v}% kürzer.", fr = "Le temps de recharge de Jugement est réduit de {v}%.", es = "El tiempo de reutilización de Juicio se reduce un {v}%.", pt = "O tempo de recarga de Julgamento é {v}% menor.", ru = "Время восстановления Правосудия сокращается на {v}%.", pl = "Czas odnowienia Osądu jest krótszy o {v}%.", tr = "Yargı'nın bekleme süresi {v}% daha kısa.", it = "La ricarica di Giudizio è più breve del {v}%.", ja = "ジャッジメントのクールダウンが{v}%短くなります。", zh = "审判的冷却时间缩短{v}%。", ko = "심판의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.12
+mods = [{ cooldown = ["judgement"] }]
+mods_v = 0.12
+
+[[talent]]
+key = "deflection_pal"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "Ability_Parry"
+name = { en = "Deflection", de = "Abwehr", fr = "Déviation", es = "Desvío", pt = "Deflexão", ru = "Отражение ударов", pl = "Odbicie", tr = "Savuşturma", it = "Deviazione", ja = "ディフレクション", zh = "偏斜", ko = "튕겨내기" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "seal_of_command"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "judgement" }]
+icon = "Ability_Warrior_InnerRage"
+name = { en = "Seal of Command", de = "Siegel des Befehls", fr = "Sceau de commandement", es = "Sello de orden", pt = "Selo do Comando", ru = "Печать повиновения", pl = "Pieczęć rozkazu", tr = "Emir Mührü", it = "Sigillo del comando", ja = "シール・オブ・コマンド", zh = "命令圣印", ko = "지휘의 문장" }
+text = { en = "Milestone. You start every run with Judgement, and every Judgement also strikes 2 more enemies near its target for {v}% of it.", de = "Meilenstein. Du beginnst jeden Lauf mit Richturteil, und jedes Richturteil trifft zudem 2 weitere Feinde nahe seinem Ziel für {v}% davon.", fr = "Jalon. Tu commences chaque partie avec Jugement, et chaque Jugement frappe aussi 2 ennemis proches de sa cible pour {v}% de ses dégâts.", es = "Hito. Empiezas cada partida con Juicio, y cada Juicio golpea también a 2 enemigos cercanos a su objetivo con un {v}% de su daño.", pt = "Marco. Você começa cada partida com Julgamento, e cada Julgamento também atinge mais 2 inimigos perto do alvo com {v}% do seu dano.", ru = "Веха. Ты начинаешь каждый забег с Правосудия, и каждое Правосудие поражает еще 2 врагов рядом с целью с {v}% урона.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Osądem, a każdy Osąd uderza też 2 kolejnych przeciwników w pobliżu celu za {v}% obrażeń.", tr = "Dönüm noktası. Her oyuna Yargı ile başlarsın ve her Yargı hedefinin yakınındaki 2 düşmana daha hasarının {v}%'si kadar vurur.", it = "Traguardo. Inizi ogni partita con Giudizio e ogni Giudizio colpisce anche altri 2 nemici vicini al bersaglio per il {v}% del danno.", ja = "【マイルストーン】毎ランをジャッジメントを持って始め、すべてのジャッジメントが対象の近くの敵さらに2体にもその{v}%のダメージを与えます。", zh = "里程碑：你在每场对局开始时拥有审判，每次审判还会击中目标附近另外2个敌人，造成相当于其伤害{v}%的伤害。", ko = "이정표. 모든 런을 심판을 가지고 시작하며, 심판이 대상 근처의 적 2명을 더 공격하여 그 피해의 {v}%를 줍니다." }
+menu_v = 0.5
+plays = [
+    # The share the exe leaves unread (the talent window shows it from VALUES in
+    # SurvivorsTalentsWotlk.lua): ours. `TUNE`
+    { v = 0.5, play = { cleave = { keys = ["judgement"], n = 2, radius = 8.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "pursuit"
+tree = 2
+row = 2
+col = 2
+ranks = 2
+effects = [{ stat = [7, 0.04] }]
+icon = "Spell_Holy_PersuitofJustice"
+name = { en = "Pursuit of Justice", de = "Streben nach Gerechtigkeit", fr = "Poursuite de la justice", es = "Búsqueda de la justicia", pt = "Busca por Justiça", ru = "Стремление к справедливости", pl = "Dążenie do sprawiedliwości", tr = "Adalet Arayışı", it = "Ricerca della giustizia", ja = "パースート・オブ・ジャスティス", zh = "公正追击", ko = "정의 추구" }
+text = { en = "Increases your movement speed by {v}%.", de = "Erhöht dein Bewegungstempo um {v}%.", fr = "Augmente ta vitesse de déplacement de {v}%.", es = "Aumenta tu velocidad de movimiento un {v}%.", pt = "Aumenta sua velocidade de movimento em {v}%.", ru = "Увеличивает твою скорость движения на {v}%.", pl = "Zwiększa szybkość ruchu o {v}%.", tr = "Hareket hızını {v}% artırır.", it = "Aumenta la tua velocità di movimento del {v}%.", ja = "移動速度が{v}%上昇します。", zh = "使你的移动速度提高{v}%。", ko = "이동 속도가 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "conviction"
+tree = 2
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [3, 0.015] }]
+icon = "Spell_Holy_RetributionAura"
+name = { en = "Conviction", de = "Überzeugung", fr = "Conviction", es = "Convicción", pt = "Convicção", ru = "Убежденность", pl = "Przekonanie", tr = "Kanaat", it = "Convinzione", ja = "コンヴィクション", zh = "定罪", ko = "신념" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "righteous_hammer"
+tree = 2
+row = 3
+col = 2
+ranks = 3
+req = "seal_of_command"
+effects = []
+icon = "Ability_ThunderClap"
+name = { en = "Righteous Hammer", de = "Rechtschaffener Hammer", fr = "Marteau vertueux", es = "Martillo recto", pt = "Martelo Justo", ru = "Праведный молот", pl = "Młot prawych", tr = "Doğru Çekiç", it = "Martello giusto", ja = "ライチャス・ハンマー", zh = "正义战锤", ko = "의로운 망치" }
+text = { en = "Hammer of Wrath has a {v}% chance to strike its target again.", de = "Hammer des Zorns hat eine Chance von {v}%, sein Ziel erneut zu treffen.", fr = "Marteau de courroux a {v}% de chances de frapper de nouveau sa cible.", es = "Martillo de ira tiene un {v}% de probabilidad de golpear de nuevo a su objetivo.", pt = "Martelo da Ira tem {v}% de chance de atingir o alvo de novo.", ru = "Молот гнева с вероятностью {v}% бьет свою цель еще раз.", pl = "Młot gniewu ma {v}% szansy, by uderzyć cel ponownie.", tr = "Gazap Çekici'nin hedefine bir kez daha vurma şansı {v}%.", it = "Martello dell'ira ha il {v}% di probabilità di colpire di nuovo il bersaglio.", ja = "ハンマー・オブ・ラースが{v}%の確率で対象に再び命中します。", zh = "愤怒之锤有{v}%的几率再次打击目标。", ko = "천벌의 망치가 {v}% 확률로 대상을 한 번 더 공격합니다." }
+menu_v = 0.1
+plays = [
+    { v = 0.1, play = { again = ["hammer_of_wrath"] } },
+]
+
+[[talent]]
+key = "art_of_war"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_Excorcism_02"
+name = { en = "The Art of War", de = "Die Kunst des Krieges", fr = "L'art de la guerre", es = "El arte de la guerra", pt = "A Arte da Guerra", ru = "Искусство войны", pl = "Sztuka wojny", tr = "Savaş Sanatı", it = "L'arte della guerra", ja = "アート・オブ・ウォー", zh = "战争艺术", ko = "전쟁의 기술" }
+text = { en = "Milestone. Your critical strikes have a {v}% chance to hurl a free Exorcism, at most once a second.", de = "Meilenstein. Deine kritischen Treffer haben eine Chance von {v}%, einen kostenlosen Exorzismus zu schleudern, höchstens einmal pro Sekunde.", fr = "Jalon. Tes coups critiques ont {v}% de chances de lancer un Exorcisme gratuit, au plus une fois par seconde.", es = "Hito. Tus golpes críticos tienen un {v}% de probabilidad de lanzar un Exorcismo gratis, como máximo una vez por segundo.", pt = "Marco. Seus acertos críticos têm {v}% de chance de lançar um Exorcismo grátis, no máximo uma vez por segundo.", ru = "Веха. Твои критические удары с вероятностью {v}% метают бесплатный Экзорцизм, не чаще раза в секунду.", pl = "Kamień milowy. Twoje trafienia krytyczne mają {v}% szansy, by cisnąć darmowy Egzorcyzm, najwyżej raz na sekundę.", tr = "Dönüm noktası. Kritik vuruşların {v}% ihtimalle bedava bir Şeytan Kovma fırlatır, saniyede en fazla bir kez.", it = "Traguardo. I tuoi colpi critici hanno il {v}% di probabilità di scagliare un Esorcismo gratuito, al massimo una volta al secondo.", ja = "【マイルストーン】クリティカルが{v}%の確率で無料のエクソシズムを放ちます（1秒に1回まで）。", zh = "里程碑：你的暴击有{v}%的几率免费施放一次驱邪术，每秒最多一次。", ko = "이정표. 치명타가 {v}% 확률로 퇴마술을 무료로 날립니다. 초당 최대 한 번입니다." }
+menu_v = 0.15
+plays = [
+    { v = 0.15, play = { crit_cast = { keys = [], school = 0, cast = "exorcism", gap = 1.0 } } },
+]
+
+[[talent]]
+key = "sanctity_aura"
+tree = 2
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Holy_MindVision"
+name = { en = "Sanctity Aura", de = "Aura der Heiligkeit", fr = "Aura de sainteté", es = "Aura de santidad", pt = "Aura da Santidade", ru = "Аура святости", pl = "Aura świętości", tr = "Kutsallık Auraı", it = "Aura di santità", ja = "サンクティティ・オーラ", zh = "圣洁光环", ko = "신성함의 오라" }
+text = { en = "Holy spells deal {v}% more damage.", de = "Heilige Zauber verursachen {v}% mehr Schaden.", fr = "Les sorts sacrés infligent {v}% de dégâts en plus.", es = "Los hechizos sagrados infligen un {v}% más de daño.", pt = "Feitiços Sagrados causam {v}% a mais de dano.", ru = "Заклинания Света наносят на {v}% больше урона.", pl = "Czary światłości zadają o {v}% więcej obrażeń.", tr = "Kutsal büyüler {v}% daha fazla hasar verir.", it = "Gli incantesimi Sacri infliggono il {v}% di danni in più.", ja = "聖の呪文のダメージが{v}%増加します。", zh = "神圣法术造成的伤害提高{v}%。", ko = "신성 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+mods = [{ school = 2 }]
+mods_v = 0.03
+
+[[talent]]
+key = "eye_for_an_eye"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [22, 0.1] }]
+icon = "Spell_Holy_EyeforanEye"
+name = { en = "Eye for an Eye", de = "Auge um Auge", fr = "Œil pour œil", es = "Ojo por ojo", pt = "Olho por Olho", ru = "Око за око", pl = "Oko za oko", tr = "Göze Göz", it = "Occhio per occhio", ja = "アイ・フォー・アン・アイ", zh = "以眼还眼", ko = "눈에는 눈" }
+text = { en = "{v}% of the damage enemies deal you in melee is dealt back to them.", de = "{v}% des Nahkampfschadens, den Feinde dir zufügen, wird auf sie zurückgeworfen.", fr = "{v}% des dégâts que les ennemis t'infligent en mêlée leur sont renvoyés.", es = "Un {v}% del daño que te infligen los enemigos cuerpo a cuerpo se les devuelve.", pt = "{v}% do dano que os inimigos causam a você em combate corpo a corpo é devolvido a eles.", ru = "{v}% урона, который наносят тебе враги в ближнем бою, возвращается им.", pl = "{v}% obrażeń, które przeciwnicy zadają ci wręcz, wraca do nich.", tr = "Düşmanların sana yakın dövüşte verdiği hasarın {v}%'si onlara geri yansır.", it = "Il {v}% dei danni che i nemici ti infliggono in mischia viene restituito a loro.", ja = "近接攻撃で敵から受けたダメージの{v}%をその敵に跳ね返します。", zh = "敌人对你造成的近战伤害有{v}%会反弹给他们。", ko = "적이 근접 공격으로 당신에게 준 피해의 {v}%를 되돌려줍니다." }
+menu_v = 0.1
+
+[[talent]]
+key = "vindication"
+tree = 2
+row = 5
+col = 2
+ranks = 3
+req = "art_of_war"
+effects = [{ stat = [4, 0.04] }]
+icon = "Spell_Holy_Vindication"
+name = { en = "Vindication", de = "Rechtfertigung", fr = "Justification", es = "Vindicación", pt = "Vindicação", ru = "Оправдание", pl = "Pomsta", tr = "Aklanma", it = "Rivendicazione", ja = "ヴィンディケーション", zh = "辩护", ko = "정당한 응징" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "divine_storm"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "exorcism" }]
+icon = "Spell_Holy_SealOfRighteousness"
+name = { en = "Divine Storm", de = "Göttlicher Sturm", fr = "Tempête divine", es = "Tormenta divina", pt = "Tempestade Divina", ru = "Божественная буря", pl = "Boska burza", tr = "İlahi Fırtına", it = "Tempesta divina", ja = "ディヴァイン・ストーム", zh = "神圣风暴", ko = "신성한 폭풍" }
+text = { en = "Capstone. You start every run with Exorcism, and every Exorcism bursts on its target, striking every enemy within 5 yd for {v}% of it.", de = "Schlussstein. Du beginnst jeden Lauf mit Exorzismus, und jeder Exorzismus zerbirst an seinem Ziel und trifft jeden Feind im Umkreis von 5 m für {v}% davon.", fr = "Clé de voûte. Tu commences chaque partie avec Exorcisme, et chaque Exorcisme éclate sur sa cible et frappe chaque ennemi à moins de 5 m pour {v}% de ses dégâts.", es = "Piedra angular. Empiezas cada partida con Exorcismo, y cada Exorcismo estalla en su objetivo y golpea a cada enemigo a menos de 5 m con un {v}% de su daño.", pt = "Pedra angular. Você começa cada partida com Exorcismo, e cada Exorcismo explode no alvo, atingindo cada inimigo a até 5 m com {v}% do seu dano.", ru = "Вершина. Ты начинаешь каждый забег с Экзорцизма, и каждый Экзорцизм взрывается на цели, поражая каждого врага в радиусе 5 м с {v}% урона.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Egzorcyzmem, a każdy Egzorcyzm wybucha na celu, uderzając każdego przeciwnika w promieniu 5 m za {v}% obrażeń.", tr = "Zirve. Her oyuna Şeytan Kovma ile başlarsın ve her Şeytan Kovma hedefinde patlar, 5 m içindeki her düşmana hasarının {v}%'si kadar vurur.", it = "Vertice. Inizi ogni partita con Esorcismo e ogni Esorcismo esplode sul bersaglio, colpendo ogni nemico entro 5 m per il {v}% del danno.", ja = "【キャップストーン】毎ランをエクソシズムを持って始め、すべてのエクソシズムが対象で炸裂し、5ヤード以内のすべての敵にその{v}%のダメージを与えます。", zh = "终极天赋：你在每场对局开始时拥有驱邪术，每次驱邪术都会在目标身上爆发，对5码内的所有敌人造成相当于其伤害{v}%的伤害。", ko = "궁극 특성. 모든 런을 퇴마술을 가지고 시작하며, 퇴마술이 대상에게서 터져 5미터 안의 모든 적에게 그 피해의 {v}%를 줍니다." }
+menu_v = 0.5
+plays = [
+    # The share the exe leaves unread (the talent window shows it from VALUES in
+    # SurvivorsTalentsWotlk.lua): ours. `TUNE`
+    { v = 0.5, play = { cleave = { keys = ["exorcism"], n = 99, radius = 5.0, stun = 0.0 } } },
+]

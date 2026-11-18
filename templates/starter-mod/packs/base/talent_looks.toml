@@ -1,0 +1,142 @@
+# The 3.3.5a spell and school a talent's own damage shows as in the combat log (its icon there),
+# keyed by the talent or play that deals it. A talent without one shows as no spell.
+
+[[talent_look]]
+key = "deep_wounds"
+id = 12721
+school = "physical"
+
+[[talent_look]]
+key = "blood_frenzy"
+id = 16952
+school = "physical"
+
+[[talent_look]]
+key = "ignite"
+id = 12654
+school = "fire"
+
+[[talent_look]]
+key = "holy_fire_talent"
+id = 14914
+school = "fire"
+
+[[talent_look]]
+key = "deadly_poison"
+id = 2818
+school = "nature"
+
+[[talent_look]]
+key = "nightfall"
+id = 172
+school = "shadow"
+
+[[talent_look]]
+key = "explosive_ammo"
+id = 13812
+school = "fire"
+
+[[talent_look]]
+key = "toxic_bloom"
+id = 2818
+school = "nature"
+
+[[talent_look]]
+key = "shadowform"
+id = 589
+school = "shadow"
+
+[[talent_look]]
+key = "shadow_weaving"
+id = 15258
+school = "shadow"
+
+[[talent_look]]
+key = "tranquility"
+id = 740
+school = "nature"
+
+[[talent_look]]
+key = "inspiration"
+id = 15363
+school = "holy"
+
+[[talent_look]]
+key = "dk_hungering_cold"
+id = 49203
+school = "frost"
+
+# The gate's Death Coil.
+[[talent_look]]
+key = "legion_gate"
+id = 6789
+school = "shadow"
+
+# The Felhunter's Consume Magic (Devour Magic's icon).
+[[talent_look]]
+key = "soul_devourer"
+id = 19505
+school = "shadow"
+
+[[talent_look]]
+key = "seed_of_corruption"
+id = 27285
+school = "shadow"
+
+[[talent_look]]
+key = "pyroclasm"
+id = 11366
+school = "fire"
+
+[[talent_look]]
+key = "rake"
+id = 1822
+school = "physical"
+
+[[talent_look]]
+key = "conflagrate"
+id = 17962
+school = "fire"
+
+[[talent_look]]
+key = "titan"
+id = 23922
+school = "physical"
+
+[[talent_look]]
+key = "hammer_righteous"
+id = 53595
+school = "holy"
+
+[[talent_look]]
+key = "divine_aegis"
+id = 47753
+school = "holy"
+
+[[talent_look]]
+key = "leader_of_pack"
+id = 779
+school = "physical"
+
+# The run's own blows (`blow`): their meter row is the look's key.
+# Eye for an Eye's returned swings (the reflect stat).
+[[talent_look]]
+key = "eye_for_an_eye"
+id = 25997
+school = "holy"
+blow = "reflect"
+
+# Jewelry's thorns (Medallion of Steadfast Might) shows as Thorns.
+[[talent_look]]
+key = "Thorns"
+id = 467
+school = "nature"
+blow = "kit_thorns"
+
+# A thorns spell the build does not know strikes back on the druid's Thorns row, as nature (the
+# cast spell's id stays its own).
+[[talent_look]]
+key = "thorns"
+id = 467
+school = "nature"
+blow = "spell_thorns"

@@ -1,0 +1,225 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+# Tuned from player feedback 2026-11-09 (AS's table: Sinister Strike hit 35, cooldown 1.0;
+# Eviscerate hit 91, 2 targets; Slice and Dice 32 % for 9 sec; Fan of Knives cooldown 3.0 is ours).
+
+[[spell]]
+key = "sinister_strike"
+id = 1752
+visual = 910095
+vfx = { source = 1752, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.4 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 50
+cooldown = 2.0
+range = 7.0
+name = { en = "Sinister Strike", de = "Finsterer Stoß", fr = "Attaque pernicieuse", es = "Golpe siniestro", pt = "Golpe Sinistro", ru = "Коварный удар", pl = "Złowieszcze uderzenie", tr = "Uğursuz Darbe", it = "Colpo sinistro", ja = "シニスター・ストライク", zh = "邪恶攻击", ko = "사악한 일격" }
+icon = "Spell_Shadow_RitualOfSacrifice"
+
+[[spell]]
+key = "eviscerate"
+id = 2098
+visual = 910096
+vfx = { source = 2098, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { execute = { targets = 5 } }
+hit = 105
+cooldown = 3.0
+range = 8.0
+name = { en = "Eviscerate", de = "Ausweiden", fr = "Éviscération", es = "Eviscerar", pt = "Estripar", ru = "Потрошение", pl = "Patroszenie", tr = "Deşme", it = "Eviscerazione", ja = "エヴィセレート", zh = "剔骨", ko = "절개" }
+icon = "Ability_Rogue_Eviscerate"
+
+[[spell]]
+key = "blade_flurry"
+id = 13877
+visual = 910097
+vfx = { source = 13877, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.4 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { nova = { radius = 7.0 } }
+hit = 12
+cooldown = 2.5
+range = 7.0
+name = { en = "Blade Flurry", de = "Klingenwirbel", fr = "Tempête de lames", es = "Torbellino de cuchillas", pt = "Turbilhão de Lâminas", ru = "Вихрь клинков", pl = "Wir ostrzy", tr = "Bıçak Fırtınası", it = "Raffica di lame", ja = "ブレード・フラーリー", zh = "剑刃乱舞", ko = "폭풍의 칼날" }
+icon = "Ability_Warrior_PunishingBlow"
+
+[[spell]]
+key = "rupture"
+id = 1943
+visual = 910098
+vfx = { source = 1943, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { dot = { targets = 2, secs = 4.0, ticks = 2, cap = 1 } }
+hit = 61
+cooldown = 3.5
+range = 8.0
+name = { en = "Rupture", de = "Blutung", fr = "Rupture", es = "Ruptura", pt = "Ruptura", ru = "Кровоизлияние", pl = "Rozerwanie", tr = "Yırtılma", it = "Rottura", ja = "ラプチャー", zh = "割裂", ko = "파열" }
+icon = "Ability_Rogue_Rupture"
+
+[[spell]]
+key = "kidney_shot"
+id = 408
+visual = 910099
+vfx = { source = 408, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 25
+cooldown = 6.0
+range = 7.0
+rider = { stun = { secs = 2.5 } }
+name = { en = "Kidney Shot", de = "Nierenhieb", fr = "Coup de rein", es = "Golpe en los riñones", pt = "Golpe nos Rins", ru = "Удар по почкам", pl = "Cios w nerki", tr = "Böbrek Darbesi", it = "Colpo ai reni", ja = "キドニー・ショット", zh = "肾击", ko = "급소 가격" }
+icon = "Ability_Rogue_KidneyShot"
+
+[[spell]]
+key = "gouge"
+id = 1776
+visual = 910100
+vfx = { source = 1776, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 3 } }
+hit = 26
+cooldown = 5.0
+range = 7.0
+rider = { stun = { secs = 1.5 } }
+name = { en = "Gouge", de = "Solarplexus", fr = "Suriner", es = "Gubia", pt = "Talho", ru = "Парализующий удар", pl = "Podcięcie", tr = "Oyma", it = "Sfregio", ja = "ガウジ", zh = "凿击", ko = "후려치기" }
+icon = "Ability_Gouge"
+
+[[spell]]
+key = "ghostly_strike"
+id = 14278
+visual = 910101
+vfx = { source = 14278, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 46
+cooldown = 4.0
+range = 7.0
+rider = { guard = { pct = 8 } }
+name = { en = "Ghostly Strike", de = "Geisterhafter Stoß", fr = "Frappe fantomatique", es = "Golpe fantasmal", pt = "Golpe Fantasma", ru = "Призрачный удар", pl = "Upiorne uderzenie", tr = "Hayalet Darbe", it = "Colpo spettrale", ja = "ゴーストリー・ストライク", zh = "鬼魅攻击", ko = "유령의 일격" }
+icon = "Spell_Shadow_Curse"
+
+[[spell]]
+key = "adrenaline_rush"
+id = 13750
+visual = 910102
+vfx = { source = 13750, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { haste = { pct = 60, secs = 8.0 } }
+hit = 0
+cooldown = 20.0
+range = 30.0
+name = { en = "Adrenaline Rush", de = "Adrenalinrausch", fr = "Poussée d'adrénaline", es = "Subidón de adrenalina", pt = "Surto de Adrenalina", ru = "Выброс адреналина", pl = "Przypływ adrenaliny", tr = "Adrenalin Dalgası", it = "Scarica di adrenalina", ja = "アドレナリン・ラッシュ", zh = "冲动", ko = "아드레날린 촉진" }
+icon = "Spell_Shadow_ShadowWordDominate"
+
+[[spell]]
+key = "backstab"
+id = 53
+visual = 910103
+vfx = { source = 53, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.4 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { execute = { targets = 2 } }
+hit = 56
+cooldown = 1.8
+range = 7.0
+name = { en = "Backstab", de = "Meucheln", fr = "Attaque dans le dos", es = "Puñalada trapera", pt = "Punhalada", ru = "Удар в спину", pl = "Cios w plecy", tr = "Sırtından Bıçak", it = "Pugnalata alle spalle", ja = "バックスタブ", zh = "背刺", ko = "기습" }
+icon = "Ability_BackStab"
+
+[[spell]]
+key = "slice_and_dice"
+id = 5171
+visual = 910104
+# Its own effect fills the cast kit's chest slot, so there is no cast accent; the stock look has no impact kit for the accent to replace.
+vfx = { source = 5171, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { fury = { pct = 40, secs = 10.0 } }
+hit = 0
+cooldown = 15.0
+range = 30.0
+name = { en = "Slice and Dice", de = "Zerhäckseln", fr = "Débiter", es = "Sajar y despedazar", pt = "Retalhar", ru = "Мясорубка", pl = "Szatkowanie", tr = "Doğra ve Kes", it = "Tritacarne", ja = "スライス・アンド・ダイス", zh = "切割", ko = "난도질" }
+icon = "Ability_Rogue_SliceDice"
+
+[[spell]]
+key = "seal_fate"
+id = 14186
+visual = 910105
+vfx = { source = 1752, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.4 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { proc = { kind = "combo", radius = 0.0 } }
+hit = 130
+cooldown = 1.79
+range = 8.0
+name = { en = "Seal Fate", de = "Schicksal besiegeln", fr = "Sceller le destin", es = "Sellar destino", pt = "Selar Destino", ru = "Печать судьбы", pl = "Przypieczętowanie losu", tr = "Kaderi Mühürle", it = "Sigillare il destino", ja = "シール・フェイト", zh = "封印命运", ko = "운명의 낙인" }
+icon = "Spell_Shadow_ChillTouch"
+
+# Wrath of the Lich King.
+[[spell]]
+key = "fan_of_knives"
+id = 51723
+visual = 910106
+vfx = { source = 51723, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 8.0 } }
+hit = 32
+cooldown = 6.0
+range = 8.0
+name = { en = "Fan of Knives", de = "Dolchfächer", fr = "Éventail de couteaux", es = "Abanico de cuchillos", pt = "Leque de Facas", ru = "Веер клинков", pl = "Wachlarz noży", tr = "Bıçak Yelpazesi", it = "Ventaglio di coltelli", ja = "ファン・オブ・ナイヴズ", zh = "刀扇", ko = "칼부채" }
+icon = "Ability_Rogue_FanofKnives"
+
+[[spell]]
+key = "killing_spree"
+id = 51690
+visual = 910107
+vfx = { source = 51690, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { missiles = { count = 5 } }
+hit = 35
+cooldown = 12.0
+range = 10.0
+name = { en = "Killing Spree", de = "Amok", fr = "Déferlante d'acier", es = "Racha de matanza", pt = "Frenesi Assassino", ru = "Череда убийств", pl = "Szał zabijania", tr = "Öldürme Çılgınlığı", it = "Strage", ja = "キリング・スプリー", zh = "杀戮盛筵", ko = "광란의 살육" }
+icon = "Ability_Rogue_MurderSpree"
+
+[[spell]]
+key = "mutilate"
+id = 1329
+visual = 910108
+vfx = { source = 1329, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 90
+cooldown = 3.0
+range = 6.0
+tags = ["meter_row"]
+name = { en = "Mutilate", de = "Verstümmeln", fr = "Mutiler", es = "Mutilar", pt = "Mutilar", ru = "Расправа", pl = "Masakra", tr = "Sakatlama", it = "Mutilazione", ja = "ミューティレート", zh = "毁伤", ko = "절단" }
+icon = "Ability_Rogue_ShadowStrikes"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "envenom"
+id = 32645
+visual = 910109
+vfx = { source = 32645, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/Poison_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { strike = { targets = 2 } }
+hit = 72
+cooldown = 3.0
+range = 7.0
+name = { en = "Envenom", de = "Vergiften", fr = "Envenimer", es = "Envenenar", pt = "Envenenar", ru = "Отравление", pl = "Zatrucie", tr = "Zehirle", it = "Avvelenare", ja = "エンヴェノム", zh = "毒伤", ko = "독살" }
+icon = "Ability_Rogue_Disembowel"
+
+[[spell]]
+key = "cloak_of_shadows"
+id = 31224
+visual = 910110
+vfx = { source = 31224, cast = { model = "spells/ghostlystrike_impact_chest.mdx", slot = "chest", scale = 0.6 }, impact = { model = "Spells/SinisterStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { immune = { secs = 3.0 } }
+hit = 0
+cooldown = 40.0
+range = 0.0
+name = { en = "Cloak of Shadows", de = "Mantel der Schatten", fr = "Cape d'ombre", es = "Capa de las Sombras", pt = "Manto das Sombras", ru = "Плащ теней", pl = "Płaszcz cieni", tr = "Gölge Pelerini", it = "Manto d'ombra", ja = "クローク・オブ・シャドウ", zh = "暗影斗篷", ko = "그림자 망토" }
+icon = "Spell_Shadow_NetherCloak"

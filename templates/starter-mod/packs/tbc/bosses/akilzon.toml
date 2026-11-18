@@ -1,0 +1,16 @@
+# Akil'zon: Static Disruption, Electrical Storm ("Stay inside the circle!"), his eagles.
+
+[[boss]]
+key = "akilzon"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 43622 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { ring = { spell = 43648, radius = 13.0, warn = 2.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

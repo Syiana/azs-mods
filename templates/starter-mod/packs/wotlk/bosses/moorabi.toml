@@ -1,0 +1,16 @@
+# Moorabi: Ground Tremor, Quake.
+
+[[boss]]
+key = "moorabi"
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 55142, radius = 10.0, warn = 1.8, knock = 12.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 55101, count = 4, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

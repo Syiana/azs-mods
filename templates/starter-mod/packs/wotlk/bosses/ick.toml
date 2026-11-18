@@ -1,0 +1,20 @@
+# Ick and Krick: Poison Nova, Explosive Barrage, Pursuit.
+
+[[boss]]
+key = "ick"
+
+[[boss.kit]]
+every = 10.0
+ability = { nova = { spell = 68989, radius = 10.0, warn = 2.2 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 69012, count = 5, radius = 4.0, spread = 10.0, warn = 1.6, factor = 2.0 } }
+
+[[boss.kit]]
+every = 8.0
+ability = "charge"
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

@@ -1,0 +1,61 @@
+# Snippet: a new class, from content alone (class.toml, spells.toml, talents.toml in one folder).
+#
+# Goes in:  packs/<your package>/classes/frost_knight/class.toml
+#           with spells.toml and talents.toml of this folder beside it.
+# Lock:     nothing to declare: a new class is no override.
+# Rules:    - The key carries your package's name: "<your package>:<name>". Its token (the
+#             upper-cased part after the colon, here FROST_KNIGHT) must be one no other class has.
+#           - `id` is a free ChrClasses id, 1 to 31. Taken today: 1 to 9 and 11 to 13; official
+#             classes take new ids upward from 14, mods by convention downward from 31. A taken id
+#             or token fails the check.
+#           - `starter` names the class's first spell, defined in its spells.toml.
+#           - `races` are ChrRaces ids of the player's client; `starter_weapons` item entries of it.
+#           - Every `name` and set or weapon word carries all twelve languages:
+#             en de fr es pt ru it pl tr ja zh ko.
+#           - Optional: `spell_tone = 1..15` draws all its spells in one hue of the game's palette;
+#             `talent_art` names a PNG of your package as its talent window's painting (see the
+#             content reference, "A class"; a package with a picture plays in no browser).
+#           - A class without talents.toml plays with no talents.
+#           - The class joins every game mode that loads the packs your package requires.
+# Checked:  the three files together, in a copy of templates/starter-mod with
+#           `azs-content profile-check`. Not played in a run. Derived from the game's own test
+#           fixture for a mod class, which a run does play.
+
+key = "yourname.example:frost_knight"
+id = 31
+health = 240
+power = "mana"
+starter = "yourname.example:rime_strike"
+races = [1]
+name = { en = "Frost Knight", de = "Frostritter", fr = "Chevalier du givre", es = "Caballero de escarcha", pt = "Cavaleiro do Gelo", ru = "Рыцарь мороза", pl = "Rycerz mrozu", tr = "Ayaz Şövalyesi", it = "Cavaliere del gelo", ja = "フロストナイト", zh = "冰霜骑士", ko = "서리 기사" }
+color = [0.5, 0.8, 1.0]
+piece_profiles = [0, 1, 2, 3, 4, 5, 6, 7]
+starter_weapons = [35]
+bot_name = "Botfrost"
+bot_order = 31
+swing = { beat = 2.0 }
+icon = "Spell_Frost_FrostArmor02"
+
+[gear]
+armor = "plate"
+sets = [
+    { en = "Rimewalker's", de = "des Raureifwandlers", fr = "du marcheur de givre", es = "del caminante de escarcha", pt = "do Andarilho da Geada", ru = "Ходока по инею", pl = "Szronowego wędrowca", tr = "Kırağı Gezgini", it = "del camminatore di brina", ja = "霜歩きの", zh = "霜行者的", ko = "서리걸음의" },
+    { en = "Winterguard", de = "der Winterwacht", fr = "de la garde hivernale", es = "de la guardia invernal", pt = "da Guarda do Inverno", ru = "зимней стражи", pl = "Zimowej straży", tr = "Kış Muhafızı", it = "della guardia invernale", ja = "冬の守りの", zh = "冬卫的", ko = "겨울 수호자의" },
+    { en = "Glacier", de = "des Gletschers", fr = "du glacier", es = "del glaciar", pt = "da Geleira", ru = "ледника", pl = "Lodowca", tr = "Buzul", it = "del ghiacciaio", ja = "氷河の", zh = "冰川的", ko = "빙하의" },
+    { en = "Frostbound", de = "der Frostbindung", fr = "lié par le givre", es = "ligado a la escarcha", pt = "Ligado ao Gelo", ru = "скованного льдом", pl = "Skuty mrozem", tr = "Don Bağlı", it = "avvinto dal gelo", ja = "霜縛りの", zh = "霜缚的", ko = "서리 속박의" },
+    { en = "Wintercrown", de = "der Winterkrone", fr = "de la couronne d'hiver", es = "de la corona invernal", pt = "da Coroa do Inverno", ru = "зимнего венца", pl = "Zimowej korony", tr = "Kış Tacı", it = "della corona d'inverno", ja = "冬冠の", zh = "冬冠的", ko = "겨울 왕관의" },
+]
+weapons = [[
+    { en = "Worn Frostblade", de = "Abgenutzte Frostklinge", fr = "Lame de givre usée", es = "Hoja de escarcha gastada", pt = "Lâmina de Gelo Gasta", ru = "Потрепанный ледяной клинок", pl = "Zużyte mroźne ostrze", tr = "Yıpranmış Don Bıçağı", it = "Lama di gelo consumata", ja = "使い古された霜の刃", zh = "破旧的冰霜之刃", ko = "낡은 서리칼날" },
+    { en = "Rimeblade", de = "Raureifklinge", fr = "Lame de givre", es = "Hoja de escarcha", pt = "Lâmina de Geada", ru = "Клинок инея", pl = "Szronowe ostrze", tr = "Kırağı Bıçağı", it = "Lama di brina", ja = "霧氷の刃", zh = "霜凇之刃", ko = "상고대 칼날" },
+    { en = "Glacial Edge", de = "Gletscherschneide", fr = "Tranchant glaciaire", es = "Filo glacial", pt = "Gume Glacial", ru = "Ледяное лезвие", pl = "Lodowe ostrze", tr = "Buzul Kenarı", it = "Filo glaciale", ja = "氷河の刃先", zh = "冰川之锋", ko = "빙하의 날" },
+    { en = "Winter's Reach", de = "Wintersreichweite", fr = "Portée de l'hiver", es = "Alcance del invierno", pt = "Alcance do Inverno", ru = "Длань зимы", pl = "Zasięg zimy", tr = "Kışın Erimi", it = "Portata dell'inverno", ja = "冬の手", zh = "凛冬之握", ko = "겨울의 손길" },
+    { en = "Frostwyrm's Fang", de = "Fangzahn des Frostwyrms", fr = "Croc du ver du givre", es = "Colmillo de vermis de escarcha", pt = "Presa do Verme do Gelo", ru = "Клык ледяного змея", pl = "Kieł lodowego smoka", tr = "Don Ejderi Dişi", it = "Zanna del drago del gelo", ja = "フロストワームの牙", zh = "冰霜巨龙之牙", ko = "서리고룡의 송곳니" },
+]]
+weapon_icons = [["Sword_04", "Sword_27", "Sword_39", "Sword_61", "Sword_43", "Sword_117"]]
+
+[[colors]]
+key = "yourname.example:frost_knight_glacial"
+tone = 8
+price = 12000
+name = { en = "Glacial", de = "Gletscher", fr = "Glaciaire", es = "Glacial", pt = "Glacial", ru = "Ледник", pl = "Lodowy", tr = "Buzul", it = "Glaciale", ja = "グレイシャル", zh = "冰川", ko = "빙하" }

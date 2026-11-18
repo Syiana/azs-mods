@@ -1,0 +1,24 @@
+# Gruul the Dragonkiller: Ground Slam then Shatter, Cave In, Hurtful Strike, Reverberation.
+
+[[boss]]
+key = "gruul"
+
+[[boss.kit]]
+every = 12.0
+ability = { combo = [[{ stomp = { spell = 33525, radius = 12.0, warn = 2.0, knock = 14.0 } }, { nova = { spell = 33654, radius = 10.0, warn = 2.2 } }], 1.6] }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 36240, count = 5, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.4 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 33813, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.8 } }
+
+[[boss.kit]]
+every = 18.0
+ability = { ring = { spell = 36297, radius = 13.0, warn = 2.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

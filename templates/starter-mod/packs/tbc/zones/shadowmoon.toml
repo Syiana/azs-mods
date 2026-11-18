@@ -1,0 +1,329 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "shadowmoon"
+order = 23
+name = { en = "Shadowmoon Valley", de = "Schattenmondtal", fr = "Vallée d'Ombrelune", es = "Valle Sombraluna", pt = "Vale da Lua Negra", ru = "Долина Призрачной Луны", pl = "Dolina Mrocznego Księżyca", tr = "Gölgeay Vadisi", it = "Valle di Torvaluna", ja = "シャドウムーン・ヴァレー", zh = "影月谷", ko = "어둠달 골짜기" }
+subtitle = { en = "The Black Temple", de = "Der Schwarze Tempel", fr = "Le Temple noir", es = "El Templo Oscuro", pt = "O Templo Negro", ru = "Черный храм", pl = "Czarna Świątynia", tr = "Kara Tapınak", it = "Il Tempio Oscuro", ja = "ブラック・テンプル", zh = "黑暗神殿", ko = "검은 사원" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Shadowmoon"
+map = 530
+map_name = "Expansion01"
+area = 3520
+center = [-3330.0, 790.0]
+radius = 100.0
+map_bounds = [4225.0, -1275.0, -1947.92, -5614.58]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 14.17
+gold_factor = 3.53
+late_factor = 0.4
+hour = 12
+# Noon, not midnight: at night the night dimming (Night Darkness) made the run and the hero menu's map
+# preview of the valley almost black. Its sky stays dark, so the edge stays the night's.
+dark_sky = true
+# The Fel Reavers stalk it, as 3.3.5a has them here.
+fel_reavers = true
+
+[[zone.enemy]]
+entry = 4000
+name = { en = "Shadowmoon Imp", de = "Schattenmondwichtel", fr = "Diablotin d'Ombrelune", es = "Diablillo Sombraluna", pt = "Diabrete da Lua Negra", ru = "Бес Призрачной Луны", pl = "Chochlik z Mrocznego Księżyca", tr = "Gölgeay İmpi", it = "Imp Torvaluna", ja = "シャドウムーン・インプ", zh = "影月小鬼", ko = "어둠달 임프" }
+type = "demon"
+display = 16889
+icon = "Spell_Shadow_SummonImp"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 4001
+name = { en = "Felboar", de = "Teufelseber", fr = "Sanglier gangrené", es = "Jabalí vil", pt = "Javali Vil", ru = "Вепрь Скверны", pl = "Dzik Zła", tr = "Fel Domuzu", it = "Cinghiale vile", ja = "フェルボア", zh = "邪能野猪", ko = "지옥멧돼지" }
+type = "beast"
+display = 18701
+icon = "Ability_Hunter_Pet_Boar"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.65
+
+[[zone.enemy]]
+entry = 4002
+name = { en = "Coilskar Myrmidon", de = "Myrmidone der Echsennarbe", fr = "Myrmidon cicatrelacée", es = "Mirmidón Cicatriz Espiral", pt = "Mirmidão Cicatriz Espiral", ru = "Мирмидон из племени Витого Шрама", pl = "Myrmidon z klanu Coilskar", tr = "Kıvrımyara Myrmidonu", it = "Mirmidone Coilskar", ja = "コイルスカー・ミュルミドン", zh = "库斯卡仆从", ko = "갈퀴꼬리 미르미돈" }
+type = "humanoid"
+display = 4762
+icon = "ACHIEVEMENT_BOSS_LADYVASHJ"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.95
+
+[[zone.enemy]]
+entry = 4003
+name = { en = "Coilskar Sorceress", de = "Zauberin der Echsennarbe", fr = "Sorcière cicatrelacée", es = "Hechicera Cicatriz Espiral", pt = "Feiticeira Cicatriz Espiral", ru = "Колдунья из племени Витого Шрама", pl = "Czarodziejka z klanu Coilskar", tr = "Kıvrımyara Büyücüsü", it = "Maga Coilskar", ja = "コイルスカーの女魔術師", zh = "库斯卡女巫", ko = "갈퀴꼬리 마녀" }
+type = "humanoid"
+display = 4973
+icon = "ACHIEVEMENT_BOSS_LADYVASHJ"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4004
+name = { en = "Wrathguard Defender", de = "Verteidiger der Zornwache", fr = "Défenseur garde-courroux", es = "Defensor guardacólera", pt = "Defensor Guarda da Ira", ru = "Страж гнева-защитник", pl = "Obrońca Gniewnej Straży", tr = "Gazap Muhafızı Savunucusu", it = "Difensore Guardiaira", ja = "ラースガード・ディフェンダー", zh = "愤怒卫士防御者", ko = "격노수호병 방어병" }
+type = "demon"
+display = 19597
+icon = "Spell_Shadow_SummonFelGuard"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 4005
+name = { en = "Felguard Legionnaire", de = "Legionär der Teufelswache", fr = "Légionnaire gardefiel", es = "Legionario guardia vil", pt = "Legionário Guarda Vil", ru = "Легионер-страж Скверны", pl = "Legionista Straży Zła", tr = "Fel Muhafız Lejyoneri", it = "Legionario Vilguardia", ja = "フェルガード・レギオネア", zh = "恶魔卫士军团兵", ko = "지옥수호병 군단병" }
+type = "demon"
+display = 5048
+icon = "Spell_Shadow_SummonFelGuard"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+
+[[zone.enemy]]
+entry = 4006
+name = { en = "Netherwing Ray", de = "Rochen der Netherschwingen", fr = "Raie de l'Aile-du-Néant", es = "Raya Ala Abisal", pt = "Arraia da Asa Abissal", ru = "Скат Крыла Пустоты", pl = "Płaszczka Skrzydła Netheru", tr = "Netherkanat Vatozu", it = "Manta Alanether", ja = "ネザーウィング・レイ", zh = "灵翼鳐", ko = "황천날개 가오리" }
+type = "beast"
+display = 19401
+icon = "Ability_Hunter_Pet_NetherRay"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.8
+
+[[zone.enemy]]
+entry = 4007
+name = { en = "Shadowmoon Darkcaster", de = "Dunkelzauberer des Schattenmondes", fr = "Sombre invocateur d'Ombrelune", es = "Taumaturgo oscuro Sombraluna", pt = "Lançador Sombrio da Lua Negra", ru = "Темный заклинатель Призрачной Луны", pl = "Mroczny czarownik z Mrocznego Księżyca", tr = "Gölgeay Karanlık Büyücüsü", it = "Lanciascuro Torvaluna", ja = "シャドウムーン・ダークキャスター", zh = "影月暗法师", ko = "어둠달 암흑술사" }
+type = "demon"
+display = 17704
+icon = "Spell_Shadow_SummonFelGuard"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4008
+name = { en = "Dreadwarden", de = "Schreckenswärter", fr = "Gardien de l'effroi", es = "Guardián pavoroso", pt = "Guardião do Terror", ru = "Страж ужаса", pl = "Strażnik grozy", tr = "Dehşet Bekçisi", it = "Custode del terrore", ja = "ドレッドウォーデン", zh = "恐惧守卫", ko = "공포감시관" }
+type = "demon"
+display = 17543
+icon = "Spell_Shadow_SummonFelGuard"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.95
+
+[[zone.elite]]
+entry = 4010
+name = { en = "Netherwing Drake", de = "Drache der Netherschwingen", fr = "Drake de l'Aile-du-Néant", es = "Draco Ala Abisal", pt = "Draco da Asa Abissal", ru = "Дракон Крыла Пустоты", pl = "Drake Skrzydła Netheru", tr = "Netherkanat Ejderi", it = "Drago Alanether", ja = "ネザーウィング・ドレイク", zh = "灵翼幼龙", ko = "황천날개 비룡" }
+type = "dragonkin"
+display = 19891
+icon = "Ability_Mount_NetherDrakeElite"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16396, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 2120, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 4011
+name = { en = "Shadowlord", de = "Schattenfürst", fr = "Seigneur de l'ombre", es = "Señor de las sombras", pt = "Senhor das Sombras", ru = "Повелитель теней", pl = "Władca cienia", tr = "Gölge Lordu", it = "Signore dell'Ombra", ja = "シャドウロード", zh = "暗影领主", ko = "어둠군주" }
+type = "demon"
+display = 8609
+icon = "Spell_Shadow_SummonInfernal"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.6
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.elite]]
+entry = 4012
+name = { en = "Ashtongue Warrior", de = "Krieger der Aschenzungen", fr = "Guerrier cendrelangue", es = "Guerrero Lengua de ceniza", pt = "Guerreiro Língua das Cinzas", ru = "Воин из племени Пепельного Языка", pl = "Wojownik Popielnego Języka", tr = "Küldil Savaşçısı", it = "Guerriero Lingua di Cenere", ja = "アッシュタングの戦士", zh = "灰舌战士", ko = "잿빛혓바닥 전사" }
+type = "humanoid"
+display = 17577
+icon = "INV_Misc_Head_Orc_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.6
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.boss]]
+entry = 4090
+name = { en = "High Warlord Naj'entus", de = "Oberster Kriegsfürst Naj'entus", fr = "Grand seigneur de guerre Naj'entus", es = "Alto señor de la guerra Naj'entus", pt = "Alto Senhor da Guerra Naj'entus", ru = "Верховный полководец Надж'ентус", pl = "Wielki Wódz Naj'entus", tr = "Yüce Savaş Lordu Naj'entus", it = "Alto Signore della Guerra Naj'entus", ja = "大将軍ナジェンタス", zh = "高阶督军纳因图斯", ko = "대장군 나젠투스" }
+type = "humanoid"
+display = 21251
+icon = "INV_Misc_Head_Orc_01"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.6
+minute = 4
+yell = { en = "You will die in the name of Lady Vashj!", de = "Ihr werdet im Namen von Lady Vashj sterben!", fr = "Vous mourrez au nom de Dame Vashj !", es = "¡Moriréis en nombre de la Dama Vashj!", pt = "Vocês morrerão em nome de Lady Vashj!", ru = "Вы умрете во имя леди Вайш!", pl = "Zginiesz w imię Lady Vashj!", tr = "Leydi Vashj adına öleceksiniz!", it = "Morirete nel nome di Lady Vashj!", ja = "レディ・ヴァシュジの名のもとに死ぬがいい！", zh = "以瓦丝琪女士之名，你们去死吧！", ko = "여군주 바쉬의 이름으로 죽어라!" }
+kit = "high_warlord_najentus"
+
+[[zone.boss]]
+entry = 4091
+name = { en = "Supremus", de = "Supremus", fr = "Supremus", es = "Supremus", pt = "Supremus", ru = "Супремус", pl = "Supremus", tr = "Supremus", it = "Supremus", ja = "スプリーマス", zh = "苏普雷姆斯", ko = "궁극의 심연" }
+type = "demon"
+display = 16874
+icon = "Spell_Fire_Elemental_Totem"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.4
+minute = 8
+yell = { en = "Supremus erupts from the burning ground!", de = "Supremus bricht aus dem brennenden Boden hervor!", fr = "Supremus jaillit du sol embrasé !", es = "¡Supremus surge del suelo en llamas!", pt = "Supremus irrompe do chão em chamas!", ru = "Супремус вырывается из пылающей земли!", pl = "Supremus wyrywa się z płonącej ziemi!", tr = "Supremus yanan zeminden fışkırıyor!", it = "Supremus erutta dal terreno in fiamme!", ja = "スプリーマスが燃える大地から噴き出した！", zh = "苏普雷姆斯从燃烧的大地中冲出！", ko = "궁극의 심연이 불타는 땅에서 솟구칩니다!" }
+kit = "supremus"
+
+[[zone.boss]]
+entry = 4092
+name = { en = "Teron Gorefiend", de = "Teron Blutschatten", fr = "Teron Fielsang", es = "Teron Sangrevil", pt = "Teron Sanguinário", ru = "Терон Кровожад", pl = "Teron Krwawy Demon", tr = "Teron Kanşeytan", it = "Teron Sanguefiele", ja = "テロン・ゴアフィーンド", zh = "塔隆·血魔", ko = "테론 고어핀드" }
+type = "undead"
+display = 21262
+icon = "INV_Misc_Head_Undead_01"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.2
+minute = 12
+yell = { en = "Vengeance is mine!", de = "Die Rache ist mein!", fr = "La vengeance est mienne !", es = "¡La venganza es mía!", pt = "A vingança é minha!", ru = "Месть будет моей!", pl = "Zemsta jest moja!", tr = "İntikam benimdir!", it = "La vendetta è mia!", ja = "復讐は我がものだ！", zh = "复仇是我的！", ko = "복수는 나의 것이다!" }
+kit = "teron_gorefiend"
+
+[[zone.boss]]
+entry = 4093
+name = { en = "Gurtogg Bloodboil", de = "Gurtogg Siedeblut", fr = "Gurtogg Sangbouillant", es = "Gurtogg Sangre Hirviente", pt = "Gurtogg Sangue Fervente", ru = "Гуртогг Кипящая Кровь", pl = "Gurtogg Krwiowrzący", tr = "Gurtogg Kanfıran", it = "Gurtogg Sangue Bollente", ja = "ガートッグ・ブラッドボイル", zh = "古尔图格·血沸", ko = "구르토그 블러드보일" }
+type = "humanoid"
+display = 18236
+icon = "INV_Misc_Head_Orc_02"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.6
+minute = 16
+yell = { en = "Horde will crush you!", de = "Die Horde wird euch zermalmen!", fr = "La Horde va vous écraser !", es = "¡La Horda os aplastará!", pt = "A Horda vai esmagar vocês!", ru = "Орда раздавит вас!", pl = "Horda cię zmiażdży!", tr = "Horde sizi ezecek!", it = "L'Orda vi schiaccerà!", ja = "ホードが貴様を叩き潰す！", zh = "部落会碾碎你们！", ko = "호드가 너희를 짓밟으리라!" }
+kit = "gurtogg_bloodboil"
+
+[[zone.boss]]
+entry = 2011
+name = { en = "Illidan Stormrage", de = "Illidan Sturmgrimm", fr = "Illidan Hurlorage", es = "Illidan Tormenta Iracunda", pt = "Illidan Tempesfúria", ru = "Иллидан Ярость Бури", pl = "Illidan Burzowa Furia", tr = "Illidan Fırtınaöfke", it = "Illidan Grantempesta", ja = "イリダン・ストームレイジ", zh = "伊利丹·怒风", ko = "일리단 스톰레이지" }
+type = "demon"
+display = 21135
+icon = "Achievement_Boss_Illidan"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.2
+minute = 20
+yell = { en = "You are not prepared!", de = "Ihr seid nicht vorbereitet!", fr = "Vous n'êtes pas préparés !", es = "¡No estáis preparados!", pt = "Vocês não estão preparados!", ru = "Вы не готовы!", pl = "Nie jesteście przygotowani!", tr = "Hazır değilsiniz!", it = "Non siete preparati!", ja = "貴様らは準備ができていない！", zh = "你们这是自寻死路！", ko = "너흰 아직 준비가 안 됐다!" }
+final = true
+kit = "illidan_stormrage"
+
+# The Black Temple, Burning Crusade's last world: from the valley (Naj'entus) Akama's way leads
+# through the Fel Pits under the Hand of Gul'dan (Supremus), up Ata'mal Terrace (Teron
+# Gorefiend) and the Ruins of Karabor before the gate (Gurtogg Bloodboil) to the temple's summit,
+# where Illidan waits on his platform.
+[[zone.arena]]
+name = { en = "The Fel Pits", de = "Die Teufelsgruben", fr = "Les fosses gangrenées", es = "Los Fosos Viles", pt = "Os Fossos Vis", ru = "Ямы Скверны", pl = "Doły Zła", tr = "Fel Çukurları", it = "Le Fosse Vili", ja = "フェル・ピット", zh = "邪能深坑", ko = "지옥 구덩이" }
+center = [-3712.0, 1590.0]
+radius = 95.0
+from_boss = 1
+
+# Ata'mal Terrace stands on the real terrace: the valley floor its first centre lay on is under
+# the terrace's deck, where a hero saw the map from below.
+[[zone.arena]]
+name = { en = "Ata'mal Terrace", de = "Terrasse von Ata'mal", fr = "Terrasse d'Ata'mal", es = "Terraza de Ata'mal", pt = "Terraço de Ata'mal", ru = "Терраса Ата'мал", pl = "Taras Ata'mal", tr = "Ata'mal Terası", it = "Terrazza di Ata'mal", ja = "アタマルの高台", zh = "阿塔玛平台", ko = "아타말 단구" }
+center = [-3340.0, 304.0]
+radius = 90.0
+from_boss = 2
+
+[[zone.arena]]
+name = { en = "The Ruins of Karabor", de = "Die Ruinen von Karabor", fr = "Les ruines de Karabor", es = "Las Ruinas de Karabor", pt = "As Ruínas de Karabor", ru = "Руины Карабора", pl = "Ruiny Karabor", tr = "Karabor Harabeleri", it = "Le Rovine di Karabor", ja = "カラボールの廃墟", zh = "卡拉波废墟", ko = "카라보르 폐허" }
+center = [-3812.0, 338.0]
+radius = 95.0
+from_boss = 3
+
+[[zone.arena]]
+name = { en = "The Black Temple", de = "Der Schwarze Tempel", fr = "Le Temple noir", es = "El Templo Oscuro", pt = "O Templo Negro", ru = "Черный храм", pl = "Czarna Świątynia", tr = "Kara Tapınak", it = "Il Tempio Oscuro", ja = "ブラック・テンプル", zh = "黑暗神殿", ko = "검은 사원" }
+# Illidan's platform on the temple's summit (`BlackTemple_Facade.wmo` on map 530), some 110 yd
+# across: 90 % of the 50 yd round its centre is the platform's floor (299 to 306), the rest the
+# statue beside the centre, the stairs down its north side and the parapets round it. `floor` is
+# the platform's height; the temple's inner floor lies at some 239 under it, the valley's ground
+# at some 89. The navmesh (patch-7) is baked for this centre.
+center = [-3576.0, -138.0]
+radius = 50.0
+from_boss = 4
+floor = 304.0

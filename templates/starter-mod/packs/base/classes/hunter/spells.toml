@@ -1,0 +1,251 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "auto_shot"
+id = 75
+visual = 910020
+vfx = { source = 56641, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 35
+cooldown = 1.1
+range = 32.0
+name = { en = "Auto Shot", de = "Automatischer Schuss", fr = "Tir automatique", es = "Disparo automático", pt = "Tiro Automático", ru = "Автоматическая стрельба", pl = "Strzał automatyczny", tr = "Otomatik Atış", it = "Sparo automatico", ja = "オート・ショット", zh = "自动射击", ko = "자동 사격" }
+icon = "Ability_Whirlwind"
+
+[[spell]]
+key = "arcane_shot"
+id = 3044
+visual = 910021
+vfx = { source = 3044, impact = { model = "Spells/Magic_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "arcane"
+shape = { strike = { targets = 1 } }
+hit = 69
+cooldown = 2.5
+range = 32.0
+name = { en = "Arcane Shot", de = "Arkaner Schuss", fr = "Tir des arcanes", es = "Disparo arcano", pt = "Tiro Arcano", ru = "Чародейский выстрел", pl = "Magiczny strzał", tr = "Gizemli Atış", it = "Sparo arcano", ja = "アーケイン・ショット", zh = "奥术射击", ko = "신비한 사격" }
+icon = "Ability_ImpalingBolt"
+
+[[spell]]
+key = "multi_shot"
+id = 2643
+visual = 910022
+vfx = { source = 2643, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 3 } }
+hit = 30
+cooldown = 1.6
+range = 30.0
+name = { en = "Multi-Shot", de = "Mehrfachschuss", fr = "Fusillade", es = "Multidisparo", pt = "Tiro Múltiplo", ru = "Залп", pl = "Strzał wielokrotny", tr = "Çoklu Atış", it = "Sparo multiplo", ja = "マルチショット", zh = "多重射击", ko = "일제 사격" }
+icon = "Ability_UpgradeMoonGlaive"
+
+[[spell]]
+key = "serpent_sting"
+id = 1978
+visual = 910023
+vfx = { source = 1978, impact = { model = "Spells/Poison_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "nature"
+shape = { dot = { targets = 2, secs = 5.0, ticks = 2, cap = 1 } }
+hit = 57
+cooldown = 2.5
+range = 30.0
+name = { en = "Serpent Sting", de = "Schlangenbiss", fr = "Morsure de serpent", es = "Picadura de serpiente", pt = "Ferroada de Serpente", ru = "Укус змеи", pl = "Użądlenie węża", tr = "Yılan Sokması", it = "Puntura di serpente", ja = "サーペント・スティング", zh = "毒蛇钉刺", ko = "독사 쐐기" }
+icon = "Ability_Hunter_Quickshot"
+
+[[spell]]
+key = "volley"
+id = 1510
+visual = 910024
+vfx = { source = 1510, impact = { model = "Spells/Magic_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "arcane"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 6.0 } }
+hit = 26
+cooldown = 8.0
+range = 28.0
+name = { en = "Volley", de = "Salve", fr = "Volée", es = "Descarga", pt = "Saraivada", ru = "Град стрел", pl = "Salwa", tr = "Ok Yağmuru", it = "Raffica", ja = "ボレー", zh = "乱射", ko = "연발 사격" }
+icon = "Ability_Marksmanship"
+
+[[spell]]
+key = "explosive_trap"
+id = 13813
+visual = 910025
+vfx = { source = 13813, cast = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { nova = { radius = 9.0 } }
+hit = 17
+cooldown = 6.0
+range = 9.0
+name = { en = "Explosive Trap", de = "Sprengfalle", fr = "Piège explosif", es = "Trampa explosiva", pt = "Armadilha Explosiva", ru = "Взрывная ловушка", pl = "Pułapka wybuchowa", tr = "Patlayıcı Tuzak", it = "Trappola esplosiva", ja = "エクスプローシブ・トラップ", zh = "爆炸陷阱", ko = "폭발의 덫" }
+icon = "Spell_Fire_SelfDestruct"
+# The trap springs at once, so its model (G_ExplosiveTrap) stands only the moment it takes to go off.
+lays = { display = 3072, secs = 1.5 }
+
+[[spell]]
+key = "concussive_shot"
+id = 5116
+visual = 910026
+vfx = { source = 5116, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 17
+cooldown = 4.0
+range = 30.0
+rider = { slow = { pct = 60, secs = 4.0 } }
+name = { en = "Concussive Shot", de = "Erschütternder Schuss", fr = "Trait de choc", es = "Disparo de conmoción", pt = "Tiro Concussivo", ru = "Контузящий выстрел", pl = "Wstrząsający strzał", tr = "Sarsıcı Atış", it = "Sparo stordente", ja = "コンカッシブ・ショット", zh = "震荡射击", ko = "충격포" }
+icon = "Spell_Frost_Stun"
+
+[[spell]]
+key = "aimed_shot"
+id = 19434
+visual = 910027
+vfx = { source = 19434, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 215
+cooldown = 4.5
+range = 35.0
+name = { en = "Aimed Shot", de = "Gezielter Schuss", fr = "Visée", es = "Disparo apuntado", pt = "Tiro Certeiro", ru = "Прицельный выстрел", pl = "Strzał mierzony", tr = "Nişanlı Atış", it = "Sparo mirato", ja = "エイムド・ショット", zh = "瞄准射击", ko = "조준 사격" }
+icon = "INV_Spear_07"
+
+[[spell]]
+key = "immolation_trap"
+id = 13795
+visual = 910028
+vfx = { source = 13795, cast = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 }, area = { model = "Spells/Fel_Immolate_State_Base.mdx", slot = "base", scale = 0.7 } }
+school = "fire"
+shape = { ground = { radius = 7.0, every = 1.0, secs = 8.0 } }
+hit = 30
+cooldown = 9.0
+range = 6.0
+name = { en = "Immolation Trap", de = "Feuerbrandfalle", fr = "Piège d'immolation", es = "Trampa de inmolación", pt = "Armadilha de Imolação", ru = "Огненная ловушка", pl = "Pułapka immolacyjna", tr = "Yakıcı Tuzak", it = "Trappola d'immolazione", ja = "イモレーション・トラップ", zh = "献祭陷阱", ko = "제물의 덫" }
+icon = "Spell_Fire_FlameShock"
+# G_ImmolationTrap, standing as long as the ground burns.
+lays = { display = 3074 }
+
+[[spell]]
+key = "frost_trap"
+id = 1499
+visual = 910029
+vfx = { source = 1499, cast = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.75 }, area = { model = "Spells/SummonGround_Blizzard_State.mdx", slot = "base", scale = 0.7 } }
+school = "frost"
+shape = { ground = { radius = 10.0, every = 1.0, secs = 6.0 } }
+hit = 8
+cooldown = 10.0
+range = 6.0
+rider = { root = { secs = 1.5 } }
+name = { en = "Frost Trap", de = "Frostfalle", fr = "Piège de givre", es = "Trampa de escarcha", pt = "Armadilha de Gelo", ru = "Ледяная ловушка", pl = "Mroźna pułapka", tr = "Buz Tuzağı", it = "Trappola di ghiaccio", ja = "フロスト・トラップ", zh = "冰霜陷阱", ko = "냉기의 덫" }
+icon = "Spell_Frost_ChainsOfIce"
+# G_FrostTrap, standing as long as the frost holds.
+lays = { display = 3073 }
+
+[[spell]]
+key = "hunters_mark"
+id = 1130
+visual = 910030
+vfx = { source = 1130, cast = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Magic_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "arcane"
+shape = { proc = { kind = "mark", radius = 8.0 } }
+hit = 250
+cooldown = 1.43
+range = 35.0
+name = { en = "Hunter's Mark", de = "Mal des Jägers", fr = "Marque du chasseur", es = "Marca del cazador", pt = "Marca do Caçador", ru = "Метка охотника", pl = "Znak łowcy", tr = "Avcı İşareti", it = "Marchio del cacciatore", ja = "ハンターズ・マーク", zh = "猎人印记", ko = "사냥꾼의 징표" }
+icon = "Ability_Hunter_SniperShot"
+
+# Wrath of the Lich King.
+[[spell]]
+key = "explosive_shot"
+id = 53301
+visual = 910031
+vfx = { source = 53301, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { dot = { targets = 1, secs = 2.0, ticks = 2, cap = 1 } }
+hit = 119
+cooldown = 6.0
+range = 30.0
+name = { en = "Explosive Shot", de = "Explosivschuss", fr = "Tir explosif", es = "Disparo explosivo", pt = "Tiro Explosivo", ru = "Разрывной выстрел", pl = "Strzał wybuchowy", tr = "Patlayıcı Atış", it = "Sparo esplosivo", ja = "エクスプローシブ・ショット", zh = "爆炸射击", ko = "폭발 사격" }
+icon = "Ability_Hunter_ExplosiveShot"
+
+[[spell]]
+key = "chimera_shot"
+id = 53209
+visual = 910032
+vfx = { source = 53209, impact = { model = "Spells/Poison_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { strike = { targets = 1 } }
+hit = 106
+cooldown = 7.0
+range = 35.0
+name = { en = "Chimera Shot", de = "Schimärenschuss", fr = "Tir de la chimère", es = "Disparo de quimera", pt = "Tiro da Quimera", ru = "Выстрел химеры", pl = "Strzał chimery", tr = "Kimera Atışı", it = "Sparo della Chimera", ja = "キメラ・ショット", zh = "奇美拉射击", ko = "키메라 사격" }
+icon = "Ability_Hunter_ChimeraShot2"
+
+[[spell]]
+key = "kill_shot"
+id = 53351
+visual = 910033
+vfx = { source = 53351, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { execute = { targets = 1 } }
+hit = 113
+cooldown = 6.0
+range = 35.0
+name = { en = "Kill Shot", de = "Tödlicher Schuss", fr = "Tir mortel", es = "Disparo mortal", pt = "Tiro Mortal", ru = "Убийственный выстрел", pl = "Strzał dobijający", tr = "Öldürücü Atış", it = "Sparo letale", ja = "キル・ショット", zh = "杀戮射击", ko = "마무리 사격" }
+icon = "Ability_Hunter_Assassinate2"
+
+[[spell]]
+key = "black_arrow"
+id = 3674
+visual = 910034
+vfx = { source = 3674, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { dot = { targets = 2, secs = 15.0, ticks = 5, cap = 1 } }
+hit = 106
+cooldown = 6.0
+range = 30.0
+name = { en = "Black Arrow", de = "Schwarzer Pfeil", fr = "Flèche noire", es = "Flecha negra", pt = "Flecha Negra", ru = "Черная стрела", pl = "Czarna strzała", tr = "Kara Ok", it = "Freccia nera", ja = "ブラック・アロー", zh = "黑箭", ko = "검은 화살" }
+icon = "Spell_Shadow_PainSpike"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "rapid_fire"
+id = 3045
+visual = 910035
+vfx = { source = 3045, cast = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { haste = { pct = 40, secs = 10.0 } }
+hit = 0
+cooldown = 25.0
+range = 30.0
+name = { en = "Rapid Fire", de = "Schnellfeuer", fr = "Tir rapide", es = "Fuego rápido", pt = "Tiro Rápido", ru = "Быстрая стрельба", pl = "Szybki ogień", tr = "Seri Atış", it = "Fuoco rapido", ja = "ラピッド・ファイア", zh = "急速射击", ko = "속사" }
+icon = "Ability_Hunter_RunningShot"
+
+[[spell]]
+key = "steady_shot"
+id = 56641
+visual = 910036
+vfx = { source = 56641, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 52
+cooldown = 1.5
+range = 32.0
+name = { en = "Steady Shot", de = "Zuverlässiger Schuss", fr = "Tir assuré", es = "Disparo firme", pt = "Tiro Firme", ru = "Верный выстрел", pl = "Pewny strzał", tr = "Sabit Atış", it = "Sparo fermo", ja = "ステディ・ショット", zh = "稳固射击", ko = "고정 사격" }
+icon = "Ability_Hunter_SteadyShot"
+
+[[spell]]
+key = "kill_command"
+id = 34026
+visual = 910037
+vfx = { source = 34027, cast = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/DecisiveStrike_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { command = { share = 200, pet = "wolf", secs = 8.0 } }
+hit = 0
+cooldown = 8.0
+range = 30.0
+name = { en = "Kill Command", de = "Tödlicher Befehl", fr = "Ordre de tuer", es = "Orden de matar", pt = "Comando Mortal", ru = "Взять!", pl = "Rozkaz zabijania", tr = "Öldür Emri", it = "Comando di uccisione", ja = "キル・コマンド", zh = "杀戮命令", ko = "살상 명령" }
+icon = "Ability_Hunter_KillCommand"

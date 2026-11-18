@@ -1,0 +1,575 @@
+# The demon hunter has three trees: Havoc, Vengeance and Devourer.
+# Vengeance retains its talent positions from before Devourer replaced Fel-Scarred.
+#
+# Legion's flavour as talents: Glide and the double jump are run speed, Spectral Sight a spell
+# that marks the toughest foe, Last Resort a Metamorphosis that saves a dying hero.
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+
+[[talent_tree]]
+key = "dh_havoc"
+index = 0
+icon = "ability_demonhunter_specdps"
+background = "WarlockDestruction"
+name = { en = "Havoc", de = "Verwüstung", fr = "Dévastation", es = "Estragos", pt = "Devastação", ru = "Истребление", pl = "Pustoszenie", tr = "Tahribat", it = "Caos", ja = "ハヴォック", zh = "浩劫", ko = "파멸" }
+
+[[talent_tree]]
+key = "dh_vengeance"
+index = 1
+icon = "ability_demonhunter_spectank"
+background = "WarlockSummoning"
+name = { en = "Vengeance", de = "Rache", fr = "Vengeance", es = "Venganza", pt = "Vingança", ru = "Месть", pl = "Zemsta", tr = "İntikam", it = "Vendetta", ja = "ヴェンジェンス", zh = "复仇", ko = "복수" }
+
+[[talent_tree]]
+key = "dh_devourer"
+index = 2
+icon = "inv_112_ability_demonhunter_metamorphasisvoid"
+background = "WarlockCurses"
+name = { en = "Devourer", de = "Verschlinger", fr = "Dévoration", es = "Devoración", pt = "Devorador", ru = "Пожиратель", pl = "Pożeracz", tr = "Yutucu", it = "Divoratore", ja = "ディヴァウラー", zh = "吞噬者", ko = "포식자" }
+
+# --- Havoc: twin blades and fury
+
+[[talent]]
+key = "hv_chaos_fragments"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "ability_demonhunter_chaosstrike"
+name = { en = "Chaos Fragments", de = "Chaosfragmente", fr = "Fragments de chaos", es = "Fragmentos de caos", pt = "Fragmentos do Caos", ru = "Осколки хаоса", pl = "Fragmenty chaosu", tr = "Kaos Parçaları", it = "Frammenti del caos", ja = "カオス・フラグメント", zh = "混乱碎片", ko = "혼돈의 파편" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "hv_demon_blades"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [0, 0.015] }]
+icon = "inv_glaive_1h_demonhunter_a_01"
+name = { en = "Demon Blades", de = "Dämonenklingen", fr = "Lames démoniaques", es = "Hojas demoníacas", pt = "Lâminas Demoníacas", ru = "Демонические клинки", pl = "Demoniczne ostrza", tr = "Şeytan Bıçakları", it = "Lame demoniache", ja = "デーモン・ブレード", zh = "恶魔之刃", ko = "악마의 칼날" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "hv_insatiable_hunger"
+tree = 0
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "INV_Weapon_Glave_01"
+name = { en = "Insatiable Hunger", de = "Unstillbarer Hunger", fr = "Faim insatiable", es = "Hambre insaciable", pt = "Fome Insaciável", ru = "Ненасытный голод", pl = "Nienasycony głód", tr = "Doyumsuz Açlık", it = "Fame insaziabile", ja = "インセイシャブル・ハンガー", zh = "无尽饥渴", ko = "채울 수 없는 굶주림" }
+text = { en = "Demon's Bite and Chaos Strike deal {v}% more damage.", de = "Dämonenbiss und Chaosstoß verursachen {v}% mehr Schaden.", fr = "Morsure du démon et Frappe du chaos infligent {v}% de dégâts en plus.", es = "Mordedura de demonio y Golpe del caos infligen un {v}% más de daño.", pt = "Mordida do Demônio e Golpe do Caos causam {v}% a mais de dano.", ru = "Укус демона и Удар хаоса наносят на {v}% больше урона.", pl = "Ugryzienie demona i Cios chaosu zadają o {v}% więcej obrażeń.", tr = "Şeytan Isırığı ve Kaos Darbesi {v}% daha fazla hasar verir.", it = "Morso del demone e Colpo del caos infliggono il {v}% di danni in più.", ja = "デーモンズ・バイトとカオス・ストライクのダメージが{v}%増加します。", zh = "恶魔之咬和混乱打击造成的伤害提高{v}%。", ko = "악마의 이빨과 혼돈의 일격의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["demons_bite", "chaos_strike"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "hv_glide"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [7, 0.02] }]
+icon = "ability_demonhunter_glide"
+name = { en = "Glide", de = "Gleiten", fr = "Plané", es = "Planeo", pt = "Planar", ru = "Скольжение", pl = "Szybowanie", tr = "Süzülme", it = "Planata", ja = "グライド", zh = "滑翔", ko = "활강" }
+text = { en = "Your wings carry you: movement speed increased by {v}%.", de = "Deine Schwingen tragen dich: Bewegungstempo um {v}% erhöht.", fr = "Tes ailes te portent : vitesse de déplacement augmentée de {v}%.", es = "Tus alas te llevan: velocidad de movimiento aumentada un {v}%.", pt = "Suas asas levam você: velocidade de movimento aumentada em {v}%.", ru = "Твои крылья несут тебя: скорость движения повышена на {v}%.", pl = "Twoje skrzydła cię niosą: szybkość ruchu zwiększona o {v}%.", tr = "Kanatların seni taşır: hareket hızı {v}% arttı.", it = "Le tue ali ti portano: velocità di movimento aumentata del {v}%.", ja = "翼があなたを運びます：移動速度が{v}%上昇します。", zh = "你的双翼载着你前进：移动速度提高{v}%。", ko = "날개가 당신을 실어 나릅니다: 이동 속도가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "hv_havoc"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "ability_demonhunter_specdps"
+name = { en = "Illidari Fury", de = "Zorn der Illidari", fr = "Fureur illidari", es = "Furia illidari", pt = "Fúria Illidari", ru = "Ярость Иллидари", pl = "Furia Illidari", tr = "Illidari Öfkesi", it = "Furia Illidari", ja = "イリダリ・フューリー", zh = "伊利达雷之怒", ko = "일리다리의 격노" }
+text = { en = "Milestone. Your physical, chaos and fel spells deal {v}% more damage.", de = "Meilenstein. Deine körperlichen, Chaos- und Teufelszauber verursachen {v}% mehr Schaden.", fr = "Jalon. Vos sorts physiques, du chaos et gangrenés infligent {v}% de dégâts en plus.", es = "Hito. Tus hechizos físicos, de caos y de vileza infligen un {v}% más de daño.", pt = "Marco. Seus feitiços físicos, de caos e vis causam {v}% a mais de dano.", ru = "Веха. Ваши физические заклинания, заклинания хаоса и скверны наносят на {v}% больше урона.", pl = "Kamień milowy. Twoje czary fizyczne, chaosu i Zła zadają o {v}% więcej obrażeń.", tr = "Dönüm noktası. Fiziksel, kaos ve fel büyülerin {v}% daha fazla hasar verir.", it = "Traguardo. I tuoi incantesimi fisici, del caos e vili infliggono il {v}% di danni in più.", ja = "【マイルストーン】物理・混沌・フェルの呪文のダメージが{v}%増加します。", zh = "里程碑：你的物理、混乱和邪能法术造成的伤害提高{v}%。", ko = "이정표. 물리, 혼돈, 지옥 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ school = 37 }]
+mods_v = 0.08
+
+[[talent]]
+key = "hv_chaos_theory"
+tree = 0
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [4, 0.05] }]
+icon = "artifactability_havocdemonhunter_anguishofthedeceiver"
+name = { en = "Chaos Theory", de = "Chaostheorie", fr = "Théorie du chaos", es = "Teoría del caos", pt = "Teoria do Caos", ru = "Теория хаоса", pl = "Teoria chaosu", tr = "Kaos Teorisi", it = "Teoria del caos", ja = "カオス・セオリー", zh = "混乱理论", ko = "혼돈 이론" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "hv_blind_fury"
+tree = 0
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "ability_demonhunter_eyebeam"
+name = { en = "Blind Fury", de = "Blinder Zorn", fr = "Fureur aveugle", es = "Furia ciega", pt = "Fúria Cega", ru = "Слепая ярость", pl = "Ślepa furia", tr = "Kör Öfke", it = "Furia cieca", ja = "ブラインド・フューリー", zh = "盲目之怒", ko = "맹목적인 분노" }
+text = { en = "Eye Beam's and Fel Rush's cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Augenstrahl und Teufelsansturm sind {v}% kürzer.", fr = "Les délais de récupération de Rayon oculaire et de Ruée gangrenée sont réduits de {v}%.", es = "Los tiempos de reutilización de Rayo ocular y Embestida vil son un {v}% más cortos.", pt = "Os tempos de recarga de Raio Ocular e Investida Vil são {v}% menores.", ru = "Время восстановления Луча глаз и Рывка Скверны сокращено на {v}%.", pl = "Czasy odnowienia Promienia oka i Pędu Zła są krótsze o {v}%.", tr = "Göz Işını ve Fel Atılışı bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Raggio oculare e Carica vile sono più brevi del {v}%.", ja = "アイ・ビームとフェル・ラッシュのクールダウンが{v}%短くなります。", zh = "眼棱和邪能冲撞的冷却时间缩短{v}%。", ko = "안광과 지옥 돌진의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["eye_beam", "fel_rush"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "hv_cycle_of_hatred"
+tree = 0
+row = 3
+col = 2
+ranks = 3
+req = "hv_havoc"
+effects = []
+icon = "ability_demonhunter_bloodlet"
+name = { en = "Cycle of Hatred", de = "Kreislauf des Hasses", fr = "Cycle de haine", es = "Ciclo de odio", pt = "Ciclo de Ódio", ru = "Цикл ненависти", pl = "Cykl nienawiści", tr = "Nefret Döngüsü", it = "Ciclo dell'odio", ja = "サイクル・オブ・ヘイトレッド", zh = "憎恨循环", ko = "증오의 순환" }
+text = { en = "Each Chaos Strike has a {v}% chance of a free Blade Dance.", de = "Jeder Chaosstoß hat eine Chance von {v}% auf einen kostenlosen Klingentanz.", fr = "Chaque Frappe du chaos a {v}% de chances de déclencher une Danse des lames gratuite.", es = "Cada Golpe del caos tiene un {v}% de probabilidad de lanzar una Danza de espadas gratuita.", pt = "Cada Golpe do Caos tem {v}% de chance de uma Dança das Lâminas gratuita.", ru = "Каждый Удар хаоса с шансом {v}% вызывает бесплатный Танец клинков.", pl = "Każdy Cios chaosu ma {v}% szansy na darmowy Taniec ostrzy.", tr = "Her Kaos Darbesi {v}% ihtimalle bedava bir Bıçak Dansı getirir.", it = "Ogni Colpo del caos ha il {v}% di probabilità di una Danza delle lame gratuita.", ja = "カオス・ストライクのたびに{v}%の確率で無料のブレード・ダンスが発動します。", zh = "每次混乱打击有{v}%的几率触发一次免费的刃舞。", ko = "혼돈의 일격마다 {v}% 확률로 칼춤이 무료로 발동합니다." }
+menu_v = 0.06
+plays = [
+    { v = 0.06, play = { cast_cast = { keys = ["chaos_strike"], cast = "blade_dance", gap = 1.0 } } },
+]
+
+[[talent]]
+key = "hv_first_blood"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "blade_dance" }]
+icon = "ability_demonhunter_bladedance"
+name = { en = "First Blood", de = "Erstes Blut", fr = "Premier sang", es = "Primera sangre", pt = "Primeiro Sangue", ru = "Первая кровь", pl = "Pierwsza krew", tr = "İlk Kan", it = "Primo sangue", ja = "ファーストブラッド", zh = "第一滴血", ko = "첫 피" }
+text = { en = "Milestone. You start every run with Blade Dance, and it covers {v}% more ground.", de = "Meilenstein. Du beginnst jeden Lauf mit Klingentanz, und er deckt {v}% mehr Fläche ab.", fr = "Jalon. Tu commences chaque partie avec Danse des lames, et elle couvre {v}% de terrain en plus.", es = "Hito. Empiezas cada partida con Danza de espadas, y cubre un {v}% más de terreno.", pt = "Marco. Você começa cada partida com Dança das Lâminas, e ela cobre {v}% mais terreno.", ru = "Веха. Ты начинаешь каждый забег с Танца клинков, и он покрывает на {v}% больше земли.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Tańcem ostrzy, a on pokrywa o {v}% więcej terenu.", tr = "Dönüm noktası. Her oyuna Bıçak Dansı ile başlarsın ve {v}% daha fazla alan kaplar.", it = "Traguardo. Inizi ogni partita con Danza delle lame e copre il {v}% di terreno in più.", ja = "【マイルストーン】毎ランをブレード・ダンスを持って始め、その効果範囲が{v}%広がります。", zh = "里程碑：你在每场对局开始时拥有刃舞，其覆盖的范围扩大{v}%。", ko = "이정표. 모든 런을 칼춤을 가지고 시작하며, 칼춤의 범위가 {v}% 넓어집니다." }
+menu_v = 0.3
+mods = [{ area = ["blade_dance"] }]
+mods_v = 0.3
+
+[[talent]]
+key = "hv_demonic_appetite"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "ability_demonhunter_felblade"
+name = { en = "Demonic Appetite", de = "Dämonischer Appetit", fr = "Appétit démoniaque", es = "Apetito demoníaco", pt = "Apetite Demoníaco", ru = "Демонический аппетит", pl = "Demoniczny apetyt", tr = "Şeytani İştah", it = "Appetito demoniaco", ja = "デモニック・アペタイト", zh = "恶魔食欲", ko = "악마의 식욕" }
+text = { en = "Critical strikes of Demon's Bite and Chaos Strike have a {v}% chance of a free Felblade, at most once every 2 sec.", de = "Kritische Treffer von Dämonenbiss und Chaosstoß haben eine Chance von {v}% auf eine kostenlose Teufelsklinge, höchstens einmal alle 2 Sek.", fr = "Les coups critiques de Morsure du démon et de Frappe du chaos ont {v}% de chances de déclencher une Lame gangrenée gratuite, au plus une fois toutes les 2 s.", es = "Los golpes críticos de Mordedura de demonio y Golpe del caos tienen un {v}% de probabilidad de lanzar una Hoja vil gratuita, como máximo una vez cada 2 s.", pt = "Acertos críticos de Mordida do Demônio e Golpe do Caos têm {v}% de chance de uma Lâmina Vil gratuita, no máximo uma vez a cada 2 s.", ru = "Критические удары Укуса демона и Удара хаоса с шансом {v}% вызывают бесплатный Клинок Скверны, не чаще раза в 2 сек.", pl = "Trafienia krytyczne Ugryzienia demona i Ciosu chaosu mają {v}% szansy na darmowe Ostrze Zła, najwyżej raz na 2 s.", tr = "Şeytan Isırığı ve Kaos Darbesi kritik vuruşları {v}% ihtimalle bedava bir Fel Bıçağı getirir, 2 sn'de en fazla bir kez.", it = "I colpi critici di Morso del demone e Colpo del caos hanno il {v}% di probabilità di una Lama vile gratuita, al massimo una volta ogni 2 s.", ja = "デーモンズ・バイトとカオス・ストライクのクリティカルが{v}%の確率で無料のフェルブレードを発動します（2秒に1回まで）。", zh = "恶魔之咬和混乱打击的暴击有{v}%的几率触发一次免费的邪能之刃，每2秒最多一次。", ko = "악마의 이빨과 혼돈의 일격이 치명타로 적중하면 {v}% 확률로 지옥칼날이 무료로 발동합니다. 2초에 최대 한 번입니다." }
+menu_v = 0.15
+plays = [
+    { v = 0.15, play = { crit_cast = { keys = ["demons_bite", "chaos_strike"], school = 0, cast = "felblade", gap = 2.0 } } },
+]
+
+[[talent]]
+key = "hv_essence_break"
+tree = 0
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "ability_demonhunter_manabreak"
+name = { en = "Essence Break", de = "Essenzbruch", fr = "Rupture d'essence", es = "Ruptura de esencia", pt = "Quebra de Essência", ru = "Разрыв сущности", pl = "Przerwanie esencji", tr = "Öz Kırılması", it = "Rottura dell'essenza", ja = "エッセンス・ブレイク", zh = "精华破碎", ko = "정수 분쇄" }
+text = { en = "Chaos Strike and Blade Dance deal {v}% more damage.", de = "Chaosstoß und Klingentanz verursachen {v}% mehr Schaden.", fr = "Frappe du chaos et Danse des lames infligent {v}% de dégâts en plus.", es = "Golpe del caos y Danza de espadas infligen un {v}% más de daño.", pt = "Golpe do Caos e Dança das Lâminas causam {v}% a mais de dano.", ru = "Удар хаоса и Танец клинков наносят на {v}% больше урона.", pl = "Cios chaosu i Taniec ostrzy zadają o {v}% więcej obrażeń.", tr = "Kaos Darbesi ve Bıçak Dansı {v}% daha fazla hasar verir.", it = "Colpo del caos e Danza delle lame infliggono il {v}% di danni in più.", ja = "カオス・ストライクとブレード・ダンスのダメージが{v}%増加します。", zh = "混乱打击和刃舞造成的伤害提高{v}%。", ko = "혼돈의 일격과 칼춤의 피해가 {v}% 증가합니다." }
+menu_v = 0.12
+mods = [{ damage = ["chaos_strike", "blade_dance"] }]
+mods_v = 0.12
+
+[[talent]]
+key = "hv_inner_demon"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "hv_first_blood"
+effects = []
+icon = "ability_demonhunter_felrush"
+name = { en = "Momentum", de = "Schwung", fr = "Élan", es = "Impulso", pt = "Ímpeto", ru = "Импульс", pl = "Rozpęd", tr = "İvme", it = "Slancio", ja = "モメンタム", zh = "势如破竹", ko = "탄력" }
+text = { en = "Each Blade Dance and Eye Beam has a {v}% chance of a free Fel Rush, at most once every 2 sec.", de = "Jeder Klingentanz und Augenstrahl hat eine Chance von {v}% auf einen kostenlosen Teufelsansturm, höchstens einmal alle 2 Sek.", fr = "Chaque Danse des lames et Rayon occulaire a {v}% de chances de déclencher gratuitement une Ruée gangrenée, au plus une fois toutes les 2 s.", es = "Cada Danza de cuchillas y Rayo ocular tiene un {v}% de probabilidad de lanzar gratis una Carga vil, como máximo una vez cada 2 s.", pt = "Cada Dança das Lâminas e Raio Ocular tem {v}% de chance de lançar uma Investida Vil de graça, no máximo uma vez a cada 2 s.", ru = "Каждый Танец клинков и Луч глаз с шансом {v}% бесплатно вызывают Рывок скверны, не чаще одного раза в 2 сек.", pl = "Każdy Taniec ostrzy i Promień oka ma {v}% szansy na darmowy Pęd Zła, najwyżej raz na 2 s.", tr = "Her Bıçak Dansı ve Göz Işını {v}% ihtimalle bedava bir Fel Atılışı getirir, 2 sn'de en fazla bir kez.", it = "Ogni Danza delle lame e Raggio oculare ha il {v}% di probabilità di una Carica vile gratuita, al massimo una volta ogni 2 s.", ja = "ブレード・ダンスとアイ・ビームのたびに{v}%の確率で無料のフェル・ラッシュが発動します（2秒に1回まで）。", zh = "每次刃舞和眼棱有{v}%的几率触发一次免费的邪能冲撞，每2秒最多一次。", ko = "칼춤과 안광마다 {v}% 확률로 지옥 돌진이 무료로 발동합니다. 2초에 최대 한 번입니다." }
+menu_v = 0.15
+plays = [
+    { v = 0.15, play = { cast_cast = { keys = ["blade_dance", "eye_beam"], cast = "fel_rush", gap = 2.0 } } },
+]
+
+[[talent]]
+key = "hv_fel_barrage"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "eye_beam" }]
+icon = "ability_demonhunter_eyeofleotheras"
+name = { en = "Fel Barrage", de = "Teufelsfeuer", fr = "Barrage gangrené", es = "Descarga vil", pt = "Barragem Vil", ru = "Шквал Скверны", pl = "Nawałnica Zła", tr = "Fel Barajı", it = "Sbarramento vile", ja = "フェル・バラージ", zh = "邪能弹幕", ko = "지옥 탄막" }
+text = { en = "Capstone. You start every run with Eye Beam, and every {v} sec it fires once more of itself.", de = "Schlussstein. Du beginnst jeden Lauf mit Augenstrahl, und alle {v} Sek. feuert er von selbst ein weiteres Mal.", fr = "Clé de voûte. Tu commences chaque partie avec Rayon oculaire, et toutes les {v} s il tire de nouveau de lui-même.", es = "Piedra angular. Empiezas cada partida con Rayo ocular, y cada {v} s dispara una vez más por sí solo.", pt = "Ápice. Você começa cada partida com Raio Ocular, e a cada {v} s ele dispara mais uma vez por conta própria.", ru = "Вершина. Ты начинаешь каждый забег с Луча глаз, и каждые {v} сек. он сам стреляет еще раз.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Promieniem oka, a co {v} s strzela on jeszcze raz sam z siebie.", tr = "Zirve. Her oyuna Göz Işını ile başlarsın ve her {v} sn'de kendiliğinden bir kez daha ateşlenir.", it = "Vertice. Inizi ogni partita con Raggio oculare e ogni {v} s spara da solo ancora una volta.", ja = "【キャップストーン】毎ランをアイ・ビームを持って始め、{v}秒ごとにもう1回自動で放たれます。", zh = "终极天赋：你在每场对局开始时拥有眼棱，并且每{v}秒会再自动发射一次。", ko = "궁극 특성. 모든 런을 안광을 가지고 시작하며, {v}초마다 안광이 한 번 더 발사됩니다." }
+menu_v = 6
+plays = [
+    { v = 6.0, play = { every = "eye_beam" } },
+]
+
+# --- Vengeance: souls, sigils and a demon's hide
+
+[[talent]]
+key = "vg_thick_skin"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [2, 0.03] }]
+icon = "ability_demonhunter_spectank"
+name = { en = "Thick Skin", de = "Dicke Haut", fr = "Peau épaisse", es = "Piel gruesa", pt = "Pele Grossa", ru = "Толстая кожа", pl = "Gruba skóra", tr = "Kalın Deri", it = "Pelle spessa", ja = "シック・スキン", zh = "皮糙肉厚", ko = "두꺼운 피부" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "vg_demonic_wards"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "ability_demonhunter_empowerwards"
+name = { en = "Demonic Wards", de = "Dämonische Schutzzauber", fr = "Protections démoniaques", es = "Protecciones demoníacas", pt = "Proteções Demoníacas", ru = "Демонические обереги", pl = "Demoniczne osłony", tr = "Şeytani Koruyucular", it = "Protezioni demoniache", ja = "デモニック・ウォード", zh = "恶魔守护", ko = "악마의 수호" }
+text = { en = "Reduces the damage you take by {v}%.", de = "Verringert den erlittenen Schaden um {v}%.", fr = "Réduit les dégâts que vous subissez de {v}%.", es = "Reduce el daño que recibes un {v}%.", pt = "Reduz o dano que você sofre em {v}%.", ru = "Снижает получаемый вами урон на {v}%.", pl = "Zmniejsza otrzymywane obrażenia o {v}%.", tr = "Aldığın hasarı {v}% azaltır.", it = "Riduce i danni che subisci del {v}%.", ja = "受けるダメージが{v}%減少します。", zh = "使你受到的伤害降低{v}%。", ko = "받는 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "vg_agonizing_flames"
+tree = 1
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "ability_demonhunter_sigilofinquisition"
+name = { en = "Agonizing Flames", de = "Qualvolle Flammen", fr = "Flammes agonisantes", es = "Llamas agonizantes", pt = "Chamas Agonizantes", ru = "Мучительное пламя", pl = "Dręczące płomienie", tr = "Azap Veren Alevler", it = "Fiamme agonizzanti", ja = "アゴナイジング・フレイム", zh = "极痛之火", ko = "고통스러운 불길" }
+text = { en = "Sigil of Flame and Immolation Aura cover {v}% more ground.", de = "Siegel der Flamme und Feuerbrandaura decken {v}% mehr Fläche ab.", fr = "Sceau de flamme et Aura d'immolation couvrent {v}% de terrain en plus.", es = "Sigilo de llama y Aura de inmolación cubren un {v}% más de terreno.", pt = "Sigilo de Chamas e Aura de Imolação cobrem {v}% mais terreno.", ru = "Печать пламени и Аура самопожертвования покрывают на {v}% больше земли.", pl = "Symbol płomienia i Aura immolacji pokrywają o {v}% więcej terenu.", tr = "Alev Sembolü ve Yakma Auraı {v}% daha fazla alan kaplar.", it = "Sigillo di fiamma e Aura d'immolazione coprono il {v}% di terreno in più.", ja = "シジル・オブ・フレイムとイモレーション・オーラの効果範囲が{v}%広がります。", zh = "烈焰咒符和献祭光环覆盖的范围扩大{v}%。", ko = "불꽃의 인장과 제물의 오라의 범위가 {v}% 넓어집니다." }
+menu_v = 0.08
+mods = [{ area = ["sigil_of_flame", "immolation_aura"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "vg_feast_of_souls"
+tree = 1
+row = 1
+col = 2
+ranks = 3
+effects = [{ stat = [33, 0.02] }]
+icon = "ability_demonhunter_shatteredsouls"
+name = { en = "Feast of Souls", de = "Seelenfest", fr = "Festin des âmes", es = "Festín de almas", pt = "Banquete de Almas", ru = "Пир душ", pl = "Uczta dusz", tr = "Ruhlar Şöleni", it = "Banchetto di anime", ja = "フィースト・オブ・ソウル", zh = "灵魂盛宴", ko = "영혼의 만찬" }
+text = { en = "Increases your chance to dodge an enemy's blow by {v}%.", de = "Erhöht deine Chance, dem Schlag eines Feindes auszuweichen, um {v}%.", fr = "Augmente de {v}% tes chances d'esquiver le coup d'un ennemi.", es = "Aumenta un {v}% tu probabilidad de esquivar el golpe de un enemigo.", pt = "Aumenta em {v}% sua chance de esquivar do golpe de um inimigo.", ru = "Повышает на {v}% твой шанс уклониться от удара врага.", pl = "Zwiększa szansę na unik przed ciosem przeciwnika o {v}%.", tr = "Düşman darbesinden kaçınma şansını {v}% artırır.", it = "Aumenta del {v}% la tua probabilità di schivare il colpo di un nemico.", ja = "敵の攻撃を回避する確率が{v}%上昇します。", zh = "使你躲闪敌人攻击的几率提高{v}%。", ko = "적의 공격을 회피할 확률이 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "vg_soul_rending"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = [{ stat = [2, 0.05] }]
+icon = "ability_demonhunter_soulcleave2"
+name = { en = "Soul Rending", de = "Seelenriss", fr = "Déchirement d'âme", es = "Desgarro de alma", pt = "Dilaceração de Alma", ru = "Разрыв души", pl = "Rozrywanie dusz", tr = "Ruh Parçalama", it = "Lacerazione dell'anima", ja = "ソウル・レンディング", zh = "灵魂撕裂", ko = "영혼 분열" }
+text = { en = "Milestone. Increases your maximum health by 5% and reduces the damage you take by {v}% while an enemy is within 7 yards; your level-up hands may deal Spirit Bomb and Demon Spikes.", de = "Meilenstein. Erhöht deine maximale Gesundheit um 5% und verringert den erlittenen Schaden um {v}%, solange ein Feind im Umkreis von 7 Metern ist; deine Stufenaufstiege können Geistbombe und Dämonenstachel bieten.", fr = "Jalon. Augmente ta santé maximale de 5% et réduit les dégâts subis de {v}% tant qu'un ennemi se trouve à moins de 7 mètres ; tes choix de niveau supérieur peuvent proposer Bombe spirituelle et Pointes démoniaques.", es = "Hito. Aumenta tu salud máxima un 5% y reduce el daño que recibes un {v}% mientras haya un enemigo a menos de 7 metros; tus ofertas al subir de nivel pueden incluir Bomba espiritual y Púas de demonio.", pt = "Marco. Aumenta sua vida máxima em 5% e reduz o dano sofrido em {v}% enquanto houver um inimigo a até 7 metros; suas ofertas ao subir de nível podem incluir Bomba Espiritual e Espetos Demoníacos.", ru = "Веха. Повышает максимум здоровья на 5% и снижает получаемый урон на {v}%, пока враг в пределах 7 метров; при повышении уровня тебе могут выпасть Бомба духа и Демонические шипы.", pl = "Kamień milowy. Zwiększa maksymalne zdrowie o 5% i zmniejsza otrzymywane obrażenia o {v}%, gdy przeciwnik jest w promieniu 7 m; twoje karty awansu mogą dać Bombę duchową i Demoniczne kolce.", tr = "Dönüm noktası. 7 m içinde düşman varken azami canını 5% artırır ve aldığın hasarı {v}% azaltır; seviye atlama ellerinde Ruh Bombası ve Şeytan Dikenleri çıkabilir.", it = "Traguardo. Aumenta la tua salute massima del 5% e riduce i danni che subisci del {v}% mentre un nemico è entro 7 m; le carte che ricevi a ogni livello possono offrire Bomba spirituale e Aculei demoniaci.", ja = "【マイルストーン】最大体力が5%増加し、7ヤード以内に敵がいる間、受けるダメージが{v}%減少します。レベルアップの手札にスピリット・ボムとデーモン・スパイクが出るようになります。", zh = "里程碑：使你的最大生命值提高5%，7码内有敌人时，受到的伤害降低{v}%；升级时提供的卡牌中可能出现幽魂炸弹和恶魔尖刺。", ko = "이정표. 최대 생명력이 5% 증가하고, 7미터 안에 적이 있는 동안 받는 피해가 {v}% 감소합니다. 레벨 업 카드에 영혼 폭탄과 악마 쐐기가 나올 수 있습니다." }
+menu_v = 0.08
+mods = [{ bulwark = 7.0 }]
+mods_v = 0.08
+
+[[talent]]
+key = "vg_feed_the_demon"
+tree = 1
+row = 2
+col = 2
+ranks = 5
+effects = []
+icon = "ability_demonhunter_soulcleave3"
+name = { en = "Feed the Demon", de = "Füttert den Dämon", fr = "Nourrir le démon", es = "Alimentar al demonio", pt = "Alimentar o Demônio", ru = "Накорми демона", pl = "Nakarm demona", tr = "Şeytanı Besle", it = "Nutri il demone", ja = "フィード・ザ・デーモン", zh = "喂养恶魔", ko = "악마 먹이기" }
+text = { en = "Each blow at you has a {v}% chance of a free Soul Cleave.", de = "Jeder Schlag gegen dich hat eine Chance von {v}% auf einen kostenlosen Seelenspalter.", fr = "Chaque coup porté contre toi a {v}% de chances de déclencher un Fendre l'âme gratuit.", es = "Cada golpe que recibes tiene un {v}% de probabilidad de lanzar una Hendedura de alma gratuita.", pt = "Cada golpe contra você tem {v}% de chance de um Fender Alma gratuito.", ru = "Каждый удар по тебе с шансом {v}% вызывает бесплатный Раскол души.", pl = "Każdy cios w ciebie ma {v}% szansy na darmowe Rozłupanie duszy.", tr = "Sana yönelen her darbe {v}% ihtimalle bedava bir Ruh Yarması getirir.", it = "Ogni colpo diretto a te ha il {v}% di probabilità di un Fendente d'anima gratuito.", ja = "攻撃を受けるたびに{v}%の確率で無料のソウル・クリーヴが発動します。", zh = "每次对你的攻击都有{v}%的几率触发一次免费的灵魂裂劈。", ko = "당신을 향한 공격마다 {v}% 확률로 영혼 베어내기가 무료로 발동합니다." }
+menu_v = 0.03
+plays = [
+    { v = 0.03, play = { struck = "soul_cleave" } },
+]
+
+[[talent]]
+key = "vg_fallout"
+tree = 1
+row = 3
+col = 0
+ranks = 5
+req = "vg_soul_rending"
+effects = []
+icon = "ability_demonhunter_soulcleave4"
+name = { en = "Fallout", de = "Fallout", fr = "Retombées", es = "Secuelas", pt = "Rescaldo", ru = "Последствия", pl = "Skutki uboczne", tr = "Serpinti", it = "Ricaduta", ja = "フォールアウト", zh = "余波", ko = "낙진" }
+text = { en = "Soul Cleave and Spirit Bomb deal {v}% more damage.", de = "Seelenspalter und Geistbombe verursachen {v}% mehr Schaden.", fr = "Fendre l'âme et Bombe spirituelle infligent {v}% de dégâts en plus.", es = "Hendedura de alma y Bomba espiritual infligen un {v}% más de daño.", pt = "Fender Alma e Bomba Espiritual causam {v}% a mais de dano.", ru = "Раскол души и Бомба духа наносят на {v}% больше урона.", pl = "Rozłupanie duszy i Bomba duchowa zadają o {v}% więcej obrażeń.", tr = "Ruh Yarması ve Ruh Bombası {v}% daha fazla hasar verir.", it = "Fendente d'anima e Bomba spirituale infliggono il {v}% di danni in più.", ja = "ソウル・クリーヴとスピリット・ボムのダメージが{v}%増加します。", zh = "灵魂裂劈和幽魂炸弹造成的伤害提高{v}%。", ko = "영혼 베어내기와 영혼 폭탄의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["soul_cleave", "spirit_bomb"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "vg_painbringer"
+tree = 1
+row = 3
+col = 2
+ranks = 5
+effects = [{ stat = [24, 0.002] }]
+icon = "artifactability_vengeancedemonhunter_painbringer"
+name = { en = "Painbringer", de = "Schmerzbringer", fr = "Porte-douleur", es = "Portador de dolor", pt = "Trazedor de Dor", ru = "Несущий боль", pl = "Zadający ból", tr = "Acı Getiren", it = "Portatore di dolore", ja = "ペインブリンガー", zh = "痛苦使者", ko = "고통인도자" }
+text = { en = "You regenerate {v}% of your maximum health every second.", de = "Du regenerierst jede Sekunde {v}% deiner maximalen Gesundheit.", fr = "Tu régénères {v}% de ta santé maximale chaque seconde.", es = "Regeneras un {v}% de tu salud máxima cada segundo.", pt = "Você regenera {v}% da sua vida máxima a cada segundo.", ru = "Ты восстанавливаешь {v}% максимума здоровья каждую секунду.", pl = "Regenerujesz {v}% maksymalnego zdrowia co sekundę.", tr = "Her saniye azami canının {v}%'si kadar yenilenirsin.", it = "Rigeneri il {v}% della tua salute massima ogni secondo.", ja = "毎秒、最大体力の{v}%を回復します。", zh = "你每秒恢复相当于最大生命值{v}%的生命值。", ko = "매초 최대 생명력의 {v}%를 재생합니다." }
+menu_v = 0.002
+
+[[talent]]
+key = "vg_sigil_mastery"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "sigil_of_flame" }]
+icon = "ability_demonhunter_concentratedsigils"
+name = { en = "Concentrated Sigils", de = "Konzentrierte Siegel", fr = "Sceaux concentrés", es = "Sigilos concentrados", pt = "Sigilos Concentrados", ru = "Концентрированные печати", pl = "Skoncentrowane symbole", tr = "Yoğun Semboller", it = "Sigilli concentrati", ja = "コンセントレイテッド・シジル", zh = "集中咒符", ko = "집중된 인장" }
+text = { en = "Milestone. You start every run with Sigil of Flame, and your sigils burn {v}% longer.", de = "Meilenstein. Du beginnst jeden Lauf mit Siegel der Flamme, und deine Siegel brennen {v}% länger.", fr = "Jalon. Tu commences chaque partie avec Sceau de flamme, et tes sceaux brûlent {v}% plus longtemps.", es = "Hito. Empiezas cada partida con Sigilo de llama, y tus sigilos arden un {v}% más.", pt = "Marco. Você começa cada partida com Sigilo de Chamas, e seus sigilos queimam {v}% mais.", ru = "Веха. Ты начинаешь каждый забег с Печати пламени, и твои печати горят на {v}% дольше.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Symbolem płomienia, a twoje symbole płoną o {v}% dłużej.", tr = "Dönüm noktası. Her oyuna Alev Sembolü ile başlarsın ve sembollerin {v}% daha uzun yanar.", it = "Traguardo. Inizi ogni partita con Sigillo di fiamma e i tuoi sigilli bruciano il {v}% più a lungo.", ja = "【マイルストーン】毎ランをシジル・オブ・フレイムを持って始め、シジルの燃焼時間が{v}%延びます。", zh = "里程碑：你在每场对局开始时拥有烈焰咒符，你的咒符燃烧时间延长{v}%。", ko = "이정표. 모든 런을 불꽃의 인장을 가지고 시작하며, 인장이 {v}% 더 오래 불탑니다." }
+menu_v = 0.5
+mods = [{ duration = ["sigil_of_flame", "sigil_of_misery"] }]
+mods_v = 0.5
+
+[[talent]]
+key = "vg_burning_alive"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "ability_demonhunter_fierybrand"
+name = { en = "Burning Alive", de = "Lebendig verbrannt", fr = "Brûlé vif", es = "Arder vivo", pt = "Queimado Vivo", ru = "Сожжение заживо", pl = "Żywcem w ogniu", tr = "Diri Diri Yanma", it = "Bruciato vivo", ja = "バーニング・アライヴ", zh = "活体燃烧", ko = "산 채로 불태우기" }
+text = { en = "Fiery Brand and Sigil of Flame burn their targets for {v}% of each hit over 4 sec.", de = "Flammendes Brandmal und Siegel der Flamme verbrennen ihre Ziele über 4 Sek. um {v}% jedes Treffers.", fr = "Marque de feu et Sceau de flamme brûlent leurs cibles pour {v}% de chaque coup en 4 s.", es = "Marca ígnea y Sigilo de llama queman a sus objetivos por un {v}% de cada golpe durante 4 s.", pt = "Marca Ígnea e Sigilo de Chamas queimam seus alvos com {v}% de cada golpe em 4 s.", ru = "Огненное клеймо и Печать пламени жгут цели на {v}% от каждого удара в течение 4 сек.", pl = "Ogniste piętno i Symbol płomienia palą swoje cele za {v}% każdego trafienia przez 4 s.", tr = "Ateşli Damga ve Alev Sembolü hedeflerini 4 sn içinde her vuruşun {v}%'si kadar yakar.", it = "Marchio infuocato e Sigillo di fiamma bruciano i bersagli per il {v}% di ogni colpo in 4 s.", ja = "フィアリー・ブランドとシジル・オブ・フレイムが対象を燃やし、4秒かけて各命中の{v}%のダメージを与えます。", zh = "烈火烙印和烈焰咒符会灼烧目标，在4秒内造成相当于每次攻击{v}%的伤害。", ko = "불타는 낙인과 불꽃의 인장이 대상을 불태워 4초에 걸쳐 각 피해의 {v}%를 줍니다." }
+menu_v = 0.2
+plays = [
+    { v = 0.2, play = { hit_dot = { keys = ["fiery_brand", "sigil_of_flame"], secs = 4.0 } } },
+]
+
+[[talent]]
+key = "vg_void_reaver"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [14, 0.004] }]
+icon = "ability_demonhunter_reversemagic"
+name = { en = "Void Reaver", de = "Leerenschnitter", fr = "Saccageur du Vide", es = "Atracador del vacío", pt = "Aniquilador do Vazio", ru = "Разоритель Бездны", pl = "Rozbójnik Pustki", tr = "Boşluk Yağmacısı", it = "Devastatore del Vuoto", ja = "ヴォイド・リーヴァー", zh = "虚空掠夺者", ko = "공허 약탈자" }
+text = { en = "{v}% of the damage you deal heals you.", de = "{v}% des Schadens, den du verursachst, heilt dich.", fr = "{v}% des dégâts que tu infliges te soignent.", es = "Un {v}% del daño que infliges te cura.", pt = "{v}% do dano que você causa cura você.", ru = "{v}% нанесенного тобой урона лечит тебя.", pl = "{v}% zadanych obrażeń leczy cię.", tr = "Verdiğin hasarın {v}%'si seni iyileştirir.", it = "Il {v}% dei danni che infliggi ti cura.", ja = "与えたダメージの{v}%だけ体力を回復します。", zh = "你造成的伤害的{v}%会治疗你。", ko = "주는 피해의 {v}%만큼 생명력을 회복합니다." }
+menu_v = 0.004
+
+[[talent]]
+key = "vg_last_resort"
+tree = 1
+row = 5
+col = 2
+ranks = 1
+req = "vg_sigil_mastery"
+effects = []
+icon = "ability_demonhunter_metamorphasistank"
+name = { en = "Last Resort", de = "Letzter Ausweg", fr = "Dernier recours", es = "Último recurso", pt = "Último Recurso", ru = "Последнее средство", pl = "Ostatnia deska ratunku", tr = "Son Çare", it = "Ultima risorsa", ja = "ラスト・リゾート", zh = "最后手段", ko = "최후의 수단" }
+text = { en = "A blow that would kill you leaves you at 35% health instead and turns you into a demon: 2 sec untouchable, then Metamorphosis. At most once every {v} sec.", de = "Ein tödlicher Schlag lässt dich stattdessen mit 35% Gesundheit zurück und verwandelt dich in einen Dämon: 2 Sek. unberührbar, dann Metamorphose. Höchstens einmal alle {v} Sek.", fr = "Un coup qui te tuerait te laisse à 35% de santé et te transforme en démon : 2 s intouchable, puis Métamorphose. Au plus une fois toutes les {v} s.", es = "Un golpe mortal te deja con un 35% de salud y te convierte en demonio: 2 s intocable, luego Metamorfosis. Como máximo una vez cada {v} s.", pt = "Um golpe que mataria você o deixa com 35% de vida e o transforma em demônio: 2 s intocável, depois Metamorfose. No máximo uma vez a cada {v} s.", ru = "Удар, который убил бы тебя, оставляет 35% здоровья и превращает тебя в демона: 2 сек. неуязвимости, затем Метаморфоза. Не чаще раза в {v} сек.", pl = "Cios, który by cię zabił, zostawia cię przy 35% zdrowia i zamienia cię w demona: 2 s nietykalności, potem Metamorfoza. Najwyżej raz na {v} s.", tr = "Seni öldürecek bir darbe seni 35% canla bırakır ve seni bir şeytana dönüştürür: 2 sn dokunulmaz, ardından Başkalaşım. Her {v} sn'de en fazla bir kez.", it = "Un colpo che ti ucciderebbe ti lascia invece al 35% di salute e ti trasforma in un demone: 2 s intoccabile, poi Metamorfosi. Al massimo una volta ogni {v} s.", ja = "致命的な一撃を受けると代わりに体力35%で踏みとどまり、デーモンに変身します：2秒間攻撃を受けなくなり、その後メタモルフォーシス。{v}秒に1回まで。", zh = "致命的一击会使你保留35%的生命值，并将你变为恶魔：2秒内无法被攻击，随后进入恶魔变形。每{v}秒最多一次。", ko = "치명적인 일격을 받으면 대신 생명력 35%로 남고 악마로 변합니다: 2초 동안 공격받지 않은 뒤 탈태합니다. {v}초에 최대 한 번입니다." }
+menu_v = 90
+plays = [
+    { v = 90.0, play = { save = { health = 0.35, immune = 2.0, shield = 0.0, cast = ["dh_metamorphosis"] } } },
+]
+
+[[talent]]
+key = "vg_fel_devastation"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "fel_devastation" }]
+icon = "ability_demonhunter_feldevastation"
+name = { en = "Fel Devastation", de = "Teufelsverwüstung", fr = "Dévastation gangrenée", es = "Devastación vil", pt = "Devastação Vil", ru = "Опустошение Скверны", pl = "Spustoszenie Zła", tr = "Fel Yıkımı", it = "Devastazione vile", ja = "フェル・デヴァステーション", zh = "邪能毁灭", ko = "지옥 황폐" }
+text = { en = "Capstone. You start every run with Fel Devastation, and every {v} sec it breathes once more of itself.", de = "Schlussstein. Du beginnst jeden Lauf mit Teufelsverwüstung, und alle {v} Sek. speit sie von selbst ein weiteres Mal.", fr = "Clé de voûte. Tu commences chaque partie avec Dévastation gangrenée, et toutes les {v} s elle souffle de nouveau d'elle-même.", es = "Piedra angular. Empiezas cada partida con Devastación vil, y cada {v} s exhala una vez más por sí sola.", pt = "Ápice. Você começa cada partida com Devastação Vil, e a cada {v} s ela sopra mais uma vez por conta própria.", ru = "Вершина. Ты начинаешь каждый забег с Опустошения Скверны, и каждые {v} сек. оно само извергается еще раз.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz ze Spustoszeniem Zła, a co {v} s zionie ono jeszcze raz samo z siebie.", tr = "Zirve. Her oyuna Fel Yıkımı ile başlarsın ve her {v} sn'de kendiliğinden bir kez daha nefes verir.", it = "Vertice. Inizi ogni partita con Devastazione vile e ogni {v} s soffia da sola ancora una volta.", ja = "【キャップストーン】毎ランをフェル・デヴァステーションを持って始め、{v}秒ごとにもう1回自動で吐き出されます。", zh = "终极天赋：你在每场对局开始时拥有邪能毁灭，并且每{v}秒会再自动喷吐一次。", ko = "궁극 특성. 모든 런을 지옥 황폐를 가지고 시작하며, {v}초마다 지옥 황폐를 한 번 더 내뿜습니다." }
+menu_v = 5
+plays = [
+    { v = 5.0, play = { every = "fel_devastation" } },
+]
+
+# --- Devourer: mid-range shadow spells and soul fragments
+
+[[talent]]
+key = "dev_void_hunger"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "ability_demonhunter_shatteredsouls"
+name = { en = "Void Hunger", de = "Leerenhunger", fr = "Faim du Vide", es = "Hambre del Vacío", pt = "Fome do Vazio", ru = "Голод Бездны", it = "Fame del Vuoto", pl = "Głód Pustki", tr = "Hiçlik Açlığı", ja = "ヴォイド・ハンガー", zh = "虚空饥渴", ko = "공허의 굶주림" }
+text = { en = "Consume deals {v}% more damage.", de = "Verzehren verursacht {v}% mehr Schaden.", fr = "Dévorer inflige {v}% de dégâts supplémentaires.", es = "Consumir inflige un {v}% más de daño.", pt = "Consumir causa {v}% a mais de dano.", ru = "Урон способности «Поглощение» увеличивается на {v}%.", it = "Consunzione infligge il {v}% di danni in più.", pl = "Pożarcie zadaje o {v}% więcej obrażeń.", tr = "Tüket %{v} daha fazla hasar verir.", ja = "コンシュームのダメージが{v}%増加します。", zh = "吞噬造成的伤害提高{v}%。", ko = "집어삼키기의 피해가 {v}% 증가합니다." }
+menu_v = 0.10
+mods = [{ damage = ["consume"] }]
+mods_v = 0.10
+
+[[talent]]
+key = "dev_quickening"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "ability_demonhunter_empowerwards"
+name = { en = "Quickening", de = "Beschleunigung", fr = "Accélération", es = "Aceleración", pt = "Aceleração", ru = "Ускорение", it = "Accelerazione", pl = "Przyspieszenie", tr = "Hızlanma", ja = "クイックニング", zh = "迅疾", ko = "가속화" }
+text = { en = "Consume recharges {v}% faster.", de = "Verzehren lädt sich {v}% schneller wieder auf.", fr = "Réduit de {v}% le temps de recharge de Dévorer.", es = "Reduce un {v}% el tiempo de reutilización de Consumir.", pt = "Reduz em {v}% a recarga de Consumir.", ru = "Время восстановления способности «Поглощение» сокращается на {v}%.", it = "Riduce del {v}% il tempo di recupero di Consunzione.", pl = "Skraca czas odnowienia zdolności Pożarcie o {v}%.", tr = "Tüket bekleme süresini %{v} azaltır.", ja = "コンシュームのリチャージが{v}%速くなります。", zh = "吞噬的充能速度加快{v}%。", ko = "집어삼키기가 {v}% 더 빨리 충전됩니다." }
+menu_v = 0.06
+mods = [{ cooldown = ["consume"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "dev_dark_energy"
+tree = 2
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "ability_demonhunter_soulcleave2"
+name = { en = "Dark Energy", de = "Dunkle Energie", fr = "Énergie sombre", es = "Energía oscura", pt = "Energia Sombria", ru = "Тёмная энергия", it = "Energia Oscura", pl = "Ciemna energia", tr = "Karanlık Enerji", ja = "ダーク・エナジー", zh = "黑暗能量", ko = "암흑 에너지" }
+text = { en = "Increases your shadow damage by {v}%.", de = "Erhöht deinen Schattenschaden um {v}%.", fr = "Augmente vos dégâts d’ombre de {v}%.", es = "Aumenta un {v}% tu daño de las Sombras.", pt = "Aumenta em {v}% seu dano de Sombra.", ru = "Урон от тёмной магии увеличивается на {v}%.", it = "Aumenta del {v}% i danni da ombra.", pl = "Zwiększa obrażenia od cienia o {v}%.", tr = "Gölge hasarını %{v} artırır.", ja = "暗黒ダメージが{v}%増加します。", zh = "使你的暗影伤害提高{v}%。", ko = "암흑 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = [{ school = 32 }]
+mods_v = 0.04
+
+[[talent]]
+key = "dev_void_stride"
+tree = 2
+row = 1
+col = 2
+ranks = 3
+effects = [{ stat = [7, 0.02] }]
+icon = "ability_demonhunter_felrush"
+name = { en = "Void Stride", de = "Leerenschritt", fr = "Foulée du Vide", es = "Zancada del Vacío", pt = "Passo do Vazio", ru = "Шаг Бездны", it = "Passo del Vuoto", pl = "Krok Pustki", tr = "Hiçlik Adımı", ja = "ヴォイド・ストライド", zh = "虚空步伐", ko = "공허 걸음" }
+text = { en = "Increases your movement speed by {v}%.", de = "Erhöht dein Bewegungstempo um {v}%.", fr = "Augmente ta vitesse de déplacement de {v}%.", es = "Aumenta tu velocidad de movimiento un {v}%.", pt = "Aumenta sua velocidade de movimento em {v}%.", ru = "Увеличивает твою скорость движения на {v}%.", pl = "Zwiększa szybkość ruchu o {v}%.", tr = "Hareket hızını {v}% artırır.", it = "Aumenta la tua velocità di movimento del {v}%.", ja = "移動速度が{v}%上昇します。", zh = "使你的移动速度提高{v}%。", ko = "이동 속도가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "dev_soul_harvest"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_instead = "consume" }, { start_with = "void_ray" }]
+icon = "inv_12_dh_void_ability_consume"
+name = { en = "Soul Harvest", de = "Seelenernte", fr = "Moisson des âmes", es = "Cosecha de almas", pt = "Colheita de Almas", ru = "Жатва душ", it = "Raccolta di Anime", pl = "Żniwa dusz", tr = "Ruh Hasadı", ja = "ソウル・ハーヴェスト", zh = "灵魂收获", ko = "영혼 수확" }
+text = { en = "Milestone. Consume replaces Demon's Bite as your starting spell. You also start with Void Ray. Level-up offers can include Collapsing Star. Collapsing Star deals {v}% more damage.", de = "Meilenstein. Verzehren ersetzt Dämonenbiss als Startzauber. Du beginnst auch mit Leerenstrahl. Beim Stufenaufstieg kann Kollabierender Stern angeboten werden. Kollabierender Stern verursacht {v}% mehr Schaden.", fr = "Jalon. Dévorer remplace Morsure du démon au départ. Vous commencez aussi avec Rayon du Vide. Étoile en effondrement peut être proposé au passage de niveau. Étoile en effondrement inflige {v}% de dégâts supplémentaires.", es = "Hito. Consumir sustituye a Mordedura de demonio como hechizo inicial. También empiezas con Rayo del Vacío. Estrella colapsante puede aparecer al subir de nivel. Estrella colapsante inflige un {v}% más de daño.", pt = "Marco. Consumir substitui Mordida do Demônio como feitiço inicial. Você também começa com Raio do Vazio. Estrela em Colapso pode aparecer ao subir de nível. Estrela em Colapso causa {v}% a mais de dano.", ru = "Веха. «Поглощение» заменяет «Укус демона» в начале забега. Вы также начинаете с «Луч Бездны». При повышении уровня может выпасть «Коллапс звезды». Урон способности «Коллапс звезды» увеличивается на {v}%.", it = "Traguardo. Consunzione sostituisce Morso del Demone come incantesimo iniziale. Inizi anche con Raggio del Vuoto. Stella Collassante può comparire quando sali di livello. Stella Collassante infligge il {v}% di danni in più.", pl = "Kamień milowy. Pożarcie zastępuje Ugryzienie Demona na początku. Zaczynasz też ze zdolnością Promień Pustki. Przy awansie może pojawić się Zapadająca się Gwiazda. Zapadająca się Gwiazda zadaje o {v}% więcej obrażeń.", tr = "Dönüm noktası. Başlangıç büyün İblis Isırığı yerine Tüket olur. Ayrıca Hiçlik Işını ile başlarsın. Seviye atlayınca Çöken Yıldız sunulabilir. Çöken Yıldız %{v} daha fazla hasar verir.", ja = "【マイルストーン】最初の呪文がデーモンズ・バイトからコンシュームに変わります。さらにヴォイド・レイを持って始めます。レベルアップの選択肢にコラプシング・スターが出るようになります。コラプシング・スターのダメージが{v}%増加します。", zh = "里程碑：吞噬取代恶魔之咬成为你的初始法术。你还会在开始时拥有虚空射线。升级时提供的卡牌中可能出现坍缩之星。坍缩之星造成的伤害提高{v}%。", ko = "이정표. 시작 주문이 악마의 이빨 대신 집어삼키기가 됩니다. 공허 광선도 가지고 시작합니다. 레벨 업 카드에 붕괴하는 별이 나올 수 있습니다. 붕괴하는 별의 피해가 {v}% 증가합니다." }
+menu_v = 0.15
+mods = [{ damage = ["collapsing_star"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "dev_focused_ray"
+tree = 2
+row = 2
+col = 2
+ranks = 5
+effects = []
+icon = "inv_12_dh_void_ability_voidray"
+name = { en = "Focused Ray", de = "Gebündelter Strahl", fr = "Rayon concentré", es = "Rayo enfocado", pt = "Raio Concentrado", ru = "Сфокусированный луч", it = "Raggio Concentrato", pl = "Skupiony promień", tr = "Odaklı Işın", ja = "フォーカスト・レイ", zh = "聚焦射线", ko = "집중 광선" }
+text = { en = "Void Ray deals {v}% more damage.", de = "Leerenstrahl verursacht {v}% mehr Schaden.", fr = "Rayon du Vide inflige {v}% de dégâts supplémentaires.", es = "Rayo del Vacío inflige un {v}% más de daño.", pt = "Raio do Vazio causa {v}% a mais de dano.", ru = "Урон способности «Луч Бездны» увеличивается на {v}%.", it = "Raggio del Vuoto infligge il {v}% di danni in più.", pl = "Promień Pustki zadaje o {v}% więcej obrażeń.", tr = "Hiçlik Işını %{v} daha fazla hasar verir.", ja = "ヴォイド・レイのダメージが{v}%増加します。", zh = "虚空射线造成的伤害提高{v}%。", ko = "공허 광선의 피해가 {v}% 증가합니다." }
+menu_v = 0.09
+mods = [{ damage = ["void_ray"] }]
+mods_v = 0.09
+
+[[talent]]
+key = "dev_event_horizon"
+tree = 2
+row = 3
+col = 0
+ranks = 5
+req = "dev_soul_harvest"
+effects = []
+icon = "inv_12_dh_void_ability_collapsingstar"
+name = { en = "Event Horizon", de = "Ereignishorizont", fr = "Horizon des événements", es = "Horizonte de sucesos", pt = "Horizonte de Eventos", ru = "Горизонт событий", it = "Orizzonte degli Eventi", pl = "Horyzont zdarzeń", tr = "Olay Ufku", ja = "イベント・ホライズン", zh = "事件视界", ko = "사건의 지평선" }
+text = { en = "Increases the area of Collapsing Star by {v}%.", de = "Vergrößert die Fläche von Kollabierender Stern um {v}%.", fr = "Augmente de {v}% la zone de Étoile en effondrement.", es = "Aumenta un {v}% el área de Estrella colapsante.", pt = "Aumenta em {v}% a área de Estrela em Colapso.", ru = "Область действия способности «Коллапс звезды» увеличивается на {v}%.", it = "Aumenta del {v}% l’area di Stella Collassante.", pl = "Zwiększa obszar działania zdolności Zapadająca się Gwiazda o {v}%.", tr = "Çöken Yıldız etki alanını %{v} artırır.", ja = "コラプシング・スターの範囲が{v}%広がります。", zh = "使坍缩之星的范围扩大{v}%。", ko = "붕괴하는 별의 범위가 {v}% 넓어집니다." }
+menu_v = 0.10
+mods = [{ area = ["collapsing_star"] }]
+mods_v = 0.10
+
+[[talent]]
+key = "dev_fleeting_void"
+tree = 2
+row = 3
+col = 2
+ranks = 5
+effects = []
+icon = "ability_demonhunter_vengefulretreat2"
+name = { en = "Fleeting Void", de = "Flüchtige Leere", fr = "Vide fugace", es = "Vacío fugaz", pt = "Vazio Fugaz", ru = "Мимолётная Бездна", it = "Vuoto Fugace", pl = "Ulotna Pustka", tr = "Geçici Hiçlik", ja = "フリーティング・ヴォイド", zh = "转瞬虚空", ko = "덧없는 공허" }
+text = { en = "Void Ray recharges {v}% faster.", de = "Leerenstrahl lädt sich {v}% schneller wieder auf.", fr = "Réduit de {v}% le temps de recharge de Rayon du Vide.", es = "Reduce un {v}% el tiempo de reutilización de Rayo del Vacío.", pt = "Reduz em {v}% a recarga de Raio do Vazio.", ru = "Время восстановления способности «Луч Бездны» сокращается на {v}%.", it = "Riduce del {v}% il tempo di recupero di Raggio del Vuoto.", pl = "Skraca czas odnowienia zdolności Promień Pustki o {v}%.", tr = "Hiçlik Işını bekleme süresini %{v} azaltır.", ja = "ヴォイド・レイのリチャージが{v}%速くなります。", zh = "虚空射线的充能速度加快{v}%。", ko = "공허 광선이 {v}% 더 빨리 충전됩니다." }
+menu_v = 0.05
+mods = [{ cooldown = ["void_ray"] }]
+mods_v = 0.05
+
+[[talent]]
+key = "dev_gravity_well"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "ability_demonhunter_sigilofinquisition"
+name = { en = "Gravity Well", de = "Gravitationsmulde", fr = "Puits de gravité", es = "Pozo gravitatorio", pt = "Poço Gravitacional", ru = "Гравитационный колодец", it = "Pozzo Gravitazionale", pl = "Studnia grawitacyjna", tr = "Yerçekimi Kuyusu", ja = "グラヴィティ・ウェル", zh = "重力井", ko = "중력 우물" }
+text = { en = "Milestone. Collapsing Star deals {v}% more damage.", de = "Meilenstein. Kollabierender Stern verursacht {v}% mehr Schaden.", fr = "Jalon. Étoile en effondrement inflige {v}% de dégâts supplémentaires.", es = "Hito. Estrella colapsante inflige un {v}% más de daño.", pt = "Marco. Estrela em Colapso causa {v}% a mais de dano.", ru = "Веха. Урон способности «Коллапс звезды» увеличивается на {v}%.", it = "Traguardo. Stella Collassante infligge il {v}% di danni in più.", pl = "Kamień milowy. Zapadająca się Gwiazda zadaje o {v}% więcej obrażeń.", tr = "Dönüm noktası. Çöken Yıldız %{v} daha fazla hasar verir.", ja = "【マイルストーン】コラプシング・スターのダメージが{v}%増加します。", zh = "里程碑：坍缩之星造成的伤害提高{v}%。", ko = "이정표. 붕괴하는 별의 피해가 {v}% 증가합니다." }
+menu_v = 0.25
+mods = [{ damage = ["collapsing_star"] }]
+mods_v = 0.25
+
+[[talent]]
+key = "dev_dark_matter"
+tree = 2
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "ability_demonhunter_soulcleave3"
+name = { en = "Dark Matter", de = "Dunkle Materie", fr = "Matière noire", es = "Materia oscura", pt = "Matéria Escura", ru = "Тёмная материя", it = "Materia Oscura", pl = "Ciemna materia", tr = "Karanlık Madde", ja = "ダーク・マター", zh = "暗物质", ko = "암흑 물질" }
+text = { en = "Collapsing Star recharges {v}% faster.", de = "Kollabierender Stern lädt sich {v}% schneller wieder auf.", fr = "Réduit de {v}% le temps de recharge de Étoile en effondrement.", es = "Reduce un {v}% el tiempo de reutilización de Estrella colapsante.", pt = "Reduz em {v}% a recarga de Estrela em Colapso.", ru = "Время восстановления способности «Коллапс звезды» сокращается на {v}%.", it = "Riduce del {v}% il tempo di recupero di Stella Collassante.", pl = "Skraca czas odnowienia zdolności Zapadająca się Gwiazda o {v}%.", tr = "Çöken Yıldız bekleme süresini %{v} azaltır.", ja = "コラプシング・スターのリチャージが{v}%速くなります。", zh = "坍缩之星的充能速度加快{v}%。", ko = "붕괴하는 별이 {v}% 더 빨리 충전됩니다." }
+menu_v = 0.06
+mods = [{ cooldown = ["collapsing_star"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "dev_twilight"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "ability_demonhunter_soulcleave4"
+name = { en = "Twilight", de = "Zwielicht", fr = "Crépuscule", es = "Crepúsculo", pt = "Crepúsculo", ru = "Сумерки", it = "Crepuscolo", pl = "Zmierzch", tr = "Alacakaranlık", ja = "トワイライト", zh = "暮光", ko = "황혼" }
+text = { en = "Consume and Void Ray deal {v}% more damage.", de = "Verzehren und Leerenstrahl verursachen {v}% mehr Schaden.", fr = "Dévorer et Rayon du Vide infligent {v}% de dégâts supplémentaires.", es = "Consumir y Rayo del Vacío infligen un {v}% más de daño.", pt = "Consumir e Raio do Vazio causam {v}% a mais de dano.", ru = "Урон способностей «Поглощение» и «Луч Бездны» увеличивается на {v}%.", it = "Consunzione e Raggio del Vuoto infliggono il {v}% di danni in più.", pl = "Pożarcie i Promień Pustki zadają o {v}% więcej obrażeń.", tr = "Tüket ve Hiçlik Işını %{v} daha fazla hasar verir.", ja = "コンシュームとヴォイド・レイのダメージが{v}%増加します。", zh = "吞噬和虚空射线造成的伤害提高{v}%。", ko = "집어삼키기와 공허 광선의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["consume", "void_ray"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "dev_inevitable_end"
+tree = 2
+row = 5
+col = 2
+ranks = 1
+req = "dev_gravity_well"
+effects = []
+icon = "inv_12_dh_void_ability_collapsingstar"
+name = { en = "Inevitable End", de = "Unvermeidliches Ende", fr = "Fin inéluctable", es = "Final inevitable", pt = "Fim Inevitável", ru = "Неизбежный конец", it = "Fine Inevitabile", pl = "Nieunikniony koniec", tr = "Kaçınılmaz Son", ja = "インエヴィタブル・エンド", zh = "必然终结", ko = "피할 수 없는 종말" }
+text = { en = "Collapsing Star deals {v}% more damage.", de = "Kollabierender Stern verursacht {v}% mehr Schaden.", fr = "Étoile en effondrement inflige {v}% de dégâts supplémentaires.", es = "Estrella colapsante inflige un {v}% más de daño.", pt = "Estrela em Colapso causa {v}% a mais de dano.", ru = "Урон способности «Коллапс звезды» увеличивается на {v}%.", it = "Stella Collassante infligge il {v}% di danni in più.", pl = "Zapadająca się Gwiazda zadaje o {v}% więcej obrażeń.", tr = "Çöken Yıldız %{v} daha fazla hasar verir.", ja = "コラプシング・スターのダメージが{v}%増加します。", zh = "坍缩之星造成的伤害提高{v}%。", ko = "붕괴하는 별의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["collapsing_star"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "dev_void_metamorphosis"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+req = "dev_soul_harvest"
+effects = [{ start_with = "void_metamorphosis" }, { start_with = "collapsing_star" }]
+icon = "inv_112_ability_demonhunter_metamorphasisvoid"
+name = { en = "Void Metamorphosis", de = "Leerenmetamorphose", fr = "Métamorphose du Vide", es = "Metamorfosis del Vacío", pt = "Metamorfose do Vazio", ru = "Метаморфоза Бездны", it = "Metamorfosi del Vuoto", pl = "Metamorfoza Pustki", tr = "Hiçlik Başkalaşımı", ja = "ヴォイド・メタモルフォーシス", zh = "虚空恶魔变形", ko = "공허 탈태" }
+text = { en = "Capstone. You start each run with Void Metamorphosis and Collapsing Star. Your demon form lasts {v}% longer.", de = "Schlussstein. Du beginnst jeden Lauf mit Leerenmetamorphose und Kollabierender Stern. Deine Dämonengestalt hält {v}% länger an.", fr = "Talent ultime. Vous commencez chaque partie avec Métamorphose du Vide et Étoile en effondrement. Ta forme démoniaque dure {v}% plus longtemps.", es = "Talento final. Empiezas cada partida con Metamorfosis del Vacío y Estrella colapsante. Tu forma demoníaca dura un {v}% más.", pt = "Ápice. Você começa cada partida com Metamorfose do Vazio e Estrela em Colapso. Sua forma demoníaca dura {v}% mais.", ru = "Вершина. Каждый забег начинается со способностями «Метаморфоза Бездны» и «Коллапс звезды». Твой облик демона длится на {v}% дольше.", it = "Talento finale. Inizi ogni partita con Metamorfosi del Vuoto e Stella Collassante. La tua forma demoniaca dura il {v}% in più.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz ze zdolnościami Metamorfoza Pustki i Zapadająca się Gwiazda. Twoja demoniczna postać trwa o {v}% dłużej.", tr = "Son yetenek. Her koşuya Hiçlik Başkalaşımı ve Çöken Yıldız ile başlarsın. Şeytan biçimin {v}% daha uzun sürer.", ja = "【キャップストーン】毎ランをヴォイド・メタモルフォーシスとコラプシング・スターを持って始めます。デーモン形態の持続時間が{v}%延びます。", zh = "终极天赋：你在每场对局开始时拥有虚空恶魔变形和坍缩之星。你的恶魔形态持续时间延长{v}%。", ko = "궁극 특성. 모든 런을 공허 탈태와 붕괴하는 별을 가지고 시작합니다. 악마 형상의 지속시간이 {v}% 길어집니다." }
+menu_v = 0.30
+mods = [{ duration = ["void_metamorphosis"] }]
+mods_v = 0.30

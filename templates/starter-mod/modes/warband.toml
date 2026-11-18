@@ -1,0 +1,146 @@
+# Warband: the campaign for up to ten heroes, a raid in two groups. The horde grows with every
+# hero by the standard co-op factors; the lobby takes ten.
+
+name = "Warband"
+extends = "standard"
+
+[card]
+order = 2
+icon = "INV_Banner_02"
+color = [0.75, 0.2, 0.15]
+tag = "CO-OP · 2-10"
+text = "The campaign's zones for a whole warband: up to ten heroes in one run, two groups of five against a horde that grows with every one of you."
+rules = [
+    "Up to ten heroes, shown as a raid",
+    "Enemies and spawns grow with every hero",
+    "Runs stay off the leaderboards",
+]
+rewards = [
+    ["INV_Misc_Coin_01", "Gold"],
+    ["INV_Box_02", "Chests"],
+    ["INV_Misc_Book_11", "Experience"],
+]
+
+[i18n.de]
+name = "Kriegsschar"
+tag = "KOOP · 2-10"
+text = "Die Zonen der Kampagne für eine ganze Kriegsschar: bis zu zehn Helden in einem Lauf, zwei Gruppen zu fünft gegen eine Horde, die mit jedem von euch wächst."
+rules = [
+    "Bis zu zehn Helden, als Schlachtzug angezeigt",
+    "Gegner und Spawns wachsen mit jedem Helden",
+    "Läufe zählen nicht für die Ranglisten",
+]
+rewards = ["Gold", "Truhen", "Erfahrung"]
+
+[i18n.fr]
+name = "Bande de guerre"
+tag = "COOP · 2-10"
+text = "Les zones de la campagne pour toute une bande de guerre : jusqu'à dix héros dans une même partie, deux groupes de cinq contre une horde qui grandit avec chacun de vous."
+rules = [
+    "Jusqu'à dix héros, affichés comme un raid",
+    "Les ennemis et les apparitions croissent avec chaque héros",
+    "Les parties restent hors des classements",
+]
+rewards = ["Or", "Coffres", "Expérience"]
+
+[i18n.es]
+name = "Hueste"
+tag = "COOP · 2-10"
+text = "Las zonas de la campaña para toda una hueste: hasta diez héroes en una partida, dos grupos de cinco contra una horda que crece con cada uno de vosotros."
+rules = [
+    "Hasta diez héroes, mostrados como una banda",
+    "Los enemigos y las apariciones crecen con cada héroe",
+    "Las partidas no cuentan para las clasificaciones",
+]
+rewards = ["Oro", "Cofres", "Experiencia"]
+
+[i18n.pt]
+name = "Bando de Guerra"
+tag = "COOP · 2-10"
+text = "As zonas da campanha para um bando de guerra inteiro: até dez heróis em uma partida, dois grupos de cinco contra uma horda que cresce com cada um de vocês."
+rules = [
+    "Até dez heróis, exibidos como uma raide",
+    "Inimigos e surgimentos crescem com cada herói",
+    "As partidas ficam fora dos rankings",
+]
+rewards = ["Ouro", "Baús", "Experiência"]
+
+[i18n.ru]
+name = "Боевой отряд"
+tag = "КООП · 2-10"
+text = "Зоны кампании для целого отряда: до десяти героев в одном забеге, две группы по пять против орды, которая растёт с каждым из вас."
+rules = [
+    "До десяти героев, показаны как рейд",
+    "Враги и появления растут с каждым героем",
+    "Забеги не попадают в таблицы лидеров",
+]
+rewards = ["Золото", "Сундуки", "Опыт"]
+
+[i18n.it]
+name = "Banda da guerra"
+tag = "CO-OP · 2-10"
+text = "Le zone della campagna per un'intera banda da guerra: fino a dieci eroi in una sola partita, due gruppi da cinque contro un'orda che cresce con ognuno di voi."
+rules = [
+    "Fino a dieci eroi, mostrati come un'incursione",
+    "Nemici e comparse crescono con ogni eroe",
+    "Le partite restano fuori dalle classifiche",
+]
+rewards = ["Oro", "Forzieri", "Esperienza"]
+
+[i18n.pl]
+name = "Zastęp bojowy"
+tag = "CO-OP · 2-10"
+text = "Strefy kampanii dla całego zastępu bojowego: do dziesięciu bohaterów w jednej rozgrywce, dwie grupy po pięciu przeciwko hordzie, która rośnie z każdym z was."
+rules = [
+    "Do dziesięciu bohaterów, widocznych jako rajd",
+    "Przeciwnicy i pojawienia rosną z każdym bohaterem",
+    "Rozgrywki nie trafiają do rankingów",
+]
+rewards = ["Złoto", "Skrzynie", "Doświadczenie"]
+
+[i18n.tr]
+name = "Savaş Grubu"
+tag = "CO-OP · 2-10"
+text = "Kampanyanın bölgeleri koca bir savaş grubu için: tek oyunda ona kadar kahraman, beşerli iki grup, her birinizle büyüyen bir sürüye karşı."
+rules = [
+    "Ona kadar kahraman, baskın olarak gösterilir",
+    "Düşmanlar ve doğuşlar her kahramanla artar",
+    "Oyunlar sıralamalara girmez",
+]
+rewards = ["Altın", "Sandıklar", "Tecrübe"]
+
+[i18n.ja]
+name = "ウォーバンド"
+tag = "協力プレイ・2-10"
+text = "キャンペーンのゾーンをウォーバンド全員で。1回のランに最大10人のヒーローが、5人ずつ2つのパーティーに分かれ、人数に応じて大きくなる群れに挑みます。"
+rules = [
+    "最大10人のヒーロー、レイドとして表示",
+    "敵と出現数はヒーローごとに増えます",
+    "ランはランキングに記録されません",
+]
+rewards = ["ゴールド", "宝箱", "経験値"]
+
+[i18n.zh]
+name = "战团"
+tag = "合作 · 2-10"
+text = "为整支战团准备的战役区域：一局对局最多十名英雄，分成两支五人队伍，对抗随着你们每个人而壮大的怪潮。"
+rules = [
+    "最多十名英雄，以团队形式显示",
+    "敌人和刷怪数量随每名英雄增加",
+    "对局不计入排行榜",
+]
+rewards = ["金币", "宝箱", "经验值"]
+
+[i18n.ko]
+name = "전투부대"
+tag = "협동 · 2-10"
+text = "전투부대 전체를 위한 캠페인 지역입니다. 한 번의 런에 최대 10명의 영웅이 5명씩 두 파티로 나뉘어, 인원마다 커지는 무리에 맞섭니다."
+rules = [
+    "최대 10명의 영웅, 공격대로 표시",
+    "적과 출현 수가 영웅마다 늘어납니다",
+    "런은 순위표에 기록되지 않습니다",
+]
+rewards = ["골드", "상자", "경험치"]
+
+[coop]
+max_heroes = 10

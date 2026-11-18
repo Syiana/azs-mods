@@ -1,0 +1,300 @@
+# Gurubashi Arena, "The Blood God Wakes".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "arena"
+order = 6
+name = { en = "Gurubashi Arena", de = "Arena der Gurubashi", fr = "Arène de Gurubashi", es = "Arena Gurubashi", pt = "Arena Gurubashi", ru = "Арена Гурубаши", pl = "Arena Gurubashi", tr = "Gurubashi Arenası", it = "Arena di Gurubashi", ja = "グルバシ・アリーナ", zh = "古拉巴什竞技场", ko = "구루바시 투기장" }
+subtitle = { en = "The Blood God Wakes", de = "Der Blutgott erwacht", fr = "Le dieu du sang s'éveille", es = "El Dios de la Sangre despierta", pt = "O Deus do Sangue Desperta", ru = "Бог крови пробуждается", pl = "Bóg Krwi się budzi", tr = "Kan Tanrısı Uyanıyor", it = "Il Dio del Sangue si desta", ja = "血の神が目覚める", zh = "血神苏醒", ko = "피의 신이 깨어나다" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Stranglethorn_01"
+map = 0
+map_name = "Azeroth"
+area = 33
+center = [-13204.0, 274.0]
+radius = 32.0
+map_bounds = [2220.83, -4160.42, -11168.75, -15422.92]
+health_factor = 2.95
+gold_factor = 1.66
+late_factor = 0.06
+hour = 16
+weather = { fine = 85, rain = 15 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = 2.5
+pitch = 42.0
+distance = 16.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 900
+name = { en = "Gurubashi Scout", de = "Späher der Gurubashi", fr = "Éclaireur gurubashi", es = "Explorador Gurubashi", pt = "Batedor Gurubashi", ru = "Разведчик Гурубаши", pl = "Zwiadowca Gurubashi", tr = "Gurubashi Gözcüsü", it = "Esploratore Gurubashi", ja = "グルバシの斥候", zh = "古拉巴什斥候", ko = "구루바시 정찰병" }
+type = "humanoid"
+display = 337
+icon = "INV_Misc_Head_Troll_01"
+health = 30
+damage = 4
+swing = 1.6
+speed = 5.6
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 901
+name = { en = "Razzashi Raptor", de = "Razzashiraptor", fr = "Raptor razzashi", es = "Raptor Razzashi", pt = "Raptor Razzashi", ru = "Раптор Раззаши", pl = "Raptor Razzashi", tr = "Razzashi Yırtıcısı", it = "Raptor Razzashi", ja = "ラザシ・ラプター", zh = "拉扎什迅猛龙", ko = "라자쉬 랩터" }
+type = "beast"
+display = 1959
+icon = "Ability_Hunter_Pet_Raptor"
+health = 26
+damage = 5
+swing = 1.3
+speed = 8.0
+cost = 1.0
+from = 0.5
+size = 1.2
+
+[[zone.enemy]]
+entry = 902
+name = { en = "Bloodseeker Bat", de = "Blutsucherfledermaus", fr = "Chauve-souris cherchesang", es = "Murciélago buscasangre", pt = "Morcego Busca-sangue", ru = "Летучая мышь-кровопийца", pl = "Nietoperz krwiopijca", tr = "Kan Arayan Yarasa", it = "Pipistrello cercasangue", ja = "ブラッドシーカー・バット", zh = "觅血蝙蝠", ko = "흡혈 박쥐" }
+type = "beast"
+display = 15191
+icon = "Ability_Hunter_Pet_Bat"
+health = 24
+damage = 5
+swing = 1.3
+speed = 8.2
+cost = 1.2
+from = 1.2
+size = 0.6
+
+[[zone.enemy]]
+entry = 903
+name = { en = "Hakkari Shadowcaster", de = "Schattenzauberer der Hakkari", fr = "Mage des ombres hakkari", es = "Lanzasombras Hakkari", pt = "Lançador de Sombras Hakkari", ru = "Заклинатель теней Хаккари", pl = "Czarownik cienia Hakkari", tr = "Hakkari Gölge Büyücüsü", it = "Lanciaombre Hakkari", ja = "ハッカリ・シャドウキャスター", zh = "哈卡莱暗影施法者", ko = "학카리 그림자술사" }
+type = "humanoid"
+display = 314
+icon = "INV_Misc_Head_Troll_02"
+health = 38
+damage = 8
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 904
+name = { en = "Gurubashi Axe Thrower", de = "Axtwerfer der Gurubashi", fr = "Lanceur de haches gurubashi", es = "Lanzador de hachas Gurubashi", pt = "Lançador de Machados Gurubashi", ru = "Метатель топоров Гурубаши", pl = "Rzucający toporami Gurubashi", tr = "Gurubashi Balta Atıcısı", it = "Lanciatore d'asce Gurubashi", ja = "グルバシの斧投げ", zh = "古拉巴什掷斧者", ko = "구루바시 도끼투척병" }
+type = "humanoid"
+display = 316
+icon = "INV_Misc_Head_Troll_01"
+health = 60
+damage = 9
+swing = 1.8
+speed = 5.6
+cost = 1.5
+from = 3.0
+role = { ranged = { spell = 16075, range = 16.0, every = 3.0, speed = 20.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 905
+name = { en = "Zulian Tiger", de = "Zulianischer Tiger", fr = "Tigre zulien", es = "Tigre Zuliano", pt = "Tigre Zuliano", ru = "Зулианский тигр", pl = "Tygrys Zul'Gurub", tr = "Zul Kaplanı", it = "Tigre Zuliana", ja = "ズリアン・タイガー", zh = "祖利安猛虎", ko = "줄리안 호랑이" }
+type = "beast"
+display = 599
+icon = "Ability_Hunter_Pet_Cat"
+health = 55
+damage = 9
+swing = 1.3
+speed = 7.6
+cost = 1.5
+from = 4.0
+size = 1.1
+
+[[zone.enemy]]
+entry = 906
+name = { en = "Razzashi Serpent", de = "Razzashischlange", fr = "Serpent razzashi", es = "Serpiente Razzashi", pt = "Serpente Razzashi", ru = "Змея Раззаши", pl = "Wąż Razzashi", tr = "Razzashi Yılanı", it = "Serpente Razzashi", ja = "ラザシ・サーペント", zh = "拉扎什毒蛇", ko = "라자쉬 뱀" }
+type = "beast"
+display = 4312
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 140
+damage = 12
+swing = 2.0
+speed = 5.0
+cost = 3.0
+from = 5.5
+size = 1.3
+
+[[zone.enemy]]
+entry = 907
+name = { en = "Hakkari Witch Doctor", de = "Hexendoktor der Hakkari", fr = "Sorcier-docteur hakkari", es = "Médico brujo Hakkari", pt = "Curandeiro Hakkari", ru = "Знахарь Хаккари", pl = "Szaman-uzdrowiciel Hakkari", tr = "Hakkari Büyücü Hekimi", it = "Stregone Hakkari", ja = "ハッカリのウィッチドクター", zh = "哈卡莱巫医", ko = "학카리 주술사" }
+type = "humanoid"
+display = 317
+icon = "INV_Misc_Head_Troll_02"
+health = 52
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+
+[[zone.enemy]]
+entry = 908
+name = { en = "Son of Hakkar", de = "Sohn Hakkars", fr = "Fils d'Hakkar", es = "Hijo de Hakkar", pt = "Filho de Hakkar", ru = "Сын Хаккара", pl = "Syn Hakkara", tr = "Hakkar'ın Oğlu", it = "Figlio di Hakkar", ja = "ハッカーの息子", zh = "哈卡之子", ko = "학카르의 아들" }
+type = "dragonkin"
+display = 2699
+icon = "INV_Misc_Head_Dragon_Green"
+health = 190
+damage = 14
+swing = 2.0
+speed = 6.0
+cost = 3.5
+from = 9.0
+
+[[zone.elite]]
+entry = 909
+name = { en = "Gurubashi Berserker", de = "Berserker der Gurubashi", fr = "Berserker gurubashi", es = "Rabioso Gurubashi", pt = "Berserker Gurubashi", ru = "Берсерк Гурубаши", pl = "Berserker Gurubashi", tr = "Gurubashi Çılgın Savaşçısı", it = "Berserker Gurubashi", ja = "グルバシ・バーサーカー", zh = "古拉巴什狂暴者", ko = "구루바시 광전사" }
+type = "humanoid"
+display = 591
+icon = "INV_Misc_Head_Troll_01"
+health = 800
+damage = 24
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.3
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 910
+name = { en = "Zulian Crocolisk", de = "Zulianischer Krokilisk", fr = "Crocilisque zulien", es = "Crocolisco Zuliano", pt = "Crocolisco Zuliano", ru = "Зулианский кроколиск", pl = "Krokodyl Zul'Gurub", tr = "Zul Timsahı", it = "Crocolisco Zuliano", ja = "ズリアン・クロコリスク", zh = "祖利安鳄鱼", ko = "줄리안 악어" }
+type = "beast"
+display = 807
+icon = "Ability_Hunter_Pet_Crocolisk"
+health = 950
+damage = 26
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.69
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 6.0, warn = 1.4, knock = 9.0 } }], 1.0] }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 911
+name = { en = "Gurubashi Champion", de = "Champion der Gurubashi", fr = "Champion gurubashi", es = "Campeón Gurubashi", pt = "Campeão Gurubashi", ru = "Чемпион Гурубаши", pl = "Czempion Gurubashi", tr = "Gurubashi Şampiyonu", it = "Campione Gurubashi", ja = "グルバシ・チャンピオン", zh = "古拉巴什勇士", ko = "구루바시 용사" }
+type = "humanoid"
+display = 593
+icon = "INV_Misc_Head_Troll_01"
+health = 1150
+damage = 32
+swing = 2.2
+speed = 5.4
+cost = 15.0
+from = 13.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.boss]]
+entry = 990
+name = { en = "High Priestess Jeklik", de = "Hohepriesterin Jeklik", fr = "Grande prêtresse Jeklik", es = "Suma sacerdotisa Jeklik", pt = "Alta Sacerdotisa Jeklik", ru = "Верховная жрица Джеклик", pl = "Najwyższa Kapłanka Jeklik", tr = "Yüksek Rahibe Jeklik", it = "Somma Sacerdotessa Jeklik", ja = "大女司祭ジェクリク", zh = "高阶祭司耶克里克", ko = "대여사제 제클릭" }
+type = "humanoid"
+display = 15219
+icon = "INV_Misc_Head_Troll_02"
+health = 3900
+damage = 25
+speed = 6.0
+size = 1.86
+minute = 4
+yell = { en = "Lord Hir'eek, grant me wings of vengeance!", de = "Lord Hir'eek, verleiht mir die Schwingen der Rache!", fr = "Seigneur Hir'eek, accorde-moi les ailes de la vengeance !", es = "¡Señor Hir'eek, concédeme alas de venganza!", pt = "Lorde Hir'eek, conceda-me asas de vingança!", ru = "Лорд Хир'ик, даруй мне крылья мщения!", pl = "Lordzie Hir'eek, daj mi skrzydła zemsty!", tr = "Lord Hir'eek, bana intikam kanatları ver!", it = "Signore Hir'eek, concedimi ali di vendetta!", ja = "ハーリーク様、我に復讐の翼を授けたまえ！", zh = "希里克领主，赐予我复仇之翼！", ko = "히리크 군주여, 복수의 날개를 내려 주소서!" }
+kit = "high_priestess_jeklik"
+
+[[zone.boss]]
+entry = 991
+name = { en = "High Priest Venoxis", de = "Hohepriester Venoxis", fr = "Grand prêtre Venoxis", es = "Sumo sacerdote Venoxis", pt = "Alto Sacerdote Venoxis", ru = "Верховный жрец Веноксис", pl = "Najwyższy Kapłan Venoxis", tr = "Yüksek Rahip Venoxis", it = "Sommo Sacerdote Venoxis", ja = "大司祭ヴェノクシス", zh = "高阶祭司温诺希斯", ko = "대사제 베녹시스" }
+type = "humanoid"
+display = 15217
+icon = "INV_Misc_Head_Troll_02"
+health = 9600
+damage = 33
+speed = 5.6
+size = 2.3
+minute = 7
+yell = { en = "Let the coils of hate unfurl!", de = "Lasst die Windungen des Hasses sich entrollen!", fr = "Que les anneaux de la haine se déroulent !", es = "¡Que se desenrollen las espirales del odio!", pt = "Que as espirais do ódio se desenrolem!", ru = "Пусть кольца ненависти развернутся!", pl = "Niech rozwiną się sploty nienawiści!", tr = "Nefretin sarmalları açılsın!", it = "Che le spire dell'odio si dispieghino!", ja = "憎しみのとぐろよ、解き放たれよ！", zh = "让仇恨之环展开吧！", ko = "증오의 똬리를 풀어라!" }
+kit = "high_priest_venoxis"
+
+[[zone.boss]]
+entry = 992
+name = { en = "Bloodlord Mandokir", de = "Blutfürst Mandokir", fr = "Seigneur sanglant Mandokir", es = "Señor sangriento Mandokir", pt = "Senhor Sangrento Mandokir", ru = "Кровавый лорд Мандокир", pl = "Krwawy Władca Mandokir", tr = "Kan Lordu Mandokir", it = "Signore del Sangue Mandokir", ja = "血の王マンドキル", zh = "血领主曼多基尔", ko = "혈군주 만도키르" }
+type = "humanoid"
+display = 11288
+icon = "INV_Misc_Head_Troll_01"
+health = 18500
+damage = 42
+speed = 6.6
+size = 2.5714285
+minute = 11
+yell = { en = "I'll feed your souls to Hakkar himself!", de = "Ich verfüttere eure Seelen an Hakkar persönlich!", fr = "Je donnerai vos âmes à Hakkar en personne !", es = "¡Daré vuestras almas de comer al mismísimo Hakkar!", pt = "Vou dar suas almas de comer ao próprio Hakkar!", ru = "Я скормлю ваши души самому Хаккару!", pl = "Nakarmię waszymi duszami samego Hakkara!", tr = "Ruhlarınızı bizzat Hakkar'a yedireceğim!", it = "Darò le vostre anime in pasto allo stesso Hakkar!", ja = "お前らの魂をハッカー様に食わせてやる！", zh = "我要把你们的灵魂献给哈卡本人！", ko = "네 영혼을 학카르님께 바치겠다!" }
+kit = "bloodlord_mandokir"
+
+[[zone.boss]]
+entry = 993
+name = { en = "Jin'do the Hexxer", de = "Jin'do der Verhexer", fr = "Jin'do le Maléficieur", es = "Jin'do el Aojador", pt = "Jin'do, o Enfeitiçador", ru = "Джин'до Проклинатель", pl = "Jin'do Rzucający Uroki", tr = "Büyücü Jin'do", it = "Jin'do il Maledicente", ja = "呪術師ジンドー", zh = "妖术师金度", ko = "주술사 진도" }
+type = "humanoid"
+display = 11311
+icon = "INV_Misc_Head_Troll_01"
+health = 30000
+damage = 48
+speed = 5.6
+size = 2.5714285
+minute = 14
+yell = { en = "Welcome to da great show, friends. Step right up to die!", de = "Willkommen zur großen Show, Freunde. Tretet näher und sterbt!", fr = "Bienvenue au grand spectacle, les amis. Approchez pour mourir !", es = "Bienvenidos al gran espectáculo, amigos. ¡Acercaos a morir!", pt = "Bem-vindos ao grande show, amigos. Cheguem perto e morram!", ru = "Добро пожаловать на большое шоу, друзья. Подходите и умирайте!", pl = "Witajcie na wielkim przedstawieniu, przyjaciele. Podejdźcie i umrzyjcie!", tr = "Büyük şova hoş geldiniz dostlar. Öne çıkın ve ölün!", it = "Benvenuti al grande spettacolo, amici. Avvicinatevi e morite!", ja = "大ショーへようこそ、友よ。さあ寄ってらっしゃい、死んでいきな！", zh = "欢迎来看大表演，朋友们。快上来送死吧！", ko = "위대한 쇼에 어서 오라, 친구들. 이리 와서 죽어 보라고!" }
+kit = "jindo_the_hexxer"
+
+[[zone.boss]]
+entry = 994
+name = { en = "Hakkar the Soulflayer", de = "Hakkar der Seelenschinder", fr = "Hakkar l'Écorcheur d'âmes", es = "Hakkar el Desollador de Almas", pt = "Hakkar, o Esfolador de Almas", ru = "Хаккар Свежеватель Душ", pl = "Hakkar Pożeracz Dusz", tr = "Ruh Yüzen Hakkar", it = "Hakkar lo Scuoiaanime", ja = "魂を剥ぐ者ハッカー", zh = "夺灵者哈卡", ko = "영혼약탈자 학카르" }
+type = "demon"
+display = 15295
+icon = "Achievement_Boss_Hakkar"
+health = 57000
+damage = 58
+speed = 6.0
+size = 0.5142857
+minute = 18
+yell = { en = "PRIDE HERALDS THE END OF YOUR WORLD. COME, MORTALS! FACE THE WRATH OF THE SOULFLAYER!", de = "HOCHMUT KÜNDET DAS ENDE EURER WELT AN. KOMMT, STERBLICHE! STELLT EUCH DEM ZORN DES SEELENSCHINDERS!", fr = "L'ORGUEIL ANNONCE LA FIN DE VOTRE MONDE. VENEZ, MORTELS ! AFFRONTEZ LA COLÈRE DE L'ÉCORCHEUR D'ÂMES !", es = "EL ORGULLO ANUNCIA EL FIN DE VUESTRO MUNDO. ¡VENID, MORTALES! ¡ENFRENTAOS A LA IRA DEL DESOLLADOR DE ALMAS!", pt = "O ORGULHO ANUNCIA O FIM DO SEU MUNDO. VENHAM, MORTAIS! ENFRENTEM A FÚRIA DO ESFOLADOR DE ALMAS!", ru = "ГОРДЫНЯ ВОЗВЕЩАЕТ КОНЕЦ ВАШЕГО МИРА. ИДИТЕ, СМЕРТНЫЕ! ВСТРЕТЬТЕ ГНЕВ СВЕЖЕВАТЕЛЯ ДУШ!", pl = "DUMA ZWIASTUJE KONIEC WASZEGO ŚWIATA. DALEJ, ŚMIERTELNICY! STAŃCIE PRZED GNIEWEM POŻERACZA DUSZ!", tr = "GURUR DÜNYANIZIN SONUNU MÜJDELER. GELİN, ÖLÜMLÜLER! RUH YÜZENİN GAZABIYLA YÜZLEŞİN!", it = "L'ORGOGLIO ANNUNCIA LA FINE DEL VOSTRO MONDO. VENITE, MORTALI! AFFRONTATE L'IRA DELLO SCUOIAANIME!", ja = "傲慢こそが汝らの世界の終焉を告げる。来るがよい、定命の者よ！ソウルフレイヤーの怒りを受けよ！", zh = "骄傲预示着你们世界的末日。来吧，凡人！面对夺灵者的愤怒吧！", ko = "오만은 너희 세상의 종말을 알린다. 오라, 필멸자들이여! 영혼약탈자의 분노를 맞이하라!" }
+final = true
+kit = "hakkar_the_soulflayer"

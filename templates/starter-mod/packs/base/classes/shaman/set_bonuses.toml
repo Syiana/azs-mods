@@ -1,0 +1,103 @@
+# The shaman's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: play cleave [lightning_bolt] n 1, share 0.50p
+[[set_bonus]]
+key = "shaman_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Lightning Bolt forks to a second enemy for {v}% of its damage.", de = "Blitzschlag verzweigt sich auf einen zweiten Feind, für {v}% seines Schadens.", fr = "Éclair se divise vers un second ennemi pour {v}% de ses dégâts.", es = "Descarga de relámpagos se bifurca a un segundo enemigo con un {v}% de su daño.", pt = "Raio se bifurca para um segundo inimigo com {v}% do seu dano.", ru = "«Молния» раздваивается на второго врага с {v}% урона.", pl = "Błyskawica rozwidla się na drugiego wroga, zadając {v}% swoich obrażeń.", tr = "Lightning Bolt, hasarının %{v}'i ile ikinci bir düşmana çatallanır.", it = "Dardo di fulmine si biforca su un secondo nemico per il {v}% dei suoi danni.", ja = "ライトニング・ボルトが2体目の敵に分岐し、そのダメージの{v}%を与えます。", zh = "闪电箭会分叉至第二个敌人，造成相当于其伤害{v}%的伤害。", ko = "번개 화살이 두 번째 적에게 갈라져 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.5, play = { cleave = { keys = ["lightning_bolt"], n = 1, radius = 8.0, stun = 0.0 } } }]
+shows = "v"
+percent = true
+
+# Original: play kill_burst dotted [flame_shock] radius 8, 0.15p of max health
+[[set_bonus]]
+key = "shaman_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Enemies dying with your Flame Shock explode for {v}% of their max health on everything within 8 yards.", de = "Feinde, die mit deinem Flammenschock sterben, explodieren und fügen allem innerhalb von 8 m {v}% ihrer maximalen Gesundheit zu.", fr = "Les ennemis qui meurent sous votre Horion de flammes explosent pour {v}% de leurs points de vie maximum sur tout ce qui se trouve à moins de 8 m.", es = "Los enemigos que mueren con tu Choque de llamas explotan por el {v}% de su salud máxima sobre todo lo que haya a 8 m.", pt = "Inimigos que morrem com seu Choque Flamejante explodem com {v}% da vida máxima deles em tudo a até 8 m.", ru = "Враги, умирающие под вашим «Огненным шоком», взрываются, нанося {v}% своего макс. здоровья всему в радиусе 8 м.", pl = "Wrogowie ginący z twoim Wstrząsem Płomieni wybuchają, zadając {v}% swojego maks. zdrowia wszystkiemu w promieniu 8 jd.", tr = "Flame Shock'ın üzerindeyken ölen düşmanlar patlar ve 8 m içindeki her şeye kendi azami canlarının %{v}'i kadar hasar verir.", it = "I nemici che muoiono con la tua Folgore di fiamma esplodono per il {v}% della loro salute massima su tutto entro 8 m.", ja = "フレイム・ショックがかかったまま死んだ敵が爆発し、8ヤード以内のすべてに最大体力の{v}%のダメージを与えます。", zh = "带着你的烈焰震击死亡的敌人会爆炸，对8码内的所有目标造成相当于其最大生命值{v}%的伤害。", ko = "화염 충격에 걸린 채 죽은 적이 폭발하여 8미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.15, play = { kill_burst = { keys = ["flame_shock"], dotted = true, radius = 8.0, gap = 0.0 } } }]
+shows = "v"
+percent = true
+
+# Original: mod damage [searing_totem] +0.50p; mod duration +0.50p
+[[set_bonus]]
+key = "shaman_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Searing Totem deals {v}% more damage and stands {v2}% longer.", de = "Totem der Verbrennung verursacht {v}% mehr Schaden und steht {v2}% länger.", fr = "Totem incendiaire inflige {v}% de dégâts en plus et reste {v2}% plus longtemps.", es = "Tótem abrasador inflige un {v}% más de daño y dura un {v2}% más.", pt = "Totem Calcinante causa {v}% a mais de dano e dura {v2}% a mais.", ru = "«Опаляющий тотем» наносит на {v}% больше урона и стоит на {v2}% дольше.", pl = "Totem Żaru zadaje o {v}% więcej obrażeń i stoi o {v2}% dłużej.", tr = "Searing Totem %{v} daha fazla hasar verir ve %{v2} daha uzun durur.", it = "Totem rovente infligge il {v}% di danni in più e resta in piedi il {v2}% in più.", ja = "シアリング・トーテムのダメージが{v}%増加し、設置時間が{v2}%延びます。", zh = "灼热图腾造成的伤害提高{v}%，存在时间延长{v2}%。", ko = "불타는 토템의 피해가 {v}% 증가하고 {v2}% 더 오래 유지됩니다." }
+
+[[set_bonus.part]]
+mods = [{ damage = ["searing_totem"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ duration = ["searing_totem"] }]
+mods_v = 0.5
+shows = "v2"
+percent = true
+
+# Original: mod targets [chain_lightning] +v jumps; mod damage +0.20p
+[[set_bonus]]
+key = "shaman_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Chain Lightning jumps {v} more times and deals {v2}% more damage.", de = "Kettenblitzschlag springt {v}-mal öfter und verursacht {v2}% mehr Schaden.", fr = "Chaîne d'éclairs saute {v} fois de plus et inflige {v2}% de dégâts en plus.", es = "Cadena de relámpagos salta {v} veces más e inflige un {v2}% más de daño.", pt = "Cadeia de Raios salta mais {v} vezes e causa {v2}% a mais de dano.", ru = "«Цепная молния» перескакивает больше раз (+{v}) и наносит на {v2}% больше урона.", pl = "Łańcuch Błyskawic skacze {v} razy więcej i zadaje {v2}% więcej obrażeń.", tr = "Chain Lightning {v} kez daha sıçrar ve %{v2} daha fazla hasar verir.", it = "Catena di fulmini balza {v} volte in più e infligge il {v2}% di danni in più.", ja = "チェイン・ライトニングの跳躍回数が{v}回増え、ダメージが{v2}%増加します。", zh = "闪电链额外跳跃{v}次，造成的伤害提高{v2}%。", ko = "연쇄 번개가 {v}번 더 튀고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["chain_lightning"] }]
+mods_v = 3.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["chain_lightning"] }]
+mods_v = 0.2
+shows = "v2"
+percent = true
+
+# Original: mod area [fire_nova] +0.50p; mod damage +0.30p
+[[set_bonus]]
+key = "shaman_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Fire Nova is {v}% wider and deals {v2}% more damage.", de = "Feuernova ist {v}% breiter und verursacht {v2}% mehr Schaden.", fr = "Nova de feu est {v}% plus large et inflige {v2}% de dégâts en plus.", es = "Nova de Fuego es un {v}% más amplia e inflige un {v2}% más de daño.", pt = "Nova de Fogo fica {v}% mais larga e causa {v2}% a mais de dano.", ru = "«Кольцо огня» на {v}% шире и наносит на {v2}% больше урона.", pl = "Ognista Nowa jest szersza o {v}% i zadaje o {v2}% więcej obrażeń.", tr = "Fire Nova %{v} daha geniştir ve %{v2} daha fazla hasar verir.", it = "Nova di fuoco è più ampia del {v}% e infligge il {v2}% di danni in più.", ja = "ファイア・ノヴァの範囲が{v}%広がり、ダメージが{v2}%増加します。", zh = "火焰新星的范围扩大{v}%，造成的伤害提高{v2}%。", ko = "불꽃 회오리의 범위가 {v}% 넓어지고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["fire_nova"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["fire_nova"] }]
+mods_v = 0.3
+shows = "v2"
+percent = true
+
+# Original: mod targets [earth_shock] +2 (fixed); play expose +0.20p damage taken, 5 s
+[[set_bonus]]
+key = "shaman_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Earth Shock strikes 2 more enemies, and they take {v}% more damage for 5 sec.", de = "Erdschock trifft 2 Feinde mehr, und diese erleiden 5 Sek. lang {v}% mehr Schaden.", fr = "Horion de terre frappe 2 ennemis de plus, qui subissent {v}% de dégâts en plus pendant 5 s.", es = "Choque de tierra alcanza a 2 enemigos más, que reciben un {v}% más de daño durante 5 s.", pt = "Choque Terreno atinge mais 2 inimigos, e eles sofrem {v}% a mais de dano por 5 s.", ru = "«Земной шок» поражает ещё 2 врагов, и они получают на {v}% больше урона в течение 5 сек.", pl = "Wstrząs Ziemi trafia o 2 wrogów więcej, a przez 5 s otrzymują oni o {v}% więcej obrażeń.", tr = "Earth Shock 2 düşmana daha vurur ve bu düşmanlar 5 sn boyunca %{v} daha fazla hasar alır.", it = "Folgore tellurica colpisce 2 nemici in più, che subiscono il {v}% di danni in più per 5 sec.", ja = "アース・ショックが追加で2体の敵に命中し、それらの敵は5秒間受けるダメージが{v}%増加します。", zh = "大地震击额外击中2个敌人，并使其受到的伤害提高{v}%，持续5秒。", ko = "대지 충격이 적을 2명 더 공격하며, 맞은 적은 5초 동안 받는 피해가 {v}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["earth_shock"] }]
+mods_v = 2.0
+fixed = true
+
+[[set_bonus.part]]
+plays = [{ v = 0.2, play = { expose = { keys = ["earth_shock"], secs = 5.0 } } }]
+shows = "v"
+percent = true

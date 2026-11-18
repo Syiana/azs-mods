@@ -1,0 +1,25 @@
+# Malygos: Arcane Breath, Vortex then Surge of Power, Arcane Storm, Static Field, the Power
+# Sparks and the Nexus Lords.
+
+[[boss]]
+key = "malygos"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 56272, range = 16.0, arc = 70.0, warn = 1.4, factor = 2.8 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { combo = [[{ stomp = { spell = 56105, radius = 12.0, warn = 2.0, knock = 14.0 } }, { line = { spell = 56505, len = 40.0, w = 6.0, warn = 1.8, factor = 2.8 } }], 1.6] }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 57459, count = 5, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { puddle = { spell = 57428, burst = 57428, radius = 7.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

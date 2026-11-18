@@ -1,0 +1,232 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "cleave"
+id = 845
+visual = 910147
+vfx = { source = 845, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.4 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 3 } }
+hit = 47
+cooldown = 1.5
+range = 7.0
+name = { en = "Cleave", de = "Spalten", fr = "Enchaînement", es = "Hender", pt = "Fender", ru = "Рассекающий удар", pl = "Cięcie", tr = "Yarma", it = "Fendente", ja = "クリーヴ", zh = "顺劈斩", ko = "회전베기" }
+icon = "Ability_Warrior_Cleave"
+
+[[spell]]
+key = "whirlwind"
+id = 1680
+visual = 910148
+# The cast kit's base slot and the impact kit's chest slot hold its own effects; the accent takes the impact kit's free base slot.
+vfx = { source = 1680, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "base", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 8.0 } }
+hit = 24
+cooldown = 4.5
+range = 8.0
+name = { en = "Whirlwind", de = "Wirbelwind", fr = "Tourbillon", es = "Torbellino", pt = "Redemoinho", ru = "Вихрь", pl = "Wir", tr = "Girdap", it = "Turbine", ja = "ワールウィンド", zh = "旋风斩", ko = "소용돌이" }
+icon = "Ability_Whirlwind"
+
+[[spell]]
+key = "thunder_clap"
+id = 6343
+visual = 910149
+vfx = { source = 6343, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 10.0 } }
+hit = 11
+cooldown = 5.0
+range = 10.0
+rider = { slow = { pct = 50, secs = 3.0 } }
+name = { en = "Thunder Clap", de = "Donnerknall", fr = "Coup de tonnerre", es = "Choque de trueno", pt = "Trovoada", ru = "Громовой раскат", pl = "Grom", tr = "Gök Gürültüsü", it = "Schianto del tuono", ja = "サンダー・クラップ", zh = "雷霆一击", ko = "천둥벼락" }
+icon = "Spell_Nature_ThunderClap"
+
+[[spell]]
+key = "mortal_strike"
+id = 12294
+visual = 910150
+vfx = { source = 12294, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 137
+cooldown = 3.0
+range = 7.0
+name = { en = "Mortal Strike", de = "Tödlicher Stoß", fr = "Frappe mortelle", es = "Golpe mortal", pt = "Golpe Mortal", ru = "Смертельный удар", pl = "Śmiertelny cios", tr = "Ölümcül Darbe", it = "Colpo mortale", ja = "モータル・ストライク", zh = "致死打击", ko = "필사의 일격" }
+icon = "Ability_Warrior_SavageBlow"
+
+[[spell]]
+key = "execute"
+id = 5308
+visual = 910151
+vfx = { source = 5308, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.4 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { execute = { targets = 1 } }
+hit = 117
+cooldown = 2.5
+range = 10.0
+name = { en = "Execute", de = "Hinrichten", fr = "Exécution", es = "Ejecutar", pt = "Execução", ru = "Казнь", pl = "Egzekucja", tr = "İnfaz", it = "Esecuzione", ja = "エクセキュート", zh = "斩杀", ko = "마무리 일격" }
+icon = "INV_Sword_48"
+
+[[spell]]
+key = "demo_shout"
+id = 1160
+visual = 910152
+vfx = { source = 1160, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 14.0 } }
+hit = 4
+cooldown = 10.0
+range = 14.0
+rider = { weaken = { pct = 35, secs = 6.0 } }
+name = { en = "Demoralizing Shout", de = "Demoralisierender Ruf", fr = "Cri démoralisant", es = "Grito desmoralizador", pt = "Grito Desmoralizante", ru = "Деморализующий крик", pl = "Okrzyk demoralizujący", tr = "Moral Bozan Bağırış", it = "Grido demoralizzante", ja = "デモラライジング・シャウト", zh = "挫志怒吼", ko = "사기의 외침" }
+tags = ["exposes"]
+icon = "Ability_Warrior_WarCry"
+
+[[spell]]
+key = "battle_shout"
+id = 6673
+visual = 910153
+# Its own effect, the shout's ring, fills the cast kit's base slot, so there is no cast accent; the stock look has no impact kit for the accent to replace.
+vfx = { source = 6673, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { fury = { pct = 40, secs = 8.0 } }
+hit = 0
+cooldown = 16.0
+range = 30.0
+name = { en = "Battle Shout", de = "Schlachtruf", fr = "Cri de guerre", es = "Grito de batalla", pt = "Grito de Batalha", ru = "Боевой крик", pl = "Okrzyk bojowy", tr = "Savaş Narası", it = "Grido di battaglia", ja = "バトル・シャウト", zh = "战斗怒吼", ko = "전투의 외침" }
+icon = "Ability_Warrior_BattleShout"
+
+[[spell]]
+key = "bloodthirst"
+id = 23881
+visual = 910154
+vfx = { source = 23881, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 88
+cooldown = 4.0
+range = 7.0
+rider = { drain = { pct = 50 } }
+name = { en = "Bloodthirst", de = "Blutdurst", fr = "Sanguinaire", es = "Sed de sangre", pt = "Sede de Sangue", ru = "Жажда крови", pl = "Krwiożerczość", tr = "Kan Susuzluğu", it = "Sete di sangue", ja = "ブラッドサースト", zh = "嗜血", ko = "피의 갈증" }
+icon = "Spell_Nature_BloodLust"
+
+[[spell]]
+key = "rend"
+id = 772
+visual = 910155
+# Its own effect fills the impact kit's chest slot, so there is no impact accent; the stock cast kit is empty.
+vfx = { source = 772, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 } }
+school = "physical"
+shape = { dot = { targets = 3, secs = 5.0, ticks = 2, cap = 1 } }
+hit = 95
+cooldown = 3.0
+range = 8.0
+name = { en = "Rend", de = "Verwunden", fr = "Pourfendre", es = "Romper", pt = "Dilacerar", ru = "Кровопускание", pl = "Rozdarcie", tr = "Doğrama", it = "Squarcio", ja = "レンド", zh = "撕裂", ko = "분쇄" }
+icon = "Ability_Gouge"
+
+[[spell]]
+key = "shield_slam"
+id = 23922
+visual = 910156
+vfx = { source = 23922, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 150
+cooldown = 6.0
+range = 7.0
+rider = { stun = { secs = 1.5 } }
+name = { en = "Shield Slam", de = "Schildschlag", fr = "Heurt de bouclier", es = "Embate de escudo", pt = "Pancada de Escudo", ru = "Мощный удар щитом", pl = "Uderzenie tarczą", tr = "Kalkan Çarpması", it = "Colpo di scudo", ja = "シールド・スラム", zh = "盾牌猛击", ko = "방패 밀쳐내기" }
+icon = "INV_Shield_05"
+
+[[spell]]
+key = "bloodrage"
+id = 2687
+visual = 910157
+vfx = { source = 18499, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { proc = { kind = "rage", radius = 9.0 } }
+hit = 145
+cooldown = 7.15
+range = 0.0
+name = { en = "Bloodrage", de = "Blutrausch", fr = "Rage sanguinaire", es = "Ira sangrienta", pt = "Ira Sangrenta", ru = "Кровавое бешенство", pl = "Krwawa wściekłość", tr = "Kanlı Hiddet", it = "Ira di sangue", ja = "ブラッドレイジ", zh = "血性狂暴", ko = "피의 분노" }
+icon = "Ability_Racial_BloodRage"
+
+# Wrath of the Lich King.
+[[spell]]
+key = "bladestorm"
+id = 46924
+visual = 910158
+vfx = { source = 46924, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { totem = { radius = 8.0, every = 1.0, secs = 6.0 } }
+# The storm goes with the hero: they wear its look as an aura while it lasts (its state kit, 9857, spins
+# them and draws the whirl), and every beat plays its look again from them (the steel sweep, the hits).
+follows = true
+pulse_visual = 910158
+hit = 42
+cooldown = 20.0
+range = 8.0
+name = { en = "Bladestorm", de = "Klingensturm", fr = "Tempête de lames", es = "Tormenta de acero", pt = "Tempestade de Lâminas", ru = "Вихрь клинков", pl = "Burza ostrzy", tr = "Kılıç Fırtınası", it = "Tempesta di lame", ja = "ブレードストーム", zh = "剑刃风暴", ko = "칼날폭풍" }
+icon = "Ability_Warrior_Bladestorm"
+
+[[spell]]
+key = "shockwave"
+id = 46968
+visual = 910159
+vfx = { source = 46968, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { cone = { length = 10.0 } }
+hit = 72
+cooldown = 8.0
+range = 10.0
+rider = { stun = { secs = 2.0 } }
+tags = ["meter_row"]
+name = { en = "Shockwave", de = "Schockwelle", fr = "Onde de choc", es = "Onda de choque", pt = "Onda de Choque", ru = "Ударная волна", pl = "Fala uderzeniowa", tr = "Şok Dalgası", it = "Onda d'urto", ja = "ショックウェーブ", zh = "震荡波", ko = "충격파" }
+icon = "Ability_Warrior_Shockwave"
+
+[[spell]]
+key = "heroic_throw"
+id = 57755
+visual = 910160
+vfx = { source = 57755, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 100
+cooldown = 4.0
+range = 30.0
+name = { en = "Heroic Throw", de = "Heldenhafter Wurf", fr = "Lancer héroïque", es = "Lanzamiento heroico", pt = "Arremesso Heroico", ru = "Героический бросок", pl = "Heroiczny rzut", tr = "Kahramanca Fırlatış", it = "Lancio eroico", ja = "ヒロイック・スロー", zh = "英勇投掷", ko = "영웅의 투척" }
+icon = "INV_Axe_66"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "shield_wall"
+id = 871
+visual = 910161
+vfx = { source = 871, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { immune = { secs = 4.0 } }
+hit = 0
+cooldown = 45.0
+range = 0.0
+name = { en = "Shield Wall", de = "Schildwall", fr = "Mur protecteur", es = "Muro de escudo", pt = "Muralha de Escudos", ru = "Глухая оборона", pl = "Mur tarcz", tr = "Kalkan Duvarı", it = "Muro di scudi", ja = "シールド・ウォール", zh = "盾墙", ko = "방패의 벽" }
+icon = "Ability_Warrior_ShieldWall"
+
+[[spell]]
+key = "victory_rush"
+id = 34428
+visual = 910162
+vfx = { source = 34428, cast = { model = "Spells/Cleave_Cast_Base.mdx", slot = "base", scale = 0.6 }, impact = { model = "Spells/Cleave_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 70
+cooldown = 4.0
+range = 7.0
+rider = { mend = { pct = 3 } }
+name = { en = "Victory Rush", de = "Siegesrausch", fr = "Ivresse de la victoire", es = "Subidón de victoria", pt = "Ímpeto da Vitória", ru = "Победный раж", pl = "Szał zwycięstwa", tr = "Zafer Hamlesi", it = "Impeto vittorioso", ja = "ヴィクトリー・ラッシュ", zh = "乘胜追击", ko = "연전연승" }
+icon = "Ability_Warrior_Devastate"

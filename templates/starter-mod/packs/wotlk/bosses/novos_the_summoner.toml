@@ -1,0 +1,16 @@
+# Novos the Summoner: Blizzard, Frostbolt, the summoned Scourge.
+
+[[boss]]
+key = "novos_the_summoner"
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 49034, burst = 49034, radius = 7.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 49037 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

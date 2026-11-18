@@ -1,0 +1,26 @@
+# C'Thun's abilities, Gates of Ahn'Qiraj.
+
+[[boss]]
+key = "cthun"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 686 } }
+
+# AS's tag 17 (volley) not in: every 12 s.
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 8122, radius = 12.0, warn = 2.2 } }
+
+# AS's tag 31, circles at random spots: scattered round the hero.
+[[boss.kit]]
+every = 14.0
+ability = { rain = { spell = 26102, count = 3, radius = 4.0, spread = 10.0, warn = 1.8, factor = 2.0 } }
+
+[[boss.kit]]
+every = 20.0
+ability = { sweep = { spell = 26029, len = 40.0, w = 6.0, warn = 2.0, lasts = 6.0, tick = 0.9 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { adds = 12 }

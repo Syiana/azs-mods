@@ -1,0 +1,295 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "zangarmarsh"
+order = 13
+name = { en = "Zangarmarsh", de = "Zangarmarschen", fr = "Marécage de Zangar", es = "Marisma de Zangar", pt = "Pântano Zangar", ru = "Зангартопь", pl = "Bagna Zangar", tr = "Zangarmarsh", it = "Palude di Zangar", ja = "ザンガーマーシュ", zh = "赞加沼泽", ko = "장가르 습지대" }
+subtitle = { en = "The Coilfang Drain", de = "Der Abfluss des Echsenkessels", fr = "Le drain de Glissecroc", es = "El Desagüe de Colmillo Torcido", pt = "O Ralo Presa da Serpente", ru = "Дренажный канал Кривого Клыка", pl = "Ściek Coilfang", tr = "Kıvrımdiş Kanalı", it = "Il Drenaggio Zannaserpe", ja = "コイルファングの排水路", zh = "盘牙水库", ko = "갈퀴송곳니 저수지" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Zangarmarsh"
+map = 530
+map_name = "Expansion01"
+area = 3521
+center = [663.7, 8153.0]
+radius = 100.0
+map_bounds = [9475.0, 4447.92, 1935.42, -1416.67]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 6.56
+gold_factor = 2.43
+late_factor = 0.4
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+weather = { fine = 75, rain = 25 }
+# Outland's first pair drops Uncommon, not its place's Common, as Hellfire (2026-11-13). `TUNE`
+gear_rarity = "uncommon"
+
+[[zone.enemy]]
+entry = 3100
+name = { en = "Sporeling", de = "Sporling", fr = "Sporelin", es = "Esporílico", pt = "Esporídeo", ru = "Спороносец", pl = "Sporowiec", tr = "Sporcuk", it = "Sporino", ja = "スポアリング", zh = "孢子人", ko = "포자 생물" }
+type = "humanoid"
+display = 17544
+icon = "Creature_SporeMushroom"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 3101
+name = { en = "Fen Ray", de = "Moorrochen", fr = "Raie des fanges", es = "Raya del pantano", pt = "Arraia do Brejo", ru = "Болотный скат", pl = "Płaszczka bagienna", tr = "Bataklık Vatozu", it = "Manta della palude", ja = "フェン・レイ", zh = "沼泽鳐", ko = "늪 가오리" }
+type = "beast"
+display = 19404
+icon = "Ability_Hunter_Pet_NetherRay"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.7
+
+[[zone.enemy]]
+entry = 3102
+name = { en = "Coilfang Myrmidon", de = "Myrmidone des Echsenkessels", fr = "Myrmidon de Glissecroc", es = "Mirmidón Colmillo Torcido", pt = "Mirmidão Presa da Serpente", ru = "Мирмидон Кривого Клыка", pl = "Myrmidon z Coilfang", tr = "Kıvrımdiş Myrmidonu", it = "Mirmidone Zannaserpe", ja = "コイルファング・ミュルミドン", zh = "盘牙仆从", ko = "갈퀴송곳니 미르미돈" }
+type = "humanoid"
+display = 4764
+icon = "ACHIEVEMENT_BOSS_LADYVASHJ"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.95
+
+[[zone.enemy]]
+entry = 3103
+name = { en = "Coilfang Siren", de = "Sirene des Echsenkessels", fr = "Sirène de Glissecroc", es = "Sirena Colmillo Torcido", pt = "Sereia Presa da Serpente", ru = "Сирена Кривого Клыка", pl = "Syrena z Coilfang", tr = "Kıvrımdiş Sireni", it = "Sirena Zannaserpe", ja = "コイルファング・セイレーン", zh = "盘牙海妖", ko = "갈퀴송곳니 세이렌" }
+type = "humanoid"
+display = 4974
+icon = "ACHIEVEMENT_BOSS_LADYVASHJ"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.95
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3104
+name = { en = "Marsh Lasher", de = "Marschpeitscher", fr = "Flagellant des marais", es = "Azotador de la marisma", pt = "Chicoteador do Pântano", ru = "Болотный хлестун", pl = "Bagienny chłostnik", tr = "Bataklık Kırbaçlayıcısı", it = "Frustatore della palude", ja = "マーシュ・ラッシャー", zh = "沼泽鞭笞者", ko = "습지 채찍덩굴" }
+type = "elemental"
+display = 17712
+icon = "Ability_Druid_ForceofNature"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 3105
+name = { en = "Bog Lurker", de = "Sumpflauerer", fr = "Rôdeur des tourbières", es = "Acechador del cenagal", pt = "Espreitador do Lamaçal", ru = "Трясинный соглядатай", pl = "Bagienny czyhacz", tr = "Çamur Pusucusu", it = "Aggressore della torbiera", ja = "ボグ・ラーカー", zh = "沼泽潜伏者", ko = "수렁 잠복꾼" }
+type = "elemental"
+display = 168
+icon = "Spell_Nature_EarthElemental_Totem"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+
+[[zone.enemy]]
+entry = 3106
+name = { en = "Sporebat", de = "Sporensegler", fr = "Sporoptère", es = "Murciélago de esporas", pt = "Morcego de Esporos", ru = "Спороскат", pl = "Sporonietoperz", tr = "Spor Yarasası", it = "Pipistrello di spore", ja = "スポアバット", zh = "孢子蝠", ko = "포자 박쥐" }
+type = "beast"
+display = 17751
+icon = "Ability_Hunter_Pet_Sporebat"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.75
+
+[[zone.enemy]]
+entry = 3107
+name = { en = "Coilfang Sorceress", de = "Zauberin des Echsenkessels", fr = "Sorcière de Glissecroc", es = "Hechicera Colmillo Torcido", pt = "Feiticeira Presa da Serpente", ru = "Колдунья Кривого Клыка", pl = "Czarodziejka z Coilfang", tr = "Kıvrımdiş Büyücüsü", it = "Maga Zannaserpe", ja = "コイルファングの女魔術師", zh = "盘牙女巫", ko = "갈퀴송곳니 마녀" }
+type = "humanoid"
+display = 4976
+icon = "ACHIEVEMENT_BOSS_LADYVASHJ"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 31012, range = 18.0, every = 3.5, speed = 28.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3108
+name = { en = "Mire Hydra", de = "Sumpfhydra", fr = "Hydre des bourbiers", es = "Hidra del fango", pt = "Hidra do Lodaçal", ru = "Топяная гидра", pl = "Hydra trzęsawisk", tr = "Çamur Hidrası", it = "Idra del pantano", ja = "マイア・ハイドラ", zh = "泥沼九头蛇", ko = "수렁 히드라" }
+type = "beast"
+display = 17238
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.8
+
+[[zone.elite]]
+entry = 3110
+name = { en = "Bog Giant", de = "Sumpfriese", fr = "Géant des tourbières", es = "Gigante del cenagal", pt = "Gigante do Lamaçal", ru = "Трясинный великан", pl = "Bagienny olbrzym", tr = "Bataklık Devi", it = "Gigante della torbiera", ja = "ボグ・ジャイアント", zh = "沼泽巨人", ko = "수렁 거인" }
+type = "giant"
+display = 18028
+icon = "Achievement_Reputation_Ogre"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.65
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 3111
+name = { en = "Coilfang Champion", de = "Champion des Echsenkessels", fr = "Champion de Glissecroc", es = "Campeón Colmillo Torcido", pt = "Campeão Presa da Serpente", ru = "Защитник Кривого Клыка", pl = "Czempion z Coilfang", tr = "Kıvrımdiş Şampiyonu", it = "Campione Zannaserpe", ja = "コイルファング・チャンピオン", zh = "盘牙勇士", ko = "갈퀴송곳니 용사" }
+type = "humanoid"
+display = 21251
+icon = "ACHIEVEMENT_BOSS_LADYVASHJ"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.3
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.elite]]
+entry = 3112
+name = { en = "Lost One Chieftain", de = "Häuptling der Verlorenen", fr = "Chef égaré", es = "Jefe de los Perdidos", pt = "Chefe dos Perdidos", ru = "Вождь Потерянных", pl = "Wódz Zagubionych", tr = "Kayıp Şefi", it = "Capo dei Perduti", ja = "ロスト・ワンの族長", zh = "失落者酋长", ko = "길 잃은 자 족장" }
+type = "humanoid"
+display = 18422
+icon = "INV_Misc_Head_Murloc_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.6
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.boss]]
+entry = 3190
+name = { en = "Hungarfen", de = "Hungarfenn", fr = "Hungarfen", es = "Hungarfen", pt = "Hungarfen", ru = "Голодрев", pl = "Hungarfen", tr = "Hungarfen", it = "Hungarfen", ja = "ハンガーフェン", zh = "霍加尔芬", ko = "헝가르펜" }
+type = "giant"
+display = 17450
+icon = "Creature_SporeMushroom"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.3
+minute = 4
+yell = { en = "The marsh will swallow you whole!", de = "Die Marsch wird euch mit Haut und Haar verschlingen!", fr = "Le marais va vous engloutir tout entiers !", es = "¡La marisma os tragará enteros!", pt = "O pântano vai engolir vocês inteiros!", ru = "Топь проглотит вас целиком!", pl = "Bagno pochłonie was w całości!", tr = "Bataklık sizi bütün olarak yutacak!", it = "La palude vi inghiottirà interi!", ja = "沼が貴様を丸ごと飲み込むだろう！", zh = "沼泽会把你整个吞下！", ko = "습지가 너를 통째로 삼키리라!" }
+kit = "hungarfen"
+
+[[zone.boss]]
+entry = 3191
+name = { en = "Ghaz'an", de = "Ghaz'an", fr = "Ghaz'an", es = "Ghaz'an", pt = "Ghaz'an", ru = "Газ'ан", pl = "Ghaz'an", tr = "Ghaz'an", it = "Ghaz'an", ja = "ガザン", zh = "加兹安", ko = "가즈안" }
+type = "beast"
+display = 17240
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.4
+minute = 8
+yell = { en = "Ghaz'an rises from the dark water!", de = "Ghaz'an erhebt sich aus dem dunklen Wasser!", fr = "Ghaz'an surgit des eaux sombres !", es = "¡Ghaz'an emerge de las aguas oscuras!", pt = "Ghaz'an emerge da água escura!", ru = "Газ'ан поднимается из темной воды!", pl = "Ghaz'an wynurza się z ciemnej wody!", tr = "Ghaz'an karanlık sudan yükseliyor!", it = "Ghaz'an emerge dall'acqua scura!", ja = "ガザンが暗い水の中から姿を現した！", zh = "加兹安从黑水中升起！", ko = "가즈안이 검은 물속에서 떠오릅니다!" }
+kit = "ghazan"
+
+[[zone.boss]]
+entry = 3192
+name = { en = "Quagmirran", de = "Quagmirran", fr = "Bourbierran", es = "Quagmirran", pt = "Quagmirran", ru = "Зыбун", pl = "Quagmirran", tr = "Quagmirran", it = "Quagmirran", ja = "クァグミラン", zh = "夸格米拉", ko = "퀘그미란" }
+type = "elemental"
+display = 480
+icon = "Achievement_Boss_Quagmirran"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.4
+minute = 12
+yell = { en = "The bog hungers.", de = "Der Sumpf hungert.", fr = "La tourbière a faim.", es = "El cenagal tiene hambre.", pt = "O lamaçal tem fome.", ru = "Трясина голодна.", pl = "Bagno jest głodne.", tr = "Bataklık açlıktan kıvranıyor.", it = "La torbiera ha fame.", ja = "沼地が飢えている。", zh = "沼泽在饥渴。", ko = "늪이 굶주려 있다." }
+kit = "quagmirran"
+
+[[zone.boss]]
+entry = 3193
+name = { en = "the Black Stalker", de = "die Schattenpirscherin", fr = "la Traqueuse noire", es = "la Acechadora negra", pt = "a Espreitadora Negra", ru = "Черная Охотница", pl = "Czarny Prześladowca", tr = "Kara Takipçi", it = "l'Inseguitore Nero", ja = "ブラック・ストーカー", zh = "黑色阔步者", ko = "검은 늪괴물" }
+type = "beast"
+display = 18194
+icon = "Achievement_Boss_theBlackStalker"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.0
+minute = 16
+yell = { en = "The Black Stalker crawls out of the spores!", de = "Die Schattenpirscherin kriecht aus den Sporen!", fr = "La Traqueuse noire rampe hors des spores !", es = "¡La Acechadora negra se arrastra fuera de las esporas!", pt = "A Espreitadora Negra rasteja para fora dos esporos!", ru = "Черная Охотница выползает из спор!", pl = "Czarny Prześladowca wypełza ze spor!", tr = "Kara Takipçi sporların arasından sürünerek çıkıyor!", it = "L'Inseguitore Nero striscia fuori dalle spore!", ja = "ブラック・ストーカーが胞子の中から這い出てきた！", zh = "黑色阔步者从孢子中爬了出来！", ko = "검은 추적자가 포자 속에서 기어 나옵니다!" }
+kit = "the_black_stalker"
+
+[[zone.boss]]
+entry = 2002
+name = { en = "Lady Vashj", de = "Lady Vashj", fr = "Dame Vashj", es = "Dama Vashj", pt = "Lady Vashj", ru = "Леди Вайш", pl = "Lady Vashj", tr = "Leydi Vashj", it = "Lady Vashj", ja = "レディ・ヴァシュジ", zh = "瓦丝琪女士", ko = "여군주 바쉬" }
+type = "beast"
+display = 20748
+icon = "ACHIEVEMENT_BOSS_LADYVASHJ"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.0
+minute = 20
+yell = { en = "You may want to take cover!", de = "Ihr solltet besser in Deckung gehen!", fr = "Vous feriez bien de vous mettre à l'abri !", es = "¡Más os vale poneros a cubierto!", pt = "É melhor vocês se abrigarem!", ru = "Вам лучше укрыться!", pl = "Przydałoby wam się schronienie!", tr = "Siper almak isteyebilirsiniz!", it = "Forse vorreste mettervi al riparo!", ja = "隠れたほうがいいかもしれんぞ！", zh = "你们最好找个地方躲起来！", ko = "숨는 게 좋을 거야!" }
+final = true
+kit = "lady_vashj"

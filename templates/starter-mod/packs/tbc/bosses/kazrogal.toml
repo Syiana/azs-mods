@@ -1,0 +1,20 @@
+# Kaz'rogal: War Stomp, Malevolent Cleave, Mark of Kaz'rogal (carried into the horde).
+
+[[boss]]
+key = "kazrogal"
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 31480, radius = 10.0, warn = 1.8, knock = 13.0 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 31436, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { bomb = { spell = 31447, radius = 7.0, time = 5.0, warn = 1.8, factor = 15.0 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }
