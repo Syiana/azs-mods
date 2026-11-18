@@ -1,0 +1,100 @@
+# The mage's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: mod targets [arcane_missiles] +v missiles
+[[set_bonus]]
+key = "mage_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Arcane Missiles fires {v} more missiles.", de = "Arkane Geschosse feuert {v} Geschosse mehr ab.", fr = "Projectiles des arcanes tire {v} projectiles de plus.", es = "Misiles Arcanos dispara {v} misiles más.", pt = "Mísseis Arcanos dispara mais {v} mísseis.", ru = "«Чародейские стрелы» выпускают дополнительные снаряды: {v}.", pl = "Tajemne Pociski wystrzeliwują o {v} pocisków więcej.", tr = "Arcane Missiles {v} füze daha atar.", it = "Dardi arcani lancia {v} dardi in più.", ja = "アーケイン・ミサイルのミサイルが{v}発増えます。", zh = "奥术飞弹额外发射{v}枚飞弹。", ko = "신비한 화살이 화살을 {v}발 더 발사합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["arcane_missiles"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+# Original: play nth_cast [arcane_explosion] -> arcane_explosion every v
+[[set_bonus]]
+key = "mage_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Every {v} Arcane Explosions, one goes off twice.", de = "Jede {v}. Arkane Explosion geht doppelt los.", fr = "Toutes les {v} Explosions des arcanes, l'une se déclenche deux fois.", es = "Cada {v} Deflagraciones Arcanas, una estalla dos veces.", pt = "A cada {v} Explosões Arcanas, uma estoura duas vezes.", ru = "Каждый {v}-й «Чародейский взрыв» срабатывает дважды.", pl = "Co {v}. Tajemny Wybuch wybucha dwa razy.", tr = "Her {v} Arcane Explosion'da biri iki kez patlar.", it = "Ogni {v} Esplosioni arcane, una scoppia due volte.", ja = "アーケイン・エクスプロージョンを{v}回唱えるごとに、1回が2度炸裂します。", zh = "每施放{v}次魔爆术，其中一次会触发两次。", ko = "신비한 폭발을 {v}번 시전할 때마다 한 번은 두 번 터집니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 3.0, play = { nth_cast = { keys = ["arcane_explosion"], cast = "arcane_explosion" } } }]
+empowered = 2.0
+shows = "v"
+
+# Original: play recast [flamestrike] share 0.50p
+[[set_bonus]]
+key = "mage_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Flamestrike's flames strike twice, the second for {v}%.", de = "Die Flammen von Flammenstoß treffen zweimal, beim zweiten Mal für {v}%.", fr = "Les flammes de Choc de flammes frappent deux fois, la seconde pour {v}%.", es = "Las llamas de Fogonazo golpean dos veces, la segunda con un {v}%.", pt = "As chamas de Golpe Flamejante atingem duas vezes, a segunda com {v}%.", ru = "Пламя «Огненного столба» бьёт дважды, второй раз на {v}%.", pl = "Płomienie Uderzenia Płomieni parzą dwa razy, za drugim razem za {v}%.", tr = "Flamestrike'ın alevleri iki kez vurur, ikincisi %{v} ile.", it = "Le fiamme di Colonna di fuoco colpiscono due volte, la seconda per il {v}%.", ja = "フレイムストライクの炎が2度命中し、2度目は{v}%のダメージを与えます。", zh = "烈焰风暴的火焰会打击两次，第二次造成{v}%的伤害。", ko = "불기둥의 불길이 두 번 적중하며, 두 번째는 {v}%의 피해를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.5, play = { recast = { keys = ["flamestrike"], delay = 0.3 } } }]
+shows = "v"
+percent = true
+
+# Original: mod follow [blizzard]; mod damage [blizzard] +0.20p
+[[set_bonus]]
+key = "mage_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Blizzard moves with you and deals {v}% more damage.", de = "Blizzard wandert mit dir und verursacht {v}% mehr Schaden.", fr = "Blizzard se déplace avec vous et inflige {v}% de dégâts en plus.", es = "Ventisca se mueve contigo e inflige un {v}% más de daño.", pt = "Nevasca se move com você e causa {v}% a mais de dano.", ru = "«Снежная буря» движется вместе с вами и наносит на {v}% больше урона.", pl = "Zamieć porusza się razem z tobą i zadaje o {v}% więcej obrażeń.", tr = "Blizzard seninle birlikte hareket eder ve %{v} daha fazla hasar verir.", it = "Bufera di neve si muove con te e infligge il {v}% di danni in più.", ja = "ブリザードが自分と共に移動し、ダメージが{v}%増加します。", zh = "暴风雪会随你移动，造成的伤害提高{v}%。", ko = "눈보라가 당신을 따라 움직이며 피해가 {v}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ follow = ["blizzard"] }]
+mods_v = 0.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["blizzard"] }]
+mods_v = 0.2
+shows = "v"
+percent = true
+
+# Original: play splash [fireball] share 0.60, +round(2p) enemies
+[[set_bonus]]
+key = "mage_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Fireball splits, striking {v} more enemies for 60% of its damage.", de = "Feuerball teilt sich und trifft {v} Feinde mehr für 60% seines Schadens.", fr = "Boule de feu se divise et frappe {v} ennemis de plus pour 60% de ses dégâts.", es = "Bola de Fuego se divide y alcanza a {v} enemigos más con un 60% de su daño.", pt = "Bola de Fogo se divide, atingindo mais {v} inimigos com 60% do seu dano.", ru = "«Огненный шар» раскалывается и поражает дополнительных врагов ({v}) с 60% урона.", pl = "Kula Ognia rozszczepia się i trafia o {v} wrogów więcej, zadając 60% swoich obrażeń.", tr = "Fireball bölünür ve hasarının %60'ı ile {v} düşmana daha vurur.", it = "Palla di fuoco si divide, colpendo {v} nemici in più per il 60% dei suoi danni.", ja = "ファイアボールが分裂し、追加で{v}体の敵にそのダメージの60%を与えます。", zh = "火球术会分裂，额外击中{v}个敌人，造成相当于其伤害60%的伤害。", ko = "화염구가 갈라져 적을 {v}명 더 공격하며 피해의 60%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 2.0, play = { splash = { keys = ["fireball"], share = 0.6, radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+# Original: mod area [frost_nova] +0.50p; damage +4.0; cooldown 0.40; stat vs_held +1.0p
+[[set_bonus]]
+key = "mage_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Frost Nova is {v}% wider, deals 400% more damage and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Frostnova ist {v}% weiter, verursacht 400% mehr Schaden und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Nova de givre est {v}% plus large, inflige 400% de dégâts en plus et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Nova de Escarcha es un {v}% más amplia, inflige un 400% más de daño y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Nova Congelante é {v}% mais ampla, causa 400% mais dano e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Кольцо льда шире на {v}%, наносит на 400% больше урона и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Mroźna nowa jest o {v}% szersza, zadaje o 400% więcej obrażeń i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Buz Novası %{v} daha geniştir, %400 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Nova di ghiaccio è più ampia del {v}%, infligge il 400% di danni in più e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "フロスト・ノヴァの範囲が{v}%広がり、ダメージが400%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "冰霜新星的范围扩大{v}%，造成的伤害提高400%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "얼음 회오리의 범위가 {v}% 넓어지고, 피해가 400% 증가하며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["frost_nova"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["frost_nova"] }]
+mods_v = 4.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["frost_nova"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true

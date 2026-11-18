@@ -1,0 +1,17 @@
+# Mannoroth's Herald's abilities, Warsong Gulch.
+
+[[boss]]
+key = "mannoroths_herald"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 686 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { nova = { spell = 1949, radius = 9.0, warn = 1.5 } }
+
+# AS's tag 22 kind 1 (totems) not in: every 18 s.
+[[boss.kit]]
+every = 15.0
+ability = { adds = 8 }

@@ -1,0 +1,232 @@
+# The account talent tree, in place of AS's Rewards tab: three branches of talents every hero
+# of every class has, bought rank by rank with the account's points (`perks.rs`). A talent's
+# `costs` are the points of each of its ranks; a row of a branch opens at `row_points`
+# (`levels.toml`) for each row before it. The save and the wire name a talent by key, so a
+# key never changes. Every number is `TUNE`.
+#
+# The order is the menu's (SurvivorsAccountTree.lua): branch by branch, row by row.
+
+[[account_branch]]
+key = "wisdom"
+index = 0
+icon = "Spell_Holy_HolyGuidance"
+name = { en = "Wisdom", de = "Weisheit", fr = "Sagesse", es = "Sabiduría", pt = "Sabedoria", ru = "Мудрость", pl = "Mądrość", tr = "Bilgelik", it = "Saggezza", ja = "知恵", zh = "智慧", ko = "지혜" }
+# The menu's colour of the branch.
+tint = [0.45, 0.65, 1]
+
+[[account_branch]]
+key = "fortune"
+index = 1
+icon = "INV_Misc_Coin_01"
+name = { en = "Fortune", de = "Glück", fr = "Fortune", es = "Fortuna", pt = "Fortuna", ru = "Фортуна", pl = "Fortuna", tr = "Servet", it = "Fortuna", ja = "幸運", zh = "财富", ko = "행운" }
+# The menu's colour of the branch.
+tint = [1, 0.78, 0.25]
+
+[[account_branch]]
+key = "vigor"
+index = 2
+icon = "Ability_Warrior_RallyingCry"
+name = { en = "Vigor", de = "Lebenskraft", fr = "Vigueur", es = "Vigor", pt = "Vigor", ru = "Бодрость", pl = "Wigor", tr = "Dinçlik", it = "Vigore", ja = "ヴィガー", zh = "活力", ko = "활력" }
+# The menu's colour of the branch.
+tint = [1, 0.4, 0.3]
+
+[[account_talent]]
+key = "scholar"
+branch = 0
+row = 0
+costs = [2, 3, 4]
+effect = { xp_pct = 4 }
+icon = "INV_Misc_Book_09"
+name = { en = "Scholar", de = "Gelehrter", fr = "Érudit", es = "Erudito", pt = "Estudioso", ru = "Ученый", pl = "Uczony", tr = "Âlim", it = "Studioso", ja = "学者", zh = "学者", ko = "학자" }
+text = { en = "+%d%% experience in every run.", de = "+%d%% Erfahrung in jedem Lauf.", fr = "+%d%% d'expérience à chaque partie.", es = "+%d%% de experiencia en cada partida.", pt = "+%d%% de experiência em cada partida.", ru = "+%d%% опыта в каждом забеге.", pl = "+%d%% doświadczenia w każdej rozgrywce.", tr = "Her oyunda +%d%% tecrübe.", it = "+%d%% esperienza in ogni partita.", ja = "すべてのランで経験値+%d%%。", zh = "每场对局获得的经验值+%d%%。", ko = "모든 런에서 경험치 +%d%%." }
+menu_v = 4
+
+[[account_talent]]
+key = "thoughts"
+branch = 0
+row = 0
+costs = [2, 3, 4]
+effect = "rerolls"
+icon = "INV_Misc_Dice_01"
+name = { en = "Second Thoughts", de = "Zweite Gedanken", fr = "Seconde pensée", es = "Segundas intenciones", pt = "Segundas Intenções", ru = "Передумать", pl = "Druga szansa", tr = "İkinci Düşünce", it = "Ripensamento", ja = "再考", zh = "三思而行", ko = "재고" }
+text = { en = "%d more free rerolls every run.", de = "%d freie Neuziehungen mehr in jedem Lauf.", fr = "%d relances gratuites de plus à chaque partie.", es = "%d relanzamientos gratis más en cada partida.", pt = "%d rerrolagens grátis a mais em cada partida.", ru = "Еще %d бесплатных пересдач в каждом забеге.", pl = "Darmowe przelosowania w każdej rozgrywce: +%d.", tr = "Her oyunda %d bedava yeniden çekme daha.", it = "%d rilanci gratuiti in più a ogni partita.", ja = "毎ランの無料リロールが%d回増えます。", zh = "每场对局多%d次免费重新抽取。", ko = "런마다 무료 다시 뽑기 %d회 추가." }
+menu_v = 1
+
+[[account_talent]]
+key = "banish"
+branch = 0
+row = 1
+costs = [3, 4, 5]
+effect = "banishes"
+icon = "Spell_Shadow_Cripple"
+name = { en = "Banish", de = "Verbannen", fr = "Bannir", es = "Desterrar", pt = "Banir", ru = "Изгнание", pl = "Wygnanie", tr = "Sürgün", it = "Bandisci", ja = "追放", zh = "放逐", ko = "추방" }
+text = { en = "Banish %d cards a run: a card banished never comes up again that run.", de = "Verbanne %d Karten pro Lauf: eine verbannte Karte kommt in dem Lauf nie wieder.", fr = "Bannis %d cartes par partie : une carte bannie ne revient plus de la partie.", es = "Destierra %d cartas por partida: una carta desterrada no vuelve a salir en esa partida.", pt = "Bana %d cartas por partida: uma carta banida não volta mais naquela partida.", ru = "Изгоняй карты (%d за забег): изгнанная карта больше не выпадет в этом забеге.", pl = "Wygnanie kart na rozgrywkę: %d. Wygnana karta nie wróci w tej rozgrywce.", tr = "Oyun başına %d kart sürgün et: sürgün edilen kart o oyunda bir daha çıkmaz.", it = "Bandisci %d carte a partita: una carta bandita non riappare più in quella partita.", ja = "1回のランでカードを%d枚追放できます。追放したカードはそのランで二度と出てきません。", zh = "每场对局可放逐%d张卡牌：被放逐的卡牌在本场对局中不会再出现。", ko = "런마다 카드 %d장 추방: 추방된 카드는 그 런에서 다시 나오지 않습니다." }
+menu_v = 1
+
+[[account_talent]]
+key = "veteran"
+branch = 0
+row = 1
+costs = [3, 5]
+effect = { veteran = 20 }
+icon = "INV_Misc_Book_11"
+name = { en = "Veteran's Lessons", de = "Lehren des Veteranen", fr = "Leçons du vétéran", es = "Lecciones del veterano", pt = "Lições do Veterano", ru = "Уроки ветерана", pl = "Lekcje weterana", tr = "Kıdemlinin Dersleri", it = "Lezioni del veterano", ja = "古参の教え", zh = "老兵的教诲", ko = "노장의 가르침" }
+text = { en = "A class with less talent experience than your best earns %d%% more.", de = "Eine Klasse mit weniger Talenterfahrung als deine beste erhält %d%% mehr.", fr = "Une classe avec moins d'expérience de talents que ta meilleure gagne %d%% de plus.", es = "Una clase con menos experiencia de talentos que tu mejor clase gana un %d%% más.", pt = "Uma classe com menos experiência de talentos que a sua melhor ganha %d%% a mais.", ru = "Класс с меньшим опытом талантов, чем у твоего лучшего, получает на %d%% больше.", pl = "Klasa z mniejszym doświadczeniem talentów niż twoja najlepsza zyskuje o %d%% więcej.", tr = "En iyi sınıfından daha az yetenek tecrübesi olan sınıf %d%% fazla kazanır.", it = "Una classe con meno esperienza di talento della tua migliore ne guadagna il %d%% in più.", ja = "タレント経験値が最も高いクラスより少ないクラスは、獲得量が%d%%増えます。", zh = "天赋经验值低于你最高职业的职业，获得的经验值提高%d%%。", ko = "최고 직업보다 특성 경험치가 적은 직업은 %d%% 더 얻습니다." }
+menu_v = 20
+
+[[account_talent]]
+key = "opening"
+branch = 0
+row = 2
+costs = [4]
+effect = "opening_hand"
+icon = "INV_Misc_Ticket_Tarot_Stack_01"
+name = { en = "Opening Hand", de = "Starthand", fr = "Main de départ", es = "Mano inicial", pt = "Mão Inicial", ru = "Стартовая рука", pl = "Ręka startowa", tr = "Açılış Eli", it = "Mano iniziale", ja = "初手", zh = "开局手牌", ko = "시작 패" }
+text = { en = "Your first level-up of every run deals four cards.", de = "Dein erster Stufenaufstieg in jedem Lauf teilt vier Karten aus.", fr = "Ton premier niveau gagné de chaque partie distribue quatre cartes.", es = "Tu primera subida de nivel de cada partida reparte cuatro cartas.", pt = "Seu primeiro nível de cada partida distribui quatro cartas.", ru = "Первое повышение уровня в каждом забеге раздает четыре карты.", pl = "Pierwszy awans na poziom w każdej rozgrywce daje cztery karty.", tr = "Her oyundaki ilk seviye atlayışın dört kart dağıtır.", it = "Il primo aumento di livello di ogni partita ti dà quattro carte.", ja = "毎ラン最初のレベルアップでカードが4枚提示されます。", zh = "每场对局的第一次升级提供四张卡牌。", ko = "런마다 첫 레벨 업에서 카드 4장이 나옵니다." }
+
+[[account_talent]]
+key = "prospector"
+branch = 1
+row = 0
+costs = [2, 3, 4]
+effect = { gold_pct = 5 }
+icon = "INV_Misc_Coin_02"
+name = { en = "Prospector", de = "Schatzsucher", fr = "Prospecteur", es = "Buscador de oro", pt = "Garimpeiro", ru = "Старатель", pl = "Poszukiwacz", tr = "Maden Arayıcı", it = "Cercatore d'oro", ja = "探鉱者", zh = "勘探者", ko = "탐광꾼" }
+text = { en = "+%d%% gold in every run.", de = "+%d%% Gold in jedem Lauf.", fr = "+%d%% d'or à chaque partie.", es = "+%d%% de oro en cada partida.", pt = "+%d%% de ouro em cada partida.", ru = "+%d%% золота в каждом забеге.", pl = "+%d%% złota w każdej rozgrywce.", tr = "Her oyunda +%d%% altın.", it = "+%d%% oro in ogni partita.", ja = "すべてのランでゴールド+%d%%。", zh = "每场对局获得的金币+%d%%。", ko = "모든 런에서 골드 +%d%%." }
+menu_v = 5
+
+[[account_talent]]
+key = "magnetism"
+branch = 1
+row = 0
+costs = [2, 3, 4]
+effect = { pickup_pct = 10 }
+icon = "INV_Enchant_ShardBrilliantSmall"
+name = { en = "Magnetism", de = "Magnetismus", fr = "Magnétisme", es = "Magnetismo", pt = "Magnetismo", ru = "Магнетизм", pl = "Magnetyzm", tr = "Mıknatıslık", it = "Magnetismo", ja = "磁力", zh = "磁力", ko = "자력" }
+text = { en = "+%d%% pickup range.", de = "+%d%% Aufsammelreichweite.", fr = "+%d%% de portée de ramassage.", es = "+%d%% de alcance de recogida.", pt = "+%d%% de alcance de coleta.", ru = "+%d%% радиуса подбора.", pl = "+%d%% zasięgu zbierania.", tr = "+%d%% toplama menzili.", it = "+%d%% raggio di raccolta.", ja = "回収範囲+%d%%。", zh = "拾取范围+%d%%。", ko = "획득 반경 +%d%%." }
+menu_v = 10
+
+[[account_talent]]
+key = "keen"
+branch = 1
+row = 1
+costs = [4, 6]
+effect = { loot_pct = 5 }
+icon = "INV_Misc_Spyglass_02"
+name = { en = "Keen Eye", de = "Scharfes Auge", fr = "Œil perçant", es = "Ojo avizor", pt = "Olho Agudo", ru = "Зоркий глаз", pl = "Bystre oko", tr = "Keskin Göz", it = "Occhio acuto", ja = "鋭い目", zh = "锐眼", ko = "예리한 눈" }
+text = { en = "Bosses are %d%% more likely to drop each piece.", de = "Bosse lassen jedes Teil mit %d%% höherer Chance fallen.", fr = "Les boss ont %d%% de chances en plus de lâcher chaque pièce.", es = "Los jefes tienen un %d%% más de probabilidad de soltar cada pieza.", pt = "Os chefes têm %d%% mais chance de largar cada peça.", ru = "Шанс выпадения каждой части с боссов выше на %d%%.", pl = "Bossowie upuszczają każdy element z szansą wyższą o %d%%.", tr = "Boss'lar her parçayı %d%% daha olası düşürür.", it = "I boss hanno il %d%% di probabilità in più di far cadere ogni pezzo.", ja = "ボスが各装備をドロップする確率が%d%%上がります。", zh = "首领掉落每件装备的几率提高%d%%。", ko = "우두머리가 각 장비를 떨어뜨릴 확률이 %d%% 증가합니다." }
+menu_v = 5
+
+[[account_talent]]
+key = "lucky"
+branch = 1
+row = 1
+costs = [3, 4, 5]
+effect = { luck_pct = 3 }
+icon = "INV_Misc_Dice_02"
+name = { en = "Lucky", de = "Glückspilz", fr = "Veinard", es = "Afortunado", pt = "Sortudo", ru = "Везунчик", pl = "Szczęściarz", tr = "Şanslı", it = "Fortunato", ja = "ラッキー", zh = "幸运", ko = "행운아" }
+text = { en = "+%d%% luck: rarer cards and jewels.", de = "+%d%% Glück: seltenere Karten und Juwelen.", fr = "+%d%% de chance : cartes et joyaux plus rares.", es = "+%d%% de suerte: cartas y joyas más raras.", pt = "+%d%% de sorte: cartas e joias mais raras.", ru = "+%d%% удачи: карты и самоцветы реже.", pl = "+%d%% szczęścia: rzadsze karty i klejnoty.", tr = "+%d%% şans: daha nadir kartlar ve mücevherler.", it = "+%d%% fortuna: carte e gioielli più rari.", ja = "幸運+%d%%：よりレアなカードとジュエルが出ます。", zh = "幸运+%d%%：更稀有的卡牌和宝石。", ko = "행운 +%d%%: 더 희귀한 카드와 보석." }
+menu_v = 3
+
+[[account_talent]]
+key = "fortune"
+branch = 1
+row = 2
+costs = [6]
+effect = { gold_pct = 10 }
+icon = "INV_Crown_01"
+name = { en = "Fortune's Favour", de = "Gunst des Glücks", fr = "Faveur de la fortune", es = "Favor de la fortuna", pt = "Favor da Fortuna", ru = "Милость фортуны", pl = "Łaska fortuny", tr = "Talihin Lütfu", it = "Favore della fortuna", ja = "幸運の加護", zh = "命运眷顾", ko = "행운의 가호" }
+text = { en = "+%d%% gold in every run.", de = "+%d%% Gold in jedem Lauf.", fr = "+%d%% d'or à chaque partie.", es = "+%d%% de oro en cada partida.", pt = "+%d%% de ouro em cada partida.", ru = "+%d%% золота в каждом забеге.", pl = "+%d%% złota w każdej rozgrywce.", tr = "Her oyunda +%d%% altın.", it = "+%d%% oro in ogni partita.", ja = "すべてのランでゴールド+%d%%。", zh = "每场对局获得的金币+%d%%。", ko = "모든 런에서 골드 +%d%%." }
+menu_v = 10
+
+[[account_talent]]
+key = "lucky_star"
+branch = 1
+row = 2
+costs = [6]
+effect = { luck_pct = 6 }
+icon = "Spell_Arcane_StarFire"
+name = { en = "Lucky Star", de = "Glücksstern", fr = "Étoile chanceuse", es = "Estrella de la suerte", pt = "Estrela da Sorte", ru = "Счастливая звезда", pl = "Szczęśliwa gwiazda", tr = "Şans Yıldızı", it = "Stella fortunata", ja = "幸運の星", zh = "幸运星", ko = "행운의 별" }
+text = { en = "+%d%% luck: rarer cards and jewels.", de = "+%d%% Glück: seltenere Karten und Juwelen.", fr = "+%d%% de chance : cartes et joyaux plus rares.", es = "+%d%% de suerte: cartas y joyas más raras.", pt = "+%d%% de sorte: cartas e joias mais raras.", ru = "+%d%% удачи: карты и самоцветы реже.", pl = "+%d%% szczęścia: rzadsze karty i klejnoty.", tr = "+%d%% şans: daha nadir kartlar ve mücevherler.", it = "+%d%% fortuna: carte e gioielli più rari.", ja = "幸運+%d%%：よりレアなカードとジュエルが出ます。", zh = "幸运+%d%%：更稀有的卡牌和宝石。", ko = "행운 +%d%%: 더 희귀한 카드와 보석." }
+menu_v = 6
+
+[[account_talent]]
+key = "toughness"
+branch = 2
+row = 0
+costs = [2, 3, 4]
+effect = { health_pct = 4 }
+icon = "Spell_Holy_BlessingOfStamina"
+name = { en = "Toughness", de = "Zähigkeit", fr = "Ténacité", es = "Dureza", pt = "Dureza", ru = "Крепость", pl = "Wytrzymałość", tr = "Sağlamlık", it = "Tempra", ja = "タフネス", zh = "坚韧", ko = "강인함" }
+text = { en = "+%d%% maximum health.", de = "+%d%% maximale Gesundheit.", fr = "+%d%% de santé maximale.", es = "+%d%% de salud máxima.", pt = "+%d%% de vida máxima.", ru = "+%d%% макс. здоровья.", pl = "+%d%% maksymalnego zdrowia.", tr = "+%d%% azami can.", it = "+%d%% salute massima.", ja = "最大体力+%d%%。", zh = "最大生命值+%d%%。", ko = "최대 생명력 +%d%%." }
+menu_v = 4
+
+[[account_talent]]
+key = "swiftness"
+branch = 2
+row = 0
+costs = [2, 3, 4]
+effect = { speed_pct = 3 }
+icon = "Ability_Rogue_Sprint"
+name = { en = "Swiftness", de = "Schnelligkeit", fr = "Célérité", es = "Presteza", pt = "Presteza", ru = "Стремительность", pl = "Rączość", tr = "Hızlılık", it = "Rapidità", ja = "迅速", zh = "疾速", ko = "신속함" }
+text = { en = "+%d%% movement speed.", de = "+%d%% Laufgeschwindigkeit.", fr = "+%d%% de vitesse de déplacement.", es = "+%d%% de velocidad de movimiento.", pt = "+%d%% de velocidade de movimento.", ru = "+%d%% скорости движения.", pl = "+%d%% szybkości ruchu.", tr = "+%d%% hareket hızı.", it = "+%d%% velocità di movimento.", ja = "移動速度+%d%%。", zh = "移动速度+%d%%。", ko = "이동 속도 +%d%%." }
+menu_v = 3
+
+[[account_talent]]
+key = "dodge"
+branch = 2
+row = 0
+costs = [2, 4]
+effect = "dash"
+# Shift's ability: the steed by default; `dash` is how it reads in a mode whose Shift is the dash
+# (survivors-sim modes/*.toml `[hero] shift`). The key stays `dodge` for the saves.
+icon = "Ability_Mount_RidingHorse"
+name = { en = "Divine Steed", de = "Göttliches Ross", fr = "Destrier divin", es = "Corcel divino", pt = "Corcel Divino", ru = "Божественный скакун", pl = "Boski rumak", tr = "İlahi At", it = "Destriero divino", ja = "ディヴァイン・スティード", zh = "神圣战马", ko = "신성한 군마" }
+text = { en = "Learn Divine Steed: Shift puts you on your mount for a moment, riding much faster while your spells keep casting. Second rank: its two charges come back a quarter faster.", de = "Lerne Göttliches Ross: Umschalt setzt dich kurz auf dein Reittier, viel schneller, während deine Zauber weiterwirken. Zweiter Rang: Seine zwei Ladungen kommen um ein Viertel schneller zurück.", fr = "Apprends Destrier divin : Maj te met un instant en selle, bien plus rapide, tandis que tes sorts continuent d'être lancés. Second rang : ses deux charges reviennent un quart plus vite.", es = "Aprende Corcel divino: Mayús te sube un momento a tu montura, mucho más rápido, mientras tus hechizos siguen lanzándose. Segundo rango: sus dos cargas vuelven un cuarto más rápido.", pt = "Aprenda Corcel Divino: Shift coloca você na montaria por um instante, bem mais rápido, enquanto seus feitiços continuam sendo lançados. Segundo nível: suas duas cargas voltam um quarto mais rápido.", ru = "Изучи «Божественного скакуна»: Shift ненадолго сажает тебя на скакуна, ты движешься гораздо быстрее, а заклинания продолжают сотворяться. Второй ранг: два заряда возвращаются на четверть быстрее.", pl = "Poznaj Boskiego rumaka: Shift na chwilę sadza cię na wierzchowcu, znacznie szybszym, a twoje czary dalej działają. Drugi stopień: jego dwa ładunki wracają o jedną czwartą szybciej.", tr = "İlahi At'ı öğren: Shift seni kısa süre bineğine bindirir, büyülerin devam ederken çok daha hızlı gidersin. İkinci rütbe: iki şarjı çeyrek daha hızlı geri gelir.", it = "Impara Destriero divino: Maiusc ti mette in sella per un istante, cavalcando molto più veloce mentre i tuoi incantesimi continuano a colpire. Secondo grado: le sue due cariche tornano un quarto più in fretta.", ja = "ディヴァイン・スティードを習得：Shiftで一瞬マウントに乗り、呪文を唱え続けたままはるかに速く駆けます。ランク2：2回のチャージの回復が4分の1速くなります。", zh = "学会神圣战马：按Shift短暂骑上坐骑，以极快的速度奔驰，同时法术照常施放。第二等级：两次充能的恢复速度加快四分之一。", ko = "신성한 군마 습득: Shift를 누르면 잠시 탈것에 올라 훨씬 빠르게 달리며, 그동안에도 주문은 계속 시전됩니다. 2단계: 충전 2회가 4분의 1 더 빨리 돌아옵니다." }
+# "two charges" and "a quarter faster" are `[steed] charges` and `rank_recharge_pct` (survivors-sim
+# modes/standard.toml): change the text with them.
+dash = { icon = "Ability_Rogue_Feint", menu_v = 1, name = { en = "Dodge", de = "Ausweichen", fr = "Esquive", es = "Esquivar", pt = "Esquiva", ru = "Уклонение", pl = "Unik", tr = "Kaçınma", it = "Schivata", ja = "回避", zh = "闪避", ko = "회피" }, text = { en = "Learn the dodge: Shift dashes a few yards the way you move, untouchable for a moment. Each rank past the first: +%d charge.", de = "Lerne das Ausweichen: Umschalt springt ein paar Meter in Laufrichtung, einen Moment unverwundbar. Jeder Rang nach dem ersten: +%d Ladung.", fr = "Apprends l'esquive : Maj te propulse de quelques mètres dans ta direction, intouchable un instant. Chaque rang après le premier : +%d charge.", es = "Aprende a esquivar: Mayús te lanza unos metros en tu dirección, intocable un momento. Cada rango tras el primero: +%d carga.", pt = "Aprenda a esquiva: Shift dispara alguns metros na direção em que você se move, intocável por um instante. Cada nível após o primeiro: +%d carga.", ru = "Изучи уклонение: Shift бросает тебя на несколько метров в направлении движения, на миг ты неуязвим. Каждый ранг после первого: +%d заряд.", pl = "Poznaj unik: Shift niesie cię o kilka metrów w kierunku ruchu, a ty jesteś przez chwilę nietykalny. Każdy stopień po pierwszym: +%d ładunek.", tr = "Kaçınmayı öğren: Shift gittiğin yönde birkaç metre atılır, kısa süre dokunulmaz olursun. İlkinden sonraki her rütbe: +%d şarj.", it = "Impara la schivata: Maiusc ti fa scattare di qualche metro nella direzione in cui ti muovi, intoccabile per un istante. Ogni grado dopo il primo: +%d carica.", ja = "回避を習得：Shiftで移動方向へ数ヤードダッシュし、一瞬だけ攻撃を受けなくなります。2ランク目以降はランクごとにチャージ+%d。", zh = "学会闪避：按Shift朝移动方向冲刺数码，短时间内无法被击中。第一等级之后每级：充能+%d。", ko = "회피 돌진 습득: Shift를 누르면 이동하는 방향으로 몇 미터 돌진하며 잠시 공격받지 않습니다. 첫 단계 이후 단계마다: 충전 +%d회." } }
+
+[[account_talent]]
+key = "plating"
+branch = 2
+row = 1
+costs = [3, 4, 5]
+effect = { armor_pct = 3 }
+icon = "Ability_Warrior_DefensiveStance"
+name = { en = "Plating", de = "Panzerung", fr = "Blindage", es = "Blindaje", pt = "Blindagem", ru = "Обшивка", pl = "Opancerzenie", tr = "Zırh Kaplama", it = "Placcatura", ja = "装甲板", zh = "装甲", ko = "장갑판" }
+text = { en = "+%d%% armor.", de = "+%d%% Rüstung.", fr = "+%d%% d'armure.", es = "+%d%% de armadura.", pt = "+%d%% de armadura.", ru = "+%d%% брони.", pl = "+%d%% pancerza.", tr = "+%d%% zırh.", it = "+%d%% armatura.", ja = "アーマー+%d%%。", zh = "护甲+%d%%。", ko = "방어도 +%d%%." }
+menu_v = 3
+
+[[account_talent]]
+key = "mending"
+branch = 2
+row = 1
+costs = [3, 4, 5]
+effect = { regen = 1 }
+icon = "Spell_Holy_HealingAura"
+name = { en = "Mending", de = "Heilung", fr = "Soins", es = "Remiendo", pt = "Remendo", ru = "Починка", pl = "Uzdrowienie", tr = "Onarım", it = "Rammendo", ja = "修復", zh = "治愈", ko = "회복력" }
+text = { en = "+%d health regeneration.", de = "+%d Gesundheitsregeneration.", fr = "+%d de régénération de santé.", es = "+%d de regeneración de salud.", pt = "+%d de regeneração de vida.", ru = "+%d к регенерации здоровья.", pl = "+%d regeneracji zdrowia.", tr = "+%d can yenilenmesi.", it = "+%d rigenerazione della salute.", ja = "体力再生+%d。", zh = "生命恢复+%d。", ko = "생명력 재생 +%d." }
+menu_v = 1
+
+[[account_talent]]
+key = "might"
+branch = 2
+row = 2
+costs = [5, 7]
+effect = { damage_pct = 3 }
+icon = "Spell_Holy_BlessingOfStrength"
+name = { en = "Might", de = "Macht", fr = "Puissance", es = "Poderío", pt = "Poder", ru = "Мощь", pl = "Potęga", tr = "Kudret", it = "Potenza", ja = "剛力", zh = "威力", ko = "힘" }
+text = { en = "+%d%% damage.", de = "+%d%% Schaden.", fr = "+%d%% de dégâts.", es = "+%d%% de daño.", pt = "+%d%% de dano.", ru = "+%d%% урона.", pl = "+%d%% obrażeń.", tr = "+%d%% hasar.", it = "+%d%% danni.", ja = "ダメージ+%d%%。", zh = "伤害+%d%%。", ko = "피해 +%d%%." }
+menu_v = 3
+
+[[account_talent]]
+key = "alacrity"
+branch = 2
+row = 2
+costs = [5, 7]
+effect = { cooldown_pct = 3 }
+icon = "INV_Misc_PocketWatch_01"
+name = { en = "Alacrity", de = "Eile", fr = "Alacrité", es = "Premura", pt = "Presteza Ágil", ru = "Живость", pl = "Żwawość", tr = "Çabukluk", it = "Alacrità", ja = "敏捷", zh = "敏捷", ko = "기민함" }
+text = { en = "%d%% shorter cooldowns.", de = "%d%% kürzere Abklingzeiten.", fr = "Recharges réduites de %d%%.", es = "Reutilizaciones un %d%% más cortas.", pt = "Recargas %d%% menores.", ru = "Перезарядка короче на %d%%.", pl = "Odnowienia krótsze o %d%%.", tr = "Bekleme süreleri %d%% daha kısa.", it = "Ricariche più brevi del %d%%.", ja = "クールダウンが%d%%短くなります。", zh = "冷却时间缩短%d%%。", ko = "재사용 대기시간 %d%% 감소." }
+menu_v = 3

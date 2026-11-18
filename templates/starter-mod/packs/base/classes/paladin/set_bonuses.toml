@@ -1,0 +1,99 @@
+# The paladin's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: play recast [hammer_of_wrath] share 0.60p
+[[set_bonus]]
+key = "paladin_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Hammer of Wrath comes back, striking again for {v}%.", de = "Hammer des Zorns kehrt zurück und trifft erneut für {v}%.", fr = "Marteau de courroux revient et frappe de nouveau pour {v}%.", es = "Martillo de cólera regresa y vuelve a golpear con un {v}%.", pt = "Martelo da Ira volta, atingindo de novo com {v}%.", ru = "«Молот гнева» возвращается и бьёт ещё раз на {v}%.", pl = "Młot Gniewu wraca, uderzając ponownie za {v}%.", tr = "Hammer of Wrath geri döner ve %{v} ile yeniden vurur.", it = "Martello dell'ira ritorna, colpendo di nuovo per il {v}%.", ja = "ハンマー・オブ・ラースが戻ってきて、{v}%のダメージで再び命中します。", zh = "愤怒之锤会飞回，再次打击，造成{v}%的伤害。", ko = "천벌의 망치가 되돌아와 {v}%의 피해로 다시 적중합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.6, play = { recast = { keys = ["hammer_of_wrath"], delay = 0.3 } } }]
+shows = "v"
+percent = true
+
+# Original: mod follow [consecration]; mod damage [consecration] +0.20p
+[[set_bonus]]
+key = "paladin_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Consecration moves with you and deals {v}% more damage.", de = "Weihe wandert mit dir und verursacht {v}% mehr Schaden.", fr = "Consécration se déplace avec vous et inflige {v}% de dégâts en plus.", es = "Consagración se mueve contigo e inflige un {v}% más de daño.", pt = "Consagração se move com você e causa {v}% a mais de dano.", ru = "«Освящение» движется вместе с вами и наносит на {v}% больше урона.", pl = "Uświęcenie porusza się razem z tobą i zadaje o {v}% więcej obrażeń.", tr = "Consecration seninle birlikte hareket eder ve %{v} daha fazla hasar verir.", it = "Consacrazione si muove con te e infligge il {v}% di danni in più.", ja = "コンセクレーションが自分と共に移動し、ダメージが{v}%増加します。", zh = "奉献会随你移动，造成的伤害提高{v}%。", ko = "신성화가 당신을 따라 움직이며 피해가 {v}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ follow = ["consecration"] }]
+mods_v = 0.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["consecration"] }]
+mods_v = 0.2
+shows = "v"
+percent = true
+
+# Original: play kill_cast [holy_shock] -> holy_shock, once per 1.5 s (1.0 s empowered)
+[[set_bonus]]
+key = "paladin_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "A Holy Shock kill fires another Holy Shock, once every {v} sec.", de = "Ein Kill mit Heiliger Schock feuert einen weiteren Heiligen Schock ab, höchstens einmal alle {v} Sek.", fr = "Un ennemi tué par Horion sacré déclenche un autre Horion sacré, au plus une fois toutes les {v} s.", es = "Una muerte con Choque Sagrado lanza otro Choque Sagrado, una vez cada {v} s.", pt = "Uma morte por Choque Sagrado dispara outro Choque Sagrado, uma vez a cada {v} s.", ru = "Убийство «Шоком небес» выпускает ещё один «Шок небес», не чаще раза в {v} сек.", pl = "Zabójstwo Świętym Wstrząsem wystrzeliwuje kolejny Święty Wstrząs, najwyżej raz na {v} s.", tr = "Holy Shock ile öldürmek {v} sn'de bir kez bir Holy Shock daha atar.", it = "Un'uccisione con Folgore sacra lancia un'altra Folgore sacra, una volta ogni {v} sec.", ja = "ホーリー・ショックで敵を倒すと、もう1発ホーリー・ショックを放ちます（{v}秒に1回まで）。", zh = "神圣震击击杀敌人时会再发射一次神圣震击，每{v}秒一次。", ko = "신성 충격으로 적을 처치하면 신성 충격을 하나 더 발사합니다. {v}초에 한 번만 발동합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 1.5, play = { kill_cast = { keys = ["holy_shock"], spell = "holy_shock" } } }]
+empowered = 1.0
+shows = "v"
+
+# Original: play kill_burst [judgement] radius 8, 0.15p of max health
+[[set_bonus]]
+key = "paladin_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Enemies killed by Judgement explode for {v}% of their max health on everything within 8 yards.", de = "Durch Richturteil getötete Feinde explodieren und fügen allem innerhalb von 8 m {v}% ihrer maximalen Gesundheit zu.", fr = "Les ennemis tués par Jugement explosent pour {v}% de leurs points de vie maximum sur tout ce qui se trouve à moins de 8 m.", es = "Los enemigos que mata Sentencia explotan por el {v}% de su salud máxima sobre todo lo que haya a 8 m.", pt = "Inimigos mortos por Julgamento explodem com {v}% da vida máxima deles em tudo a até 8 m.", ru = "Враги, убитые «Правосудием», взрываются, нанося {v}% своего макс. здоровья всему в радиусе 8 м.", pl = "Wrogowie zabici Osądem wybuchają, zadając {v}% swojego maks. zdrowia wszystkiemu w promieniu 8 jd.", tr = "Judgement ile öldürülen düşmanlar patlar ve 8 m içindeki her şeye kendi azami canlarının %{v}'i kadar hasar verir.", it = "I nemici uccisi da Giudizio esplodono per il {v}% della loro salute massima su tutto entro 8 m.", ja = "ジャッジメントで倒した敵が爆発し、8ヤード以内のすべてに最大体力の{v}%のダメージを与えます。", zh = "被审判杀死的敌人会爆炸，对8码内的所有目标造成相当于其最大生命值{v}%的伤害。", ko = "심판으로 처치한 적이 폭발하여 8미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.15, play = { kill_burst = { keys = ["judgement"], dotted = false, radius = 8.0, gap = 0.0 } } }]
+shows = "v"
+percent = true
+
+# Original: play splash [exorcism] share 0.75, +round(3p) enemies
+[[set_bonus]]
+key = "paladin_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Exorcism leaps to {v} more enemies for 75% of its damage.", de = "Exorzismus springt auf {v} weitere Feinde über, für 75% seines Schadens.", fr = "Exorcisme bondit sur {v} ennemis de plus pour 75% de ses dégâts.", es = "Exorcismo salta a {v} enemigos más con un 75% de su daño.", pt = "Exorcismo salta para mais {v} inimigos com 75% do seu dano.", ru = "«Экзорцизм» перескакивает на дополнительных врагов ({v}) с 75% урона.", pl = "Egzorcyzm przeskakuje na {v} kolejnych wrogów, zadając 75% swoich obrażeń.", tr = "Exorcism, hasarının %75'i ile {v} düşmana daha sıçrar.", it = "Esorcismo balza su {v} nemici in più per il 75% dei suoi danni.", ja = "エクソシズムが追加で{v}体の敵に飛び移り、そのダメージの75%を与えます。", zh = "驱邪术会跳跃到{v}个额外的敌人身上，造成相当于其伤害75%的伤害。", ko = "퇴마술이 적을 {v}명 더 튀어 다니며 피해의 75%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 3.0, play = { splash = { keys = ["exorcism"], share = 0.75, radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+# Original: mod targets +v; damage +3.0; cooldown 0.40; stat vs_held +1.0p
+[[set_bonus]]
+key = "paladin_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Hammer of Justice strikes {v} more enemies, deals 300% more damage and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Hammer der Gerechtigkeit trifft {v} weitere Feinde, verursacht 300% mehr Schaden und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Marteau de la justice frappe {v} ennemis de plus, inflige 300% de dégâts en plus et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Martillo de justicia golpea a {v} enemigos más, inflige un 300% más de daño y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Martelo da Justiça atinge {v} inimigos a mais, causa 300% mais dano e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Молот правосудия поражает ещё {v} противников, наносит на 300% больше урона и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Młot sprawiedliwości trafia {v} kolejnych wrogów, zadaje o 300% więcej obrażeń i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Adalet Çekici {v} düşmana daha vurur, %300 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Martello della giustizia colpisce {v} nemici in più, infligge il 300% di danni in più e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "ハンマー・オブ・ジャスティスが追加で{v}体の敵に命中し、ダメージが300%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "制裁之锤额外击中{v}个敌人，造成的伤害提高300%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "심판의 망치가 적을 {v}명 더 공격하고, 피해가 300% 증가하며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["hammer_of_justice"] }]
+mods_v = 5.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["hammer_of_justice"] }]
+mods_v = 3.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["hammer_of_justice"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true

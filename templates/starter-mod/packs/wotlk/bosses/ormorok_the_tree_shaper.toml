@@ -1,0 +1,16 @@
+# Ormorok the Tree-Shaper: Crystal Spikes, Trample, the Crystalline Tanglers.
+
+[[boss]]
+key = "ormorok_the_tree_shaper"
+
+[[boss.kit]]
+every = 12.0
+ability = { trail = { spell = 47958, count = 5, radius = 5.0, warn = 1.6, gap = 0.7, factor = 2.0 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 48016, radius = 9.0, warn = 1.8, knock = 13.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

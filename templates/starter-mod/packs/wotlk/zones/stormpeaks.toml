@@ -1,0 +1,293 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "stormpeaks"
+order = 32
+name = { en = "The Storm Peaks", de = "Die Sturmgipfel", fr = "Les pics Foudroyés", es = "Las Cumbres Tormentosas", pt = "Os Picos Tempestuosos", ru = "Грозовая Гряда", pl = "Burzowe Szczyty", tr = "Fırtına Zirveleri", it = "Le Cime Tempestose", ja = "ストーム・ピークス", zh = "风暴峭壁", ko = "폭풍우 봉우리" }
+subtitle = { en = "The Halls of Ulduar", de = "Die Hallen von Ulduar", fr = "Les salles d'Ulduar", es = "Las Cámaras de Ulduar", pt = "Os Salões de Ulduar", ru = "Чертоги Ульдуара", pl = "Hale Ulduaru", tr = "Ulduar Salonları", it = "Le Sale di Ulduar", ja = "ウルドゥアルの間", zh = "奥杜尔大厅", ko = "울두아르의 전당" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_StormPeaks_01"
+map = 571
+map_name = "Northrend"
+area = 67
+center = [6306.3, -1120.8]
+radius = 100.0
+map_bounds = [1841.67, -5270.83, 10197.92, 5456.25]
+health_factor = 31.46
+gold_factor = 4.52
+late_factor = 0.4
+hour = 14
+weather = { fine = 40, snow = 60 }
+
+[[zone.enemy]]
+entry = 5000
+name = { en = "Snobold Mongrel", de = "Schneeboldköter", fr = "Roquet snobold", es = "Chucho snobold", pt = "Vira-lata Snobold", ru = "Снобольд-дворняга", pl = "Kundel Snobold", tr = "Snobold Melezi", it = "Bastardo Snobold", ja = "スノーボルド・モングレル", zh = "雪地狗头人杂种", ko = "스노볼드 잡종" }
+type = "humanoid"
+display = 27172
+icon = "INV_Misc_Head_Kobold_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 5001
+name = { en = "Frost Worg", de = "Frostworg", fr = "Worg du givre", es = "Huargo de escarcha", pt = "Worg Gélido", ru = "Ледяной ворг", pl = "Mroźny worg", tr = "Buz Worg'u", it = "Worg del gelo", ja = "フロスト・ウォーグ", zh = "冰霜座狼", ko = "서리 늑대" }
+type = "beast"
+display = 22089
+icon = "Ability_Hunter_Pet_Wolf"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.55
+
+[[zone.enemy]]
+entry = 5002
+name = { en = "Earthen Ironguard", de = "Eisenwache der Irdenen", fr = "Garde-fer terrestre", es = "Guardia de hierro terráneo", pt = "Guarda de Ferro Terrano", ru = "Железный страж земельников", pl = "Ziemny żelazny strażnik", tr = "Topraklı Demir Muhafız", it = "Guardiaferro Terrigeno", ja = "アーセン・アイアンガード", zh = "土灵铁卫", ko = "토석인 무쇠경비병" }
+type = "humanoid"
+display = 26091
+icon = "INV_Misc_Head_Dwarf_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 5003
+name = { en = "Hyldnir Spellweaver", de = "Zauberwirkerin der Hyldnir", fr = "Tisseuse de sorts hyldnir", es = "Tejehechizos Hyldnir", pt = "Tecelã de Feitiços Hyldnir", ru = "Чародейка Хюльднир", pl = "Tkacz czarów Hyldnir", tr = "Hyldnir Büyü Dokuyucusu", it = "Tessincantesimi Hyldnir", ja = "ヒルドニアのスペルウィーヴァー", zh = "海德尼尔织法者", ko = "힐드니르 주문술사" }
+type = "humanoid"
+display = 25771
+icon = "INV_Misc_Head_Vrykul"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.85
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 5004
+name = { en = "Iron Golem", de = "Eisengolem", fr = "Golem de fer", es = "Gólem de hierro", pt = "Golem de Ferro", ru = "Железный голем", pl = "Żelazny golem", tr = "Demir Golem", it = "Golem di ferro", ja = "アイアン・ゴーレム", zh = "钢铁魔像", ko = "무쇠 골렘" }
+type = "mechanical"
+display = 26130
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.7
+role = { exploder = { spell = 9874, burst = 7670, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 5005
+name = { en = "Stormforged Iron Giant", de = "Sturmgeschmiedeter Eisenriese", fr = "Géant de fer forgé par la tempête", es = "Gigante de hierro forjado por la tormenta", pt = "Gigante de Ferro Forjado pela Tempestade", ru = "Железный великан, выкованный бурей", pl = "Żelazny olbrzym wykuty w burzy", tr = "Fırtınada Dövülmüş Demir Dev", it = "Gigante di ferro Forgiatempesta", ja = "ストームフォージド・アイアン・ジャイアント", zh = "风暴铸造钢铁巨人", ko = "폭풍벼림 무쇠 거인" }
+type = "giant"
+display = 26782
+icon = "Achievement_Reputation_Ogre"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.35
+
+[[zone.enemy]]
+entry = 5006
+name = { en = "Stormcrest Eagle", de = "Sturmkammadler", fr = "Aigle crête-d'orage", es = "Águila Crestatormenta", pt = "Águia Crista de Tempestade", ru = "Орёл Грозового Гребня", pl = "Orzeł Stormcrest", tr = "Fırtınatepe Kartalı", it = "Aquila Cresta di Tempesta", ja = "ストームクレスト・イーグル", zh = "风暴之冠雄鹰", ko = "폭풍마루 독수리" }
+type = "beast"
+display = 23481
+icon = "Ability_Hunter_Pet_Owl"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.7
+
+[[zone.enemy]]
+entry = 5007
+name = { en = "Stormforged Artificer", de = "Sturmgeschmiedeter Konstrukteur", fr = "Artificier forgé par la tempête", es = "Artífice forjado por la tormenta", pt = "Artífice Forjado pela Tempestade", ru = "Механик, выкованный бурей", pl = "Rzemieślnik wykuty w burzy", tr = "Fırtınada Dövülmüş Zanaatkar", it = "Artefice Forgiatempesta", ja = "ストームフォージドの工匠", zh = "风暴铸造工匠", ko = "폭풍벼림 기술자" }
+type = "humanoid"
+display = 25757
+icon = "INV_Misc_Head_Dwarf_01"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9532, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 5008
+name = { en = "Hyldsmeet Warbear", de = "Kriegsbär von Hyldsmeet", fr = "Ours de guerre de Hyldsmeet", es = "Oso de guerra de Hyldsmeet", pt = "Urso de Guerra de Hyldsmeet", ru = "Боевой медведь Хюльдсмита", pl = "Wojenny niedźwiedź Hyldsmeet", tr = "Hyldsmeet Savaş Ayısı", it = "Orso da guerra Hyldsmeet", ja = "ヒルズミートのウォーベア", zh = "海德斯米特战熊", ko = "힐드스미트 전투곰" }
+type = "beast"
+display = 26358
+icon = "Ability_Hunter_Pet_Bear"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.75
+
+[[zone.elite]]
+entry = 5010
+name = { en = "Stormforged Champion", de = "Sturmgeschmiedeter Champion", fr = "Champion forgé par la tempête", es = "Campeón forjado por la tormenta", pt = "Campeão Forjado pela Tempestade", ru = "Чемпион, выкованный бурей", pl = "Czempion wykuty w burzy", tr = "Fırtınada Dövülmüş Şampiyon", it = "Campione Forgiatempesta", ja = "ストームフォージド・チャンピオン", zh = "风暴铸造勇士", ko = "폭풍벼림 용사" }
+type = "humanoid"
+display = 25985
+icon = "INV_Misc_Head_Dwarf_01"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.elite]]
+entry = 5011
+name = { en = "Storm Revenant", de = "Sturmwiedergänger", fr = "Revenant de la tempête", es = "Renacido de la tormenta", pt = "Aparição da Tempestade", ru = "Призрак бури", pl = "Burzowe widmo", tr = "Fırtına Hortlağı", it = "Spettro della tempesta", ja = "ストーム・レヴナント", zh = "风暴亡魂", ko = "폭풍 망령" }
+type = "elemental"
+display = 26380
+icon = "Spell_Nature_Cyclone"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.4
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { pool = { spell = 16914, burst = 0, radius = 5.0, warn = 1.6, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { whirlwind = { spell = 8989, radius = 6.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite]]
+entry = 5012
+name = { en = "Storm Peaks Proto-Drake", de = "Protodrache der Sturmgipfel", fr = "Proto-drake des pics Foudroyés", es = "Protodraco de las Cumbres Tormentosas", pt = "Protodraco dos Picos Tempestuosos", ru = "Протодракон Грозовой Гряды", pl = "Proto-smok Burzowych Szczytów", tr = "Fırtına Zirveleri Proto-Ejderi", it = "Proto-drago delle Cime Tempestose", ja = "ストーム・ピークス・プロトドレイク", zh = "风暴峭壁始祖幼龙", ko = "폭풍우 봉우리 원시비룡" }
+type = "dragonkin"
+display = 26711
+icon = "INV_PET_FROSTWYRM"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 0.7
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16396, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 2120, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.boss]]
+entry = 5090
+name = { en = "Krystallus", de = "Krystallus", fr = "Krystallus", es = "Krystallus", pt = "Krystallus", ru = "Кристаллус", pl = "Krystallus", tr = "Krystallus", it = "Krystallus", ja = "クリスタルス", zh = "克莱斯塔卢斯", ko = "크리스탈루스" }
+type = "elemental"
+display = 26174
+icon = "Spell_Nature_EarthElemental_Totem"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.4
+minute = 4
+yell = { en = "Crush....", de = "Zermalmen....", fr = "Écraser....", es = "Aplastar....", pt = "Esmagar....", ru = "Раздавить....", pl = "Zmiażdżyć....", tr = "Ez....", it = "Schiaccia....", ja = "潰す…。", zh = "碾碎……", ko = "부숴...." }
+kit = "krystallus"
+
+[[zone.boss]]
+entry = 5091
+name = { en = "General Bjarngrim", de = "General Bjarngrim", fr = "Général Bjarngrim", es = "General Bjarngrim", pt = "General Bjarngrim", ru = "Генерал Бьярнгрим", pl = "Generał Bjarngrim", tr = "General Bjarngrim", it = "Generale Bjarngrim", ja = "ビャルングリム将軍", zh = "比亚格林将军", ko = "장군 비야른그림" }
+type = "humanoid"
+display = 25982
+icon = "Achievement_Boss_GeneralBjarngrim"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.6
+minute = 8
+yell = { en = "I am the greatest of my father's sons!", de = "Ich bin der größte der Söhne meines Vaters!", fr = "Je suis le plus grand des fils de mon père !", es = "¡Soy el más grande de los hijos de mi padre!", pt = "Sou o maior dos filhos do meu pai!", ru = "Я величайший из сыновей моего отца!", pl = "Jestem największym z synów mego ojca!", tr = "Ben babamın oğullarının en büyüğüyüm!", it = "Io sono il più grande dei figli di mio padre!", ja = "我こそ父の息子たちの中で最も偉大な者！", zh = "我是我父亲最伟大的儿子！", ko = "나는 아버지의 아들들 중 가장 위대하다!" }
+kit = "general_bjarngrim"
+
+[[zone.boss]]
+entry = 5092
+name = { en = "Razorscale", de = "Klingenschuppe", fr = "Tranchécaille", es = "Tajoescama", pt = "Escamalâmina", ru = "Острокрыл", pl = "Razorscale", tr = "Usturapul", it = "Tagliasquame", ja = "レイザースケイル", zh = "锋鳞", ko = "칼날비늘" }
+type = "dragonkin"
+display = 28787
+icon = "Achievement_Boss_Razorscale"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.4
+minute = 12
+yell = { en = "Razorscale screeches overhead!", de = "Klingenschuppe kreischt über dir!", fr = "Tranchécaille hurle au-dessus de toi !", es = "¡Tajoescama chilla sobre ti!", pt = "Escamalâmina guincha sobre você!", ru = "Острокрыл визжит над головой!", pl = "Razorscale skrzeczy nad głowami!", tr = "Usturapul tepenizde çığlık atıyor!", it = "Tagliasquame stride sopra di voi!", ja = "レイザースケイルが頭上で金切り声を上げる！", zh = "锋鳞在头顶尖啸！", ko = "칼날비늘이 머리 위에서 날카롭게 울부짖습니다!" }
+kit = "razorscale"
+
+[[zone.boss]]
+entry = 5093
+name = { en = "Hodir", de = "Hodir", fr = "Hodir", es = "Hodir", pt = "Hodir", ru = "Ходир", pl = "Hodir", tr = "Hodir", it = "Hodir", ja = "ホディア", zh = "霍迪尔", ko = "호디르" }
+type = "giant"
+display = 28743
+icon = "Achievement_Boss_Hodir_01"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.2
+minute = 16
+yell = { en = "You will suffer for this trespass!", de = "Ihr werdet für dieses Eindringen leiden!", fr = "Vous souffrirez pour cette intrusion !", es = "¡Sufriréis por esta intrusión!", pt = "Vocês vão sofrer por esta invasão!", ru = "Вы заплатите за это вторжение!", pl = "Zapłacicie za to wtargnięcie!", tr = "Bu izinsiz girişin bedelini acıyla ödeyeceksiniz!", it = "Soffrirete per questa intrusione!", ja = "この侵入の代償を味わうがいい！", zh = "你们会为这次闯入付出代价！", ko = "이 침입의 대가로 고통받으리라!" }
+kit = "hodir"
+
+[[zone.boss]]
+entry = 2109
+name = { en = "Yogg-Saron", de = "Yogg-Saron", fr = "Yogg-Saron", es = "Yogg-Saron", pt = "Yogg-Saron", ru = "Йогг-Сарон", pl = "Yogg-Saron", tr = "Yogg-Saron", it = "Yogg-Saron", ja = "ヨグ＝サロン", zh = "尤格-萨隆", ko = "요그사론" }
+type = "demon"
+display = 28817
+icon = "Achievement_Boss_YoggSaron_01"
+health = 60000
+damage = 66
+speed = 6.0
+# 2026-11-10: a third smaller, but a body wider than its size says so the melee heroes reach it
+# (a hit or a swing ends at the body's edge, 1.2 yd at the old size).
+size = 1.6
+body_radius = 2.0
+minute = 20
+yell = { en = "Your fate is sealed. The end of days is finally upon you!", de = "Euer Schicksal ist besiegelt. Das Ende der Tage ist endlich gekommen!", fr = "Votre sort est scellé. La fin des temps est enfin arrivée !", es = "Vuestro destino está sellado. ¡El fin de los días ha llegado por fin!", pt = "O destino de vocês está selado. O fim dos dias finalmente chegou!", ru = "Ваша судьба решена. Конец времён наконец настал!", pl = "Wasz los jest przesądzony. Koniec dni wreszcie nadszedł!", tr = "Kaderiniz mühürlendi. Günlerin sonu nihayet üzerinizde!", it = "Il vostro destino è segnato. La fine dei giorni è finalmente su di voi!", ja = "貴様らの運命は決まった。ついに終末の日が訪れたのだ！", zh = "你们的命运已经注定。末日终于降临在你们身上！", ko = "너희 운명은 정해졌다. 마침내 종말의 날이 닥쳤노라!" }
+final = true
+kit = "yogg_saron"

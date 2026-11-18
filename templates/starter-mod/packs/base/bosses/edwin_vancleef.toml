@@ -1,0 +1,20 @@
+# Edwin VanCleef's abilities, Elwynn Forest.
+
+[[boss]]
+key = "edwin_vancleef"
+
+[[boss.kit]]
+every = 9.0
+ability = { combo = [[{ blink = { spell = 1856, distance = 6.0 } }, { cone = { spell = 15284, range = 10.0, arc = 70.0, warn = 1.2, factor = 2.4 } }], 0.5] }
+
+[[boss.kit]]
+every = 7.0
+ability = { pool = { spell = 5740, burst = 13812, radius = 9.0, warn = 1.5, factor = 2.6 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { combo = [[{ nova = { spell = 1680, radius = 8.0, warn = 2.0 } }, { leap = { spell = 1680, radius = 6.0, reach = 16.0, warn = 1.4, factor = 2.2 } }], 1.4] }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

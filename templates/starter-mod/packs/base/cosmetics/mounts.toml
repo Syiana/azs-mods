@@ -1,0 +1,331 @@
+# The shop's mounts (survivors-sim mounts.rs). Displays are CreatureDisplayInfo.dbc ids, Alliance then Horde.
+#
+# Every mount, in the shop's order (`SurvivorsWings.lua` lists the same); the save and the
+# Game Pass name them by key. `TUNE` the prices; price 0 is not sold: only Recruit a Friend
+# gives it (`crate::referral::MILESTONES`). The displays, checked against the stock 3.3.5a `CreatureDisplayInfo.dbc` and
+# `CreatureModelData.dbc` (their models in the comments):
+
+# Creature\bearmount\BearMount (black skin, red armor).
+[[mount]]
+key = "amani_bear"
+name = { en = "Amani War Bear", de = "Kriegsbär der Amani", fr = "Ours de guerre amani", es = "Oso de guerra Amani", pt = "Urso de Guerra Amani", ru = "Боевой медведь Амани", pl = "Wojenny niedźwiedź Amani", tr = "Amani Savaş Ayısı", it = "Orso da guerra Amani", ja = "アマニ・ウォーベア", zh = "阿曼尼战熊", ko = "아마니 전투곰" }
+price = 5000
+alliance = 22464
+horde = 22464
+
+# Creature\Mammoth\MammothMount_3seat, the Alliance's and the Horde's armor.
+[[mount]]
+key = "tundra_mammoth"
+name = { en = "Traveler's Tundra Mammoth", de = "Tundramammut des Reisenden", fr = "Mammouth de la toundra du voyageur", es = "Mamut de la tundra del viajero", pt = "Mamute da Tundra do Viajante", ru = "Тундровый мамонт путешественника", pl = "Tundrowy mamut podróżnika", tr = "Gezginin Tundra Mamutu", it = "Mammut della tundra del viaggiatore", ja = "トラベラーズ・ツンドラ・マンモス", zh = "旅行者的苔原猛犸象", ko = "여행자의 툰드라 매머드" }
+price = 8000
+alliance = 27237
+horde = 27238
+
+# Creature\MotorcycleVehicle\MotorcycleVehicle: Mekgineer's Chopper (Alliance skin) and the
+# Mechano-hog (Horde skin).
+[[mount]]
+key = "chopper"
+name = { en = "Mekgineer's Chopper / Mechano-hog", de = "Mechanikerchopper / Mechanoschwein", fr = "Chopper du mekgénieur / Mécano-hog", es = "Chopper del mekaingeniero / Mecanocerdo", pt = "Chopper do Mekgenheiro / Mecanoporco", ru = "Чоппер механика / Механо-хряк", pl = "Chopper mekinżyniera / Mechanosiekacz", tr = "Mekmühendisin Chopper'ı / Mekano-domuz", it = "Chopper del Mekgineer / Meccano-cinghiale", ja = "メクジニアズ・チョッパー / メカノホッグ", zh = "机械师的摩托 / 机械化摩托", ko = "멕기니어의 오토바이 / 기계 돼지" }
+price = 10000
+alliance = 25870
+horde = 25871
+
+# CREATURE\HeadlessHorsemanHorse\HeadlessHorsemanHorse.
+[[mount]]
+key = "horseman"
+name = { en = "Headless Horseman's Mount", de = "Reittier des kopflosen Reiters", fr = "Monture du Cavalier sans tête", es = "Montura del Jinete sin Cabeza", pt = "Montaria do Cavaleiro sem Cabeça", ru = "Скакун Всадника без головы", pl = "Wierzchowiec Jeźdźca bez Głowy", tr = "Başsız Süvari'nin Atı", it = "Destriero del Cavaliere Senza Testa", ja = "ヘッドレス・ホースマンのマウント", zh = "无头骑士的坐骑", ko = "저주받은 기사의 군마" }
+price = 12000
+alliance = 22653
+horde = 22653
+
+# Creature\ProtoDragon\MDProtoDrakeMount (Northrend blue).
+[[mount]]
+key = "blue_proto"
+name = { en = "Blue Proto-Drake", de = "Blauer Protodrache", fr = "Proto-drake bleu", es = "Protodraco azul", pt = "Protodraco Azul", ru = "Синий протодракон", pl = "Niebieski proto-smok", tr = "Mavi Proto-Ejder", it = "Proto-drago blu", ja = "ブルー・プロトドレイク", zh = "蓝色始祖幼龙", ko = "푸른 원시비룡" }
+price = 15000
+alliance = 28041
+horde = 28041
+
+# Creature\RocketMount2\RocketMount2 (blue).
+[[mount]]
+key = "x53_rocket"
+name = { en = "X-53 Touring Rocket", de = "X-53-Touristenrakete", fr = "Fusée de tourisme X-53", es = "Cohete turístico X-53", pt = "Foguete de Turismo X-53", ru = "Туристическая ракета X-53", pl = "Rakieta turystyczna X-53", tr = "X-53 Gezi Roketi", it = "Razzo da turismo X-53", ja = "X-53ツーリング・ロケット", zh = "X-53观光火箭", ko = "X-53 관광용 로켓" }
+price = 18000
+alliance = 31992
+horde = 31992
+
+# Creature\SpectralTiger\SpectralTiger (armored): the Spectral Tiger, the plain one. The tigers
+# are the shop's priciest mounts. Keys: `spectral_tiger` is the SWIFT one (it was the only tiger,
+# saves hold the key), `spectral_tiger_normal` the plain one, `_<colour>` their colours.
+[[mount]]
+key = "spectral_tiger_normal"
+name = { en = "Spectral Tiger", de = "Spektraltiger", fr = "Tigre spectral", es = "Tigre espectral", pt = "Tigre Espectral", ru = "Призрачный тигр", pl = "Widmowy tygrys", tr = "Hayalet Kaplan", it = "Tigre spettrale", ja = "スペクトラル・タイガー", zh = "幽灵虎", ko = "유령 호랑이" }
+price = 150000
+alliance = 21973
+horde = 21973
+
+# Creature\SpectralTiger\SpectralTigerEpic (armored).
+[[mount]]
+key = "spectral_tiger"
+name = { en = "Swift Spectral Tiger", de = "Schneller Spektraltiger", fr = "Tigre spectral rapide", es = "Tigre espectral rápido", pt = "Tigre Espectral Veloz", ru = "Стремительный призрачный тигр", pl = "Szybki widmowy tygrys", tr = "Hızlı Hayalet Kaplan", it = "Tigre spettrale veloce", ja = "スウィフト・スペクトラル・タイガー", zh = "迅捷幽灵虎", ko = "날쌘 유령 호랑이" }
+price = 150000
+alliance = 21974
+horde = 21974
+
+# The tigers' colours: the armored skin (Creature\SpectralTiger\SpectralRidingTigerArmored) turned in
+# hue, one texture each in patch-~ and a CreatureDisplayInfo row per tiger (99101-99105 the plain
+# ones, 99111-99115 the swift ones; `node tools/tiger-patch.js` builds both, its COLOURS list
+# names the same ids). The saddle is the model's own and stays purple.
+
+# Crimson Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_normal_crimson"
+name = { en = "Crimson Spectral Tiger", de = "Karmesinroter Spektraltiger", fr = "Tigre spectral cramoisi", es = "Tigre espectral carmesí", pt = "Tigre Espectral Carmesim", ru = "Багровый призрачный тигр", pl = "Szkarłatny widmowy tygrys", tr = "Kızıl Hayalet Kaplan", it = "Tigre spettrale cremisi", ja = "深紅のスペクトラル・タイガー", zh = "赤红幽灵虎", ko = "진홍 유령 호랑이" }
+price = 150000
+alliance = 99101
+horde = 99101
+
+# Emerald Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_normal_emerald"
+name = { en = "Emerald Spectral Tiger", de = "Smaragdgrüner Spektraltiger", fr = "Tigre spectral émeraude", es = "Tigre espectral esmeralda", pt = "Tigre Espectral Esmeralda", ru = "Изумрудный призрачный тигр", pl = "Szmaragdowy widmowy tygrys", tr = "Zümrüt Hayalet Kaplan", it = "Tigre spettrale smeraldo", ja = "エメラルドのスペクトラル・タイガー", zh = "翡翠幽灵虎", ko = "에메랄드 유령 호랑이" }
+price = 150000
+alliance = 99102
+horde = 99102
+
+# Amethyst Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_normal_amethyst"
+name = { en = "Amethyst Spectral Tiger", de = "Amethystfarbener Spektraltiger", fr = "Tigre spectral améthyste", es = "Tigre espectral amatista", pt = "Tigre Espectral Ametista", ru = "Аметистовый призрачный тигр", pl = "Ametystowy widmowy tygrys", tr = "Ametist Hayalet Kaplan", it = "Tigre spettrale ametista", ja = "アメジストのスペクトラル・タイガー", zh = "紫晶幽灵虎", ko = "자수정 유령 호랑이" }
+price = 150000
+alliance = 99103
+horde = 99103
+
+# Golden Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_normal_golden"
+name = { en = "Golden Spectral Tiger", de = "Goldener Spektraltiger", fr = "Tigre spectral doré", es = "Tigre espectral dorado", pt = "Tigre Espectral Dourado", ru = "Золотой призрачный тигр", pl = "Złoty widmowy tygrys", tr = "Altın Hayalet Kaplan", it = "Tigre spettrale dorato", ja = "黄金のスペクトラル・タイガー", zh = "金色幽灵虎", ko = "황금 유령 호랑이" }
+price = 150000
+alliance = 99104
+horde = 99104
+
+# Shadow Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_normal_shadow"
+name = { en = "Shadow Spectral Tiger", de = "Schattenschwarzer Spektraltiger", fr = "Tigre spectral d'ombre", es = "Tigre espectral sombrío", pt = "Tigre Espectral Sombrio", ru = "Теневой призрачный тигр", pl = "Cienisty widmowy tygrys", tr = "Gölge Hayalet Kaplan", it = "Tigre spettrale d'ombra", ja = "シャドウ・スペクトラル・タイガー", zh = "暗影幽灵虎", ko = "그림자 유령 호랑이" }
+price = 150000
+alliance = 99105
+horde = 99105
+
+# Swift Crimson Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_crimson"
+name = { en = "Swift Crimson Spectral Tiger", de = "Schneller karmesinroter Spektraltiger", fr = "Tigre spectral rapide cramoisi", es = "Tigre espectral rápido carmesí", pt = "Tigre Espectral Veloz Carmesim", ru = "Стремительный багровый призрачный тигр", pl = "Szybki szkarłatny widmowy tygrys", tr = "Hızlı Kızıl Hayalet Kaplan", it = "Tigre spettrale veloce cremisi", ja = "深紅のスウィフト・スペクトラル・タイガー", zh = "迅捷赤红幽灵虎", ko = "날쌘 진홍 유령 호랑이" }
+price = 150000
+alliance = 99111
+horde = 99111
+
+# Swift Emerald Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_emerald"
+name = { en = "Swift Emerald Spectral Tiger", de = "Schneller smaragdgrüner Spektraltiger", fr = "Tigre spectral rapide émeraude", es = "Tigre espectral rápido esmeralda", pt = "Tigre Espectral Veloz Esmeralda", ru = "Стремительный изумрудный призрачный тигр", pl = "Szybki szmaragdowy widmowy tygrys", tr = "Hızlı Zümrüt Hayalet Kaplan", it = "Tigre spettrale veloce smeraldo", ja = "エメラルドのスウィフト・スペクトラル・タイガー", zh = "迅捷翡翠幽灵虎", ko = "날쌘 에메랄드 유령 호랑이" }
+price = 150000
+alliance = 99112
+horde = 99112
+
+# Swift Amethyst Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_amethyst"
+name = { en = "Swift Amethyst Spectral Tiger", de = "Schneller amethystfarbener Spektraltiger", fr = "Tigre spectral rapide améthyste", es = "Tigre espectral rápido amatista", pt = "Tigre Espectral Veloz Ametista", ru = "Стремительный аметистовый призрачный тигр", pl = "Szybki ametystowy widmowy tygrys", tr = "Hızlı Ametist Hayalet Kaplan", it = "Tigre spettrale veloce ametista", ja = "アメジストのスウィフト・スペクトラル・タイガー", zh = "迅捷紫晶幽灵虎", ko = "날쌘 자수정 유령 호랑이" }
+price = 150000
+alliance = 99113
+horde = 99113
+
+# Swift Golden Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_golden"
+name = { en = "Swift Golden Spectral Tiger", de = "Schneller goldener Spektraltiger", fr = "Tigre spectral rapide doré", es = "Tigre espectral rápido dorado", pt = "Tigre Espectral Veloz Dourado", ru = "Стремительный золотой призрачный тигр", pl = "Szybki złoty widmowy tygrys", tr = "Hızlı Altın Hayalet Kaplan", it = "Tigre spettrale veloce dorato", ja = "黄金のスウィフト・スペクトラル・タイガー", zh = "迅捷金色幽灵虎", ko = "날쌘 황금 유령 호랑이" }
+price = 150000
+alliance = 99114
+horde = 99114
+
+# Swift Shadow Spectral Tiger.
+[[mount]]
+key = "spectral_tiger_shadow"
+name = { en = "Swift Shadow Spectral Tiger", de = "Schneller schattenschwarzer Spektraltiger", fr = "Tigre spectral rapide d'ombre", es = "Tigre espectral rápido sombrío", pt = "Tigre Espectral Veloz Sombrio", ru = "Стремительный теневой призрачный тигр", pl = "Szybki cienisty widmowy tygrys", tr = "Hızlı Gölge Hayalet Kaplan", it = "Tigre spettrale veloce d'ombra", ja = "シャドウ・スウィフト・スペクトラル・タイガー", zh = "迅捷暗影幽灵虎", ko = "날쌘 그림자 유령 호랑이" }
+price = 150000
+alliance = 99115
+horde = 99115
+
+# Creature\RidingPhoenix\RidingPhoenix.
+[[mount]]
+key = "alar"
+name = { en = "Ashes of Al'ar", de = "Asche von Al'ar", fr = "Cendres d'Al'ar", es = "Cenizas de Al'ar", pt = "Cinzas de Al'ar", ru = "Пепел Ал'ара", pl = "Popioły Al'ara", tr = "Al'ar'ın Külleri", it = "Ceneri di Al'ar", ja = "アルアーの灰", zh = "奥的灰烬", ko = "알라르의 재" }
+price = 22000
+alliance = 17890
+horde = 17890
+
+# CREATURE\Mimiron\Mimiron_Head_Mount.
+[[mount]]
+key = "mimiron"
+name = { en = "Mimiron's Head", de = "Mimirons Kopf", fr = "Tête de Mimiron", es = "Cabeza de Mimiron", pt = "Cabeça de Mimiron", ru = "Голова Мимирона", pl = "Głowa Mimirona", tr = "Mimiron'un Kafası", it = "Testa di Mimiron", ja = "ミミロンの頭", zh = "米米尔隆的头部", ko = "미미론의 머리" }
+price = 28000
+alliance = 28890
+horde = 28890
+
+# Creature\WingedHorse\WingedHorse.
+[[mount]]
+key = "invincible"
+name = { en = "Invincible", de = "Unverwundbar", fr = "Invincible", es = "Invencible", pt = "Invencível", ru = "Непобедимый", pl = "Niezwyciężony", tr = "Yenilmez", it = "Invincibile", ja = "インヴィンシブル", zh = "无敌", ko = "무적" }
+price = 30000
+alliance = 31007
+horde = 31007
+
+# Recruit a Friend's (not sold). Creature\Gryphon\Gryphon_ArmoredMount (Gryphon_ArmorRed)
+# for the Alliance, Creature\RidingWyvernArmored\RidingWyvernArmored (red armor) for the Horde.
+[[mount]]
+key = "red_gryphon"
+name = { en = "Swift Red Gryphon / Swift Red Wind Rider", de = "Schneller roter Greif / Schneller roter Windreiter", fr = "Griffon rouge rapide / Chevaucheur de vent rouge rapide", es = "Grifo rojo rápido / Jinete del viento rojo rápido", pt = "Grifo Vermelho Veloz / Ventania Vermelha Veloz", ru = "Быстрый красный грифон / Быстрый красный наездник на ветре", pl = "Szybki czerwony gryf / Szybki czerwony jeździec wiatru", tr = "Hızlı Kızıl Grifon / Hızlı Kızıl Rüzgar Binicisi", it = "Grifone rosso veloce / Cavalcavento rosso veloce", ja = "スウィフト・レッド・グリフォン / スウィフト・レッド・ウィンドライダー", zh = "迅捷红色狮鹫 / 迅捷红色双足飞龙", ko = "날쌘 붉은 그리핀 / 날쌘 붉은 와이번" }
+price = 0
+alliance = 17718
+horde = 17719
+
+# Creature\CelestialHorse\CelestialHorse.
+[[mount]]
+key = "celestial_steed"
+name = { en = "Celestial Steed", de = "Himmelsross", fr = "Destrier céleste", es = "Corcel celestial", pt = "Corcel Celestial", ru = "Небесный скакун", pl = "Niebiański rumak", tr = "Göksel At", it = "Destriero celeste", ja = "セレスチャル・スティード", zh = "天马", ko = "천상의 군마" }
+price = 35000
+alliance = 31958
+horde = 31958
+
+# TCG mounts, sold at a premium.
+[[mount]]
+key = "riding_turtle"
+name = { en = "Riding Turtle", de = "Reitschildkröte", fr = "Tortue de monte", es = "Tortuga de montar", pt = "Tartaruga de Montaria", ru = "Верховая черепаха", pl = "Żółw wierzchowy", tr = "Binek Kaplumbağa", it = "Tartaruga da sella", ja = "ライディング・タートル", zh = "骑乘乌龟", ko = "탈것용 거북" }
+price = 75000
+alliance = 17158
+horde = 17158
+
+[[mount]]
+key = "big_battle_bear"
+name = { en = "Big Battle Bear", de = "Großer Kampfbär", fr = "Grand ours de bataille", es = "Gran oso de batalla", pt = "Grande Urso de Batalha", ru = "Большой боевой медведь", pl = "Wielki niedźwiedź bojowy", tr = "Büyük Savaş Ayısı", it = "Grande orso da battaglia", ja = "ビッグ・バトル・ベア", zh = "大型战熊", ko = "거대한 전투곰" }
+price = 90000
+alliance = 25335
+horde = 25335
+
+[[mount]]
+key = "x51_nether_rocket"
+name = { en = "X-51 Nether-Rocket", de = "X-51-Netherrakete", fr = "Fusée-néant X-51", es = "Cohete abisal X-51", pt = "Foguete Etéreo X-51", ru = "Ракета Пустоты X-51", pl = "Rakieta Otchłani X-51", tr = "X-51 Boşluk Roketi", it = "Razzo Fatuo X-51", ja = "X-51ネザーロケット", zh = "X-51虚空火箭", ko = "X-51 황천 로켓" }
+price = 100000
+alliance = 23656
+horde = 23656
+
+[[mount]]
+key = "x51_nether_rocket_xtreme"
+name = { en = "X-51 Nether-Rocket X-TREME", de = "X-51-Netherrakete X-TREME", fr = "Fusée-néant X-51 X-TREME", es = "Cohete abisal X-51 X-TREME", pt = "Foguete Etéreo X-51 X-TREME", ru = "Ракета Пустоты X-51 Экстрим", pl = "Rakieta Otchłani X-51 X-TREME", tr = "X-51 Boşluk Roketi X-TREME", it = "Razzo Fatuo X-51 X-TREME", ja = "X-51ネザーロケット X-TREME", zh = "X-51虚空火箭X-TREME", ko = "X-51 황천 로켓 익스트림" }
+price = 125000
+alliance = 23647
+horde = 23647
+
+# Wrath of the Lich King arena season mounts.
+[[mount]]
+key = "deadly_gladiator_frost_wyrm"
+name = { en = "Deadly Gladiator's Frost Wyrm", de = "Frostwyrm des tödlichen Gladiators", fr = "Wyrm de givre du gladiateur fatal", es = "Vermis de escarcha de gladiador mortal", pt = "Serpe Gélida do Gladiador Mortal", ru = "Ледяной змей смертоносного гладиатора", pl = "Mroźny żmij śmiercionośnego gladiatora", tr = "Ölümcül Gladyatörün Buz Ejderi", it = "Dragone del gelo del Gladiatore Mortale", ja = "デッドリー・グラディエーターのフロストワーム", zh = "致命角斗士的冰霜巨龙", ko = "냉혹한 검투사의 서리고룡" }
+price = 0
+alliance = 25511
+horde = 25511
+
+[[mount]]
+key = "furious_gladiator_frost_wyrm"
+name = { en = "Furious Gladiator's Frost Wyrm", de = "Frostwyrm des wütenden Gladiators", fr = "Wyrm de givre du gladiateur furieux", es = "Vermis de escarcha de gladiador furioso", pt = "Serpe Gélida do Gladiador Furioso", ru = "Ледяной змей разъяренного гладиатора", pl = "Mroźny żmij rozjuszonego gladiatora", tr = "Öfkeli Gladyatörün Buz Ejderi", it = "Dragone del gelo del Gladiatore Furioso", ja = "フューリアス・グラディエーターのフロストワーム", zh = "暴怒角斗士的冰霜巨龙", ko = "격노한 검투사의 서리고룡" }
+price = 0
+alliance = 25593
+horde = 25593
+
+[[mount]]
+key = "relentless_gladiator_frost_wyrm"
+name = { en = "Relentless Gladiator's Frost Wyrm", de = "Frostwyrm des unerbittlichen Gladiators", fr = "Wyrm de givre du gladiateur implacable", es = "Vermis de escarcha de gladiador incansable", pt = "Serpe Gélida do Gladiador Implacável", ru = "Ледяной змей неумолимого гладиатора", pl = "Mroźny żmij nieustępliwego gladiatora", tr = "Amansız Gladyatörün Buz Ejderi", it = "Dragone del gelo del Gladiatore Implacabile", ja = "レレントレス・グラディエーターのフロストワーム", zh = "无情角斗士的冰霜巨龙", ko = "무자비한 검투사의 서리고룡" }
+price = 0
+alliance = 29794
+horde = 29794
+
+[[mount]]
+key = "wrathful_gladiator_frost_wyrm"
+name = { en = "Wrathful Gladiator's Frost Wyrm", de = "Frostwyrm des zornerfüllten Gladiators", fr = "Wyrm de givre du gladiateur courroucé", es = "Vermis de escarcha de gladiador colérico", pt = "Serpe Gélida do Gladiador Colérico", ru = "Ледяной змей разгневанного гладиатора", pl = "Mroźny żmij gniewnego gladiatora", tr = "Gazaplı Gladyatörün Buz Ejderi", it = "Dragone del gelo del Gladiatore Iracondo", ja = "ラスフル・グラディエーターのフロストワーム", zh = "愤怒角斗士的冰霜巨龙", ko = "진노한 검투사의 서리고룡" }
+price = 0
+alliance = 31047
+horde = 31047
+
+# The holidays' own (price 0: not sold for gold), each in its holiday's Event Shop alone
+# (`crate::events`).
+# Creature\Gryphon\Gryphon_Ghost_Mount.
+[[mount]]
+key = "spectral_gryphon"
+name = { en = "Spectral Gryphon", de = "Spektralgreif", fr = "Griffon spectral", es = "Grifo espectral", pt = "Grifo Espectral", ru = "Призрачный грифон", pl = "Widmowy gryf", tr = "Hayalet Grifon", it = "Grifone spettrale", ja = "スペクトラル・グリフォン", zh = "幽灵狮鹫", ko = "유령 그리핀" }
+price = 0
+alliance = 26691
+horde = 26691
+
+# Creature\ReinDeer\ReinDeerMount.
+[[mount]]
+key = "reindeer"
+name = { en = "Winter Veil Reindeer", de = "Winterhauchrentier", fr = "Renne du Voile d'hiver", es = "Reno del Festival de Invierno", pt = "Rena do Véu de Inverno", ru = "Олень Зимнего покрова", pl = "Renifer Zimowego Welonu", tr = "Kış Perdesi Geyiği", it = "Renna del Velo Invernale", ja = "ウィンターヴェイルのトナカイ", zh = "冬幕节驯鹿", ko = "겨울맞이 축제 순록" }
+price = 0
+alliance = 15902
+horde = 15902
+
+# CREATURE\DragonHawk\DragonHawkMount (red and gold).
+[[mount]]
+key = "lunar_dragonhawk"
+name = { en = "Lunar Dragonhawk", de = "Monddrachenfalke", fr = "Faucon-dragon lunaire", es = "Dracohalcón lunar", pt = "Falcodraco Lunar", ru = "Лунный дракондор", pl = "Księżycowy smoczy jastrząb", tr = "Ay Ejderşahini", it = "Falcodrago lunare", ja = "ルナ・ドラゴンホーク", zh = "新春龙鹰", ko = "달맞이 용매" }
+price = 0
+alliance = 29695
+horde = 29695
+
+# Creature\RocketMount\RocketMount (pink).
+[[mount]]
+key = "love_rocket"
+name = { en = "Big Love Rocket", de = "Große Liebesrakete", fr = "Grosse fusée d'amour", es = "Cohete del gran amor", pt = "Foguete do Grande Amor", ru = "Ракета большой любви", pl = "Rakieta wielkiej miłości", tr = "Büyük Aşk Roketi", it = "Razzo del grande amore", ja = "ビッグ・ラブ・ロケット", zh = "大型爱情火箭", ko = "커다란 사랑의 로켓" }
+price = 0
+alliance = 30989
+horde = 30989
+
+# Creature\ChickenMount\ChickenMount.
+[[mount]]
+key = "noble_rooster"
+name = { en = "Noble Rooster", de = "Edler Gockel", fr = "Coq noble", es = "Gallo noble", pt = "Galo Nobre", ru = "Благородный петух", pl = "Szlachetny kogut", tr = "Asil Horoz", it = "Gallo nobile", ja = "高貴な雄鶏", zh = "高贵的公鸡", ko = "고귀한 수탉" }
+price = 0
+alliance = 29344
+horde = 29344
+
+# Creature\Cockatrice\CockatriceMount.
+[[mount]]
+key = "sunfire_cockatrice"
+name = { en = "Sunfire Cockatrice", de = "Sonnenfeuerkokatrix", fr = "Cocatrice de feu solaire", es = "Cocatriz de fuego solar", pt = "Basilisco de Fogo Solar", ru = "Солнечный кокатрис", pl = "Kurzogon Słonecznego ognia", tr = "Güneş Ateşi Horozkuşu", it = "Cocatrice del fuoco solare", ja = "サンファイア・コカトリス", zh = "日炎鸡蛇", ko = "태양불꽃 코카트리스" }
+price = 0
+alliance = 18696
+horde = 18696
+
+# Creature\Ram\RidingRam (Brewfest skin) and Creature\Kodobeast\RidingKodo (Brewfest skin).
+[[mount]]
+key = "brewfest_ram"
+name = { en = "Swift Brewfest Ram / Great Brewfest Kodo", de = "Schneller Braufestwidder / Großer Braufestkodo", fr = "Bélier rapide de la Fête des brasseurs / Grand kodo de la Fête des brasseurs", es = "Carnero rápido de la Fiesta de la Cerveza / Gran kodo de la Fiesta de la Cerveza", pt = "Carneiro Veloz da Cervejada / Grande Kodo da Cervejada", ru = "Быстрый баран Хмельного фестиваля / Большой кодо Хмельного фестиваля", pl = "Szybki baran Piwnego Święta / Wielki kodo Piwnego Święta", tr = "Hızlı Bira Festivali Koçu / Büyük Bira Festivali Kodosu", it = "Ariete veloce della Festa della Birra / Grande kodo della Festa della Birra", ja = "スウィフト・ブルーフェスト・ラム / グレート・ブルーフェスト・コド", zh = "迅捷美酒节山羊 / 大型美酒节科多兽", ko = "날쌘 가을 축제 산양 / 거대한 가을 축제 코도" }
+price = 0
+alliance = 22265
+horde = 24758
+
+# Creature\ZebraMount\ZebraMount (white).
+[[mount]]
+key = "darkmoon_zhevra"
+name = { en = "Darkmoon Zhevra", de = "Dunkelmondzhevra", fr = "Zhévra de Sombrelune", es = "Cebra de Luna Negra", pt = "Zevra da Lua Negra", ru = "Зевра Новолуния", pl = "Zhevra Mrocznego Księżyca", tr = "Kararay Zevrası", it = "Zhevra di Lunacupa", ja = "ダークムーン・ジーヴラ", zh = "暗月斑马", ko = "다크문 얼룩말" }
+price = 0
+alliance = 28888
+horde = 28888
+
+# TCG Magic Rooster, using the stock chicken display shared by the Noble Rooster.
+[[mount]]
+key = "magic_rooster"
+name = { en = "Magic Rooster", de = "Magischer Hahn", fr = "Coq magique", es = "Gallo mágico", pt = "Galo Mágico", ru = "Волшебный петух", pl = "Magiczny kogut", tr = "Sihirli Horoz", it = "Gallo Magico", ja = "魔法の雄鶏", zh = "魔法公鸡", ko = "마법 수탉" }
+price = 1000000
+alliance = 29344
+horde = 29344

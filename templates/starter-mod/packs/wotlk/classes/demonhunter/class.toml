@@ -1,0 +1,161 @@
+# The 3.3.5a Shadowsong backport supplies the Demon Hunter client models.
+# Havoc spends fury and Devourer builds soul fragments to empower Collapsing Star.
+# Metamorphosis uses the demon display for the duration of its buff.
+key = "demonhunter"
+# The `ChrClasses` id, as the Shadowsong client numbers the demon hunter (patch-} adds the row).
+id = 13
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [4, 5, 6, 7, 0, 1, 2, 3]
+# Health at level 1: the monk's and a little more, leather and a demon within. `TUNE`
+health = 210
+# Fury fills the rage bar (the first of its `resources`).
+power = "rage"
+starter = "demons_bite"
+# As Legion's character creation allows them: night elves and blood elves.
+races = [4, 10]
+# Twin warglaives, as every demon hunter of the Illidari wields them: the Warglaives of Azzinoth
+# (3.3.5a's own items, their `Item.dbc` rows below).
+starter_weapons = [32837, 32838]
+# The legendary dash card: Fel Rush's icon, and what it does.
+dash_spell = 904002
+dash_legend = { en = "Your dash becomes a Fel Rush: every enemy on your way is burned, and you glide on for a moment after it.", de = "Dein Ausweichsprung wird zum Teufelsansturm: Jeder Feind auf deinem Weg verbrennt, und danach gleitest du noch einen Augenblick weiter.", fr = "Ta ruée devient une Ruée gangrenée : chaque ennemi sur ton chemin est brûlé, et tu glisses encore un instant après.", es = "Tu carrera se convierte en Embestida vil: cada enemigo en tu camino se quema, y después planeas un instante más.", pt = "Sua investida vira uma Investida Vil: todo inimigo no caminho é queimado, e você ainda plana por um instante depois.", ru = "Твой рывок становится Рывком Скверны: каждый враг на пути сгорает, а после него ты еще мгновение скользишь вперед.", pl = "Twój zryw staje się Pędem Zła: każdy przeciwnik na twojej drodze zostaje spalony, a po nim jeszcze chwilę szybujesz.", tr = "Atılman bir Fel Atılışı'na dönüşür: yolundaki her düşman yanar ve sonrasında bir an süzülürsün.", it = "Il tuo scatto diventa una Carica vile: ogni nemico sul tuo cammino viene bruciato e plani ancora per un istante dopo.", ja = "ダッシュがフェル・ラッシュになります：通り道のすべての敵を焼き、その後しばらく滑空します。", zh = "你的冲刺变为邪能冲撞：灼烧路上的每个敌人，并在冲撞后继续滑行片刻。", ko = "돌진이 지옥 돌진이 됩니다: 지나가는 길의 모든 적이 불타며, 돌진 후 잠시 미끄러져 나아갑니다." }
+bot_name = "Botillidari"
+bot_order = 11
+name = { en = "Demon Hunter", de = "Dämonenjäger", fr = "Chasseur de démons", es = "Cazador de demonios", pt = "Caçador de Demônios", ru = "Охотник на демонов", pl = "Łowca Demonów", tr = "Şeytan Avcısı", it = "Cacciatore di Demoni", ja = "デーモンハンター", zh = "恶魔猎手", ko = "악마사냥꾼" }
+# Legion's RAID_CLASS_COLORS.DEMONHUNTER (fel violet).
+color = [0.64, 0.19, 0.79]
+# Played once a hero of the account has beaten The Burning Crusade's last zone; a mode's
+# `[unlocks]` may say otherwise.
+unlock = "tbc"
+# Night elves and blood elves fight in the Shadowsong client's demon hunter bodies: blindfold,
+# horns, tattoos and wings (patch-}'s CreatureDisplayInfo rows of `Character\NightElf_Dh\...`
+# and `Character\BloodElf_Dh\...`), dressed in the hero's own skin, face, hair and gear.
+bodies = [
+    [4, 98951, 98952],
+    [10, 98953, 98954],
+]
+# Two warglaives taking turns, as the rogue's daggers do: a swing every 1.2 sec. `TUNE`
+swing = { beat = 1.2, dual = true }
+
+# The Warglaives of Azzinoth, as 3.3.5a's `Item.dbc` holds them.
+[[starter_items]]
+entry = 32837
+name = "Warglaive of Azzinoth"
+display = 45479
+inventory_type = 21
+subclass = 7
+material = 1
+sheath = 1
+hand = "main"
+
+[[starter_items]]
+entry = 32838
+name = "Warglaive of Azzinoth"
+display = 45481
+inventory_type = 22
+subclass = 7
+material = 1
+sheath = 1
+hand = "off"
+
+# Its gear (the run's own tables have no demon hunter): leather, five sets from the Illidari's
+# first to the Betrayer's own, two warglaives Common to Legendary, the Shadowsong client's glaive
+# icons (patch-} carries them). Ours. `TUNE`
+[gear]
+armor = "leather"
+sets = [
+    { en = "Felscarred", de = "Teufelsnarben", fr = "Gangrecicatrice", es = "Cicatriz vil", pt = "Cicatriz Vil", ru = "Отмеченный Скверной", pl = "Naznaczony Złem", tr = "Fel Yaralı", it = "Segnato dal vile", ja = "フェルに刻まれし", zh = "邪痕", ko = "지옥흉터" },
+    { en = "Illidari", de = "der Illidari", fr = "des Illidari", es = "de los Illidari", pt = "dos Illidari", ru = "Иллидари", pl = "Illidari", tr = "Illidari", it = "Illidari", ja = "イリダリ", zh = "伊利达雷", ko = "일리다리" },
+    { en = "Ashtongue", de = "der Aschenzungen", fr = "des Cendrelangues", es = "de los Lengua de ceniza", pt = "dos Língua das Cinzas", ru = "Пепельного Языка", pl = "Popielny Język", tr = "Küldil", it = "Lingua di Cenere", ja = "アッシュタン", zh = "灰舌", ko = "잿빛혓바닥" },
+    { en = "Demonbane", de = "des Dämonenbanns", fr = "du fléau des démons", es = "del azote de demonios", pt = "do Algoz de Demônios", ru = "Погибель демонов", pl = "Zguba demonów", tr = "Şeytan Belası", it = "Flagello dei demoni", ja = "デーモンベイン", zh = "灭魔", ko = "악마의 파멸" },
+    { en = "Betrayer's", de = "des Verräters", fr = "du Traître", es = "del Traidor", pt = "do Traidor", ru = "Предателя", pl = "Zdrajcy", tr = "Hainin", it = "del Traditore", ja = "裏切り者の", zh = "背叛者", ko = "배신자의" },
+]
+weapons = [
+    [
+        { en = "Worn Warglaive", de = "Abgenutzte Kriegsgleve", fr = "Glaive de guerre usé", es = "Guja de guerra desgastada", pt = "Glaive de Guerra Desgastada", ru = "Потертый боевой глеф", pl = "Zużyta glewia wojenna", tr = "Yıpranmış Savaş Glaive'i", it = "Lama da guerra consumata", ja = "使い古されたウォーグレイヴ", zh = "破旧的战刃", ko = "낡은 전투검" },
+        { en = "Illidari Warglaive", de = "Kriegsgleve der Illidari", fr = "Glaive de guerre illidari", es = "Guja de guerra illidari", pt = "Glaive de Guerra Illidari", ru = "Боевой глеф Иллидари", pl = "Glewia wojenna Illidari", tr = "Illidari Savaş Glaive'i", it = "Lama da guerra Illidari", ja = "イリダリのウォーグレイヴ", zh = "伊利达雷战刃", ko = "일리다리 전투검" },
+        { en = "Ashtongue Warglaive", de = "Kriegsgleve der Aschenzungen", fr = "Glaive de guerre cendrelangue", es = "Guja de guerra Lengua de ceniza", pt = "Glaive de Guerra Língua das Cinzas", ru = "Боевой глеф Пепельного Языка", pl = "Glewia wojenna Popielnego Języka", tr = "Küldil Savaş Glaive'i", it = "Lama da guerra Lingua di Cenere", ja = "アッシュタンのウォーグレイヴ", zh = "灰舌战刃", ko = "잿빛혓바닥 전투검" },
+        { en = "Warglaive of the Deceiver", de = "Kriegsgleve des Betrügers", fr = "Glaive de guerre du Traître", es = "Guja de guerra del Impostor", pt = "Glaive de Guerra do Enganador", ru = "Боевой глеф Обманщика", pl = "Glewia wojenna Zwodziciela", tr = "Aldatıcının Savaş Glaive'i", it = "Lama da guerra dell'Ingannatore", ja = "欺く者のウォーグレイヴ", zh = "欺诈者战刃", ko = "기만자의 전투검" },
+        { en = "Warglaive of Azzinoth", de = "Kriegsgleve von Azzinoth", fr = "Glaive de guerre d'Azzinoth", es = "Guja de guerra de Azzinoth", pt = "Glaive de Guerra de Azzinoth", ru = "Боевой глеф Аззинота", pl = "Glewia wojenna Azzinotha", tr = "Azzinoth'un Savaş Glaive'i", it = "Lama da guerra di Azzinoth", ja = "アジノスのウォーグレイヴ", zh = "埃辛诺斯战刃", ko = "아지노스의 전투검" },
+    ],
+    [
+        { en = "Worn Glaive", de = "Abgenutzte Gleve", fr = "Glaive usé", es = "Guja desgastada", pt = "Glaive Desgastada", ru = "Потертый глеф", pl = "Zużyta glewia", tr = "Yıpranmış Glaive", it = "Glaive consumato", ja = "使い古されたグレイヴ", zh = "破旧的利刃", ko = "낡은 글레이브" },
+        { en = "Illidari Glaive", de = "Gleve der Illidari", fr = "Glaive illidari", es = "Guja illidari", pt = "Glaive Illidari", ru = "Глеф Иллидари", pl = "Glewia Illidari", tr = "Illidari Glaive", it = "Glaive Illidari", ja = "イリダリのグレイヴ", zh = "伊利达雷利刃", ko = "일리다리 글레이브" },
+        { en = "Ashtongue Glaive", de = "Gleve der Aschenzungen", fr = "Glaive cendrelangue", es = "Guja Lengua de ceniza", pt = "Glaive Língua das Cinzas", ru = "Глеф Пепельного Языка", pl = "Glewia Popielnego Języka", tr = "Küldil Glaive", it = "Glaive Lingua di Cenere", ja = "アッシュタンのグレイヴ", zh = "灰舌利刃", ko = "잿빛혓바닥 글레이브" },
+        { en = "Twinblade of the Deceiver", de = "Zwillingsklinge des Betrügers", fr = "Lame jumelle du Traître", es = "Hoja gemela del Impostor", pt = "Lâmina Gêmea do Enganador", ru = "Парные клинки Обманщика", pl = "Podwójne ostrze Zwodziciela", tr = "Aldatıcının İkiz Bıçağı", it = "Lama gemella dell'Ingannatore", ja = "欺く者のツインブレード", zh = "欺诈者双刃", ko = "기만자의 쌍날검" },
+        { en = "Twin Warglaive of Azzinoth", de = "Zwillingskriegsgleve von Azzinoth", fr = "Glaives de guerre jumeaux d'Azzinoth", es = "Gujas de guerra gemelas de Azzinoth", pt = "Glaives de Guerra Gêmeas de Azzinoth", ru = "Парные боевые глефы Аззинота", pl = "Bliźniacza glewia wojenna Azzinotha", tr = "Azzinoth'un İkiz Savaş Glaive'i", it = "Lama da guerra gemella di Azzinoth", ja = "アジノスの双ウォーグレイヴ", zh = "埃辛诺斯双战刃", ko = "아지노스의 쌍둥이 전투검" },
+    ],
+]
+# The icons without their `INV_` (the readers add it); each names an ItemDisplayInfo row the
+# armory and the hero draw: the Shadowsong client's Legion artifact glaives, Aldrachi in the main
+# hand and Azgalor in the off hand (patch-} carries their rows and models; its other glaives' models
+# are missing from its archives), Azzinoth's own (3.3.5a's) for Legendary.
+weapon_icons = [
+    ["glaive_1h_artifactaldrochi_d_03", "glaive_1h_artifactaldrochi_d_04", "glaive_1h_artifactaldrochi_d_05", "glaive_1h_artifactaldrochi_d_01", "Weapon_Glave_01", "glaive_1h_artifactazgalor_d_01"],
+    ["glaive_1h_artifactazgalor_d_03", "glaive_1h_artifactazgalor_d_04", "glaive_1h_artifactazgalor_d_05", "glaive_1h_artifactaldrochi_d_02", "Weapon_Glave_01", "glaive_1h_artifactazgalor_d_02"],
+]
+
+# The class's own meters (`ResourceDef`): fury fills the rage bar.
+[[resources]]
+key = "fury"
+hidden = true
+max = 10
+start = 0
+name = { en = "Fury", de = "Zorn", fr = "Fureur", es = "Furia", pt = "Fúria", ru = "Неистовство", pl = "Furia", tr = "Kudurma", it = "Furia", ja = "フューリー", zh = "狂怒", ko = "분노" }
+
+[[resources]]
+key = "soul"
+hidden = true
+max = 5
+start = 0
+name = { en = "Soul Fragments", de = "Seelenfragmente", fr = "Fragments d'âme", es = "Fragmentos de alma", pt = "Fragmentos de Alma", ru = "Осколки души", pl = "Fragmenty dusz", tr = "Ruh Parçaları", it = "Frammenti d'anima", ja = "ソウル・フラグメント", zh = "灵魂残片", ko = "영혼 파편" }
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "demonhunter_fel"
+tone = 5
+price = 12000
+name = { en = "Felfire", de = "Teufelsfeuer", fr = "Feu gangrené", es = "Fuego vil", pt = "Fogo Vil", ru = "Огонь Скверны", pl = "Ogień Zła", tr = "Fel Ateşi", it = "Vilfuoco", ja = "フェルファイア", zh = "邪能之火", ko = "지옥불꽃" }
+
+[[colors]]
+key = "demonhunter_venom"
+tone = 4
+price = 12000
+name = { en = "Illidari Green", de = "Illidarigrün", fr = "Vert illidari", es = "Verde illidari", pt = "Verde Illidari", ru = "Зелень Иллидари", pl = "Zieleń Illidari", tr = "Illidari Yeşili", it = "Verde Illidari", ja = "イリダリの緑", zh = "伊利达雷之绿", ko = "일리다리 초록" }
+
+[[colors]]
+key = "demonhunter_void"
+tone = 11
+price = 15000
+name = { en = "Nether", de = "Nether", fr = "Néant", es = "Abisal", pt = "Etéreo", ru = "Пустота", pl = "Nether", tr = "Nether", it = "Nether", ja = "ネザー", zh = "幽冥", ko = "황천" }
+
+[[colors]]
+key = "demonhunter_arcane"
+tone = 10
+price = 15000
+name = { en = "Spectral Sight", de = "Geistersicht", fr = "Vision spectrale", es = "Visión espectral", pt = "Visão Espectral", ru = "Призрачное зрение", pl = "Widmowy wzrok", tr = "Hayalet Görüş", it = "Vista spettrale", ja = "スペクトラル・サイト", zh = "灵魂视界", ko = "영혼 시야" }
+
+[[colors]]
+key = "demonhunter_crimson"
+tone = 13
+price = 18000
+name = { en = "Mardum's Blood", de = "Mardums Blut", fr = "Sang de Mardum", es = "Sangre de Mardum", pt = "Sangue de Mardum", ru = "Кровь Мардума", pl = "Krew Mardum", tr = "Mardum'un Kanı", it = "Sangue di Mardum", ja = "マーダムの血", zh = "玛顿之血", ko = "마르둠의 피" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "demonhunter_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "demonhunter_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

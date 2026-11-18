@@ -1,0 +1,8 @@
+Replace this file with the licence of your mod before you publish it.
+
+Say which files it covers: your own package folder, packs/yourname.example/ (and modes/yourname.example/
+if you add a mode). The game's packs in this folder (packs/base, packs/tbc, packs/wotlk and modes/*.toml)
+are copies of the game's own content, not yours to license; your licence covers only your own files.
+
+The release zip carries this file as it is (azs-release profile-pack packs profile.json, LICENSE and
+the locked objects).

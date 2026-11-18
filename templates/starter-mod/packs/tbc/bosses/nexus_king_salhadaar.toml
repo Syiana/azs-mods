@@ -1,0 +1,16 @@
+# Nexus-King Salhadaar: Mind Blast, a draining Mind Flay, his mirror images.
+
+[[boss]]
+key = "nexus_king_salhadaar"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 10945 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { tether = { spell = 52586, reach = 16.0, warn = 1.6, lasts = 5.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

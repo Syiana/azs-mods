@@ -1,0 +1,638 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "warlock_affliction"
+index = 0
+icon = "Spell_Shadow_DeathCoil"
+background = "WarlockCurses"
+name = { en = "Affliction", de = "Gebrechen", fr = "Affliction", es = "Aflicción", pt = "Suplício", ru = "Колдовство", pl = "Cierpienie", tr = "Dert", it = "Afflizione", ja = "アフリクション", zh = "痛苦", ko = "고통" }
+
+[[talent_tree]]
+key = "warlock_demonology"
+index = 1
+icon = "Spell_Shadow_Metamorphosis"
+background = "WarlockSummoning"
+name = { en = "Demonology", de = "Dämonologie", fr = "Démonologie", es = "Demonología", pt = "Demonologia", ru = "Демонология", pl = "Demonologia", tr = "Şeytan Bilimi", it = "Demonologia", ja = "デモノロジー", zh = "恶魔学识", ko = "악마" }
+
+[[talent_tree]]
+key = "warlock_destruction"
+index = 2
+icon = "Spell_Shadow_RainOfFire"
+background = "WarlockDestruction"
+name = { en = "Destruction", de = "Zerstörung", fr = "Destruction", es = "Destrucción", pt = "Destruição", ru = "Разрушение", pl = "Zniszczenie", tr = "Yıkım", it = "Distruzione", ja = "デストラクション", zh = "毁灭", ko = "파괴" }
+
+[[talent]]
+key = "suppression"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [12, 0.05] }]
+icon = "Spell_Shadow_UnsummonBuilding"
+name = { en = "Suppression", de = "Unterdrückung", fr = "Suppression", es = "Supresión", pt = "Supressão", ru = "Подавление", pl = "Tłumienie", tr = "Bastırma", it = "Soppressione", ja = "サプレッション", zh = "镇压", ko = "억압" }
+text = { en = "Increases your luck by {v}%.", de = "Erhöht dein Glück um {v}%.", fr = "Augmente ta chance de {v}%.", es = "Aumenta tu suerte un {v}%.", pt = "Aumenta sua sorte em {v}%.", ru = "Увеличивает твою удачу на {v}%.", pl = "Zwiększa twoje szczęście o {v}%.", tr = "Şansını {v}% artırır.", it = "Aumenta la tua fortuna del {v}%.", ja = "幸運が{v}%増加します。", zh = "使你的幸运提高{v}%。", ko = "행운이 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "imp_corruption"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Shadow_AbominationExplosion"
+name = { en = "Shadow Embrace", de = "Schattenumarmung", fr = "Étreinte de l'ombre", es = "Abrazo de las Sombras", pt = "Abraço Sombrio", ru = "Объятия Тьмы", pl = "Uścisk cienia", tr = "Gölge Kucaklaması", it = "Abbraccio dell'ombra", ja = "シャドウ・エンブレイス", zh = "暗影之拥", ko = "어둠의 포옹" }
+text = { en = "Your damage-over-time effects deal {v}% more damage.", de = "Deine Effekte für Schaden über Zeit verursachen {v}% mehr Schaden.", fr = "Tes effets de dégâts sur la durée infligent {v}% de dégâts en plus.", es = "Tus efectos de daño a lo largo del tiempo infligen un {v}% más de daño.", pt = "Seus efeitos de dano ao longo do tempo causam {v}% a mais de dano.", ru = "Твои эффекты периодического урона наносят на {v}% больше урона.", pl = "Twoje obrażenia w czasie zadają o {v}% więcej obrażeń.", tr = "Zamanla hasar efektlerin {v}% daha fazla hasar verir.", it = "I tuoi effetti di danno nel tempo infliggono il {v}% di danni in più.", ja = "継続ダメージ効果のダメージが{v}%増加します。", zh = "你的持续伤害效果造成的伤害提高{v}%。", ko = "지속 피해 효과의 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = ["dots"]
+mods_v = 0.04
+
+[[talent]]
+key = "imp_coa"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Shadow_CurseOfSargeras"
+name = { en = "Improved Curse of Agony", de = "Verbesserter Fluch der Pein", fr = "Malédiction de l'agonie améliorée", es = "Maldición de agonía mejorada", pt = "Maldição da Agonia Aprimorada", ru = "Улучшенное проклятие агонии", pl = "Ulepszona Klątwa agonii", tr = "Gelişmiş Azap Laneti", it = "Maledizione dell'agonia migliorata", ja = "改良型カース・オブ・アゴニー", zh = "强化痛苦诅咒", ko = "고통의 저주 연마" }
+text = { en = "Curse of Agony deals {v}% more damage.", de = "Fluch der Pein verursacht {v}% mehr Schaden.", fr = "Malédiction de l'agonie inflige {v}% de dégâts en plus.", es = "Maldición de agonía inflige un {v}% más de daño.", pt = "Maldição da Agonia causa {v}% a mais de dano.", ru = "Проклятие агонии наносит на {v}% больше урона.", pl = "Klątwa agonii zadaje o {v}% więcej obrażeń.", tr = "Azap Laneti {v}% daha fazla hasar verir.", it = "Maledizione dell'agonia infligge il {v}% di danni in più.", ja = "カース・オブ・アゴニーのダメージが{v}%増加します。", zh = "痛苦诅咒造成的伤害提高{v}%。", ko = "고통의 저주의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = [{ damage = ["curse_of_agony"] }]
+mods_v = 0.05
+
+[[talent]]
+key = "imp_drain_life"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Shadow_LifeDrain02"
+name = { en = "Improved Drain Life", de = "Verbesserter Blutsauger", fr = "Drain de vie amélioré", es = "Drenar vida mejorado", pt = "Dreno de Vida Aprimorado", ru = "Улучшенное похищение жизни", pl = "Ulepszone Wysysanie życia", tr = "Gelişmiş Can Emme", it = "Risucchio vitale migliorato", ja = "改良型ドレイン・ライフ", zh = "强化吸取生命", ko = "생명력 흡수 연마" }
+text = { en = "Drain Life and Haunt deal {v}% more damage.", de = "Blutsauger und Heimsuchung verursachen {v}% mehr Schaden.", fr = "Drain de vie et Hantise infligent {v}% de dégâts en plus.", es = "Drenar vida y Acechar infligen un {v}% más de daño.", pt = "Dreno de Vida e Assombrar causam {v}% a mais de dano.", ru = "Похищение жизни и Блуждающий дух наносят на {v}% больше урона.", pl = "Wysysanie życia i Nawiedzenie zadają o {v}% więcej obrażeń.", tr = "Can Emme ve Ürküt {v}% daha fazla hasar verir.", it = "Risucchio vitale e Infestare infliggono il {v}% di danni in più.", ja = "ドレイン・ライフとホーントのダメージが{v}%増加します。", zh = "吸取生命和鬼影缠身造成的伤害提高{v}%。", ko = "생명력 흡수와 유령 출몰의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["drain_life", "haunt"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "nightfall"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_Twilight"
+name = { en = "Nightfall", de = "Einbruch der Nacht", fr = "Crépuscule", es = "Crepúsculo", pt = "Anoitecer", ru = "Сумерки", pl = "Zmierzch", tr = "Alacakaranlık", it = "Crepuscolo", ja = "ナイトフォール", zh = "夜幕", ko = "일몰" }
+text = { en = "Milestone. Your Shadow Bolts carry the night: each one that lands corrupts its target for {v}% of the bolt over 12 sec, and every tick of Corruption has a 2% chance to fire a free Shadow Bolt, at most twice a second.", de = "Meilenstein. Deine Schattenblitze tragen die Nacht: Jeder treffende verdirbt sein Ziel für {v}% des Blitzes über 12 Sek., und jeder Tick von Verderbnis hat eine Chance von 2%, einen kostenlosen Schattenblitz abzufeuern, höchstens zweimal pro Sekunde.", fr = "Étape. Tes traits de l'ombre portent la nuit : chacun qui touche corrompt sa cible pour {v}% du trait sur 12 s, et chaque tick de Corruption a 2% de chances de lancer un trait de l'ombre gratuit, deux fois par seconde au maximum.", es = "Hito. Tus Descargas de las Sombras traen la noche: cada una que impacta corrompe a su objetivo por un {v}% de la descarga durante 12 s, y cada pulso de Corrupción tiene un 2% de probabilidad de lanzar una Descarga de las Sombras gratuita, como máximo dos veces por segundo.", pt = "Marco. Suas Setas Sombrias trazem a noite: cada uma que acerta corrompe o alvo por {v}% da seta ao longo de 12 s, e cada pulso de Corrupção tem 2% de chance de disparar uma Seta Sombria grátis, no máximo duas vezes por segundo.", ru = "Веха. Твои Стрелы Тьмы несут ночь: каждая попавшая стрела отравляет цель на {v}% урона стрелы в течение 12 сек., а каждый тик Порчи с шансом 2% выпускает бесплатную Стрелу Тьмы, не чаще двух раз в секунду.", pl = "Kamień milowy. Twoje Strzały cienia niosą noc: każda trafiona psuje cel za {v}% pocisku przez 12 s, a każde tyknięcie Zepsucia ma 2% szansy na darmową Strzałę cienia, najwyżej dwa razy na sekundę.", tr = "Dönüm noktası. Gölge Okların geceyi taşır: isabet eden her ok hedefi 12 sn içinde okun {v}%'si kadar yozlaştırır ve Yozlaştırma'nın her vuruşu 2% ihtimalle bedava bir Gölge Oku atar, saniyede en fazla iki kez.", it = "Traguardo. I tuoi Dardi d'ombra portano la notte: ognuno che va a segno corrompe il bersaglio per il {v}% del dardo in 12 s e ogni tick di Corruzione ha il 2% di probabilità di lanciare un Dardo d'ombra gratuito, al massimo due volte al secondo.", ja = "【マイルストーン】シャドウ・ボルトが夜をまといます：命中するたびに対象を蝕み、12秒かけてボルトの{v}%のダメージを与えます。さらにコラプションの各ティックが2%の確率で無料のシャドウ・ボルトを放ちます（1秒に2回まで）。", zh = "里程碑：你的暗影箭携带黑夜：每支命中的暗影箭都会腐蚀目标，在12秒内造成相当于该箭伤害{v}%的伤害，并且腐蚀术每跳有2%的几率免费发射一支暗影箭，每秒最多两次。", ko = "이정표. 어둠의 화살이 밤을 실어 나릅니다: 적중한 화살마다 대상을 부패시켜 12초에 걸쳐 화살 피해의 {v}%를 주며, 부패가 피해를 줄 때마다 2% 확률로 어둠의 화살을 무료로 발사합니다. 초당 최대 2번입니다." }
+menu_v = 0.4
+plays = [
+    { v = 0.4, play = { hit_dot = { keys = ["shadow_bolt"], secs = 12.0 } } },
+    { v = 0.02, play = { tick_cast = { keys = ["corruption"], cast = "shadow_bolt", gap = 0.5 } } },
+]
+
+[[talent]]
+key = "dark_pact"
+tree = 0
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_DarkRitual"
+name = { en = "Soul Reaping", de = "Seelenernte", fr = "Moisson d'âmes", es = "Cosecha de almas", pt = "Colheita de Almas", ru = "Жатва душ", pl = "Żniwa dusz", tr = "Ruh Biçme", it = "Mietitura d'anime", ja = "ソウル・リーピング", zh = "灵魂收割", ko = "영혼 거두기" }
+text = { en = "Death Coil instantly deals {v}% of your Drain Life's remaining damage on its target, without consuming it.", de = "Todesmantel verursacht sofort {v}% des verbleibenden Schadens deines Blutsaugers auf dessen Ziel, ohne ihn zu verbrauchen.", fr = "Voile mortel inflige instantanément {v}% des dégâts restants de ton Drain de vie sur sa cible, sans le consommer.", es = "Espiral de la muerte inflige al instante un {v}% del daño restante de tu Drenar vida en su objetivo, sin consumirlo.", pt = "Espiral da Morte causa instantaneamente {v}% do dano restante do seu Dreno de Vida no alvo, sem consumi-lo.", ru = "Лик смерти мгновенно наносит цели {v}% оставшегося урона твоего Похищения жизни, не расходуя его.", pl = "Splot śmierci natychmiast zadaje {v}% pozostałych obrażeń twojego Wysysania życia na celu, bez zużywania go.", tr = "Ölüm Sarmalı, hedefindeki Can Emme'nin kalan hasarının {v}%'sini tüketmeden anında verir.", it = "Spira della morte infligge subito il {v}% dei danni rimanenti del tuo Risucchio vitale sul bersaglio, senza consumarli.", ja = "デス・コイルが、対象にかかったドレイン・ライフの残りダメージの{v}%を即座に与えます（ドレイン・ライフは消費されません）。", zh = "死亡缠绕会立即对目标造成你的吸取生命剩余伤害的{v}%，且不消耗吸取生命。", ko = "죽음의 고리가 대상에게 걸린 생명력 흡수의 남은 피해의 {v}%를 즉시 줍니다. 생명력 흡수는 소모되지 않습니다." }
+menu_v = 0.05
+plays = [
+    { v = 0.05, play = { borrow = { keys = ["death_coil"], from = "drain_life" } } },
+]
+
+[[talent]]
+key = "grim_reach"
+tree = 0
+row = 3
+col = 0
+ranks = 1
+effects = []
+icon = "Spell_Shadow_CallofBone"
+name = { en = "Grim Reach", de = "Grimmige Reichweite", fr = "Allonge sinistre", es = "Alcance siniestro", pt = "Alcance Sombrio", ru = "Мрачный охват", pl = "Ponury zasięg", tr = "Amansız Erişim", it = "Portata sinistra", ja = "グリム・リーチ", zh = "冷酷延伸", ko = "음산한 범위 확대" }
+text = { en = "Your damage-over-time spells take {v} more target.", de = "Deine Zauber für Schaden über Zeit erfassen {v} weiteres Ziel.", fr = "Tes sorts de dégâts sur la durée touchent {v} cible de plus.", es = "Tus hechizos de daño con el tiempo afectan a {v} objetivo más.", pt = "Seus feitiços de dano ao longo do tempo atingem mais {v} alvo.", ru = "Твои заклинания периодического урона поражают на {v} цель больше.", pl = "Twoje czary zadające obrażenia w czasie obejmują dodatkowe cele: {v}.", tr = "Zamanla hasar büyülerin {v} hedef daha alır.", it = "I tuoi incantesimi di danno nel tempo colpiscono {v} bersaglio in più.", ja = "継続ダメージ呪文の対象が{v}体増えます。", zh = "你的持续伤害法术额外影响{v}个目标。", ko = "지속 피해 주문이 대상을 {v}명 더 공격합니다." }
+menu_v = 1
+mods = ["dot_targets"]
+mods_v = 1.0
+
+[[talent]]
+key = "shadow_mastery"
+tree = 0
+row = 3
+col = 2
+ranks = 5
+req = "nightfall"
+effects = []
+icon = "Spell_Shadow_ShadeTrueSight"
+name = { en = "Shadow Mastery", de = "Schattenbeherrschung", fr = "Maîtrise des ombres", es = "Maestría de las Sombras", pt = "Maestria das Sombras", ru = "Мастерство теней", pl = "Mistrzostwo cienia", tr = "Gölge Ustalığı", it = "Maestria nell'ombra", ja = "シャドウ・マスタリー", zh = "暗影掌握", ko = "암흑 숙련" }
+text = { en = "Shadow spells deal {v}% more damage.", de = "Schattenzauber verursachen {v}% mehr Schaden.", fr = "Les sorts d'ombre infligent {v}% de dégâts en plus.", es = "Los hechizos de las Sombras infligen un {v}% más de daño.", pt = "Feitiços de Sombra causam {v}% a mais de dano.", ru = "Заклинания Тьмы наносят на {v}% больше урона.", pl = "Czary cienia zadają o {v}% więcej obrażeń.", tr = "Gölge büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi d'Ombra infliggono il {v}% di danni in più.", ja = "暗黒の呪文のダメージが{v}%増加します。", zh = "暗影法术造成的伤害提高{v}%。", ko = "암흑 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+mods = [{ school = 32 }]
+mods_v = 0.03
+
+[[talent]]
+key = "contagion"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_PlagueCloud"
+name = { en = "Contagion", de = "Ansteckung", fr = "Contagion", es = "Contagio", pt = "Contágio", ru = "Заражение", pl = "Zaraza", tr = "Bulaşma", it = "Contagio", ja = "コンテイジョン", zh = "蔓延", ko = "전염" }
+text = { en = "Milestone. When an enemy dies with Corruption or Curse of Agony on it, each jumps to the enemy nearest it.", de = "Meilenstein. Wenn ein Feind mit Verderbnis oder Fluch der Pein stirbt, springt jeder davon auf den nächsten Feind über.", fr = "Étape. Quand un ennemi meurt sous Corruption ou Malédiction de l'agonie, chacune saute sur l'ennemi le plus proche.", es = "Hito. Cuando un enemigo muere con Corrupción o Maldición de agonía, cada una salta al enemigo más cercano.", pt = "Marco. Quando um inimigo morre com Corrupção ou Maldição da Agonia, cada uma salta para o inimigo mais próximo.", ru = "Веха. Когда враг умирает под действием Порчи или Проклятия агонии, каждое из них перескакивает на ближайшего врага.", pl = "Kamień milowy. Gdy umiera przeciwnik ze Zepsuciem lub Klątwą agonii, każde z nich przeskakuje na najbliższego przeciwnika.", tr = "Dönüm noktası. Üzerinde Yozlaştırma veya Azap Laneti olan bir düşman ölünce her biri ona en yakın düşmana sıçrar.", it = "Traguardo. Quando un nemico muore con Corruzione o Maledizione dell'agonia addosso, ciascuna salta sul nemico più vicino.", ja = "【マイルストーン】コラプションまたはカース・オブ・アゴニーがかかった敵が死ぬと、それぞれ最も近い敵に飛び移ります。", zh = "里程碑：身上带有腐蚀术或痛苦诅咒的敌人死亡时，这些效果会跳到离它最近的敌人身上。", ko = "이정표. 부패나 고통의 저주에 걸린 적이 죽으면 각각 가장 가까운 적에게 옮겨 갑니다." }
+plays = [
+    { v = 1.0, play = { contagion = { radius = 10.0, keys = ["corruption", "curse_of_agony"] } } },
+]
+
+[[talent]]
+key = "amplify_curse"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_Contagion"
+name = { en = "Amplify Curse", de = "Fluch verstärken", fr = "Malédiction amplifiée", es = "Amplificar maldición", pt = "Amplificar Maldição", ru = "Усиление проклятия", pl = "Wzmocnienie klątwy", tr = "Laneti Güçlendir", it = "Amplificare maledizione", ja = "アンプリファイ・カース", zh = "诅咒增幅", ko = "저주 증폭" }
+text = { en = "Curse of Agony's cooldown is {v}% shorter.", de = "Die Abklingzeit von Fluch der Pein ist {v}% kürzer.", fr = "Le temps de recharge de Malédiction de l'agonie est réduit de {v}%.", es = "El tiempo de reutilización de Maldición de agonía es un {v}% menor.", pt = "O tempo de recarga de Maldição da Agonia é {v}% menor.", ru = "Перезарядка Проклятия агонии сокращена на {v}%.", pl = "Czas odnowienia Klątwy agonii jest krótszy o {v}%.", tr = "Azap Laneti'nin bekleme süresi {v}% daha kısa.", it = "La ricarica di Maledizione dell'agonia è più breve del {v}%.", ja = "カース・オブ・アゴニーのクールダウンが{v}%短くなります。", zh = "痛苦诅咒的冷却时间缩短{v}%。", ko = "고통의 저주의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["curse_of_agony"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "siphon_life"
+tree = 0
+row = 5
+col = 0
+ranks = 1
+effects = []
+icon = "Spell_Shadow_Requiem"
+name = { en = "Siphon Life", de = "Lebensentzug", fr = "Siphon de vie", es = "Succión de vida", pt = "Sifão de Vida", ru = "Захват жизни", pl = "Wyssanie życia", tr = "Can Çekme", it = "Risucchio di vita", ja = "サイフォン・ライフ", zh = "生命虹吸", ko = "생명력 착취" }
+text = { en = "Every tick of your damage-over-time effects heals you for 1% of it.", de = "Jeder Tick deiner Effekte für Schaden über Zeit heilt dich um 1% davon.", fr = "Chaque tick de tes effets de dégâts sur la durée te soigne de 1% de son montant.", es = "Cada pulso de tus efectos de daño con el tiempo te cura un 1% de su valor.", pt = "Cada pulso dos seus efeitos de dano ao longo do tempo cura você em 1% dele.", ru = "Каждый тик твоих эффектов периодического урона исцеляет тебя на 1% от него.", pl = "Każde tyknięcie twoich efektów obrażeń w czasie leczy cię o 1% jego wartości.", tr = "Zamanla hasar efektlerinin her vuruşu hasarının 1%'i kadar seni iyileştirir.", it = "Ogni tick dei tuoi effetti di danno nel tempo ti cura dell'1% di esso.", ja = "継続ダメージ効果の各ティックで、そのダメージの1%だけ体力を回復します。", zh = "你的持续伤害效果每跳为你恢复相当于其伤害1%的生命值。", ko = "지속 피해 효과가 피해를 줄 때마다 그 피해의 1%만큼 생명력을 회복합니다." }
+menu_v = 0.01
+plays = [
+    { v = 0.01, play = { dot_leech = { aura = 18265 } } },
+]
+
+[[talent]]
+key = "fel_concentration"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "contagion"
+effects = []
+icon = "Spell_Shadow_FingerOfDeath"
+name = { en = "Fel Concentration", de = "Teufelskonzentration", fr = "Concentration gangrenée", es = "Concentración vil", pt = "Concentração Vil", ru = "Концентрация Скверны", pl = "Koncentracja Zła", tr = "Fel Yoğunlaşması", it = "Concentrazione vile", ja = "フェル・コンセントレーション", zh = "邪能专注", ko = "지옥 집중" }
+text = { en = "Your damage-over-time effects last {v}% longer.", de = "Deine Effekte für Schaden über Zeit halten {v}% länger an.", fr = "Tes effets de dégâts sur la durée durent {v}% plus longtemps.", es = "Tus efectos de daño con el tiempo duran un {v}% más.", pt = "Seus efeitos de dano ao longo do tempo duram {v}% a mais.", ru = "Твои эффекты периодического урона длятся на {v}% дольше.", pl = "Twoje efekty obrażeń w czasie trwają o {v}% dłużej.", tr = "Zamanla hasar efektlerin {v}% daha uzun sürer.", it = "I tuoi effetti di danno nel tempo durano il {v}% in più.", ja = "継続ダメージ効果の持続時間が{v}%延びます。", zh = "你的持续伤害效果的持续时间延长{v}%。", ko = "지속 피해 효과의 지속시간이 {v}% 길어집니다." }
+menu_v = 0.06
+mods = ["dot_duration"]
+mods_v = 0.06
+
+[[talent]]
+key = "seed_of_corruption"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "corruption" }]
+icon = "Spell_Shadow_CurseOfMannoroth"
+name = { en = "Seed of Corruption", de = "Saat der Verderbnis", fr = "Graine de corruption", es = "Semilla de corrupción", pt = "Semente da Corrupção", ru = "Семя порчи", pl = "Ziarno zepsucia", tr = "Yozlaşma Tohumu", it = "Seme della corruzione", ja = "シード・オブ・コラプション", zh = "腐蚀之种", ko = "부패의 씨앗" }
+text = { en = "Capstone. You start every run with Corruption, and enemies that die afflicted by your damage-over-time effects burst for {v}% of their maximum health on everything within 6 yd.", de = "Schlussstein. Du beginnst jeden Lauf mit Verderbnis, und Feinde, die unter deinen Effekten für Schaden über Zeit sterben, zerbersten für {v}% ihrer maximalen Gesundheit auf alles im Umkreis von 6 m.", fr = "Apogée. Tu commences chaque partie avec Corruption, et les ennemis qui meurent sous tes effets de dégâts sur la durée explosent pour {v}% de leurs points de vie maximum sur tout ce qui se trouve à moins de 6 m.", es = "Cúspide. Empiezas cada partida con Corrupción, y los enemigos que mueren afectados por tus efectos de daño con el tiempo estallan por un {v}% de su salud máxima sobre todo lo que haya a 6 m.", pt = "Ápice. Você começa cada partida com Corrupção, e inimigos que morrem afligidos pelos seus efeitos de dano ao longo do tempo explodem causando {v}% da própria vida máxima em tudo num raio de 6 m.", ru = "Вершина. Ты начинаешь каждый забег с Порчей, а враги, умирающие под твоими эффектами периодического урона, взрываются, нанося {v}% своего максимального здоровья всем в радиусе 6 м.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz ze Zepsuciem, a przeciwnicy, którzy umierają dotknięci twoimi efektami obrażeń w czasie, wybuchają za {v}% swojego maksymalnego zdrowia, raniąc wszystko w promieniu 6 m.", tr = "Zirve. Her oyuna Yozlaştırma ile başlarsın ve zamanla hasar efektlerinle dertli halde ölen düşmanlar patlar, 6 m içindeki her şeye azami canlarının {v}%'si kadar hasar verir.", it = "Vertice. Inizi ogni partita con Corruzione e i nemici che muoiono afflitti dai tuoi effetti di danno nel tempo esplodono per il {v}% della loro salute massima su tutto entro 6 m.", ja = "【キャップストーン】毎ランをコラプションを持って始め、継続ダメージ効果を受けたまま死んだ敵が炸裂して6ヤード以内のすべてに最大体力の{v}%のダメージを与えます。", zh = "终极天赋：你在每场对局开始时拥有腐蚀术，受到你的持续伤害效果影响而死亡的敌人会爆发，对6码内的所有目标造成相当于其最大生命值{v}%的伤害。", ko = "궁극 특성. 모든 런을 부패를 가지고 시작하며, 지속 피해 효과에 걸린 채 죽은 적이 터져서 6미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 줍니다." }
+menu_v = 0.15
+plays = [
+    # Its text's share is unread: ours. `TUNE`
+    { v = 0.15, play = { kill_burst = { keys = [], dotted = true, radius = 6.0, gap = 0.0 } } },
+]
+
+[[talent]]
+key = "demonic_familiar"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [30, 0.04] }]
+icon = "Spell_Shadow_SummonImp"
+name = { en = "Demonic Familiar", de = "Dämonischer Vertrauter", fr = "Familier démoniaque", es = "Familiar demoníaco", pt = "Familiar Demoníaco", ru = "Демонический спутник", pl = "Demoniczny chowaniec", tr = "Şeytani Yoldaş", it = "Famiglio demoniaco", ja = "デモニック・ファミリア", zh = "恶魔仆从", ko = "악마 친구" }
+text = { en = "An Imp fights at your side for good, its Firebolts {v}% stronger. Each one also strikes every enemy burning with your Immolate.", de = "Ein Wichtel kämpft dauerhaft an deiner Seite, seine Feuerblitze sind {v}% stärker. Jeder trifft zudem alle Feinde, die unter deinem Feuerbrand brennen.", fr = "Un diablotin combat à tes côtés en permanence, ses éclairs de feu étant {v}% plus puissants. Chacun frappe aussi tous les ennemis qui brûlent sous ton Immolation.", es = "Un diablillo lucha a tu lado de forma permanente, con sus Descargas de fuego un {v}% más fuertes. Cada una también golpea a todos los enemigos que arden con tu Inmolar.", pt = "Um Diabrete luta ao seu lado para sempre, com Setas de Fogo {v}% mais fortes. Cada uma também atinge todo inimigo que queima com sua Imolação.", ru = "Бес навсегда сражается на твоей стороне, его Огненные стрелы на {v}% сильнее. Каждая также поражает всех врагов, горящих от твоего Жертвенного огня.", pl = "Chochlik walczy u twego boku na stałe, a jego Ogniste strzały są silniejsze o {v}%. Każda uderza też każdego przeciwnika płonącego od twojego Podpalenia.", tr = "Bir İmp kalıcı olarak yanında savaşır, Ateş Okları {v}% daha güçlüdür. Her ok ayrıca senin Yak'ınla yanan her düşmana da vurur.", it = "Un Imp combatte per sempre al tuo fianco, con i suoi Dardi di fuoco più forti del {v}%. Ognuno colpisce anche ogni nemico che brucia per la tua Immolazione.", ja = "インプが常に共に戦い、そのファイアボルトが{v}%強化されます。各ファイアボルトはイモレートで燃えているすべての敵にも命中します。", zh = "一个小鬼永久在你身边作战，其火焰箭的威力提高{v}%。每支火焰箭还会击中所有正在被你的献祭灼烧的敌人。", ko = "임프가 영구히 곁에서 싸우며, 임프의 화염 화살이 {v}% 강해집니다. 화염 화살은 당신의 제물에 불타는 모든 적에게도 피해를 줍니다." }
+menu_v = 0.04
+# The demons' own ways (Immolate's splash, Soul Devourer's hunger and Consume Magic, Soul Link's
+# shield, the gate's stuns and coils, Meteor, Doom Bringer, the Dread Lord's and the Felguard's
+# blows) are the `behaviors` of the talent that called them; their numbers are ours. `TUNE`
+behaviors = [{ behavior = "spread_to_dotted", spell = "immolate" }]
+plays = [
+    { v = 0.0, play = { pet = { pet = "imp", cleave = false } } },
+]
+
+[[talent]]
+key = "demonic_embrace"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.04] }]
+icon = "Spell_Shadow_Metamorphosis"
+name = { en = "Demonic Embrace", de = "Dämonische Umarmung", fr = "Étreinte démoniaque", es = "Abrazo demoníaco", pt = "Abraço Demoníaco", ru = "Демонические объятия", pl = "Demoniczny uścisk", tr = "Şeytani Kucaklama", it = "Abbraccio demoniaco", ja = "デモニック・エンブレイス", zh = "恶魔之拥", ko = "악마의 포옹" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "fel_stamina"
+tree = 1
+row = 1
+col = 0
+ranks = 3
+effects = [{ stat = [5, 0.025] }]
+icon = "Spell_Shadow_AntiShadow"
+name = { en = "Fel Stamina", de = "Teufelsausdauer", fr = "Endurance gangrenée", es = "Aguante vil", pt = "Vigor Vil", ru = "Выносливость Скверны", pl = "Wytrzymałość Zła", tr = "Fel Dayanıklılığı", it = "Tempra vile", ja = "フェル・スタミナ", zh = "邪能耐力", ko = "지옥 체력" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "unholy_power"
+tree = 1
+row = 1
+col = 3
+ranks = 5
+req = "demonic_familiar"
+effects = [{ stat = [17, 0.05] }]
+icon = "Spell_Shadow_ShadowWordDominate"
+name = { en = "Unholy Power", de = "Unheilige Macht", fr = "Puissance impie", es = "Poder profano", pt = "Poder Profano", ru = "Нечестивая сила", pl = "Nieświęta moc", tr = "Kutsal Olmayan Güç", it = "Potere empio", ja = "アンホーリー・パワー", zh = "邪恶强化", ko = "부정의 힘" }
+text = { en = "Your demons deal {v}% more damage.", de = "Deine Dämonen verursachen {v}% mehr Schaden.", fr = "Tes démons infligent {v}% de dégâts en plus.", es = "Tus demonios infligen un {v}% más de daño.", pt = "Seus demônios causam {v}% a mais de dano.", ru = "Твои демоны наносят на {v}% больше урона.", pl = "Twoje demony zadają o {v}% więcej obrażeń.", tr = "Şeytanların {v}% daha fazla hasar verir.", it = "I tuoi demoni infliggono il {v}% di danni in più.", ja = "デーモンのダメージが{v}%増加します。", zh = "你的恶魔造成的伤害提高{v}%。", ko = "악마의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "soul_devourer"
+tree = 1
+row = 2
+col = 0
+ranks = 3
+req = "demonic_familiar"
+exclusive = true
+effects = []
+icon = "Spell_Shadow_SummonFelHunter"
+name = { en = "Soul Devourer", de = "Seelenverschlinger", fr = "Dévoreur d'âmes", es = "Devoraalmas", pt = "Devorador de Almas", ru = "Пожиратель душ", pl = "Pożeracz dusz", tr = "Ruh Yiyen", it = "Divoratore di anime", ja = "ソウル・ディヴァウラー", zh = "灵魂吞噬者", ko = "영혼 포식자" }
+behaviors = [
+    { behavior = "hunts_important" },
+    { behavior = "missing_health_more", pet = "felhunter" },
+    { behavior = "consume_dot", share = 0.1, more = 1.5 },
+]
+text = { en = "Milestone. Permanently summons a Felhunter. Its bites hit 2 enemies, prioritizing bosses and guardians, and deal {v}% more damage per 1% missing enemy health.\nConsume Magic: Consumes 10% of your highest-ranked DoT's remaining duration, dealing 150% of the consumed damage.\nRules out Soul Link.", de = "Meilenstein. Beschwört dauerhaft einen Teufelsjäger. Seine Bisse treffen 2 Feinde, bevorzugt Bosse und Wächter, und verursachen {v}% mehr Schaden pro 1% fehlender Gesundheit des Feindes.\nMagie verschlingen: Verbraucht 10% der verbleibenden Dauer deines höchstrangigen Schadens-über-Zeit-Effekts und verursacht 150% des verbrauchten Schadens.\nSchließt Seelenverbindung aus.", fr = "Étape. Invoque en permanence un chasseur corrompu. Ses morsures touchent 2 ennemis, en priorité les boss et les gardiens, et infligent {v}% de dégâts en plus par tranche de 1% de points de vie manquants de l'ennemi.\nDévorer la magie : consomme 10% de la durée restante de ton DoT de plus haut rang et inflige 150% des dégâts consommés.\nExclut Lien spirituel.", es = "Hito. Invoca de forma permanente a un manáfago. Sus mordiscos golpean a 2 enemigos, priorizando jefes y guardianes, e infligen un {v}% más de daño por cada 1% de salud que le falte al enemigo.\nConsumir magia: consume un 10% de la duración restante de tu DoT de mayor rango e inflige un 150% del daño consumido.\nExcluye Enlace de alma.", pt = "Marco. Invoca permanentemente um Caçador Vil. Suas mordidas atingem 2 inimigos, priorizando chefes e guardiões, e causam {v}% a mais de dano por 1% de vida faltante do inimigo.\nConsumir Magia: consome 10% da duração restante do seu DoT de maior nível, causando 150% do dano consumido.\nExclui Elo de Alma.", ru = "Веха. Навсегда призывает охотника Скверны. Его укусы поражают 2 врагов, в первую очередь боссов и стражей, и наносят на {v}% больше урона за каждый 1% недостающего здоровья врага.\nПоглощение магии: поглощает 10% оставшейся длительности твоего DoT высшего ранга, нанося 150% поглощённого урона.\nИсключает Родство душ.", pl = "Kamień milowy. Przyzywa na stałe Łowcę Zła. Jego ugryzienia trafiają 2 przeciwników, w pierwszej kolejności bossów i strażników, i zadają o {v}% więcej obrażeń za każdy 1% brakującego zdrowia przeciwnika.\nPochłonięcie magii: zużywa 10% pozostałego czasu twojego najsilniejszego efektu obrażeń w czasie i zadaje 150% zużytych obrażeń.\nWyklucza Więź dusz.", tr = "Dönüm noktası. Kalıcı olarak bir Fel Avcısı çağırır. Isırıkları 2 düşmana vurur, boss'lara ve muhafızlara öncelik verir ve düşmanın eksik her 1% canı için {v}% daha fazla hasar verir.\nBüyü Tüket: En yüksek rütbeli zamanla hasarın kalan süresinin 10%'unu tüketir ve tüketilen hasarın 150%'sini verir.\nRuh Bağı'nı dışlar.", it = "Traguardo. Evoca per sempre un Vilcacciatore. I suoi morsi colpiscono 2 nemici, dando priorità a boss e guardiani, e infliggono il {v}% di danni in più per ogni 1% di salute mancante del nemico.\nConsumare magia: consuma il 10% della durata rimanente del tuo DoT di grado più alto, infliggendo il 150% dei danni consumati.\nEsclude Legame dell'anima.", ja = "【マイルストーン】フェルハンターを常時召喚します。その噛みつきは2体の敵に命中し（ボスとガーディアンを優先）、敵の失われた体力1%ごとにダメージが{v}%増加します。\nコンシューム・マジック：最もランクの高い継続ダメージの残り時間の10%を消費し、消費したダメージの150%を与えます。\nソウル・リンクとは両立できません。", zh = "里程碑：永久召唤一只地狱猎犬。其撕咬击中2个敌人，优先攻击首领和守护者，敌人每损失1%的生命值，造成的伤害提高{v}%。\n吞噬魔法：消耗你等级最高的持续伤害效果10%的剩余持续时间，造成相当于被消耗伤害150%的伤害。\n与灵魂链接互斥。", ko = "이정표. 지옥사냥개를 영구히 소환합니다. 지옥사냥개의 물기는 우두머리와 수호자를 우선하여 적 2명을 공격하며, 적의 잃은 생명력 1%당 피해가 {v}% 증가합니다.\n마법 삼키기: 가장 높은 단계의 지속 피해 효과의 남은 지속시간 10%를 소모하여, 소모한 피해의 150%를 줍니다.\n영혼의 고리와 함께 선택할 수 없습니다." }
+menu_v = 0.005
+plays = [
+    # `{v}`: more damage per 1% of the target's health missing. Ours. `TUNE`
+    { v = 0.005, play = { pet = { pet = "felhunter", cleave = false } } },
+]
+
+[[talent]]
+key = "soul_link"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+exclusive = true
+effects = []
+icon = "Spell_Shadow_GatherShadows"
+name = { en = "Soul Link", de = "Seelenverbindung", fr = "Lien spirituel", es = "Enlace de alma", pt = "Elo de Alma", ru = "Родство душ", pl = "Więź dusz", tr = "Ruh Bağı", it = "Legame dell'anima", ja = "ソウル・リンク", zh = "灵魂链接", ko = "영혼의 고리" }
+text = { en = "Milestone. Permanently summons a Voidwalker that hits 2 enemies. Gains 3% damage per 1% Damage Reduction and 2% per 1% bonus max health.\nYour Voidwalkers shield you for {v}% of their damage, up to 10% of your max health.\nRules out Soul Devourer.", de = "Meilenstein. Beschwört dauerhaft einen Leerwandler, der 2 Feinde trifft. Er erhält 3% Schaden pro 1% Schadensverringerung und 2% pro 1% zusätzlicher maximaler Gesundheit.\nDeine Leerwandler schirmen dich mit {v}% ihres Schadens ab, bis zu 10% deiner maximalen Gesundheit.\nSchließt Seelenverschlinger aus.", fr = "Étape. Invoque en permanence un marcheur du Vide qui touche 2 ennemis. Gagne 3% de dégâts par tranche de 1% de réduction des dégâts et 2% par tranche de 1% de points de vie max bonus.\nTes marcheurs du Vide te protègent à hauteur de {v}% de leurs dégâts, jusqu'à 10% de tes points de vie max.\nExclut Dévoreur d'âmes.", es = "Hito. Invoca de forma permanente a un abisario que golpea a 2 enemigos. Gana un 3% de daño por cada 1% de reducción de daño y un 2% por cada 1% de salud máxima adicional.\nTus abisarios te protegen con un {v}% de su daño, hasta un 10% de tu salud máxima.\nExcluye Devoraalmas.", pt = "Marco. Invoca permanentemente um Caminhante do Vácuo que atinge 2 inimigos. Ganha 3% de dano por 1% de Redução de Dano e 2% por 1% de vida máxima adicional.\nSeus Caminhantes do Vácuo protegem você com {v}% do dano deles, até 10% da sua vida máxima.\nExclui Devorador de Almas.", ru = "Веха. Навсегда призывает демона Бездны, поражающего 2 врагов. Получает 3% урона за каждый 1% снижения урона и 2% за каждый 1% бонусного максимума здоровья.\nТвои демоны Бездны защищают тебя щитом в {v}% своего урона, до 10% твоего максимума здоровья.\nИсключает Пожирателя душ.", pl = "Kamień milowy. Przyzywa na stałe Wędrowca Pustki, który trafia 2 przeciwników. Zyskuje 3% obrażeń za każdy 1% redukcji obrażeń i 2% za każdy 1% dodatkowego maks. zdrowia.\nTwoi Wędrowcy Pustki chronią cię tarczą o wartości {v}% ich obrażeń, do 10% twojego maks. zdrowia.\nWyklucza Pożeracza dusz.", tr = "Dönüm noktası. Kalıcı olarak 2 düşmana vuran bir Boşluk Yürüyeni çağırır. Her 1% Hasar Azaltma için 3%, her 1% bonus azami can için 2% hasar kazanır.\nBoşluk Yürüyenlerin hasarlarının {v}%'si kadar seni korur, azami canının 10%'una kadar.\nRuh Yiyen'i dışlar.", it = "Traguardo. Evoca per sempre un Vuotante che colpisce 2 nemici. Ottiene il 3% di danni per ogni 1% di riduzione dei danni e il 2% per ogni 1% di salute massima bonus.\nI tuoi Vuotanti ti proteggono con uno scudo pari al {v}% dei loro danni, fino al 10% della tua salute massima.\nEsclude Divoratore di anime.", ja = "【マイルストーン】2体の敵に命中するヴォイドウォーカーを常時召喚します。被ダメージ軽減1%ごとにダメージ+3%、最大体力ボーナス1%ごとに+2%。\nヴォイドウォーカーがそのダメージの{v}%分のシールドをあなたに張ります（最大体力の10%まで）。\nソウル・ディヴァウラーとは両立できません。", zh = "里程碑：永久召唤一个击中2个敌人的虚空行者。你每有1%的伤害减免，它的伤害提高3%；每有1%的额外最大生命值，它的伤害提高2%。\n你的虚空行者会为你提供相当于其伤害{v}%的护盾，最多为你最大生命值的10%。\n与灵魂吞噬者互斥。", ko = "이정표. 적 2명을 공격하는 보이드워커를 영구히 소환합니다. 피해 감소 1%당 피해가 3%, 최대 생명력 보너스 1%당 2% 증가합니다.\n보이드워커가 자신이 준 피해의 {v}%만큼 당신에게 보호막을 씌웁니다. 최대 생명력의 10%까지입니다.\n영혼 포식자와 함께 선택할 수 없습니다." }
+menu_v = 0.05
+behaviors = [
+    { behavior = "armor_health_more", pet = "voidwalker", per_armor = 0.03, per_health = 0.02 },
+    # Shown as the Voidwalker's Sacrifice (7812).
+    { behavior = "damage_shield", cap = 0.1, aura = 7812 },
+]
+plays = [
+    # `{v}`: the share of the Voidwalker's damage that shields the hero.
+    { v = 0.05, play = { pet = { pet = "voidwalker", cleave = false } } },
+]
+
+[[talent]]
+key = "felfire_training"
+tree = 1
+row = 2
+col = 3
+ranks = 3
+effects = [{ stat = [31, 0.05] }]
+icon = "Spell_Shadow_Possession"
+name = { en = "Demonic Echoes", de = "Dämonische Echos", fr = "Échos démoniaques", es = "Ecos demoníacos", pt = "Ecos Demoníacos", ru = "Демонические отголоски", pl = "Demoniczne echa", tr = "Şeytani Yankılar", it = "Echi demoniaci", ja = "デモニック・エコー", zh = "恶魔回响", ko = "악마의 메아리" }
+text = { en = "Your demons' attacks have a {v}% chance to Echo for full damage. This is their only Echo source.", de = "Die Angriffe deiner Dämonen haben eine Chance von {v}%, ein Echo mit vollem Schaden auszulösen. Das ist ihre einzige Echo-Quelle.", fr = "Les attaques de tes démons ont {v}% de chances de produire un écho à dégâts complets. C'est leur seule source d'écho.", es = "Los ataques de tus demonios tienen un {v}% de probabilidad de producir un eco con el daño completo. Es su única fuente de eco.", pt = "Os ataques dos seus demônios têm {v}% de chance de ecoar com dano total. Essa é a única fonte de eco deles.", ru = "Атаки твоих демонов с шансом {v}% порождают эхо с полным уроном. Это их единственный источник эха.", pl = "Ataki twoich demonów mają {v}% szansy na Echo z pełnymi obrażeniami. To ich jedyne źródło Echa.", tr = "Şeytanlarının saldırıları {v}% ihtimalle tam hasarla Yankılanır. Bu onların tek Yankı kaynağıdır.", it = "Gli attacchi dei tuoi demoni hanno il {v}% di probabilità di fare Eco con danni pieni. Questa è la loro unica fonte di Eco.", ja = "デーモンの攻撃が{v}%の確率でエコーし、全ダメージを与えます。これがデーモン唯一のエコー源です。", zh = "你的恶魔的攻击有{v}%的几率触发回响，造成全额伤害。这是它们唯一的回响来源。", ko = "악마의 공격이 {v}% 확률로 메아리쳐 전체 피해를 한 번 더 줍니다. 악마가 메아리를 얻는 유일한 방법입니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "master_demonologist"
+tree = 1
+row = 3
+col = 3
+ranks = 3
+req = "soul_devourer"
+# Ours: the demons' damage (17) and crit (29) at 5% a rank, 15% at 3/3; AS's was all damage and the
+# demons' crit at 3% a rank. `TUNE`: lower it if Demonology runs too strong.
+effects = [{ stat = [17, 0.05] }, { stat = [29, 0.05] }]
+icon = "Spell_Shadow_ShadowPact"
+name = { en = "Master Demonologist", de = "Meisterdämonologe", fr = "Maître démonologue", es = "Maestro demonólogo", pt = "Mestre Demonologista", ru = "Мастер-демонолог", pl = "Mistrz demonologii", tr = "Usta Şeytan Bilimci", it = "Maestro demonologo", ja = "マスター・デモノロジスト", zh = "恶魔学识大师", ko = "악마학의 대가" }
+text = { en = "Increases your demons' damage and critical strike chance by {v}%.", de = "Erhöht den Schaden und die kritische Trefferchance deiner Dämonen um {v}%.", fr = "Augmente de {v}% les dégâts et le taux de coup critique de tes démons.", es = "Aumenta un {v}% el daño y la probabilidad de golpe crítico de tus demonios.", pt = "Aumenta o dano e a chance de acerto crítico dos seus demônios em {v}%.", ru = "Увеличивает урон и шанс критического удара твоих демонов на {v}%.", pl = "Zwiększa obrażenia oraz szansę na trafienie krytyczne twoich demonów o {v}%.", tr = "Şeytanlarının hasarını ve kritik vuruş şansını {v}% artırır.", it = "Aumenta del {v}% i danni e la probabilità di colpo critico dei tuoi demoni.", ja = "デーモンのダメージとクリティカル率が{v}%増加します。", zh = "使你的恶魔的伤害和暴击几率提高{v}%。", ko = "악마의 피해와 치명타율이 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "legion_gate"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+# Its lesser demons are what Demonic Supremacy forbids: one or the other.
+exclusive = "legion"
+effects = []
+icon = "Spell_Shadow_RitualOfSacrifice"
+name = { en = "Legion Gate", de = "Tor der Legion", fr = "Porte de la Légion", es = "Puerta de la Legión", pt = "Portal da Legião", ru = "Врата Легиона", pl = "Brama Legionu", tr = "Lejyon Kapısı", it = "Portale della Legione", ja = "レギオン・ゲート", zh = "军团之门", ko = "군단의 관문" }
+behaviors = [
+    { behavior = "stun_dotted", pet = "succubus", spell = "corruption", secs = 1.0 },
+    { behavior = "gate_coil", spell = "death_coil", share = 0.5, reach = 25.0 },
+]
+text = { en = "Milestone. Every 4 sec, summon 4 random lesser demons for 12–16 sec (max 12).\nSuccubi stun Corrupted enemies. Their kills trigger a Death Coil at 50% damage.", de = "Meilenstein. Alle 4 Sek. beschwörst du 4 zufällige niedere Dämonen für 12–16 Sek. (max. 12).\nSukkuben betäuben Feinde unter deiner Verderbnis. Ihre Tötungen lösen einen Todesmantel mit 50% Schaden aus.", fr = "Étape. Toutes les 4 s, invoque 4 démons mineurs aléatoires pendant 12–16 s (max. 12).\nLes succubes étourdissent les ennemis sous Corruption. Leurs victimes déclenchent un Voile mortel à 50% des dégâts.", es = "Hito. Cada 4 s, invocas 4 demonios menores aleatorios durante 12–16 s (máx. 12).\nLos súcubos aturden a los enemigos con Corrupción. Sus bajas desencadenan una Espiral de la muerte con un 50% de daño.", pt = "Marco. A cada 4 s, invoca 4 demônios menores aleatórios por 12–16 s (máx. 12).\nSúcubos atordoam inimigos sob Corrupção. Suas mortes disparam uma Espiral da Morte com 50% do dano.", ru = "Веха. Каждые 4 сек. призывает 4 случайных младших демона на 12–16 сек. (макс. 12).\nСуккубы оглушают врагов под Порчей. Их убийства вызывают Лик смерти с 50% урона.", pl = "Kamień milowy. Co 4 s przyzywa 4 losowe pomniejsze demony na 12–16 s (maks. 12).\nSukuby ogłuszają Zepsutych przeciwników. Ich zabójstwa wywołują Splot śmierci za 50% obrażeń.", tr = "Dönüm noktası. Her 4 sn'de 12–16 sn için 4 rastgele küçük şeytan çağır (en fazla 12).\nSuccubus'lar Yozlaşmış düşmanları sersemletir. Öldürmeleri 50% hasarlı bir Ölüm Sarmalı tetikler.", it = "Traguardo. Ogni 4 s, evoca 4 demoni minori casuali per 12–16 s (max 12).\nI Succubi stordiscono i nemici corrotti. Le loro uccisioni innescano una Spira della morte al 50% dei danni.", ja = "【マイルストーン】4秒ごとにランダムな下級デーモン4体を12～16秒間召喚します（最大12体）。\nサキュバスはコラプション状態の敵をスタンさせます。下級デーモンが敵を倒すと、50%ダメージのデス・コイルが発動します。", zh = "里程碑：每4秒召唤4个随机的低阶恶魔，持续12–16秒（最多12个）。\n魅魔会使被腐蚀的敌人昏迷。它们的击杀会触发一次伤害为50%的死亡缠绕。", ko = "이정표. 4초마다 무작위 하급 악마 4마리를 12–16초 동안 소환합니다(최대 12마리).\n서큐버스는 부패에 걸린 적을 기절시킵니다. 서큐버스가 처치하면 50% 피해의 죽음의 고리가 발동합니다." }
+menu_v = 4
+plays = [
+    # Four a gate (AS's three) so the dozen stand without gaps. `TUNE`
+    { v = 4.0, play = { summon = { pets = ["imp", "succubus", "felhunter"], n = 4, lasts = 14.0, spread = 2.0, most = 12, floor = 0.43, lesser = true } } },
+]
+
+[[talent]]
+key = "demonic_supremacy"
+tree = 1
+row = 4
+col = 3
+ranks = 1
+exclusive = "legion"
+effects = [{ stat = [32, 1.0] }]
+icon = "Spell_Shadow_CurseOfAchimonde"
+name = { en = "Demonic Supremacy", de = "Dämonische Vorherrschaft", fr = "Suprématie démoniaque", es = "Supremacía demoníaca", pt = "Supremacia Demoníaca", ru = "Демоническое превосходство", pl = "Demoniczna supremacja", tr = "Şeytani Üstünlük", it = "Supremazia demoniaca", ja = "デモニック・スプレマシー", zh = "恶魔霸权", ko = "악마의 지배력" }
+text = { en = "Your Infernal and Doomguard become permanent. You can no longer summon lesser demons. Maximum one of each.", de = "Deine Höllenbestie und Verdammniswache werden dauerhaft. Du kannst keine niederen Dämonen mehr beschwören. Höchstens einer von jedem.", fr = "Ton infernal et ton garde funeste deviennent permanents. Tu ne peux plus invoquer de démons mineurs. Un seul de chaque au maximum.", es = "Tu infernal y tu guardia apocalíptico se vuelven permanentes. Ya no puedes invocar demonios menores. Máximo uno de cada.", pt = "Seu Infernal e seu Guarda da Perdição se tornam permanentes. Você não pode mais invocar demônios menores. No máximo um de cada.", ru = "Твои Инфернал и Стражник ужаса становятся постоянными. Ты больше не можешь призывать младших демонов. Не более одного каждого.", pl = "Twój Piekielnik i Strażnik zagłady stają się stali. Nie możesz już przyzywać pomniejszych demonów. Maksymalnie po jednym z każdego.", tr = "Cehennem Yaratığın ve Kıyamet Muhafızın kalıcı olur. Artık küçük şeytan çağıramazsın. Her birinden en fazla bir tane.", it = "Il tuo Infernale e la tua Guardia Fatale diventano permanenti. Non puoi più evocare demoni minori. Massimo uno per tipo.", ja = "インファーナルとドゥームガードが常駐するようになります。下級デーモンは召喚できなくなります。それぞれ最大1体。", zh = "你的地狱火和末日守卫变为永久存在。你无法再召唤低阶恶魔。每种最多一个。", ko = "지옥불정령과 파멸의 수호병이 영구히 남습니다. 더 이상 하급 악마를 소환할 수 없습니다. 각각 최대 1마리입니다." }
+menu_v = 1
+
+[[talent]]
+key = "summon_infernal"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Shadow_SummonInfernal"
+name = { en = "Summon Infernal", de = "Höllenbestie beschwören", fr = "Invocation d'un infernal", es = "Invocar infernal", pt = "Invocar Infernal", ru = "Призыв инфернала", pl = "Przyzwanie Piekielnika", tr = "Cehennem Yaratığı Çağır", it = "Evocare Infernale", ja = "サモン・インファーナル", zh = "召唤地狱火", ko = "지옥불정령 소환" }
+behaviors = [{ behavior = "meteor", reach = 8.0, secs = 2.0 }]
+text = { en = "Your damaging spells have a {v}% chance to summon an Infernal for 15 sec (max 1). Its Meteor stuns enemies on impact, and it burns nearby enemies with Hellfire.", de = "Deine schädlichen Zauber haben eine Chance von {v}%, für 15 Sek. eine Höllenbestie zu beschwören (max. 1). Ihr Meteor betäubt Feinde beim Aufprall, und sie verbrennt Feinde in der Nähe mit Höllenfeuer.", fr = "Tes sorts offensifs ont {v}% de chances d'invoquer un infernal pendant 15 s (max. 1). Son météore étourdit les ennemis à l'impact, et il brûle les ennemis proches avec les Flammes infernales.", es = "Tus hechizos de daño tienen un {v}% de probabilidad de invocar a un infernal durante 15 s (máx. 1). Su Meteoro aturde a los enemigos al impactar, y quema a los enemigos cercanos con Fuego infernal.", pt = "Seus feitiços de dano têm {v}% de chance de invocar um Infernal por 15 s (máx. 1). Seu Meteoro atordoa inimigos no impacto, e ele queima inimigos próximos com Fogo Infernal.", ru = "Твои повреждающие заклинания с шансом {v}% призывают инфернала на 15 сек. (макс. 1). Его Метеор оглушает врагов при падении, а Адским пламенем он обжигает врагов рядом.", pl = "Twoje czary zadające obrażenia mają {v}% szansy, by przyzwać Piekielnika na 15 s (maks. 1). Jego Meteor ogłusza przeciwników przy uderzeniu, a on sam pali pobliskich przeciwników Piekielnym ogniem.", tr = "Hasar veren büyülerin {v}% ihtimalle 15 sn için bir Cehennem Yaratığı çağırır (en fazla 1). Göktaşı çarpınca düşmanları sersemletir ve yakındaki düşmanları Cehennem Ateşi ile yakar.", it = "I tuoi incantesimi offensivi hanno il {v}% di probabilità di evocare un Infernale per 15 s (max 1). La sua Meteora stordisce i nemici all'impatto e brucia i nemici vicini con Fuoco infernale.", ja = "ダメージを与える呪文が{v}%の確率でインファーナルを15秒間召喚します（最大1体）。そのメテオは着弾時に敵をスタンさせ、ヘルファイアで周囲の敵を焼きます。", zh = "你的伤害法术有{v}%的几率召唤一个地狱火，持续15秒（最多1个）。其陨石落地时会使敌人昏迷，并以地狱烈焰灼烧附近的敌人。", ko = "피해 주문이 {v}% 확률로 지옥불정령을 15초 동안 소환합니다(최대 1마리). 지옥불정령의 유성은 떨어질 때 적을 기절시키며, 지옥의 불길로 주위의 적을 불태웁니다." }
+menu_v = 0.05
+plays = [
+    { v = 0.05, play = { call_pet = { pet = "infernal", lasts = 15.0 } } },
+]
+
+[[talent]]
+key = "summon_doomguard"
+tree = 1
+row = 5
+col = 3
+ranks = 3
+effects = []
+icon = "Spell_Shadow_AntiMagicShell"
+name = { en = "Summon Doomguard", de = "Verdammniswache beschwören", fr = "Invocation d'un garde funeste", es = "Invocar guardia apocalíptico", pt = "Invocar Guarda da Perdição", ru = "Призыв стражника ужаса", pl = "Przyzwanie Strażnika zagłady", tr = "Kıyamet Muhafızı Çağır", it = "Evocare Guardia Fatale", ja = "サモン・ドゥームガード", zh = "召唤末日守卫", ko = "파멸의 수호병 소환" }
+text = { en = "Your damaging spells have a {v}% chance to summon a Doomguard for 15 sec (max 1). Its Shadow Bolts hit 2 enemies and inherit your upgrades.\nDoom Bringer: Consecutive hits on the same boss or elite deal 20% more damage each, up to 100%.", de = "Deine schädlichen Zauber haben eine Chance von {v}%, für 15 Sek. eine Verdammniswache zu beschwören (max. 1). Ihre Schattenblitze treffen 2 Feinde und erben deine Verbesserungen.\nVerdammnisbringer: Aufeinanderfolgende Treffer auf denselben Boss oder Elitegegner verursachen je 20% mehr Schaden, bis zu 100%.", fr = "Tes sorts offensifs ont {v}% de chances d'invoquer un garde funeste pendant 15 s (max. 1). Ses traits de l'ombre touchent 2 ennemis et héritent de tes améliorations.\nPorteur de funeste : les coups consécutifs sur le même boss ou élite infligent chacun 20% de dégâts en plus, jusqu'à 100%.", es = "Tus hechizos de daño tienen un {v}% de probabilidad de invocar a un guardia apocalíptico durante 15 s (máx. 1). Sus Descargas de las Sombras golpean a 2 enemigos y heredan tus mejoras.\nPortador de la fatalidad: los golpes consecutivos al mismo jefe o élite infligen un 20% más de daño cada uno, hasta un 100%.", pt = "Seus feitiços de dano têm {v}% de chance de invocar um Guarda da Perdição por 15 s (máx. 1). Suas Setas Sombrias atingem 2 inimigos e herdam seus aprimoramentos.\nPortador da Perdição: golpes consecutivos no mesmo chefe ou elite causam 20% a mais de dano cada, até 100%.", ru = "Твои повреждающие заклинания с шансом {v}% призывают стражника ужаса на 15 сек. (макс. 1). Его Стрелы Тьмы поражают 2 врагов и наследуют твои улучшения.\nПредвестник гибели: последовательные удары по одному и тому же боссу или элите наносят на 20% больше урона каждый, до 100%.", pl = "Twoje czary zadające obrażenia mają {v}% szansy, by przyzwać Strażnika zagłady na 15 s (maks. 1). Jego Strzały cienia trafiają 2 przeciwników i dziedziczą twoje ulepszenia.\nPosłaniec zagłady: kolejne trafienia tego samego bossa lub elity zadają o 20% więcej obrażeń każde, do 100%.", tr = "Hasar veren büyülerin {v}% ihtimalle 15 sn için bir Kıyamet Muhafızı çağırır (en fazla 1). Gölge Okları 2 düşmana vurur ve yükseltmelerini devralır.\nKıyamet Getiren: Aynı boss veya elite art arda yapılan her vuruş 20% daha fazla hasar verir, en fazla 100%.", it = "I tuoi incantesimi offensivi hanno il {v}% di probabilità di evocare una Guardia Fatale per 15 s (max 1). I suoi Dardi d'ombra colpiscono 2 nemici ed ereditano i tuoi potenziamenti.\nPortatore di Rovina: i colpi consecutivi sullo stesso boss o élite infliggono il 20% di danni in più ciascuno, fino al 100%.", ja = "ダメージを与える呪文が{v}%の確率でドゥームガードを15秒間召喚します（最大1体）。そのシャドウ・ボルトは2体の敵に命中し、あなたの強化を引き継ぎます。\nドゥーム・ブリンガー：同じボスやエリートに連続で命中するたびにダメージが20%ずつ増加します（最大100%）。", zh = "你的伤害法术有{v}%的几率召唤一个末日守卫，持续15秒（最多1个）。其暗影箭击中2个敌人，并继承你的强化。\n末日使者：连续攻击同一个首领或精英时，每次伤害提高20%，最多提高100%。", ko = "피해 주문이 {v}% 확률로 파멸의 수호병을 15초 동안 소환합니다(최대 1마리). 파멸의 수호병의 어둠의 화살은 적 2명을 공격하며 당신의 강화를 물려받습니다.\n파멸의 전령: 같은 우두머리나 정예를 연달아 공격할 때마다 피해가 20%씩 증가하며, 최대 100%입니다." }
+menu_v = 0.05
+behaviors = [
+    { behavior = "inherits", pet = "doomguard", spell = "shadow_bolt" },
+    { behavior = "doom_streak", pet = "doomguard", more = 0.2, cap = 1.0 },
+]
+plays = [
+    { v = 0.05, play = { call_pet = { pet = "doomguard", lasts = 15.0 } } },
+]
+
+[[talent]]
+key = "pact_of_the_annihilan"
+tree = 1
+row = 6
+col = 0
+ranks = 1
+req = "legion_gate"
+effects = []
+icon = "Spell_Shadow_UnholyStrength"
+name = { en = "Pact of the Nathrezim", de = "Pakt der Nathrezim", fr = "Pacte des Nathrezim", es = "Pacto de los Nathrezim", pt = "Pacto dos Nathrezim", ru = "Договор с Нафрезимами", pl = "Pakt z Nathrezimami", tr = "Nathrezim Paktı", it = "Patto dei Nathrezim", ja = "パクト・オブ・ザ・ナスレズィム", zh = "纳斯雷兹姆之约", ko = "나스레짐의 서약" }
+text = { en = "Capstone. Summons a Dread Lord for {v} sec every 30 sec, reduced by CDR (min 13 sec). Up to 2 active.\nFelseeker inherits your Searing Pain upgrades and deals 25% more damage to its primary target. It hits up to 6 enemies.\nExclusive with Butcher.", de = "Schlussstein. Beschwört alle 30 Sek. einen Schreckenslord für {v} Sek., verkürzt durch Abklingzeitverringerung (min. 13 Sek.). Bis zu 2 aktiv.\nTeufelssucher erbt die Verbesserungen deines Sengenden Schmerzes und verursacht an seinem Hauptziel 25% mehr Schaden. Er trifft bis zu 6 Feinde.\nSchließt Schlächter aus.", fr = "Apogée. Invoque un seigneur de l'effroi pendant {v} s toutes les 30 s, réduit par la RTR (min. 13 s). Jusqu'à 2 actifs.\nGangrechercheur hérite de tes améliorations de Douleur brûlante et inflige 25% de dégâts en plus à sa cible principale. Il touche jusqu'à 6 ennemis.\nExclusif avec Boucher.", es = "Cúspide. Invoca a un señor del terror durante {v} s cada 30 s, reducido por la RTR (mín. 13 s). Hasta 2 activos.\nBuscavil hereda tus mejoras de Dolor abrasador e inflige un 25% más de daño a su objetivo principal. Golpea hasta a 6 enemigos.\nExclusivo con Carnicero.", pt = "Ápice. Invoca um Senhor do Terror por {v} s a cada 30 s, reduzido pela RTR (mín. 13 s). Até 2 ativos.\nBuscavil herda seus aprimoramentos de Dor Escaldante e causa 25% a mais de dano ao alvo principal. Atinge até 6 inimigos.\nExclusivo com Açougueiro.", ru = "Вершина. Каждые 30 сек. призывает повелителя ужаса на {v} сек., сокращается снижением перезарядки (мин. 13 сек.). До 2 одновременно.\nИскатель Скверны наследует твои улучшения Жгучей боли и наносит на 25% больше урона основной цели. Поражает до 6 врагов.\nНесовместима с Мясником.", pl = "Zwieńczenie. Co 30 s przyzywa Władcę Grozy na {v} s, skracane przez redukcję odnowień (min. 13 s). Do 2 naraz.\nPoszukiwacz Zła dziedziczy ulepszenia twojego Palącego bólu i zadaje o 25% więcej obrażeń głównemu celowi. Trafia do 6 przeciwników.\nWyklucza Rzeźnika.", tr = "Zirve. Her 30 sn'de {v} sn için bir Dehşet Lordu çağırır, bekleme azaltımıyla kısalır (en az 13 sn). En fazla 2 aktif.\nFel Arayan, Kavurucu Acı yükseltmelerini devralır ve ana hedefine 25% daha fazla hasar verir. En fazla 6 düşmana vurur.\nKasap ile birlikte alınamaz.", it = "Vertice. Evoca un Signore del terrore per {v} s ogni 30 s, ridotti dalla riduzione delle ricariche (min 13 s). Fino a 2 attivi.\nFelseeker eredita i tuoi potenziamenti di Dolore bruciante e infligge il 25% di danni in più al bersaglio principale. Colpisce fino a 6 nemici.\nIncompatibile con Macellaio.", ja = "【キャップストーン】30秒ごとにドレッドロードを{v}秒間召喚します（クールダウン短縮で短くなり、最短13秒）。最大2体まで同時に存在します。\nフェルシーカーはあなたのシアリング・ペインの強化を引き継ぎ、主目標に与えるダメージが25%増加します。最大6体の敵に命中します。\nブッチャーとは両立できません。", zh = "终极天赋：每30秒召唤一个恐惧魔王，持续{v}秒，间隔受冷却缩减影响（最少13秒）。最多同时存在2个。\n邪能追猎者继承你的灼热之痛的强化，对其主要目标造成的伤害提高25%。它最多击中6个敌人。\n与屠夫互斥。", ko = "궁극 특성. 30초마다 공포의 군주를 {v}초 동안 소환합니다. 재사용 대기시간 감소가 적용됩니다(최소 13초). 최대 2마리까지 활동합니다.\n지옥추적자는 당신의 불타는 고통 강화를 물려받으며, 주 대상에게 25% 더 많은 피해를 줍니다. 적을 최대 6명까지 공격합니다.\n도살자와 함께 선택할 수 없습니다." }
+menu_v = 20
+behaviors = [
+    { behavior = "inherits", pet = "dreadlord", spell = "searing_pain" },
+    { behavior = "primary_target", pet = "dreadlord", n = 6, reach = 8.0, more = 1.25 },
+]
+plays = [
+    { v = 30.0, play = { summon = { pets = ["dreadlord"], n = 1, lasts = 20.0, spread = 0.0, most = 2, floor = 0.43 } } },
+]
+
+[[talent]]
+key = "butcher"
+tree = 1
+row = 6
+col = 2
+ranks = 1
+effects = []
+icon = "Ability_Warrior_Cleave"
+name = { en = "Butcher", de = "Schlächter", fr = "Boucher", es = "Carnicero", pt = "Açougueiro", ru = "Мясник", pl = "Rzeźnik", tr = "Kasap", it = "Macellaio", ja = "ブッチャー", zh = "屠夫", ko = "도살자" }
+text = { en = "Capstone. Summons a Felguard for {v} sec every 30 sec, reduced by CDR (min 13 sec). Up to 2 active.\nCleaves up to 10 enemies within 15 yd. Every third swing deals double damage. Deals 50% more damage below 30% enemy health.\nExclusive with Pact of the Nathrezim.", de = "Schlussstein. Beschwört alle 30 Sek. eine Teufelswache für {v} Sek., verkürzt durch Abklingzeitverringerung (min. 13 Sek.). Bis zu 2 aktiv.\nSpaltet bis zu 10 Feinde im Umkreis von 15 m. Jeder dritte Hieb verursacht doppelten Schaden. Verursacht 50% mehr Schaden gegen Feinde unter 30% Gesundheit.\nSchließt Pakt der Nathrezim aus.", fr = "Apogée. Invoque un gangregarde pendant {v} s toutes les 30 s, réduit par la RTR (min. 13 s). Jusqu'à 2 actifs.\nFend jusqu'à 10 ennemis à moins de 15 m. Un coup sur trois inflige des dégâts doublés. Inflige 50% de dégâts en plus sous 30% de points de vie de l'ennemi.\nExclusif avec Pacte des Nathrezim.", es = "Cúspide. Invoca a un guardia vil durante {v} s cada 30 s, reducido por la RTR (mín. 13 s). Hasta 2 activos.\nHiende hasta a 10 enemigos a 15 m. Cada tercer golpe inflige el doble de daño. Inflige un 50% más de daño por debajo del 30% de salud del enemigo.\nExclusivo con Pacto de los Nathrezim.", pt = "Ápice. Invoca um Guarda Vil por {v} s a cada 30 s, reduzido pela RTR (mín. 13 s). Até 2 ativos.\nFende até 10 inimigos num raio de 15 m. Todo terceiro golpe causa dano dobrado. Causa 50% a mais de dano abaixo de 30% da vida do inimigo.\nExclusivo com Pacto dos Nathrezim.", ru = "Вершина. Каждые 30 сек. призывает стража Скверны на {v} сек., сокращается снижением перезарядки (мин. 13 сек.). До 2 одновременно.\nРассекает до 10 врагов в радиусе 15 м. Каждый третий удар наносит двойной урон. Наносит на 50% больше урона врагам с здоровьем ниже 30%.\nНесовместима с Договором с Нафрезимами.", pl = "Zwieńczenie. Co 30 s przyzywa Straż Zła na {v} s, skracane przez redukcję odnowień (min. 13 s). Do 2 naraz.\nCięciem trafia do 10 przeciwników w promieniu 15 m. Co trzeci zamach zadaje podwójne obrażenia. Zadaje o 50% więcej obrażeń przeciwnikom poniżej 30% zdrowia.\nWyklucza Pakt z Nathrezimami.", tr = "Zirve. Her 30 sn'de {v} sn için bir Fel Muhafız çağırır, bekleme azaltımıyla kısalır (en az 13 sn). En fazla 2 aktif.\n15 m içindeki en fazla 10 düşmanı yarar. Her üçüncü savuruş çift hasar verir. Düşmanın canı 30%'un altındayken 50% daha fazla hasar verir.\nNathrezim Paktı ile birlikte alınamaz.", it = "Vertice. Evoca una Vilguardia per {v} s ogni 30 s, ridotti dalla riduzione delle ricariche (min 13 s). Fino a 2 attive.\nSpazza fino a 10 nemici entro 15 m. Ogni terzo fendente infligge il doppio dei danni. Infligge il 50% di danni in più sotto il 30% di salute del nemico.\nIncompatibile con Patto dei Nathrezim.", ja = "【キャップストーン】30秒ごとにフェルガードを{v}秒間召喚します（クールダウン短縮で短くなり、最短13秒）。最大2体まで同時に存在します。\n15ヤード以内の最大10体の敵をなぎ払います。3回目の攻撃ごとにダメージが2倍になります。体力30%未満の敵へのダメージが50%増加します。\nパクト・オブ・ザ・ナスレズィムとは両立できません。", zh = "终极天赋：每30秒召唤一个恶魔卫士，持续{v}秒，间隔受冷却缩减影响（最少13秒）。最多同时存在2个。\n顺劈15码内最多10个敌人。每第三次挥砍造成双倍伤害。对生命值低于30%的敌人造成的伤害提高50%。\n与纳斯雷兹姆之约互斥。", ko = "궁극 특성. 30초마다 지옥수호병을 {v}초 동안 소환합니다. 재사용 대기시간 감소가 적용됩니다(최소 13초). 최대 2마리까지 활동합니다.\n15미터 안의 적을 최대 10명까지 베어 냅니다. 세 번째 휘두르기마다 두 배의 피해를 줍니다. 생명력이 30% 미만인 적에게 50% 더 많은 피해를 줍니다.\n나스레짐의 서약과 함께 선택할 수 없습니다." }
+menu_v = 20
+behaviors = [
+    { behavior = "cleave_reach", reach = 15.0 },
+    { behavior = "nth_swing_double", pet = "felguard", n = 3 },
+    { behavior = "execute", pet = "felguard", pct = 30, more = 0.5 },
+]
+plays = [
+    { v = 30.0, play = { summon = { pets = ["felguard"], n = 1, lasts = 20.0, spread = 0.0, most = 2, floor = 0.43 } } },
+]
+
+[[talent]]
+key = "imp_shadow_bolt"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Spell_Shadow_ShadowBolt"
+name = { en = "Improved Shadow Bolt", de = "Verbesserter Schattenblitz", fr = "Trait de l'ombre amélioré", es = "Descarga de las Sombras mejorada", pt = "Seta Sombria Aprimorada", ru = "Улучшенная стрела Тьмы", pl = "Ulepszona Strzała cienia", tr = "Gelişmiş Gölge Oku", it = "Dardo d'ombra migliorato", ja = "改良型シャドウ・ボルト", zh = "强化暗影箭", ko = "어둠의 화살 연마" }
+text = { en = "Shadow Bolt deals {v}% more damage.", de = "Schattenblitz verursacht {v}% mehr Schaden.", fr = "Trait de l'ombre inflige {v}% de dégâts en plus.", es = "Descarga de las Sombras inflige un {v}% más de daño.", pt = "Seta Sombria causa {v}% a mais de dano.", ru = "Стрела Тьмы наносит на {v}% больше урона.", pl = "Strzała cienia zadaje o {v}% więcej obrażeń.", tr = "Gölge Oku {v}% daha fazla hasar verir.", it = "Dardo d'ombra infligge il {v}% di danni in più.", ja = "シャドウ・ボルトのダメージが{v}%増加します。", zh = "暗影箭造成的伤害提高{v}%。", ko = "어둠의 화살의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = [{ damage = ["shadow_bolt"] }]
+mods_v = 0.05
+
+[[talent]]
+key = "cataclysm"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.015] }]
+icon = "Spell_Fire_WindsofWoe"
+name = { en = "Cataclysm", de = "Kataklysmus", fr = "Cataclysme", es = "Cataclismo", pt = "Cataclismo", ru = "Катаклизм", pl = "Kataklizm", tr = "Büyük Yıkım", it = "Cataclisma", ja = "カタクリズム", zh = "大灾变", ko = "대격변" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "intensity"
+tree = 2
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "Spell_Fire_LavaSpawn"
+name = { en = "Intensity", de = "Intensität", fr = "Intensité", es = "Intensidad", pt = "Intensidade", ru = "Напряжение", pl = "Intensywność", tr = "Yoğunluk", it = "Intensità", ja = "インテンシティ", zh = "强烈", ko = "강렬함" }
+text = { en = "Soulfire deals {v}% more damage.", de = "Seelenfeuer verursacht {v}% mehr Schaden.", fr = "Feu de l'âme inflige {v}% de dégâts en plus.", es = "Fuego de alma inflige un {v}% más de daño.", pt = "Fogo da Alma causa {v}% a mais de dano.", ru = "Ожог души наносит на {v}% больше урона.", pl = "Ogień duszy zadaje o {v}% więcej obrażeń.", tr = "Ruh Ateşi {v}% daha fazla hasar verir.", it = "Fuoco dell'anima infligge il {v}% di danni in più.", ja = "ソウルファイアのダメージが{v}%増加します。", zh = "灵魂之火造成的伤害提高{v}%。", ko = "영혼의 불꽃의 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = [{ damage = ["soul_fire"] }]
+mods_v = 0.04
+
+[[talent]]
+key = "aftermath"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Fire_Immolation"
+name = { en = "Scorched Earth", de = "Verbrannte Erde", fr = "Terre brûlée", es = "Tierra quemada", pt = "Terra Arrasada", ru = "Выжженная земля", pl = "Spalona ziemia", tr = "Yanık Toprak", it = "Terra bruciata", ja = "スコーチド・アース", zh = "焦土", ko = "그을린 대지" }
+text = { en = "Your Hellfire deals {v}% more damage, and each pulse has a {v}% chance to slow each enemy it burns by 40% for 3 sec.", de = "Dein Höllenfeuer verursacht {v}% mehr Schaden, und jeder Impuls hat eine Chance von {v}%, jeden verbrannten Feind 3 Sek. lang um 40% zu verlangsamen.", fr = "Tes Flammes infernales infligent {v}% de dégâts en plus, et chaque pulsation a {v}% de chances de ralentir de 40% chaque ennemi qu'elle brûle pendant 3 s.", es = "Tu Fuego infernal inflige un {v}% más de daño, y cada pulso tiene un {v}% de probabilidad de ralentizar un 40% a cada enemigo que quema durante 3 s.", pt = "Seu Fogo Infernal causa {v}% a mais de dano, e cada pulso tem {v}% de chance de reduzir em 40% a velocidade de cada inimigo que queima por 3 s.", ru = "Твоё Адское пламя наносит на {v}% больше урона, а каждый импульс с шансом {v}% замедляет каждого обожжённого врага на 40% на 3 сек.", pl = "Twój Piekielny ogień zadaje o {v}% więcej obrażeń, a każdy puls ma {v}% szansy, by spowolnić każdego spalonego przeciwnika o 40% na 3 s.", tr = "Cehennem Ateşi {v}% daha fazla hasar verir ve her nabız yaktığı düşmanı {v}% ihtimalle 3 sn boyunca 40% yavaşlatır.", it = "Il tuo Fuoco infernale infligge il {v}% di danni in più e ogni impulso ha il {v}% di probabilità di rallentare del 40% per 3 s ogni nemico che brucia.", ja = "ヘルファイアのダメージが{v}%増加し、各パルスが{v}%の確率で焼いている敵を3秒間40%スローにします。", zh = "你的地狱烈焰造成的伤害提高{v}%，每次脉冲有{v}%的几率使其灼烧的每个敌人减速40%，持续3秒。", ko = "지옥의 불길의 피해가 {v}% 증가하며, 파동마다 {v}% 확률로 불태우는 적을 3초 동안 40% 감속시킵니다." }
+menu_v = 0.05
+mods = [{ damage = ["hellfire"] }, { slow = [["hellfire"], 40, 3.0] }]
+mods_v = 0.05
+
+[[talent]]
+key = "shadowburn"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_ScourgeBuild"
+name = { en = "Shadow Cleave", de = "Schattenspalter", fr = "Fendre l'ombre", es = "Hendidura de las Sombras", pt = "Fenda Sombria", ru = "Рассечение тьмой", pl = "Cięcie cienia", tr = "Gölge Yarması", it = "Fendente d'ombra", ja = "シャドウ・クリーヴ", zh = "暗影顺劈", ko = "암흑 쪼개기" }
+text = { en = "Milestone. Shadow Bolt splits: every bolt that lands forks to 2 more enemies for {v}% of it.", de = "Meilenstein. Schattenblitz teilt sich: Jeder treffende Blitz verzweigt sich auf 2 weitere Feinde für {v}% davon.", fr = "Étape. Trait de l'ombre se divise : chaque trait qui touche se propage à 2 autres ennemis pour {v}% de son montant.", es = "Hito. Descarga de las Sombras se divide: cada descarga que impacta se bifurca a 2 enemigos más por un {v}% de su valor.", pt = "Marco. Seta Sombria se divide: cada seta que acerta se bifurca para mais 2 inimigos com {v}% do seu valor.", ru = "Веха. Стрела Тьмы раздваивается: каждая попавшая стрела перескакивает ещё на 2 врагов с {v}% урона.", pl = "Kamień milowy. Strzała cienia się rozdwaja: każdy trafiony pocisk rozwidla się na 2 kolejnych przeciwników za {v}% obrażeń.", tr = "Dönüm noktası. Gölge Oku bölünür: isabet eden her ok hasarının {v}%'si kadar 2 düşmana daha çatallanır.", it = "Traguardo. Dardo d'ombra si divide: ogni dardo che va a segno si biforca su altri 2 nemici per il {v}% del danno.", ja = "【マイルストーン】シャドウ・ボルトが分裂します：命中したボルトがさらに2体の敵に分岐し、その{v}%のダメージを与えます。", zh = "里程碑：暗影箭会分裂：每支命中的暗影箭都会分叉至另外2个敌人，造成相当于其伤害{v}%的伤害。", ko = "이정표. 어둠의 화살이 갈라집니다: 적중한 화살마다 적 2명에게 더 갈라져 그 피해의 {v}%를 줍니다." }
+menu_v = 0.15
+plays = [
+    { v = 0.15, play = { cleave = { keys = ["shadow_bolt"], n = 2, radius = 10.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "imp_searing_pain"
+tree = 2
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Fire_SoulBurn"
+name = { en = "Improved Searing Pain", de = "Verbesserter sengender Schmerz", fr = "Douleur brûlante améliorée", es = "Dolor abrasador mejorado", pt = "Dor Escaldante Aprimorada", ru = "Улучшенная жгучая боль", pl = "Ulepszony Palący ból", tr = "Gelişmiş Kavurucu Acı", it = "Dolore bruciante migliorato", ja = "改良型シアリング・ペイン", zh = "强化灼热之痛", ko = "불타는 고통 연마" }
+text = { en = "Searing Pain, Immolate and Chaos Bolt deal {v}% more damage.", de = "Sengender Schmerz, Feuerbrand und Chaosblitz verursachen {v}% mehr Schaden.", fr = "Douleur brûlante, Immolation et Trait du chaos infligent {v}% de dégâts en plus.", es = "Dolor abrasador, Inmolar y Descarga de caos infligen un {v}% más de daño.", pt = "Dor Escaldante, Imolação e Seta do Caos causam {v}% a mais de dano.", ru = "Жгучая боль, Жертвенный огонь и Стрела Хаоса наносят на {v}% больше урона.", pl = "Palący ból, Podpalenie i Pocisk chaosu zadają o {v}% więcej obrażeń.", tr = "Kavurucu Acı, Yak ve Kaos Oku {v}% daha fazla hasar verir.", it = "Dolore bruciante, Immolazione e Dardo del caos infliggono il {v}% di danni in più.", ja = "シアリング・ペイン、イモレート、カオス・ボルトのダメージが{v}%増加します。", zh = "灼热之痛、献祭和混乱之箭造成的伤害提高{v}%。", ko = "불타는 고통, 제물, 혼돈의 화살의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["searing_pain", "immolate", "chaos_bolt"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "destructive_reach"
+tree = 2
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Shadow_CorpseExplode"
+name = { en = "Destructive Reach", de = "Zerstörerische Reichweite", fr = "Allonge destructrice", es = "Alcance destructivo", pt = "Alcance Destrutivo", ru = "Разрушительный охват", pl = "Niszczycielski zasięg", tr = "Yıkıcı Erişim", it = "Portata distruttiva", ja = "デストラクティヴ・リーチ", zh = "毁灭延伸", ko = "파괴 범위 확대" }
+text = { en = "Rain of Fire, Hellfire, Shadowfury and Shadowflame reach {v}% farther.", de = "Feuerregen, Höllenfeuer, Schattenfuror und Schattenflamme reichen {v}% weiter.", fr = "Pluie de feu, Flammes infernales, Furie des ombres et Flamme d'ombre portent {v}% plus loin.", es = "Lluvia de fuego, Fuego infernal, Furia de las Sombras y Llama de las Sombras alcanzan un {v}% más lejos.", pt = "Chuva de Fogo, Fogo Infernal, Fúria Sombria e Chama Sombria alcançam {v}% mais longe.", ru = "Огненный ливень, Адское пламя, Неистовство Тьмы и Пламя Тьмы действуют на {v}% дальше.", pl = "Deszcz ognia, Piekielny ogień, Furia cienia i Płomień cienia sięgają o {v}% dalej.", tr = "Ateş Yağmuru, Cehennem Ateşi, Gölge Öfkesi ve Gölge Alevi {v}% daha uzağa erişir.", it = "Pioggia di fuoco, Fuoco infernale, Furia dell'ombra e Fiamma d'ombra arrivano il {v}% più lontano.", ja = "レイン・オブ・ファイア、ヘルファイア、シャドウフューリー、シャドウフレイムの範囲が{v}%広がります。", zh = "火焰之雨、地狱烈焰、暗影之怒和暗影烈焰的范围扩大{v}%。", ko = "불의 비, 지옥의 불길, 어둠의 격노, 어둠의 불꽃의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.08
+mods = [{ area = ["rain_of_fire", "hellfire", "shadowfury", "shadowflame"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "devastation"
+tree = 2
+row = 3
+col = 2
+ranks = 5
+req = "shadowburn"
+effects = [{ stat = [3, 0.01] }]
+icon = "Spell_Fire_FlameShock"
+name = { en = "Devastation", de = "Verwüstung", fr = "Dévastation", es = "Devastación", pt = "Devastação", ru = "Разрушение", pl = "Dewastacja", tr = "Harabiyet", it = "Devastazione", ja = "デヴァステーション", zh = "毁灭之力", ko = "황폐" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "conflagrate"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "immolate" }]
+icon = "Spell_Fire_Fireball"
+name = { en = "Conflagrate", de = "Feuersbrunst", fr = "Conflagration", es = "Conflagrar", pt = "Conflagrar", ru = "Поджигание", pl = "Pożoga", tr = "Alevlendir", it = "Conflagrazione", ja = "コンフラグレート", zh = "燃烧", ko = "점화" }
+text = { en = "Milestone. Start every run with Immolate. Shadow Bolt and Searing Pain make Immolated enemies explode for {v}% of the hit's damage within 6 yd.", de = "Meilenstein. Du beginnst jeden Lauf mit Feuerbrand. Schattenblitz und Sengender Schmerz lassen Feinde mit Feuerbrand explodieren: {v}% des Trefferschadens im Umkreis von 6 m.", fr = "Étape. Tu commences chaque partie avec Immolation. Trait de l'ombre et Douleur brûlante font exploser les ennemis immolés pour {v}% des dégâts du coup à moins de 6 m.", es = "Hito. Empiezas cada partida con Inmolar. Descarga de las Sombras y Dolor abrasador hacen que los enemigos inmolados exploten por un {v}% del daño del golpe a 6 m.", pt = "Marco. Você começa cada partida com Imolação. Seta Sombria e Dor Escaldante fazem inimigos imolados explodirem causando {v}% do dano do golpe num raio de 6 m.", ru = "Веха. Ты начинаешь каждый забег с Жертвенным огнём. Стрела Тьмы и Жгучая боль взрывают подожжённых врагов, нанося {v}% урона удара в радиусе 6 м.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Podpaleniem. Strzała cienia i Palący ból sprawiają, że podpaleni przeciwnicy wybuchają za {v}% obrażeń trafienia w promieniu 6 m.", tr = "Dönüm noktası. Her oyuna Yak ile başla. Gölge Oku ve Kavurucu Acı, Yak'lanmış düşmanları patlatır: vuruş hasarının {v}%'si kadar 6 m içine.", it = "Traguardo. Inizia ogni partita con Immolazione. Dardo d'ombra e Dolore bruciante fanno esplodere i nemici immolati per il {v}% dei danni del colpo entro 6 m.", ja = "【マイルストーン】毎ランをイモレートを持って始めます。シャドウ・ボルトとシアリング・ペインがイモレート状態の敵を爆発させ、6ヤード以内にその攻撃の{v}%のダメージを与えます。", zh = "里程碑：每场对局开始时拥有献祭。暗影箭和灼热之痛会使受到献祭影响的敌人爆炸，对6码内造成相当于该次攻击{v}%的伤害。", ko = "이정표. 모든 런을 제물을 가지고 시작합니다. 어둠의 화살과 불타는 고통이 제물에 걸린 적을 폭발시켜 6미터 안에 그 피해의 {v}%를 줍니다." }
+menu_v = 0.15
+plays = [
+    { v = 0.15, play = { dot_burst = { keys = ["shadow_bolt", "searing_pain"], dot = "immolate", radius = 6.0 } } },
+]
+
+[[talent]]
+key = "emberstorm"
+tree = 2
+row = 4
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Fire_SelfDestruct"
+name = { en = "Emberstorm", de = "Glutsturm", fr = "Tempête de braise", es = "Tormenta de ascuas", pt = "Tempestade de Brasas", ru = "Буря углей", pl = "Burza żaru", tr = "Kor Fırtınası", it = "Tempesta di braci", ja = "エンバーストーム", zh = "余烬风暴", ko = "잿불폭풍" }
+text = { en = "Fire spells deal {v}% more damage.", de = "Feuerzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de Feu infligent {v}% de dégâts en plus.", es = "Los hechizos de Fuego infligen un {v}% más de daño.", pt = "Feitiços de Fogo causam {v}% a mais de dano.", ru = "Заклинания огня наносят на {v}% больше урона.", pl = "Czary ognia zadają o {v}% więcej obrażeń.", tr = "Ateş büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Fuoco infliggono il {v}% di danni in più.", ja = "炎の呪文のダメージが{v}%増加します。", zh = "火焰法术造成的伤害提高{v}%。", ko = "화염 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+mods = [{ school = 4 }]
+mods_v = 0.03
+
+[[talent]]
+key = "ruin"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [4, 0.08] }]
+icon = "Spell_Shadow_ShadowWordPain"
+name = { en = "Ruin", de = "Ruin", fr = "Ruine", es = "Ruina", pt = "Ruína", ru = "Разорение", pl = "Ruina", tr = "Yıkıntı", it = "Rovina", ja = "ルイン", zh = "毁坏", ko = "몰락" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+
+[[talent]]
+key = "bane"
+tree = 2
+row = 5
+col = 2
+ranks = 3
+req = "conflagrate"
+effects = []
+icon = "Spell_Shadow_DeathPact"
+name = { en = "Bane", de = "Verderben", fr = "Plaie", es = "Perdición", pt = "Danação", ru = "Погибель", pl = "Zguba", tr = "Bela", it = "Flagello", ja = "ベイン", zh = "灾祸", ko = "재앙" }
+text = { en = "Shadow Bolt and Immolate cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Schattenblitz und Feuerbrand sind {v}% kürzer.", fr = "Les temps de recharge de Trait de l'ombre et d'Immolation sont réduits de {v}%.", es = "Los tiempos de reutilización de Descarga de las Sombras e Inmolar son un {v}% menores.", pt = "Os tempos de recarga de Seta Sombria e Imolação são {v}% menores.", ru = "Перезарядка Стрелы Тьмы и Жертвенного огня сокращена на {v}%.", pl = "Czasy odnowienia Strzały cienia i Podpalenia są krótsze o {v}%.", tr = "Gölge Oku ve Yak bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Dardo d'ombra e Immolazione sono più brevi del {v}%.", ja = "シャドウ・ボルトとイモレートのクールダウンが{v}%短くなります。", zh = "暗影箭和献祭的冷却时间缩短{v}%。", ko = "어둠의 화살과 제물의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.07
+mods = [{ cooldown = ["shadow_bolt", "immolate"] }]
+mods_v = 0.07
+
+[[talent]]
+key = "rain_of_chaos"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_RainOfFire"
+name = { en = "Rain of Chaos", de = "Chaosregen", fr = "Pluie du chaos", es = "Lluvia de caos", pt = "Chuva do Caos", ru = "Ливень хаоса", pl = "Deszcz chaosu", tr = "Kaos Yağmuru", it = "Pioggia del caos", ja = "レイン・オブ・カオス", zh = "混乱之雨", ko = "혼돈의 비" }
+text = { en = "Capstone. A second Rain of Fire falls on its own every 13 sec, and its burning ground slows what it touches.", de = "Schlussstein. Alle 13 Sek. fällt von selbst ein zweiter Feuerregen, und sein brennender Boden verlangsamt, was er berührt.", fr = "Apogée. Une seconde Pluie de feu tombe d'elle-même toutes les 13 s, et son sol embrasé ralentit ce qu'il touche.", es = "Cúspide. Una segunda Lluvia de fuego cae por sí sola cada 13 s, y su suelo en llamas ralentiza lo que toca.", pt = "Ápice. Uma segunda Chuva de Fogo cai sozinha a cada 13 s, e seu chão em chamas reduz a velocidade de quem toca.", ru = "Вершина. Второй Огненный ливень сам обрушивается каждые 13 сек., а его горящая земля замедляет всё, чего касается.", pl = "Zwieńczenie. Drugi Deszcz ognia spada sam co 13 s, a jego płonąca ziemia spowalnia wszystko, czego dotknie.", tr = "Zirve. Her 13 sn'de ikinci bir Ateş Yağmuru kendiliğinden düşer ve yanan zemini değdiği şeyi yavaşlatır.", it = "Vertice. Una seconda Pioggia di fuoco cade da sola ogni 13 s e il suo terreno in fiamme rallenta ciò che tocca.", ja = "【キャップストーン】13秒ごとに2つ目のレイン・オブ・ファイアが自動で降り注ぎ、燃える地面が触れた敵をスローにします。", zh = "终极天赋：每13秒会自动落下第二场火焰之雨，其燃烧的地面会使接触到的目标减速。", ko = "궁극 특성. 13초마다 두 번째 불의 비가 저절로 내리며, 그 불타는 땅이 닿는 것을 감속시킵니다." }
+menu_v = 13
+plays = [
+    { v = 13.0, play = { every = "rain_of_fire" } },
+    # Rain of Fire's burning ground slows what it touches. Ours, after Scorched Earth's. `TUNE`
+    { v = 1.0, play = { hit_slow = { keys = ["rain_of_fire"], pct = 40, secs = 2.0 } } },
+]

@@ -1,0 +1,306 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "nagrand"
+order = 15
+name = { en = "Nagrand", de = "Nagrand", fr = "Nagrand", es = "Nagrand", pt = "Nagrand", ru = "Награнд", pl = "Nagrand", tr = "Nagrand", it = "Nagrand", ja = "ナグランド", zh = "纳格兰", ko = "나그란드" }
+subtitle = { en = "The Ring of Blood", de = "Der Ring des Blutes", fr = "L'Arène du sang", es = "El Círculo de Sangre", pt = "O Ringue de Sangue", ru = "Арена Крови", pl = "Pierścień Krwi", tr = "Kan Halkası", it = "L'Anello del Sangue", ja = "リング・オブ・ブラッド", zh = "鲜血竞技场", ko = "피의 투기장" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Nagrand_01"
+map = 530
+map_name = "Expansion01"
+area = 3518
+center = [-1500.0, 6800.0]
+radius = 100.0
+map_bounds = [10295.83, 4770.83, 41.67, -3641.67]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 7.65
+gold_factor = 2.65
+late_factor = 0.4
+hour = 11
+weather = { fine = 85, rain = 15 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [-1269.8953, 7098.1914]
+turn = 0
+yaw = 0.0
+pitch = 26.0
+distance = 17.5
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 3300
+name = { en = "Murkblood Raider", de = "Plünderer der Finsterblut", fr = "Pillard Sombre-sang", es = "Merodeador Sangreoscura", pt = "Saqueador Sangue Turvo", ru = "Налетчик из клана Мутной Крови", pl = "Najeźdźca z klanu Murkblood", tr = "Karakan Akıncısı", it = "Predone Sanguescuro", ja = "マークブラッドの略奪者", zh = "暗血袭击者", ko = "흑수렁 약탈자" }
+type = "humanoid"
+display = 18418
+icon = "INV_Misc_Head_Orc_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 3301
+name = { en = "Ravenous Windroc", de = "Gefräßiger Windroc", fr = "Roc des vents vorace", es = "Rocavientos voraz", pt = "Roca dos Ventos Voraz", ru = "Прожорливый ветряной рух", pl = "Żarłoczny windroc", tr = "Obur Rüzgar Kuşu", it = "Uccello del vento vorace", ja = "飢えたウィンドロック", zh = "贪婪的风鹰", ko = "굶주린 바람로크" }
+type = "beast"
+display = 16881
+icon = "Ability_Hunter_Pet_Vulture"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.85
+
+[[zone.enemy]]
+entry = 3302
+name = { en = "Talbuk Stag", de = "Talbukhirsch", fr = "Cerf talbuk", es = "Ciervo talbuk", pt = "Cervo Talbuk", ru = "Самец талбука", pl = "Jeleń talbuk", tr = "Talbuk Erkeği", it = "Cervo talbuk", ja = "タルブクの雄鹿", zh = "塔布羊", ko = "탈부크 수사슴" }
+type = "beast"
+display = 19220
+icon = "Ability_Hunter_Pet_TallStrider"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.9
+
+[[zone.enemy]]
+entry = 3303
+name = { en = "Warmaul Shaman", de = "Schamane der Kriegshämmer", fr = "Chaman Cogneguerre", es = "Chamán Mazo de Guerra", pt = "Xamã Malho de Guerra", ru = "Шаман из клана Боевого Молота", pl = "Szaman z klanu Warmaul", tr = "Savaş Gürzü Şamanı", it = "Sciamano Martelguerra", ja = "ウォーモール・シャーマン", zh = "战槌萨满祭司", ko = "전쟁망치 주술사" }
+type = "humanoid"
+display = 19750
+icon = "Achievement_Reputation_Ogre"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.75
+role = { ranged = { spell = 9532, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3304
+name = { en = "Wild Elekk", de = "Wilder Elekk", fr = "Elekk sauvage", es = "Elekk salvaje", pt = "Elekk Selvagem", ru = "Дикий элекк", pl = "Dziki elekk", tr = "Yabani Elekk", it = "Elekk selvatico", ja = "野生のエレク", zh = "野生雷象", ko = "야생 엘레크" }
+type = "beast"
+display = 17677
+icon = "Ability_Mount_RidingElekk"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.7
+
+[[zone.enemy]]
+entry = 3305
+name = { en = "Clefthoof Bull", de = "Grollhufbulle", fr = "Taureau sabot-fourchu", es = "Toro uñahendida", pt = "Touro Fendecasco", ru = "Копытень-бык", pl = "Byk rozszczepiec", tr = "Yarıktoynak Boğa", it = "Toro Zoccolofesso", ja = "クレフトフーフの雄", zh = "裂蹄公牛", ko = "갈래발굽 황소" }
+type = "beast"
+display = 19582
+icon = "Ability_Hunter_Pet_Rhino"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.6
+
+[[zone.enemy]]
+entry = 3306
+name = { en = "Dust Howler", de = "Staubheuler", fr = "Hurleur de poussière", es = "Aullador del polvo", pt = "Uivador da Poeira", ru = "Пылевой завыватель", pl = "Wyjec pyłu", tr = "Toz Uluyan", it = "Ululatore della polvere", ja = "ダスト・ハウラー", zh = "尘土嚎叫者", ko = "먼지 울부짖는 자" }
+type = "elemental"
+display = 5327
+icon = "Spell_Nature_Cyclone"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 1.1
+
+[[zone.enemy]]
+entry = 3307
+name = { en = "Boulderfist Mystic", de = "Mystiker der Felsfäuste", fr = "Mystique Poing-de-rocher", es = "Místico Puño de Roca", pt = "Místico Punho de Pedra", ru = "Мистик из клана Кулака Скалы", pl = "Mistyk z klanu Boulderfist", tr = "Kayayumruk Mistiği", it = "Mistico Pugnomasso", ja = "ボルダーフィスト・ミスティック", zh = "石拳秘法师", ko = "돌주먹 신비술사" }
+type = "humanoid"
+display = 19752
+icon = "Achievement_Reputation_Ogre"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.8
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3308
+name = { en = "Boulderfist Crusher", de = "Zermalmer der Felsfäuste", fr = "Broyeur Poing-de-rocher", es = "Triturador Puño de Roca", pt = "Esmagador Punho de Pedra", ru = "Крушитель из клана Кулака Скалы", pl = "Miażdżyciel z klanu Boulderfist", tr = "Kayayumruk Ezicisi", it = "Frantumatore Pugnomasso", ja = "ボルダーフィスト・クラッシャー", zh = "石拳粉碎者", ko = "돌주먹 분쇄자" }
+type = "humanoid"
+display = 19746
+icon = "Achievement_Reputation_Ogre"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.9
+
+[[zone.elite]]
+entry = 3310
+name = { en = "Durn the Hungerer", de = "Durn der Nimmersatte", fr = "Durn l'Affameur", es = "Durn el Hambriento", pt = "Durn, o Faminto", ru = "Дурн Ненасытный", pl = "Durn Głodomór", tr = "Açgözlü Durn", it = "Durn l'Affamato", ja = "飢えし者ダーン", zh = "饥饿者杜恩", ko = "굶주린 자 던" }
+type = "giant"
+display = 18645
+icon = "Achievement_Reputation_Ogre"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.8
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 3311
+name = { en = "Boulderfist Warlord", de = "Kriegsherr der Felsfäuste", fr = "Seigneur de guerre Poing-de-rocher", es = "Señor de la guerra Puño de Roca", pt = "Senhor da Guerra Punho de Pedra", ru = "Полководец из клана Кулака Скалы", pl = "Wódz wojenny z klanu Boulderfist", tr = "Kayayumruk Savaş Lordu", it = "Signore della guerra Pugnomasso", ja = "ボルダーフィスト・ウォーロード", zh = "石拳督军", ko = "돌주먹 전쟁군주" }
+type = "humanoid"
+display = 19747
+icon = "Achievement_Reputation_Ogre"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.5
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 3312
+name = { en = "Living Cyclone", de = "Lebender Zyklon", fr = "Cyclone vivant", es = "Ciclón viviente", pt = "Ciclone Vivo", ru = "Живой циклон", pl = "Żywy cyklon", tr = "Yaşayan Kasırga", it = "Ciclone vivente", ja = "生けるサイクロン", zh = "活体旋风", ko = "살아있는 회오리" }
+type = "elemental"
+display = 5234
+icon = "Spell_Nature_Cyclone"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.6
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { pool = { spell = 16914, burst = 0, radius = 5.0, warn = 1.6, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { whirlwind = { spell = 8989, radius = 6.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.boss]]
+entry = 3390
+name = { en = "Gutripper", de = "Bauchreißer", fr = "Éventreur", es = "Destripador", pt = "Estripador", ru = "Потрошитель", pl = "Trzewiorwacz", tr = "Bağırsak Yırtıcı", it = "Sbudellatore", ja = "ガットリッパー", zh = "破肠者", ko = "내장 찢는 자" }
+type = "beast"
+display = 16885
+icon = "Ability_Hunter_Pet_Ravager"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.6
+minute = 4
+yell = { en = "Gutripper smells your blood!", de = "Bauchreißer wittert dein Blut!", fr = "L'Éventreur sent ton sang !", es = "¡Destripador huele tu sangre!", pt = "Estripador sente o cheiro do seu sangue!", ru = "Потрошитель чует твою кровь!", pl = "Trzewiorwacz czuje twoją krew!", tr = "Bağırsak Yırtıcı kanının kokusunu alıyor!", it = "Sbudellatore sente l'odore del tuo sangue!", ja = "ガットリッパーが貴様の血を嗅ぎつけた！", zh = "破肠者闻到了你的血！", ko = "내장 찢는 자가 네 피 냄새를 맡습니다!" }
+kit = "gutripper"
+
+[[zone.boss]]
+entry = 3391
+name = { en = "Warmaul Champion", de = "Champion der Kriegshämmer", fr = "Champion Cogneguerre", es = "Campeón Mazo de Guerra", pt = "Campeão Malho de Guerra", ru = "Воитель из клана Боевого Молота", pl = "Czempion z klanu Warmaul", tr = "Savaş Gürzü Şampiyonu", it = "Campione Martelguerra", ja = "ウォーモール・チャンピオン", zh = "战槌勇士", ko = "전쟁망치 용사" }
+type = "humanoid"
+display = 19907
+icon = "Achievement_Reputation_Ogre"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.2
+minute = 8
+yell = { en = "Warmaul smash you!", de = "Kriegshämmer zerschmettern dich!", fr = "Cogneguerre t'écraser !", es = "¡Mazo de Guerra aplastar a ti!", pt = "Malho de Guerra esmagar você!", ru = "Боевой Молот раздавить тебя!", pl = "Warmaul rozwalić ciebie!", tr = "Savaş Gürzü seni ezer!", it = "Martelguerra ti spaccare!", ja = "ウォーモール、お前潰す！", zh = "战槌砸扁你！", ko = "전쟁망치 너 박살!" }
+kit = "warmaul_champion"
+
+[[zone.boss]]
+entry = 3392
+name = { en = "Gurok the Usurper", de = "Gurok der Usurpator", fr = "Gurok l'Usurpateur", es = "Gurok el Usurpador", pt = "Gurok, o Usurpador", ru = "Гурок Узурпатор", pl = "Gurok Uzurpator", tr = "Gaspçı Gurok", it = "Gurok l'Usurpatore", ja = "簒奪者グロック", zh = "篡位者古洛克", ko = "찬탈자 구로크" }
+type = "giant"
+display = 18155
+icon = "Achievement_Boss_GruulTheDragonkiller"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.4
+minute = 12
+yell = { en = "Gurok crush little ones!", de = "Gurok zermalmen Winzlinge!", fr = "Gurok écraser petits !", es = "¡Gurok aplastar pequeños!", pt = "Gurok esmagar pequenos!", ru = "Гурок давить малышей!", pl = "Gurok zmiażdżyć małych!", tr = "Gurok ufaklıkları ezer!", it = "Gurok schiacciare piccoli!", ja = "グロック、ちびども潰す！", zh = "古洛克碾碎小东西！", ko = "구로크 꼬맹이들 부숴!" }
+kit = "gurok_the_usurper"
+
+[[zone.boss]]
+entry = 3393
+name = { en = "Voidhunter Yar", de = "Leerenjäger Yar", fr = "Chasseur du Vide Yar", es = "Cazador del Vacío Yar", pt = "Caçador do Vazio Yar", ru = "Охотник Бездны Яр", pl = "Łowca Pustki Yar", tr = "Boşluk Avcısı Yar", it = "Cacciatore del Vuoto Yar", ja = "ヴォイドハンター・ヤー", zh = "虚空猎手亚尔", ko = "공허사냥꾼 야르" }
+type = "demon"
+display = 18919
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.4
+minute = 16
+yell = { en = "The void calls for you.", de = "Die Leere ruft nach dir.", fr = "Le Vide t'appelle.", es = "El Vacío te llama.", pt = "O Vazio chama por você.", ru = "Бездна зовет тебя.", pl = "Pustka cię wzywa.", tr = "Boşluk seni çağırıyor.", it = "Il Vuoto ti chiama.", ja = "虚無が貴様を呼んでいる。", zh = "虚空在呼唤你。", ko = "공허가 너를 부른다." }
+kit = "voidhunter_yar"
+
+[[zone.boss]]
+entry = 2004
+name = { en = "Mogor", de = "Mogor", fr = "Mogor", es = "Mogor", pt = "Mogor", ru = "Могор", pl = "Mogor", tr = "Mogor", it = "Mogor", ja = "モゴール", zh = "莫戈尔", ko = "모고르" }
+type = "humanoid"
+display = 21405
+icon = "Achievement_Reputation_Ogre"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.1
+minute = 20
+yell = { en = "Mogor will break you!", de = "Mogor wird dich brechen!", fr = "Mogor va te briser !", es = "¡Mogor te quebrará!", pt = "Mogor vai quebrar você!", ru = "Могор сломает тебя!", pl = "Mogor cię złamie!", tr = "Mogor seni kıracak!", it = "Mogor ti spezzerà!", ja = "モゴールが貴様を叩き壊す！", zh = "莫戈尔会打垮你！", ko = "모고르가 너를 부숴 주마!" }
+final = true
+kit = "mogor"

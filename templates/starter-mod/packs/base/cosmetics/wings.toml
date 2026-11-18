@@ -1,0 +1,387 @@
+# The shop's wings (survivors-sim wings.rs), in patch-W's order: a wing's place is its display and spell id.
+# `admin = true`: worn on an admin's device alone, never sold.
+#
+# Every colour, in patch-W's order. `TUNE` the prices.
+
+[[wing]]
+key = "angel_white"
+name = "Angel Wings (White)"
+price = 1500
+
+[[wing]]
+key = "angel_orange"
+name = "Angel Wings (Orange)"
+price = 1500
+
+[[wing]]
+key = "angel_red"
+name = "Angel Wings (Red)"
+price = 1500
+
+[[wing]]
+key = "angel_green"
+name = "Angel Wings (Green)"
+price = 2500
+
+[[wing]]
+key = "angel_blue"
+name = "Angel Wings (Blue)"
+price = 2500
+
+[[wing]]
+key = "angel_purple"
+name = "Angel Wings (Purple)"
+price = 2500
+
+[[wing]]
+key = "demon_red"
+name = "Demon Wings (Red)"
+price = 4000
+
+[[wing]]
+key = "demon_yellow"
+name = "Demon Wings (Yellow)"
+price = 4000
+
+[[wing]]
+key = "demon_blue"
+name = "Demon Wings (Blue)"
+price = 4000
+
+[[wing]]
+key = "demon_cyan"
+name = "Demon Wings (Cyan)"
+price = 4000
+
+[[wing]]
+key = "demon_green"
+name = "Demon Wings (Green)"
+price = 5000
+
+[[wing]]
+key = "demon_purple"
+name = "Demon Wings (Purple)"
+price = 5000
+
+[[wing]]
+key = "twotone_gold"
+name = "Two-Tone Wings (Gold)"
+price = 7500
+
+[[wing]]
+key = "twotone_green"
+name = "Two-Tone Wings (Green)"
+price = 7500
+
+[[wing]]
+key = "twotone_blue"
+name = "Two-Tone Wings (Blue)"
+price = 7500
+
+[[wing]]
+key = "twotone_purple"
+name = "Two-Tone Wings (Purple)"
+price = 7500
+
+[[wing]]
+key = "twotone_red"
+name = "Two-Tone Wings (Red)"
+price = 9000
+
+[[wing]]
+key = "twotone_pink"
+name = "Two-Tone Wings (Pink)"
+price = 9000
+
+[[wing]]
+key = "phoenix_fire"
+name = "Phoenix Wings (Fire)"
+price = 15000
+
+[[wing]]
+key = "phoenix_fel"
+name = "Phoenix Wings (Fel)"
+price = 18000
+
+[[wing]]
+key = "phoenix_frost"
+name = "Phoenix Wings (Frost)"
+price = 18000
+
+[[wing]]
+key = "phoenix_arcane"
+name = "Phoenix Wings (Arcane)"
+price = 18000
+
+[[wing]]
+key = "phoenix_void"
+name = "Phoenix Wings (Void)"
+price = 25000
+
+[[wing]]
+key = "phoenix_blood"
+name = "Phoenix Wings (Blood)"
+price = 25000
+
+[[wing]]
+key = "demonlord_shadow"
+name = "Demon Lord Wings (Shadow)"
+price = 35000
+
+[[wing]]
+key = "demonlord_fel"
+name = "Demon Lord Wings (Fel)"
+price = 35000
+
+[[wing]]
+key = "guardian_holy"
+name = "Guardian Wings (Holy)"
+price = 35000
+
+[[wing]]
+key = "ember_swift"
+name = "Ember Wings (Swift)"
+price = 15000
+
+[[wing]]
+key = "ember_gliding"
+name = "Ember Wings (Gliding)"
+price = 15000
+
+[[wing]]
+key = "kyrian_aspirant"
+name = "Kyrian Wings (Aspirant)"
+price = 9000
+
+[[wing]]
+key = "kyrian_steward"
+name = "Kyrian Wings (Steward)"
+price = 9000
+
+[[wing]]
+key = "kyrian_paragon"
+name = "Kyrian Wings (Paragon)"
+price = 15000
+
+[[wing]]
+key = "mantid_two"
+name = "Mantid Wings (Two)"
+price = 5000
+
+[[wing]]
+key = "mantid_four"
+name = "Mantid Wings (Four)"
+price = 7500
+
+[[wing]]
+key = "venthyr_blades"
+name = "Venthyr Wings (Blades)"
+price = 18000
+
+[[wing]]
+key = "fae_moths"
+name = "Fae Wings (Moths)"
+price = 7500
+
+[[wing]]
+key = "firebird_blue"
+name = "Firebird Wings (Blue)"
+price = 15000
+
+[[wing]]
+key = "firebird_dark"
+name = "Firebird Wings (Dark)"
+price = 15000
+
+[[wing]]
+key = "firebird_felfire"
+name = "Firebird Wings (Felfire)"
+price = 18000
+
+[[wing]]
+key = "firebird_fire"
+name = "Firebird Wings (Fire)"
+price = 15000
+
+[[wing]]
+key = "firebird_purple"
+name = "Firebird Wings (Purple)"
+price = 15000
+
+[[wing]]
+key = "firebird_red"
+name = "Firebird Wings (Red)"
+price = 15000
+
+[[wing]]
+key = "firebird_twilight"
+name = "Firebird Wings (Twilight)"
+price = 25000
+
+[[wing]]
+key = "firebird_pastel"
+name = "Firebird Wings (Pastel)"
+price = 25000
+
+[[wing]]
+key = "firebird_autumn"
+name = "Firebird Wings (Autumn)"
+price = 25000
+
+[[wing]]
+key = "firebird_ocean"
+name = "Firebird Wings (Ocean)"
+price = 25000
+
+[[wing]]
+key = "firebird_orchid"
+name = "Firebird Wings (Orchid)"
+price = 25000
+
+[[wing]]
+key = "firebird_sunset"
+name = "Firebird Wings (Sunset)"
+price = 25000
+
+[[wing]]
+key = "butterfly_blue"
+name = "Butterfly Wings (Blue)"
+price = 5000
+
+[[wing]]
+key = "butterfly_green"
+name = "Butterfly Wings (Green)"
+price = 5000
+
+[[wing]]
+key = "butterfly_pearl"
+name = "Butterfly Wings (Pearl)"
+price = 7500
+
+[[wing]]
+key = "butterfly_pink"
+name = "Butterfly Wings (Pink)"
+price = 5000
+
+[[wing]]
+key = "butterfly_purple"
+name = "Butterfly Wings (Purple)"
+price = 5000
+
+[[wing]]
+key = "butterfly_red"
+name = "Butterfly Wings (Red)"
+price = 5000
+
+[[wing]]
+key = "butterfly_spring"
+name = "Butterfly Wings (Spring)"
+price = 7500
+
+[[wing]]
+key = "butterfly_yellow"
+name = "Butterfly Wings (Yellow)"
+price = 5000
+
+[[wing]]
+key = "seraph_white"
+name = "Seraph Wings (White)"
+price = 30000
+admin = true
+
+[[wing]]
+key = "seraph_black"
+name = "Seraph Wings (Black)"
+price = 30000
+admin = true
+
+[[wing]]
+key = "seraph_gold"
+name = "Seraph Wings (Gold)"
+price = 35000
+admin = true
+
+[[wing]]
+key = "aurora_frost"
+name = "Aurora Wings (Frost)"
+price = 25000
+
+[[wing]]
+key = "aurora_green"
+name = "Aurora Wings (Green)"
+price = 25000
+
+[[wing]]
+key = "aurora_purple"
+name = "Aurora Wings (Purple)"
+price = 25000
+
+[[wing]]
+key = "aurora_rainbow"
+name = "Aurora Wings (Rainbow)"
+price = 35000
+
+[[wing]]
+key = "knight_gilded"
+name = "Knight Wings (Gilded)"
+price = 25000
+
+[[wing]]
+key = "knight_blaze"
+name = "Knight Wings (Blaze)"
+price = 25000
+
+[[wing]]
+key = "knight_infernal"
+name = "Knight Wings (Infernal)"
+price = 25000
+
+[[wing]]
+key = "sky_celestial"
+name = "Sky Wings (Celestial)"
+price = 30000
+
+[[wing]]
+key = "water_tide"
+name = "Water Wings (Tide)"
+price = 25000
+
+[[wing]]
+key = "archon_violet"
+name = "Archon Wings (Violet)"
+price = 40000
+
+[[wing]]
+key = "fae_prism"
+name = "Fae Wings (Prism)"
+price = 25000
+
+[[wing]]
+key = "dragon_blue"
+name = "Dragon Wings (Blue)"
+price = 20000
+
+[[wing]]
+key = "dragon_purple"
+name = "Dragon Wings (Purple)"
+price = 20000
+
+[[wing]]
+key = "dragon_red"
+name = "Dragon Wings (Red)"
+price = 20000
+
+[[wing]]
+key = "dragon_teal"
+name = "Dragon Wings (Teal)"
+price = 20000
+
+[[wing]]
+key = "dragon_white"
+name = "Dragon Wings (White)"
+price = 20000
+
+[[wing]]
+key = "dragon_yellow"
+name = "Dragon Wings (Yellow)"
+price = 20000

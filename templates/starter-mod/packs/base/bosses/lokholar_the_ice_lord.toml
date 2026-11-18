@@ -1,0 +1,21 @@
+# Lokholar the Ice Lord's abilities, Alterac Valley.
+
+[[boss]]
+key = "lokholar_the_ice_lord"
+
+[[boss.kit]]
+every = 7.0
+ability = { rain = { spell = 122, count = 4, radius = 5.0, spread = 8.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { leap = { spell = 122, radius = 5.0, reach = 12.0, warn = 1.6, factor = 2.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 28547, count = 2, radius = 3.5, speed = 4.2, lasts = 8.0, tick = 0.5 } }
+
+# AS's tag 17 (volley) not in: every 15 s.
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

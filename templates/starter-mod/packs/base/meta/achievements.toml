@@ -1,0 +1,663 @@
+# Every achievement (survivors-sim achievements.rs), in the menu's order. `icon` and `group` are the
+# codex's (SurvivorsCodex.lua); `goal` is how it is measured (achievements.rs `Goal`).
+#
+# Every achievement, in the order the menu lists them.
+
+[[achievement]]
+key = "kills_100"
+name = { en = "First Blood", de = "Erstes Blut", fr = "Premier sang", es = "Primera sangre", pt = "Primeiro Sangue", ru = "Первая кровь", pl = "Pierwsza krew", tr = "İlk Kan", it = "Primo sangue", ja = "ファーストブラッド", zh = "第一滴血", ko = "첫 피" }
+text = { en = "Slay 100 enemies.", de = "Töte 100 Feinde.", fr = "Tue 100 ennemis.", es = "Mata a 100 enemigos.", pt = "Mate 100 inimigos.", ru = "Убей 100 врагов.", pl = "Zabij 100 przeciwników.", tr = "100 düşman öldür.", it = "Uccidi 100 nemici.", ja = "敵を100体倒す。", zh = "消灭100个敌人。", ko = "적 100명을 처치하십시오." }
+goal = { kills = 100 }
+icon = "Ability_Warrior_Rampage"
+group = "Slaying"
+
+[[achievement]]
+key = "kills_1k"
+name = { en = "Exterminator", de = "Vernichter", fr = "Exterminateur", es = "Exterminador", pt = "Exterminador", ru = "Истребитель", pl = "Eksterminator", tr = "Yok Edici", it = "Sterminatore", ja = "根絶者", zh = "终结者", ko = "박멸자" }
+text = { en = "Slay 1,000 enemies.", de = "Töte 1.000 Feinde.", fr = "Tue 1 000 ennemis.", es = "Mata a 1.000 enemigos.", pt = "Mate 1.000 inimigos.", ru = "Убей 1 000 врагов.", pl = "Zabij 1000 przeciwników.", tr = "1.000 düşman öldür.", it = "Uccidi 1.000 nemici.", ja = "敵を1,000体倒す。", zh = "消灭1,000个敌人。", ko = "적 1,000명을 처치하십시오." }
+goal = { kills = 1000 }
+icon = "Ability_Warrior_Bloodfrenzy"
+group = "Slaying"
+
+[[achievement]]
+key = "kills_10k"
+name = { en = "Scourge of Azeroth", de = "Geißel von Azeroth", fr = "Fléau d'Azeroth", es = "Azote de Azeroth", pt = "Flagelo de Azeroth", ru = "Бич Азерота", pl = "Plaga Azeroth", tr = "Azeroth'un Belası", it = "Flagello di Azeroth", ja = "アゼロスの災厄", zh = "艾泽拉斯之灾", ko = "아제로스의 재앙" }
+text = { en = "Slay 10,000 enemies.", de = "Töte 10.000 Feinde.", fr = "Tue 10 000 ennemis.", es = "Mata a 10.000 enemigos.", pt = "Mate 10.000 inimigos.", ru = "Убей 10 000 врагов.", pl = "Zabij 10 000 przeciwników.", tr = "10.000 düşman öldür.", it = "Uccidi 10.000 nemici.", ja = "敵を10,000体倒す。", zh = "消灭10,000个敌人。", ko = "적 10,000명을 처치하십시오." }
+goal = { kills = 10000 }
+icon = "Achievement_Boss_LichKing"
+group = "Slaying"
+
+[[achievement]]
+key = "elites_25"
+name = { en = "Elite Hunter", de = "Elitejäger", fr = "Chasseur d'élites", es = "Cazador de élites", pt = "Caçador de Elites", ru = "Охотник на элиту", pl = "Łowca elit", tr = "Elit Avcısı", it = "Cacciatore di élite", ja = "エリート狩り", zh = "精英猎手", ko = "정예 사냥꾼" }
+text = { en = "Slay 25 elites or guardians.", de = "Töte 25 Elitegegner oder Wächter.", fr = "Tue 25 élites ou gardiens.", es = "Mata a 25 élites o guardianes.", pt = "Mate 25 elites ou guardiões.", ru = "Убей 25 элитных врагов или стражей.", pl = "Zabij 25 elit lub strażników.", tr = "25 elit veya muhafız öldür.", it = "Uccidi 25 élite o guardiani.", ja = "エリートまたはガーディアンを25体倒す。", zh = "消灭25个精英或守护者。", ko = "정예나 수호자 25명을 처치하십시오." }
+goal = { elites = 25 }
+icon = "Ability_Hunter_SniperShot"
+group = "Slaying"
+
+[[achievement]]
+key = "bosses_1"
+name = { en = "Giant Slayer", de = "Riesentöter", fr = "Tueur de géants", es = "Matagigantes", pt = "Mata-gigantes", ru = "Убийца великанов", pl = "Pogromca olbrzymów", tr = "Dev Avcısı", it = "Ammazzagiganti", ja = "巨人殺し", zh = "巨人杀手", ko = "거인 학살자" }
+text = { en = "Slay a boss.", de = "Töte einen Boss.", fr = "Tue un boss.", es = "Mata a un jefe.", pt = "Mate um chefe.", ru = "Убей босса.", pl = "Zabij bossa.", tr = "Bir boss öldür.", it = "Uccidi un boss.", ja = "ボスを倒す。", zh = "消灭一个首领。", ko = "우두머리를 처치하십시오." }
+goal = { bosses = 1 }
+icon = "Achievement_Boss_Ragnaros"
+group = "Slaying"
+
+[[achievement]]
+key = "bosses_25"
+name = { en = "Boss Rush", de = "Bossansturm", fr = "Ruée sur les boss", es = "Carrera de jefes", pt = "Corrida de Chefes", ru = "Натиск боссов", pl = "Pochód bossów", tr = "Boss Koşusu", it = "Assalto ai boss", ja = "ボスラッシュ", zh = "首领速攻", ko = "우두머리 러시" }
+text = { en = "Slay 25 bosses.", de = "Töte 25 Bosse.", fr = "Tue 25 boss.", es = "Mata a 25 jefes.", pt = "Mate 25 chefes.", ru = "Убей 25 боссов.", pl = "Zabij 25 bossów.", tr = "25 boss öldür.", it = "Uccidi 25 boss.", ja = "ボスを25体倒す。", zh = "消灭25个首领。", ko = "우두머리 25명을 처치하십시오." }
+goal = { bosses = 25 }
+icon = "Achievement_Boss_KelThuzad_01"
+group = "Slaying"
+
+[[achievement]]
+key = "rifts_1"
+name = { en = "Rift Opener", de = "Rissöffner", fr = "Ouvreur de failles", es = "Abridor de grietas", pt = "Abridor de Fendas", ru = "Открыватель разломов", pl = "Otwieracz szczelin", tr = "Yarık Açıcı", it = "Apritore di fratture", ja = "リフトを開く者", zh = "开启裂隙", ko = "균열 개방자" }
+text = { en = "Fill a rift bar.", de = "Fülle eine Rissleiste.", fr = "Remplis une barre de faille.", es = "Llena una barra de grieta.", pt = "Encha uma barra de fenda.", ru = "Заполни шкалу разлома.", pl = "Wypełnij pasek szczeliny.", tr = "Bir yarık çubuğunu doldur.", it = "Riempi una barra di frattura.", ja = "リフトゲージを満たす。", zh = "填满一个裂隙进度条。", ko = "균열 막대를 채우십시오." }
+goal = { rifts = 1 }
+icon = "Spell_Arcane_PortalDalaran"
+group = "Rifts"
+
+[[achievement]]
+key = "rifts_25"
+name = { en = "Rift Walker", de = "Risswandler", fr = "Marcheur des failles", es = "Caminagrietas", pt = "Andarilho das Fendas", ru = "Странник разломов", pl = "Wędrowiec szczelin", tr = "Yarık Yürüyücüsü", it = "Camminatore delle fratture", ja = "リフトウォーカー", zh = "裂隙行者", ko = "균열 방랑자" }
+text = { en = "Fill 25 rift bars.", de = "Fülle 25 Rissleisten.", fr = "Remplis 25 barres de faille.", es = "Llena 25 barras de grieta.", pt = "Encha 25 barras de fenda.", ru = "Заполни 25 шкал разлома.", pl = "Wypełnij 25 pasków szczelin.", tr = "25 yarık çubuğu doldur.", it = "Riempi 25 barre di frattura.", ja = "リフトゲージを25回満たす。", zh = "填满25个裂隙进度条。", ko = "균열 막대를 25번 채우십시오." }
+goal = { rifts = 25 }
+icon = "Spell_Arcane_PortalShattrath"
+group = "Rifts"
+
+[[achievement]]
+key = "wins_1"
+name = { en = "Victory!", de = "Sieg!", fr = "Victoire !", es = "¡Victoria!", pt = "Vitória!", ru = "Победа!", pl = "Zwycięstwo!", tr = "Zafer!", it = "Vittoria!", ja = "勝利！", zh = "胜利！", ko = "승리!" }
+text = { en = "Win a run.", de = "Gewinne einen Lauf.", fr = "Remporte une partie.", es = "Gana una partida.", pt = "Vença uma partida.", ru = "Выиграй забег.", pl = "Wygraj rozgrywkę.", tr = "Bir oyun kazan.", it = "Vinci una partita.", ja = "ランに勝利する。", zh = "赢得一场对局。", ko = "런에서 승리하십시오." }
+goal = { wins = 1 }
+icon = "Spell_Holy_ChampionsBond"
+group = "Victories"
+
+[[achievement]]
+key = "wins_10"
+name = { en = "Veteran", de = "Veteran", fr = "Vétéran", es = "Veterano", pt = "Veterano", ru = "Ветеран", pl = "Weteran", tr = "Gazi", it = "Veterano", ja = "ベテラン", zh = "老兵", ko = "노장" }
+text = { en = "Win 10 runs.", de = "Gewinne 10 Läufe.", fr = "Remporte 10 parties.", es = "Gana 10 partidas.", pt = "Vença 10 partidas.", ru = "Выиграй 10 забегов.", pl = "Wygraj 10 rozgrywek.", tr = "10 oyun kazan.", it = "Vinci 10 partite.", ja = "ランに10回勝利する。", zh = "赢得10场对局。", ko = "런에서 10번 승리하십시오." }
+goal = { wins = 10 }
+icon = "INV_Shield_06"
+group = "Victories"
+
+[[achievement]]
+key = "zones_3"
+name = { en = "Traveller", de = "Reisender", fr = "Voyageur", es = "Viajero", pt = "Viajante", ru = "Путешественник", pl = "Podróżnik", tr = "Gezgin", it = "Viaggiatore", ja = "旅人", zh = "旅行者", ko = "여행자" }
+text = { en = "Win in 3 different zones.", de = "Gewinne in 3 verschiedenen Zonen.", fr = "Gagne dans 3 zones différentes.", es = "Gana en 3 zonas distintas.", pt = "Vença em 3 zonas diferentes.", ru = "Победи в 3 разных зонах.", pl = "Wygraj w 3 różnych strefach.", tr = "3 farklı bölgede kazan.", it = "Vinci in 3 zone diverse.", ja = "3つの異なるゾーンで勝利する。", zh = "在3个不同的区域获胜。", ko = "서로 다른 지역 3곳에서 승리하십시오." }
+goal = { zones = 3 }
+icon = "INV_Misc_Map_01"
+group = "Victories"
+
+[[achievement]]
+key = "zones_10"
+name = { en = "World Traveller", de = "Weltenbummler", fr = "Globe-trotter", es = "Trotamundos", pt = "Viajante do Mundo", ru = "Путешественник по миру", pl = "Podróżnik po świecie", tr = "Dünya Gezgini", it = "Giramondo", ja = "世界の旅人", zh = "环游世界", ko = "세계 여행자" }
+text = { en = "Win in 10 different zones.", de = "Gewinne in 10 verschiedenen Zonen.", fr = "Gagne dans 10 zones différentes.", es = "Gana en 10 zonas distintas.", pt = "Vença em 10 zonas diferentes.", ru = "Победи в 10 разных зонах.", pl = "Wygraj w 10 różnych strefach.", tr = "10 farklı bölgede kazan.", it = "Vinci in 10 zone diverse.", ja = "10の異なるゾーンで勝利する。", zh = "在10个不同的区域获胜。", ko = "서로 다른 지역 10곳에서 승리하십시오." }
+goal = { zones = 10 }
+icon = "Achievement_Zone_Northrend_01"
+group = "Victories"
+
+# The expansions' wins, as the Codex shows them (SurvivorsCodex.lua).
+[[achievement]]
+key = "outland_campaign"
+name = { en = "Hero of Outland", de = "Held der Scherbenwelt", fr = "Héros d'Outreterre", es = "Héroe de Terrallende", pt = "Herói de Terralém", ru = "Герой Запределья", pl = "Bohater Outland", tr = "Outland Kahramanı", it = "Eroe dell'Outland", ja = "アウトランドの英雄", zh = "外域英雄", ko = "아웃랜드의 영웅" }
+text = { en = "Win in every zone of Outland.", de = "Gewinne in jeder Zone der Scherbenwelt.", fr = "Gagne dans chaque zone d'Outreterre.", es = "Gana en cada zona de Terrallende.", pt = "Vença em cada zona de Terralém.", ru = "Победи в каждой зоне Запределья.", pl = "Wygraj w każdej strefie Outland.", tr = "Outland'in her bölgesinde kazan.", it = "Vinci in ogni zona dell'Outland.", ja = "アウトランドのすべてのゾーンで勝利する。", zh = "在外域的每个区域获胜。", ko = "아웃랜드의 모든 지역에서 승리하십시오." }
+goal = { campaign = 1 }
+icon = "Achievement_Zone_Outland_01"
+group = "Victories"
+
+[[achievement]]
+key = "northrend_campaign"
+name = { en = "Hero of Northrend", de = "Held von Nordend", fr = "Héros du Norfendre", es = "Héroe de Rasganorte", pt = "Herói de Nortúndria", ru = "Герой Нордскола", pl = "Bohater Northrend", tr = "Northrend Kahramanı", it = "Eroe di Nordania", ja = "ノースレンドの英雄", zh = "诺森德英雄", ko = "노스렌드의 영웅" }
+text = { en = "Win in every zone of Northrend.", de = "Gewinne in jeder Zone von Nordend.", fr = "Gagne dans chaque zone du Norfendre.", es = "Gana en cada zona de Rasganorte.", pt = "Vença em cada zona de Nortúndria.", ru = "Победи в каждой зоне Нордскола.", pl = "Wygraj w każdej strefie Northrend.", tr = "Northrend'in her bölgesinde kazan.", it = "Vinci in ogni zona di Nordania.", ja = "ノースレンドのすべてのゾーンで勝利する。", zh = "在诺森德的每个区域获胜。", ko = "노스렌드의 모든 지역에서 승리하십시오." }
+goal = { campaign = 2 }
+icon = "Achievement_Zone_Northrend_01"
+group = "Victories"
+
+[[achievement]]
+key = "black_temple"
+name = { en = "The Betrayer's End", de = "Das Ende des Verräters", fr = "La fin du traître", es = "El fin del Traidor", pt = "O Fim do Traidor", ru = "Конец Предателя", pl = "Koniec Zdrajcy", tr = "Hainin Sonu", it = "La fine del Traditore", ja = "裏切り者の最期", zh = "背叛者的末日", ko = "배신자의 최후" }
+text = { en = "Win in Shadowmoon Valley, the Black Temple.", de = "Gewinne im Schattenmondtal, dem Schwarzen Tempel.", fr = "Gagne dans la vallée d'Ombrelune, le Temple noir.", es = "Gana en el Valle Sombraluna, el Templo Oscuro.", pt = "Vença no Vale da Lua Negra, o Templo Negro.", ru = "Победи в Долине Призрачной Луны, в Чёрном храме.", pl = "Wygraj w Dolinie Mrocznego Księżyca, w Czarnej Świątyni.", tr = "Gölgeay Vadisi'nde, Kara Tapınak'ta kazan.", it = "Vinci nella Valle di Torvaluna, il Tempio Oscuro.", ja = "シャドウムーン・ヴァレーのブラック・テンプルで勝利する。", zh = "在影月谷的黑暗神殿获胜。", ko = "어둠달 골짜기의 검은 사원에서 승리하십시오." }
+goal = { zone_win = "shadowmoon" }
+icon = "Achievement_Boss_Illidan"
+group = "Victories"
+
+[[achievement]]
+key = "kingslayer"
+name = { en = "Kingslayer", de = "Königsmörder", fr = "Tueur de roi", es = "Matarreyes", pt = "Mata-reis", ru = "Цареубийца", pl = "Zabójca królów", tr = "Kral Katili", it = "Uccisore di re", ja = "王殺し", zh = "弑君者", ko = "왕시해자" }
+text = { en = "Win in Icecrown Citadel.", de = "Gewinne in der Eiskronenzitadelle.", fr = "Gagne dans la citadelle de la Couronne de glace.", es = "Gana en la Ciudadela de la Corona de Hielo.", pt = "Vença na Cidadela da Coroa de Gelo.", ru = "Победи в Цитадели Ледяной Короны.", pl = "Wygraj w Cytadeli Lodowej Korony.", tr = "Buz Tacı Kalesi'nde kazan.", it = "Vinci nella Cittadella della Corona di Ghiaccio.", ja = "アイスクラウン・シタデルで勝利する。", zh = "在冰冠堡垒获胜。", ko = "얼음왕관 성채에서 승리하십시오." }
+goal = { zone_win = "icc" }
+icon = "Achievement_Boss_LichKing"
+group = "Victories"
+
+[[achievement]]
+key = "immortal"
+name = { en = "The Immortal", de = "Der Unsterbliche", fr = "L'Immortel", es = "El Inmortal", pt = "O Imortal", ru = "Бессмертный", pl = "Nieśmiertelny", tr = "Ölümsüz", it = "L'Immortale", ja = "不死なる者", zh = "不朽者", ko = "불멸자" }
+text = { en = "Win in Icecrown Citadel without any hero falling.", de = "Gewinne in der Eiskronenzitadelle, ohne dass ein Held fällt.", fr = "Gagne dans la citadelle de la Couronne de glace sans qu'aucun héros ne tombe.", es = "Gana en la Ciudadela de la Corona de Hielo sin que caiga ningún héroe.", pt = "Vença na Cidadela da Coroa de Gelo sem que nenhum herói caia.", ru = "Победи в Цитадели Ледяной Короны, не потеряв ни одного героя.", pl = "Wygraj w Cytadeli Lodowej Korony bez upadku żadnego bohatera.", tr = "Buz Tacı Kalesi'nde hiçbir kahraman düşmeden kazan.", it = "Vinci nella Cittadella della Corona di Ghiaccio senza che nessun eroe cada.", ja = "ヒーローが1人も倒れずにアイスクラウン・シタデルで勝利する。", zh = "在冰冠堡垒获胜，且没有任何英雄倒下。", ko = "얼음왕관 성채에서 쓰러지는 영웅 없이 승리하십시오." }
+goal = { flawless = "icc" }
+icon = "Spell_Holy_DivineSpirit"
+group = "Victories"
+
+[[achievement]]
+key = "tier_2"
+name = { en = "Heroic", de = "Heroisch", fr = "Héroïque", es = "Heroico", pt = "Heroico", ru = "Героический", pl = "Heroiczny", tr = "Kahramanlık", it = "Eroico", ja = "ヒロイック", zh = "英雄", ko = "영웅적인" }
+text = { en = "Win at Heroic I or higher.", de = "Gewinne auf Heroisch I oder höher.", fr = "Gagne en Héroïque I ou plus.", es = "Gana en Heroico I o superior.", pt = "Vença no Heroico I ou superior.", ru = "Победи на уровне Героический I или выше.", pl = "Wygraj na stopniu Heroiczny I lub wyższym.", tr = "Kahramanlık I veya üstünde kazan.", it = "Vinci a Eroico I o superiore.", ja = "ヒロイックI以上で勝利する。", zh = "在英雄I或更高难度下获胜。", ko = "영웅 I 이상에서 승리하십시오." }
+goal = { tier = 1 }
+icon = "Spell_Shadow_DeathPact"
+group = "Victories"
+
+[[achievement]]
+key = "tier_5"
+name = { en = "Unyielding", de = "Unbeugsam", fr = "Inflexible", es = "Inflexible", pt = "Inflexível", ru = "Непреклонный", pl = "Niezłomny", tr = "Boyun Eğmez", it = "Incrollabile", ja = "不屈", zh = "不屈", ko = "꺾이지 않는 자" }
+text = { en = "Win at Heroic IV or higher.", de = "Gewinne auf Heroisch IV oder höher.", fr = "Gagne en Héroïque IV ou plus.", es = "Gana en Heroico IV o superior.", pt = "Vença no Heroico IV ou superior.", ru = "Победи на уровне Героический IV или выше.", pl = "Wygraj na stopniu Heroiczny IV lub wyższym.", tr = "Kahramanlık IV veya üstünde kazan.", it = "Vinci a Eroico IV o superiore.", ja = "ヒロイックIV以上で勝利する。", zh = "在英雄IV或更高难度下获胜。", ko = "영웅 IV 이상에서 승리하십시오." }
+goal = { tier = 4 }
+icon = "Spell_Shadow_UnholyStrength"
+group = "Victories"
+
+[[achievement]]
+key = "survive_10"
+name = { en = "Hold the Line", de = "Halte die Stellung", fr = "Tenir la ligne", es = "Mantén la línea", pt = "Segure a Linha", ru = "Держать строй", pl = "Utrzymać linię", tr = "Hattı Koru", it = "Tenere la linea", ja = "戦線を守れ", zh = "坚守阵线", ko = "전선 사수" }
+text = { en = "Survive 10 minutes in one run.", de = "Überlebe 10 Minuten in einem Lauf.", fr = "Survis 10 minutes en une partie.", es = "Sobrevive 10 minutos en una partida.", pt = "Sobreviva 10 minutos em uma partida.", ru = "Продержись 10 минут за один забег.", pl = "Przeżyj 10 minut w jednej rozgrywce.", tr = "Bir oyunda 10 dakika hayatta kal.", it = "Sopravvivi 10 minuti in una partita.", ja = "1回のランで10分間生き延びる。", zh = "在一场对局中存活10分钟。", ko = "한 런에서 10분 동안 생존하십시오." }
+goal = { survive = 600 }
+icon = "INV_Misc_PocketWatch_01"
+group = "Survival"
+
+[[achievement]]
+key = "survive_20"
+name = { en = "Last One Standing", de = "Der Letzte, der steht", fr = "Dernier debout", es = "El último en pie", pt = "O Último de Pé", ru = "Последний на ногах", pl = "Ostatni na placu", tr = "Son Ayakta Kalan", it = "Ultimo in piedi", ja = "最後の生存者", zh = "最后的幸存者", ko = "최후의 생존자" }
+text = { en = "Survive 20 minutes in one run.", de = "Überlebe 20 Minuten in einem Lauf.", fr = "Survis 20 minutes en une partie.", es = "Sobrevive 20 minutos en una partida.", pt = "Sobreviva 20 minutos em uma partida.", ru = "Продержись 20 минут за один забег.", pl = "Przeżyj 20 minut w jednej rozgrywce.", tr = "Bir oyunda 20 dakika hayatta kal.", it = "Sopravvivi 20 minuti in una partita.", ja = "1回のランで20分間生き延びる。", zh = "在一场对局中存活20分钟。", ko = "한 런에서 20분 동안 생존하십시오." }
+goal = { survive = 1200 }
+icon = "Spell_Holy_DivineIntervention"
+group = "Survival"
+
+[[achievement]]
+key = "revive_1"
+name = { en = "Lifeline", de = "Rettungsleine", fr = "Bouée de sauvetage", es = "Salvavidas", pt = "Tábua de Salvação", ru = "Спасательный круг", pl = "Linia ratunkowa", tr = "Can Simidi", it = "Ancora di salvezza", ja = "命綱", zh = "生命线", ko = "생명줄" }
+text = { en = "Raise a downed hero in co-op.", de = "Hilf im Koop einem gefallenen Helden auf.", fr = "Relève un héros à terre en coop.", es = "Levanta a un héroe caído en cooperativo.", pt = "Levante um herói caído no coop.", ru = "Подними павшего героя в кооперативе.", pl = "Podnieś powalonego bohatera w co-op.", tr = "Co-op'ta yere düşen bir kahramanı kaldır.", it = "Rialza un eroe a terra in co-op.", ja = "協力プレイで倒れたヒーローを蘇生する。", zh = "在合作模式中救起一名倒地的英雄。", ko = "협동에서 쓰러진 영웅을 일으켜 세우십시오." }
+goal = { revives = 1 }
+icon = "Spell_Holy_Resurrection"
+group = "Co-op"
+
+[[achievement]]
+key = "revive_25"
+name = { en = "Field Medic", de = "Feldsanitäter", fr = "Médecin de terrain", es = "Médico de campaña", pt = "Médico de Campo", ru = "Полевой медик", pl = "Medyk polowy", tr = "Saha Sağlıkçısı", it = "Medico da campo", ja = "衛生兵", zh = "战地医生", ko = "야전 의무병" }
+text = { en = "Raise 25 downed heroes in co-op.", de = "Hilf im Koop 25 gefallenen Helden auf.", fr = "Relève 25 héros à terre en coop.", es = "Levanta a 25 héroes caídos en cooperativo.", pt = "Levante 25 heróis caídos no coop.", ru = "Подними 25 павших героев в кооперативе.", pl = "Podnieś 25 powalonych bohaterów w co-op.", tr = "Co-op'ta yere düşen 25 kahramanı kaldır.", it = "Rialza 25 eroi a terra in co-op.", ja = "協力プレイで倒れたヒーローを25回蘇生する。", zh = "在合作模式中救起25名倒地的英雄。", ko = "협동에서 쓰러진 영웅을 25번 일으켜 세우십시오." }
+goal = { revives = 25 }
+icon = "Spell_Holy_GuardianSpirit"
+group = "Co-op"
+
+[[achievement]]
+key = "coop_win"
+name = { en = "Stronger Together", de = "Gemeinsam stärker", fr = "Plus forts ensemble", es = "Más fuertes juntos", pt = "Mais Fortes Juntos", ru = "Вместе сильнее", pl = "Razem silniejsi", tr = "Birlikte Daha Güçlü", it = "Più forti insieme", ja = "共に強く", zh = "团结力量大", ko = "함께라면 더 강하게" }
+text = { en = "Win a co-op run.", de = "Gewinne einen Koop-Lauf.", fr = "Remporte une partie en coop.", es = "Gana una partida cooperativa.", pt = "Vença uma partida coop.", ru = "Выиграй кооперативный забег.", pl = "Wygraj rozgrywkę co-op.", tr = "Bir co-op oyunu kazan.", it = "Vinci una partita in co-op.", ja = "協力プレイのランに勝利する。", zh = "赢得一场合作对局。", ko = "협동 런에서 승리하십시오." }
+goal = "coop_win"
+icon = "Ability_Warrior_BattleShout"
+group = "Co-op"
+
+[[achievement]]
+key = "codex_25"
+name = { en = "Bestiary", de = "Bestiarium", fr = "Bestiaire", es = "Bestiario", pt = "Bestiário", ru = "Бестиарий", pl = "Bestiariusz", tr = "Canavar Ansiklopedisi", it = "Bestiario", ja = "図鑑", zh = "怪物图鉴", ko = "몬스터 도감" }
+text = { en = "Slay 25 different creatures.", de = "Töte 25 verschiedene Kreaturen.", fr = "Tue 25 créatures différentes.", es = "Mata a 25 criaturas distintas.", pt = "Mate 25 criaturas diferentes.", ru = "Убей 25 разных существ.", pl = "Zabij 25 różnych stworzeń.", tr = "25 farklı yaratık öldür.", it = "Uccidi 25 creature diverse.", ja = "25種類のクリーチャーを倒す。", zh = "消灭25种不同的生物。", ko = "서로 다른 생물 25종을 처치하십시오." }
+goal = { codex = 25 }
+icon = "INV_Misc_Book_09"
+group = "Codex"
+
+[[achievement]]
+key = "human_wins_3"
+name = { en = "Pride of Stormwind", de = "Stolz von Sturmwind", fr = "Fierté de Hurlevent", es = "Orgullo de Ventormenta", pt = "Orgulho de Ventobravo", ru = "Гордость Штормграда", pl = "Duma Stormwind", tr = "Fırtınakent'in Gururu", it = "Orgoglio di Roccavento", ja = "ストームウィンドの誇り", zh = "暴风城的骄傲", ko = "스톰윈드의 자랑" }
+text = { en = "Win 3 runs with a Human hero.", de = "Gewinne 3 Läufe mit einem menschlichen Helden.", fr = "Remporte 3 parties avec un héros humain.", es = "Gana 3 partidas con un héroe humano.", pt = "Vença 3 partidas com um herói humano.", ru = "Выиграй 3 забега за героя-человека.", pl = "Wygraj 3 rozgrywki człowiekiem.", tr = "İnsan kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Umano.", ja = "ヒューマンのヒーローでランに3回勝利する。", zh = "使用人类英雄赢得3场对局。", ko = "인간 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [1, 3] }
+icon = "Achievement_Character_Human_Male"
+group = "Looks"
+
+[[achievement]]
+key = "human_wins_10"
+name = { en = "Hero of the Alliance", de = "Held der Allianz", fr = "Héros de l'Alliance", es = "Héroe de la Alianza", pt = "Herói da Aliança", ru = "Герой Альянса", pl = "Bohater Przymierza", tr = "İttifak Kahramanı", it = "Eroe dell'Alleanza", ja = "アライアンスの英雄", zh = "联盟英雄", ko = "얼라이언스의 영웅" }
+text = { en = "Win 10 runs with a Human hero.", de = "Gewinne 10 Läufe mit einem menschlichen Helden.", fr = "Remporte 10 parties avec un héros humain.", es = "Gana 10 partidas con un héroe humano.", pt = "Vença 10 partidas com um herói humano.", ru = "Выиграй 10 забегов за героя-человека.", pl = "Wygraj 10 rozgrywek człowiekiem.", tr = "İnsan kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Umano.", ja = "ヒューマンのヒーローでランに10回勝利する。", zh = "使用人类英雄赢得10场对局。", ko = "인간 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [1, 10] }
+icon = "Achievement_Character_Human_Female"
+group = "Looks"
+[[achievement]]
+key = "dwarf_wins_10"
+name = { en = "Hero of Khaz Modan", de = "Held von Khaz Modan", fr = "Héros de Khaz Modan", es = "Héroe de Khaz Modan", pt = "Herói de Khaz Modan", ru = "Герой Каз Модана", pl = "Bohater Khaz Modan", tr = "Khaz Modan Kahramanı", it = "Eroe di Khaz Modan", ja = "カズ・モダンの英雄", zh = "卡兹莫丹英雄", ko = "카즈 모단의 영웅" }
+text = { en = "Win 10 runs with a Dwarf hero.", de = "Gewinne 10 Läufe mit einem Zwerg.", fr = "Remporte 10 parties avec un héros nain.", es = "Gana 10 partidas con un héroe enano.", pt = "Vença 10 partidas com um herói anão.", ru = "Победы за дворфа: 10.", pl = "Wygraj 10 rozgrywek krasnoludem.", tr = "Cüce kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Nano.", ja = "ドワーフのヒーローでランに10回勝利する。", zh = "使用矮人英雄赢得10场对局。", ko = "드워프 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [3, 10] }
+icon = "Achievement_Character_Dwarf_Female"
+group = "Looks"
+[[achievement]]
+key = "nightelf_wins_10"
+name = { en = "Hero of Teldrassil", de = "Held von Teldrassil", fr = "Héros de Teldrassil", es = "Héroe de Teldrassil", pt = "Herói de Teldrassil", ru = "Герой Телдрассила", pl = "Bohater Teldrassil", tr = "Teldrassil Kahramanı", it = "Eroe di Teldrassil", ja = "テルドラシルの英雄", zh = "泰达希尔英雄", ko = "텔드랏실의 영웅" }
+text = { en = "Win 10 runs with a Night Elf hero.", de = "Gewinne 10 Läufe mit einem Nachtelfen.", fr = "Remporte 10 parties avec un héros elfe de la nuit.", es = "Gana 10 partidas con un héroe elfo de la noche.", pt = "Vença 10 partidas com um herói elfo noturno.", ru = "Победы за ночного эльфа: 10.", pl = "Wygraj 10 rozgrywek nocnym elfem.", tr = "Gece Elfi kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Elfo della Notte.", ja = "ナイトエルフのヒーローでランに10回勝利する。", zh = "使用暗夜精灵英雄赢得10场对局。", ko = "나이트 엘프 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [4, 10] }
+icon = "Achievement_Character_Nightelf_Male"
+group = "Looks"
+[[achievement]]
+key = "gnome_wins_10"
+name = { en = "Hero of Tinker Town", de = "Held der Tüftlerstadt", fr = "Héros de Brikabrok", es = "Héroe de Ciudad Manitas", pt = "Herói de Tinker Town", ru = "Герой Тинкер-Тауна", pl = "Bohater Gnomiej Dzielnicy", tr = "Tamirci Kasabası Kahramanı", it = "Eroe di Tinker Town", ja = "ティンカータウンの英雄", zh = "侏儒区英雄", ko = "땜장이 마을의 영웅" }
+text = { en = "Win 10 runs with a Gnome hero.", de = "Gewinne 10 Läufe mit einem Gnom.", fr = "Remporte 10 parties avec un héros gnome.", es = "Gana 10 partidas con un héroe gnomo.", pt = "Vença 10 partidas com um herói gnomo.", ru = "Победы за гнома: 10.", pl = "Wygraj 10 rozgrywek gnomem.", tr = "Gnom kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Gnomo.", ja = "ノームのヒーローでランに10回勝利する。", zh = "使用侏儒英雄赢得10场对局。", ko = "노움 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [7, 10] }
+icon = "Achievement_Character_Gnome_Male"
+group = "Looks"
+[[achievement]]
+key = "draenei_wins_10"
+name = { en = "Hero of Azuremyst", de = "Held der Azurmythosinsel", fr = "Héros de l'île de Brume-azur", es = "Héroe de Isla Bruma Azur", pt = "Herói da Ilha Névoa Azul", ru = "Герой острова Лазурной Дымки", pl = "Bohater Azuremyst", tr = "Azuremyst Kahramanı", it = "Eroe di Azuremyst", ja = "アズールミストの英雄", zh = "秘蓝岛英雄", ko = "하늘안개 섬의 영웅" }
+text = { en = "Win 10 runs with a Draenei hero.", de = "Gewinne 10 Läufe mit einem Draenei.", fr = "Remporte 10 parties avec un héros draeneï.", es = "Gana 10 partidas con un héroe draenei.", pt = "Vença 10 partidas com um herói draenei.", ru = "Победы за дренея: 10.", pl = "Wygraj 10 rozgrywek draenei.", tr = "Draenei kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Draenei.", ja = "ドレナイのヒーローでランに10回勝利する。", zh = "使用德莱尼英雄赢得10场对局。", ko = "드레나이 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [11, 10] }
+icon = "Achievement_Character_Draenei_Male"
+group = "Looks"
+[[achievement]]
+key = "orc_wins_10"
+name = { en = "Hero of Durotar", de = "Held von Durotar", fr = "Héros de Durotar", es = "Héroe de Durotar", pt = "Herói de Durotar", ru = "Герой Дуротара", pl = "Bohater Durotaru", tr = "Durotar Kahramanı", it = "Eroe di Durotar", ja = "デュロタルの英雄", zh = "杜隆塔尔英雄", ko = "듀로타의 영웅" }
+text = { en = "Win 10 runs with an Orc hero.", de = "Gewinne 10 Läufe mit einem Orc.", fr = "Remporte 10 parties avec un héros orc.", es = "Gana 10 partidas con un héroe orco.", pt = "Vença 10 partidas com um herói orc.", ru = "Победы за орка: 10.", pl = "Wygraj 10 rozgrywek orkiem.", tr = "Ork kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Orco.", ja = "オークのヒーローでランに10回勝利する。", zh = "使用兽人英雄赢得10场对局。", ko = "오크 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [2, 10] }
+icon = "Achievement_Character_Orc_Female"
+group = "Looks"
+[[achievement]]
+key = "scourge_wins_10"
+name = { en = "Hero of the Forsaken", de = "Held der Verlassenen", fr = "Héros des Réprouvés", es = "Héroe de los Renegados", pt = "Herói dos Renegados", ru = "Герой Отрекшихся", pl = "Bohater Opuszczonych", tr = "Terkedilmişlerin Kahramanı", it = "Eroe dei Reietti", ja = "フォーセイクンの英雄", zh = "被遗忘者英雄", ko = "포세이큰의 영웅" }
+text = { en = "Win 10 runs with an Undead hero.", de = "Gewinne 10 Läufe mit einem Untoten.", fr = "Remporte 10 parties avec un héros mort-vivant.", es = "Gana 10 partidas con un héroe no-muerto.", pt = "Vença 10 partidas com um herói morto-vivo.", ru = "Победы за нежить: 10.", pl = "Wygraj 10 rozgrywek nieumarłym.", tr = "Ölümsüz kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Non Morto.", ja = "アンデッドのヒーローでランに10回勝利する。", zh = "使用亡灵英雄赢得10场对局。", ko = "언데드 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [5, 10] }
+icon = "Achievement_Character_Undead_Male"
+group = "Looks"
+[[achievement]]
+key = "troll_wins_10"
+name = { en = "Hero of the Echo Isles", de = "Held der Echoinseln", fr = "Héros des îles Echo", es = "Héroe de las Islas del Eco", pt = "Herói das Ilhas do Eco", ru = "Герой Острова Эха", pl = "Bohater Wysp Echa", tr = "Yankı Adaları Kahramanı", it = "Eroe delle Isole Echo", ja = "エコー諸島の英雄", zh = "回音群岛英雄", ko = "메아리 섬의 영웅" }
+text = { en = "Win 10 runs with a Troll hero.", de = "Gewinne 10 Läufe mit einem Troll.", fr = "Remporte 10 parties avec un héros troll.", es = "Gana 10 partidas con un héroe trol.", pt = "Vença 10 partidas com um herói troll.", ru = "Победы за тролля: 10.", pl = "Wygraj 10 rozgrywek trollem.", tr = "Troll kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Troll.", ja = "トロールのヒーローでランに10回勝利する。", zh = "使用巨魔英雄赢得10场对局。", ko = "트롤 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [8, 10] }
+icon = "Achievement_Character_Troll_Female"
+group = "Looks"
+[[achievement]]
+key = "bloodelf_wins_10"
+name = { en = "Hero of Quel'Thalas", de = "Held von Quel'Thalas", fr = "Héros de Quel'Thalas", es = "Héroe de Quel'Thalas", pt = "Herói de Quel'Thalas", ru = "Герой Кель'Таласа", pl = "Bohater Quel'Thalas", tr = "Quel'Thalas Kahramanı", it = "Eroe di Quel'Thalas", ja = "クエル・サラスの英雄", zh = "奎尔萨拉斯英雄", ko = "쿠엘탈라스의 영웅" }
+text = { en = "Win 10 runs with a Blood Elf hero.", de = "Gewinne 10 Läufe mit einem Blutelfen.", fr = "Remporte 10 parties avec un héros elfe de sang.", es = "Gana 10 partidas con un héroe elfo de sangre.", pt = "Vença 10 partidas com um herói elfo sangrento.", ru = "Победы за эльфа крови: 10.", pl = "Wygraj 10 rozgrywek krwawym elfem.", tr = "Kan Elfi kahramanla 10 oyun kazan.", it = "Vinci 10 partite con un eroe Elfo del Sangue.", ja = "ブラッドエルフのヒーローでランに10回勝利する。", zh = "使用血精灵英雄赢得10场对局。", ko = "블러드 엘프 영웅으로 런에서 10번 승리하십시오." }
+goal = { race_wins = [10, 10] }
+icon = "Achievement_Character_Bloodelf_Female"
+group = "Looks"
+
+[[achievement]]
+key = "kills_100k"
+name = { en = "Unstoppable Force", de = "Unaufhaltsame Gewalt", fr = "Force irrésistible", es = "Fuerza imparable", pt = "Força Imparável", ru = "Неудержимая сила", pl = "Niepowstrzymana siła", tr = "Durdurulamaz Güç", it = "Forza inarrestabile", ja = "止められぬ力", zh = "势不可挡", ko = "멈출 수 없는 힘" }
+text = { en = "Slay 100,000 enemies.", de = "Töte 100.000 Feinde.", fr = "Tue 100 000 ennemis.", es = "Derrota a 100.000 enemigos.", pt = "Mate 100.000 inimigos.", ru = "Убей 100 000 врагов.", pl = "Zabij 100 000 przeciwników.", tr = "100.000 düşman öldür.", it = "Uccidi 100.000 nemici.", ja = "敵を100,000体倒す。", zh = "消灭100,000个敌人。", ko = "적 100,000명을 처치하십시오." }
+goal = { kills = 100000 }
+icon = "Spell_DeathKnight_ArmyOfTheDead"
+group = "Slaying"
+
+[[achievement]]
+key = "elites_250"
+name = { en = "Champion Hunter", de = "Champion der Jagd", fr = "Chasseur de champions", es = "Cazador de campeones", pt = "Caçador de Campeões", ru = "Охотник на чемпионов", pl = "Łowca mistrz", tr = "Şampiyon Avcısı", it = "Cacciatore campione", ja = "勇者狩り", zh = "冠军猎手", ko = "챔피언 사냥꾼" }
+text = { en = "Slay 250 elites or guardians.", de = "Töte 250 Elitegegner oder Wächter.", fr = "Tue 250 élites ou gardiens.", es = "Derrota a 250 élites o guardianes.", pt = "Mate 250 elites ou guardiões.", ru = "Убей 250 элитных врагов или стражей.", pl = "Zabij 250 elit lub strażników.", tr = "250 elit veya muhafız öldür.", it = "Uccidi 250 élite o guardiani.", ja = "エリートまたはガーディアンを250体倒す。", zh = "消灭250个精英或守护者。", ko = "정예나 수호자 250명을 처치하십시오." }
+goal = { elites = 250 }
+icon = "Ability_Hunter_MasterMarksman"
+group = "Slaying"
+
+[[achievement]]
+key = "bosses_100"
+name = { en = "Legend Slayer", de = "Legendentöter", fr = "Tueur de légendes", es = "Matador de leyendas", pt = "Matador de Lendas", ru = "Убийца легенд", pl = "Pogromca legend", tr = "Efsane Avcısı", it = "Ammazzaleggende", ja = "伝説殺し", zh = "传奇杀手", ko = "전설 학살자" }
+text = { en = "Slay 100 bosses.", de = "Töte 100 Bosse.", fr = "Tue 100 boss.", es = "Derrota a 100 jefes.", pt = "Mate 100 chefes.", ru = "Убей 100 боссов.", pl = "Zabij 100 bossów.", tr = "100 boss öldür.", it = "Uccidi 100 boss.", ja = "ボスを100体倒す。", zh = "消灭100个首领。", ko = "우두머리 100명을 처치하십시오." }
+goal = { bosses = 100 }
+icon = "Achievement_Boss_Onyxia"
+group = "Slaying"
+
+[[achievement]]
+key = "rifts_100"
+name = { en = "Rift Lord", de = "Herr der Risse", fr = "Seigneur des failles", es = "Señor de las grietas", pt = "Senhor das Fendas", ru = "Повелитель разломов", pl = "Władca szczelin", tr = "Yarık Lordu", it = "Signore delle fratture", ja = "リフトの王", zh = "裂隙领主", ko = "균열의 군주" }
+text = { en = "Fill 100 rift bars.", de = "Fülle 100 Rissleisten.", fr = "Remplis 100 jauges de faille.", es = "Llena 100 barras de grieta.", pt = "Encha 100 barras de fenda.", ru = "Заполни 100 полос разлома.", pl = "Wypełnij 100 pasków szczelin.", tr = "100 yarık çubuğu doldur.", it = "Riempi 100 barre di frattura.", ja = "リフトゲージを100回満たす。", zh = "填满100个裂隙进度条。", ko = "균열 막대를 100번 채우십시오." }
+goal = { rifts = 100 }
+icon = "Spell_Arcane_PortalUnderCity"
+group = "Rifts"
+
+[[achievement]]
+key = "wins_50"
+name = { en = "Conqueror", de = "Eroberer", fr = "Conquérant", es = "Conquistador", pt = "Conquistador", ru = "Завоеватель", pl = "Zdobywca", tr = "Fatih", it = "Conquistatore", ja = "征服者", zh = "征服者", ko = "정복자" }
+text = { en = "Win 50 runs.", de = "Gewinne 50 Läufe.", fr = "Remporte 50 parties.", es = "Gana 50 partidas.", pt = "Vença 50 partidas.", ru = "Победы в забегах: 50.", pl = "Wygraj 50 rozgrywek.", tr = "50 oyun kazan.", it = "Vinci 50 partite.", ja = "ランに50回勝利する。", zh = "赢得50场对局。", ko = "런에서 50번 승리하십시오." }
+goal = { wins = 50 }
+icon = "Achievement_Quests_Completed_08"
+group = "Victories"
+
+[[achievement]]
+key = "wins_100"
+name = { en = "Living Legend", de = "Lebende Legende", fr = "Légende vivante", es = "Leyenda viviente", pt = "Lenda Viva", ru = "Живая легенда", pl = "Żywa legenda", tr = "Yaşayan Efsane", it = "Leggenda vivente", ja = "生ける伝説", zh = "活着的传奇", ko = "살아있는 전설" }
+text = { en = "Win 100 runs.", de = "Gewinne 100 Läufe.", fr = "Remporte 100 parties.", es = "Gana 100 partidas.", pt = "Vença 100 partidas.", ru = "Победы в забегах: 100.", pl = "Wygraj 100 rozgrywek.", tr = "100 oyun kazan.", it = "Vinci 100 partite.", ja = "ランに100回勝利する。", zh = "赢得100场对局。", ko = "런에서 100번 승리하십시오." }
+goal = { wins = 100 }
+icon = "Achievement_Reputation_08"
+group = "Victories"
+
+[[achievement]]
+key = "zones_all"
+name = { en = "Worldwalker", de = "Weltenwandler", fr = "Arpenteur des mondes", es = "Caminamundos", pt = "Andarilho dos Mundos", ru = "Странник миров", pl = "Wędrowiec światów", tr = "Dünya Yürüyücüsü", it = "Camminamondi", ja = "世界を歩む者", zh = "跨界行者", ko = "세계를 걷는 자" }
+text = { en = "Win in every zone of all three worlds.", de = "Gewinne in jeder Zone aller drei Welten.", fr = "Remporte la victoire dans chaque zone des trois mondes.", es = "Gana en cada zona de los tres mundos.", pt = "Vença em cada zona dos três mundos.", ru = "Победи в каждой зоне всех трех миров.", pl = "Wygraj w każdej strefie wszystkich trzech światów.", tr = "Üç dünyanın her bölgesinde kazan.", it = "Vinci in ogni zona di tutti e tre i mondi.", ja = "3つの世界すべてのゾーンで勝利する。", zh = "在三个世界的每个区域获胜。", ko = "세 세계의 모든 지역에서 승리하십시오." }
+goal = { zones = 36 }
+icon = "Achievement_Zone_Kalimdor_01"
+group = "Victories"
+
+[[achievement]]
+key = "azeroth_campaign"
+name = { en = "Hero of Azeroth", de = "Held von Azeroth", fr = "Héros d'Azeroth", es = "Héroe de Azeroth", pt = "Herói de Azeroth", ru = "Герой Азерота", pl = "Bohater Azeroth", tr = "Azeroth Kahramanı", it = "Eroe di Azeroth", ja = "アゼロスの英雄", zh = "艾泽拉斯英雄", ko = "아제로스의 영웅" }
+text = { en = "Win in every zone of Azeroth.", de = "Gewinne in jeder Zone von Azeroth.", fr = "Remporte la victoire dans chaque zone d'Azeroth.", es = "Gana en cada zona de Azeroth.", pt = "Vença em cada zona de Azeroth.", ru = "Победи в каждой зоне Азерота.", pl = "Wygraj w każdej strefie Azeroth.", tr = "Azeroth'un her bölgesinde kazan.", it = "Vinci in ogni zona di Azeroth.", ja = "アゼロスのすべてのゾーンで勝利する。", zh = "在艾泽拉斯的每个区域获胜。", ko = "아제로스의 모든 지역에서 승리하십시오." }
+goal = { campaign = 0 }
+icon = "Achievement_Zone_EasternKingdoms_01"
+group = "Victories"
+
+[[achievement]]
+key = "old_god"
+name = { en = "The Old God's End", de = "Das Ende des Alten Gottes", fr = "La fin du Dieu très ancien", es = "El fin del Dios Antiguo", pt = "O Fim do Deus Antigo", ru = "Конец Древнего бога", pl = "Koniec Dawnego Boga", tr = "Kadim Tanrı'nın Sonu", it = "La fine dell'Antico Dio", ja = "古の神の最期", zh = "上古之神的末日", ko = "고대 신의 최후" }
+text = { en = "Win at the Gates of Ahn'Qiraj.", de = "Gewinne an den Toren von Ahn'Qiraj.", fr = "Remporte la victoire aux portes d'Ahn'Qiraj.", es = "Gana en las Puertas de Ahn'Qiraj.", pt = "Vença nos Portões de Ahn'Qiraj.", ru = "Победи у Врат Ан'Киража.", pl = "Wygraj w Wrotach Ahn'Qiraj.", tr = "Ahn'Qiraj Kapıları'nda kazan.", it = "Vinci ai Cancelli di Ahn'Qiraj.", ja = "アン・キラージの門で勝利する。", zh = "在安其拉之门获胜。", ko = "안퀴라즈 성문에서 승리하십시오." }
+goal = { zone_win = "aq" }
+icon = "Achievement_Boss_Cthun"
+group = "Victories"
+
+[[achievement]]
+key = "naxxramas"
+name = { en = "The Fall of Kel'Thuzad", de = "Kel'Thuzads Fall", fr = "La chute de Kel'Thuzad", es = "La caída de Kel'Thuzad", pt = "A Queda de Kel'Thuzad", ru = "Падение Кел'Тузада", pl = "Upadek Kel'Thuzada", tr = "Kel'Thuzad'ın Düşüşü", it = "La caduta di Kel'Thuzad", ja = "ケル・サザードの陥落", zh = "克尔苏加德的陨落", ko = "켈투자드의 몰락" }
+text = { en = "Win in Naxxramas.", de = "Gewinne in Naxxramas.", fr = "Remporte la victoire à Naxxramas.", es = "Gana en Naxxramas.", pt = "Vença em Naxxramas.", ru = "Победи в Наксрамасе.", pl = "Wygraj w Naxxramas.", tr = "Naxxramas'ta kazan.", it = "Vinci a Naxxramas.", ja = "ナクスラーマスで勝利する。", zh = "在纳克萨玛斯获胜。", ko = "낙스라마스에서 승리하십시오." }
+goal = { zone_win = "naxx" }
+icon = "Achievement_Dungeon_Naxxramas_Normal"
+group = "Victories"
+
+[[achievement]]
+key = "tier_6"
+name = { en = "Beyond Mortal Limits", de = "Jenseits aller Grenzen", fr = "Au-delà des limites mortelles", es = "Más allá de los límites mortales", pt = "Além dos Limites Mortais", ru = "За гранью смертных пределов", pl = "Poza ludzkimi granicami", tr = "Ölümlü Sınırların Ötesinde", it = "Oltre i limiti mortali", ja = "定命の限界を超えて", zh = "超越凡人极限", ko = "필멸의 한계를 넘어" }
+text = { en = "Win at Heroic V.", de = "Gewinne auf Heroisch V.", fr = "Remporte la victoire en Héroïque V.", es = "Gana en Heroico V.", pt = "Vença no Heroico V.", ru = "Победи на героическом уровне V.", pl = "Wygraj na stopniu Heroiczny V.", tr = "Kahramanlık V'te kazan.", it = "Vinci a Eroico V.", ja = "ヒロイックVで勝利する。", zh = "在英雄V难度下获胜。", ko = "영웅 V에서 승리하십시오." }
+goal = { tier = 5 }
+icon = "Spell_Shadow_SoulLeech_3"
+group = "Victories"
+
+[[achievement]]
+key = "coop_wins_10"
+name = { en = "Brothers in Arms", de = "Waffenbrüder", fr = "Frères d'armes", es = "Hermanos de armas", pt = "Irmãos de Armas", ru = "Братья по оружию", pl = "Bracia broni", tr = "Silah Arkadaşları", it = "Fratelli d'armi", ja = "戦友", zh = "战友", ko = "전우" }
+text = { en = "Win 10 co-op runs.", de = "Gewinne 10 Koop-Läufe.", fr = "Remporte 10 parties en coopération.", es = "Gana 10 partidas cooperativas.", pt = "Vença 10 partidas cooperativas.", ru = "Победы в кооперативных забегах: 10.", pl = "Wygraj 10 rozgrywek co-op.", tr = "10 co-op oyunu kazan.", it = "Vinci 10 partite in co-op.", ja = "協力プレイのランに10回勝利する。", zh = "赢得10场合作对局。", ko = "협동 런에서 10번 승리하십시오." }
+goal = { coop_wins = 10 }
+icon = "Achievement_Arena_3v3_7"
+group = "Co-op"
+
+[[achievement]]
+key = "warband_win"
+name = { en = "Warband Victorious", de = "Siegreiche Kriegsschar", fr = "Bande de guerre victorieuse", es = "Banda de guerra victoriosa", pt = "Bando de Guerra Vitorioso", ru = "Победоносный боевой отряд", pl = "Zwycięski zastęp bojowy", tr = "Savaş Grubu Zaferi", it = "Banda da guerra vittoriosa", ja = "勝利の軍団", zh = "战团凯旋", ko = "승리한 전투부대" }
+text = { en = "Win a Warband run.", de = "Gewinne einen Lauf im Modus Kriegsschar.", fr = "Remporte une partie en mode Bande de guerre.", es = "Gana una partida en modo Banda de guerra.", pt = "Vença uma partida no modo Bando de Guerra.", ru = "Победи в забеге в режиме «Боевой отряд».", pl = "Wygraj rozgrywkę Zastępu bojowego.", tr = "Bir Savaş Grubu oyunu kazan.", it = "Vinci una partita Banda da guerra.", ja = "ウォーバンドのランに勝利する。", zh = "赢得一场战团对局。", ko = "전투부대 런에서 승리하십시오." }
+goal = { mode_wins = ["warband", 1] }
+icon = "INV_Banner_02"
+group = "Modes"
+
+[[achievement]]
+key = "codex_100"
+name = { en = "Naturalist", de = "Naturforscher", fr = "Naturaliste", es = "Naturalista", pt = "Naturalista", ru = "Натуралист", pl = "Przyrodnik", tr = "Doğa Bilimci", it = "Naturalista", ja = "博物学者", zh = "博物学家", ko = "박물학자" }
+text = { en = "Slay 100 different creatures.", de = "Töte 100 verschiedene Kreaturen.", fr = "Tue 100 créatures différentes.", es = "Derrota a 100 criaturas distintas.", pt = "Mate 100 criaturas diferentes.", ru = "Убей 100 разных существ.", pl = "Zabij 100 różnych stworzeń.", tr = "100 farklı yaratık öldür.", it = "Uccidi 100 creature diverse.", ja = "100種類のクリーチャーを倒す。", zh = "消灭100种不同的生物。", ko = "서로 다른 생물 100종을 처치하십시오." }
+goal = { codex = 100 }
+icon = "INV_Misc_Book_11"
+group = "Codex"
+
+[[achievement]]
+key = "codex_all"
+name = { en = "Lorekeeper", de = "Hüter des Wissens", fr = "Gardien du savoir", es = "Guardián del saber", pt = "Guardião do Saber", ru = "Хранитель знаний", pl = "Strażnik wiedzy", tr = "Bilge Koruyucu", it = "Custode del sapere", ja = "伝承の守り手", zh = "博学者", ko = "전승지기" }
+text = { en = "Slay every creature in the codex.", de = "Töte jede Kreatur des Kodex.", fr = "Tue toutes les créatures du codex.", es = "Derrota a todas las criaturas del códice.", pt = "Mate todas as criaturas do códice.", ru = "Убей всех существ из кодекса.", pl = "Zabij każde stworzenie z kodeksu.", tr = "Kodeksteki her yaratığı öldür.", it = "Uccidi ogni creatura del codex.", ja = "図鑑のすべてのクリーチャーを倒す。", zh = "消灭图鉴中的每一种生物。", ko = "도감의 모든 생물을 처치하십시오." }
+goal = "codex_all"
+icon = "INV_Misc_Book_07"
+group = "Codex"
+
+[[achievement]]
+key = "daily_1"
+name = { en = "Challenger", de = "Herausforderer", fr = "Challenger", es = "Retador", pt = "Desafiante", ru = "Претендент", pl = "Wyzywający", tr = "Meydan Okuyucu", it = "Sfidante", ja = "挑戦者", zh = "挑战者", ko = "도전자" }
+text = { en = "Win a Daily Challenge.", de = "Gewinne eine Tägliche Herausforderung.", fr = "Remporte un défi quotidien.", es = "Gana un desafío diario.", pt = "Vença um desafio diário.", ru = "Победи в ежедневном испытании.", pl = "Wygraj Dzienne wyzwanie.", tr = "Bir Günlük Meydan Okuma kazan.", it = "Vinci una Sfida giornaliera.", ja = "デイリーチャレンジに勝利する。", zh = "赢得一次每日挑战。", ko = "일일 도전에서 승리하십시오." }
+goal = { daily_wins = 1 }
+icon = "Spell_Holy_BorrowedTime"
+group = "Modes"
+
+[[achievement]]
+key = "daily_10"
+name = { en = "Creature of Habit", de = "Gewohnheitstier", fr = "Esclave de l'habitude", es = "Animal de costumbres", pt = "Criatura de Hábitos", ru = "Раб привычки", pl = "Stworzenie nawyku", tr = "Alışkanlık Kölesi", it = "Abitudinario", ja = "習慣の生き物", zh = "习惯成自然", ko = "습관의 동물" }
+text = { en = "Win 10 Daily Challenges.", de = "Gewinne 10 Tägliche Herausforderungen.", fr = "Remporte 10 défis quotidiens.", es = "Gana 10 desafíos diarios.", pt = "Vença 10 desafios diários.", ru = "Победы в ежедневных испытаниях: 10.", pl = "Wygraj 10 Dziennych wyzwań.", tr = "10 Günlük Meydan Okuma kazan.", it = "Vinci 10 Sfide giornaliere.", ja = "デイリーチャレンジに10回勝利する。", zh = "赢得10次每日挑战。", ko = "일일 도전에서 10번 승리하십시오." }
+goal = { daily_wins = 10 }
+icon = "INV_Misc_PocketWatch_02"
+group = "Modes"
+
+[[achievement]]
+key = "daily_30"
+name = { en = "A Month of Challenges", de = "Ein Monat voller Herausforderungen", fr = "Un mois de défis", es = "Un mes de desafíos", pt = "Um Mês de Desafios", ru = "Месяц испытаний", pl = "Miesiąc wyzwań", tr = "Bir Ay Meydan Okuma", it = "Un mese di sfide", ja = "挑戦の一か月", zh = "挑战之月", ko = "도전의 한 달" }
+text = { en = "Win 30 Daily Challenges.", de = "Gewinne 30 Tägliche Herausforderungen.", fr = "Remporte 30 défis quotidiens.", es = "Gana 30 desafíos diarios.", pt = "Vença 30 desafios diários.", ru = "Победы в ежедневных испытаниях: 30.", pl = "Wygraj 30 Dziennych wyzwań.", tr = "30 Günlük Meydan Okuma kazan.", it = "Vinci 30 Sfide giornaliere.", ja = "デイリーチャレンジに30回勝利する。", zh = "赢得30次每日挑战。", ko = "일일 도전에서 30번 승리하십시오." }
+goal = { daily_wins = 30 }
+icon = "Achievement_Quests_Completed_Daily_07"
+group = "Modes"
+
+[[achievement]]
+key = "swarm_win"
+name = { en = "Swarm Breaker", de = "Schwarmbrecher", fr = "Briseur d'essaim", es = "Rompeenjambres", pt = "Quebra-Enxame", ru = "Разгром роя", pl = "Łamacz roju", tr = "Akın Kırıcı", it = "Spezzasciame", ja = "群れを砕く者", zh = "怪潮粉碎者", ko = "무리 파괴자" }
+text = { en = "Win a Swarm run.", de = "Gewinne einen Lauf im Modus Schwarm.", fr = "Remporte une partie en mode Essaim.", es = "Gana una partida en modo Enjambre.", pt = "Vença uma partida no modo Enxame.", ru = "Победи в забеге в режиме «Рой».", pl = "Wygraj rozgrywkę Roju.", tr = "Bir Akın oyunu kazan.", it = "Vinci una partita Sciame.", ja = "スウォームのランに勝利する。", zh = "赢得一场怪潮对局。", ko = "무리 런에서 승리하십시오." }
+goal = { mode_wins = ["swarm", 1] }
+icon = "Ability_Hunter_Pet_Wasp"
+group = "Modes"
+
+# A class's win: the icon its old class banner wore.
+[[achievement]]
+key = "warrior_win"
+name = { en = "Hero of Arms", de = "Held der Waffen", fr = "Héros des armes", es = "Héroe de las armas", pt = "Herói das Armas", ru = "Герой оружия", pl = "Bohater oręża", tr = "Silahların Kahramanı", it = "Eroe delle armi", ja = "武の英雄", zh = "武器英雄", ko = "무기의 영웅" }
+text = { en = "Win a run as a Warrior.", de = "Gewinne einen Lauf als Krieger.", fr = "Remporte une partie en tant que guerrier.", es = "Gana una partida como guerrero.", pt = "Vença uma partida como guerreiro.", ru = "Победи в забеге за воина.", pl = "Wygraj rozgrywkę jako Wojownik.", tr = "Savaşçı olarak bir oyun kazan.", it = "Vinci una partita come Guerriero.", ja = "ウォリアーでランに勝利する。", zh = "以战士身份赢得一场对局。", ko = "전사로 런에서 승리하십시오." }
+goal = { class_wins = [1, 1] }
+icon = "INV_Sword_27"
+group = "Classes"
+
+[[achievement]]
+key = "paladin_win"
+name = { en = "Hand of the Light", de = "Hand des Lichts", fr = "Main de la Lumière", es = "Mano de la Luz", pt = "Mão da Luz", ru = "Рука Света", pl = "Dłoń Światła", tr = "Işığın Eli", it = "Mano della Luce", ja = "光の手", zh = "圣光之手", ko = "빛의 손" }
+text = { en = "Win a run as a Paladin.", de = "Gewinne einen Lauf als Paladin.", fr = "Remporte une partie en tant que paladin.", es = "Gana una partida como paladín.", pt = "Vença uma partida como paladino.", ru = "Победи в забеге за паладина.", pl = "Wygraj rozgrywkę jako Paladyn.", tr = "Paladin olarak bir oyun kazan.", it = "Vinci una partita come Paladino.", ja = "パラディンでランに勝利する。", zh = "以圣骑士身份赢得一场对局。", ko = "성기사로 런에서 승리하십시오." }
+goal = { class_wins = [2, 1] }
+icon = "INV_Hammer_01"
+group = "Classes"
+
+[[achievement]]
+key = "hunter_win"
+name = { en = "Master of the Hunt", de = "Meister der Jagd", fr = "Maître de la chasse", es = "Maestro de la caza", pt = "Mestre da Caçada", ru = "Мастер охоты", pl = "Mistrz polowania", tr = "Av Ustası", it = "Maestro della caccia", ja = "狩りの達人", zh = "狩猎大师", ko = "사냥의 대가" }
+text = { en = "Win a run as a Hunter.", de = "Gewinne einen Lauf als Jäger.", fr = "Remporte une partie en tant que chasseur.", es = "Gana una partida como cazador.", pt = "Vença uma partida como caçador.", ru = "Победи в забеге за охотника.", pl = "Wygraj rozgrywkę jako Łowca.", tr = "Avcı olarak bir oyun kazan.", it = "Vinci una partita come Cacciatore.", ja = "ハンターでランに勝利する。", zh = "以猎人身份赢得一场对局。", ko = "사냥꾼으로 런에서 승리하십시오." }
+goal = { class_wins = [3, 1] }
+icon = "INV_Weapon_Bow_07"
+group = "Classes"
+
+[[achievement]]
+key = "rogue_win"
+name = { en = "Shadow's Edge", de = "Klinge der Schatten", fr = "Lame des ombres", es = "Filo de las sombras", pt = "Lâmina das Sombras", ru = "Клинок теней", pl = "Ostrze cienia", tr = "Gölgenin Kıyısı", it = "Lama dell'ombra", ja = "シャドウズ・エッジ", zh = "暗影之锋", ko = "어둠의 칼날" }
+text = { en = "Win a run as a Rogue.", de = "Gewinne einen Lauf als Schurke.", fr = "Remporte une partie en tant que voleur.", es = "Gana una partida como pícaro.", pt = "Vença uma partida como ladino.", ru = "Победи в забеге за разбойника.", pl = "Wygraj rozgrywkę jako Łotrzyk.", tr = "Haydut olarak bir oyun kazan.", it = "Vinci una partita come Ladro.", ja = "ローグでランに勝利する。", zh = "以潜行者身份赢得一场对局。", ko = "도적으로 런에서 승리하십시오." }
+goal = { class_wins = [4, 1] }
+icon = "INV_ThrowingKnife_04"
+group = "Classes"
+
+[[achievement]]
+key = "priest_win"
+name = { en = "Voice of Faith", de = "Stimme des Glaubens", fr = "Voix de la foi", es = "Voz de la fe", pt = "Voz da Fé", ru = "Голос веры", pl = "Głos wiary", tr = "İnancın Sesi", it = "Voce della fede", ja = "信仰の声", zh = "信仰之声", ko = "신앙의 목소리" }
+text = { en = "Win a run as a Priest.", de = "Gewinne einen Lauf als Priester.", fr = "Remporte une partie en tant que prêtre.", es = "Gana una partida como sacerdote.", pt = "Vença uma partida como sacerdote.", ru = "Победи в забеге за жреца.", pl = "Wygraj rozgrywkę jako Kapłan.", tr = "Rahip olarak bir oyun kazan.", it = "Vinci una partita come Sacerdote.", ja = "プリーストでランに勝利する。", zh = "以牧师身份赢得一场对局。", ko = "사제로 런에서 승리하십시오." }
+goal = { class_wins = [5, 1] }
+icon = "INV_Staff_30"
+group = "Classes"
+
+[[achievement]]
+key = "deathknight_win"
+name = { en = "Knight of the Ebon Blade", de = "Ritter der Schwarzen Klinge", fr = "Chevalier de la Lame d'ébène", es = "Caballero de la Hoja de Ébano", pt = "Cavaleiro da Lâmina de Ébano", ru = "Рыцарь Черного Клинка", pl = "Rycerz Hebanowego Ostrza", tr = "Abanoz Kılıç Şövalyesi", it = "Cavaliere della Lama d'Ebano", ja = "エボンブレードの騎士", zh = "黑锋骑士", ko = "칠흑의 기사단 기사" }
+text = { en = "Win a run as a Death Knight.", de = "Gewinne einen Lauf als Todesritter.", fr = "Remporte une partie en tant que chevalier de la mort.", es = "Gana una partida como caballero de la muerte.", pt = "Vença uma partida como cavaleiro da morte.", ru = "Победи в забеге за рыцаря смерти.", pl = "Wygraj rozgrywkę jako Rycerz Śmierci.", tr = "Ölüm Şövalyesi olarak bir oyun kazan.", it = "Vinci una partita come Cavaliere della Morte.", ja = "デスナイトでランに勝利する。", zh = "以死亡骑士身份赢得一场对局。", ko = "죽음의 기사로 런에서 승리하십시오." }
+goal = { class_wins = [6, 1] }
+icon = "Spell_Deathknight_ClassIcon"
+group = "Classes"
+
+[[achievement]]
+key = "shaman_win"
+name = { en = "Farseer", de = "Weitseher", fr = "Clairvoyant", es = "Vidente lejano", pt = "Vidente", ru = "Провидец", pl = "Wieszcz", tr = "Uzak Görücü", it = "Veggente", ja = "ファーシーア", zh = "先知", ko = "선견자" }
+text = { en = "Win a run as a Shaman.", de = "Gewinne einen Lauf als Schamane.", fr = "Remporte une partie en tant que chaman.", es = "Gana una partida como chamán.", pt = "Vença uma partida como xamã.", ru = "Победи в забеге за шамана.", pl = "Wygraj rozgrywkę jako Szaman.", tr = "Şaman olarak bir oyun kazan.", it = "Vinci una partita come Sciamano.", ja = "シャーマンでランに勝利する。", zh = "以萨满祭司身份赢得一场对局。", ko = "주술사로 런에서 승리하십시오." }
+goal = { class_wins = [7, 1] }
+icon = "Spell_Nature_BloodLust"
+group = "Classes"
+
+[[achievement]]
+key = "mage_win"
+name = { en = "Archmage", de = "Erzmagier", fr = "Archimage", es = "Archimago", pt = "Arquimago", ru = "Архимаг", pl = "Arcymag", tr = "Başbüyücü", it = "Arcimago", ja = "アークメイジ", zh = "大法师", ko = "대마법사" }
+text = { en = "Win a run as a Mage.", de = "Gewinne einen Lauf als Magier.", fr = "Remporte une partie en tant que mage.", es = "Gana una partida como mago.", pt = "Vença uma partida como mago.", ru = "Победи в забеге за мага.", pl = "Wygraj rozgrywkę jako Mag.", tr = "Büyücü olarak bir oyun kazan.", it = "Vinci una partita come Mago.", ja = "メイジでランに勝利する。", zh = "以法师身份赢得一场对局。", ko = "마법사로 런에서 승리하십시오." }
+goal = { class_wins = [8, 1] }
+icon = "INV_Staff_13"
+group = "Classes"
+
+[[achievement]]
+key = "warlock_win"
+name = { en = "Fel Master", de = "Meister der Teufelsmagie", fr = "Maître gangrené", es = "Maestro vil", pt = "Mestre Vil", ru = "Повелитель Скверны", pl = "Mistrz Zła", tr = "Fel Ustası", it = "Maestro vile", ja = "フェルの達人", zh = "邪能大师", ko = "지옥의 대가" }
+text = { en = "Win a run as a Warlock.", de = "Gewinne einen Lauf als Hexenmeister.", fr = "Remporte une partie en tant que démoniste.", es = "Gana una partida como brujo.", pt = "Vença uma partida como bruxo.", ru = "Победи в забеге за чернокнижника.", pl = "Wygraj rozgrywkę jako Czarnoksiężnik.", tr = "Kara Büyücü olarak bir oyun kazan.", it = "Vinci una partita come Stregone.", ja = "ウォーロックでランに勝利する。", zh = "以术士身份赢得一场对局。", ko = "흑마법사로 런에서 승리하십시오." }
+goal = { class_wins = [9, 1] }
+icon = "Spell_Nature_FaerieFire"
+group = "Classes"
+
+[[achievement]]
+key = "druid_win"
+name = { en = "Keeper of the Grove", de = "Hüter des Hains", fr = "Gardien du bosquet", es = "Guardián del Bosquecillo", pt = "Guardião do Bosque", ru = "Хранитель рощи", pl = "Strażnik Gaju", tr = "Koru Bekçisi", it = "Custode del Boschetto", ja = "森の守り手", zh = "林地守护者", ko = "숲의 수호자" }
+text = { en = "Win a run as a Druid.", de = "Gewinne einen Lauf als Druide.", fr = "Remporte une partie en tant que druide.", es = "Gana una partida como druida.", pt = "Vença uma partida como druida.", ru = "Победи в забеге за друида.", pl = "Wygraj rozgrywkę jako Druid.", tr = "Druid olarak bir oyun kazan.", it = "Vinci una partita come Druido.", ja = "ドルイドでランに勝利する。", zh = "以德鲁伊身份赢得一场对局。", ko = "드루이드로 런에서 승리하십시오." }
+goal = { class_wins = [11, 1] }
+icon = "Ability_Druid_Maul"
+group = "Classes"
+
+[[achievement]]
+key = "monk_win"
+name = { en = "Grand Master", de = "Großmeister", fr = "Grand maître", es = "Gran maestro", pt = "Grão-Mestre", ru = "Великий мастер", pl = "Wielki mistrz", tr = "Büyük Usta", it = "Gran Maestro", ja = "グランドマスター", zh = "宗师", ko = "그랜드 마스터" }
+text = { en = "Win a run as a Monk.", de = "Gewinne einen Lauf als Mönch.", fr = "Remporte une partie en tant que moine.", es = "Gana una partida como monje.", pt = "Vença uma partida como monge.", ru = "Победи в забеге за монаха.", pl = "Wygraj rozgrywkę jako Mnich.", tr = "Keşiş olarak bir oyun kazan.", it = "Vinci una partita come Monaco.", ja = "モンクでランに勝利する。", zh = "以武僧身份赢得一场对局。", ko = "수도사로 런에서 승리하십시오." }
+goal = { class_wins = [12, 1] }
+icon = "classicon_monk"
+group = "Classes"
+
+[[achievement]]
+key = "demonhunter_win"
+name = { en = "You Are Not Prepared", de = "Ihr seid nicht vorbereitet", fr = "Vous n'êtes pas préparés", es = "No estáis preparados", pt = "Vocês não estão preparados", ru = "Вы не готовы", pl = "Nie jesteście przygotowani", tr = "Hazır Değilsiniz", it = "Non siete preparati", ja = "覚悟が足りぬ", zh = "你们这是自寻死路", ko = "너흰 아직 준비가 안 됐다" }
+text = { en = "Win a run as a Demon Hunter.", de = "Gewinne einen Lauf als Dämonenjäger.", fr = "Remporte une partie en tant que chasseur de démons.", es = "Gana una partida como cazador de demonios.", pt = "Vença uma partida como caçador de demônios.", ru = "Победи в забеге за охотника на демонов.", pl = "Wygraj rozgrywkę jako Łowca Demonów.", tr = "Şeytan Avcısı olarak bir oyun kazan.", it = "Vinci una partita come Cacciatore di Demoni.", ja = "デーモンハンターでランに勝利する。", zh = "以恶魔猎手身份赢得一场对局。", ko = "악마사냥꾼으로 런에서 승리하십시오." }
+goal = { class_wins = [13, 1] }
+icon = "classicon_demonhunter"
+group = "Classes"
+
+[[achievement]]
+key = "classes_all"
+name = { en = "Jack of All Trades", de = "Alleskönner", fr = "Touche-à-tout", es = "Aprendiz de todo", pt = "Pau pra Toda Obra", ru = "Мастер на все руки", pl = "Złota rączka", tr = "Her İşin Ustası", it = "Tuttofare", ja = "何でも屋", zh = "万事通", ko = "팔방미인" }
+text = { en = "Win a run with every class.", de = "Gewinne einen Lauf mit jeder Klasse.", fr = "Remporte une partie avec chaque classe.", es = "Gana una partida con cada clase.", pt = "Vença uma partida com cada classe.", ru = "Победи в забеге за каждый класс.", pl = "Wygraj rozgrywkę każdą klasą.", tr = "Her sınıfla bir oyun kazan.", it = "Vinci una partita con ogni classe.", ja = "すべてのクラスでランに勝利する。", zh = "使用每个职业各赢得一场对局。", ko = "모든 직업으로 런에서 승리하십시오." }
+goal = { classes = 12 }
+icon = "Achievement_Dungeon_ClassicDungeonMaster"
+group = "Classes"
+
+[[achievement]]
+key = "dwarf_wins_3"
+name = { en = "Pride of Ironforge", de = "Stolz von Eisenschmiede", fr = "Fierté de Forgefer", es = "Orgullo de Forjaz", pt = "Orgulho de Altaforja", ru = "Гордость Стальгорна", pl = "Duma Ironforge", tr = "Demirocak'ın Gururu", it = "Orgoglio di Forgiaferro", ja = "アイアンフォージの誇り", zh = "铁炉堡的骄傲", ko = "아이언포지의 자랑" }
+text = { en = "Win 3 runs with a Dwarf hero.", de = "Gewinne 3 Läufe mit einem Zwerg.", fr = "Remporte 3 parties avec un héros nain.", es = "Gana 3 partidas con un héroe enano.", pt = "Vença 3 partidas com um herói anão.", ru = "Победы за дворфа: 3.", pl = "Wygraj 3 rozgrywki krasnoludem.", tr = "Cüce kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Nano.", ja = "ドワーフのヒーローでランに3回勝利する。", zh = "使用矮人英雄赢得3场对局。", ko = "드워프 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [3, 3] }
+icon = "Achievement_Character_Dwarf_Male"
+group = "Races"
+
+[[achievement]]
+key = "nightelf_wins_3"
+name = { en = "Pride of Darnassus", de = "Stolz von Darnassus", fr = "Fierté de Darnassus", es = "Orgullo de Darnassus", pt = "Orgulho de Darnassus", ru = "Гордость Дарнаса", pl = "Duma Darnassus", tr = "Darnassus'un Gururu", it = "Orgoglio di Darnassus", ja = "ダーナサスの誇り", zh = "达纳苏斯的骄傲", ko = "다르나서스의 자랑" }
+text = { en = "Win 3 runs with a Night Elf hero.", de = "Gewinne 3 Läufe mit einem Nachtelfen.", fr = "Remporte 3 parties avec un héros elfe de la nuit.", es = "Gana 3 partidas con un héroe elfo de la noche.", pt = "Vença 3 partidas com um herói elfo noturno.", ru = "Победы за ночного эльфа: 3.", pl = "Wygraj 3 rozgrywki nocnym elfem.", tr = "Gece Elfi kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Elfo della Notte.", ja = "ナイトエルフのヒーローでランに3回勝利する。", zh = "使用暗夜精灵英雄赢得3场对局。", ko = "나이트 엘프 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [4, 3] }
+icon = "Achievement_Character_Nightelf_Female"
+group = "Races"
+
+[[achievement]]
+key = "gnome_wins_3"
+name = { en = "Pride of Gnomeregan", de = "Stolz von Gnomeregan", fr = "Fierté de Gnomeregan", es = "Orgullo de Gnomeregan", pt = "Orgulho de Gnomeregan", ru = "Гордость Гномрегана", pl = "Duma Gnomeregan", tr = "Gnomeregan'ın Gururu", it = "Orgoglio di Gnomeregan", ja = "ノームリーガンの誇り", zh = "诺莫瑞根的骄傲", ko = "놈리건의 자랑" }
+text = { en = "Win 3 runs with a Gnome hero.", de = "Gewinne 3 Läufe mit einem Gnom.", fr = "Remporte 3 parties avec un héros gnome.", es = "Gana 3 partidas con un héroe gnomo.", pt = "Vença 3 partidas com um herói gnomo.", ru = "Победы за гнома: 3.", pl = "Wygraj 3 rozgrywki gnomem.", tr = "Gnom kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Gnomo.", ja = "ノームのヒーローでランに3回勝利する。", zh = "使用侏儒英雄赢得3场对局。", ko = "노움 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [7, 3] }
+icon = "Achievement_Character_Gnome_Female"
+group = "Races"
+
+[[achievement]]
+key = "draenei_wins_3"
+name = { en = "Pride of the Exodar", de = "Stolz der Exodar", fr = "Fierté de l'Exodar", es = "Orgullo de El Exodar", pt = "Orgulho do Exodar", ru = "Гордость Экзодара", pl = "Duma Exodaru", tr = "Exodar'ın Gururu", it = "Orgoglio dell'Exodar", ja = "エクソダーの誇り", zh = "埃索达的骄傲", ko = "엑소다르의 자랑" }
+text = { en = "Win 3 runs with a Draenei hero.", de = "Gewinne 3 Läufe mit einem Draenei.", fr = "Remporte 3 parties avec un héros draeneï.", es = "Gana 3 partidas con un héroe draenei.", pt = "Vença 3 partidas com um herói draenei.", ru = "Победы за дренея: 3.", pl = "Wygraj 3 rozgrywki draenei.", tr = "Draenei kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Draenei.", ja = "ドレナイのヒーローでランに3回勝利する。", zh = "使用德莱尼英雄赢得3场对局。", ko = "드레나이 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [11, 3] }
+icon = "Achievement_Character_Draenei_Female"
+group = "Races"
+
+# 3.3.5a has no worgen, goblin or pandaren portrait.
+[[achievement]]
+key = "worgen_wins_3"
+name = { en = "Pride of Gilneas", de = "Stolz von Gilneas", fr = "Fierté de Gilnéas", es = "Orgullo de Gilneas", pt = "Orgulho de Gilneas", ru = "Гордость Гилнеаса", pl = "Duma Gilneas", tr = "Gilneas'ın Gururu", it = "Orgoglio di Gilneas", ja = "ギルニーアスの誇り", zh = "吉尔尼斯的骄傲", ko = "길니아스의 자랑" }
+text = { en = "Win 3 runs with a Worgen hero.", de = "Gewinne 3 Läufe mit einem Worgen.", fr = "Remporte 3 parties avec un héros worgen.", es = "Gana 3 partidas con un héroe huargen.", pt = "Vença 3 partidas com um herói worgen.", ru = "Победы за воргена: 3.", pl = "Wygraj 3 rozgrywki worgenem.", tr = "Worgen kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Worgen.", ja = "ウォーゲンのヒーローでランに3回勝利する。", zh = "使用狼人英雄赢得3场对局。", ko = "늑대인간 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [12, 3] }
+icon = "Ability_Mount_BlackDireWolf"
+group = "Races"
+
+[[achievement]]
+key = "pandaren_wins_3"
+name = { en = "Pride of the Wandering Isle", de = "Stolz der Wandernden Insel", fr = "Fierté de l'île Vagabonde", es = "Orgullo de la Isla Errante", pt = "Orgulho da Ilha Errante", ru = "Гордость Блуждающего острова", pl = "Duma Wędrującej Wyspy", tr = "Gezgin Ada'nın Gururu", it = "Orgoglio dell'Isola Errante", ja = "漂泊の島の誇り", zh = "迷踪岛的骄傲", ko = "유랑도의 자랑" }
+text = { en = "Win 3 runs with a Pandaren hero.", de = "Gewinne 3 Läufe mit einem Pandaren.", fr = "Remporte 3 parties avec un héros pandaren.", es = "Gana 3 partidas con un héroe pandaren.", pt = "Vença 3 partidas com um herói pandaren.", ru = "Победы за пандарена: 3.", pl = "Wygraj 3 rozgrywki pandarenem.", tr = "Pandaren kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Pandaren.", ja = "パンダレンのヒーローでランに3回勝利する。", zh = "使用熊猫人英雄赢得3场对局。", ko = "판다렌 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [15, 3] }
+icon = "Spell_Nature_Tranquility"
+group = "Races"
+
+[[achievement]]
+key = "orc_wins_3"
+name = { en = "Pride of Orgrimmar", de = "Stolz von Orgrimmar", fr = "Fierté d'Orgrimmar", es = "Orgullo de Orgrimmar", pt = "Orgulho de Orgrimmar", ru = "Гордость Оргриммара", pl = "Duma Orgrimmaru", tr = "Orgrimmar'ın Gururu", it = "Orgoglio di Orgrimmar", ja = "オーグリマーの誇り", zh = "奥格瑞玛的骄傲", ko = "오그리마의 자랑" }
+text = { en = "Win 3 runs with an Orc hero.", de = "Gewinne 3 Läufe mit einem Orc.", fr = "Remporte 3 parties avec un héros orc.", es = "Gana 3 partidas con un héroe orco.", pt = "Vença 3 partidas com um herói orc.", ru = "Победы за орка: 3.", pl = "Wygraj 3 rozgrywki orkiem.", tr = "Ork kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Orco.", ja = "オークのヒーローでランに3回勝利する。", zh = "使用兽人英雄赢得3场对局。", ko = "오크 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [2, 3] }
+icon = "Achievement_Character_Orc_Male"
+group = "Races"
+
+[[achievement]]
+key = "scourge_wins_3"
+name = { en = "Pride of the Undercity", de = "Stolz von Unterstadt", fr = "Fierté de Fossoyeuse", es = "Orgullo de Entrañas", pt = "Orgulho da Cidade Baixa", ru = "Гордость Подгорода", pl = "Duma Podmiejskiego Miasta", tr = "Yeraltı Şehri'nin Gururu", it = "Orgoglio di Sepulcra", ja = "アンダーシティの誇り", zh = "幽暗城的骄傲", ko = "언더시티의 자랑" }
+text = { en = "Win 3 runs with an Undead hero.", de = "Gewinne 3 Läufe mit einem Untoten.", fr = "Remporte 3 parties avec un héros mort-vivant.", es = "Gana 3 partidas con un héroe no-muerto.", pt = "Vença 3 partidas com um herói morto-vivo.", ru = "Победы за нежить: 3.", pl = "Wygraj 3 rozgrywki nieumarłym.", tr = "Ölümsüz kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Non Morto.", ja = "アンデッドのヒーローでランに3回勝利する。", zh = "使用亡灵英雄赢得3场对局。", ko = "언데드 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [5, 3] }
+icon = "Achievement_Character_Undead_Female"
+group = "Races"
+
+[[achievement]]
+key = "tauren_wins_3"
+name = { en = "Pride of Thunder Bluff", de = "Stolz von Donnerfels", fr = "Fierté des Pitons-du-Tonnerre", es = "Orgullo de Cima del Trueno", pt = "Orgulho do Penhasco do Trovão", ru = "Гордость Громового Утеса", pl = "Duma Thunder Bluff", tr = "Gök Gürültüsü Tepesi'nin Gururu", it = "Orgoglio di Picco del Tuono", ja = "サンダーブラフの誇り", zh = "雷霆崖的骄傲", ko = "썬더 블러프의 자랑" }
+text = { en = "Win 3 runs with a Tauren hero.", de = "Gewinne 3 Läufe mit einem Tauren.", fr = "Remporte 3 parties avec un héros tauren.", es = "Gana 3 partidas con un héroe tauren.", pt = "Vença 3 partidas com um herói tauren.", ru = "Победы за таурена: 3.", pl = "Wygraj 3 rozgrywki taurenem.", tr = "Tauren kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Tauren.", ja = "タウレンのヒーローでランに3回勝利する。", zh = "使用牛头人英雄赢得3场对局。", ko = "타우렌 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [6, 3] }
+icon = "Achievement_Character_Tauren_Male"
+group = "Races"
+
+[[achievement]]
+key = "troll_wins_3"
+name = { en = "Pride of the Darkspear", de = "Stolz der Dunkelspeere", fr = "Fierté des Lance-sombres", es = "Orgullo de los Lanza Negra", pt = "Orgulho dos Lança Negra", ru = "Гордость Черного Копья", pl = "Duma Mrocznej Włóczni", tr = "Kara Mızrak'ın Gururu", it = "Orgoglio dei Lanciascura", ja = "ダークスピアの誇り", zh = "暗矛的骄傲", ko = "검은창의 자랑" }
+text = { en = "Win 3 runs with a Troll hero.", de = "Gewinne 3 Läufe mit einem Troll.", fr = "Remporte 3 parties avec un héros troll.", es = "Gana 3 partidas con un héroe trol.", pt = "Vença 3 partidas com um herói troll.", ru = "Победы за тролля: 3.", pl = "Wygraj 3 rozgrywki trollem.", tr = "Troll kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Troll.", ja = "トロールのヒーローでランに3回勝利する。", zh = "使用巨魔英雄赢得3场对局。", ko = "트롤 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [8, 3] }
+icon = "Achievement_Character_Troll_Male"
+group = "Races"
+
+[[achievement]]
+key = "bloodelf_wins_3"
+name = { en = "Pride of Silvermoon", de = "Stolz von Silbermond", fr = "Fierté de Lune-d'argent", es = "Orgullo de Lunargenta", pt = "Orgulho de Luaprata", ru = "Гордость Луносвета", pl = "Duma Silvermoon", tr = "Gümüşay'ın Gururu", it = "Orgoglio di Lunargenta", ja = "シルバームーンの誇り", zh = "银月城的骄傲", ko = "실버문의 자랑" }
+text = { en = "Win 3 runs with a Blood Elf hero.", de = "Gewinne 3 Läufe mit einem Blutelfen.", fr = "Remporte 3 parties avec un héros elfe de sang.", es = "Gana 3 partidas con un héroe elfo de sangre.", pt = "Vença 3 partidas com um herói elfo sangrento.", ru = "Победы за эльфа крови: 3.", pl = "Wygraj 3 rozgrywki krwawym elfem.", tr = "Kan Elfi kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Elfo del Sangue.", ja = "ブラッドエルフのヒーローでランに3回勝利する。", zh = "使用血精灵英雄赢得3场对局。", ko = "블러드 엘프 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [10, 3] }
+icon = "Achievement_Character_Bloodelf_Male"
+group = "Races"
+
+[[achievement]]
+key = "goblin_wins_3"
+name = { en = "Pride of Kezan", de = "Stolz von Kezan", fr = "Fierté de Kezan", es = "Orgullo de Kezan", pt = "Orgulho de Kezan", ru = "Гордость Кезана", pl = "Duma Kezanu", tr = "Kezan'ın Gururu", it = "Orgoglio di Kezan", ja = "ケザンの誇り", zh = "科赞的骄傲", ko = "케잔의 자랑" }
+text = { en = "Win 3 runs with a Goblin hero.", de = "Gewinne 3 Läufe mit einem Goblin.", fr = "Remporte 3 parties avec un héros gobelin.", es = "Gana 3 partidas con un héroe goblin.", pt = "Vença 3 partidas com um herói goblin.", ru = "Победы за гоблина: 3.", pl = "Wygraj 3 rozgrywki goblinem.", tr = "Goblin kahramanla 3 oyun kazan.", it = "Vinci 3 partite con un eroe Goblin.", ja = "ゴブリンのヒーローでランに3回勝利する。", zh = "使用地精英雄赢得3场对局。", ko = "고블린 영웅으로 런에서 3번 승리하십시오." }
+goal = { race_wins = [9, 3] }
+icon = "INV_Gizmo_RocketBoot_01"
+group = "Races"
+
+[[achievement]]
+key = "races_all"
+name = { en = "Champion of All Peoples", de = "Champion aller Völker", fr = "Champion de tous les peuples", es = "Campeón de todos los pueblos", pt = "Campeão de Todos os Povos", ru = "Чемпион всех народов", pl = "Czempion wszystkich ludów", tr = "Tüm Halkların Şampiyonu", it = "Campione di tutti i popoli", ja = "全種族の勇者", zh = "万族勇士", ko = "모든 종족의 용사" }
+text = { en = "Win a run with every race.", de = "Gewinne einen Lauf mit jedem Volk.", fr = "Remporte une partie avec chaque race.", es = "Gana una partida con cada raza.", pt = "Vença uma partida com cada raça.", ru = "Победи в забеге за каждую расу.", pl = "Wygraj rozgrywkę każdą rasą.", tr = "Her ırkla bir oyun kazan.", it = "Vinci una partita con ogni razza.", ja = "すべての種族でランに勝利する。", zh = "使用每个种族各赢得一场对局。", ko = "모든 종족으로 런에서 승리하십시오." }
+goal = { races = 13 }
+icon = "Spell_Holy_PrayerOfFortitude"
+group = "Races"
+
+[[achievement]]
+key = "holiday_spirit"
+name = { en = "Holiday Spirit", de = "Festtagsstimmung", fr = "Esprit de fête", es = "Espíritu festivo", pt = "Espírito Festivo", ru = "Праздничное настроение", pl = "Świąteczny duch", tr = "Bayram Ruhu", it = "Spirito festivo", ja = "お祭り気分", zh = "节日精神", ko = "축제 분위기" }
+text = { en = "Pick up 250 holiday currency.", de = "Sammle 250 Festwährung.", fr = "Ramasse 250 monnaies de fête.", es = "Recoge 250 monedas festivas.", pt = "Colete 250 moedas festivas.", ru = "Собери 250 праздничной валюты.", pl = "Zbierz 250 świątecznej waluty.", tr = "250 bayram parası topla.", it = "Raccogli 250 valuta festiva.", ja = "イベント通貨を250個拾う。", zh = "拾取250枚节日货币。", ko = "축제 화폐를 250개 획득하십시오." }
+goal = { holiday_tokens = 250 }
+icon = "INV_Misc_Gift_01"
+group = "Holidays"
+
+[[achievement]]
+key = "holiday_hunter"
+name = { en = "Holiday Hunter", de = "Festtagsjäger", fr = "Chasseur de fêtes", es = "Cazador festivo", pt = "Caçador Festivo", ru = "Праздничный охотник", pl = "Świąteczny łowca", tr = "Bayram Avcısı", it = "Cacciatore festivo", ja = "イベントハンター", zh = "节日猎手", ko = "축제 사냥꾼" }
+text = { en = "Slay 10 holiday elites.", de = "Töte 10 Festelitegegner.", fr = "Tue 10 élites de fête.", es = "Derrota a 10 élites festivos.", pt = "Mate 10 elites festivos.", ru = "Убей 10 праздничных элитных врагов.", pl = "Zabij 10 świątecznych elit.", tr = "10 bayram elit düşmanı öldür.", it = "Uccidi 10 élite festive.", ja = "イベントのエリートを10体倒す。", zh = "消灭10个节日精英。", ko = "축제 정예 10명을 처치하십시오." }
+goal = { holiday_elites = 10 }
+icon = "Ability_Mount_NightmareHorse"
+group = "Holidays"
+
+[[achievement]]
+key = "holiday_year"
+name = { en = "A Year of Festivals", de = "Ein Jahr voller Feste", fr = "Une année de fêtes", es = "Un año de festivales", pt = "Um Ano de Festivais", ru = "Год праздников", pl = "Rok świąt", tr = "Festivallerle Dolu Bir Yıl", it = "Un anno di festività", ja = "祭りの一年", zh = "节庆之年", ko = "축제의 한 해" }
+text = { en = "Pick up holiday currency in 4 different holidays.", de = "Sammle Festwährung in 4 verschiedenen Festen.", fr = "Ramasse la monnaie de fête lors de 4 fêtes différentes.", es = "Recoge la moneda festiva en 4 festividades distintas.", pt = "Colete moedas festivas em 4 festas diferentes.", ru = "Собери праздничную валюту на 4 разных праздниках.", pl = "Zbieraj świąteczną walutę podczas 4 różnych świąt.", tr = "4 farklı bayramda bayram parası topla.", it = "Raccogli valuta festiva in 4 festività diverse.", ja = "4つの異なるイベントでイベント通貨を拾う。", zh = "在4个不同的节日中拾取节日货币。", ko = "서로 다른 축제 4개에서 축제 화폐를 획득하십시오." }
+goal = { holidays = 4 }
+icon = "Achievement_WorldEvent_Merrymaker"
+group = "Holidays"

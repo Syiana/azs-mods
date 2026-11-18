@@ -1,0 +1,53 @@
+# The warrior's Exotic set bonuses (docs/HOWTO-CONTENT.md "A set bonus", `drift_blades`): Whirlwind
+# reaches past its own radius. The 4-piece sends a blade out, the 8-piece two images of the hero in its
+# place. Every number is ours: TUNE. Distances are yards: the metres of the text divided by 0.9144
+# (15 m = 16.4042, 20 m = 21.8723, 1.5 m = 1.64042, 1.8 m = 1.9685); `beyond` is Whirlwind's own radius.
+# The 4-piece's blade is an invisible carrier (display 29885, a model with no geometry and no attachment
+# points, so a kit model hangs at its feet) that wears Bladestorm's look aura and plays the look 910904 on
+# itself: the Devastate axe chopping with its echo trail, picked in tools/orb-lister.js's page. The images
+# wear the hero's own look. Neither has been seen in the client.
+
+# The Exotic 4-piece: a class 4-piece replaces the shared one, so the shared Exotic stats stay as
+# parts (area of effect +40%, movement speed +25%); the hero starts with Whirlwind, which the blades need.
+[[set_bonus]]
+key = "warrior_exotic_4"
+tier = "exotic"
+pieces = 4
+mechanic = { kind = "drift_blades", spell = "whirlwind", every = 3.0, blades = 1, range = 16.4042, secs = 1.0, radius = 1.64042, rehit = 1.0, beyond = 8.0, damage = 0.5, aura = 46924, spin = { look = 910904, every = 1.35 } }
+marker = { entry = 990106, display = 29885, scale = 1.0 }
+text = { en = "Harbingers of the Storm: Start with Whirlwind. Every 3 sec it sends a spinning blade 15 m toward the enemies beyond its reach, striking all on its path for 50% of Whirlwind's damage. +{v}% area of effect, +{v2}% movement speed.", de = "Vorboten des Sturms: Du startest mit Wirbelwind. Alle 3 Sek. schickt er eine wirbelnde Klinge 15 m weit auf die Feinde außerhalb seiner Reichweite zu und trifft alle auf ihrem Weg für 50% des Schadens von Wirbelwind. +{v}% Wirkungsbereich, +{v2}% Bewegungstempo.", fr = "Hérauts de la tempête : Tu commences avec Tourbillon. Toutes les 3 s, il envoie une lame tournoyante sur 15 m vers les ennemis hors de sa portée, qui frappe tous ceux sur son chemin pour 50% des dégâts de Tourbillon. +{v}% de zone d'effet, +{v2}% de vitesse de déplacement.", es = "Heraldos de la tormenta: Empiezas con Torbellino. Cada 3 s envía una hoja giratoria a 15 m hacia los enemigos fuera de su alcance y golpea a todos en su camino con un 50% del daño de Torbellino. +{v}% de área de efecto, +{v2}% de velocidad de movimiento.", pt = "Arautos da Tempestade: Você começa com Redemoinho. A cada 3 s ele envia uma lâmina giratória a 15 m na direção dos inimigos fora do seu alcance, atingindo todos no caminho com 50% do dano de Redemoinho. +{v}% de área de efeito, +{v2}% de velocidade de movimento.", ru = "Предвестники бури: Ты начинаешь с «Вихря». Каждые 3 сек. он посылает вращающийся клинок на 15 м к врагам вне его досягаемости, поражая всех на пути и нанося 50% урона «Вихря». +{v}% к области действия, +{v2}% к скорости передвижения.", pl = "Zwiastuny burzy: Zaczynasz z Wirem. Co 3 s wysyła wirujące ostrze na 15 m w stronę wrogów poza jego zasięgiem, raniąc wszystkich na drodze za 50% obrażeń Wiru. +{v}% obszaru działania, +{v2}% szybkości ruchu.", tr = "Fırtına Habercileri: Girdap ile başlarsın. Her 3 sn'de bir, menzilinin dışındaki düşmanlara doğru 15 m uzağa dönen bir kılıç gönderir ve yolundaki herkese Girdap hasarının %50'sini verir. +%{v} etki alanı, +%{v2} hareket hızı.", it = "Araldi della tempesta: Inizi con Turbine. Ogni 3 sec invia una lama rotante a 15 m verso i nemici fuori dalla sua portata, colpendo tutti sul suo percorso per il 50% dei danni di Turbine. +{v}% area d'effetto, +{v2}% velocità di movimento.", ja = "嵐の先触れ：ワールウィンドを持って始めます。3秒ごとに、届かない位置の敵に向けて回転する刃を15メートル飛ばし、経路上のすべての敵にワールウィンドの50%のダメージを与えます。効果範囲+{v}%、移動速度+{v2}%。", zh = "风暴先驱：对局开始时拥有旋风斩。每3秒，旋风斩会向其范围外的敌人掷出一把旋转之刃，飞行15码，对路径上的所有敌人造成相当于旋风斩50%的伤害。效果范围+{v}%，移动速度+{v2}%。", ko = "폭풍의 전령: 소용돌이를 가지고 시작합니다. 3초마다 소용돌이가 닿지 않는 적들을 향해 회전하는 칼날을 15미터 날려, 경로 위의 모든 적에게 소용돌이 피해의 50%를 줍니다. 효과 범위 +{v}%, 이동 속도 +{v2}%." }
+
+[[set_bonus.part]]
+effects = [{ start_with = "whirlwind" }]
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [40, 0.4] }]
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+effects = [{ stat = [7, 0.25] }]
+shows = "v2"
+percent = true
+
+# The blade's axe: Bladestorm's look (its cast kit is empty) with the Devastate axe in the cast kit, 1.5
+# times its size (2.6 yd long as drawn). Its chop lasts 1.37 sec; the 1-sec flight shows one.
+[[set_bonus.look]]
+visual = 910904
+source = 46924
+cast = { model = "Spells/Warrior_Devastate_Axe.m2", slot = "base", scale = 1.5 }
+
+# The Exotic 8-piece: images of the hero in place of the blade, 20 m in 2 sec on different headings. They
+# leave on the hits of Whirlwind and of Bladestorm's beats: one for every 3 enemies a cast or a beat struck,
+# at least 1 and at most 4, no sooner than 1 sec after the last (`on_hit`, `every`, `blades`).
+# They turn by playing Whirlwind's own look (spell 1680, whose cast spins its caster) on themselves every
+# 0.7 sec, and where a glide ends each splits in two, 90 degrees apart, that glide 0.6 times as far (12 m
+# in 1.2 sec) for half the damage (20% of Whirlwind's), and do not split again.
+[[set_bonus]]
+key = "warrior_exotic_8"
+tier = "exotic"
+pieces = 8
+mechanic = { kind = "drift_blades", spell = "whirlwind", every = 1.0, blades = 1, range = 21.8723, secs = 2.0, radius = 1.9685, rehit = 0.5, beyond = 8.0, damage = 0.4, images = true, aura = 46924, spin = { look = 1680, every = 0.7 }, split = { into = 2, times = 1, fork = 90.0, damage = 0.5, reach = 0.6 }, on_hit = { spells = ["whirlwind", "bladestorm"], per = 3, most = 4 } }
+marker = { entry = 990107, display = 90103, scale = 1.0 }
+text = { en = "Storm of Echoes: In place of the blade, every Whirlwind and every pulse of Bladestorm that strikes sends images of you out in different directions, one for every 3 enemies struck (up to 4, at most once a second); they glide 20 m in 2 sec, spinning like Bladestorm. Enemies on their path take 40% of Whirlwind's damage, the same enemy again after 0.5 sec. Where a glide ends, the image splits in two that glide a further 12 m for half the damage.", de = "Sturm der Echos: Statt der Klinge schickt jeder Wirbelwind und jeder Puls von Klingensturm, der trifft, Abbilder von dir in verschiedene Richtungen los, eines je 3 getroffene Gegner (bis zu 4, höchstens einmal pro Sekunde); sie gleiten in 2 Sek. 20 m weit und wirbeln dabei wie Klingensturm. Feinde auf ihrem Weg erleiden 40% des Schadens von Wirbelwind, derselbe Feind nach 0,5 Sek. erneut. Wo ein Gleiten endet, teilt sich das Abbild in zwei, die weitere 12 m für die Hälfte des Schadens gleiten.", fr = "Tempête d'échos : À la place de la lame, chaque Tourbillon et chaque impulsion de Tempête de lames qui touche envoie des images de toi dans des directions différentes, une pour 3 ennemis touchés (jusqu'à 4, au plus une fois par seconde) ; elles glissent sur 20 m en 2 s en tournoyant comme Tempête de lames. Les ennemis sur leur chemin subissent 40% des dégâts de Tourbillon, le même ennemi de nouveau après 0,5 s. Là où une glissade s'achève, l'image se scinde en deux, qui glissent sur 12 m de plus pour la moitié des dégâts.", es = "Tormenta de ecos: En lugar de la hoja, cada Torbellino y cada pulso de Tormenta de acero que golpea envía imágenes de ti en direcciones distintas, una por cada 3 enemigos golpeados (hasta 4, como mucho una vez por segundo); se deslizan 20 m en 2 s, girando como Tormenta de acero. Los enemigos en su camino reciben un 40% del daño de Torbellino, y el mismo enemigo de nuevo tras 0,5 s. Donde acaba un deslizamiento, la imagen se divide en dos que se deslizan otros 12 m con la mitad del daño.", pt = "Tempestade de Ecos: No lugar da lâmina, cada Redemoinho e cada pulso de Tempestade de Lâminas que acerta envia imagens suas em direções diferentes, uma para cada 3 inimigos atingidos (até 4, no máximo uma vez por segundo); elas deslizam 20 m em 2 s, girando como Tempestade de Lâminas. Os inimigos no caminho sofrem 40% do dano de Redemoinho, e o mesmo inimigo de novo após 0,5 s. Onde um deslize termina, a imagem se divide em duas, que deslizam mais 12 m com metade do dano.", ru = "Буря эхо: Вместо клинка каждый «Вихрь» и каждый импульс «Вихря клинков», который попадает, посылает твои отражения в разные стороны, по одному на каждых 3 поражённых врагов (до 4, не чаще раза в секунду); они скользят на 20 м за 2 сек., вращаясь как «Вихрь клинков». Враги на их пути получают 40% урона «Вихря», повторно — через 0,5 сек. Там, где скольжение заканчивается, отражение делится на два, которые скользят ещё на 12 м и наносят половину урона.", pl = "Burza Ech: Zamiast ostrza każdy Wir i każdy puls Burzy ostrzy, który trafi, wysyła twoje odbicia w różnych kierunkach, po jednym na każdych 3 trafionych wrogów (do 4, najwyżej raz na sekundę); sunąc przez 2 s, pokonują 20 m, wirując jak Burza ostrzy. Wrogowie na ich drodze otrzymują 40% obrażeń Wiru, ten sam wróg ponownie po 0,5 s. Tam, gdzie kończy się ślizg, odbicie dzieli się na dwa, które suną jeszcze 12 m i zadają połowę obrażeń.", tr = "Yankıların Fırtınası: Kılıcın yerine, isabet eden her Girdap ve her Kılıç Fırtınası darbesi, vurulan her 3 düşman için bir tane olmak üzere (en fazla 4, saniyede en çok bir kez) suretlerini farklı yönlere gönderir; Kılıç Fırtınası gibi dönerek 2 sn'de 20 m süzülürler. Yollarındaki düşmanlar Girdap hasarının %40'ını alır, aynı düşman 0,5 sn sonra yeniden. Süzülmenin bittiği yerde suret ikiye bölünür ve bölünenler hasarın yarısıyla 12 m daha süzülür.", it = "Tempesta di echi: Al posto della lama, ogni Turbine e ogni impulso di Tempesta di lame che colpisce manda immagini di te in direzioni diverse, una ogni 3 nemici colpiti (fino a 4, al massimo una volta al secondo); scivolano per 20 m in 2 sec, ruotando come Tempesta di lame. I nemici sul loro percorso subiscono il 40% dei danni di Turbine, lo stesso nemico di nuovo dopo 0,5 sec. Dove finisce uno scivolamento, l'immagine si divide in due che scivolano per altri 12 m con metà dei danni.", ja = "反響の嵐：刃の代わりに、敵に命中したワールウィンドとブレードストームの各パルスが、命中した敵3体ごとに1体、あなたの幻影を別々の方向へ放ちます（最大4体、1秒に1回まで）。幻影はブレードストームのように回転しながら2秒で20メートル滑空します。経路上の敵はワールウィンドの40%のダメージを受け、同じ敵には0.5秒後に再び命中します。滑空の終点で幻影は2つに分かれ、さらに12メートル滑空して半分のダメージを与えます。", zh = "回响风暴：取代旋转之刃，每次命中的旋风斩和剑刃风暴的每次脉冲都会向不同方向派出你的幻影，每击中3个敌人派出一个（最多4个，每秒最多一次）；它们在2秒内滑行20码，如剑刃风暴般旋转。路径上的敌人受到相当于旋风斩40%的伤害，同一个敌人0.5秒后可再次受到伤害。滑行结束处，幻影一分为二，再滑行12码，造成一半的伤害。", ko = "메아리 폭풍: 칼날 대신, 적중하는 소용돌이와 칼날폭풍의 파동마다 당신의 환영이 여러 방향으로 퍼져 나갑니다. 맞힌 적 3명당 하나씩(최대 4개, 초당 최대 한 번)이며, 환영은 칼날폭풍처럼 회전하며 2초 동안 20미터를 미끄러져 갑니다. 경로 위의 적은 소용돌이 피해의 40%를 받으며, 같은 적은 0.5초 후 다시 받습니다. 미끄러짐이 끝나는 곳에서 환영이 둘로 갈라져 절반의 피해로 12미터를 더 미끄러져 갑니다." }

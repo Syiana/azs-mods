@@ -1,0 +1,16 @@
+# Yor: Double Breath, Stomp.
+
+[[boss]]
+key = "yor"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 38361, range = 14.0, arc = 60.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 36405, radius = 9.0, warn = 1.8, knock = 13.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

@@ -1,0 +1,18 @@
+# How a piece's tier and stars scale its stats (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# value = (slot stat * slot[tier] + profile stat * profile[tier]) * factor * (1 + star gain)
+# The lists run by rarity: Common, Uncommon, Rare, Epic, Legendary, PvP; a rarity past the end
+# (a pack's own tier) takes the last number. A Common piece has no profile part.
+key = "scale"
+factor = 0.7
+slot = [1.0, 1.7, 2.5, 3.5, 4.6, 4.0]
+profile = [0.0, 1.0, 1.6, 2.4, 3.4, 2.9]
+# Each star up to `steps` adds star_step; the `top` star adds star_last on top.
+star_step = [0.64, 0.4, 0.28, 0.17, 0.12, 0.15]
+star_last = [3.73, 1.85, 0.85, 0.42, 0.12, 0.22]
+steps = 4
+top = 5
+# Epic and better pieces tell their class's own flavor line (piece_lore.toml); lesser ones the plain one.
+lore_rarity = 3

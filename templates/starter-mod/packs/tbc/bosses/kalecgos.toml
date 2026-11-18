@@ -1,0 +1,16 @@
+# Kalecgos: Frost Breath, Arcane Buffet.
+
+[[boss]]
+key = "kalecgos"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 44799, range = 14.0, arc = 70.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 45018 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

@@ -1,0 +1,164 @@
+# Swarm: more and weaker enemies, faster levels. An example of a mode on top of the standard.
+
+name = "Swarm"
+extends = "standard"
+
+[card]
+order = 1
+icon = "Ability_Hunter_Pet_Wasp"
+color = [0.45, 0.7, 0.2]
+tag = "SOLO · CO-OP"
+text = "The campaign's zones, but the horde comes thick and frail: far more enemies, each one weaker, and levels come faster."
+rules = [
+    "Enemies spawn 60% faster",
+    "Enemies have 30% less health",
+    "More experience from orbs",
+    "Runs stay off the leaderboards",
+]
+rewards = [
+    ["INV_Misc_Coin_01", "Gold"],
+    ["INV_Box_02", "Chests"],
+    ["INV_Misc_Book_11", "Experience"],
+]
+
+[i18n.de]
+name = "Schwarm"
+tag = "SOLO · KOOP"
+text = "Die Zonen der Kampagne, doch die Horde kommt dicht und schwach: weit mehr Gegner, jeder schwächer, und die Stufen kommen schneller."
+rules = [
+    "Gegner erscheinen 60% schneller",
+    "Gegner haben 30% weniger Gesundheit",
+    "Mehr Erfahrung aus Kugeln",
+    "Läufe zählen nicht für die Ranglisten",
+]
+rewards = ["Gold", "Truhen", "Erfahrung"]
+
+[i18n.fr]
+name = "Nuée"
+tag = "SOLO · COOP"
+text = "Les zones de la campagne, mais la horde arrive dense et frêle : bien plus d'ennemis, chacun plus faible, et les niveaux viennent plus vite."
+rules = [
+    "Les ennemis apparaissent 60% plus vite",
+    "Les ennemis ont 30% de santé en moins",
+    "Plus d'expérience grâce aux orbes",
+    "Les parties restent hors des classements",
+]
+rewards = ["Or", "Coffres", "Expérience"]
+
+[i18n.es]
+name = "Enjambre"
+tag = "SOLO · COOP"
+text = "Las zonas de la campaña, pero la horda llega densa y frágil: muchos más enemigos, cada uno más débil, y los niveles llegan antes."
+rules = [
+    "Los enemigos aparecen un 60% más rápido",
+    "Los enemigos tienen un 30% menos de salud",
+    "Más experiencia de los orbes",
+    "Las partidas no cuentan para las clasificaciones",
+]
+rewards = ["Oro", "Cofres", "Experiencia"]
+
+[i18n.pt]
+name = "Enxame"
+tag = "SOLO · COOP"
+text = "As zonas da campanha, mas a horda vem densa e frágil: muito mais inimigos, cada um mais fraco, e os níveis chegam mais rápido."
+rules = [
+    "Os inimigos surgem 60% mais rápido",
+    "Os inimigos têm 30% menos vida",
+    "Mais experiência dos orbes",
+    "As partidas ficam fora dos rankings",
+]
+rewards = ["Ouro", "Baús", "Experiência"]
+
+[i18n.ru]
+name = "Рой"
+tag = "СОЛО · КООП"
+text = "Зоны кампании, но орда идёт густо и хрупко: врагов намного больше, каждый слабее, а уровни приходят быстрее."
+rules = [
+    "Враги появляются на 60% быстрее",
+    "У врагов на 30% меньше здоровья",
+    "Больше опыта из сфер",
+    "Забеги не попадают в таблицы лидеров",
+]
+rewards = ["Золото", "Сундуки", "Опыт"]
+
+[i18n.it]
+name = "Sciame"
+tag = "SOLO · CO-OP"
+text = "Le zone della campagna, ma l'orda arriva fitta e fragile: molti più nemici, ognuno più debole, e i livelli arrivano più in fretta."
+rules = [
+    "I nemici compaiono il 60% più in fretta",
+    "I nemici hanno il 30% di salute in meno",
+    "Più esperienza dalle sfere",
+    "Le partite restano fuori dalle classifiche",
+]
+rewards = ["Oro", "Forzieri", "Esperienza"]
+
+[i18n.pl]
+name = "Rój"
+tag = "SOLO · CO-OP"
+text = "Strefy kampanii, ale horda napływa gęsta i krucha: znacznie więcej przeciwników, każdy słabszy, a poziomy przychodzą szybciej."
+rules = [
+    "Przeciwnicy pojawiają się o 60% szybciej",
+    "Przeciwnicy mają o 30% mniej zdrowia",
+    "Więcej doświadczenia z kul",
+    "Rozgrywki nie trafiają do rankingów",
+]
+rewards = ["Złoto", "Skrzynie", "Doświadczenie"]
+
+[i18n.tr]
+name = "Akın"
+tag = "SOLO · CO-OP"
+text = "Kampanyanın bölgeleri, ama sürü sık ve kırılgan geliyor: çok daha fazla düşman, her biri daha zayıf, seviyeler daha hızlı atlanıyor."
+rules = [
+    "Düşmanlar 60% daha hızlı doğar",
+    "Düşmanların canı 30% daha az",
+    "Kürelerden daha fazla tecrübe",
+    "Oyunlar sıralamalara girmez",
+]
+rewards = ["Altın", "Sandıklar", "Tecrübe"]
+
+[i18n.ja]
+name = "スウォーム"
+tag = "ソロ・協力プレイ"
+text = "キャンペーンのゾーンですが、群れは数が多くもろくなっています。敵ははるかに多く、一体一体は弱く、レベルも早く上がります。"
+rules = [
+    "敵の出現が60%速くなります",
+    "敵の体力が30%少なくなります",
+    "オーブから得る経験値が増えます",
+    "ランはランキングに記録されません",
+]
+rewards = ["ゴールド", "宝箱", "経験値"]
+
+[i18n.zh]
+name = "怪潮"
+tag = "单人 · 合作"
+text = "战役的区域，但怪潮又密又脆：敌人多得多，每个都更弱，升级也更快。"
+rules = [
+    "敌人出现速度加快60%",
+    "敌人生命值降低30%",
+    "从光球获得更多经验值",
+    "对局不计入排行榜",
+]
+rewards = ["金币", "宝箱", "经验值"]
+
+[i18n.ko]
+name = "무리"
+tag = "솔로 · 협동"
+text = "캠페인의 지역이지만 무리가 빽빽하고 약하게 몰려옵니다. 적이 훨씬 많고 하나하나는 더 약하며, 레벨도 더 빨리 오릅니다."
+rules = [
+    "적이 60% 더 빨리 나타납니다",
+    "적의 생명력이 30% 적습니다",
+    "구슬에서 얻는 경험치 증가",
+    "런은 순위표에 기록되지 않습니다",
+]
+rewards = ["골드", "상자", "경험치"]
+
+[horde]
+spawn_rate = 1.6
+enemy_health = 0.7
+# "Far more enemies": the standard's cap of 120 alive at once would hold the faster spawns
+# back, so the swarm may field half as many again. TUNE
+max_enemies = 180
+
+[hero]
+xp_gain = 1.6

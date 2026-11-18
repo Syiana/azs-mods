@@ -1,0 +1,21 @@
+# Teron Gorefiend: Incinerate, Crushing Shadows, Shadow of Death (carried into the horde), the
+# shades.
+
+[[boss]]
+key = "teron_gorefiend"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 40239 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { pool = { spell = 0, burst = 40243, radius = 6.0, warn = 2.5, factor = 2.4 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { bomb = { spell = 40251, radius = 7.0, time = 5.0, warn = 1.8, factor = 18.0 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

@@ -1,0 +1,23 @@
+# Snippet: change a spell the game already has (here the mage's Frostbolt).
+#
+# Goes in:  packs/<your package>/spells.toml (any .toml file of your package will do; an
+#           [[override]] is read wherever it stands in your package).
+# Lock:     profile.json, in your package's "overrides":
+#             { "dependency": "base", "entity": "spell:frostbolt" }
+#           The dependency is a pack your package requires directly (pack.toml `requires`) that
+#           defines the spell or requires the pack that does.
+#           Without the declaration the check says "the lock must declare this override".
+# Rules:    - `key` names the spell as the game does; `kind` is "spell".
+#           - A field you write replaces the old one whole. Fields you leave out stay as they were.
+#           - Change a `name` or a `text` and you write all twelve languages:
+#             en de fr es pt ru it pl tr ja zh ko.
+#           - Two packages that do not require each other cannot both override one entity.
+#           - The spell `id` gives the spell its look and name in the player's client: keep it.
+# Checked:  in a copy of templates/starter-mod with `azs-content profile-check`.
+
+[[override]]
+kind = "spell"
+key = "frostbolt"
+hit = 42
+cooldown = 1.4
+rider = { slow = { pct = 60, secs = 3.0 } }

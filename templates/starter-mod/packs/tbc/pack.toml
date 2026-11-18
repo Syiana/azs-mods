@@ -1,0 +1,5 @@
+# The Burning Crusade: Outland's zones and everything else the expansion adds.
+key = "tbc"
+requires = ["base"]
+expansion = "tbc"
+order = 1

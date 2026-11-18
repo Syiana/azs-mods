@@ -1,0 +1,96 @@
+# Wrath of the Lich King's jewelry (`re/NUMBERS.md` 17.10), the port's own: five trinkets and a ring from
+# Icecrown Citadel and the Darkmoon Faire, and two legendary amulets, dropping in Northrend only.
+# Their worth is the strength of their proc (`game/wotlk_jewelry.rs`). `TUNE`
+[[jewel]]
+key = "deathbringer"
+slot = "trinket"
+behavior = "deathbringer"
+base = 0.1
+growth = "c"
+ceiling_x = 5.0
+world = "northrend"
+icon = "INV_Jewelry_Trinket_04"
+name = { en = "Deathbringer's Will", de = "Wille des Todesbringers", fr = "Volonté du porte-mort", es = "Voluntad del Libramorte", pt = "Vontade do Trazedor da Morte", ru = "Воля Несущего Смерть", pl = "Wola Zwiastuna Śmierci", tr = "Ölüm Getirenin İradesi", it = "Volontà del Portamorte", ja = "デスブリンガーの意志", zh = "死亡使者的意志", ko = "파멸인도자의 의지" }
+
+[[jewel]]
+key = "greatness"
+slot = "trinket"
+behavior = "greatness"
+base = 0.25
+growth = "c"
+ceiling = 0.8
+world = "northrend"
+icon = "INV_Inscription_TarotGreatness"
+name = { en = "Darkmoon Card: Greatness", de = "Dunkelmondkarte: Größe", fr = "Carte du Sombre Lune : Grandeur", es = "Carta de la Luna Negra: Grandeza", pt = "Carta da Lua Negra: Grandeza", ru = "Карта Новолуния: Величие", pl = "Karta Mrocznego Księżyca: Wielkość", tr = "Kararay Kartı: Büyüklük", it = "Carta di Lunacupa: Grandezza", ja = "ダークムーン・カード：グレートネス", zh = "暗月卡片：伟大", ko = "다크문 카드: 위대함" }
+
+[[jewel]]
+key = "abomination_jar"
+slot = "trinket"
+behavior = "abomination"
+base = 0.3
+growth = "c"
+ceiling = 1.0
+world = "northrend"
+icon = "INV_Alchemy_EnchantedVial"
+name = { en = "Tiny Abomination in a Jar", de = "Winzige Monstrosität im Gefäß", fr = "Minuscule abomination en bocal", es = "Abominación diminuta en un tarro", pt = "Pequena Abominação no Pote", ru = "Крошечная мерзость в банке", pl = "Maleńka poczwara w słoiku", tr = "Kavanozdaki Minik Canavar", it = "Minuscolo abominio in un barattolo", ja = "瓶詰めのちびアボミネーション", zh = "瓶装小憎恶", ko = "단지 속의 작은 누더기골렘" }
+
+[[jewel]]
+key = "phylactery"
+slot = "trinket"
+behavior = "phylactery"
+base = 0.3
+growth = "c"
+ceiling = 1.0
+world = "northrend"
+icon = "INV_Jewelry_Trinket_03"
+name = { en = "Phylactery of the Nameless Lich", de = "Phylakterium des namenlosen Lichs", fr = "Phylactère de la liche sans nom", es = "Filacteria del lich sin nombre", pt = "Filactério do Lich Sem Nome", ru = "Филактерия безымянного лича", pl = "Filakterium Bezimiennego Licza", tr = "İsimsiz Lich'in Muskası", it = "Filatterio del Lich Senza Nome", ja = "名もなきリッチの経箱", zh = "无名巫妖的护命匣", ko = "이름 없는 리치의 성물함" }
+
+[[jewel]]
+key = "foreign_object"
+slot = "trinket"
+behavior = "foreign_object"
+base = 0.012
+growth = "c"
+ceiling_x = 5.0
+world = "northrend"
+icon = "INV_Jewelry_Trinket_01"
+name = { en = "Dislodged Foreign Object", de = "Herausgelöster Fremdkörper", fr = "Corps étranger délogé", es = "Objeto extraño desprendido", pt = "Objeto Estranho Deslocado", ru = "Выбитое инородное тело", pl = "Wypchnięte ciało obce", tr = "Yerinden Çıkmış Yabancı Cisim", it = "Corpo estraneo dislocato", ja = "取り除かれた異物", zh = "移位的异物", ko = "떨어져 나온 이물질" }
+
+[[jewel]]
+key = "ashen_band"
+slot = "ring"
+behavior = "ashen"
+base = 0.12
+growth = "a"
+world = "northrend"
+max_picks = 4
+tiers = [
+    { name = { en = "Ashen Band of Destruction", de = "Aschenband der Zerstörung", fr = "Anneau cendré de destruction", es = "Banda cinérea de destrucción", pt = "Faixa Cinzenta da Destruição", ru = "Пепельное кольцо разрушения", pl = "Popielna obrączka zniszczenia", tr = "Küllü Yıkım Yüzüğü", it = "Fascia di cenere della distruzione", ja = "破壊の灰の指輪", zh = "灰烬毁灭指环", ko = "잿빛 파괴의 반지" }, icon = "INV_Jewelry_Ring_84" },
+    { name = { en = "Ashen Band of Greater Destruction", de = "Aschenband der größeren Zerstörung", fr = "Anneau cendré de destruction supérieure", es = "Banda cinérea de destrucción mayor", pt = "Faixa Cinzenta da Destruição Maior", ru = "Пепельное кольцо великого разрушения", pl = "Popielna obrączka większego zniszczenia", tr = "Küllü Büyük Yıkım Yüzüğü", it = "Fascia di cenere della distruzione maggiore", ja = "大いなる破壊の灰の指輪", zh = "灰烬强效毁灭指环", ko = "잿빛 상급 파괴의 반지" }, icon = "INV_Jewelry_Ring_81" },
+    { name = { en = "Ashen Band of Unmatched Destruction", de = "Aschenband der unvergleichlichen Zerstörung", fr = "Anneau cendré de destruction inégalée", es = "Banda cinérea de destrucción inigualable", pt = "Faixa Cinzenta da Destruição Incomparável", ru = "Пепельное кольцо несравненного разрушения", pl = "Popielna obrączka niezrównanego zniszczenia", tr = "Küllü Eşsiz Yıkım Yüzüğü", it = "Fascia di cenere della distruzione impareggiabile", ja = "比類なき破壊の灰の指輪", zh = "灰烬无双毁灭指环", ko = "잿빛 무적 파괴의 반지" }, icon = "INV_Jewelry_Ring_85" },
+    { name = { en = "Ashen Band of Endless Destruction", de = "Aschenband der endlosen Zerstörung", fr = "Anneau cendré de destruction infinie", es = "Banda cinérea de destrucción infinita", pt = "Faixa Cinzenta da Destruição Infinita", ru = "Пепельное кольцо бесконечного разрушения", pl = "Popielna obrączka niekończącego się zniszczenia", tr = "Küllü Sonsuz Yıkım Yüzüğü", it = "Fascia di cenere della distruzione infinita", ja = "終わりなき破壊の灰の指輪", zh = "灰烬无尽毁灭指环", ko = "잿빛 끝없는 파괴의 반지" }, icon = "INV_Jewelry_Ring_83" },
+]
+icon = "INV_Jewelry_Ring_84"
+name = { en = "Ashen Band of Destruction", de = "Aschenband der Zerstörung", fr = "Anneau cendré de destruction", es = "Banda cinérea de destrucción", pt = "Faixa Cinzenta da Destruição", ru = "Пепельное кольцо разрушения", pl = "Popielna obrączka zniszczenia", tr = "Küllü Yıkım Yüzüğü", it = "Fascia di cenere della distruzione", ja = "破壊の灰の指輪", zh = "灰烬毁灭指环", ko = "잿빛 파괴의 반지" }
+
+[[amulet]]
+key = "shadowmourne"
+rarity = "legendary"
+growth = 0.25
+effects = [["damage", 0.08]]
+special = { chaos_bane = 2.5 }
+world = "northrend"
+classes = ["deathknight"]
+icon = "INV_Axe_113"
+name = { en = "Shadowmourne", de = "Schattengram", fr = "Deuillombre", es = "Agonía de las Sombras", pt = "Shadowmourne", ru = "Скорбь Тьмы", pl = "Shadowmourne", tr = "Shadowmourne", it = "Shadowmourne", ja = "シャドウモーン", zh = "暗影之哀", ko = "어둠한" }
+
+[[amulet]]
+key = "valanyr"
+rarity = "legendary"
+growth = 0.25
+effects = [["cooldown", 0.06], ["max_health", 0.1]]
+special = { ancient_kings = 0.15 }
+world = "northrend"
+needs = "heal"
+icon = "INV_Mace_99"
+name = { en = "Val'anyr, Hammer of Ancient Kings", de = "Val'anyr, Hammer der uralten Könige", fr = "Val'anyr, marteau des Anciens rois", es = "Val'anyr, Martillo de los Reyes Antiguos", pt = "Val'anyr, Martelo dos Reis Antigos", ru = "Валь'аниир, Молот Древних Королей", pl = "Val'anyr, Młot Dawnych Królów", tr = "Val'anyr, Kadim Kralların Çekici", it = "Val'anyr, Martello dei Re Antichi", ja = "ヴァラニア、古の王たちのハンマー", zh = "瓦兰奈尔，上古王者之锤", ko = "발아니르 - 고대 왕의 망치" }

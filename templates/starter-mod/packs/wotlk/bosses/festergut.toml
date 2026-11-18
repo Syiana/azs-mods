@@ -1,0 +1,16 @@
+# Festergut: Gaseous Blight, Vile Gas.
+
+[[boss]]
+key = "festergut"
+
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 69159, radius = 10.0, warn = 2.2 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 69240, count = 4, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

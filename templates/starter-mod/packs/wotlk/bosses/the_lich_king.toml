@@ -1,0 +1,97 @@
+# The Lich King: Army of the Dead, Frostfall, Defile, Remorseless Winter and Necrotic Plague.
+# Frostfall uses Frost Bomb's large frost missile (69846, DBC speed 8 yd/s): 12 yd / 1.5 s.
+
+[[boss]]
+key = "the_lich_king"
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 72762, count = 1, radius = 3.5, speed = 4.2, lasts = 8.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 18.0
+ability = { ring = { spell = 68981, radius = 13.0, warn = 2.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { bomb = { spell = 70337, radius = 7.0, time = 5.0, warn = 2.0, factor = 20.0 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 72133, range = 14.0, arc = 60.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { combo = [[{ stomp = { spell = 72262, radius = 12.0, warn = 2.0, knock = 14.0 } }, { nova = { spell = 70541, radius = 10.0, warn = 2.2 } }], 1.6] }
+
+[[boss.kit]]
+every = 12.0
+ability = { summon = { entry = 5300, count = 12, spell = 42650, warn = 2.0, radius = 8.0 } }
+[[boss.kit]]
+every = 9.0
+ability = { meteor = { cast = 69845, spell = 69846, burst = 69845, radius = 6.0, warn = 3.0, fall = 1.5, height = 12.0, factor = 4.0 } }
+
+# The Lich King at 70%: Remorseless Winter. The ground past the throne's middle freezes, raging
+# spirits and ice spheres come, his pain and suffering cones before him.
+[[boss.phase]]
+below = 0.7
+yell = { en = "I will freeze you from within until all that remains is an icy husk!", de = "Ich werde euch von innen heraus erfrieren lassen, bis nur noch eisige Hüllen übrig sind!", fr = "Je vais vous geler de l'intérieur jusqu'à ce qu'il ne reste qu'une carcasse glacée !", es = "¡Os congelaré desde dentro hasta que solo quede un cascarón helado!", pt = "Vou congelar vocês por dentro até restar apenas uma casca gelada!", ru = "Я буду морозить вас изнутри, пока не останется лишь ледяная оболочка!", pl = "Zamrożę cię od środka, aż zostanie tylko lodowa łupina!", tr = "Sizi içinizden dondurup geriye buzlu bir kabuktan başka bir şey bırakmayacağım!", it = "Ti congelerò dall'interno finché non resterà che un guscio di ghiaccio!", ja = "内側から凍らせてやろう、残るのが氷の抜け殻だけになるまでな！", zh = "我会从内部冻结你们，直到只剩下一具冰冷的躯壳！", ko = "속부터 얼려 주마, 얼음 껍데기만 남을 때까지!" }
+adds = 0
+
+[[boss.phase.kit]]
+every = 22.0
+ability = { ring = { spell = 68981, radius = 16.0, warn = 3.0, lasts = 8.0, tick = 0.5 } }
+
+[[boss.phase.kit]]
+every = 5.0
+ability = { cone = { spell = 72133, range = 12.0, arc = 60.0, warn = 1.0, factor = 1.6 } }
+
+[[boss.phase.kit]]
+every = 8.0
+ability = { rain = { spell = 69108, count = 4, radius = 4.0, spread = 12.0, warn = 1.4, factor = 2.2 } }
+
+[[boss.phase.kit]]
+every = 16.0
+ability = { stomp = { spell = 72262, radius = 9.0, warn = 1.6, knock = 10.0 } }
+
+[[boss.phase.kit]]
+every = 12.0
+ability = { summon = { entry = 5300, count = 16, spell = 42650, warn = 2.0, radius = 8.0 } }
+[[boss.phase.kit]]
+every = 9.0
+ability = { meteor = { cast = 69845, spell = 69846, burst = 69845, radius = 6.0, warn = 3.0, fall = 1.5, height = 12.0, factor = 4.0 } }
+
+# The Lich King at 35%: the harvest. Defile crawls after the hero, vile spirits drift round,
+# soul reaper cleaves, Harvest Soul marks a hero (the bomb that tears the horde apart) and a
+# last Remorseless Winter freezes the edge.
+[[boss.phase]]
+below = 0.35
+yell = { en = "Frostmourne hungers...", de = "Frostgram hungert...", fr = "Deuillegivre a faim...", es = "Agonía de Escarcha tiene hambre...", pt = "Gume Gélido tem fome...", ru = "Ледяная Скорбь голодна...", pl = "Frostmourne łaknie...", tr = "Frostmourne açlıktan kıvranıyor...", it = "Frostmourne ha fame...", ja = "フロストモーンが飢えている…", zh = "霜之哀伤渴望着……", ko = "서리한이 굶주렸도다..." }
+adds = 0
+
+[[boss.phase.kit]]
+every = 16.0
+ability = { wander = { spell = 72762, count = 1, radius = 6.0, speed = 4.0, lasts = 12.0, tick = 0.5 } }
+
+[[boss.phase.kit]]
+every = 14.0
+ability = { wander = { spell = 70498, count = 3, radius = 3.0, speed = 5.5, lasts = 8.0, tick = 0.5 } }
+
+[[boss.phase.kit]]
+every = 6.0
+ability = { cone = { spell = 69409, range = 9.0, arc = 90.0, warn = 1.0, factor = 2.2 } }
+
+[[boss.phase.kit]]
+every = 22.0
+ability = { bomb = { spell = 68980, radius = 9.0, time = 6.0, warn = 2.0, factor = 22.0 } }
+
+[[boss.phase.kit]]
+every = 30.0
+ability = { ring = { spell = 74270, radius = 18.0, warn = 3.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.phase.kit]]
+every = 14.0
+ability = { summon = { entry = 5300, count = 18, spell = 42650, warn = 2.0, radius = 9.0 } }
+[[boss.phase.kit]]
+every = 18.0
+ability = { combo = [[{ meteor = { cast = 69845, spell = 69846, burst = 69845, radius = 6.0, warn = 3.0, fall = 1.5, height = 12.0, factor = 4.5 } }, { meteor = { cast = 69845, spell = 69846, burst = 69845, radius = 6.0, warn = 3.0, fall = 1.5, height = 12.0, factor = 4.5 } }, { meteor = { cast = 69845, spell = 69846, burst = 69845, radius = 6.0, warn = 3.0, fall = 1.5, height = 12.0, factor = 4.5 } }], 5.0] }

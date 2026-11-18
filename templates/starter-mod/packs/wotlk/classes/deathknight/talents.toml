@@ -1,0 +1,563 @@
+# The death knight's talent trees: Blood, Frost and Unholy. AS has no death knight, so these
+# are the port's own, written to the shape of AS's trees: thirteen talents a tree, a row opening
+# every 5 points, milestones at 10 and 20 points and a capstone at 30. Numbers ours, after the
+# other classes' trees. `TUNE`
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "deathknight_blood"
+index = 0
+icon = "Spell_Deathknight_BloodPresence"
+background = "DeathKnightBlood"
+name = { en = "Blood", de = "Blut", fr = "Sang", es = "Sangre", pt = "Sangue", ru = "Кровь", pl = "Krew", tr = "Kan", it = "Sangue", ja = "ブラッド", zh = "鲜血", ko = "혈기" }
+
+[[talent_tree]]
+key = "deathknight_frost"
+index = 1
+icon = "Spell_Deathknight_FrostPresence"
+background = "DeathKnightFrost"
+name = { en = "Frost", de = "Frost", fr = "Givre", es = "Escarcha", pt = "Gelo", ru = "Лед", pl = "Mróz", tr = "Buz", it = "Gelo", ja = "フロスト", zh = "冰霜", ko = "냉기" }
+
+[[talent_tree]]
+key = "deathknight_unholy"
+index = 2
+icon = "Spell_Deathknight_UnholyPresence"
+background = "DeathKnightUnholy"
+name = { en = "Unholy", de = "Unheilig", fr = "Impie", es = "Profano", pt = "Profano", ru = "Нечестивость", pl = "Plugawy", tr = "Kutsal Olmayan", it = "Empio", ja = "アンホーリー", zh = "邪恶", ko = "부정" }
+
+[[talent]]
+key = "dk_blade_barrier"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "Ability_UpgradeMoonGlaive"
+name = { en = "Blade Barrier", de = "Klingenbarriere", fr = "Barrière de lames", es = "Barrera de espadas", pt = "Barreira de Lâminas", ru = "Кровавая преграда", pl = "Bariera ostrzy", tr = "Bıçak Bariyeri", it = "Barriera di lame", ja = "ブレード・バリア", zh = "利刃屏障", ko = "칼날 보호막" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "dk_bladed_armor"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [0, 0.015] }]
+icon = "INV_Shoulder_36"
+name = { en = "Bladed Armor", de = "Klingenrüstung", fr = "Armure de lames", es = "Armadura de espinas", pt = "Armadura de Lâminas", ru = "Клинковая броня", pl = "Pancerz z ostrzy", tr = "Bıçaklı Zırh", it = "Armatura a lame", ja = "ブレーデッド・アーマー", zh = "刃甲", ko = "칼날 갑옷" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "dk_bloody_strikes"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Deathknight_DeathStrike"
+name = { en = "Bloody Strikes", de = "Blutige Stöße", fr = "Frappes sanglantes", es = "Golpes sangrientos", pt = "Golpes Sangrentos", ru = "Кровавые удары", pl = "Krwawe uderzenia", tr = "Kanlı Darbeler", it = "Colpi sanguinosi", ja = "ブラッディ・ストライク", zh = "血腥打击", ko = "피투성이 일격" }
+text = { en = "Heart Strike and Blood Boil deal {v}% more damage.", de = "Herzstoß und Blutsieden verursachen {v}% mehr Schaden.", fr = "Frappe au cœur et Furoncle sanglant infligent {v}% de dégâts en plus.", es = "Golpe al corazón y Sangre hirviente infligen un {v}% más de daño.", pt = "Golpe no Coração e Sangue Fervente causam {v}% a mais de dano.", ru = "Удар в сердце и Вскипание крови наносят на {v}% больше урона.", pl = "Uderzenie w serce i Wrzenie krwi zadają o {v}% więcej obrażeń.", tr = "Kalp Darbesi ve Kan Kaynaması {v}% daha fazla hasar verir.", it = "Colpo al cuore ed Ebollizione del sangue infliggono il {v}% di danni in più.", ja = "ハート・ストライクとブラッド・ボイルのダメージが{v}%増加します。", zh = "心脏打击和血液沸腾造成的伤害提高{v}%。", ko = "심장 강타와 피의 소용돌이의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["heart_strike", "blood_boil"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "dk_veteran"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.03] }]
+icon = "Spell_Misc_WarsongFocus"
+name = { en = "Veteran of the Third War", de = "Veteran des Dritten Krieges", fr = "Vétéran de la Troisième Guerre", es = "Veterano de la Tercera Guerra", pt = "Veterano da Terceira Guerra", ru = "Ветеран Третьей войны", pl = "Weteran Trzeciej Wojny", tr = "Üçüncü Savaş Gazisi", it = "Veterano della Terza Guerra", ja = "ヴェテラン・オブ・ザ・サード・ウォー", zh = "第三次大战的老兵", ko = "3차 대전의 참전용사" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "dk_blood_caked_blade"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "heart_strike" }]
+icon = "Ability_CriticalStrike"
+name = { en = "Blood-Caked Blade", de = "Blutverkrustete Klinge", fr = "Lame couverte de sang", es = "Espada cubierta de sangre", pt = "Lâmina Coberta de Sangue", ru = "Клинок в запекшейся крови", pl = "Ostrze oblepione krwią", tr = "Kan Kaplı Bıçak", it = "Lama incrostata di sangue", ja = "ブラッドケイクト・ブレード", zh = "血染之刃", ko = "피범벅 칼날" }
+text = { en = "Milestone. You start every run with Heart Strike, and Heart Strike and Death Strike carve on: each hit also strikes 2 more enemies near its target for {v}% of it.", de = "Meilenstein. Du beginnst jeden Lauf mit Herzstoß, und Herzstoß und Todesstoß schneiden weiter: Jeder Treffer trifft zusätzlich 2 weitere Feinde nahe seinem Ziel für {v}% davon.", fr = "Jalon. Tu commences chaque partie avec Frappe au cœur, et Frappe au cœur et Frappe de mort tranchent plus loin : chaque coup frappe aussi 2 ennemis de plus près de sa cible pour {v}% de ses dégâts.", es = "Hito. Empiezas cada partida con Golpe al corazón, y Golpe al corazón y Golpe de muerte siguen cortando: cada golpe también alcanza a 2 enemigos más cerca de su objetivo por un {v}% de su daño.", pt = "Marco. Você começa cada partida com Golpe no Coração, e Golpe no Coração e Golpe da Morte seguem cortando: cada golpe também atinge mais 2 inimigos perto do alvo com {v}% do dano.", ru = "Веха. Ты начинаешь каждый забег с Удара в сердце, а Удар в сердце и Удар смерти рассекают дальше: каждый удар поражает еще 2 врагов рядом с целью на {v}% от своего урона.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Uderzeniem w serce, a Uderzenie w serce i Cios śmierci tną dalej: każde trafienie uderza też 2 kolejnych przeciwników w pobliżu celu za {v}% obrażeń.", tr = "Dönüm noktası. Her oyuna Kalp Darbesi ile başlarsın ve Kalp Darbesi ile Ölüm Darbesi yarmaya devam eder: her vuruş hedefinin yakınındaki 2 düşmana daha hasarının {v}%'si kadar vurur.", it = "Traguardo. Inizi ogni partita con Colpo al cuore e Colpo al cuore e Colpo della morte proseguono il taglio: ogni colpo colpisce anche altri 2 nemici vicini al bersaglio per il {v}% del danno.", ja = "【マイルストーン】毎ランをハート・ストライクを持って始め、ハート・ストライクとデス・ストライクが切り進みます：各命中が対象の近くの敵さらに2体にもその{v}%のダメージを与えます。", zh = "里程碑：你在每场对局开始时拥有心脏打击，心脏打击和灵界打击会继续劈砍：每次攻击还会击中目标附近另外2个敌人，造成相当于其伤害{v}%的伤害。", ko = "이정표. 모든 런을 심장 강타를 가지고 시작하며, 심장 강타와 죽음의 일격이 이어서 베어 냅니다: 적중할 때마다 대상 근처의 적 2명을 더 공격하여 그 피해의 {v}%를 줍니다." }
+menu_v = 0.5
+plays = [
+    { v = 0.5, play = { cleave = { keys = ["heart_strike", "death_strike"], n = 2, radius = 8.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "dk_butchery"
+tree = 0
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [14, 0.0025] }]
+icon = "INV_Axe_68"
+name = { en = "Butchery", de = "Schlachten", fr = "Boucherie", es = "Carnicería", pt = "Carnificina", ru = "Мясник", pl = "Rzeźnictwo", tr = "Kasaplık", it = "Macelleria", ja = "ブッチャリー", zh = "屠杀", ko = "도살" }
+text = { en = "{v}% of all the damage you deal heals you.", de = "{v}% des gesamten Schadens, den du verursachst, heilt dich.", fr = "{v}% de tous les dégâts que tu infliges te soignent.", es = "El {v}% de todo el daño que infliges te cura.", pt = "{v}% de todo o dano que você causa cura você.", ru = "{v}% всего наносимого тобой урона лечит тебя.", pl = "{v}% wszystkich zadanych obrażeń leczy cię.", tr = "Verdiğin tüm hasarın {v}%'si seni iyileştirir.", it = "Il {v}% di tutti i danni che infliggi ti cura.", ja = "与えたすべてのダメージの{v}%だけ体力を回復します。", zh = "你造成的所有伤害的{v}%会治疗你。", ko = "주는 모든 피해의 {v}%만큼 생명력을 회복합니다." }
+menu_v = 0.0025
+
+[[talent]]
+key = "dk_imp_death_strike"
+tree = 0
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Deathknight_Butcher2"
+name = { en = "Improved Death Strike", de = "Verbesserter Todesstoß", fr = "Frappe de mort améliorée", es = "Golpe de muerte mejorado", pt = "Golpe da Morte Aprimorado", ru = "Улучшенный Удар смерти", pl = "Ulepszony Cios śmierci", tr = "Gelişmiş Ölüm Darbesi", it = "Colpo della morte migliorato", ja = "改良型デス・ストライク", zh = "强化灵界打击", ko = "죽음의 일격 연마" }
+text = { en = "Death Strike deals {v}% more damage, and heals you for as much more.", de = "Todesstoß verursacht {v}% mehr Schaden und heilt dich um ebenso viel mehr.", fr = "Frappe de mort inflige {v}% de dégâts en plus et te soigne d'autant plus.", es = "Golpe de muerte inflige un {v}% más de daño y te cura otro tanto más.", pt = "Golpe da Morte causa {v}% a mais de dano e cura você na mesma proporção.", ru = "Удар смерти наносит на {v}% больше урона и лечит тебя на столько же больше.", pl = "Cios śmierci zadaje o {v}% więcej obrażeń i leczy cię o tyle samo więcej.", tr = "Ölüm Darbesi {v}% daha fazla hasar verir ve seni o kadar fazla iyileştirir.", it = "Colpo della morte infligge il {v}% di danni in più e ti cura altrettanto di più.", ja = "デス・ストライクのダメージが{v}%増加し、回復量も同じだけ増加します。", zh = "灵界打击造成的伤害提高{v}%，并为你恢复同样提高的生命值。", ko = "죽음의 일격의 피해가 {v}% 증가하며, 그만큼 치유량도 늘어납니다." }
+menu_v = 0.15
+mods = [{ damage = ["death_strike"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "dk_dark_conviction"
+tree = 0
+row = 3
+col = 2
+ranks = 3
+req = "dk_blood_caked_blade"
+effects = [{ stat = [3, 0.015] }]
+icon = "Spell_Deathknight_DarkConviction"
+name = { en = "Dark Conviction", de = "Dunkle Überzeugung", fr = "Sombre conviction", es = "Convicción oscura", pt = "Convicção Sombria", ru = "Темная убежденность", pl = "Mroczne przekonanie", tr = "Karanlık Kanaat", it = "Convinzione oscura", ja = "ダーク・コンヴィクション", zh = "黑暗定罪", ko = "어둠의 신념" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "dk_mark_of_blood"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_Hunter_RapidKilling"
+name = { en = "Mark of Blood", de = "Mal des Blutes", fr = "Marque de sang", es = "Marca de sangre", pt = "Marca de Sangue", ru = "Знак крови", pl = "Znak krwi", tr = "Kan İşareti", it = "Marchio di sangue", ja = "マーク・オブ・ブラッド", zh = "鲜血印记", ko = "피의 징표" }
+text = { en = "Milestone. Every swing at you has a {v}% chance to be answered with a free Death Strike, which heals you for half of what it deals.", de = "Meilenstein. Jeder Hieb gegen dich hat eine Chance von {v}%, mit einem kostenlosen Todesstoß beantwortet zu werden, der dich um die Hälfte seines Schadens heilt.", fr = "Jalon. Chaque coup porté contre toi a {v}% de chances de recevoir en réponse une Frappe de mort gratuite, qui te soigne de la moitié de ses dégâts.", es = "Hito. Cada golpe que recibes tiene un {v}% de probabilidad de ser respondido con un Golpe de muerte gratuito, que te cura la mitad de su daño.", pt = "Marco. Cada golpe contra você tem {v}% de chance de ser respondido com um Golpe da Morte gratuito, que cura você pela metade do dano causado.", ru = "Веха. Каждый удар по тебе с шансом {v}% получает в ответ бесплатный Удар смерти, который лечит тебя на половину нанесенного урона.", pl = "Kamień milowy. Każdy zamach w ciebie ma {v}% szansy na odpowiedź darmowym Ciosem śmierci, który leczy cię o połowę swoich obrażeń.", tr = "Dönüm noktası. Sana yönelen her savuruşa {v}% ihtimalle bedava bir Ölüm Darbesi ile karşılık verilir; verdiği hasarın yarısı kadar seni iyileştirir.", it = "Traguardo. Ogni colpo diretto a te ha il {v}% di probabilità di ricevere in risposta un Colpo della morte gratuito, che ti cura per metà di ciò che infligge.", ja = "【マイルストーン】攻撃を受けるたびに{v}%の確率で無料のデス・ストライクで反撃し、与えたダメージの半分を回復します。", zh = "里程碑：每次对你的攻击都有{v}%的几率以一次免费的灵界打击回应，为你恢复相当于其伤害一半的生命值。", ko = "이정표. 당신을 향한 공격마다 {v}% 확률로 죽음의 일격을 무료로 반격하며, 준 피해의 절반만큼 생명력을 회복합니다." }
+menu_v = 0.12
+plays = [
+    { v = 0.12, play = { struck = "death_strike" } },
+]
+
+[[talent]]
+key = "dk_crimson_scourge"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Deathknight_BloodBoil"
+name = { en = "Crimson Scourge", de = "Purpurrote Geißel", fr = "Fléau écarlate", es = "Plaga carmesí", pt = "Flagelo Carmesim", ru = "Багровая плеть", pl = "Szkarłatna Plaga", tr = "Kızıl Yıkım", it = "Flagello cremisi", ja = "クリムゾン・スカージ", zh = "赤红天灾", ko = "진홍의 스컬지" }
+text = { en = "Blood Boil and Death and Decay reach {v}% farther.", de = "Blutsieden und Tod und Verfall reichen {v}% weiter.", fr = "Furoncle sanglant et Mort et décomposition portent {v}% plus loin.", es = "Sangre hirviente y Muerte y descomposición llegan un {v}% más lejos.", pt = "Sangue Fervente e Morte e Decomposição alcançam {v}% mais longe.", ru = "Вскипание крови и Смерть и разложение достают на {v}% дальше.", pl = "Wrzenie krwi i Śmierć i rozkład sięgają o {v}% dalej.", tr = "Kan Kaynaması ve Ölüm ve Çürüme {v}% daha uzağa erişir.", it = "Ebollizione del sangue e Morte e decomposizione arrivano il {v}% più lontano.", ja = "ブラッド・ボイルとデス・アンド・ディケイの範囲が{v}%広がります。", zh = "血液沸腾和枯萎凋零的范围扩大{v}%。", ko = "피의 소용돌이와 죽음과 부패의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.08
+mods = [{ area = ["blood_boil", "death_and_decay"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "dk_will_of_the_necropolis"
+tree = 0
+row = 5
+col = 0
+ranks = 1
+effects = []
+icon = "Ability_Creature_Cursed_02"
+name = { en = "Will of the Necropolis", de = "Wille der Nekropole", fr = "Volonté de la nécropole", es = "Voluntad de la Necrópolis", pt = "Vontade da Necrópole", ru = "Воля Некрополя", pl = "Wola Nekropolii", tr = "Nekropol'ün İradesi", it = "Volontà della Necropoli", ja = "ウィル・オブ・ザ・ネクロポリス", zh = "大墓地的意志", ko = "네크로폴리스의 의지" }
+text = { en = "A blow that would kill you leaves you at 35% health instead, behind a shield of 15% of your maximum health, and a free Blood Boil answers it. Once every 90 sec.", de = "Ein Hieb, der dich töten würde, lässt dich stattdessen mit 35% Gesundheit zurück, hinter einem Schild von 15% deiner maximalen Gesundheit, und ein kostenloses Blutsieden antwortet darauf. Einmal alle 90 Sek.", fr = "Un coup qui te tuerait te laisse à 35% de santé, derrière un bouclier de 15% de ta santé maximale, et un Furoncle sanglant gratuit y répond. Une fois toutes les 90 s.", es = "Un golpe que te mataría te deja con un 35% de salud, tras un escudo del 15% de tu salud máxima, y una Sangre hirviente gratuita responde. Una vez cada 90 s.", pt = "Um golpe que mataria você o deixa com 35% de vida, atrás de um escudo de 15% da sua vida máxima, e um Sangue Fervente gratuito responde. Uma vez a cada 90 s.", ru = "Удар, который убил бы тебя, оставляет 35% здоровья и щит в 15% от максимума здоровья, а в ответ срабатывает бесплатное Вскипание крови. Раз в 90 сек.", pl = "Cios, który by cię zabił, zostawia cię przy 35% zdrowia, za tarczą o wartości 15% twojego maksymalnego zdrowia, a odpowiada na niego darmowe Wrzenie krwi. Raz na 90 s.", tr = "Seni öldürecek bir darbe seni 35% canla bırakır, azami canının 15%'i kadar bir kalkanın ardında; bedava bir Kan Kaynaması karşılık verir. 90 sn'de bir.", it = "Un colpo che ti ucciderebbe ti lascia invece al 35% di salute, dietro uno scudo pari al 15% della tua salute massima, e un'Ebollizione del sangue gratuita risponde. Una volta ogni 90 s.", ja = "致命的な一撃を受けると代わりに体力35%で踏みとどまり、最大体力15%のシールドに守られ、無料のブラッド・ボイルで反撃します。90秒に1回まで。", zh = "致命的一击会使你保留35%的生命值，并获得一个吸收相当于你最大生命值15%伤害的护盾，同时以一次免费的血液沸腾回应。每90秒一次。", ko = "치명적인 일격을 받으면 대신 생명력 35%로 남고 최대 생명력 15%의 보호막에 둘러싸이며, 피의 소용돌이가 무료로 반격합니다. 90초에 한 번 발동합니다." }
+menu_v = 90
+plays = [
+    { v = 90.0, play = { save = { health = 0.35, immune = 0.0, shield = 0.15, cast = ["blood_boil"] } } },
+]
+
+[[talent]]
+key = "dk_vampiric_blood"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "dk_mark_of_blood"
+effects = [{ stat = [24, 0.002] }]
+icon = "Spell_Shadow_LifeDrain"
+name = { en = "Vampiric Blood", de = "Vampirblut", fr = "Sang vampirique", es = "Sangre vampírica", pt = "Sangue Vampírico", ru = "Вампирическая кровь", pl = "Wampiryczna krew", tr = "Vampirik Kan", it = "Sangue vampirico", ja = "ヴァンパイリック・ブラッド", zh = "吸血鬼之血", ko = "흡혈의 피" }
+text = { en = "Regenerate {v}% of your maximum health per second.", de = "Regeneriere {v}% deiner maximalen Gesundheit pro Sekunde.", fr = "Régénère {v}% de tes points de vie maximum par seconde.", es = "Regenera un {v}% de tu salud máxima por segundo.", pt = "Regenera {v}% da sua vida máxima por segundo.", ru = "Восстанавливает {v}% твоего максимального здоровья в секунду.", pl = "Regenerujesz {v}% maksymalnego zdrowia na sekundę.", tr = "Saniyede azami canının {v}%'si kadar yenilenirsin.", it = "Rigeneri il {v}% della tua salute massima al secondo.", ja = "毎秒、最大体力の{v}%を回復します。", zh = "每秒恢复相当于你最大生命值{v}%的生命值。", ko = "초당 최대 생명력의 {v}%를 재생합니다." }
+menu_v = 0.002
+
+[[talent]]
+key = "dk_dancing_rune_weapon"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "death_strike" }]
+icon = "INV_Sword_07"
+name = { en = "Dancing Rune Weapon", de = "Tanzende Runenwaffe", fr = "Arme runique dansante", es = "Arma rúnica danzante", pt = "Arma Rúnica Dançante", ru = "Танцующее рунное оружие", pl = "Tańcząca runiczna broń", tr = "Dans Eden Rün Silahı", it = "Arma runica danzante", ja = "ダンシング・ルーン・ウェポン", zh = "符文刃舞", ko = "춤추는 룬 무기" }
+text = { en = "Capstone. You start every run with Death Strike, and a rune weapon dances at your side: a free Heart Strike every {v} sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Todesstoß, und eine Runenwaffe tanzt an deiner Seite: alle {v} Sek. ein kostenloser Herzstoß.", fr = "Clé de voûte. Tu commences chaque partie avec Frappe de mort, et une arme runique danse à tes côtés : une Frappe au cœur gratuite toutes les {v} s.", es = "Piedra angular. Empiezas cada partida con Golpe de muerte, y un arma rúnica danza a tu lado: un Golpe al corazón gratuito cada {v} s.", pt = "Ápice. Você começa cada partida com Golpe da Morte, e uma arma rúnica dança ao seu lado: um Golpe no Coração gratuito a cada {v} s.", ru = "Вершина. Ты начинаешь каждый забег с Удара смерти, и рунное оружие танцует рядом с тобой: бесплатный Удар в сердце каждые {v} сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Ciosem śmierci, a runiczna broń tańczy u twego boku: darmowe Uderzenie w serce co {v} s.", tr = "Zirve. Her oyuna Ölüm Darbesi ile başlarsın ve yanında bir rün silahı dans eder: her {v} sn'de bedava bir Kalp Darbesi.", it = "Vertice. Inizi ogni partita con Colpo della morte e un'arma runica danza al tuo fianco: un Colpo al cuore gratuito ogni {v} s.", ja = "【キャップストーン】毎ランをデス・ストライクを持って始め、ルーンの武器が傍らで舞います：{v}秒ごとに無料のハート・ストライク。", zh = "终极天赋：你在每场对局开始时拥有灵界打击，一把符文武器在你身边舞动：每{v}秒施放一次免费的心脏打击。", ko = "궁극 특성. 모든 런을 죽음의 일격을 가지고 시작하며, 룬 무기가 곁에서 춤춥니다: {v}초마다 심장 강타를 무료로 시전합니다." }
+menu_v = 3
+plays = [
+    { v = 3.0, play = { every = "heart_strike" } },
+]
+
+[[talent]]
+key = "dk_imp_icy_touch"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Spell_Deathknight_IceTouch"
+name = { en = "Improved Icy Touch", de = "Verbesserte Eisige Berührung", fr = "Toucher de glace amélioré", es = "Toque helado mejorado", pt = "Toque Gélido Aprimorado", ru = "Улучшенное Ледяное прикосновение", pl = "Ulepszony Lodowy dotyk", tr = "Gelişmiş Buzlu Dokunuş", it = "Tocco gelido migliorato", ja = "改良型アイシー・タッチ", zh = "强化冰冷触摸", ko = "얼음 손길 연마" }
+text = { en = "Icy Touch and Chains of Ice deal {v}% more damage.", de = "Eisige Berührung und Eisige Ketten verursachen {v}% mehr Schaden.", fr = "Toucher de glace et Chaînes de glace infligent {v}% de dégâts en plus.", es = "Toque helado y Cadenas de hielo infligen un {v}% más de daño.", pt = "Toque Gélido e Correntes de Gelo causam {v}% a mais de dano.", ru = "Ледяное прикосновение и Ледяные оковы наносят на {v}% больше урона.", pl = "Lodowy dotyk i Łańcuchy lodu zadają o {v}% więcej obrażeń.", tr = "Buzlu Dokunuş ve Buz Zincirleri {v}% daha fazla hasar verir.", it = "Tocco gelido e Catene di ghiaccio infliggono il {v}% di danni in più.", ja = "アイシー・タッチとチェイン・オブ・アイスのダメージが{v}%増加します。", zh = "冰冷触摸和寒冰锁链造成的伤害提高{v}%。", ko = "얼음 손길과 얼음 사슬의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = [{ damage = ["icy_touch", "chains_of_ice"] }]
+mods_v = 0.05
+
+[[talent]]
+key = "dk_runic_mastery"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.02] }]
+icon = "Spell_Arcane_Arcane01"
+name = { en = "Runic Power Mastery", de = "Runenmachtbeherrschung", fr = "Maîtrise de la puissance runique", es = "Maestría de poder rúnico", pt = "Maestria do Poder Rúnico", ru = "Мастерство рунической силы", pl = "Mistrzostwo mocy runicznej", tr = "Rün Gücü Ustalığı", it = "Maestria nel potere runico", ja = "ルーニック・パワー・マスタリー", zh = "符文能量掌握", ko = "룬 마력 숙련" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "dk_icy_reach"
+tree = 1
+row = 1
+col = 0
+ranks = 2
+effects = []
+icon = "Spell_Frost_ManaRecharge"
+name = { en = "Icy Reach", de = "Eisige Reichweite", fr = "Portée glaciale", es = "Alcance helado", pt = "Alcance Gélido", ru = "Ледяной охват", pl = "Lodowy zasięg", tr = "Buzlu Erişim", it = "Portata gelida", ja = "アイシー・リーチ", zh = "冰冷延伸", ko = "얼음 범위 확대" }
+text = { en = "Howling Blast slows {v} more enemies.", de = "Heulende Böe verlangsamt {v} weitere Gegner.", fr = "Rafale hurlante ralentit {v} ennemis de plus.", es = "Ráfaga aullante ralentiza a {v} enemigos más.", pt = "Rajada Uivante reduz a velocidade de mais {v} inimigos.", ru = "Воющий ветер замедляет еще врагов: {v}.", pl = "Wyjąca zamieć spowalnia dodatkowych przeciwników: {v}.", tr = "Uluyan Patlama {v} düşmanı daha yavaşlatır.", it = "Esplosione ululante rallenta {v} nemici in più.", ja = "ハウリング・ブラストがスローにする敵が{v}体増えます。", zh = "凛风冲击额外减速{v}个敌人。", ko = "울부짖는 한파가 적을 {v}명 더 감속시킵니다." }
+menu_v = 1
+mods = [{ targets = ["howling_blast"] }]
+mods_v = 1.0
+
+[[talent]]
+key = "dk_nerves_of_cold_steel"
+tree = 1
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [4, 0.05] }]
+icon = "Ability_DualWield"
+name = { en = "Nerves of Cold Steel", de = "Nerven aus kaltem Stahl", fr = "Nerfs d'acier froid", es = "Nervios de acero frío", pt = "Nervos de Aço Frio", ru = "Нервы из холодной стали", pl = "Nerwy z zimnej stali", tr = "Soğuk Çelik Sinirler", it = "Nervi d'acciaio freddo", ja = "ナーヴ・オブ・コールド・スチール", zh = "冷钢之神经", ko = "냉철한 강철의 신경" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "dk_rime"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "howling_blast" }]
+icon = "Spell_Frost_FreezingBreath"
+name = { en = "Rime", de = "Raureif", fr = "Frimas", es = "Escarcha", pt = "Geada", ru = "Изморозь", pl = "Szron", tr = "Kırağı", it = "Brina", ja = "ライム", zh = "白霜", ko = "무서리" }
+text = { en = "Milestone. You start every run with Howling Blast, and critical strikes of Icy Touch and Obliterate call a free Howling Blast around you, at most once every {v} sec.", de = "Meilenstein. Du beginnst jeden Lauf mit Heulender Böe, und kritische Treffer von Eisiger Berührung und Auslöschen rufen eine kostenlose Heulende Böe um dich herum hervor, höchstens einmal alle {v} Sek.", fr = "Jalon. Tu commences chaque partie avec Rafale hurlante, et les coups critiques de Toucher de glace et d'Anéantissement déclenchent une Rafale hurlante gratuite autour de toi, au plus une fois toutes les {v} s.", es = "Hito. Empiezas cada partida con Ráfaga aullante, y los golpes críticos de Toque helado y Obliterar invocan una Ráfaga aullante gratuita a tu alrededor, como máximo una vez cada {v} s.", pt = "Marco. Você começa cada partida com Rajada Uivante, e acertos críticos de Toque Gélido e Obliterar chamam uma Rajada Uivante gratuita ao seu redor, no máximo uma vez a cada {v} s.", ru = "Веха. Ты начинаешь каждый забег с Воющего ветра, а критические удары Ледяного прикосновения и Уничтожения вызывают бесплатный Воющий ветер вокруг тебя, не чаще раза в {v} сек.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Wyjącą zamiecią, a trafienia krytyczne Lodowego dotyku i Unicestwienia wywołują wokół ciebie darmową Wyjącą zamieć, najwyżej raz na {v} s.", tr = "Dönüm noktası. Her oyuna Uluyan Patlama ile başlarsın ve Buzlu Dokunuş ile Yok Et kritik vuruşları çevrene bedava bir Uluyan Patlama indirir, her {v} sn'de en fazla bir kez.", it = "Traguardo. Inizi ogni partita con Esplosione ululante e i colpi critici di Tocco gelido e Annientare evocano un'Esplosione ululante gratuita attorno a te, al massimo una volta ogni {v} s.", ja = "【マイルストーン】毎ランをハウリング・ブラストを持って始め、アイシー・タッチとオブリタレートのクリティカルが周囲に無料のハウリング・ブラストを呼びます（{v}秒に1回まで）。", zh = "里程碑：你在每场对局开始时拥有凛风冲击，冰冷触摸和湮灭的暴击会在你周围召唤一次免费的凛风冲击，每{v}秒最多一次。", ko = "이정표. 모든 런을 울부짖는 한파를 가지고 시작하며, 얼음 손길과 절멸의 치명타가 주위에 울부짖는 한파를 무료로 일으킵니다. {v}초에 최대 한 번입니다." }
+menu_v = 2
+plays = [
+    { v = 1.0, play = { crit_cast = { keys = ["icy_touch", "obliterate"], school = 0, cast = "howling_blast", gap = 2.0 } } },
+]
+
+[[talent]]
+key = "dk_black_ice"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_DarkRitual"
+name = { en = "Black Ice", de = "Schwarzes Eis", fr = "Glace noire", es = "Hielo negro", pt = "Gelo Negro", ru = "Черный лед", pl = "Czarny lód", tr = "Kara Buz", it = "Ghiaccio nero", ja = "ブラック・アイス", zh = "黑冰", ko = "검은 얼음" }
+text = { en = "Frost spells deal {v}% more damage.", de = "Frostzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de givre infligent {v}% de dégâts en plus.", es = "Los hechizos de escarcha infligen un {v}% más de daño.", pt = "Feitiços de Gelo causam {v}% a mais de dano.", ru = "Заклинания льда наносят на {v}% больше урона.", pl = "Czary mrozu zadają o {v}% więcej obrażeń.", tr = "Buz büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Gelo infliggono il {v}% di danni in più.", ja = "冷気の呪文のダメージが{v}%増加します。", zh = "冰霜法术造成的伤害提高{v}%。", ko = "냉기 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = [{ school = 16 }]
+mods_v = 0.04
+
+[[talent]]
+key = "dk_merciless_combat"
+tree = 1
+row = 3
+col = 0
+ranks = 3
+effects = [{ stat = [20, 0.08] }]
+icon = "INV_Sword_112"
+name = { en = "Merciless Combat", de = "Gnadenloser Kampf", fr = "Combat impitoyable", es = "Combate despiadado", pt = "Combate Impiedoso", ru = "Беспощадный бой", pl = "Bezlitosna walka", tr = "Merhametsiz Dövüş", it = "Combattimento spietato", ja = "マーシレス・コンバット", zh = "无情战斗", ko = "무자비한 전투" }
+text = { en = "You deal {v}% more damage to enemies below 30% health.", de = "Du verursachst {v}% mehr Schaden an Feinden unter 30% Gesundheit.", fr = "Tu infliges {v}% de dégâts en plus aux ennemis à moins de 30% de vie.", es = "Infliges un {v}% más de daño a los enemigos con menos del 30% de salud.", pt = "Você causa {v}% a mais de dano a inimigos com menos de 30% de vida.", ru = "Ты наносишь на {v}% больше урона врагам со здоровьем ниже 30%.", pl = "Zadajesz o {v}% więcej obrażeń przeciwnikom poniżej 30% zdrowia.", tr = "Canı 30%'un altındaki düşmanlara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più ai nemici sotto il 30% di salute.", ja = "体力30%未満の敵に与えるダメージが{v}%増加します。", zh = "你对生命值低于30%的敌人造成的伤害提高{v}%。", ko = "생명력이 30% 미만인 적에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+
+[[talent]]
+key = "dk_chilblains"
+tree = 1
+row = 3
+col = 2
+ranks = 3
+req = "dk_rime"
+effects = [{ stat = [18, 0.06] }]
+icon = "Spell_Frost_Wisp"
+name = { en = "Chilblains", de = "Frostbeulen", fr = "Engelures", es = "Sabañones", pt = "Frieiras", ru = "Обморожение", pl = "Odmrożenia", tr = "Soğuk Yanığı", it = "Geloni", ja = "チルブレイン", zh = "冻疮", ko = "동창" }
+text = { en = "You deal {v}% more damage to frozen, stunned, slowed or fleeing enemies.", de = "Du verursachst {v}% mehr Schaden an eingefrorenen, betäubten, verlangsamten oder fliehenden Feinden.", fr = "Tu infliges {v}% de dégâts en plus aux ennemis gelés, étourdis, ralentis ou en fuite.", es = "Infliges un {v}% más de daño a los enemigos congelados, aturdidos, ralentizados o que huyen.", pt = "Você causa {v}% a mais de dano a inimigos congelados, atordoados, lentos ou em fuga.", ru = "Ты наносишь на {v}% больше урона замороженным, оглушенным, замедленным и бегущим врагам.", pl = "Zadajesz o {v}% więcej obrażeń zamrożonym, ogłuszonym, spowolnionym lub uciekającym przeciwnikom.", tr = "Donmuş, sersemlemiş, yavaşlamış veya kaçan düşmanlara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più ai nemici congelati, storditi, rallentati o in fuga.", ja = "凍結・スタン・スロー・逃走状態の敵に与えるダメージが{v}%増加します。", zh = "你对被冻结、昏迷、减速或逃跑的敌人造成的伤害提高{v}%。", ko = "빙결, 기절, 감속, 도주 상태인 적에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+
+[[talent]]
+key = "dk_threat_of_thassarian"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "obliterate" }]
+icon = "Ability_DualWieldSpecialization"
+name = { en = "Threat of Thassarian", de = "Bedrohung durch Thassarian", fr = "Menace de Thassarian", es = "Amenaza de Thassarian", pt = "Ameaça de Thassarian", ru = "Угроза Тассариана", pl = "Groza Thassariana", tr = "Thassarian'ın Tehdidi", it = "Minaccia di Thassarian", ja = "スレット・オブ・サッサリアン", zh = "萨萨里安的威胁", ko = "타사리안의 위협" }
+text = { en = "Milestone. You start every run with Obliterate, and Obliterate and Icy Touch strike twice: everything they hit is struck again at once for {v}% of the blow.", de = "Meilenstein. Du beginnst jeden Lauf mit Auslöschen, und Auslöschen und Eisige Berührung treffen doppelt: Alles, was sie treffen, wird sofort erneut für {v}% des Hiebs getroffen.", fr = "Jalon. Tu commences chaque partie avec Anéantissement, et Anéantissement et Toucher de glace frappent deux fois : tout ce qu'ils touchent est aussitôt frappé de nouveau pour {v}% du coup.", es = "Hito. Empiezas cada partida con Obliterar, y Obliterar y Toque helado golpean dos veces: todo lo que alcanzan es golpeado de nuevo al instante por un {v}% del golpe.", pt = "Marco. Você começa cada partida com Obliterar, e Obliterar e Toque Gélido atacam duas vezes: tudo que acertam é atingido de novo na hora por {v}% do golpe.", ru = "Веха. Ты начинаешь каждый забег с Уничтожения, а Уничтожение и Ледяное прикосновение бьют дважды: все, что они поражают, тут же получает повторный удар на {v}% от силы удара.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Unicestwieniem, a Unicestwienie i Lodowy dotyk uderzają dwukrotnie: wszystko, co trafią, dostaje natychmiast drugi cios za {v}% pierwszego.", tr = "Dönüm noktası. Her oyuna Yok Et ile başlarsın ve Yok Et ile Buzlu Dokunuş iki kez vurur: vurdukları her şeye hemen darbenin {v}%'si kadar yeniden vurulur.", it = "Traguardo. Inizi ogni partita con Annientare e Annientare e Tocco gelido colpiscono due volte: tutto ciò che colpiscono viene colpito di nuovo subito per il {v}% del colpo.", ja = "【マイルストーン】毎ランをオブリタレートを持って始め、オブリタレートとアイシー・タッチが2度命中します：命中したすべての敵に即座にもう一度その{v}%のダメージを与えます。", zh = "里程碑：你在每场对局开始时拥有湮灭，湮灭和冰冷触摸会打击两次：被击中的目标会立即再受到一次相当于该次攻击{v}%的伤害。", ko = "이정표. 모든 런을 절멸을 가지고 시작하며, 절멸과 얼음 손길이 두 번 적중합니다: 맞힌 모든 대상을 즉시 한 번 더 공격하여 그 피해의 {v}%를 줍니다." }
+menu_v = 0.5
+plays = [
+    { v = 0.5, play = { cleave = { keys = ["obliterate", "icy_touch"], n = 0, radius = 0.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "dk_annihilation"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "INV_Weapon_Hand_18"
+name = { en = "Annihilation", de = "Vernichtung", fr = "Annihilation", es = "Aniquilación", pt = "Aniquilação", ru = "Аннигиляция", pl = "Anihilacja", tr = "İmha", it = "Annichilimento", ja = "アナイアレーション", zh = "歼灭", ko = "전멸" }
+text = { en = "Obliterate, Icy Touch and Frost Strike deal {v}% more damage.", de = "Auslöschen, Eisige Berührung und Froststoß verursachen {v}% mehr Schaden.", fr = "Anéantissement, Toucher de glace et Frappe de givre infligent {v}% de dégâts en plus.", es = "Obliterar, Toque helado y Golpe de escarcha infligen un {v}% más de daño.", pt = "Obliterar, Toque Gélido e Golpe de Gelo causam {v}% a mais de dano.", ru = "Уничтожение, Ледяное прикосновение и Ледяной удар наносят на {v}% больше урона.", pl = "Unicestwienie, Lodowy dotyk i Lodowe uderzenie zadają o {v}% więcej obrażeń.", tr = "Yok Et, Buzlu Dokunuş ve Buz Darbesi {v}% daha fazla hasar verir.", it = "Annientare, Tocco gelido e Colpo di gelo infliggono il {v}% di danni in più.", ja = "オブリタレート、アイシー・タッチ、フロスト・ストライクのダメージが{v}%増加します。", zh = "湮灭、冰冷触摸和冰霜打击造成的伤害提高{v}%。", ko = "절멸, 얼음 손길, 냉기의 일격의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["obliterate", "icy_touch", "frost_strike"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "dk_frigid_dreadplate"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [5, 0.012] }]
+icon = "Spell_Frost_ChillingArmor"
+name = { en = "Frigid Dreadplate", de = "Eisige Schreckensplatte", fr = "Plaque d'effroi glaciale", es = "Placas pavorosas gélidas", pt = "Placa do Terror Gélida", ru = "Ледяные латы ужаса", pl = "Mroźna płyta grozy", tr = "Dondurucu Dehşet Zırhı", it = "Corazza del terrore gelida", ja = "フリジッド・ドレッドプレート", zh = "冰冷恐惧板甲", ko = "혹한의 공포판금" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.012
+
+[[talent]]
+key = "dk_endless_winter"
+tree = 1
+row = 5
+col = 2
+ranks = 3
+req = "dk_threat_of_thassarian"
+effects = []
+icon = "Spell_Shadow_Twilight"
+name = { en = "Endless Winter", de = "Endloser Winter", fr = "Hiver sans fin", es = "Invierno sin fin", pt = "Inverno Sem Fim", ru = "Бесконечная зима", pl = "Niekończąca się zima", tr = "Sonsuz Kış", it = "Inverno senza fine", ja = "エンドレス・ウィンター", zh = "无尽寒冬", ko = "끝없는 겨울" }
+text = { en = "Howling Blast and Obliterate cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Heulender Böe und Auslöschen sind {v}% kürzer.", fr = "Les délais de récupération de Rafale hurlante et d'Anéantissement sont réduits de {v}%.", es = "Los tiempos de reutilización de Ráfaga aullante y Obliterar son un {v}% más cortos.", pt = "Os tempos de recarga de Rajada Uivante e Obliterar são {v}% menores.", ru = "Время восстановления Воющего ветра и Уничтожения сокращено на {v}%.", pl = "Czasy odnowienia Wyjącej zamieci i Unicestwienia są krótsze o {v}%.", tr = "Uluyan Patlama ve Yok Et bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Esplosione ululante e Annientare sono più brevi del {v}%.", ja = "ハウリング・ブラストとオブリタレートのクールダウンが{v}%短くなります。", zh = "凛风冲击和湮灭的冷却时间缩短{v}%。", ko = "울부짖는 한파와 절멸의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["howling_blast", "obliterate"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "dk_hungering_cold"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "INV_Staff_15"
+name = { en = "Hungering Cold", de = "Hungrige Kälte", fr = "Froid dévorant", es = "Frío devorador", pt = "Frio Faminto", ru = "Ледяной голод", pl = "Głodny chłód", tr = "Açlık Soğuğu", it = "Freddo famelico", ja = "ハンガリング・コールド", zh = "饥饿之寒", ko = "굶주린 한기" }
+text = { en = "Capstone. Enemies slain by Icy Touch, Frost Strike or Obliterate shatter for {v}% of their maximum health on everything within 6 yd.", de = "Schlussstein. Durch Eisige Berührung, Froststoß oder Auslöschen getötete Feinde zerspringen und verursachen {v}% ihrer maximalen Gesundheit an allem im Umkreis von 6 m.", fr = "Clé de voûte. Les ennemis tués par Toucher de glace, Frappe de givre ou Anéantissement éclatent et infligent {v}% de leur santé maximale à tout ce qui se trouve à moins de 6 m.", es = "Piedra angular. Los enemigos muertos por Toque helado, Golpe de escarcha u Obliterar estallan e infligen un {v}% de su salud máxima a todo lo que esté a menos de 6 m.", pt = "Ápice. Inimigos mortos por Toque Gélido, Golpe de Gelo ou Obliterar se estilhaçam e causam {v}% da vida máxima deles a tudo num raio de 6 m.", ru = "Вершина. Враги, убитые Ледяным прикосновением, Ледяным ударом или Уничтожением, разлетаются на осколки и наносят {v}% своего максимального здоровья всему в радиусе 6 м.", pl = "Zwieńczenie. Przeciwnicy zabici Lodowym dotykiem, Lodowym uderzeniem lub Unicestwieniem rozpadają się za {v}% swojego maksymalnego zdrowia, raniąc wszystko w promieniu 6 m.", tr = "Zirve. Buzlu Dokunuş, Buz Darbesi veya Yok Et ile öldürülen düşmanlar parçalanır, 6 m içindeki her şeye azami canlarının {v}%'si kadar hasar verir.", it = "Vertice. I nemici uccisi da Tocco gelido, Colpo di gelo o Annientare si frantumano per il {v}% della loro salute massima su tutto entro 6 m.", ja = "【キャップストーン】アイシー・タッチ、フロスト・ストライク、オブリタレートで倒した敵が砕け散り、6ヤード以内のすべてに最大体力の{v}%のダメージを与えます。", zh = "终极天赋：被冰冷触摸、冰霜打击或湮灭消灭的敌人会碎裂，对6码内的所有目标造成相当于其最大生命值{v}%的伤害。", ko = "궁극 특성. 얼음 손길, 냉기의 일격, 절멸로 처치한 적이 산산조각 나 6미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 줍니다." }
+menu_v = 0.2
+plays = [
+    { v = 0.2, play = { kill_burst = { keys = ["icy_touch", "frost_strike", "obliterate"], dotted = false, radius = 6.0, gap = 0.0 } } },
+]
+
+[[talent]]
+key = "dk_vicious_strikes"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "Spell_Deathknight_SummonDeathCharger"
+name = { en = "Vicious Strikes", de = "Bösartige Stöße", fr = "Frappes vicieuses", es = "Golpes viciosos", pt = "Golpes Violentos", ru = "Злобные удары", pl = "Okrutne uderzenia", tr = "Zalim Darbeler", it = "Colpi crudeli", ja = "ヴィシャス・ストライク", zh = "恶毒打击", ko = "잔인한 일격" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "dk_virulence"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Shadow_BurningSpirit"
+name = { en = "Virulence", de = "Virulenz", fr = "Virulence", es = "Virulencia", pt = "Virulência", ru = "Вирулентность", pl = "Zjadliwość", tr = "Zehirlilik", it = "Virulenza", ja = "ヴィルレンス", zh = "致病", ko = "악성" }
+text = { en = "Your damage-over-time effects deal {v}% more damage.", de = "Deine Effekte für Schaden über Zeit verursachen {v}% mehr Schaden.", fr = "Tes effets de dégâts sur la durée infligent {v}% de dégâts en plus.", es = "Tus efectos de daño a lo largo del tiempo infligen un {v}% más de daño.", pt = "Seus efeitos de dano ao longo do tempo causam {v}% a mais de dano.", ru = "Твои эффекты периодического урона наносят на {v}% больше урона.", pl = "Twoje obrażenia w czasie zadają o {v}% więcej obrażeń.", tr = "Zamanla hasar efektlerin {v}% daha fazla hasar verir.", it = "I tuoi effetti di danno nel tempo infliggono il {v}% di danni in più.", ja = "継続ダメージ効果のダメージが{v}%増加します。", zh = "你的持续伤害效果造成的伤害提高{v}%。", ko = "지속 피해 효과의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = ["dots"]
+mods_v = 0.05
+
+[[talent]]
+key = "dk_epidemic"
+tree = 2
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Shadow_ShadowWordPain"
+name = { en = "Epidemic", de = "Epidemie", fr = "Épidémie", es = "Epidemia", pt = "Epidemia", ru = "Эпидемия", pl = "Epidemia", tr = "Salgın Hastalık", it = "Epidemia", ja = "エピデミック", zh = "流行病", ko = "전염병" }
+text = { en = "Your damage-over-time effects last {v}% longer.", de = "Deine Effekte für Schaden über Zeit halten {v}% länger an.", fr = "Tes effets de dégâts sur la durée durent {v}% plus longtemps.", es = "Tus efectos de daño con el tiempo duran un {v}% más.", pt = "Seus efeitos de dano ao longo do tempo duram {v}% a mais.", ru = "Твои эффекты периодического урона длятся на {v}% дольше.", pl = "Twoje efekty obrażeń w czasie trwają o {v}% dłużej.", tr = "Zamanla hasar efektlerin {v}% daha uzun sürer.", it = "I tuoi effetti di danno nel tempo durano il {v}% in più.", ja = "継続ダメージ効果の持続時間が{v}%延びます。", zh = "你的持续伤害效果的持续时间延长{v}%。", ko = "지속 피해 효과의 지속시간이 {v}% 길어집니다." }
+menu_v = 0.1
+mods = ["dot_duration"]
+mods_v = 0.1
+
+[[talent]]
+key = "dk_morbidity"
+tree = 2
+row = 1
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_DeathAndDecay"
+name = { en = "Morbidity", de = "Morbidität", fr = "Morbidité", es = "Morbilidad", pt = "Morbidade", ru = "Болезненность", pl = "Chorobliwość", tr = "Hastalıklılık", it = "Morbilità", ja = "モービディティ", zh = "病态", ko = "병적 상태" }
+text = { en = "Death Coil and Death and Decay deal {v}% more damage.", de = "Todesmantel und Tod und Verfall verursachen {v}% mehr Schaden.", fr = "Volute de mort et Mort et décomposition infligent {v}% de dégâts en plus.", es = "Espiral de muerte y Muerte y descomposición infligen un {v}% más de daño.", pt = "Espiral da Morte e Morte e Decomposição causam {v}% a mais de dano.", ru = "Лик смерти и Смерть и разложение наносят на {v}% больше урона.", pl = "Splot śmierci i Śmierć i rozkład zadają o {v}% więcej obrażeń.", tr = "Ölüm Sarmalı ve Ölüm ve Çürüme {v}% daha fazla hasar verir.", it = "Spira della morte e Morte e decomposizione infliggono il {v}% di danni in più.", ja = "デス・コイルとデス・アンド・ディケイのダメージが{v}%増加します。", zh = "死亡缠绕和枯萎凋零造成的伤害提高{v}%。", ko = "죽음의 고리와 죽음과 부패의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["dk_death_coil", "death_and_decay"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "dk_master_of_ghouls"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_AnimateDead"
+name = { en = "Master of Ghouls", de = "Meister der Ghule", fr = "Maître des goules", es = "Maestro de necrófagos", pt = "Mestre dos Carniçais", ru = "Повелитель вурдалаков", pl = "Mistrz ghuli", tr = "Gulyabani Ustası", it = "Maestro dei ghoul", ja = "マスター・オブ・グール", zh = "食尸鬼大师", ko = "구울의 대가" }
+text = { en = "Milestone. A ghoul rises at your side for good and claws at whatever you fight.", de = "Meilenstein. Ein Ghul erhebt sich dauerhaft an deiner Seite und zerkratzt alles, was du bekämpfst.", fr = "Jalon. Une goule se dresse définitivement à tes côtés et griffe tout ce que tu combats.", es = "Hito. Un necrófago se alza para siempre a tu lado y arañará todo lo que combatas.", pt = "Marco. Um carniçal se ergue para sempre ao seu lado e arranha tudo o que você enfrenta.", ru = "Веха. Вурдалак навсегда встает рядом с тобой и рвет когтями всех, с кем ты сражаешься.", pl = "Kamień milowy. U twego boku powstaje na stałe ghul i szarpie pazurami to, z czym walczysz.", tr = "Dönüm noktası. Yanında kalıcı bir gulyabani kalkar ve savaştığın şeyi pençeler.", it = "Traguardo. Un ghoul si leva per sempre al tuo fianco e artiglia ciò che combatti.", ja = "【マイルストーン】グールが常に傍らに立ち、あなたが戦う相手を爪で引き裂きます。", zh = "里程碑：一个食尸鬼永久在你身边复活，抓挠你正在战斗的一切目标。", ko = "이정표. 구울이 영구히 곁에 일어나 당신이 싸우는 적을 할큅니다." }
+plays = [
+    { v = 0.0, play = { pet = { pet = "ghoul", cleave = false } } },
+]
+
+[[talent]]
+key = "dk_outbreak"
+tree = 2
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_PlagueCloud"
+name = { en = "Outbreak", de = "Ausbruch", fr = "Épidémie soudaine", es = "Brote", pt = "Surto", ru = "Вспышка", pl = "Wybuch epidemii", tr = "Salgın Patlaması", it = "Focolaio", ja = "アウトブレイク", zh = "爆发", ko = "발병" }
+text = { en = "Plague Strike, Pestilence, Scourge Strike and Unholy Blight deal {v}% more damage.", de = "Seuchenstoß, Pestilenz, Geißelstoß und Unheilige Verseuchung verursachen {v}% mehr Schaden.", fr = "Frappe de peste, Pestilence, Frappe du Fléau et Flétrissure impie infligent {v}% de dégâts en plus.", es = "Golpe de plaga, Pestilencia, Golpe de la Plaga y Añublo profano infligen un {v}% más de daño.", pt = "Golpe de Praga, Pestilência, Golpe do Flagelo e Praga Profana causam {v}% a mais de dano.", ru = "Удар чумы, Мор, Удар Плети и Нечестивая порча наносят на {v}% больше урона.", pl = "Cios zarazy, Pomór, Cios Plagi i Nieświęta plaga zadają o {v}% więcej obrażeń.", tr = "Veba Darbesi, Salgın, Yıkım Darbesi ve Kutsal Olmayan Kırağı {v}% daha fazla hasar verir.", it = "Colpo pestilente, Pestilenza, Colpo del Flagello e Morbo empio infliggono il {v}% di danni in più.", ja = "プレイグ・ストライク、ペスティレンス、スカージ・ストライク、アンホーリー・ブライトのダメージが{v}%増加します。", zh = "瘟疫打击、传染、天灾打击和邪恶虫群造成的伤害提高{v}%。", ko = "역병의 일격, 역병, 스컬지의 일격, 부정의 역병의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["plague_strike", "pestilence", "scourge_strike", "unholy_blight"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "dk_crypt_fever"
+tree = 2
+row = 3
+col = 0
+ranks = 3
+effects = [{ stat = [21, 0.04] }]
+icon = "Spell_Shadow_CallofBone"
+name = { en = "Crypt Fever", de = "Gruftfieber", fr = "Fièvre des cryptes", es = "Fiebre de las criptas", pt = "Febre da Cripta", ru = "Лихорадка склепа", pl = "Krypta gorączki", tr = "Mahzen Humması", it = "Febbre della cripta", ja = "クリプト・フィーバー", zh = "墓穴热病", ko = "납골당 열병" }
+text = { en = "You deal {v}% more damage to enemies suffering your damage-over-time effects.", de = "Du verursachst {v}% mehr Schaden an Feinden, die unter deinen Effekten für Schaden über Zeit leiden.", fr = "Tu infliges {v}% de dégâts en plus aux ennemis qui subissent tes effets de dégâts sur la durée.", es = "Infliges un {v}% más de daño a los enemigos que sufren tus efectos de daño con el tiempo.", pt = "Você causa {v}% a mais de dano a inimigos sob seus efeitos de dano ao longo do tempo.", ru = "Ты наносишь на {v}% больше урона врагам под действием твоих эффектов периодического урона.", pl = "Zadajesz o {v}% więcej obrażeń przeciwnikom cierpiącym od twoich efektów obrażeń w czasie.", tr = "Zamanla hasar efektlerinden etkilenen düşmanlara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più ai nemici afflitti dai tuoi effetti di danno nel tempo.", ja = "あなたの継続ダメージ効果を受けている敵に与えるダメージが{v}%増加します。", zh = "你对受到你的持续伤害效果影响的敌人造成的伤害提高{v}%。", ko = "지속 피해 효과에 걸린 적에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "dk_ravenous_dead"
+tree = 2
+row = 3
+col = 2
+ranks = 3
+req = "dk_master_of_ghouls"
+effects = [{ stat = [17, 0.1] }]
+icon = "Ability_GhoulFrenzy"
+name = { en = "Ravenous Dead", de = "Gefräßige Tote", fr = "Morts voraces", es = "Muertos voraces", pt = "Mortos Vorazes", ru = "Ненасытные мертвецы", pl = "Żarłoczni zmarli", tr = "Obur Ölüler", it = "Morti voraci", ja = "ラヴェナス・デッド", zh = "贪婪亡者", ko = "굶주린 망자" }
+text = { en = "Your ghouls deal {v}% more damage.", de = "Deine Ghule verursachen {v}% mehr Schaden.", fr = "Tes goules infligent {v}% de dégâts en plus.", es = "Tus necrófagos infligen un {v}% más de daño.", pt = "Seus carniçais causam {v}% a mais de dano.", ru = "Твои вурдалаки наносят на {v}% больше урона.", pl = "Twoje ghule zadają o {v}% więcej obrażeń.", tr = "Gulyabanilerin {v}% daha fazla hasar verir.", it = "I tuoi ghoul infliggono il {v}% di danni in più.", ja = "グールのダメージが{v}%増加します。", zh = "你的食尸鬼造成的伤害提高{v}%。", ko = "구울의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+
+[[talent]]
+key = "dk_wandering_plague"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "plague_strike" }]
+icon = "Spell_Shadow_CreepingPlague"
+name = { en = "Wandering Plague", de = "Wandernde Seuche", fr = "Peste errante", es = "Plaga errante", pt = "Praga Errante", ru = "Блуждающая чума", pl = "Wędrująca plaga", tr = "Gezgin Veba", it = "Piaga errante", ja = "ワンダリング・プレイグ", zh = "游荡瘟疫", ko = "떠도는 역병" }
+text = { en = "Milestone. You start every run with Plague Strike, and an enemy that dies with your damage-over-time effects on it passes each of them to the enemy nearest it.", de = "Meilenstein. Du beginnst jeden Lauf mit Seuchenstoß, und ein Feind, der mit deinen Effekten für Schaden über Zeit stirbt, gibt jeden davon an den ihm nächsten Feind weiter.", fr = "Jalon. Tu commences chaque partie avec Frappe de peste, et un ennemi qui meurt sous tes effets de dégâts sur la durée les transmet chacun à l'ennemi le plus proche.", es = "Hito. Empiezas cada partida con Golpe de plaga, y un enemigo que muere con tus efectos de daño con el tiempo se los pasa uno a uno al enemigo más cercano.", pt = "Marco. Você começa cada partida com Golpe de Praga, e um inimigo que morre com seus efeitos de dano ao longo do tempo passa cada um deles ao inimigo mais próximo.", ru = "Веха. Ты начинаешь каждый забег с Удара чумы, а враг, умирающий под твоими эффектами периодического урона, передает каждый из них ближайшему врагу.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Ciosem zarazy, a przeciwnik, który umiera z twoimi efektami obrażeń w czasie, przekazuje każdy z nich najbliższemu przeciwnikowi.", tr = "Dönüm noktası. Her oyuna Veba Darbesi ile başlarsın ve üzerinde zamanla hasar efektlerin olan bir düşman ölünce her birini ona en yakın düşmana geçirir.", it = "Traguardo. Inizi ogni partita con Colpo pestilente e un nemico che muore con i tuoi effetti di danno nel tempo addosso li passa tutti al nemico più vicino.", ja = "【マイルストーン】毎ランをプレイグ・ストライクを持って始め、あなたの継続ダメージ効果を受けたまま死んだ敵は、そのすべてを最も近い敵に移します。", zh = "里程碑：你在每场对局开始时拥有瘟疫打击，身上带有你的持续伤害效果的敌人死亡时，会将每个效果传给离它最近的敌人。", ko = "이정표. 모든 런을 역병의 일격을 가지고 시작하며, 지속 피해 효과에 걸린 적이 죽으면 각 효과가 가장 가까운 적에게 옮겨 갑니다." }
+plays = [
+    # Every damage over time of the death knight's: Plague Strike's, Pestilence's, Unholy
+    # Blight's diseases.
+    { v = 1.0, play = { contagion = { radius = 10.0, keys = [] } } },
+]
+
+[[talent]]
+key = "dk_desecration"
+tree = 2
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_ShadowFury"
+name = { en = "Desecration", de = "Entweihung", fr = "Profanation", es = "Profanación", pt = "Profanação", ru = "Осквернение", pl = "Zbezczeszczenie", tr = "Kirletme", it = "Dissacrazione", ja = "デセクレーション", zh = "亵渎", ko = "모독" }
+text = { en = "Death and Decay covers {v}% more ground.", de = "Tod und Verfall bedeckt {v}% mehr Fläche.", fr = "Mort et décomposition couvre {v}% de terrain en plus.", es = "Muerte y descomposición cubre un {v}% más de terreno.", pt = "Morte e Decomposição cobre {v}% mais terreno.", ru = "Смерть и разложение покрывает на {v}% больше земли.", pl = "Śmierć i rozkład pokrywa o {v}% więcej terenu.", tr = "Ölüm ve Çürüme {v}% daha fazla alan kaplar.", it = "Morte e decomposizione copre il {v}% di terreno in più.", ja = "デス・アンド・ディケイの効果範囲が{v}%広がります。", zh = "枯萎凋零覆盖的范围扩大{v}%。", ko = "죽음과 부패의 범위가 {v}% 넓어집니다." }
+menu_v = 0.1
+mods = [{ area = ["death_and_decay"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "dk_magic_suppression"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Shadow_AntiMagicShell"
+name = { en = "Magic Suppression", de = "Magieunterdrückung", fr = "Suppression de la magie", es = "Supresión de magia", pt = "Supressão Mágica", ru = "Подавление магии", pl = "Tłumienie magii", tr = "Büyü Bastırma", it = "Soppressione magica", ja = "マジック・サプレッション", zh = "魔法抑制", ko = "마법 억제" }
+text = { en = "Anti-Magic Shell holds {v}% more.", de = "Antimagische Hülle hält {v}% mehr aus.", fr = "Carapace anti-magie absorbe {v}% de plus.", es = "Coraza antimagia absorbe un {v}% más.", pt = "Carapaça Antimagia aguenta {v}% a mais.", ru = "Антимагический панцирь поглощает на {v}% больше.", pl = "Powłoka antymagiczna pochłania o {v}% więcej.", tr = "Anti-Büyü Kabuğu {v}% daha fazla tutar.", it = "Guscio anti-magia regge il {v}% in più.", ja = "アンチマジック・シェルの吸収量が{v}%増加します。", zh = "反魔法护罩的吸收量提高{v}%。", ko = "대마법 보호막의 흡수량이 {v}% 증가합니다." }
+menu_v = 0.2
+mods = [{ damage = ["anti_magic_shell"] }]
+mods_v = 0.2
+
+[[talent]]
+key = "dk_ebon_plaguebringer"
+tree = 2
+row = 5
+col = 2
+ranks = 1
+req = "dk_wandering_plague"
+effects = []
+icon = "Ability_Creature_Cursed_03"
+name = { en = "Ebon Plaguebringer", de = "Schwarzer Seuchenbringer", fr = "Porte-peste d'ébène", es = "Pesteador de ébano", pt = "Pestífero de Ébano", ru = "Эбонитовый разносчик чумы", pl = "Hebanowy siewca plagi", tr = "Abanoz Veba Getiren", it = "Portatore di peste d'ebano", ja = "エボン・プレイグブリンガー", zh = "黑锋瘟疫使者", ko = "칠흑의 역병인도자" }
+text = { en = "Your damage-over-time spells take {v} more target.", de = "Deine Zauber für Schaden über Zeit erfassen {v} weiteres Ziel.", fr = "Tes sorts de dégâts sur la durée touchent {v} cible de plus.", es = "Tus hechizos de daño con el tiempo afectan a {v} objetivo más.", pt = "Seus feitiços de dano ao longo do tempo atingem mais {v} alvo.", ru = "Твои заклинания периодического урона поражают на {v} цель больше.", pl = "Twoje czary zadające obrażenia w czasie obejmują dodatkowe cele: {v}.", tr = "Zamanla hasar büyülerin {v} hedef daha alır.", it = "I tuoi incantesimi di danno nel tempo colpiscono {v} bersaglio in più.", ja = "継続ダメージ呪文の対象が{v}体増えます。", zh = "你的持续伤害法术额外影响{v}个目标。", ko = "지속 피해 주문이 대상을 {v}명 더 공격합니다." }
+menu_v = 1
+mods = ["dot_targets"]
+mods_v = 1.0
+
+[[talent]]
+key = "dk_army_of_the_dead"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "scourge_strike" }]
+icon = "Spell_Deathknight_ArmyOfTheDead"
+name = { en = "Army of the Dead", de = "Armee der Toten", fr = "Armée des morts", es = "Ejército de muertos", pt = "Exército dos Mortos", ru = "Войско мертвых", pl = "Armia umarłych", tr = "Ölüler Ordusu", it = "Armata dei Morti", ja = "アーミー・オブ・ザ・デッド", zh = "亡者大军", ko = "사자의 군대" }
+text = { en = "Capstone. You start every run with Scourge Strike, and the dead answer your call: every {v} sec, 3 ghouls rise to fight at your side for 12 sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Geißelstoß, und die Toten folgen deinem Ruf: Alle {v} Sek. erheben sich 3 Ghule, um 12 Sek. an deiner Seite zu kämpfen.", fr = "Clé de voûte. Tu commences chaque partie avec Frappe du Fléau, et les morts répondent à ton appel : toutes les {v} s, 3 goules se lèvent et combattent à tes côtés pendant 12 s.", es = "Piedra angular. Empiezas cada partida con Golpe de la Plaga, y los muertos responden a tu llamada: cada {v} s, 3 necrófagos se alzan y luchan a tu lado durante 12 s.", pt = "Ápice. Você começa cada partida com Golpe do Flagelo, e os mortos atendem ao seu chamado: a cada {v} s, 3 carniçais se erguem para lutar ao seu lado por 12 s.", ru = "Вершина. Ты начинаешь каждый забег с Удара Плети, и мертвые отвечают на твой зов: каждые {v} сек. 3 вурдалака встают и сражаются рядом с тобой 12 сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Ciosem Plagi, a umarli odpowiadają na twoje wezwanie: co {v} s powstają 3 ghule, które walczą u twego boku przez 12 s.", tr = "Zirve. Her oyuna Yıkım Darbesi ile başlarsın ve ölüler çağrına cevap verir: her {v} sn'de 3 gulyabani kalkıp 12 sn yanında savaşır.", it = "Vertice. Inizi ogni partita con Colpo del Flagello e i morti rispondono al tuo richiamo: ogni {v} s, 3 ghoul si levano a combattere al tuo fianco per 12 s.", ja = "【キャップストーン】毎ランをスカージ・ストライクを持って始め、死者があなたの呼びかけに応えます：{v}秒ごとに3体のグールが蘇り、12秒間共に戦います。", zh = "终极天赋：你在每场对局开始时拥有天灾打击，亡者回应你的召唤：每{v}秒，3个食尸鬼复活并在你身边作战12秒。", ko = "궁극 특성. 모든 런을 스컬지의 일격을 가지고 시작하며, 망자가 부름에 응답합니다: {v}초마다 구울 3마리가 일어나 12초 동안 곁에서 싸웁니다." }
+menu_v = 20
+plays = [
+    { v = 20.0, play = { summon = { pets = ["ghoul"], n = 3, lasts = 12.0, spread = 0.0, most = 6, floor = 0.43 } } },
+]

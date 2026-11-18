@@ -1,0 +1,24 @@
+# Keristrasza: Crystalfire Breath, Crystal Chains, Tail Sweep then Crystallize, Intense Cold.
+
+[[boss]]
+key = "keristrasza"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 48096, range = 16.0, arc = 70.0, warn = 1.4, factor = 2.8 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { tether = { spell = 50997, reach = 16.0, warn = 1.6, lasts = 5.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ stomp = { spell = 50155, radius = 9.0, warn = 1.8, knock = 13.0 } }, { nova = { spell = 48179, radius = 11.0, warn = 2.2 } }], 1.6] }
+
+[[boss.kit]]
+every = 16.0
+ability = { ring = { spell = 48094, radius = 13.0, warn = 2.0, lasts = 6.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

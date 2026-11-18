@@ -1,0 +1,76 @@
+key = "warlock"
+# The `ChrClasses` id.
+id = 9
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [3, 4, 5, 6, 7, 0, 1, 2]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 165
+# A smaller pickup radius keeps collecting orbs part of fighting at range.
+pickup_pct = -25
+power = "mana"
+starter = "shadow_bolt"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's.
+races = [1, 7, 12, 2, 5, 10, 9]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    35, # Bent Staff
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 48020
+dash_legend = { en = "Your Demonic Circle stands its whole time, and its burst is half again as strong and fears.", de = "Dein Dämonischer Zirkel bleibt seine ganze Zeit stehen, und sein Ausbruch ist um die Hälfte stärker und versetzt in Furcht.", fr = "Ton Cercle démoniaque reste tout son temps, et son explosion est de moitié plus forte et terrorise.", es = "Tu Círculo demoníaco se mantiene todo su tiempo, y su estallido es la mitad más fuerte y aterroriza.", pt = "Seu Círculo Demoníaco permanece durante todo o seu tempo, e sua explosão é metade mais forte e aterroriza.", ru = "Твой Круг демонов стоит все свое время, а его взрыв сильнее наполовину и внушает ужас.", pl = "Twój Demoniczny krąg stoi przez cały swój czas, a jego wybuch jest o połowę silniejszy i przeraża.", tr = "Şeytani Dairen tüm süre boyunca durur; patlaması yarı kadar daha güçlüdür ve korkutur.", it = "Il tuo Cerchio demoniaco resta per tutta la durata e la sua esplosione è più forte della metà e terrorizza.", ja = "デモニック・サークルが持続時間いっぱい残り、その炸裂が1.5倍の威力になって敵を恐怖させます。", zh = "你的恶魔法阵会持续整个时间，其爆发强度提高一半，并会造成恐惧。", ko = "악마의 마법진이 지속시간 내내 유지되며, 그 폭발이 1.5배 강해지고 공포를 겁니다." }
+bot_name = "Botwarlock"
+bot_order = 8
+name = { en = "Warlock", de = "Hexenmeister", fr = "Démoniste", es = "Brujo", pt = "Bruxo", ru = "Чернокнижник", pl = "Czarnoksiężnik", tr = "Kara Büyücü", it = "Stregone", ja = "ウォーロック", zh = "术士", ko = "흑마법사" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [0.58, 0.51, 0.79]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "warlock_fel"
+tone = 5
+price = 12000
+name = { en = "Fel Pact", de = "Teufelspakt", fr = "Pacte gangrené", es = "Pacto vil", pt = "Pacto Vil", ru = "Пакт Скверны", pl = "Pakt Zła", tr = "Fel Paktı", it = "Patto vile", ja = "フェルの契約", zh = "邪能契约", ko = "지옥 서약" }
+
+[[colors]]
+key = "warlock_void"
+tone = 11
+price = 12000
+name = { en = "Void Pact", de = "Leerenpakt", fr = "Pacte du Vide", es = "Pacto del Vacío", pt = "Pacto do Vazio", ru = "Пакт Бездны", pl = "Pakt Pustki", tr = "Boşluk Paktı", it = "Patto del Vuoto", ja = "ヴォイドの契約", zh = "虚空契约", ko = "공허 서약" }
+
+[[colors]]
+key = "warlock_ember"
+tone = 2
+price = 15000
+name = { en = "Infernal Pact", de = "Infernopakt", fr = "Pacte infernal", es = "Pacto infernal", pt = "Pacto Infernal", ru = "Пакт преисподней", pl = "Piekielny pakt", tr = "Cehennem Paktı", it = "Patto infernale", ja = "インファーナルの契約", zh = "地狱契约", ko = "지옥불 서약" }
+
+[[colors]]
+key = "warlock_blood"
+tone = 1
+price = 15000
+name = { en = "Blood Pact", de = "Blutpakt", fr = "Pacte de sang", es = "Pacto de sangre", pt = "Pacto de Sangue", ru = "Пакт крови", pl = "Pakt krwi", tr = "Kan Paktı", it = "Patto di sangue", ja = "血の契約", zh = "鲜血契约", ko = "피의 서약" }
+
+[[colors]]
+key = "warlock_rose"
+tone = 12
+price = 18000
+name = { en = "Rose Pact", de = "Rosenpakt", fr = "Pacte de rose", es = "Pacto de rosa", pt = "Pacto da Rosa", ru = "Пакт розы", pl = "Różany pakt", tr = "Gül Paktı", it = "Patto della rosa", ja = "薔薇の契約", zh = "玫瑰契约", ko = "장미 서약" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "warlock_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "warlock_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

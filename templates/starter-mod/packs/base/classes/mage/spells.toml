@@ -1,0 +1,321 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "fireball"
+id = 133
+visual = 910038
+vfx = { source = 133, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "fire"
+shape = { strike = { targets = 1 } }
+hit = 51
+cooldown = 1.3
+range = 30.0
+name = { en = "Fireball", de = "Feuerball", fr = "Boule de feu", es = "Bola de fuego", pt = "Bola de Fogo", ru = "Огненный шар", pl = "Kula ognia", tr = "Ateş Topu", it = "Palla di fuoco", ja = "ファイアボール", zh = "火球术", ko = "화염구" }
+icon = "Spell_Fire_FlameBolt"
+
+[[spell]]
+key = "frostbolt"
+id = 116
+visual = 910039
+vfx = { source = 116, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "frost"
+shape = { strike = { targets = 1 } }
+hit = 37
+cooldown = 1.5
+range = 30.0
+rider = { slow = { pct = 50, secs = 3.0 } }
+name = { en = "Frostbolt", de = "Frostblitz", fr = "Éclair de givre", es = "Descarga de escarcha", pt = "Seta de Gelo", ru = "Ледяная стрела", pl = "Lodowy pocisk", tr = "Buz Oku", it = "Dardo di ghiaccio", ja = "フロストボルト", zh = "寒冰箭", ko = "얼음화살" }
+icon = "Spell_Frost_FrostBolt02"
+
+[[spell]]
+key = "arcane_missiles"
+id = 5143
+visual = 910040
+vfx = { source = 42845, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "spells/mage_arcanebarrage_impact.mdx", slot = "chest", scale = 0.55 } }
+school = "arcane"
+shape = { missiles = { count = 4 } }
+hit = 25
+cooldown = 1.8
+range = 28.0
+# 5143 is the channel: its SpellVisual holds only the channel kit, so a cast of it draws nothing.
+# The missiles fly from the spell it triggers each beat; rank 13's, 42845 (visual 270, the arcane
+# missile model), is shown instead. Ours.
+name = { en = "Arcane Missiles", de = "Arkane Geschosse", fr = "Projectiles des arcanes", es = "Misiles Arcanos", pt = "Mísseis Arcanos", ru = "Чародейские стрелы", pl = "Magiczne pociski", tr = "Gizemli Füzeler", it = "Dardi arcani", ja = "アーケイン・ミサイル", zh = "奥术飞弹", ko = "신비한 화살" }
+icon = "Spell_Nature_StarFall"
+
+[[spell]]
+key = "frost_nova"
+id = 122
+visual = 910041
+vfx = { source = 122, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { nova = { radius = 10.0 } }
+hit = 6
+cooldown = 7.0
+range = 10.0
+rider = { root = { secs = 3.0 } }
+name = { en = "Frost Nova", de = "Frostnova", fr = "Nova de givre", es = "Nova de escarcha", pt = "Nova de Gelo", ru = "Кольцо льда", pl = "Lodowa nova", tr = "Buz Nova", it = "Nova di ghiaccio", ja = "フロスト・ノヴァ", zh = "冰霜新星", ko = "얼음 회오리" }
+icon = "Spell_Frost_FrostNova"
+
+[[spell]]
+key = "arcane_explosion"
+id = 1449
+visual = 910042
+vfx = { source = 1449, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "spells/mage_arcanebarrage_impact.mdx", slot = "chest", scale = 0.55 } }
+school = "arcane"
+shape = { nova = { radius = 9.0 } }
+hit = 13
+cooldown = 2.5
+range = 9.0
+name = { en = "Arcane Explosion", de = "Arkane Explosion", fr = "Explosion des arcanes", es = "Explosión Arcana", pt = "Explosão Arcana", ru = "Взрыв чародейства", pl = "Magiczna eksplozja", tr = "Gizemli Patlama", it = "Esplosione arcana", ja = "アーケイン・エクスプロージョン", zh = "魔爆术", ko = "신비한 폭발" }
+icon = "Spell_Nature_WispSplode"
+
+[[spell]]
+key = "blizzard"
+id = 10
+visual = 910043
+vfx = { source = 10, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { ground = { radius = 9.0, every = 1.0, secs = 7.0 } }
+hit = 30
+cooldown = 8.0
+range = 30.0
+rider = { slow = { pct = 40, secs = 1.5 } }
+name = { en = "Blizzard", de = "Blizzard", fr = "Blizzard", es = "Ventisca", pt = "Nevasca", ru = "Снежная буря", pl = "Zamieć", tr = "Kar Fırtınası", it = "Bufera di neve", ja = "ブリザード", zh = "暴风雪", ko = "눈보라" }
+icon = "Spell_Frost_IceStorm"
+
+[[spell]]
+key = "flamestrike"
+id = 2120
+visual = 910044
+vfx = { source = 2120, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { ground = { radius = 8.0, every = 2.0, secs = 6.0 } }
+hit = 27
+cooldown = 7.0
+range = 30.0
+name = { en = "Flamestrike", de = "Flammenstoß", fr = "Choc de flammes", es = "Choque de llamas", pt = "Impacto de Chamas", ru = "Огненный столб", pl = "Ognisty słup", tr = "Alev Çarpması", it = "Colonna di fuoco", ja = "フレイムストライク", zh = "烈焰风暴", ko = "불기둥" }
+icon = "Spell_Fire_SelfDestruct"
+
+[[spell]]
+key = "fire_blast"
+id = 2136
+visual = 910045
+vfx = { source = 2136, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { missiles = { count = 1 } }
+hit = 68
+cooldown = 3.0
+range = 22.0
+name = { en = "Fire Blast", de = "Feuerschlag", fr = "Explosion de feu", es = "Explosión de fuego", pt = "Explosão de Fogo", ru = "Огненный взрыв", pl = "Ognisty podmuch", tr = "Ateş Patlaması", it = "Vampata", ja = "ファイア・ブラスト", zh = "火焰冲击", ko = "화염 작렬" }
+icon = "Spell_Fire_Fireball"
+
+[[spell]]
+key = "cone_of_cold"
+id = 120
+visual = 910046
+vfx = { source = 120, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { cone = { length = 12.0 } }
+hit = 17
+cooldown = 4.0
+range = 12.0
+rider = { slow = { pct = 60, secs = 3.0 } }
+name = { en = "Cone of Cold", de = "Kältekegel", fr = "Cône de froid", es = "Cono de frío", pt = "Cone de Frio", ru = "Конус холода", pl = "Stożek zimna", tr = "Soğuk Konisi", it = "Cono di freddo", ja = "コーン・オブ・コールド", zh = "冰锥术", ko = "냉기 돌풍" }
+icon = "Spell_Frost_Glacier"
+
+[[spell]]
+key = "blast_wave"
+id = 11113
+visual = 910047
+vfx = { source = 11113, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { nova = { radius = 10.0 } }
+hit = 17
+cooldown = 8.0
+range = 10.0
+rider = { slow = { pct = 50, secs = 3.0 } }
+name = { en = "Blast Wave", de = "Druckwelle", fr = "Onde de choc", es = "Onda expansiva", pt = "Onda Explosiva", ru = "Взрывная волна", pl = "Fala wybuchu", tr = "Patlama Dalgası", it = "Onda esplosiva", ja = "ブラスト・ウェーブ", zh = "冲击波", ko = "화염 폭풍" }
+icon = "Spell_Holy_Excorcism_02"
+
+[[spell]]
+key = "pyroblast"
+id = 11366
+visual = 910048
+vfx = { source = 11366, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { strike = { targets = 1 } }
+hit = 340
+cooldown = 7.0
+range = 35.0
+name = { en = "Pyroblast", de = "Pyroschlag", fr = "Explosion pyrotechnique", es = "Piroexplosión", pt = "Piroexplosão", ru = "Огненная глыба", pl = "Piropocisk", tr = "Pyroblast", it = "Piroscoppio", ja = "パイロブラスト", zh = "炎爆术", ko = "불덩이 작렬" }
+icon = "Spell_Fire_Fireball02"
+
+[[spell]]
+key = "ice_barrier"
+id = 11426
+visual = 910049
+vfx = { source = 11426, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { shield = { share = 45 } }
+hit = 0
+cooldown = 15.0
+range = 0.0
+name = { en = "Ice Barrier", de = "Eisbarriere", fr = "Barrière de glace", es = "Barrera de hielo", pt = "Barreira de Gelo", ru = "Ледяной барьер", pl = "Lodowa bariera", tr = "Buz Bariyeri", it = "Barriera di ghiaccio", ja = "アイス・バリア", zh = "寒冰护体", ko = "얼음 보호막" }
+icon = "Spell_Ice_Lament"
+
+[[spell]]
+key = "polymorph"
+id = 118
+visual = 910050
+vfx = { source = 118, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "spells/mage_arcanebarrage_impact.mdx", slot = "chest", scale = 0.55 } }
+school = "arcane"
+shape = { proc = { kind = "sheep", radius = 7.0 } }
+turns_into = 856
+hit = 115
+cooldown = 2.143
+range = 0.0
+name = { en = "Polymorph", de = "Verwandlung", fr = "Métamorphose", es = "Polimorfia", pt = "Polimorfia", ru = "Превращение", pl = "Przemiana", tr = "Biçim Değiştirme", it = "Metamorfosi", ja = "ポリモーフ", zh = "变形术", ko = "변이" }
+icon = "Spell_Nature_Polymorph"
+
+# AS's talents name Arcane Power; the rest are Wrath of the Lich King's.
+[[spell]]
+key = "arcane_power"
+id = 12042
+visual = 910051
+vfx = { source = 12042, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "spells/mage_arcanebarrage_impact.mdx", slot = "chest", scale = 0.75 } }
+school = "arcane"
+shape = { fury = { pct = 35, secs = 12.0 } }
+hit = 0
+cooldown = 30.0
+range = 30.0
+name = { en = "Arcane Power", de = "Arkane Macht", fr = "Puissance des arcanes", es = "Poder Arcano", pt = "Poder Arcano", ru = "Мощь тайной магии", pl = "Magiczna moc", tr = "Gizem Gücü", it = "Potere arcano", ja = "アーケイン・パワー", zh = "奥术强化", ko = "신비의 마법 강화" }
+icon = "Spell_Nature_Lightning"
+
+[[spell]]
+key = "frostfire_bolt"
+id = 44614
+visual = 910052
+vfx = { source = 44614, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "frost"
+shape = { strike = { targets = 1 } }
+hit = 52
+cooldown = 2.0
+range = 30.0
+rider = { slow = { pct = 30, secs = 3.0 } }
+name = { en = "Frostfire Bolt", de = "Frostfeuerblitz", fr = "Éclair de givrefeu", es = "Descarga de pirofrío", pt = "Seta de Fogofrio", ru = "Стрела ледяного огня", pl = "Pocisk ognistego lodu", tr = "Buzalev Oku", it = "Dardo di fuoco gelido", ja = "フロストファイア・ボルト", zh = "霜火之箭", ko = "얼음불꽃 화살" }
+icon = "Ability_Mage_FrostFireBolt"
+
+[[spell]]
+key = "living_bomb"
+id = 44457
+visual = 910053
+vfx = { source = 44457, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { dot = { targets = 2, secs = 12.0, ticks = 4, cap = 1 } }
+hit = 103
+cooldown = 5.0
+range = 30.0
+name = { en = "Living Bomb", de = "Lebende Bombe", fr = "Bombe vivante", es = "Bomba viviente", pt = "Bomba Viva", ru = "Живая бомба", pl = "Żywa bomba", tr = "Canlı Bomba", it = "Bomba vivente", ja = "リビング・ボム", zh = "活动炸弹", ko = "살아있는 폭탄" }
+icon = "Ability_Mage_LivingBomb"
+
+[[spell]]
+key = "ice_lance"
+id = 30455
+visual = 910054
+vfx = { source = 30455, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "frost"
+shape = { strike = { targets = 2 } }
+hit = 39
+cooldown = 1.5
+range = 30.0
+name = { en = "Ice Lance", de = "Eislanze", fr = "Lance de glace", es = "Lanza de hielo", pt = "Lança de Gelo", ru = "Ледяное копье", pl = "Lodowa lanca", tr = "Buz Mızrağı", it = "Lancia di ghiaccio", ja = "アイス・ランス", zh = "冰枪术", ko = "얼음창" }
+icon = "Spell_Frost_FrostBlast"
+
+[[spell]]
+key = "arcane_barrage"
+id = 44425
+visual = 910055
+vfx = { source = 44425, cast = { model = "Spells/Magic_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "spells/mage_arcanebarrage_impact.mdx", slot = "chest", scale = 0.75 } }
+school = "arcane"
+shape = { chain = { jumps = 2, radius = 10.0 } }
+hit = 58
+cooldown = 4.0
+range = 30.0
+name = { en = "Arcane Barrage", de = "Arkanes Sperrfeuer", fr = "Barrage des arcanes", es = "Ráfaga Arcana", pt = "Barragem Arcana", ru = "Чародейский залп", pl = "Magiczna nawałnica", tr = "Gizem Barajı", it = "Sbarramento arcano", ja = "アーケイン・バラージ", zh = "奥术弹幕", ko = "신비한 탄막" }
+icon = "Ability_Mage_ArcaneBarrage"
+
+[[spell]]
+key = "deep_freeze"
+id = 44572
+visual = 910056
+vfx = { source = 44572, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { strike = { targets = 1 } }
+hit = 77
+cooldown = 12.0
+range = 30.0
+rider = { stun = { secs = 4.0 } }
+name = { en = "Deep Freeze", de = "Tieffrieren", fr = "Gel profond", es = "Congelación profunda", pt = "Congelamento Profundo", ru = "Глубокая заморозка", pl = "Głębokie zamrożenie", tr = "Derin Dondurma", it = "Congelamento profondo", ja = "ディープ・フリーズ", zh = "深度冻结", ko = "동결" }
+icon = "Ability_Mage_DeepFreeze"
+
+[[spell]]
+key = "dragons_breath"
+id = 31661
+visual = 910057
+vfx = { source = 31661, cast = { model = "Spells/Fire_Cast_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/MoltenBlast_Impact_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { cone = { length = 10.0 } }
+hit = 52
+cooldown = 10.0
+range = 10.0
+rider = { stun = { secs = 3.0 } }
+name = { en = "Dragon's Breath", de = "Drachenodem", fr = "Souffle du dragon", es = "Aliento de dragón", pt = "Sopro do Dragão", ru = "Дыхание дракона", pl = "Smoczy oddech", tr = "Ejderha Nefesi", it = "Soffio di drago", ja = "ドラゴンズ・ブレス", zh = "龙息术", ko = "용의 숨결" }
+icon = "INV_Misc_Head_Dragon_01"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "icy_veins"
+id = 12472
+visual = 910058
+vfx = { source = 12472, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { haste = { pct = 40, secs = 12.0 } }
+hit = 0
+cooldown = 30.0
+range = 30.0
+name = { en = "Icy Veins", de = "Eisige Adern", fr = "Veines glaciales", es = "Venas heladas", pt = "Veias Gélidas", ru = "Наложение льда", pl = "Lodowe żyły", tr = "Buzlu Damarlar", it = "Vene di ghiaccio", ja = "アイシー・ヴェイン", zh = "冰冷血脉", ko = "얼음 핏줄" }
+icon = "Spell_Frost_ColdHearted"
+
+[[spell]]
+key = "ice_block"
+id = 45438
+visual = 910059
+vfx = { source = 45438, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { immune = { secs = 4.0 } }
+hit = 0
+cooldown = 40.0
+range = 0.0
+name = { en = "Ice Block", de = "Eisblock", fr = "Bloc de glace", es = "Bloque de hielo", pt = "Bloco de Gelo", ru = "Ледяная глыба", pl = "Bryła lodu", tr = "Buz Bloğu", it = "Blocco di ghiaccio", ja = "アイス・ブロック", zh = "寒冰屏障", ko = "얼음 방패" }
+icon = "Spell_Frost_Frost"
+
+[[spell]]
+key = "mirror_image"
+id = 55342
+visual = 910060
+vfx = { source = 31687, cast = { model = "Spells/Ice_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Ice_ImpactDD_Uber_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "frost"
+shape = { summon = { pet = "mirror_image", count = 3, secs = 15.0 } }
+hit = 0
+cooldown = 40.0
+range = 30.0
+name = { en = "Mirror Image", de = "Spiegelbild", fr = "Image miroir", es = "Imagen reflejada", pt = "Imagem Espelhada", ru = "Зеркальное изображение", pl = "Lustrzane odbicie", tr = "Ayna Görüntüsü", it = "Immagine speculare", ja = "ミラー・イメージ", zh = "镜像", ko = "환영 복제" }
+icon = "Spell_Magic_LesserInvisibilty"
+pet = { one = { en = "Mirror Image", de = "Spiegelbild", fr = "Image miroir", es = "Imagen reflejada", pt = "Imagem Espelhada", ru = "Зеркальное изображение", pl = "Lustrzane odbicie", tr = "Ayna Görüntüsü", it = "Immagine speculare", ja = "ミラー・イメージ", zh = "镜像", ko = "환영 복제" }, many = { en = "Mirror Images", de = "Spiegelbilder", fr = "Images miroir", es = "Imágenes reflejadas", pt = "Imagens Espelhadas", ru = "Зеркальные изображения", pl = "Lustrzane odbicia", tr = "Ayna Görüntüleri", it = "Immagini speculari", ja = "ミラー・イメージ", zh = "镜像", ko = "환영 복제" } }

@@ -1,0 +1,288 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "sholazar"
+order = 29
+name = { en = "Sholazar Basin", de = "Sholazarbecken", fr = "Bassin de Sholazar", es = "Cuenca de Sholazar", pt = "Bacia de Sholazar", ru = "Низина Шолазар", pl = "Kotlina Sholazar", tr = "Sholazar Havzası", it = "Bacino di Sholazar", ja = "ショラザール盆地", zh = "索拉查盆地", ko = "숄라자르 분지" }
+subtitle = { en = "The Titans' Cradle", de = "Die Wiege der Titanen", fr = "Le berceau des titans", es = "La Cuna de los Titanes", pt = "O Berço dos Titãs", ru = "Колыбель титанов", pl = "Kołyska Tytanów", tr = "Titanların Beşiği", it = "La Culla dei Titani", ja = "タイタンのゆりかご", zh = "泰坦摇篮", ko = "티탄의 요람" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Sholazar_01"
+map = 571
+map_name = "Northrend"
+area = 3711
+center = [5733.3, 5022.9]
+radius = 100.0
+map_bounds = [6929.17, 2572.92, 7287.5, 4383.33]
+health_factor = 24.98
+gold_factor = 4.19
+late_factor = 0.4
+hour = 11
+weather = { fine = 75, rain = 25 }
+# The jungle, the hills and the fjord's shore are mild: no cold, no bonfires.
+mild = true
+
+[[zone.enemy]]
+entry = 4700
+name = { en = "Mangal Crocolisk", de = "Mangalkrokilisk", fr = "Crocilisque de Mangal", es = "Crocolisco de Mangal", pt = "Crocolisco de Mangal", ru = "Мангальский кроколиск", pl = "Krokodyl z Mangalu", tr = "Mangal Timsahı", it = "Crocolisco Mangal", ja = "マンガル・クロコリスク", zh = "红树鳄鱼", ko = "맹그로브 악어" }
+type = "beast"
+display = 833
+icon = "Ability_Hunter_Pet_Crocolisk"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 4701
+name = { en = "Frenzyheart Hunter", de = "Jäger der Wildherzen", fr = "Chasseur cœur-de-rage", es = "Cazador Corazón Frenético", pt = "Caçador Coração Frenético", ru = "Охотник Неистового Сердца", pl = "Łowca z klanu Frenzyheart", tr = "Çılgınyürek Avcısı", it = "Cacciatore Cuorefrenetico", ja = "フレンジーハートの狩人", zh = "狂心猎手", ko = "광란심장 사냥꾼" }
+type = "humanoid"
+display = 25379
+icon = "INV_Misc_Head_Troll_01"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.95
+
+[[zone.enemy]]
+entry = 4702
+name = { en = "Sparktouched Oracle", de = "Funkenberührtes Orakel", fr = "Oracle touché par l'étincelle", es = "Oráculo tocado por la chispa", pt = "Oráculo Tocado pela Centelha", ru = "Оракул, тронутый искрой", pl = "Wyrocznia dotknięta iskrą", tr = "Kıvılcım Dokunmuş Kahin", it = "Oracolo Toccato dalla Scintilla", ja = "スパークタッチド・オラクル", zh = "火花先知", ko = "불꽃손길 신탁자" }
+type = "humanoid"
+display = 23317
+icon = "INV_Misc_Head_Murloc_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 4703
+name = { en = "Frenzyheart Spearbearer", de = "Speerträger der Wildherzen", fr = "Porte-lance cœur-de-rage", es = "Lancero Corazón Frenético", pt = "Lanceiro Coração Frenético", ru = "Копьеносец Неистового Сердца", pl = "Włócznik z klanu Frenzyheart", tr = "Çılgınyürek Mızrakçısı", it = "Lanciere Cuorefrenetico", ja = "フレンジーハートの槍兵", zh = "狂心持矛者", ko = "광란심장 창병" }
+type = "humanoid"
+display = 25380
+icon = "INV_Misc_Head_Troll_01"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 16075, range = 16.0, every = 3.0, speed = 20.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 4704
+name = { en = "Hardknuckle Forager", de = "Sammler der Hartknöchel", fr = "Cueilleur poing-dur", es = "Recolector Nudillo Duro", pt = "Coletor Punho Duro", ru = "Собиратель Твердокостных", pl = "Zbieracz Hardknuckle", tr = "Katıbilek Toplayıcısı", it = "Raccoglitore Nocchiduri", ja = "ハードナックルの採集者", zh = "硬指觅食者", ko = "단단주먹 채집꾼" }
+type = "beast"
+display = 838
+icon = "Ability_Hunter_Pet_Rhino"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 4705
+name = { en = "Mistwhisper Lasher", de = "Peitscher der Nebelflüsterer", fr = "Fouetteur murmebrume", es = "Azotador Susurraneblina", pt = "Chicoteador Sussurro da Névoa", ru = "Бичеватель Шёпота Тумана", pl = "Chłostnik Mistwhisper", tr = "Sisfısıltı Kırbaçlayıcısı", it = "Frustatore Sussurranebbia", ja = "ミストウィスパー・ラッシャー", zh = "雾语鞭笞者", ko = "안개속삭임 채찍덩굴" }
+type = "elemental"
+display = 12348
+icon = "Ability_Druid_ForceofNature"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.9
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 4706
+name = { en = "Dreadsaber", de = "Schreckenssäbler", fr = "Sabre d'effroi", es = "Sable pavoroso", pt = "Sabre Aterrorizante", ru = "Ужасная саблезубая кошка", pl = "Straszliwy szablozęby", tr = "Dehşet Kılıçdişi", it = "Sciabolaterrore", ja = "ドレッドセイバー", zh = "恐怖豹", ko = "공포검니" }
+type = "beast"
+display = 321
+icon = "Ability_Hunter_Pet_Cat"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+
+[[zone.enemy]]
+entry = 4707
+name = { en = "Mistwhisper Oracle", de = "Orakel der Nebelflüsterer", fr = "Oracle murmebrume", es = "Oráculo Susurraneblina", pt = "Oráculo Sussurro da Névoa", ru = "Оракул Шёпота Тумана", pl = "Wyrocznia Mistwhisper", tr = "Sisfısıltı Kahini", it = "Oracolo Sussurranebbia", ja = "ミストウィスパー・オラクル", zh = "雾语先知", ko = "안개속삭임 신탁자" }
+type = "humanoid"
+display = 23320
+icon = "INV_Misc_Head_Murloc_01"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9532, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4708
+name = { en = "Hardknuckle Matriarch", de = "Matriarchin der Hartknöchel", fr = "Matriarche poing-dur", es = "Matriarca Nudillo Duro", pt = "Matriarca Punho Duro", ru = "Матриарх Твердокостных", pl = "Matriarchini Hardknuckle", tr = "Katıbilek Matriği", it = "Matriarca Nocchiduri", ja = "ハードナックルの女家長", zh = "硬指女族长", ko = "단단주먹 여왕" }
+type = "beast"
+display = 809
+icon = "Ability_Hunter_Pet_Rhino"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+
+[[zone.elite]]
+entry = 4710
+name = { en = "Bittertide Hydra", de = "Bitterflut-Hydra", fr = "Hydre de la marée amère", es = "Hidra de Marea Amarga", pt = "Hidra da Maré Amarga", ru = "Гидра Горького Прилива", pl = "Hydra Bittertide", tr = "Acı Gelgit Hidrası", it = "Idra Marea Amara", ja = "ビタータイド・ハイドラ", zh = "苦潮九头蛇", ko = "쓴물결 히드라" }
+type = "beast"
+display = 2423
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 6.0, warn = 1.4, knock = 9.0 } }], 1.0] }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 4711
+name = { en = "Primordial Drake", de = "Urzeitlicher Drache", fr = "Drake primordial", es = "Draco primordial", pt = "Draco Primordial", ru = "Изначальный дракон", pl = "Pierwotny drake", tr = "İlkel Ejder", it = "Drago primordiale", ja = "原初のドレイク", zh = "始源幼龙", ko = "태고의 비룡" }
+type = "dragonkin"
+display = 26712
+icon = "Ability_Mount_Drake_Twilight"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.7
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16396, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 2120, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 4712
+name = { en = "Frenzyheart Ravager", de = "Verwüster der Wildherzen", fr = "Ravageur cœur-de-rage", es = "Devastador Corazón Frenético", pt = "Devastador Coração Frenético", ru = "Разоритель Неистового Сердца", pl = "Pustoszyciel z klanu Frenzyheart", tr = "Çılgınyürek Yağmacısı", it = "Devastatore Cuorefrenetico", ja = "フレンジーハート・ラヴェジャー", zh = "狂心劫掠者", ko = "광란심장 약탈자" }
+type = "humanoid"
+display = 25376
+icon = "INV_Misc_Head_Troll_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.boss]]
+entry = 4790
+name = { en = "King Krush", de = "König Krush", fr = "Roi Krush", es = "Rey Krush", pt = "Rei Krush", ru = "Король Круш", pl = "Król Krush", tr = "Kral Krush", it = "Re Krush", ja = "キング・クラッシュ", zh = "克鲁什之王", ko = "왕 크러시" }
+type = "beast"
+display = 28052
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 4600
+damage = 28
+speed = 5.8
+size = 0.9
+minute = 4
+yell = { en = "King Krush stomps out of the jungle!", de = "König Krush stampft aus dem Dschungel!", fr = "Le roi Krush surgit de la jungle d'un pas lourd !", es = "¡El rey Krush sale pisoteando de la jungla!", pt = "O Rei Krush sai pisoteando da selva!", ru = "Король Круш топает из джунглей!", pl = "Król Krush wytupuje z dżungli!", tr = "Kral Krush ormandan tepinerek çıkıyor!", it = "Re Krush calpesta fuori dalla giungla!", ja = "キング・クラッシュがジャングルから足音を響かせて現れた！", zh = "克鲁什之王从丛林中踏步而出！", ko = "왕 크러시가 정글에서 쿵쿵거리며 나옵니다!" }
+kit = "king_krush"
+
+[[zone.boss]]
+entry = 4791
+name = { en = "Loque'nahak", de = "Loque'nahak", fr = "Loque'nahak", es = "Loque'nahak", pt = "Loque'nahak", ru = "Локе'нахак", pl = "Loque'nahak", tr = "Loque'nahak", it = "Loque'nahak", ja = "ロクェナハク", zh = "洛克纳哈克", ko = "로크나학" }
+type = "beast"
+display = 599
+icon = "Ability_Hunter_Pet_Cat"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.6
+minute = 8
+yell = { en = "Loque'nahak stalks you through the mist!", de = "Loque'nahak pirscht sich durch den Nebel an dich heran!", fr = "Loque'nahak te traque dans la brume !", es = "¡Loque'nahak te acecha entre la niebla!", pt = "Loque'nahak persegue você pela névoa!", ru = "Локе'нахак выслеживает тебя сквозь туман!", pl = "Loque'nahak skrada się za wami we mgle!", tr = "Loque'nahak sizi sisin içinden izliyor!", it = "Loque'nahak ti segue nella nebbia!", ja = "ロクェナハクが霧の中であなたを狙っている！", zh = "洛克纳哈克在迷雾中追踪着你！", ko = "로크나학이 안개 속에서 당신을 노립니다!" }
+kit = "loquenahak"
+
+[[zone.boss]]
+entry = 4792
+name = { en = "Avatar of Freya", de = "Avatar Freyas", fr = "Avatar de Freya", es = "Avatar de Freya", pt = "Avatar de Freya", ru = "Аватара Фрейи", pl = "Awatar Freyi", tr = "Freya'nın Avatarı", it = "Avatar di Freya", ja = "フレイヤの化身", zh = "弗蕾亚的化身", ko = "프레이야의 화신" }
+type = "elemental"
+display = 28777
+icon = "Achievement_Boss_Freya_01"
+health = 21000
+damage = 46
+speed = 5.0
+size = 0.9
+minute = 12
+yell = { en = "The basin will be cleansed of you!", de = "Das Becken wird von euch gereinigt!", fr = "Le bassin sera purgé de votre présence !", es = "¡La cuenca será purgada de vosotros!", pt = "A bacia será purificada de vocês!", ru = "Низина будет очищена от вас!", pl = "Kotlina zostanie z was oczyszczona!", tr = "Havza sizden arındırılacak!", it = "Il bacino sarà purificato da voi!", ja = "この盆地から貴様らを一掃してくれる！", zh = "盆地将清除你们的存在！", ko = "분지에서 너희를 쓸어버리겠다!" }
+kit = "avatar_of_freya"
+
+[[zone.boss]]
+entry = 4290
+name = { en = "Old Crystalbark", de = "Alte Kristallrinde", fr = "Vieille Écorce-cristal", es = "Vieja Corteza de Cristal", pt = "Velha Casca de Cristal", ru = "Старая Хрустальная Кора", pl = "Stary Kryształowa Kora", tr = "Yaşlı Kristalkabuk", it = "Vecchio Corteccia di Cristallo", ja = "オールド・クリスタルバーク", zh = "老水晶树皮", ko = "늙은 수정껍질" }
+type = "elemental"
+display = 27470
+icon = "Ability_Druid_ForceofNature"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.4
+minute = 16
+yell = { en = "Old Crystalbark wakes from the ancient grove!", de = "Alte Kristallrinde erwacht im uralten Hain!", fr = "Vieille Écorce-cristal s'éveille dans le bosquet antique !", es = "¡Vieja Corteza de Cristal despierta en la arboleda ancestral!", pt = "Velha Casca de Cristal desperta no bosque ancestral!", ru = "Старая Хрустальная Кора пробуждается в древней роще!", pl = "Stary Kryształowa Kora budzi się w prastarym gaju!", tr = "Yaşlı Kristalkabuk kadim koruluktan uyanıyor!", it = "Vecchio Corteccia di Cristallo si desta dall'antico boschetto!", ja = "オールド・クリスタルバークが古の森で目を覚ました！", zh = "老水晶树皮从古老的林地中醒来！", ko = "늙은 수정껍질이 고대 숲에서 깨어납니다!" }
+kit = "old_crystalbark"
+
+[[zone.boss]]
+entry = 2106
+name = { en = "Artruis the Heartless", de = "Artruis der Herzlose", fr = "Artruis le Sans-cœur", es = "Artruis el Sin Corazón", pt = "Artruis, o Sem-coração", ru = "Артруис Бессердечный", pl = "Artruis Bezlitosny", tr = "Kalpsiz Artruis", it = "Artruis il Senzacuore", ja = "無情なるアートルイス", zh = "无情的阿图里斯", ko = "무정한 아르트루이스" }
+type = "humanoid"
+display = 7919
+icon = "Spell_Shadow_RaiseDead"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.0
+minute = 20
+yell = { en = "Ah, the heroes. Your little friends said you would come.", de = "Ah, die Helden. Eure kleinen Freunde sagten, dass ihr kommen würdet.", fr = "Ah, les héros. Vos petits amis avaient dit que vous viendriez.", es = "Ah, los héroes. Vuestros amiguitos dijeron que vendríais.", pt = "Ah, os heróis. Seus amiguinhos disseram que vocês viriam.", ru = "А, герои. Ваши маленькие друзья говорили, что вы придёте.", pl = "Ach, bohaterowie. Wasi mali przyjaciele mówili, że przyjdziecie.", tr = "Ah, kahramanlar. Küçük arkadaşlarınız geleceğinizi söylemişti.", it = "Ah, gli eroi. I vostri piccoli amici dicevano che sareste venuti.", ja = "ああ、英雄たちか。お前たちの小さな友人が、来ると言っていたよ。", zh = "啊，英雄们。你们的小朋友说过你们会来的。", ko = "아, 영웅들이로군. 너희 꼬마 친구들이 너희가 올 거라고 하더군." }
+final = true
+kit = "artruis_the_heartless"

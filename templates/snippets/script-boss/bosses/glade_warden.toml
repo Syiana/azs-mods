@@ -1,0 +1,46 @@
+# Snippet: a boss kit that calls a Lua script (scripts/slam.lua in this folder).
+#
+# Goes in:  packs/<your package>/bosses/glade_warden.toml, in place of snippets/boss-kit.toml
+#           (the zone in snippets/zone.toml names this kit), and the script goes in
+#           packs/<your package>/scripts/slam.lua.
+# Lock:     profile.json: the script is an object of your package with "kind": "script", and
+#           "compatibility"."required_capabilities" holds "scripts-v1".
+# Rules:    - The script's name resolves in the package that defines this boss kit file, never in
+#             another: the boss and its script belong to one package.
+#           - `params` (at most 16, numbers) are what the script reads as ctx.params.<name>.
+#           - A script may only yell the lines of this file's [boss.yells.<id>], each in all
+#             twelve languages.
+#           - Only boss kits and phases call scripts; an elite's kit cannot.
+#           - The whole script API, its limits and its errors: the script guide
+#             (https://azreborn.com/guides/mod-scripts). The kit entry and the script are that
+#             guide's worked example, word for word.
+#           - A mod with scripts shows a Scripts badge in the Mods window, is asked about twice
+#             before it is chosen, runs only in the native game (the browser refuses it), and is
+#             reviewed as source.
+# Checked:  with snippets/zone.toml, in a copy of templates/starter-mod with
+#           `azs-content profile-check` and `azs-script check`.
+
+[[boss]]
+key = "yourname.example:glade_warden"
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 4 }
+
+[[boss.kit]]
+every = 8.0
+ability = { script = { name = "slam", params = { reach = 4.0 } } }
+
+[boss.yells.slam]
+en = "Slam!"
+de = "Wumms!"
+fr = "Boum !"
+es = "¡Zas!"
+pt = "Pancada!"
+ru = "Бам!"
+it = "Bum!"
+pl = "Trzask!"
+tr = "Güm!"
+ja = "ドン！"
+zh = "砰！"
+ko = "쾅!"

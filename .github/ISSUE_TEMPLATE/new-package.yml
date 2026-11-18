@@ -1,0 +1,47 @@
+name: New package
+description: Ask about a mod or a map before or while you make it, or say that one is ready for the list.
+labels: ["new package"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A package gets into the list by a pull request that adds `packages/<id>.toml` (see CONTRIBUTING.md).
+        This issue is for questions and for telling us one is coming. The mod kit is in `templates/`.
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: The GitHub repository of the package (owner/name), if it exists yet.
+      placeholder: yourname/azs-mod-example
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - mod
+        - map
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it does
+      description: What it changes or adds, in a few lines.
+    validations:
+      required: true
+  - type: dropdown
+    id: scripts
+    attributes:
+      label: Boss scripts
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: The rule on game files
+      options:
+        - label: The package holds no file of World of Warcraft and nothing extracted from one, and only files I may share (docs/LEGAL.md).
+          required: true

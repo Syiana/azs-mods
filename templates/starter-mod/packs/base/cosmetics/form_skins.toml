@@ -1,0 +1,90 @@
+# The shop's form skins (survivors-sim formskins.rs): another look for a shapeshift form, worn by
+# every hero that takes it. `form` is the form's id (the talent's `form.id`: 1 Cat Form, 8 Dire Bear
+# Form), `display` a CreatureDisplayInfo.dbc id of the model it shows in the form's place, `races`
+# a race's own model of it ([[race id, display]]; the others show `display`). `TUNE` the prices.
+#
+# Cat Form: the druid cat's own colours (the night elf cat and the tauren cat, a pair of the
+# same colour each) first, then the big cats of the stock client at their natural size (display
+# scale 1.0 to 1.15, the druid cat's own is 0.9 to 1.0).
+
+# Creature\DruidCat (display 29408) and Creature\DruidCatTauren (29409), white.
+[[form_skin]]
+key = "snow"
+name = { en = "Snow Cat", de = "Schneekatze", fr = "Félin des neiges", es = "Felino de las nieves", pt = "Felino da Neve", ru = "Снежная кошка", pl = "Śnieżny kot", tr = "Kar Kedisi", it = "Felino delle nevi", ja = "スノーキャット", zh = "雪豹", ko = "설원 표범" }
+price = 4000
+form = 1
+display = 29408
+races = [[6, 29409]]
+
+# Dark blue night elf cat (29407), black tauren cat (29412).
+[[form_skin]]
+key = "midnight"
+name = { en = "Midnight Cat", de = "Mitternachtskatze", fr = "Félin de minuit", es = "Felino de medianoche", pt = "Felino da Meia-noite", ru = "Полуночная кошка", pl = "Kot północy", tr = "Gece Yarısı Kedisi", it = "Felino di mezzanotte", ja = "ミッドナイトキャット", zh = "午夜猎豹", ko = "자정 표범" }
+price = 4000
+form = 1
+display = 29407
+races = [[6, 29412]]
+
+# The night elf cat as the red lynx with glowing eyes (15591), the red tauren cat (29411).
+[[form_skin]]
+key = "ember"
+name = { en = "Ember Cat", de = "Glutkatze", fr = "Félin de braise", es = "Felino de brasa", pt = "Felino de Brasa", ru = "Тлеющая кошка", pl = "Żarowy kot", tr = "Kor Kedisi", it = "Felino di brace", ja = "エンバーキャット", zh = "余烬猎豹", ko = "잿불 표범" }
+price = 4000
+form = 1
+display = 15591
+races = [[6, 29411]]
+
+# Creature\Lion, gold.
+[[form_skin]]
+key = "lion"
+name = { en = "Lion", de = "Löwe", fr = "Lion", es = "León", pt = "Leão", ru = "Лев", pl = "Lew", tr = "Aslan", it = "Leone", ja = "ライオン", zh = "狮子", ko = "사자" }
+price = 6000
+form = 1
+display = 1973
+
+# Creature\Lion, white.
+[[form_skin]]
+key = "white_lion"
+name = { en = "White Lion", de = "Weißer Löwe", fr = "Lion blanc", es = "León blanco", pt = "Leão Branco", ru = "Белый лев", pl = "Biały lew", tr = "Beyaz Aslan", it = "Leone bianco", ja = "ホワイトライオン", zh = "白狮", ko = "백사자" }
+price = 7000
+form = 1
+display = 1934
+
+# Creature\Tiger, yellow with black stripes (the Stranglethorn tiger).
+[[form_skin]]
+key = "tiger"
+name = { en = "Tiger", de = "Tiger", fr = "Tigre", es = "Tigre", pt = "Tigre", ru = "Тигр", pl = "Tygrys", tr = "Kaplan", it = "Tigre", ja = "タイガー", zh = "猛虎", ko = "호랑이" }
+price = 6000
+form = 1
+display = 1043
+
+# Creature\Tiger, white.
+[[form_skin]]
+key = "white_tiger"
+name = { en = "White Tiger", de = "Weißer Tiger", fr = "Tigre blanc", es = "Tigre blanco", pt = "Tigre Branco", ru = "Белый тигр", pl = "Biały tygrys", tr = "Beyaz Kaplan", it = "Tigre bianca", ja = "ホワイトタイガー", zh = "白虎", ko = "백호" }
+price = 8000
+form = 1
+display = 6210
+
+# Creature\Tiger, black.
+[[form_skin]]
+key = "black_tiger"
+name = { en = "Black Tiger", de = "Schwarzer Tiger", fr = "Tigre noir", es = "Tigre negro", pt = "Tigre Negro", ru = "Чёрный тигр", pl = "Czarny tygrys", tr = "Kara Kaplan", it = "Tigre nera", ja = "ブラックタイガー", zh = "黑虎", ko = "흑호" }
+price = 8000
+form = 1
+display = 599
+
+# Legion Mage Tower and Cataclysm Firelands models from patch-~.MPQ.
+[[form_skin]]
+key = "ghost_cat"
+name = { en = "Ghost Cat", de = "Geisterkatze", fr = "Félin spectral", es = "Felino fantasmal", pt = "Felino Espectral", ru = "Призрачная кошка", pl = "Widmowy kot", tr = "Hayalet Kedi", it = "Felino spettrale", ja = "ゴーストキャット", zh = "幽灵猎豹", ko = "유령 표범" }
+price = 50000
+form = 1
+display = 99201
+
+[[form_skin]]
+key = "fire_cat"
+name = { en = "Fire Cat", de = "Feuerkatze", fr = "Félin de feu", es = "Felino de fuego", pt = "Felino de Fogo", ru = "Огненная кошка", pl = "Ognisty kot", tr = "Ateş Kedisi", it = "Felino di fuoco", ja = "ファイアキャット", zh = "火焰猎豹", ko = "화염 표범" }
+price = 50000
+form = 1
+display = 99202

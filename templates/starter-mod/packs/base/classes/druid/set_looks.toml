@@ -1,0 +1,60 @@
+# The druid's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Thicket") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Wildheart pieces: Wildheart Raiment, tier 0 (ItemSet 185).
+[[set_look]]
+key = "druid_uncommon"
+rarity = 1
+pieces = [
+    [0, 31228, 1, "Helmet_27"], [1, 30412, 3, "Shoulder_01"],
+    [2, 29974, 5, "Chest_Plate06"], [3, 29976, 6, "Belt_15"],
+    [4, 29975, 7, "Pants_08"], [5, 29981, 8, "Boots_08"],
+    [6, 29977, 9, "Bracer_09"], [7, 29979, 10, "Gauntlets_17"],
+]
+
+# Cenarion pieces: Cenarion Raiment, tier 1 (ItemSet 205).
+[[set_look]]
+key = "druid_rare"
+rarity = 2
+pieces = [
+    [0, 32790, 1, "Helmet_09"], [1, 32016, 3, "Shoulder_07"],
+    [2, 31797, 20, "Chest_Cloth_06"], [3, 31722, 6, "Belt_06"],
+    [4, 31729, 7, "Pants_06"], [5, 31724, 8, "Boots_08"],
+    [6, 31725, 9, "Bracer_03"], [7, 31726, 10, "Gauntlets_07"],
+]
+
+# Stormrage pieces: Stormrage Raiment, tier 2 (ItemSet 214).
+[[set_look]]
+key = "druid_epic"
+rarity = 3
+pieces = [
+    [0, 33655, 1, "Helmet_09"], [1, 30546, 3, "Shoulder_07"],
+    [2, 30536, 5, "Chest_Chain_16"], [3, 30541, 6, "Belt_06"],
+    [4, 30540, 7, "Pants_06"], [5, 30542, 8, "Boots_08"],
+    [6, 30548, 9, "Bracer_03"], [7, 34016, 10, "Gauntlets_25"],
+]
+
+# Dreamwalker pieces: Dreamwalker Raiment, tier 3 (ItemSet 521).
+[[set_look]]
+key = "druid_legendary"
+rarity = 4
+pieces = [
+    [0, 35162, 1, "Helmet_15"], [1, 35160, 3, "Shoulder_14"],
+    [2, 35159, 5, "Chest_Chain_15"], [3, 35164, 6, "Belt_22"],
+    [4, 35161, 7, "Pants_Mail_15"], [5, 35173, 8, "Boots_Chain_05"],
+    [6, 35158, 9, "Bracer_02"], [7, 35167, 10, "Gauntlets_25"],
+]
+
+# Field Marshal's pieces: Field Marshal's Sanctuary, the Alliance's rank 13 PvP set (ItemSet 397).
+[[set_look]]
+key = "druid_pvp"
+rarity = 5
+pieces = [
+    [0, 30330, 1, "Helmet_41"], [1, 30328, 3, "Shoulder_23"],
+    [2, 30327, 5, "Chest_Cloth_07"], [4, 30329, 7, "Pants_06"],
+    [5, 30333, 8, "Boots_08"], [7, 30334, 10, "Gauntlets_21"],
+]

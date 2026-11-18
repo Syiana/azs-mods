@@ -1,0 +1,16 @@
+# High Warlord Naj'entus: Needle Spine, Impaling Spine.
+
+[[boss]]
+key = "high_warlord_najentus"
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 39835, count = 5, radius = 4.0, spread = 10.0, warn = 1.6, factor = 2.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { line = { spell = 39837, len = 30.0, w = 5.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

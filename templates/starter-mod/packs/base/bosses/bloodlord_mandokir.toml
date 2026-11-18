@@ -1,0 +1,20 @@
+# Bloodlord Mandokir's abilities, Gurubashi Arena.
+
+[[boss]]
+key = "bloodlord_mandokir"
+
+[[boss.kit]]
+every = 7.0
+ability = "charge"
+
+[[boss.kit]]
+every = 10.0
+ability = { whirlwind = { spell = 1680, radius = 7.0, lasts = 4.0, tick = 0.55 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { gaze = { spell = 24314, lasts = 3.5, factor = 3.0 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

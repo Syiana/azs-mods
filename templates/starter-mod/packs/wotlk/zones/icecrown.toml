@@ -1,0 +1,309 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "icecrown"
+order = 33
+name = { en = "Icecrown", de = "Eiskrone", fr = "Couronne de glace", es = "Corona de Hielo", pt = "Coroa de Gelo", ru = "Ледяная Корона", pl = "Icecrown", tr = "Buz Tacı", it = "Corona di Ghiaccio", ja = "アイスクラウン", zh = "冰冠冰川", ko = "얼음왕관" }
+subtitle = { en = "The Argent Tournament", de = "Das Argentumturnier", fr = "Le tournoi d'Argent", es = "El Torneo Argenta", pt = "O Torneio Argênteo", ru = "Серебряный турнир", pl = "Turniej Argentum", tr = "Gümüş Turnuva", it = "Il Torneo d'Argento", ja = "アージェント・トーナメント", zh = "银色锦标赛", ko = "은빛 마상시합" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_IceCrown_01"
+map = 571
+map_name = "Northrend"
+area = 210
+center = [8495.8, 922.9]
+radius = 100.0
+map_bounds = [5443.75, -827.08, 9427.08, 5245.83]
+health_factor = 33.98
+gold_factor = 4.63
+late_factor = 0.4
+hour = 12
+weather = { fine = 50, snow = 50 }
+# Its sky is dark at any hour (Icecrown's own `Light.dbc` skies).
+dark_sky = true
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [8440.004, 903.1205]
+turn = 0
+yaw = 0.0
+pitch = 26.0
+distance = 0.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 5100
+name = { en = "Icy Ghoul", de = "Eisiger Ghul", fr = "Goule glaciale", es = "Necrófago gélido", pt = "Carniçal Gélido", ru = "Ледяной вурдалак", pl = "Lodowy ghul", tr = "Buzlu Gulyabani", it = "Ghoul gelido", ja = "凍てつくグール", zh = "冰冷食尸鬼", ko = "얼음 구울" }
+type = "undead"
+display = 24995
+icon = "Ability_GhoulFrenzy"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+# The runners (Wrathbringer, Deathbringer, Gargoyle) stay at or under the hero's base pace (7.0 yd/s,
+# enemies run at 1.05 times their `speed`), so outrunning them needs no speed stacking; they come later.
+[[zone.enemy]]
+entry = 5101
+name = { en = "Plaguehound", de = "Seuchenhund", fr = "Chien de peste", es = "Sabueso de la plaga", pt = "Cão da Peste", ru = "Чумная гончая", pl = "Pies dotknięty plagą", tr = "Veba Tazısı", it = "Segugio della peste", ja = "プレイグハウンド", zh = "瘟疫猎犬", ko = "역병사냥개" }
+type = "undead"
+display = 6195
+icon = "Ability_Hunter_Pet_Wolf"
+health = 28
+damage = 6
+swing = 1.3
+speed = 6.6
+cost = 1.0
+from = 3.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 5102
+name = { en = "Vrykul Vargul", de = "Vargul der Vrykul", fr = "Vargul vrykul", es = "Vargul vrykul", pt = "Vargul Vrykul", ru = "Варгул врайкулов", pl = "Vargul Vrykuli", tr = "Vrykul Vargul", it = "Vargul Vrykul", ja = "ヴライクル・ヴァーグル", zh = "维库瓦古尔", ko = "브리쿨 바르굴" }
+type = "undead"
+display = 25241
+icon = "INV_Misc_Head_Vrykul"
+health = 26
+damage = 6
+swing = 1.4
+speed = 6.6
+cost = 1.2
+from = 5.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 5103
+name = { en = "Skeletal Runesmith", de = "Skelettrunenschmied", fr = "Forgerune squelettique", es = "Forjarrunas esquelético", pt = "Ferreiro de Runas Esquelético", ru = "Скелет-рунный кузнец", pl = "Szkieletowy runiarz", tr = "İskelet Rün Ustası", it = "Fabbro di rune scheletrico", ja = "スケルトンのルーン鍛冶", zh = "骷髅符文匠", ko = "해골 룬대장장이" }
+type = "undead"
+display = 27514
+icon = "Spell_Shadow_AnimateDead"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 5104
+name = { en = "Geist Ambusher", de = "Lauernder Geist", fr = "Geist embusqué", es = "Geist emboscador", pt = "Geist Emboscador", ru = "Гейст-засадник", pl = "Zasadzkowiec upiorów", tr = "Geist Pusucusu", it = "Imboscatore Geist", ja = "ガイストの伏兵", zh = "鬼灵伏击者", ko = "매복 망령" }
+type = "undead"
+display = 25170
+icon = "Ability_GhoulFrenzy"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 5105
+name = { en = "Icecrown Abomination", de = "Monstrosität der Eiskrone", fr = "Abomination de la Couronne de glace", es = "Abominación de la Corona de Hielo", pt = "Abominação da Coroa de Gelo", ru = "Поганище Ледяной Короны", pl = "Poczwara Icecrown", tr = "Buz Tacı Canavarı", it = "Abominio di Corona di Ghiaccio", ja = "アイスクラウン・アボミネーション", zh = "冰冠憎恶", ko = "얼음왕관 누더기골렘" }
+type = "undead"
+display = 7864
+icon = "Spell_Shadow_AbominationExplosion"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.75
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 5106
+name = { en = "Val'kyr Battle-Maiden", de = "Schlachtmaid der Val'kyr", fr = "Vierge guerrière val'kyr", es = "Doncella de batalla Val'kyr", pt = "Donzela de Batalha Val'kyr", ru = "Боевая дева валь'киров", pl = "Bitewna dziewica Val'kyr", tr = "Val'kyr Savaş Bakiresi", it = "Fanciulla di battaglia Val'kyr", ja = "ヴァルキールの戦乙女", zh = "瓦格里战斗少女", ko = "발키르 전투처녀" }
+type = "undead"
+display = 24991
+icon = "inv_helm_armor_spiritvalkyr_d_01_blue"
+health = 62
+damage = 10
+swing = 1.4
+speed = 6.4
+cost = 1.5
+from = 4.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 5107
+name = { en = "Ymirjar Necromancer", de = "Nekromant der Ymirjar", fr = "Nécromancien ymirjar", es = "Nigromante Ymirjar", pt = "Necromante Ymirjar", ru = "Некромант Имирьяр", pl = "Nekromanta Ymirjar", tr = "Ymirjar Ölü Çağıran", it = "Negromante Ymirjar", ja = "イミアジャー・ネクロマンサー", zh = "依米亚尔通灵师", ko = "이미야르 강령술사" }
+type = "undead"
+display = 30826
+icon = "INV_Misc_Head_Vrykul"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.65
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 5108
+name = { en = "Bone Golem", de = "Knochengolem", fr = "Golem d'os", es = "Gólem de huesos", pt = "Golem de Ossos", ru = "Костяной голем", pl = "Kościany golem", tr = "Kemik Golemi", it = "Golem d'ossa", ja = "ボーン・ゴーレム", zh = "骸骨魔像", ko = "뼈 골렘" }
+type = "undead"
+display = 12073
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.55
+
+[[zone.elite]]
+entry = 5110
+name = { en = "Death Knight Champion", de = "Champion der Todesritter", fr = "Champion chevalier de la mort", es = "Campeón caballero de la muerte", pt = "Campeão Cavaleiro da Morte", ru = "Чемпион рыцарей смерти", pl = "Czempion Rycerzy Śmierci", tr = "Ölüm Şövalyesi Şampiyonu", it = "Campione Cavaliere della Morte", ja = "デスナイト・チャンピオン", zh = "死亡骑士勇士", ko = "죽음의 기사 용사" }
+type = "undead"
+display = 6380
+icon = "Spell_DeathKnight_ArmyOfTheDead"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 8.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { wander = { spell = 28547, count = 1, radius = 3.0, speed = 3.5, lasts = 6.0, tick = 0.5 } }
+
+[[zone.elite]]
+entry = 5111
+name = { en = "Icecrown Flesh Giant", de = "Fleischriese der Eiskrone", fr = "Géant de chair de la Couronne de glace", es = "Gigante de carne de la Corona de Hielo", pt = "Gigante de Carne da Coroa de Gelo", ru = "Мясной великан Ледяной Короны", pl = "Mięsny olbrzym Icecrown", tr = "Buz Tacı Et Devi", it = "Gigante di carne di Corona di Ghiaccio", ja = "アイスクラウン・フレッシュ・ジャイアント", zh = "冰冠血肉巨人", ko = "얼음왕관 살점 거인" }
+type = "giant"
+display = 30843
+icon = "Achievement_Dungeon_UlduarRaid_IceGiant_01"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.4
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 5112
+name = { en = "Val'kyr Overlord", de = "Oberanführerin der Val'kyr", fr = "Suzeraine val'kyr", es = "Soberana Val'kyr", pt = "Suserana Val'kyr", ru = "Верховная валь'кира", pl = "Władczyni Val'kyr", tr = "Val'kyr Efendisi", it = "Sovrana Val'kyr", ja = "ヴァルキール・オーバーロード", zh = "瓦格里霸主", ko = "발키르 대군주" }
+type = "undead"
+display = 25452
+icon = "inv_helm_armor_spiritvalkyr_d_01_blue"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.boss]]
+entry = 5190
+name = { en = "Gormok the Impaler", de = "Gormok der Pfähler", fr = "Gormok l'Empaleur", es = "Gormok el Empalador", pt = "Gormok, o Empalador", ru = "Гормок Пронзающий Бивень", pl = "Gormok Przebijacz", tr = "Kazıklayıcı Gormok", it = "Gormok l'Impalatore", ja = "串刺し魔ゴーモック", zh = "穿刺者戈莫克", ko = "꿰뚫는 자 고르모크" }
+type = "giant"
+display = 24844
+icon = "Achievement_Dungeon_UlduarRaid_IceGiant_01"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.6
+minute = 4
+yell = { en = "Hailing from the deepest, darkest caverns of the Storm Peaks!", de = "Aus den tiefsten, dunkelsten Höhlen der Sturmgipfel!", fr = "Venu des cavernes les plus profondes et les plus sombres des pics Foudroyés !", es = "¡Procedente de las cavernas más profundas y oscuras de las Cumbres Tormentosas!", pt = "Vindo das cavernas mais profundas e sombrias dos Picos Tempestuosos!", ru = "Из самых глубоких и тёмных пещер Грозовой Гряды!", pl = "Pochodzę z najgłębszych, najciemniejszych jaskiń Burzowych Szczytów!", tr = "Fırtına Zirveleri'nin en derin, en karanlık mağaralarından geliyor!", it = "Provenienti dalle caverne più profonde e oscure delle Cime Tempestose!", ja = "ストーム・ピークスの最も深く暗い洞窟からやって来た！", zh = "来自风暴峭壁最深、最黑暗的洞穴！", ko = "폭풍우 봉우리의 가장 깊고 어두운 동굴에서 온 녀석입니다!" }
+kit = "gormok_the_impaler"
+
+[[zone.boss]]
+entry = 5191
+name = { en = "Acidmaw", de = "Ätzschlund", fr = "Gueule-d'acide", es = "Fauceácida", pt = "Gargantácida", ru = "Кислотная Пасть", pl = "Kwasowa Paszcza", tr = "Asitçene", it = "Boccacida", ja = "アシッドモー", zh = "酸喉", ko = "산성아귀" }
+type = "beast"
+display = 26204
+icon = "Ability_Hunter_Pet_Worm"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.4
+minute = 8
+yell = { en = "Acidmaw slithers out of the ice!", de = "Ätzschlund gleitet aus dem Eis!", fr = "Gueule-d'acide surgit de la glace en rampant !", es = "¡Fauceácida se desliza fuera del hielo!", pt = "Gargantácida desliza para fora do gelo!", ru = "Кислотная Пасть выползает из-подо льда!", pl = "Kwasowa Paszcza wypełza z lodu!", tr = "Asitçene buzdan kayarak çıkıyor!", it = "Boccacida scivola fuori dal ghiaccio!", ja = "アシッドモーが氷の中から這い出てきた！", zh = "酸喉从冰中滑了出来！", ko = "산성아귀가 얼음 속에서 미끄러져 나옵니다!" }
+kit = "acidmaw"
+
+[[zone.boss]]
+entry = 5192
+name = { en = "Icehowl", de = "Eisheuler", fr = "Hurlglace", es = "Aullahielo", pt = "Uivagelo", ru = "Ледяной Рев", pl = "Lodowy Wyjec", tr = "Buzuğultu", it = "Ululaghiaccio", ja = "アイスハウル", zh = "冰吼", ko = "얼음울음" }
+type = "beast"
+display = 21599
+icon = "Ability_Hunter_Pet_Rhino"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.4
+minute = 12
+yell = { en = "Icehowl lets out a bellowing roar!", de = "Eisheuler stößt ein donnerndes Brüllen aus!", fr = "Hurlglace pousse un rugissement tonitruant !", es = "¡Aullahielo suelta un rugido atronador!", pt = "Uivagelo solta um rugido estrondoso!", ru = "Ледяной Рев испускает оглушительный рык!", pl = "Lodowy Wyjec wydaje ryk, który wstrząsa areną!", tr = "Buzuğultu gürleyen bir kükreme salıyor!", it = "Ululaghiaccio emette un ruggito tonante!", ja = "アイスハウルがとどろくような咆哮を上げた！", zh = "冰吼发出震耳欲聋的咆哮！", ko = "얼음울음이 우렁찬 포효를 내지릅니다!" }
+kit = "icehowl"
+
+[[zone.boss]]
+entry = 5193
+name = { en = "Lord Jaraxxus", de = "Lord Jaraxxus", fr = "Seigneur Jaraxxus", es = "Lord Jaraxxus", pt = "Lorde Jaraxxus", ru = "Лорд Джараксус", pl = "Lord Jaraxxus", tr = "Lord Jaraxxus", it = "Lord Jaraxxus", ja = "ジャラクサス卿", zh = "加拉克苏斯大王", ko = "군주 자락서스" }
+type = "demon"
+display = 19214
+icon = "Spell_Shadow_SummonInfernal"
+health = 26000
+damage = 54
+speed = 5.8
+size = 0.8
+minute = 16
+yell = { en = "Trifling gnome! Your arrogance will be your undoing!", de = "Unbedeutender Gnom! Deine Arroganz wird dein Verderben sein!", fr = "Misérable gnome ! Ton arrogance causera ta perte !", es = "¡Gnomo insignificante! ¡Tu arrogancia será tu perdición!", pt = "Gnomo insignificante! Sua arrogância será a sua ruína!", ru = "Жалкий гном! Твоя спесь тебя погубит!", pl = "Błahy gnomie! Twoja arogancja będzie twoją zgubą!", tr = "Önemsiz gnom! Kibrin senin sonun olacak!", it = "Gnomo insignificante! La tua arroganza sarà la tua rovina!", ja = "取るに足らぬノームめ！その傲慢さが命取りとなろう！", zh = "微不足道的侏儒！你的傲慢将让你自取灭亡！", ko = "하찮은 노움 놈! 네 오만이 너를 파멸시키리라!" }
+kit = "lord_jaraxxus"
+
+[[zone.boss]]
+entry = 2110
+name = { en = "the Black Knight", de = "der Schwarze Ritter", fr = "le Chevalier noir", es = "el Caballero Negro", pt = "o Cavaleiro Negro", ru = "Чёрный рыцарь", pl = "Czarny Rycerz", tr = "Kara Şövalye", it = "il Cavaliere Nero", ja = "ブラック・ナイト", zh = "黑骑士", ko = "흑기사" }
+type = "undead"
+display = 29837
+icon = "Spell_DeathKnight_ArmyOfTheDead"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.6
+minute = 20
+yell = { en = "This farce ends here!", de = "Diese Farce endet hier!", fr = "Cette farce s'arrête ici !", es = "¡Esta farsa termina aquí!", pt = "Esta farsa termina aqui!", ru = "Этот фарс окончен!", pl = "Ta farsa kończy się tutaj!", tr = "Bu maskaralık burada biter!", it = "Questa farsa finisce qui!", ja = "この茶番もここまでだ！", zh = "这场闹剧到此为止！", ko = "이 우스운 짓거리도 여기서 끝이다!" }
+final = true
+kit = "the_black_knight"

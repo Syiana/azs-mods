@@ -1,0 +1,43 @@
+# The rogue's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "rogue_0"
+profile = 0
+text = { en = "Made for the strike that ends it.", de = "Gemacht für den Stoß, der es beendet.", fr = "Fait pour le coup qui achève.", es = "Hecho para el golpe que lo termina todo.", pt = "Feito para o golpe que encerra tudo.", ru = "Для удара, который всё заканчивает.", pl = "Stworzone do ciosu, który wszystko kończy.", tr = "İşi bitiren darbe için yapılmış.", it = "Fatto per il colpo che chiude la partita.", ja = "とどめの一撃のために作られた。", zh = "为终结一切的一击而制。", ko = "끝을 내는 일격을 위해 만들어졌다." }
+
+[[piece_lore]]
+key = "rogue_1"
+profile = 1
+text = { en = "Studded beneath the shadows, for the fight that goes wrong.", de = "Unter den Schatten beschlagen, für den Kampf, der schiefgeht.", fr = "Clouté sous les ombres, pour le combat qui tourne mal.", es = "Tachonado bajo las sombras, para la pelea que sale mal.", pt = "Tachonado sob as sombras, para a luta que dá errado.", ru = "Клёпано под тенями — на случай, если бой пойдёт не так.", pl = "Ćwiekowane pod cieniem, na wypadek, gdy walka pójdzie źle.", tr = "Gölgelerin altında perçinli, ters giden kavga için.", it = "Borchiato sotto le ombre, per lo scontro che va storto.", ja = "影の下に鋲を打った、しくじった戦いのための備え。", zh = "暗影之下镶满铆钉，以备战局失控之时。", ko = "그림자 아래 징을 박았다. 싸움이 꼬일 때를 대비해서." }
+
+[[piece_lore]]
+key = "rogue_2"
+profile = 2
+text = { en = "Its wearer is never caught without a trick ready.", de = "Sein Träger hat stets einen Trick parat.", fr = "Son porteur n'est jamais pris sans un tour dans son sac.", es = "A quien lo lleva nunca lo pillan sin un truco preparado.", pt = "Quem o usa nunca é pego sem um truque pronto.", ru = "У владельца всегда наготове уловка.", pl = "Noszącego nigdy nie zaskoczą bez sztuczki w zanadrzu.", tr = "Giyeni asla hazırda bir numarası olmadan yakalanmaz.", it = "Chi lo indossa non è mai colto senza un trucco pronto.", ja = "持ち主は決して手の内を切らさない。", zh = "穿戴者永远留有后手。", ko = "착용자는 언제나 비장의 수를 준비해 둔다." }
+
+[[piece_lore]]
+key = "rogue_3"
+profile = 3
+text = { en = "Quick feet, and a quicker blade in the back.", de = "Flinke Füße und eine noch flinkere Klinge im Rücken.", fr = "Des pieds rapides, et une lame plus rapide encore dans le dos.", es = "Pies rápidos, y una hoja aún más rápida en la espalda.", pt = "Pés rápidos, e uma lâmina ainda mais rápida nas costas.", ru = "Быстрые ноги и ещё более быстрый клинок в спину.", pl = "Szybkie stopy i jeszcze szybsze ostrze w plecach.", tr = "Hızlı ayaklar ve sırtta daha da hızlı bir bıçak.", it = "Piedi rapidi e una lama ancora più rapida nella schiena.", ja = "素早い足、そして背中にはさらに素早い刃。", zh = "脚步飞快，背后的刀刃更快。", ko = "빠른 발, 그리고 등 뒤로 더 빠른 칼날." }
+
+[[piece_lore]]
+key = "rogue_4"
+profile = 4
+text = { en = "Catch your breath in the shadows; the next trick is ready.", de = "Atme in den Schatten durch; der nächste Trick ist bereit.", fr = "Reprenez votre souffle dans l'ombre ; le tour suivant est prêt.", es = "Recupera el aliento en las sombras; el siguiente truco está listo.", pt = "Recupere o fôlego nas sombras; o próximo truque está pronto.", ru = "Переведите дух в тенях; следующая уловка готова.", pl = "Złap oddech w cieniu; kolejna sztuczka jest gotowa.", tr = "Gölgelerde soluklan; sonraki numara hazır.", it = "Riprendi fiato nell'ombra; il prossimo trucco è pronto.", ja = "影の中で息を整えよ。次の手はもう用意できている。", zh = "在暗影中喘口气；下一招已经备好。", ko = "그림자 속에서 숨을 고르라. 다음 수는 이미 준비되었다." }
+
+[[piece_lore]]
+key = "rogue_5"
+profile = 5
+text = { en = "For the one who walks out of every ambush.", de = "Für den, der aus jedem Hinterhalt herausspaziert.", fr = "Pour celui qui sort indemne de chaque embuscade.", es = "Para quien sale con vida de cada emboscada.", pt = "Para quem sai inteiro de toda emboscada.", ru = "Для того, кто выходит из любой засады.", pl = "Dla tego, kto wychodzi cało z każdej zasadzki.", tr = "Her pusudan sağ çıkan için.", it = "Per chi esce vivo da ogni imboscata.", ja = "あらゆる待ち伏せから生きて帰る者のために。", zh = "献给每次都能从伏击中全身而退的人。", ko = "모든 매복에서 걸어 나오는 자를 위하여." }
+
+[[piece_lore]]
+key = "rogue_6"
+profile = 6
+text = { en = "Dart in, cut, gone.", de = "Hinein, zustechen, weg.", fr = "Surgir, trancher, disparaître.", es = "Entrar, cortar, desaparecer.", pt = "Entra, corta, some.", ru = "Нырнуть, полоснуть, исчезнуть.", pl = "Doskocz, tnij, znikaj.", tr = "Dal, kes, kaybol.", it = "Scatta, taglia, sparisci.", ja = "飛び込み、斬り、消える。", zh = "突进，割喉，消失。", ko = "파고들고, 베고, 사라진다." }
+
+[[piece_lore]]
+key = "rogue_7"
+profile = 7
+text = { en = "Its knives fan wide and find the vitals.", de = "Seine Messer fächern weit und finden die lebenswichtigen Stellen.", fr = "Ses couteaux se déploient en éventail et trouvent les points vitaux.", es = "Sus cuchillos se abren en abanico y encuentran los puntos vitales.", pt = "Suas facas se abrem em leque e acham os pontos vitais.", ru = "Его ножи расходятся веером и находят уязвимые места.", pl = "Jego noże rozchodzą się wachlarzem i trafiają w czułe punkty.", tr = "Bıçakları geniş bir yelpazeyle açılır ve hayati noktaları bulur.", it = "I suoi coltelli si aprono a ventaglio e trovano i punti vitali.", ja = "その刃は扇状に広がり、急所を捉える。", zh = "飞刀如扇展开，直取要害。", ko = "그 단검은 넓게 펼쳐져 급소를 찾아낸다." }

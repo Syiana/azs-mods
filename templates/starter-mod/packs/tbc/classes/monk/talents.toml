@@ -1,0 +1,578 @@
+# The monk's talent trees: Windwalker, Brewmaster and Mistweaver, each the path of one stance.
+# AS has no monk: the port's own trees, in the shape of AS's (thirteen talents a tree, a row
+# opening every 5 points, milestones at 10 and 20 points, a capstone at 30). Each tree's first
+# milestone is its stance: the hero menu's way into the stance's own spells (their `needs`).
+# Numbers ours, after the other classes' trees. `TUNE`
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+
+[[talent_tree]]
+key = "monk_windwalker"
+index = 0
+icon = "monk_stance_whitetiger"
+background = "MonkWindwalker"
+name = { en = "Windwalker", de = "Windläufer", fr = "Marche-vent", es = "Viajero del viento", pt = "Andarilho do Vento", ru = "Танцующий с ветром", pl = "Wędrowiec wiatru", tr = "Rüzgar Yürüyen", it = "Camminavento", ja = "ウィンドウォーカー", zh = "踏风", ko = "풍운" }
+
+[[talent_tree]]
+key = "monk_brewmaster"
+index = 1
+icon = "monk_stance_drunkenox"
+background = "MonkBrewmaster"
+name = { en = "Brewmaster", de = "Braumeister", fr = "Maître brasseur", es = "Maestro cervecero", pt = "Mestre Cervejeiro", ru = "Хмелевар", pl = "Piwowar", tr = "Demleme Ustası", it = "Maestro birraio", ja = "ブリューマスター", zh = "酒仙", ko = "양조" }
+
+[[talent_tree]]
+key = "monk_mistweaver"
+index = 2
+icon = "monk_stance_wiseserpent"
+background = "MonkMistweaver"
+name = { en = "Mistweaver", de = "Nebelwirker", fr = "Tisse-brume", es = "Tejedor de niebla", pt = "Tecelão da Névoa", ru = "Ткач туманов", pl = "Tkacz mgieł", tr = "Sis Dokuyucu", it = "Tessinebbia", ja = "ミストウィーヴァー", zh = "织雾", ko = "운무" }
+
+# --- Windwalker: the Fierce Tiger
+
+[[talent]]
+key = "ww_tiger_strikes"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "ability_monk_tigerstyle"
+name = { en = "Tiger Strikes", de = "Tigerschläge", fr = "Frappes du tigre", es = "Golpes de tigre", pt = "Golpes do Tigre", ru = "Удары тигра", pl = "Uderzenia tygrysa", tr = "Kaplan Darbeleri", it = "Colpi della tigre", ja = "タイガー・ストライク", zh = "猛虎连击", ko = "범의 일격" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "ww_ferocity"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [0, 0.015] }]
+icon = "ability_monk_prideofthetiger"
+name = { en = "Ferocity of Xuen", de = "Wildheit Xuens", fr = "Férocité de Xuen", es = "Ferocidad de Xuen", pt = "Ferocidade de Xuen", ru = "Свирепость Сюэня", pl = "Dzikość Xuena", tr = "Xuen'in Yırtıcılığı", it = "Ferocia di Xuen", ja = "フェロシティ・オブ・シュエン", zh = "雪怒之凶", ko = "쉬엔의 흉포함" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "ww_combat_conditioning"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "ability_monk_jab"
+name = { en = "Combat Conditioning", de = "Kampfkondition", fr = "Condition de combat", es = "Preparación de combate", pt = "Condicionamento de Combate", ru = "Боевая подготовка", pl = "Kondycja bojowa", tr = "Dövüş Kondisyonu", it = "Condizionamento al combattimento", ja = "コンバット・コンディショニング", zh = "战斗调节", ko = "전투 단련" }
+text = { en = "Jab, Tiger Palm and Blackout Kick deal {v}% more damage.", de = "Hieb, Tigerklaue und Blackout-Tritt verursachen {v}% mehr Schaden.", fr = "Direct, Paume du tigre et Coup de pied éclipse infligent {v}% de dégâts en plus.", es = "Puñetazo, Palma del tigre y Patada de apagón infligen un {v}% más de daño.", pt = "Jab, Palma do Tigre e Chute Apagão causam {v}% a mais de dano.", ru = "Тычок, Лапа тигра и Затмевающий удар наносят на {v}% больше урона.", pl = "Szybki cios, Dłoń tygrysa i Kopnięcie zaćmienia zadają o {v}% więcej obrażeń.", tr = "Yumruk, Kaplan Avucu ve Karartma Tekmesi {v}% daha fazla hasar verir.", it = "Percossa, Palmo della tigre e Calcio Blackout infliggono il {v}% di danni in più.", ja = "ジャブ、タイガー・パーム、ブラックアウト・キックのダメージが{v}%増加します。", zh = "贯日击、猛虎掌和幻灭踢造成的伤害提高{v}%。", ko = "찌르기, 범의 장풍, 후려차기의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["jab", "tiger_palm", "blackout_kick"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "ww_celerity"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [7, 0.02] }]
+icon = "ability_monk_tigerslust"
+name = { en = "Celerity", de = "Schnelligkeit", fr = "Célérité", es = "Celeridad", pt = "Celeridade", ru = "Проворство", pl = "Chyżość", tr = "Atiklik", it = "Celerità", ja = "セレリティ", zh = "灵动", ko = "민활함" }
+text = { en = "Increases your movement speed by {v}%.", de = "Erhöht dein Bewegungstempo um {v}%.", fr = "Augmente ta vitesse de déplacement de {v}%.", es = "Aumenta tu velocidad de movimiento un {v}%.", pt = "Aumenta sua velocidade de movimento em {v}%.", ru = "Увеличивает твою скорость движения на {v}%.", pl = "Zwiększa szybkość ruchu o {v}%.", tr = "Hareket hızını {v}% artırır.", it = "Aumenta la tua velocità di movimento del {v}%.", ja = "移動速度が{v}%上昇します。", zh = "使你的移动速度提高{v}%。", ko = "이동 속도가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "stance_of_the_fierce_tiger"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+exclusive = "stance"
+effects = []
+icon = "monk_stance_whitetiger"
+name = { en = "Stance of the Fierce Tiger", de = "Haltung des wilden Tigers", fr = "Posture du tigre féroce", es = "Postura del tigre feroz", pt = "Postura do Tigre Feroz", ru = "Стойка свирепого тигра", pl = "Postawa Dzikiego Tygrysa", tr = "Yırtıcı Kaplan Duruşu", it = "Posizione della Tigre feroce", ja = "スタンス・オブ・ザ・フィアース・タイガー", zh = "猛虎之姿", ko = "사나운 범의 태세" }
+text = { en = "Milestone. Stance of the Fierce Tiger: your physical spells deal {v}% more damage, and your level-up hands may deal Tigereye Brew, Whirling Dragon Punch and Invoke Xuen. One stance at a time: the first one taken rules out the other two.", de = "Meilenstein. Haltung des wilden Tigers: Deine körperlichen Zauber verursachen {v}% mehr Schaden, und deine Stufenaufstiege können Tigeraugengebräu, Wirbelnden Drachenschlag und Xuen anrufen bieten. Nur eine Haltung: Die zuerst gewählte schließt die anderen beiden aus.", fr = "Jalon. Posture du tigre féroce : vos sorts physiques infligent {v}% de dégâts en plus, et vos mains de montée de niveau peuvent donner Brassin d'œil de tigre, Coup de poing du dragon tourbillonnant et Invocation de Xuen. Une seule posture à la fois : la première choisie exclut les deux autres.", es = "Hito. Postura del tigre feroz: tus hechizos físicos infligen un {v}% más de daño, y tus manos de subida de nivel pueden ofrecer Brebaje de ojo de tigre, Puñetazo del dragón giratorio e Invocar a Xuen. Una sola postura a la vez: la primera elegida excluye las otras dos.", pt = "Marco. Postura do Tigre Feroz: seus feitiços físicos causam {v}% a mais de dano, e suas mãos de subida de nível podem oferecer Infusão do Olho de Tigre, Soco do Dragão Giratório e Invocar Xuen. Uma postura por vez: a primeira escolhida exclui as outras duas.", ru = "Веха. Стойка свирепого тигра: ваши физические заклинания наносят на {v}% больше урона, а при повышении уровня вам могут выпасть Настой тигриного глаза, Удар вращающегося дракона и Призыв Сюэня. Только одна стойка: выбранная первой исключает две другие.", pl = "Kamień milowy. Postawa Dzikiego Tygrysa: twoje czary fizyczne zadają o {v}% więcej obrażeń, a twoje karty awansu mogą dać Napar tygrysiego oka, Wirujące uderzenie smoka i Przywołanie Xuena. Jedna postawa naraz: pierwsza wybrana wyklucza dwie pozostałe.", tr = "Dönüm noktası. Yırtıcı Kaplan Duruşu: fiziksel büyülerin {v}% daha fazla hasar verir ve seviye atlama ellerinde Kaplangözü Demlemesi, Dönen Ejderha Yumruğu ve Xuen'i Çağır çıkabilir. Aynı anda tek duruş: ilk alınan diğer ikisini dışlar.", it = "Traguardo. Posizione della Tigre feroce: i tuoi incantesimi fisici infliggono il {v}% di danni in più e le carte che ricevi a ogni livello possono offrire Infuso occhio di tigre, Pugno del drago vorticante e Invocare Xuen. Una sola posizione alla volta: la prima scelta esclude le altre due.", ja = "【マイルストーン】スタンス・オブ・ザ・フィアース・タイガー：物理呪文のダメージが{v}%増加し、レベルアップの手札にタイガーアイ・ブリュー、ワーリング・ドラゴン・パンチ、インヴォーク・シュエンが出るようになります。スタンスは1つだけ：最初に取ったものが他の2つを封じます。", zh = "里程碑：猛虎之姿：你的物理法术造成的伤害提高{v}%，升级时提供的卡牌中可能出现虎眼酒、升龙霸和召唤白虎雪怒。一次只能选择一种姿态：第一个选择的姿态会排除另外两个。", ko = "이정표. 사나운 범의 태세: 물리 주문의 피해가 {v}% 증가하며, 레벨 업 카드에 범눈 양조주, 용축회오리격, 쉬엔 소환이 나올 수 있습니다. 태세는 하나만: 먼저 고른 태세가 다른 둘을 막습니다." }
+menu_v = 0.08
+mods = [{ school = 1 }]
+mods_v = 0.08
+
+[[talent]]
+key = "ww_brawler"
+tree = 0
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [14, 0.003] }]
+icon = "Spell_Shadow_LifeDrain"
+name = { en = "Blood Rush", de = "Blutrausch", fr = "Frénésie sanguinaire", es = "Frenesí sangriento", pt = "Frenesi de Sangue", ru = "Кровавое неистовство", pl = "Krwawy szał", tr = "Kan Çılgınlığı", it = "Frenesia Sanguinaria", ja = "ブラッド・ラッシュ", zh = "热血冲涌", ko = "피의 쇄도" }
+text = { en = "{v}% of all damage you deal heals you.", de = "{v}% des gesamten Schadens, den du verursachst, heilt dich.", fr = "{v}% de tous les dégâts que tu infliges te rendent des points de vie.", es = "El {v}% de todo el daño que infliges te sana.", pt = "{v}% de todo o dano que você causa cura você.", ru = "{v}% от всего нанесённого тобой урона восстанавливает твоё здоровье.", pl = "{v}% wszystkich zadanych przez ciebie obrażeń cię leczy.", tr = "Verdiğin tüm hasarın %{v} kadarı seni iyileştirir.", it = "Il {v}% di tutti i danni che infliggi ti cura.", ja = "与えたすべてのダメージの{v}%だけ体力を回復します。", zh = "你造成的所有伤害的{v}%会治疗你。", ko = "주는 모든 피해의 {v}%만큼 생명력을 회복합니다." }
+menu_v = 0.003
+
+[[talent]]
+key = "ww_rising_fists"
+tree = 0
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "ability_monk_risingsunkick"
+name = { en = "Rising Fists", de = "Aufsteigende Fäuste", fr = "Poings ascendants", es = "Puños ascendentes", pt = "Punhos Ascendentes", ru = "Восходящие кулаки", pl = "Wznoszące się pięści", tr = "Yükselen Yumruklar", it = "Pugni ascendenti", ja = "ライジング・フィスト", zh = "旭日之拳", ko = "솟구치는 주먹" }
+text = { en = "Rising Sun Kick's and Fists of Fury's cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Tritt der aufgehenden Sonne und Furorfäuste sind {v}% kürzer.", fr = "Les délais de récupération de Coup de pied du soleil levant et de Poings de fureur sont réduits de {v}%.", es = "Los tiempos de reutilización de Patada del sol naciente y Puños de furia son un {v}% más cortos.", pt = "Os tempos de recarga de Chute do Sol Nascente e Punhos da Fúria são {v}% menores.", ru = "Перезарядка Удара восходящего солнца и Кулаков ярости короче на {v}%.", pl = "Czasy odnowienia Kopnięcia wschodzącego słońca i Pięści furii są krótsze o {v}%.", tr = "Doğan Güneş Tekmesi ve Öfke Yumrukları bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Calcio del sole nascente e Pugni della furia sono più brevi del {v}%.", ja = "ライジング・サン・キックとフィスト・オブ・フューリーのクールダウンが{v}%短くなります。", zh = "旭日东升踢和怒雷破的冷却时间缩短{v}%。", ko = "해오름차기와 분노의 주먹의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["rising_sun_kick", "fists_of_fury"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "ww_teachings"
+tree = 0
+row = 3
+col = 2
+ranks = 3
+req = "stance_of_the_fierce_tiger"
+effects = []
+icon = "ability_monk_blackoutkick"
+name = { en = "Teachings of the Monastery", de = "Lehren des Klosters", fr = "Enseignements du monastère", es = "Enseñanzas del monasterio", pt = "Ensinamentos do Mosteiro", ru = "Учения монастыря", pl = "Nauki klasztoru", tr = "Manastırın Öğretileri", it = "Insegnamenti del Monastero", ja = "ティーチング・オブ・ザ・モナステリー", zh = "禅院教诲", ko = "사원의 가르침" }
+text = { en = "Each Jab has a {v}% chance of a free Blackout Kick.", de = "Jeder Hieb hat eine Chance von {v}% auf einen kostenlosen Blackout-Tritt.", fr = "Chaque Direct a {v}% de chances de déclencher un Coup de pied éclipse gratuit.", es = "Cada Puñetazo tiene un {v}% de probabilidad de lanzar una Patada de apagón gratis.", pt = "Cada Jab tem {v}% de chance de lançar um Chute Apagão grátis.", ru = "Каждый Тычок с шансом {v}% дает бесплатный Затмевающий удар.", pl = "Każdy Szybki cios ma {v}% szansy na darmowe Kopnięcie zaćmienia.", tr = "Her Yumruk {v}% ihtimalle bedava bir Karartma Tekmesi getirir.", it = "Ogni Percossa ha il {v}% di probabilità di un Calcio Blackout gratuito.", ja = "ジャブのたびに{v}%の確率で無料のブラックアウト・キックが発動します。", zh = "每次贯日击有{v}%的几率触发一次免费的幻灭踢。", ko = "찌르기마다 {v}% 확률로 후려차기가 무료로 발동합니다." }
+menu_v = 0.06
+plays = [
+    { v = 0.06, play = { cast_cast = { keys = ["jab"], cast = "blackout_kick", gap = 1.0 } } },
+]
+
+[[talent]]
+key = "ww_spirits"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "tiger_palm" }]
+icon = "ability_monk_tigerpalm"
+name = { en = "Tiger Rush", de = "Tigerrausch", fr = "Ruée du tigre", es = "Embestida del tigre", pt = "Investida do Tigre", ru = "Натиск тигра", pl = "Szarża tygrysa", tr = "Kaplan Hücumu", it = "Carica della Tigre", ja = "タイガー・ラッシュ", zh = "猛虎冲刺", ko = "범의 질주" }
+text = { en = "Milestone. You start each run with Tiger Palm, and Tiger Palm hits 2 additional targets.", de = "Meilenstein. Du beginnst jeden Lauf mit Tigerklaue. Tigerklaue trifft 2 weitere Ziele.", fr = "Jalon. Tu commences chaque partie avec Paume du tigre, qui touche 2 cibles supplémentaires.", es = "Hito. Empiezas cada partida con Palma del tigre, que golpea a 2 objetivos adicionales.", pt = "Marco. Você começa cada partida com Palma do Tigre, que atinge 2 alvos adicionais.", ru = "Веха. Каждый забег начинается с Ладонью тигра, которая поражает ещё 2 цели.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Tygrysią dłonią, która trafia 2 dodatkowe cele.", tr = "Dönüm noktası. Her oyuna Kaplan Avucu ile başlarsın ve Kaplan Avucu 2 ek hedefe vurur.", it = "Traguardo. Inizi ogni partita con Palmo della Tigre, che colpisce 2 bersagli aggiuntivi.", ja = "【マイルストーン】毎ランをタイガー・パームを持って始め、タイガー・パームが追加で2体の対象に命中します。", zh = "里程碑：你在每场对局开始时拥有猛虎掌，猛虎掌额外击中2个目标。", ko = "이정표. 모든 런을 범의 장풍을 가지고 시작하며, 범의 장풍이 대상을 2명 더 공격합니다." }
+mods = [{ targets = ["tiger_palm"] }]
+mods_v = 2.0
+
+[[talent]]
+key = "ww_combo_breaker"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "ability_monk_tigerpalm"
+name = { en = "Combo Breaker", de = "Kombobrecher", fr = "Brise-combo", es = "Rompecombos", pt = "Quebra-combo", ru = "Прерыватель серии", pl = "Łamacz kombinacji", tr = "Kombo Kırıcı", it = "Rompicombo", ja = "コンボ・ブレイカー", zh = "连击破坏", ko = "연계 차단" }
+text = { en = "Critical strikes of Jab and Tiger Palm have a {v}% chance of a free Blackout Kick, at most once every 2 sec.", de = "Kritische Treffer von Hieb und Tigerklaue haben eine Chance von {v}% auf einen kostenlosen Blackout-Tritt, höchstens einmal alle 2 Sek.", fr = "Les coups critiques de Direct et de Paume du tigre ont {v}% de chances de déclencher un Coup de pied éclipse gratuit, au plus une fois toutes les 2 s.", es = "Los golpes críticos de Puñetazo y Palma del tigre tienen un {v}% de probabilidad de lanzar una Patada de apagón gratis, como máximo una vez cada 2 s.", pt = "Acertos críticos de Jab e Palma do Tigre têm {v}% de chance de lançar um Chute Apagão grátis, no máximo uma vez a cada 2 s.", ru = "Критические удары Тычка и Лапы тигра с шансом {v}% дают бесплатный Затмевающий удар, не чаще раза в 2 сек.", pl = "Trafienia krytyczne Szybkiego ciosu i Dłoni tygrysa mają {v}% szansy na darmowe Kopnięcie zaćmienia, najwyżej raz na 2 s.", tr = "Yumruk ve Kaplan Avucu kritik vuruşları {v}% ihtimalle bedava bir Karartma Tekmesi getirir, 2 sn'de en fazla bir kez.", it = "I colpi critici di Percossa e Palmo della tigre hanno il {v}% di probabilità di un Calcio Blackout gratuito, al massimo una volta ogni 2 s.", ja = "ジャブとタイガー・パームのクリティカルが{v}%の確率で無料のブラックアウト・キックを発動します（2秒に1回まで）。", zh = "贯日击和猛虎掌的暴击有{v}%的几率触发一次免费的幻灭踢，每2秒最多一次。", ko = "찌르기와 범의 장풍이 치명타로 적중하면 {v}% 확률로 후려차기가 무료로 발동합니다. 2초에 최대 한 번입니다." }
+menu_v = 0.15
+plays = [
+    { v = 0.15, play = { crit_cast = { keys = ["jab", "tiger_palm"], school = 0, cast = "blackout_kick", gap = 2.0 } } },
+]
+
+[[talent]]
+key = "ww_hit_combo"
+tree = 0
+row = 5
+col = 0
+ranks = 5
+effects = []
+icon = "ability_monk_touchofdeath"
+name = { en = "Hit Combo", de = "Trefferkombo", fr = "Combo de coups", es = "Combo de golpes", pt = "Combo de Golpes", ru = "Серия ударов", pl = "Kombinacja trafień", tr = "Vuruş Kombosu", it = "Combo di colpi", ja = "ヒット・コンボ", zh = "连击", ko = "연계 타격" }
+text = { en = "Touch of Death and Strike of the Windlord deal {v}% more damage.", de = "Berührung des Todes und Schlag des Windfürsten verursachen {v}% mehr Schaden.", fr = "Toucher mortel et Frappe du seigneur du vent infligent {v}% de dégâts en plus.", es = "Toque de muerte y Golpe del Señor del Viento infligen un {v}% más de daño.", pt = "Toque da Morte e Golpe do Senhor do Vento causam {v}% a mais de dano.", ru = "Касание смерти и Удар Повелителя ветра наносят на {v}% больше урона.", pl = "Dotyk śmierci i Cios Władcy Wiatru zadają o {v}% więcej obrażeń.", tr = "Ölüm Dokunuşu ve Rüzgar Lordu'nun Darbesi {v}% daha fazla hasar verir.", it = "Tocco della morte e Colpo del Signore del Vento infliggono il {v}% di danni in più.", ja = "タッチ・オブ・デスとストライク・オブ・ザ・ウィンドロードのダメージが{v}%増加します。", zh = "轮回之触和风领主之击造成的伤害提高{v}%。", ko = "절명의 손길과 풍신의 일격의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["touch_of_death", "strike_of_the_windlord"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "ww_whirling_dragon"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "ww_spirits"
+effects = []
+icon = "ability_monk_dragonkick"
+name = { en = "Whirling Dragon Punch", de = "Wirbelnder Drachenschlag", fr = "Coup de poing du dragon tourbillonnant", es = "Puñetazo del dragón giratorio", pt = "Soco do Dragão Giratório", ru = "Вихревой удар дракона", pl = "Wirujące uderzenie smoka", tr = "Dönen Ejderha Yumruğu", it = "Pugno del drago vorticante", ja = "ワーリング・ドラゴン・パンチ", zh = "升龙霸", ko = "용축회오리격" }
+text = { en = "Rising Sun Kick and Fists of Fury have a {v}% chance of a free Whirling Dragon Punch, at most once every 2 sec.", de = "Tritt der aufgehenden Sonne und Furorfäuste haben eine Chance von {v}% auf einen kostenlosen Wirbelnden Drachenschlag, höchstens einmal alle 2 Sek.", fr = "Coup de pied du soleil levant et Poings de fureur ont {v}% de chances de déclencher gratuitement un Coup de poing du dragon tourbillonnant, au plus une fois toutes les 2 s.", es = "Patada del sol naciente y Puños de furia tienen un {v}% de probabilidad de lanzar gratis un Puñetazo del dragón giratorio, como máximo una vez cada 2 s.", pt = "Chute do Sol Nascente e Punhos da Fúria têm {v}% de chance de lançar um Soco do Dragão Giratório de graça, no máximo uma vez a cada 2 s.", ru = "Удар восходящего солнца и Кулаки ярости с шансом {v}% бесплатно вызывают Удар вращающегося дракона, не чаще одного раза в 2 сек.", pl = "Kopnięcie wschodzącego słońca i Pięści furii mają {v}% szansy na darmowe Wirujące uderzenie smoka, najwyżej raz na 2 s.", tr = "Doğan Güneş Tekmesi ve Öfke Yumrukları {v}% ihtimalle bedava bir Dönen Ejderha Yumruğu getirir, 2 sn'de en fazla bir kez.", it = "Calcio del sole nascente e Pugni della furia hanno il {v}% di probabilità di un Pugno del drago vorticante gratuito, al massimo una volta ogni 2 s.", ja = "ライジング・サン・キックとフィスト・オブ・フューリーが{v}%の確率で無料のワーリング・ドラゴン・パンチを発動します（2秒に1回まで）。", zh = "旭日东升踢和怒雷破有{v}%的几率触发一次免费的升龙霸，每2秒最多一次。", ko = "해오름차기와 분노의 주먹이 {v}% 확률로 용축회오리격을 무료로 발동합니다. 2초에 최대 한 번입니다." }
+menu_v = 0.12
+plays = [
+    { v = 0.12, play = { cast_cast = { keys = ["rising_sun_kick", "fists_of_fury"], cast = "whirling_dragon_punch", gap = 2.0 } } },
+]
+
+[[talent]]
+key = "ww_serenity"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "strike_of_the_windlord" }]
+icon = "ability_monk_serenity"
+name = { en = "Serenity", de = "Gelassenheit", fr = "Sérénité", es = "Serenidad", pt = "Serenidade", ru = "Безмятежность", pl = "Pogoda ducha", tr = "Dinginlik", it = "Serenità", ja = "セレニティ", zh = "屏气凝神", ko = "평안" }
+text = { en = "Capstone. You start every run with Strike of the Windlord, and the wind strikes for you: a free Strike of the Windlord every {v} sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Schlag des Windfürsten, und der Wind schlägt für dich zu: alle {v} Sek. ein kostenloser Schlag des Windfürsten.", fr = "Apogée. Tu commences chaque partie avec Frappe du seigneur du vent, et le vent frappe pour toi : une Frappe du seigneur du vent gratuite toutes les {v} s.", es = "Cúspide. Empiezas cada partida con Golpe del Señor del Viento, y el viento golpea por ti: un Golpe del Señor del Viento gratis cada {v} s.", pt = "Ápice. Você começa toda partida com Golpe do Senhor do Vento, e o vento golpeia por você: um Golpe do Senhor do Vento grátis a cada {v} s.", ru = "Вершина. Ты начинаешь каждый забег с Ударом Повелителя ветра, и ветер бьет за тебя: бесплатный Удар Повелителя ветра каждые {v} сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Ciosem Władcy Wiatru, a wiatr uderza za ciebie: darmowy Cios Władcy Wiatru co {v} s.", tr = "Zirve. Her oyuna Rüzgar Lordu'nun Darbesi ile başlarsın ve rüzgar senin yerine vurur: her {v} sn'de bedava bir Rüzgar Lordu'nun Darbesi.", it = "Vertice. Inizi ogni partita con Colpo del Signore del Vento e il vento colpisce per te: un Colpo del Signore del Vento gratuito ogni {v} s.", ja = "【キャップストーン】毎ランをストライク・オブ・ザ・ウィンドロードを持って始め、風があなたの代わりに打ちます：{v}秒ごとに無料のストライク・オブ・ザ・ウィンドロード。", zh = "终极天赋：你在每场对局开始时拥有风领主之击，狂风会替你出手：每{v}秒施放一次免费的风领主之击。", ko = "궁극 특성. 모든 런을 풍신의 일격을 가지고 시작하며, 바람이 대신 공격합니다: {v}초마다 풍신의 일격을 무료로 시전합니다." }
+menu_v = 9
+plays = [
+    { v = 9.0, play = { every = "strike_of_the_windlord" } },
+]
+
+# --- Brewmaster: the Sturdy Ox
+
+[[talent]]
+key = "bm_brewing"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [2, 0.03] }]
+icon = "ability_monk_chibrew"
+name = { en = "Stout Brewing", de = "Kräftiges Brauen", fr = "Brassage robuste", es = "Elaboración robusta", pt = "Fermentação Robusta", ru = "Крепкое варево", pl = "Warzenie krzepkie", tr = "Sağlam Demleme", it = "Infuso robusto", ja = "スタウト・ブリューイング", zh = "醇厚酿造", ko = "튼튼한 양조" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "bm_ironskin"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "ability_monk_ironskinbrew"
+name = { en = "Ironskin", de = "Eisenhaut", fr = "Peau de fer", es = "Piel de hierro", pt = "Pele de Ferro", ru = "Железная кожа", pl = "Żelazna skóra", tr = "Demir Deri", it = "Pelle di ferro", ja = "アイアンスキン", zh = "铁骨", ko = "무쇠가죽" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "bm_drunken_haze"
+tree = 1
+row = 1
+col = 0
+ranks = 3
+effects = [{ stat = [33, 0.02] }]
+icon = "ability_monk_elusiveale"
+name = { en = "Drunken Haze", de = "Trunkener Dunst", fr = "Brume ivre", es = "Bruma ebria", pt = "Névoa Ébria", ru = "Пьяный туман", pl = "Pijacka mgiełka", tr = "Sarhoş Sis", it = "Foschia ebbra", ja = "ドランケン・ヘイズ", zh = "醉拳迷雾", ko = "취기의 안개" }
+text = { en = "Gives you a {v}% chance to dodge an enemy's blow.", de = "Gewährt dir eine Chance von {v}%, dem Hieb eines Gegners auszuweichen.", fr = "Te donne {v}% de chances d'esquiver le coup d'un ennemi.", es = "Te da un {v}% de probabilidad de esquivar el golpe de un enemigo.", pt = "Dá a você {v}% de chance de esquivar do golpe de um inimigo.", ru = "Дает тебе {v}% шанс уклониться от удара врага.", pl = "Daje ci {v}% szansy na unik przed ciosem przeciwnika.", tr = "Düşman darbesinden kaçınma şansı {v}% verir.", it = "Ti dà il {v}% di probabilità di schivare il colpo di un nemico.", ja = "{v}%の確率で敵の攻撃を回避します。", zh = "使你有{v}%的几率躲闪敌人的攻击。", ko = "{v}% 확률로 적의 공격을 회피합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "bm_spinning"
+tree = 1
+row = 1
+col = 2
+ranks = 5
+effects = []
+icon = "ability_monk_cranekick_new"
+name = { en = "Whirling Steel", de = "Wirbelnder Stahl", fr = "Acier tourbillonnant", es = "Acero giratorio", pt = "Aço Giratório", ru = "Вихрь стали", pl = "Wirująca stal", tr = "Dönen Çelik", it = "Acciaio vorticante", ja = "ワーリング・スチール", zh = "钢铁回旋", ko = "회전하는 강철" }
+text = { en = "Spinning Crane Kick and Rushing Jade Wind reach {v}% farther.", de = "Wirbelnder Kranichtritt und Rauschender Jadewind reichen {v}% weiter.", fr = "Coup de pied tournoyant de la grue et Vent de jade impétueux portent {v}% plus loin.", es = "Patada giratoria de la grulla y Viento de jade impetuoso llegan un {v}% más lejos.", pt = "Chute Giratório da Garça e Vento de Jade Impetuoso alcançam {v}% mais longe.", ru = "Удар вращающегося журавля и Порыв нефритового ветра достают на {v}% дальше.", pl = "Wirujące kopnięcie żurawia i Pędzący nefrytowy wiatr sięgają o {v}% dalej.", tr = "Dönen Turna Tekmesi ve Hücum Eden Yeşim Rüzgarı {v}% daha uzağa erişir.", it = "Calcio rotante della gru e Vento di giada impetuoso arrivano il {v}% più lontano.", ja = "スピニング・クレーン・キックとラッシング・ジェイド・ウィンドの範囲が{v}%広がります。", zh = "神鹤引项踢和碧玉疾风的范围扩大{v}%。", ko = "회전 학다리차기와 비취 돌풍의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.05
+mods = [{ area = ["spinning_crane_kick", "rushing_jade_wind"] }]
+mods_v = 0.05
+
+[[talent]]
+key = "stance_of_the_sturdy_ox"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+exclusive = "stance"
+effects = [{ stat = [2, 0.05] }]
+icon = "monk_stance_drunkenox"
+name = { en = "Stance of the Sturdy Ox", de = "Haltung des sturen Ochsen", fr = "Posture du buffle robuste", es = "Postura del buey robusto", pt = "Postura do Boi Robusto", ru = "Стойка стойкого быка", pl = "Postawa Mocnego Wołu", tr = "Sağlam Öküz Duruşu", it = "Posizione del Bue robusto", ja = "スタンス・オブ・ザ・スターディ・オックス", zh = "蛮牛之姿", ko = "굳건한 황소의 태세" }
+text = { en = "Milestone. Stance of the Sturdy Ox: {v}% less damage taken while an enemy is within 7 yd, 5% more health, and your level-up hands may deal Keg Smash, Exploding Keg, Breath of Fire, Charging Ox Wave and Fortifying Brew. One stance at a time: the first one taken rules out the other two.", de = "Meilenstein. Haltung des sturen Ochsen: {v}% weniger erlittener Schaden, solange ein Gegner im Umkreis von 7 m ist, 5% mehr Gesundheit, und deine Stufenaufstiege können Fasshieb, Explodierendes Fass, Feueratem, Ansturm des Ochsen und Anregendes Gebräu bieten. Nur eine Haltung: Die zuerst gewählte schließt die anderen beiden aus.", fr = "Jalon. Posture du bœuf robuste : {v}% de dégâts subis en moins tant qu'un ennemi est à moins de 7 m, 5% de santé en plus, et vos mains de montée de niveau peuvent donner Baril fracassé, Baril explosif, Souffle de feu, Vague du bœuf chargeant et Brassin fortifiant. Une seule posture à la fois : la première choisie exclut les deux autres.", es = "Hito. Postura del buey robusto: un {v}% menos de daño recibido mientras haya un enemigo a menos de 7 m, un 5% más de salud, y tus manos de subida de nivel pueden ofrecer Golpe de barril, Barril explosivo, Aliento de fuego, Ola de buey cargante y Brebaje fortificante. Una sola postura a la vez: la primera elegida excluye las otras dos.", pt = "Marco. Postura do Boi Robusto: {v}% a menos de dano sofrido enquanto houver um inimigo a menos de 7 m, 5% a mais de vida, e suas mãos de subida de nível podem oferecer Golpe de Barril, Barril Explosivo, Sopro de Fogo, Onda do Boi Carregador e Infusão Fortificante. Uma postura por vez: a primeira escolhida exclui as outras duas.", ru = "Веха. Стойка крепкого быка: получаемый урон снижен на {v}%, пока враг находится в пределах 7 м, здоровье больше на 5%, а при повышении уровня вам могут выпасть Удар бочонком, Взрывной бочонок, Огненное дыхание, Волна бычьего натиска и Укрепляющий настой. Только одна стойка: выбранная первой исключает две другие.", pl = "Kamień milowy. Postawa Mocnego Wołu: {v}% mniej otrzymywanych obrażeń, gdy przeciwnik jest w promieniu 7 m, 5% więcej zdrowia, a twoje karty awansu mogą dać Rozbicie beczki, Wybuchową beczkę, Ognisty oddech, Falę szarżującego wołu i Wzmacniający napar. Jedna postawa naraz: pierwsza wybrana wyklucza dwie pozostałe.", tr = "Dönüm noktası. Sağlam Öküz Duruşu: 7 m içinde düşman varken {v}% daha az hasar alırsın, 5% daha fazla can ve seviye atlama ellerinde Fıçı Parçalama, Patlayan Fıçı, Ateş Nefesi, Hücum Eden Öküz Dalgası ve Güçlendirici Demleme çıkabilir. Aynı anda tek duruş: ilk alınan diğer ikisini dışlar.", it = "Traguardo. Posizione del Bue robusto: {v}% di danni subiti in meno mentre un nemico è entro 7 m, 5% di salute in più e le carte che ricevi a ogni livello possono offrire Colpo di barile, Barile esplosivo, Soffio di fuoco, Onda del bue in carica e Infuso fortificante. Una sola posizione alla volta: la prima scelta esclude le altre due.", ja = "【マイルストーン】スタンス・オブ・ザ・スターディ・オックス：7ヤード以内に敵がいる間、被ダメージが{v}%減少し、体力が5%増加し、レベルアップの手札にケグ・スマッシュ、エクスプローディング・ケグ、ブレス・オブ・ファイア、チャージング・オックス・ウェーブ、フォーティファイング・ブリューが出るようになります。スタンスは1つだけ：最初に取ったものが他の2つを封じます。", zh = "里程碑：蛮牛之姿：7码内有敌人时，受到的伤害降低{v}%，生命值提高5%，升级时提供的卡牌中可能出现醉酿投、爆炸酒桶、火焰之息、蛮牛冲和壮胆酒。一次只能选择一种姿态：第一个选择的姿态会排除另外两个。", ko = "이정표. 굳건한 황소의 태세: 7미터 안에 적이 있는 동안 받는 피해가 {v}% 감소하고 생명력이 5% 증가하며, 레벨 업 카드에 맥주통 휘두르기, 폭발하는 맥주통, 불의 숨결, 돌진하는 황소의 물결, 강화주가 나올 수 있습니다. 태세는 하나만: 먼저 고른 태세가 다른 둘을 막습니다." }
+menu_v = 0.08
+mods = [{ bulwark = 7.0 }]
+mods_v = 0.08
+
+[[talent]]
+key = "bm_gift_of_the_ox"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "ability_monk_healthsphere"
+name = { en = "Gift of the Ox", de = "Gabe des Ochsen", fr = "Don du buffle", es = "Don del buey", pt = "Dádiva do Boi", ru = "Дар быка", pl = "Dar Wołu", tr = "Öküzün Armağanı", it = "Dono del Bue", ja = "ギフト・オブ・ジ・オックス", zh = "玄牛之赐", ko = "황소의 선물" }
+text = { en = "Every swing at you has a {v}% chance to drop free Healing Spheres around you.", de = "Jeder Hieb gegen dich hat eine Chance von {v}%, kostenlose Heilsphären um dich herum fallen zu lassen.", fr = "Chaque coup porté contre toi a {v}% de chances de faire tomber des Sphères de soins gratuites autour de toi.", es = "Cada golpe contra ti tiene un {v}% de probabilidad de soltar Esferas de curación gratis a tu alrededor.", pt = "Cada golpe contra você tem {v}% de chance de soltar Esferas de Cura grátis ao seu redor.", ru = "Каждый удар по тебе с шансом {v}% роняет вокруг бесплатные Сферы исцеления.", pl = "Każdy zamach w ciebie ma {v}% szansy, by upuścić wokół ciebie darmowe Kule uzdrawiające.", tr = "Sana yönelen her savuruş {v}% ihtimalle çevrene bedava Şifa Küreleri düşürür.", it = "Ogni colpo diretto a te ha il {v}% di probabilità di far cadere Sfere curative gratuite attorno a te.", ja = "攻撃を受けるたびに、{v}%の確率で周囲に無料のヒーリング・スフィアが落ちます。", zh = "每次对你的攻击都有{v}%的几率在你周围落下免费的治疗宝珠。", ko = "당신을 향한 공격마다 {v}% 확률로 주위에 치유의 구슬이 무료로 떨어집니다." }
+menu_v = 0.03
+plays = [
+    { v = 0.03, play = { struck = "healing_sphere" } },
+]
+
+[[talent]]
+key = "bm_keg_mastery"
+tree = 1
+row = 3
+col = 0
+ranks = 5
+req = "stance_of_the_sturdy_ox"
+effects = []
+icon = "ability_monk_drunkenhaze"
+name = { en = "Keg Mastery", de = "Fassmeisterschaft", fr = "Maîtrise du tonneau", es = "Maestría del barril", pt = "Maestria do Barril", ru = "Мастерство бочонка", pl = "Mistrzostwo beczek", tr = "Fıçı Ustalığı", it = "Maestria dei barili", ja = "ケグ・マスタリー", zh = "酒桶精通", ko = "맥주통 숙련" }
+text = { en = "Keg Smash, Exploding Keg and Breath of Fire deal {v}% more damage.", de = "Fasshieb, Explodierendes Fass und Feueratem verursachen {v}% mehr Schaden.", fr = "Bris de tonneau, Tonnelet explosif et Souffle de feu infligent {v}% de dégâts en plus.", es = "Machacar barril, Barril explosivo y Aliento de fuego infligen un {v}% más de daño.", pt = "Barrilada, Barril Explosivo e Sopro de Fogo causam {v}% a mais de dano.", ru = "Удар бочонком, Взрывная бочка и Огненное дыхание наносят на {v}% больше урона.", pl = "Rozbicie beczki, Wybuchowa beczka i Ognisty oddech zadają o {v}% więcej obrażeń.", tr = "Fıçı Parçalama, Patlayan Fıçı ve Ateş Nefesi {v}% daha fazla hasar verir.", it = "Colpo di barile, Barile esplosivo e Soffio di fuoco infliggono il {v}% di danni in più.", ja = "ケグ・スマッシュ、エクスプローディング・ケグ、ブレス・オブ・ファイアのダメージが{v}%増加します。", zh = "醉酿投、爆炸酒桶和火焰之息造成的伤害提高{v}%。", ko = "맥주통 휘두르기, 폭발하는 맥주통, 불의 숨결의 피해가 {v}% 증가합니다." }
+menu_v = 0.07
+mods = [{ damage = ["keg_smash", "exploding_keg", "breath_of_fire"] }]
+mods_v = 0.07
+
+[[talent]]
+key = "bm_purifying"
+tree = 1
+row = 3
+col = 2
+ranks = 3
+effects = [{ stat = [24, 0.002] }]
+icon = "ability_monk_fortifyingale"
+name = { en = "Purifying Draught", de = "Läuternder Trunk", fr = "Philtre purificateur", es = "Trago purificador", pt = "Trago Purificador", ru = "Очищающий глоток", pl = "Oczyszczający napój", tr = "Arındırıcı İksir", it = "Sorso purificante", ja = "ピュリファイング・ドラフト", zh = "活血酒", ko = "정화주" }
+text = { en = "Regenerate {v}% of your maximum health per second.", de = "Regeneriere {v}% deiner maximalen Gesundheit pro Sekunde.", fr = "Régénère {v}% de tes points de vie maximum par seconde.", es = "Regenera un {v}% de tu salud máxima por segundo.", pt = "Regenera {v}% da sua vida máxima por segundo.", ru = "Восстанавливает {v}% твоего максимального здоровья в секунду.", pl = "Regenerujesz {v}% maksymalnego zdrowia na sekundę.", tr = "Saniyede azami canının {v}%'si kadar yenilenirsin.", it = "Rigeneri il {v}% della tua salute massima al secondo.", ja = "毎秒、最大体力の{v}%を回復します。", zh = "每秒恢复相当于你最大生命值{v}%的生命值。", ko = "초당 최대 생명력의 {v}%를 재생합니다." }
+menu_v = 0.002
+
+[[talent]]
+key = "bm_black_ox"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "black_ox_statue" }]
+icon = "monk_ability_summonoxstatue"
+name = { en = "Black Ox Statue", de = "Statue des Schwarzen Ochsen", fr = "Statue du buffle noir", es = "Estatua del buey negro", pt = "Estátua do Boi Negro", ru = "Статуя Черного быка", pl = "Posąg Czarnego Wołu", tr = "Kara Öküz Heykeli", it = "Statua del Bue Nero", ja = "ブラック・オックス・スタチュー", zh = "玄牛雕像", ko = "흑우 조각상" }
+text = { en = "Milestone. You start every run with the Black Ox Statue, and it stands {v}% longer.", de = "Meilenstein. Du beginnst jeden Lauf mit der Statue des Schwarzen Ochsen, und sie steht {v}% länger.", fr = "Jalon. Tu commences chaque partie avec la Statue du buffle noir, et elle tient {v}% plus longtemps.", es = "Hito. Empiezas cada partida con la Estatua del buey negro, y se mantiene en pie un {v}% más.", pt = "Marco. Você começa toda partida com a Estátua do Boi Negro, e ela permanece {v}% mais tempo.", ru = "Веха. Ты начинаешь каждый забег со Статуей Черного быка, и она стоит на {v}% дольше.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Posągiem Czarnego Wołu, a on stoi o {v}% dłużej.", tr = "Dönüm noktası. Her oyuna Kara Öküz Heykeli ile başlarsın ve {v}% daha uzun durur.", it = "Traguardo. Inizi ogni partita con la Statua del Bue Nero e resta in piedi il {v}% più a lungo.", ja = "【マイルストーン】毎ランをブラック・オックス・スタチューを持って始め、その持続時間が{v}%延びます。", zh = "里程碑：你在每场对局开始时拥有玄牛雕像，其存在时间延长{v}%。", ko = "이정표. 모든 런을 흑우 조각상을 가지고 시작하며, 조각상이 {v}% 더 오래 유지됩니다." }
+menu_v = 0.5
+mods = [{ duration = ["black_ox_statue"] }]
+mods_v = 0.5
+
+[[talent]]
+key = "bm_dragonfire"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "ability_monk_breathoffire"
+name = { en = "Dragonfire Brew", de = "Drachenfeuerbräu", fr = "Brassin de feu de dragon", es = "Brebaje de fuego de dragón", pt = "Elixir de Fogo de Dragão", ru = "Хмель драконьего огня", pl = "Napar smoczego ognia", tr = "Ejderha Ateşi Demlemesi", it = "Infuso di fuoco di drago", ja = "ドラゴンファイア・ブリュー", zh = "龙炎酒", ko = "용불 양조주" }
+text = { en = "Every hit of Breath of Fire and Keg Smash burns on for {v}% of it over 4 sec.", de = "Jeder Treffer von Feueratem und Fasshieb brennt über 4 Sek. für {v}% davon weiter.", fr = "Chaque coup de Souffle de feu et de Bris de tonneau continue de brûler pour {v}% de ses dégâts pendant 4 s.", es = "Cada impacto de Aliento de fuego y Machacar barril sigue ardiendo durante 4 s por un {v}% de su daño.", pt = "Cada acerto de Sopro de Fogo e Barrilada continua queimando por {v}% dele durante 4 s.", ru = "Каждое попадание Огненного дыхания и Удара бочонком догорает еще на {v}% своего урона в течение 4 сек.", pl = "Każde trafienie Ognistego oddechu i Rozbicia beczki pali dalej za {v}% swojej wartości przez 4 s.", tr = "Ateş Nefesi ve Fıçı Parçalama'nın her vuruşu 4 sn içinde hasarının {v}%'si kadar yanmaya devam eder.", it = "Ogni colpo di Soffio di fuoco e Colpo di barile continua a bruciare per il {v}% del danno in 4 s.", ja = "ブレス・オブ・ファイアとケグ・スマッシュの各命中が燃え続け、4秒かけてその{v}%のダメージを与えます。", zh = "火焰之息和醉酿投的每次命中会持续燃烧，在4秒内造成相当于该次攻击{v}%的伤害。", ko = "불의 숨결과 맥주통 휘두르기가 적중할 때마다 4초에 걸쳐 그 피해의 {v}%만큼 불태웁니다." }
+menu_v = 0.2
+plays = [
+    { v = 0.2, play = { hit_dot = { keys = ["breath_of_fire", "keg_smash"], secs = 4.0 } } },
+]
+
+[[talent]]
+key = "bm_elusive"
+tree = 1
+row = 5
+col = 2
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "ability_monk_shuffle"
+name = { en = "Elusive Brawler", de = "Flinker Raufbold", fr = "Bagarreur insaisissable", es = "Pendenciero escurridizo", pt = "Brigão Esquivo", ru = "Неуловимый драчун", pl = "Nieuchwytny awanturnik", tr = "Yakalanmaz Kavgacı", it = "Attaccabrighe elusivo", ja = "イルーシヴ・ブローラー", zh = "灵巧拳手", ko = "교묘한 싸움꾼" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente vos chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает ваш шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "bm_celestial_fortune"
+tree = 1
+row = 5
+col = 0
+ranks = 1
+req = "bm_black_ox"
+effects = []
+icon = "ability_monk_dampenharm"
+name = { en = "Celestial Fortune", de = "Himmlisches Glück", fr = "Fortune céleste", es = "Fortuna celestial", pt = "Fortuna Celestial", ru = "Небесная удача", pl = "Niebiańska fortuna", tr = "Göksel Talih", it = "Fortuna celeste", ja = "セレスチャル・フォーチュン", zh = "天神之福", ko = "천상의 행운" }
+text = { en = "A blow that would kill you leaves you at 30% health instead, 1 sec untouchable, and a free Fortifying Brew answers it. Once every {v} sec.", de = "Ein Hieb, der dich töten würde, lässt dich stattdessen mit 30% Gesundheit zurück, 1 Sek. unantastbar, und ein kostenloses Anregendes Gebräu antwortet darauf. Einmal alle {v} Sek.", fr = "Un coup qui vous tuerait vous laisse à 30% de santé, intouchable 1 s, et un Brassin fortifiant gratuit y répond. Une fois toutes les {v} s.", es = "Un golpe que te mataría te deja con un 30% de salud, intocable 1 s, y un Brebaje fortificante gratis responde. Una vez cada {v} s.", pt = "Um golpe que mataria você o deixa com 30% de vida, intocável por 1 s, e uma Infusão Fortificante grátis responde. Uma vez a cada {v} s.", ru = "Удар, который убил бы вас, оставляет вам 30% здоровья, на 1 сек. вы неуязвимы, и бесплатно срабатывает Укрепляющий настой. Раз в {v} сек.", pl = "Cios, który by cię zabił, zostawia cię przy 30% zdrowia, na 1 s nietykalnego, a odpowiada na niego darmowy Wzmacniający napar. Raz na {v} s.", tr = "Seni öldürecek bir darbe seni 30% canla bırakır, 1 sn dokunulmaz olursun ve bedava bir Güçlendirici Demleme karşılık verir. Her {v} sn'de bir.", it = "Un colpo che ti ucciderebbe ti lascia invece al 30% di salute, intoccabile per 1 s, e un Infuso fortificante gratuito risponde. Una volta ogni {v} s.", ja = "致命的な一撃を受けると代わりに体力30%で踏みとどまり、1秒間攻撃を受けなくなり、無料のフォーティファイング・ブリューが発動します。{v}秒に1回まで。", zh = "致命的一击会使你保留30%的生命值，1秒内无法被攻击，并以一次免费的壮胆酒回应。每{v}秒一次。", ko = "치명적인 일격을 받으면 대신 생명력 30%로 남고 1초 동안 공격받지 않으며, 강화주가 무료로 발동합니다. {v}초에 한 번 발동합니다." }
+menu_v = 120
+plays = [
+    { v = 120.0, play = { save = { health = 0.3, immune = 1.0, shield = 0.0, cast = ["fortifying_brew"] } } },
+]
+
+[[talent]]
+key = "bm_invoke_niuzao"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "keg_smash" }]
+icon = "ability_monk_chargingoxwave"
+name = { en = "Invoke Niuzao", de = "Niuzao anrufen", fr = "Invocation de Niuzao", es = "Invocar a Niuzao", pt = "Evocar Niuzao", ru = "Призыв Ниузао", pl = "Przywołanie Niuzao", tr = "Niuzao'yu Çağır", it = "Invocare Niuzao", ja = "インヴォーク・ニウザオ", zh = "祈求玄牛", ko = "니우자오 원조" }
+text = { en = "Capstone. You start every run with Keg Smash, and the Black Ox fights beside you: a free Keg Smash every {v} sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Fasshieb, und der Schwarze Ochse kämpft an deiner Seite: alle {v} Sek. ein kostenloser Fasshieb.", fr = "Apogée. Tu commences chaque partie avec Bris de tonneau, et le Buffle noir combat à tes côtés : un Bris de tonneau gratuit toutes les {v} s.", es = "Cúspide. Empiezas cada partida con Machacar barril, y el Buey Negro lucha a tu lado: un Machacar barril gratis cada {v} s.", pt = "Ápice. Você começa toda partida com Barrilada, e o Boi Negro luta ao seu lado: uma Barrilada grátis a cada {v} s.", ru = "Вершина. Ты начинаешь каждый забег с Ударом бочонком, и Черный бык сражается рядом с тобой: бесплатный Удар бочонком каждые {v} сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Rozbiciem beczki, a Czarny Wół walczy u twego boku: darmowe Rozbicie beczki co {v} s.", tr = "Zirve. Her oyuna Fıçı Parçalama ile başlarsın ve Kara Öküz yanında savaşır: her {v} sn'de bedava bir Fıçı Parçalama.", it = "Vertice. Inizi ogni partita con Colpo di barile e il Bue Nero combatte al tuo fianco: un Colpo di barile gratuito ogni {v} s.", ja = "【キャップストーン】毎ランをケグ・スマッシュを持って始め、黒い雄牛が共に戦います：{v}秒ごとに無料のケグ・スマッシュ。", zh = "终极天赋：你在每场对局开始时拥有醉酿投，玄牛在你身边作战：每{v}秒施放一次免费的醉酿投。", ko = "궁극 특성. 모든 런을 맥주통 휘두르기를 가지고 시작하며, 흑우가 곁에서 싸웁니다: {v}초마다 맥주통 휘두르기를 무료로 시전합니다." }
+menu_v = 6
+plays = [
+    { v = 6.0, play = { every = "keg_smash" } },
+]
+
+# --- Mistweaver: the Wise Serpent
+
+[[talent]]
+key = "mw_mist_wrap"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "ability_monk_soothingmists"
+name = { en = "Mist Wrap", de = "Nebelhülle", fr = "Voile de brume", es = "Envoltura de niebla", pt = "Manto de Névoa", ru = "Покров тумана", pl = "Mgliste otulenie", tr = "Sis Sargısı", it = "Avvolgimento di nebbia", ja = "ミスト・ラップ", zh = "迷雾缠绕", ko = "안개 감싸기" }
+text = { en = "Your heals and shields are {v}% stronger.", de = "Deine Heilungen und Schilde sind {v}% stärker.", fr = "Tes soins et tes boucliers sont {v}% plus puissants.", es = "Tus curaciones y escudos son un {v}% más fuertes.", pt = "Suas curas e escudos são {v}% mais fortes.", ru = "Твое лечение и щиты сильнее на {v}%.", pl = "Twoje leczenie i tarcze są silniejsze o {v}%.", tr = "İyileştirmelerin ve kalkanların {v}% daha güçlü.", it = "Le tue cure e i tuoi scudi sono più forti del {v}%.", ja = "回復とシールドの効果が{v}%高まります。", zh = "你的治疗和护盾效果提高{v}%。", ko = "치유와 보호막의 효과가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = ["heals"]
+mods_v = 0.05
+
+[[talent]]
+key = "mw_serenity_of_mind"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.02] }]
+icon = "ability_monk_zenmeditation"
+name = { en = "Serenity of Mind", de = "Geistige Gelassenheit", fr = "Sérénité de l'esprit", es = "Serenidad mental", pt = "Serenidade da Mente", ru = "Покой разума", pl = "Spokój umysłu", tr = "Zihin Dinginliği", it = "Serenità della mente", ja = "セレニティ・オブ・マインド", zh = "心灵宁静", ko = "정신의 평안" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "mw_chi_focus"
+tree = 2
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "ability_monk_chiwave"
+name = { en = "Chi Focus", de = "Chifokus", fr = "Focalisation du chi", es = "Enfoque de chi", pt = "Foco de Chi", ru = "Средоточие ци", pl = "Skupienie chi", tr = "Chi Odağı", it = "Focus di Chi", ja = "チー・フォーカス", zh = "真气专注", ko = "기 집중" }
+text = { en = "Chi Wave and Chi Burst deal {v}% more damage.", de = "Chiwelle und Chistoß verursachen {v}% mehr Schaden.", fr = "Onde de chi et Jaillissement de chi infligent {v}% de dégâts en plus.", es = "Ola de chi y Ráfaga de chi infligen un {v}% más de daño.", pt = "Onda de Chi e Rajada de Chi causam {v}% a mais de dano.", ru = "Волна ци и Выброс ци наносят на {v}% больше урона.", pl = "Fala chi i Wybuch chi zadają o {v}% więcej obrażeń.", tr = "Chi Dalgası ve Chi Patlaması {v}% daha fazla hasar verir.", it = "Onda di Chi e Scoppio di Chi infliggono il {v}% di danni in più.", ja = "チー・ウェーブとチー・バーストのダメージが{v}%増加します。", zh = "真气波和真气爆裂造成的伤害提高{v}%。", ko = "기의 파동과 기의 폭발의 피해가 {v}% 증가합니다." }
+menu_v = 0.07
+mods = [{ damage = ["chi_wave", "chi_burst"] }]
+mods_v = 0.07
+
+[[talent]]
+key = "mw_tranquil"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [24, 0.0015] }]
+icon = "ability_monk_effuse"
+name = { en = "Tranquil Spirit", de = "Ruhiger Geist", fr = "Esprit tranquille", es = "Espíritu tranquilo", pt = "Espírito Tranquilo", ru = "Безмятежный дух", pl = "Spokojny duch", tr = "Dingin Ruh", it = "Spirito tranquillo", ja = "トランクィル・スピリット", zh = "宁静之魂", ko = "평온한 정신" }
+text = { en = "Regenerate {v}% of your maximum health per second.", de = "Regeneriere {v}% deiner maximalen Gesundheit pro Sekunde.", fr = "Régénère {v}% de tes points de vie maximum par seconde.", es = "Regenera un {v}% de tu salud máxima por segundo.", pt = "Regenera {v}% da sua vida máxima por segundo.", ru = "Восстанавливает {v}% твоего максимального здоровья в секунду.", pl = "Regenerujesz {v}% maksymalnego zdrowia na sekundę.", tr = "Saniyede azami canının {v}%'si kadar yenilenirsin.", it = "Rigeneri il {v}% della tua salute massima al secondo.", ja = "毎秒、最大体力の{v}%を回復します。", zh = "每秒恢复相当于你最大生命值{v}%的生命值。", ko = "초당 최대 생명력의 {v}%를 재생합니다." }
+menu_v = 0.0015
+
+[[talent]]
+key = "stance_of_the_wise_serpent"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+exclusive = "stance"
+effects = []
+icon = "monk_stance_wiseserpent"
+name = { en = "Stance of the Wise Serpent", de = "Haltung der weisen Schlange", fr = "Posture du serpent sage", es = "Postura de la serpiente sabia", pt = "Postura da Serpente Sábia", ru = "Стойка мудрой змеи", pl = "Postawa Mądrego Węża", tr = "Bilge Yılan Duruşu", it = "Posizione del Serpente saggio", ja = "スタンス・オブ・ザ・ワイズ・サーペント", zh = "灵蛇之姿", ko = "지혜로운 뱀의 태세" }
+text = { en = "Milestone. Stance of the Wise Serpent: your heals and shields are {v}% stronger, and your level-up hands may deal Renewing Mist, Mana Tea and Song of Chi-Ji. One stance at a time: the first one taken rules out the other two.", de = "Meilenstein. Haltung der weisen Schlange: Deine Heilungen und Schilde sind {v}% stärker, und deine Stufenaufstiege können Erneuernden Nebel, Manatee und das Lied von Chi-Ji bieten. Nur eine Haltung: Die zuerst gewählte schließt die anderen beiden aus.", fr = "Jalon. Posture du serpent sage : vos soins et boucliers sont {v}% plus puissants, et vos mains de montée de niveau peuvent donner Brume de rénovation, Thé de mana et Chant de Chi-Ji. Une seule posture à la fois : la première choisie exclut les deux autres.", es = "Hito. Postura de la serpiente sabia: tus curaciones y escudos son un {v}% más potentes, y tus manos de subida de nivel pueden ofrecer Niebla renovadora, Té de maná y Canción de Chi-Ji. Una sola postura a la vez: la primera elegida excluye las otras dos.", pt = "Marco. Postura da Serpente Sábia: suas curas e escudos são {v}% mais fortes, e suas mãos de subida de nível podem oferecer Névoa Renovadora, Chá de Mana e Canção de Chi-Ji. Uma postura por vez: a primeira escolhida exclui as outras duas.", ru = "Веха. Стойка мудрой змеи: ваше исцеление и щиты на {v}% сильнее, а при повышении уровня вам могут выпасть Заживляющий туман, Чай маны и Песнь Чи-Цзи. Только одна стойка: выбранная первой исключает две другие.", pl = "Kamień milowy. Postawa Mądrego Węża: twoje leczenie i tarcze są silniejsze o {v}%, a twoje karty awansu mogą dać Odnawiającą mgłę, Herbatę many i Pieśń Chi-Ji. Jedna postawa naraz: pierwsza wybrana wyklucza dwie pozostałe.", tr = "Dönüm noktası. Bilge Yılan Duruşu: iyileştirmelerin ve kalkanların {v}% daha güçlüdür ve seviye atlama ellerinde Yenileyici Sis, Mana Çayı ve Chi-Ji'nin Şarkısı çıkabilir. Aynı anda tek duruş: ilk alınan diğer ikisini dışlar.", it = "Traguardo. Posizione del Serpente saggio: le tue cure e i tuoi scudi sono più forti del {v}% e le carte che ricevi a ogni livello possono offrire Nebbia rinnovante, Tè del mana e Canto di Chi-Ji. Una sola posizione alla volta: la prima scelta esclude le altre due.", ja = "【マイルストーン】スタンス・オブ・ザ・ワイズ・サーペント：回復とシールドの効果が{v}%高まり、レベルアップの手札にリニューイング・ミスト、マナ・ティー、ソング・オブ・チー・ジーが出るようになります。スタンスは1つだけ：最初に取ったものが他の2つを封じます。", zh = "里程碑：灵蛇之姿：你的治疗和护盾效果提高{v}%，升级时提供的卡牌中可能出现复苏之雾、法力茶和赤精之歌。一次只能选择一种姿态：第一个选择的姿态会排除另外两个。", ko = "이정표. 지혜로운 뱀의 태세: 치유와 보호막의 효과가 {v}% 증가하며, 레벨 업 카드에 소생의 안개, 마나 차, 츠지의 노래가 나올 수 있습니다. 태세는 하나만: 먼저 고른 태세가 다른 둘을 막습니다." }
+menu_v = 0.15
+mods = ["heals"]
+mods_v = 0.15
+
+[[talent]]
+key = "mw_zen_focus"
+tree = 2
+row = 2
+col = 2
+ranks = 2
+effects = []
+icon = "ability_monk_chiswirl"
+name = { en = "Zen Focus", de = "Zenfokus", fr = "Focalisation zen", es = "Enfoque zen", pt = "Foco Zen", ru = "Дзен-сосредоточение", pl = "Skupienie zen", tr = "Zen Odağı", it = "Focus zen", ja = "ゼン・フォーカス", zh = "禅定专注", ko = "선 집중" }
+text = { en = "Chi Wave jumps to {v} more enemies.", de = "Chiwelle springt auf {v} weitere Gegner über.", fr = "Onde de chi rebondit sur {v} ennemis de plus.", es = "Ola de chi salta a {v} enemigos más.", pt = "Onda de Chi salta para mais {v} inimigos.", ru = "Волна ци перескакивает еще на {v} врагов.", pl = "Fala chi przeskakuje na kolejnych przeciwników: {v}.", tr = "Chi Dalgası {v} düşmana daha sıçrar.", it = "Onda di Chi salta su {v} nemici in più.", ja = "チー・ウェーブがさらに{v}体の敵に跳躍します。", zh = "真气波额外跳跃到{v}个敌人身上。", ko = "기의 파동이 적 {v}명에게 더 튑니다." }
+menu_v = 1
+mods = [{ targets = ["chi_wave"] }]
+mods_v = 1.0
+
+[[talent]]
+key = "mw_soothing"
+tree = 2
+row = 3
+col = 0
+ranks = 3
+req = "stance_of_the_wise_serpent"
+effects = []
+icon = "ability_monk_renewingmists"
+name = { en = "Lingering Mists", de = "Verweilende Nebel", fr = "Brumes persistantes", es = "Nieblas persistentes", pt = "Névoas Persistentes", ru = "Стойкие туманы", pl = "Utrzymująca się mgła", tr = "Kalıcı Sisler", it = "Nebbie persistenti", ja = "リンガリング・ミスト", zh = "缭绕之雾", ko = "머무는 안개" }
+text = { en = "Renewing Mist lasts {v}% longer.", de = "Erneuernder Nebel hält {v}% länger an.", fr = "Brume de renouveau dure {v}% plus longtemps.", es = "Niebla renovadora dura un {v}% más.", pt = "Névoa Renovadora dura {v}% mais.", ru = "Обновляющий туман действует на {v}% дольше.", pl = "Odnawiająca mgła trwa o {v}% dłużej.", tr = "Yenileyici Sis {v}% daha uzun sürer.", it = "Nebbia rinnovante dura il {v}% in più.", ja = "リニューイング・ミストの持続時間が{v}%延びます。", zh = "复苏之雾的持续时间延长{v}%。", ko = "소생의 안개의 지속시간이 {v}% 길어집니다." }
+menu_v = 0.15
+mods = [{ duration = ["renewing_mist"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "mw_life_cocoon"
+tree = 2
+row = 3
+col = 2
+ranks = 3
+effects = []
+icon = "ability_monk_chicocoon"
+name = { en = "Life Cocoon", de = "Lebenskokon", fr = "Cocon de vie", es = "Capullo de vida", pt = "Casulo da Vida", ru = "Кокон жизни", pl = "Kokon życia", tr = "Yaşam Kozası", it = "Bozzolo vitale", ja = "ライフ・コクーン", zh = "作茧缚命", ko = "기의 고치" }
+text = { en = "Healing past your maximum health becomes a shield, up to {v}% of it.", de = "Heilung über deine maximale Gesundheit hinaus wird zu einem Schild, bis zu {v}% davon.", fr = "Les soins au-delà de ta vie maximale deviennent un bouclier, jusqu'à {v}% de ceux-ci.", es = "La curación que supere tu salud máxima se convierte en un escudo, hasta un {v}% de ella.", pt = "A cura além da sua vida máxima vira um escudo, até {v}% dela.", ru = "Исцеление сверх максимума здоровья превращается в щит, до {v}% от него.", pl = "Leczenie ponad twoje maksymalne zdrowie zamienia się w tarczę, do {v}% jego wartości.", tr = "Azami canını aşan iyileştirme kalkana dönüşür, en fazla {v}%'sine kadar.", it = "Le cure oltre la tua salute massima diventano uno scudo, fino al {v}% di essa.", ja = "最大体力を超えた回復はシールドになります（最大体力の{v}%まで）。", zh = "超出你最大生命值的治疗量会转化为护盾，最多为最大生命值的{v}%。", ko = "최대 생명력을 넘는 치유량이 최대 생명력의 {v}%까지 보호막이 됩니다." }
+menu_v = 0.08
+plays = [
+    { v = 0.08, play = { overshield = { aura = 900094 } } },
+]
+
+[[talent]]
+key = "mw_jade_serpent"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_with = "healing_sphere" }]
+icon = "ability_monk_summonserpentstatue"
+name = { en = "Jade Serpent's Gift", de = "Gabe der Jadeschlange", fr = "Don du serpent de jade", es = "Don de la serpiente de jade", pt = "Dádiva da Serpente de Jade", ru = "Дар Нефритовой змеи", pl = "Dar Nefrytowego Węża", tr = "Yeşim Yılan'ın Armağanı", it = "Dono del Serpente di giada", ja = "ジェイド・サーペンツ・ギフト", zh = "玉珑之赐", ko = "비취 뱀의 선물" }
+text = { en = "Milestone. You start every run with Healing Sphere, and every heal also strikes every enemy within 8 yd for {v}% of the healing.", de = "Meilenstein. Du beginnst jeden Lauf mit Heilsphäre, und jede Heilung trifft zusätzlich jeden Gegner im Umkreis von 8 m für {v}% der Heilung.", fr = "Jalon. Tu commences chaque partie avec Sphère de soins, et chaque soin frappe aussi tous les ennemis à moins de 8 m pour {v}% des soins.", es = "Hito. Empiezas cada partida con Esfera de curación, y cada curación también golpea a todos los enemigos a menos de 8 m por un {v}% de la curación.", pt = "Marco. Você começa toda partida com Esfera de Cura, e toda cura também atinge cada inimigo a menos de 8 m por {v}% da cura.", ru = "Веха. Ты начинаешь каждый забег со Сферой исцеления, и каждое исцеление также бьет каждого врага в пределах 8 м на {v}% от исцеления.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz z Kulą uzdrawiającą, a każde leczenie uderza też każdego przeciwnika w promieniu 8 m za {v}% leczenia.", tr = "Dönüm noktası. Her oyuna Şifa Küresi ile başlarsın ve her iyileştirme ayrıca 8 m içindeki her düşmana iyileştirmenin {v}%'si kadar vurur.", it = "Traguardo. Inizi ogni partita con Sfera curativa e ogni cura colpisce anche ogni nemico entro 8 m per il {v}% della cura.", ja = "【マイルストーン】毎ランをヒーリング・スフィアを持って始め、すべての回復が8ヤード以内のすべての敵にも回復量の{v}%のダメージを与えます。", zh = "里程碑：你在每场对局开始时拥有治疗宝珠，每次治疗还会对8码内的所有敌人造成相当于治疗量{v}%的伤害。", ko = "이정표. 모든 런을 치유의 구슬을 가지고 시작하며, 모든 치유가 8미터 안의 모든 적에게 치유량의 {v}%만큼 피해를 줍니다." }
+menu_v = 0.3
+plays = [
+    { v = 0.3, play = { heal_strike = { radius = 8.0 } } },
+]
+
+[[talent]]
+key = "mw_crackling"
+tree = 2
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "ability_monk_cracklingjadelightning"
+name = { en = "Crackling Jade", de = "Knisternde Jade", fr = "Jade crépitant", es = "Jade crepitante", pt = "Jade Crepitante", ru = "Трескучий нефрит", pl = "Trzaskający nefryt", tr = "Çatırdayan Yeşim", it = "Giada crepitante", ja = "クラックリング・ジェイド", zh = "碎玉", ko = "파직이는 비취" }
+text = { en = "Chi Wave, Chi Burst and Rushing Jade Wind deal {v}% more damage.", de = "Chiwelle, Chistoß und Rauschender Jadewind verursachen {v}% mehr Schaden.", fr = "Onde de chi, Jaillissement de chi et Vent de jade impétueux infligent {v}% de dégâts en plus.", es = "Ola de chi, Ráfaga de chi y Viento de jade impetuoso infligen un {v}% más de daño.", pt = "Onda de Chi, Rajada de Chi e Vento de Jade Impetuoso causam {v}% a mais de dano.", ru = "Волна ци, Выброс ци и Порыв нефритового ветра наносят на {v}% больше урона.", pl = "Fala chi, Wybuch chi i Pędzący nefrytowy wiatr zadają o {v}% więcej obrażeń.", tr = "Chi Dalgası, Chi Patlaması ve Hücum Eden Yeşim Rüzgarı {v}% daha fazla hasar verir.", it = "Onda di Chi, Scoppio di Chi e Vento di giada impetuoso infliggono il {v}% di danni in più.", ja = "チー・ウェーブ、チー・バースト、ラッシング・ジェイド・ウィンドのダメージが{v}%増加します。", zh = "真气波、真气爆裂和碧玉疾风造成的伤害提高{v}%。", ko = "기의 파동, 기의 폭발, 비취 돌풍의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["chi_wave", "chi_burst", "rushing_jade_wind"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "mw_thunder_focus"
+tree = 2
+row = 5
+col = 2
+ranks = 5
+effects = []
+icon = "ability_monk_thunderfocustea"
+name = { en = "Thunder Focus Tea", de = "Donnerfokustee", fr = "Thé de focalisation du tonnerre", es = "Té de enfoque del trueno", pt = "Chá do Foco do Trovão", ru = "Чай громового средоточия", pl = "Herbata skupienia gromu", tr = "Gök Gürültüsü Odak Çayı", it = "Tè Focus del tuono", ja = "サンダー・フォーカス・ティー", zh = "雷光聚神茶", ko = "집중의 천둥 차" }
+text = { en = "Mana Tea's, Renewing Mist's and Healing Sphere's cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Manatee, Erneuerndem Nebel und Heilsphäre sind {v}% kürzer.", fr = "Les délais de récupération de Thé de mana, Brume de renouveau et Sphère de soins sont réduits de {v}%.", es = "Los tiempos de reutilización de Té de maná, Niebla renovadora y Esfera de curación son un {v}% más cortos.", pt = "Os tempos de recarga de Chá de Mana, Névoa Renovadora e Esfera de Cura são {v}% menores.", ru = "Перезарядка Чая маны, Обновляющего тумана и Сферы исцеления короче на {v}%.", pl = "Czasy odnowienia Herbaty many, Odnawiającej mgły i Kuli uzdrawiającej są krótsze o {v}%.", tr = "Mana Çayı, Yenileyici Sis ve Şifa Küresi bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Tè del mana, Nebbia rinnovante e Sfera curativa sono più brevi del {v}%.", ja = "マナ・ティー、リニューイング・ミスト、ヒーリング・スフィアのクールダウンが{v}%短くなります。", zh = "法力茶、复苏之雾和治疗宝珠的冷却时间缩短{v}%。", ko = "마나 차, 소생의 안개, 치유의 구슬의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.05
+mods = [{ cooldown = ["mana_tea", "renewing_mist", "healing_sphere"] }]
+mods_v = 0.05
+
+[[talent]]
+key = "mw_uplift"
+tree = 2
+row = 5
+col = 0
+ranks = 1
+req = "mw_jade_serpent"
+effects = []
+icon = "ability_monk_uplift"
+name = { en = "Uplift", de = "Aufmuntern", fr = "Revigorer", es = "Elevar", pt = "Elevar", ru = "Подъем духа", pl = "Wzniesienie", tr = "Yükselt", it = "Elevazione", ja = "アップリフト", zh = "振魂引", ko = "북돋기" }
+text = { en = "Falling below 40% health brings a free Mana Tea, once every {v} sec.", de = "Fällst du unter 40% Gesundheit, erhältst du ein kostenloses Manatee, einmal alle {v} Sek.", fr = "Passer sous 40% de vie t'apporte un Thé de mana gratuit, une fois toutes les {v} s.", es = "Caer por debajo del 40% de salud te da un Té de maná gratis, una vez cada {v} s.", pt = "Cair abaixo de 40% de vida traz um Chá de Mana grátis, uma vez a cada {v} s.", ru = "Падение здоровья ниже 40% приносит бесплатный Чай маны, раз в {v} сек.", pl = "Spadek poniżej 40% zdrowia przynosi darmową Herbatę many, raz na {v} s.", tr = "Canın 40%'ın altına düşünce bedava bir Mana Çayı gelir, her {v} sn'de bir.", it = "Scendere sotto il 40% di salute porta un Tè del mana gratuito, una volta ogni {v} s.", ja = "体力が40%を下回ると無料のマナ・ティーが発動します（{v}秒に1回まで）。", zh = "生命值降到40%以下时，获得一次免费的法力茶，每{v}秒一次。", ko = "생명력이 40% 아래로 떨어지면 마나 차가 무료로 발동합니다. {v}초에 한 번 발동합니다." }
+menu_v = 30
+plays = [
+    { v = 30.0, play = { low = { below = 0.4, spell = "mana_tea" } } },
+]
+
+[[talent]]
+key = "mw_revival"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "chi_wave" }]
+icon = "ability_monk_essencefont"
+name = { en = "Revival", de = "Wiederbelebung", fr = "Revivification", es = "Reanimación", pt = "Revivificação", ru = "Возрождение", pl = "Odrodzenie", tr = "Canlanma", it = "Rinascita", ja = "リヴァイヴァル", zh = "还魂术", ko = "재활" }
+text = { en = "Capstone. You start every run with Chi Wave, and the mists answer your call: free Healing Spheres every {v} sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Chiwelle, und die Nebel folgen deinem Ruf: alle {v} Sek. kostenlose Heilsphären.", fr = "Apogée. Tu commences chaque partie avec Onde de chi, et les brumes répondent à ton appel : des Sphères de soins gratuites toutes les {v} s.", es = "Cúspide. Empiezas cada partida con Ola de chi, y las nieblas responden a tu llamada: Esferas de curación gratis cada {v} s.", pt = "Ápice. Você começa toda partida com Onda de Chi, e as névoas atendem ao seu chamado: Esferas de Cura grátis a cada {v} s.", ru = "Вершина. Ты начинаешь каждый забег с Волной ци, и туманы отвечают на твой зов: бесплатные Сферы исцеления каждые {v} сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Falą chi, a mgły odpowiadają na twoje wezwanie: darmowe Kule uzdrawiające co {v} s.", tr = "Zirve. Her oyuna Chi Dalgası ile başlarsın ve sisler çağrına cevap verir: her {v} sn'de bedava Şifa Küreleri.", it = "Vertice. Inizi ogni partita con Onda di Chi e le nebbie rispondono al tuo richiamo: Sfere curative gratuite ogni {v} s.", ja = "【キャップストーン】毎ランをチー・ウェーブを持って始め、霧があなたの呼びかけに応えます：{v}秒ごとに無料のヒーリング・スフィア。", zh = "终极天赋：你在每场对局开始时拥有真气波，迷雾回应你的召唤：每{v}秒获得免费的治疗宝珠。", ko = "궁극 특성. 모든 런을 기의 파동을 가지고 시작하며, 안개가 부름에 응답합니다: {v}초마다 치유의 구슬이 무료로 생깁니다." }
+menu_v = 8
+plays = [
+    { v = 8.0, play = { every = "healing_sphere" } },
+]

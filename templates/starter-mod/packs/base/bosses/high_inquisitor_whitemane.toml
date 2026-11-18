@@ -1,0 +1,21 @@
+# High Inquisitor Whitemane's abilities, Scarlet Monastery.
+
+[[boss]]
+key = "high_inquisitor_whitemane"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 7269 } }
+
+# AS's tag 17 (volley) not in: every 13 s.
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 1449, count = 5, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.4 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { puddle = { spell = 26573, burst = 26573, radius = 6.0, warn = 3.4, factor = 2.4, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

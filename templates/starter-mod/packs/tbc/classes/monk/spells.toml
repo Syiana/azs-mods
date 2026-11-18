@@ -1,0 +1,500 @@
+# The monk's pool; the first is the spell every run starts with. AS has no monk: every number is
+# ours, scaled with the rogue's and the druid's spells. `TUNE`
+# Spell ids are the Shadowsong client's monk spells (its Spell.dbc, copied into ours by patch-{,
+# tools/monk-patch.js); the seven it lacks (Strike of the Windlord, Keg Smash, Exploding Keg, Breath of Fire,
+# the Black Ox Statue, Mana Tea, Renewing Mist and more) take ids of patch-{'s own from 903001 on, built on
+# a source row of a near spell with the right icon and visual.
+#
+# Chi (`builds`/`spends`, the class's `resources`): Jab, Spinning Crane Kick, Expel Harm and Keg
+# Smash gather it; Tiger Palm, Blackout Kick, Rising Sun Kick, Fists of Fury, Touch of Death and
+# Breath of Fire spend it when it is there and hit the harder (`more`), but never wait for it: like
+# every class's, each spell casts on its cooldown. Each stance's brew spends a brew the same way
+# and is dealt only with its stance talent (`needs`).
+
+[[spell]]
+key = "jab"
+id = 900047
+visual = 910163
+vfx = { source = 900047, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 34
+cooldown = 0.9
+range = 7.0
+builds = { resource = "chi", n = 1 }
+name = { en = "Jab", de = "Hieb", fr = "Direct", es = "Puñetazo", pt = "Jab", ru = "Тычок", pl = "Szybki cios", tr = "Yumruk", it = "Percossa", ja = "ジャブ", zh = "贯日击", ko = "찌르기" }
+icon = "ability_monk_jab"
+
+[[spell]]
+key = "tiger_palm"
+id = 900089
+visual = 910164
+vfx = { source = 900089, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 74
+cooldown = 1.6
+range = 7.0
+spends = { resource = "chi", n = 1, more = 0.5 }
+name = { en = "Tiger Palm", de = "Tigerklaue", fr = "Paume du tigre", es = "Palma del tigre", pt = "Palma do Tigre", ru = "Лапа тигра", pl = "Dłoń tygrysa", tr = "Kaplan Avucu", it = "Palmo della tigre", ja = "タイガー・パーム", zh = "猛虎掌", ko = "범의 장풍" }
+icon = "ability_monk_tigerpalm"
+
+[[spell]]
+key = "blackout_kick"
+id = 900048
+visual = 910165
+vfx = { source = 900048, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.55 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 92
+cooldown = 2.4
+range = 7.0
+spends = { resource = "chi", n = 2, more = 0.6 }
+name = { en = "Blackout Kick", de = "Blackout-Tritt", fr = "Coup de pied éclipse", es = "Patada de apagón", pt = "Chute Apagão", ru = "Затмевающий удар", pl = "Kopnięcie zaćmienia", tr = "Karartma Tekmesi", it = "Calcio Blackout", ja = "ブラックアウト・キック", zh = "幻灭踢", ko = "후려차기" }
+icon = "ability_monk_roundhousekick"
+
+[[spell]]
+key = "rising_sun_kick"
+id = 900032
+visual = 910166
+vfx = { source = 900032, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 165
+cooldown = 6.0
+range = 7.0
+spends = { resource = "chi", n = 2, more = 0.6 }
+rider = { weaken = { pct = 15, secs = 6.0 } }
+name = { en = "Rising Sun Kick", de = "Tritt der aufgehenden Sonne", fr = "Coup de pied du soleil levant", es = "Patada del sol naciente", pt = "Chute do Sol Nascente", ru = "Удар восходящего солнца", pl = "Kopnięcie wschodzącego słońca", tr = "Doğan Güneş Tekmesi", it = "Calcio del sole nascente", ja = "ライジング・サン・キック", zh = "旭日东升踢", ko = "해오름차기" }
+icon = "ability_monk_risingsunkick"
+
+[[spell]]
+key = "fists_of_fury"
+id = 900037
+visual = 910167
+vfx = { source = 900037, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { cone = { length = 9.0 } }
+hit = 66
+cooldown = 9.0
+range = 9.0
+spends = { resource = "chi", n = 3, more = 0.8 }
+rider = { stun = { secs = 1.0 } }
+name = { en = "Fists of Fury", de = "Furorfäuste", fr = "Poings de fureur", es = "Puños de furia", pt = "Punhos da Fúria", ru = "Кулаки ярости", pl = "Pięści furii", tr = "Öfke Yumrukları", it = "Pugni della furia", ja = "フィスト・オブ・フューリー", zh = "怒雷破", ko = "분노의 주먹" }
+icon = "monk_ability_fistoffury"
+# As retail's channel: the hero stands in the flurry of fists for 2 sec after each cast (`aura`,
+# the visual's state kit).
+aura = 2.0
+
+[[spell]]
+key = "spinning_crane_kick"
+id = 900052
+visual = 910168
+vfx = { source = 900052, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 }, area = { model = "spells/monk_cranekick_state.mdx", slot = "base", scale = 0.7 } }
+school = "physical"
+# A spin of 1.5 sec round the hero, striking every half second; the hero wears it as an aura
+# meanwhile, whose state visual is the crane loop pose and the whirl (`aura`).
+shape = { ground = { radius = 8.0, every = 0.5, secs = 1.5 } }
+hit = 12
+cooldown = 3.0
+range = 0.0
+aura = 1.5
+# As Mists of Pandaria's in a crowd, it gathers a chi.
+builds = { resource = "chi", n = 1 }
+name = { en = "Spinning Crane Kick", de = "Wirbelnder Kranichtritt", fr = "Coup de pied tournoyant de la grue", es = "Patada giratoria de la grulla", pt = "Chute Giratório da Garça", ru = "Удар вращающегося журавля", pl = "Wirujące kopnięcie żurawia", tr = "Dönen Turna Tekmesi", it = "Calcio rotante della gru", ja = "スピニング・クレーン・キック", zh = "神鹤引项踢", ko = "회전 학다리차기" }
+icon = "ability_monk_cranekick_new"
+
+[[spell]]
+key = "rushing_jade_wind"
+id = 900128
+visual = 910169
+vfx = { source = 900128, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 }, area = { model = "Spells/monk_rushingjadewind_missile.m2", slot = "base", scale = 0.7 } }
+school = "nature"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 6.0 } }
+hit = 18
+cooldown = 14.0
+range = 0.0
+name = { en = "Rushing Jade Wind", de = "Rauschender Jadewind", fr = "Vent de jade impétueux", es = "Viento de jade impetuoso", pt = "Vento de Jade Impetuoso", ru = "Порыв нефритового ветра", pl = "Pędzący nefrytowy wiatr", tr = "Hücum Eden Yeşim Rüzgarı", it = "Vento di giada impetuoso", ja = "ラッシング・ジェイド・ウィンド", zh = "碧玉疾风", ko = "비취 돌풍" }
+icon = "ability_monk_rushingjadewind"
+
+[[spell]]
+key = "expel_harm"
+id = 900065
+visual = 910170
+vfx = { source = 900065, cast = { model = "Spells/monk_mist_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_travelingmist_impact.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { heal = { share = 14, secs = 0.0 } }
+hit = 0
+cooldown = 10.0
+range = 0.0
+builds = { resource = "chi", n = 2 }
+name = { en = "Expel Harm", de = "Schmerz austreiben", fr = "Expulsion du mal", es = "Expulsar daño", pt = "Expelir Dano", ru = "Изгнание вреда", pl = "Odpędzenie szkód", tr = "Zararı Kov", it = "Espelli danno", ja = "エクスペル・ハーム", zh = "移花接木", ko = "해악 축출" }
+icon = "ability_monk_expelharm"
+
+[[spell]]
+key = "chi_wave"
+id = 900129
+visual = 910171
+vfx = { source = 900129, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { chain = { jumps = 5, radius = 12.0 } }
+hit = 52
+cooldown = 7.0
+range = 25.0
+name = { en = "Chi Wave", de = "Chiwelle", fr = "Onde de chi", es = "Ola de chi", pt = "Onda de Chi", ru = "Волна ци", pl = "Fala chi", tr = "Chi Dalgası", it = "Onda di Chi", ja = "チー・ウェーブ", zh = "真气波", ko = "기의 파동" }
+icon = "ability_monk_chiwave"
+
+[[spell]]
+key = "chi_burst"
+id = 900149
+visual = 910172
+vfx = { source = 900149, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { cone = { length = 18.0 } }
+hit = 64
+cooldown = 9.0
+range = 18.0
+name = { en = "Chi Burst", de = "Chistoß", fr = "Jaillissement de chi", es = "Ráfaga de chi", pt = "Rajada de Chi", ru = "Выброс ци", pl = "Wybuch chi", tr = "Chi Patlaması", it = "Scoppio di Chi", ja = "チー・バースト", zh = "真气爆裂", ko = "기의 폭발" }
+icon = "spell_arcane_arcanetorrent"
+
+[[spell]]
+key = "touch_of_death"
+id = 900026
+visual = 910173
+# Its own effect fills the impact kit's chest slot, so there is no impact accent; the stock cast kit is empty.
+vfx = { source = 900026, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 } }
+school = "physical"
+shape = { execute = { targets = 1 } }
+hit = 270
+cooldown = 15.0
+range = 7.0
+spends = { resource = "chi", n = 3, more = 1.0 }
+name = { en = "Touch of Death", de = "Berührung des Todes", fr = "Toucher mortel", es = "Toque de muerte", pt = "Toque da Morte", ru = "Касание смерти", pl = "Dotyk śmierci", tr = "Ölüm Dokunuşu", it = "Tocco della morte", ja = "タッチ・オブ・デス", zh = "轮回之触", ko = "절명의 손길" }
+icon = "ability_monk_touchofdeath"
+
+[[spell]]
+key = "healing_sphere"
+id = 900072
+visual = 910174
+vfx = { source = 900072, cast = { model = "Spells/monk_mist_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_travelingmist_impact.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+# The sphere: patch-{'s GameObjectDisplayInfo row 97951 (the source's soothing mist orb).
+shape = { sphere = { share = 10, count = 3, secs = 20.0, display = 97951, scale = 3.0 } }
+hit = 0
+cooldown = 12.0
+range = 0.0
+needs = "stance_of_the_wise_serpent"
+name = { en = "Healing Sphere", de = "Heilsphäre", fr = "Sphère de soins", es = "Esfera de curación", pt = "Esfera de Cura", ru = "Сфера исцеления", pl = "Kula uzdrawiająca", tr = "Şifa Küresi", it = "Sfera curativa", ja = "ヒーリング・スフィア", zh = "治疗宝珠", ko = "치유의 구슬" }
+icon = "ability_monk_healthsphere"
+
+[[spell]]
+key = "storm_earth_and_fire"
+id = 900030
+visual = 910175
+vfx = { source = 900030, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { summon = { pet = "spirit", count = 2, secs = 15.0, look_aura = 8326 } }
+hit = 0
+cooldown = 45.0
+range = 30.0
+name = { en = "Storm, Earth, and Fire", de = "Sturm, Erde und Feuer", fr = "Tempête, Terre et Feu", es = "Tormenta, Tierra y Fuego", pt = "Tempestade, Terra e Fogo", ru = "Буря, земля и огонь", pl = "Burza, Ziemia i Ogień", tr = "Fırtına, Toprak ve Ateş", it = "Tempesta, Terra e Fuoco", ja = "ストーム・アース・アンド・ファイア", zh = "风暴、大地和火焰", ko = "폭풍과 대지와 불" }
+icon = "spell_nature_giftofthewild"
+pet = { one = { en = "elemental spirit", de = "Elementargeist", fr = "esprit élémentaire", es = "espíritu elemental", pt = "espírito elemental", ru = "дух стихии", pl = "duch żywiołu", tr = "element ruhu", it = "spirito elementale", ja = "エレメンタル・スピリット", zh = "元素之灵", ko = "원소 정령" }, many = { en = "elemental spirits", de = "Elementargeister", fr = "esprits élémentaires", es = "espíritus elementales", pt = "espíritos elementais", ru = "духи стихий", pl = "duchy żywiołów", tr = "element ruhları", it = "spiriti elementali", ja = "エレメンタル・スピリット", zh = "元素之灵", ko = "원소 정령" } }
+
+[[spell]]
+key = "strike_of_the_windlord"
+id = 903001
+visual = 910176
+vfx = { source = 903001, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { cone = { length = 10.0 } }
+hit = 150
+cooldown = 16.0
+range = 10.0
+name = { en = "Strike of the Windlord", de = "Schlag des Windfürsten", fr = "Frappe du seigneur du vent", es = "Golpe del Señor del Viento", pt = "Golpe do Senhor do Vento", ru = "Удар Повелителя ветра", pl = "Cios Władcy Wiatru", tr = "Rüzgar Lordu'nun Darbesi", it = "Colpo del Signore del Vento", ja = "ストライク・オブ・ザ・ウィンドロード", zh = "风领主之击", ko = "풍신의 일격" }
+icon = "ability_monk_hurricanestrike"
+
+[[spell]]
+key = "leg_sweep"
+id = 900115
+visual = 910177
+vfx = { source = 900115, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 6.0 } }
+hit = 45
+cooldown = 18.0
+range = 6.0
+rider = { stun = { secs = 2.0 } }
+name = { en = "Leg Sweep", de = "Fußfeger", fr = "Balayage de jambe", es = "Barrido de pierna", pt = "Rasteira", ru = "Круговой удар ногой", pl = "Podcięcie nogą", tr = "Bacak Süpürme", it = "Spazzata di gambe", ja = "レッグ・スウィープ", zh = "扫堂腿", ko = "팽이차기" }
+icon = "ability_monk_legsweep"
+
+[[spell]]
+key = "black_ox_statue"
+id = 903004
+visual = 910178
+vfx = { source = 903004, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+# Every 1.5 sec the statue hits all within 8 yd (it does not taunt or stagger: the run has neither).
+shape = { totem = { radius = 8.0, every = 1.5, secs = 20.0 } }
+hit = 30
+cooldown = 30.0
+range = 10.0
+# patch-{'s CreatureDisplayInfo row for the source's Black Ox Statue.
+stands = 97952
+name = { en = "Summon Black Ox Statue", de = "Statue des Schwarzen Ochsen beschwören", fr = "Invocation de la statue du buffle noir", es = "Invocar estatua del buey negro", pt = "Invocar Estátua do Boi Negro", ru = "Призыв статуи Черного быка", pl = "Przyzwanie Posągu Czarnego Wołu", tr = "Kara Öküz Heykeli Çağır", it = "Evocare Statua del Bue Nero", ja = "サモン・ブラック・オックス・スタチュー", zh = "召唤玄牛雕像", ko = "흑우 조각상 소환" }
+icon = "monk_ability_summonoxstatue"
+
+# The Sturdy Ox's own: Keg Smash gathers chi and slows, Breath of Fire spends it, Fortifying
+# Brew spends a brew.
+
+[[spell]]
+key = "keg_smash"
+id = 903002
+visual = 910179
+vfx = { source = 903002, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 3 } }
+hit = 72
+cooldown = 6.0
+range = 8.0
+rider = { slow = { pct = 50, secs = 3.0 } }
+builds = { resource = "chi", n = 2 }
+needs = "stance_of_the_sturdy_ox"
+name = { en = "Keg Smash", de = "Fasshieb", fr = "Bris de tonneau", es = "Machacar barril", pt = "Barrilada", ru = "Удар бочонком", pl = "Rozbicie beczki", tr = "Fıçı Parçalama", it = "Colpo di barile", ja = "ケグ・スマッシュ", zh = "醉酿投", ko = "맥주통 휘두르기" }
+icon = "ability_monk_drunkenhaze"
+
+[[spell]]
+key = "breath_of_fire"
+id = 903003
+visual = 910180
+vfx = { source = 903003, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { cone = { length = 10.0 } }
+hit = 60
+cooldown = 7.0
+range = 10.0
+spends = { resource = "chi", n = 2, more = 0.6 }
+needs = "stance_of_the_sturdy_ox"
+name = { en = "Breath of Fire", de = "Feueratem", fr = "Souffle de feu", es = "Aliento de fuego", pt = "Sopro de Fogo", ru = "Огненное дыхание", pl = "Ognisty oddech", tr = "Ateş Nefesi", it = "Soffio di fuoco", ja = "ブレス・オブ・ファイア", zh = "火焰之息", ko = "불의 숨결" }
+icon = "ability_monk_breathoffire"
+
+[[spell]]
+key = "fortifying_brew"
+id = 900069
+visual = 910181
+vfx = { source = 900069, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { shield = { share = 30 } }
+hit = 0
+cooldown = 12.0
+range = 0.0
+spends = { resource = "brew", n = 1, more = 0.5 }
+needs = "stance_of_the_sturdy_ox"
+name = { en = "Fortifying Brew", de = "Anregendes Gebräu", fr = "Brassin fortifiant", es = "Brebaje fortificante", pt = "Elixir Fortificante", ru = "Укрепляющий отвар", pl = "Wzmacniający napar", tr = "Güçlendirici Demleme", it = "Infuso fortificante", ja = "フォーティファイング・ブリュー", zh = "壮胆酒", ko = "강화주" }
+icon = "ability_monk_fortifyingale_new"
+
+# The Fierce Tiger's own brew.
+
+[[spell]]
+key = "tigereye_brew"
+id = 900035
+visual = 910182
+vfx = { source = 900035, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { fury = { pct = 30, secs = 8.0 } }
+hit = 0
+cooldown = 10.0
+range = 30.0
+spends = { resource = "brew", n = 1, more = 0.5 }
+needs = "stance_of_the_fierce_tiger"
+name = { en = "Tigereye Brew", de = "Tigeraugengebräu", fr = "Brassin de l'œil de tigre", es = "Brebaje de ojo de tigre", pt = "Elixir do Olho de Tigre", ru = "Отвар тигриного глаза", pl = "Napar tygrysiego oka", tr = "Kaplangözü Demlemesi", it = "Infuso occhio di tigre", ja = "タイガーアイ・ブリュー", zh = "虎眼酒", ko = "범눈 양조주" }
+icon = "ability_monk_tigereyebrandy"
+
+# The Wise Serpent's own: Renewing Mist heals every friend in reach over time, Mana Tea spends a
+# brew on a great mend.
+
+[[spell]]
+key = "renewing_mist"
+id = 903006
+visual = 910183
+vfx = { source = 903006, cast = { model = "Spells/monk_mist_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_travelingmist_impact.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { heal = { share = 9, secs = 10.0 } }
+hit = 0
+cooldown = 8.0
+range = 0.0
+tags = ["group_heal"]
+needs = "stance_of_the_wise_serpent"
+name = { en = "Renewing Mist", de = "Erneuernder Nebel", fr = "Brume de renouveau", es = "Niebla renovadora", pt = "Névoa Renovadora", ru = "Обновляющий туман", pl = "Odnawiająca mgła", tr = "Yenileyici Sis", it = "Nebbia rinnovante", ja = "リニューイング・ミスト", zh = "复苏之雾", ko = "소생의 안개" }
+icon = "ability_monk_renewingmists"
+
+[[spell]]
+key = "mana_tea"
+id = 903005
+visual = 910184
+vfx = { source = 903005, cast = { model = "Spells/monk_mist_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_travelingmist_impact.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { heal = { share = 26, secs = 0.0 } }
+hit = 0
+cooldown = 10.0
+range = 0.0
+tags = ["group_heal"]
+spends = { resource = "brew", n = 1, more = 0.5 }
+needs = "stance_of_the_wise_serpent"
+name = { en = "Mana Tea", de = "Manatee", fr = "Thé de mana", es = "Té de maná", pt = "Chá de Mana", ru = "Чай маны", pl = "Herbata many", tr = "Mana Çayı", it = "Tè del mana", ja = "マナ・ティー", zh = "法力茶", ko = "마나 차" }
+icon = "monk_ability_cherrymanatea"
+
+# The Sturdy Ox's big keg (Legion's Exploding Keg): hurled into the thickest group within 30 yd,
+# it bursts there and its spilled brew burns on for a few seconds. Ours. `TUNE`
+[[spell]]
+key = "exploding_keg"
+id = 903007
+visual = 910185
+vfx = { source = 903007, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 4.0 } }
+hit = 34
+cooldown = 14.0
+range = 30.0
+rider = { slow = { pct = 30, secs = 2.0 } }
+needs = "stance_of_the_sturdy_ox"
+name = { en = "Exploding Keg", de = "Explodierendes Fass", fr = "Tonnelet explosif", es = "Barril explosivo", pt = "Barril Explosivo", ru = "Взрывная бочка", pl = "Wybuchowa beczka", tr = "Patlayan Fıçı", it = "Barile esplosivo", ja = "エクスプローディング・ケグ", zh = "爆炸酒桶", ko = "폭발하는 맥주통" }
+icon = "inv_cape_special_keg_d_01"
+
+# --- The second round (2026-11-08): what fits a horde best. Ungated: the orbs, the Ring of Peace,
+# Hundred-Hand Slap, Chi Explosion and Crackling Jade Lightning; each stance one or two of its own.
+
+# Chi orbs circling the hero, striking what they pass: the survivors' classic. Ours. `TUNE`
+[[spell]]
+key = "chi_orbit"
+id = 903008
+visual = 910186
+vfx = { source = 903008, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+# The orb: patch-{'s CreatureDisplayInfo 97953 (the source's jade chi blast, twice its size).
+shape = { orbit = { count = 3, radius = 5.0, reach = 2.2, period = 2.4, every = 0.7, secs = 10.0, display = 97953 } }
+hit = 24
+cooldown = 12.0
+range = 0.0
+name = { en = "Chi Orbit", de = "Chiorbit", fr = "Orbite de chi", es = "Órbita de chi", pt = "Órbita de Chi", ru = "Орбита ци", pl = "Orbita chi", tr = "Chi Yörüngesi", it = "Orbita di Chi", ja = "チー・オービット", zh = "真气环绕", ko = "기의 궤도" }
+icon = "ability_monk_forcesphere"
+
+# A ring of jade on the ground round the hero: what stands in it takes a little and flees.
+[[spell]]
+key = "ring_of_peace"
+id = 903010
+visual = 910187
+vfx = { source = 903010, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { ground = { radius = 9.0, every = 1.0, secs = 5.0 } }
+hit = 20
+cooldown = 18.0
+range = 0.0
+rider = { flee = { secs = 2.0 } }
+name = { en = "Ring of Peace", de = "Ring des Friedens", fr = "Anneau de paix", es = "Anillo de paz", pt = "Anel da Paz", ru = "Круг мира", pl = "Krąg pokoju", tr = "Barış Halkası", it = "Anello della pace", ja = "リング・オブ・ピース", zh = "平心之环", ko = "평화의 고리" }
+icon = "ability_monk_pathofmists"
+
+# A storm of blows on one: bosses and guardians first.
+[[spell]]
+key = "hundred_hand_slap"
+id = 903012
+visual = 910188
+vfx = { source = 903012, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 165
+cooldown = 8.0
+range = 7.0
+name = { en = "Hundred-Hand Slap", de = "Hundert-Hand-Schlag", fr = "Gifle aux cent mains", es = "Bofetada de cien manos", pt = "Tapa das Cem Mãos", ru = "Удар сотни рук", pl = "Klaps stu dłoni", tr = "Yüz El Tokadı", it = "Schiaffo a cento mani", ja = "ハンドレッドハンド・スラップ", zh = "百裂掌", ko = "백렬장" }
+icon = "ability_monk_palmstrike"
+
+# Every chi gathered let loose at once: two and a half times as hard with four.
+[[spell]]
+key = "chi_explosion"
+id = 903014
+visual = 910189
+vfx = { source = 903014, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { nova = { radius = 10.0 } }
+hit = 40
+cooldown = 8.0
+range = 10.0
+spends = { resource = "chi", n = 4, more = 1.5 }
+name = { en = "Chi Explosion", de = "Chiexplosion", fr = "Explosion de chi", es = "Explosión de chi", pt = "Explosão de Chi", ru = "Взрыв ци", pl = "Eksplozja chi", tr = "Chi İnfilakı", it = "Esplosione di Chi", ja = "チー・エクスプロージョン", zh = "真气爆炸", ko = "기 폭발" }
+icon = "ability_monk_chiexplosion"
+
+# Jade lightning leaping from foe to foe.
+[[spell]]
+key = "crackling_jade_lightning"
+id = 900055
+visual = 910190
+vfx = { source = 900055, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { chain = { jumps = 4, radius = 10.0 } }
+hit = 36
+cooldown = 3.5
+range = 25.0
+name = { en = "Crackling Jade Lightning", de = "Knisternder Jadeblitz", fr = "Éclair de jade crépitant", es = "Rayo de jade crepitante", pt = "Relâmpago de Jade Crepitante", ru = "Треск нефритовой молнии", pl = "Trzaskająca nefrytowa błyskawica", tr = "Çatırdayan Yeşim Yıldırımı", it = "Fulmine di giada crepitante", ja = "クラックリング・ジェイド・ライトニング", zh = "碎玉闪电", ko = "파직이는 비취 번개" }
+icon = "ability_monk_cracklingjadelightning"
+
+# The Fierce Tiger's: a whirlwind of fists, and Xuen.
+[[spell]]
+key = "whirling_dragon_punch"
+id = 903009
+visual = 910191
+vfx = { source = 903009, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { nova = { radius = 11.0 } }
+hit = 95
+cooldown = 12.0
+range = 11.0
+needs = "stance_of_the_fierce_tiger"
+name = { en = "Whirling Dragon Punch", de = "Wirbelnder Drachenschlag", fr = "Coup de poing du dragon tourbillonnant", es = "Puñetazo del dragón giratorio", pt = "Soco do Dragão Giratório", ru = "Вихревой удар дракона", pl = "Wirujące uderzenie smoka", tr = "Dönen Ejderha Yumruğu", it = "Pugno del drago vorticante", ja = "ワーリング・ドラゴン・パンチ", zh = "升龙霸", ko = "용축회오리격" }
+icon = "ability_monk_dragonkick"
+
+[[spell]]
+key = "invoke_xuen"
+id = 900156
+visual = 910192
+vfx = { source = 900156, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { summon = { pet = "xuen", count = 1, secs = 20.0 } }
+hit = 0
+cooldown = 60.0
+range = 30.0
+needs = "stance_of_the_fierce_tiger"
+name = { en = "Invoke Xuen, the White Tiger", de = "Xuen, den Weißen Tiger, anrufen", fr = "Invocation de Xuen, le Tigre blanc", es = "Invocar a Xuen, el Tigre Blanco", pt = "Evocar Xuen, o Tigre Branco", ru = "Призыв Сюэня, Белого Тигра", pl = "Przywołanie Xuena, Białego Tygrysa", tr = "Beyaz Kaplan Xuen'i Çağır", it = "Invocare Xuen, la Tigre Bianca", ja = "インヴォーク・白虎シュエン", zh = "召唤白虎雪怒", ko = "백호 쉬엔 원조" }
+icon = "ability_monk_summontigerstatue"
+pet = { one = { en = "Xuen", de = "Xuen", fr = "Xuen", es = "Xuen", pt = "Xuen", ru = "Сюэнь", pl = "Xuen", tr = "Xuen", it = "Xuen", ja = "シュエン", zh = "雪怒", ko = "쉬엔" }, many = { en = "Xuens", de = "Xuens", fr = "Xuens", es = "Xuens", pt = "Xuens", ru = "Сюэни", pl = "Xuenowie", tr = "Xuen'ler", it = "Xuen", ja = "シュエン", zh = "雪怒", ko = "쉬엔" } }
+
+# The Sturdy Ox's: a charging wave that stuns all in a line.
+[[spell]]
+key = "charging_ox_wave"
+id = 900155
+visual = 910193
+vfx = { source = 900155, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_tigerkick_impact.m2", slot = "chest", scale = 0.75 } }
+school = "physical"
+shape = { cone = { length = 16.0 } }
+hit = 45
+cooldown = 15.0
+range = 16.0
+rider = { stun = { secs = 2.0 } }
+needs = "stance_of_the_sturdy_ox"
+name = { en = "Charging Ox Wave", de = "Ansturm des Ochsen", fr = "Onde du buffle chargeant", es = "Ola de buey embistiendo", pt = "Onda do Boi Impetuoso", ru = "Волна атакующего быка", pl = "Fala szarżującego wołu", tr = "Hücum Eden Öküz Dalgası", it = "Onda del bue in carica", ja = "チャージング・オックス・ウェーブ", zh = "蛮牛冲", ko = "돌진하는 황소의 물결" }
+icon = "ability_monk_chargingoxwave"
+
+# The Wise Serpent's: Chi-Ji's cranes fly out and scatter the horde.
+[[spell]]
+key = "song_of_chiji"
+id = 903013
+visual = 910194
+vfx = { source = 903013, cast = { model = "spells/monk_jade_precast_right_low.m2", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/monk_chiblast_impact_jade.m2", slot = "chest", scale = 0.75 } }
+school = "nature"
+shape = { cone = { length = 14.0 } }
+hit = 20
+cooldown = 16.0
+range = 14.0
+rider = { flee = { secs = 3.0 } }
+needs = "stance_of_the_wise_serpent"
+name = { en = "Song of Chi-Ji", de = "Lied von Chi-Ji", fr = "Chant de Chi-Ji", es = "Canción de Chi-Ji", pt = "Canção de Chi-Ji", ru = "Песнь Чи-Цзи", pl = "Pieśń Chi-Ji", tr = "Chi-Ji'nin Şarkısı", it = "Canto di Chi-Ji", ja = "ソング・オブ・チー・ジー", zh = "赤精之歌", ko = "츠지의 노래" }
+icon = "monk_stance_redcrane"

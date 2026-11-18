@@ -1,0 +1,60 @@
+# The account's level: one for all its heroes, 1 to `max_level`, from the experience its runs and
+# achievements earn (`acclevel.rs`). Each level past the first brings points for the account
+# talent tree (`tree.toml`), and the levels open the racials one by one: every hero starts with
+# the two weak ones of `start`, whatever its class and race, and the strong ones come last.
+key = "account"
+
+# The highest level. `TUNE`
+max_level = 30
+
+# The experience from level `l` to the next: `xp_first + xp_step * (l - 1)`. About 130,000 from 1
+# to 30, some two hundred runs, the late levels the slow ones. `TUNE`
+xp_first = 1000
+xp_step = 250
+
+# The points a branch of the account tree must hold for each row before the one a talent is on.
+# `TUNE`
+row_points = 5
+
+# The two racials every hero has from the start, an active and a lasting one, both weak:
+# Darkflight's short sprints and Treasure Finding's wider pickup.
+start = ["darkflight", "treasure_finding"]
+
+# The other racials in the order the levels open them, weak to strong, the active ones among the
+# lasting ones so each few levels bring something to try; spread over levels 2 to `max_level`, a
+# level or two apart. `TUNE`
+unlock_order = [
+    "diplomacy",
+    "cannibalize",
+    "escape_artist",
+    "quickness",
+    "shadow_resistance",
+    "rocket_jump",
+    "the_human_spirit",
+    "inner_peace",
+    "nature_resistance",
+    "regeneration",
+    "shadowmeld",
+    "best_deals_anywhere",
+    "hardiness",
+    "throwing_specialization",
+    "war_stomp",
+    "quaking_palm",
+    "expansive_mind",
+    "engineering_specialization",
+    "will_of_the_forsaken",
+    "viciousness",
+    "endurance",
+    "epicurean",
+    "gift_of_the_naaru",
+    "time_is_money",
+    "heroic_presence",
+    "perception",
+    "arcane_affinity",
+    "flayer",
+    "arcane_torrent",
+    "gun_specialization",
+    "berserking",
+    "blood_fury",
+    "stoneform",
+]

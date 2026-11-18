@@ -1,0 +1,20 @@
+# High Priest Venoxis's abilities, Gurubashi Arena.
+
+[[boss]]
+key = "high_priest_venoxis"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 403 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 6.0, warn = 1.5, factor = 1.2, lasts = 10.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { trail = { spell = 23860, count = 4, radius = 5.0, warn = 1.6, gap = 0.8, factor = 1.8 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

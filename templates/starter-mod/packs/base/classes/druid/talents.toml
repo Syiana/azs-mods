@@ -1,0 +1,623 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "druid_balance"
+index = 0
+icon = "Spell_Nature_StarFall"
+background = "DruidBalance"
+name = { en = "Balance", de = "Gleichgewicht", fr = "Équilibre", es = "Equilibrio", pt = "Equilíbrio", ru = "Баланс", pl = "Równowaga", tr = "Denge", it = "Equilibrio", ja = "バランス", zh = "平衡", ko = "조화" }
+
+[[talent_tree]]
+key = "druid_feral_combat"
+index = 1
+icon = "Ability_Racial_BearForm"
+background = "DruidFeralCombat"
+name = { en = "Feral Combat", de = "Wilder Kampf", fr = "Combat farouche", es = "Combate feral", pt = "Combate Feral", ru = "Сила зверя", pl = "Walka w formie zwierzęcej", tr = "Vahşi Dövüş", it = "Combattimento ferale", ja = "フェラル・コンバット", zh = "野性战斗", ko = "야성 전투" }
+
+[[talent_tree]]
+key = "druid_restoration"
+index = 2
+icon = "Spell_Nature_HealingTouch"
+background = "DruidRestoration"
+name = { en = "Restoration", de = "Wiederherstellung", fr = "Restauration", es = "Restauración", pt = "Restauração", ru = "Исцеление", pl = "Odnowa", tr = "Şifa", it = "Rigenerazione", ja = "レストレーション", zh = "恢复", ko = "회복" }
+
+[[talent]]
+key = "imp_wrath"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Spell_Nature_AbolishMagic"
+name = { en = "Improved Wrath", de = "Verbesserter Zorn", fr = "Colère améliorée", es = "Cólera mejorada", pt = "Ira Aprimorada", ru = "Улучшенный гнев", pl = "Ulepszony Gniew", tr = "Gelişmiş Gazap", it = "Ira migliorata", ja = "改良型ラース", zh = "强化愤怒", ko = "천벌 연마" }
+text = { en = "Wrath's cooldown is {v}% shorter.", de = "Die Abklingzeit von Zorn ist {v}% kürzer.", fr = "La recharge de Colère est réduite de {v}%.", es = "La reutilización de Cólera es un {v}% más corta.", pt = "A recarga de Ira é {v}% menor.", ru = "Перезарядка «Гнева» короче на {v}%.", pl = "Czas odnowienia Gniewu jest krótszy o {v}%.", tr = "Gazap'ın bekleme süresi {v}% daha kısa.", it = "La ricarica di Ira è più breve del {v}%.", ja = "ラースのクールダウンが{v}%短くなります。", zh = "愤怒的冷却时间缩短{v}%。", ko = "천벌의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.04
+mods = [{ cooldown = ["wrath"] }]
+mods_v = 0.04
+
+[[talent]]
+key = "natures_grasp"
+tree = 0
+row = 0
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Nature_NaturesWrath"
+name = { en = "Nature's Grasp", de = "Griff der Natur", fr = "Étreinte de la nature", es = "Agarre de la naturaleza", pt = "Garra da Natureza", ru = "Хватка природы", pl = "Chwyt natury", tr = "Doğanın Kavrayışı", it = "Presa della natura", ja = "ネイチャーズ・グラスプ", zh = "自然之握", ko = "자연의 손아귀" }
+text = { en = "When an enemy strikes you in melee, {v}% chance to cast a free Entangling Roots.", de = "Wenn ein Feind dich im Nahkampf trifft, besteht eine Chance von {v}%, kostenlose Wucherwurzeln zu wirken.", fr = "Quand un ennemi te frappe en mêlée, {v}% de chances de lancer gratuitement Sarments.", es = "Cuando un enemigo te golpea cuerpo a cuerpo, {v}% de probabilidad de lanzar unas Raíces enredadoras gratis.", pt = "Quando um inimigo atinge você em combate corpo a corpo, {v}% de chance de lançar Raízes Enredantes de graça.", ru = "Когда враг бьет тебя в ближнем бою, с шансом {v}% бесплатно применяется «Гнев деревьев».", pl = "Gdy przeciwnik uderzy cię wręcz, {v}% szansy na darmowe Pnącza.", tr = "Bir düşman sana yakın dövüşte vurduğunda {v}% ihtimalle bedava Dolaşan Kökler yapılır.", it = "Quando un nemico ti colpisce in mischia, {v}% di probabilità di lanciare un Radici intrappolanti gratuito.", ja = "敵から近接攻撃を受けると、{v}%の確率で無料のエンタングリング・ルーツを唱えます。", zh = "当敌人对你进行近战攻击时，有{v}%的几率施放一次免费的纠缠根须。", ko = "적이 근접 공격으로 당신을 때리면 {v}% 확률로 휘감는 뿌리를 무료로 시전합니다." }
+menu_v = 0.06
+plays = [
+    { v = 0.06, play = { struck = "entangling_roots" } },
+]
+
+[[talent]]
+key = "imp_moonfire"
+tree = 0
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "Spell_Nature_StarFall"
+name = { en = "Improved Moonfire", de = "Verbessertes Mondfeuer", fr = "Éclat lunaire amélioré", es = "Fuego lunar mejorado", pt = "Fogo Lunar Aprimorado", ru = "Улучшенный лунный огонь", pl = "Ulepszony Księżycowy ogień", tr = "Gelişmiş Ay Ateşi", it = "Fuoco lunare migliorato", ja = "改良型ムーンファイア", zh = "强化月火术", ko = "달빛섬광 연마" }
+text = { en = "Moonfire deals {v}% more damage.", de = "Mondfeuer verursacht {v}% mehr Schaden.", fr = "Éclat lunaire inflige {v}% de dégâts en plus.", es = "Fuego lunar inflige un {v}% más de daño.", pt = "Fogo Lunar causa {v}% a mais de dano.", ru = "«Лунный огонь» наносит на {v}% больше урона.", pl = "Księżycowy ogień zadaje o {v}% więcej obrażeń.", tr = "Ay Ateşi {v}% daha fazla hasar verir.", it = "Fuoco lunare infligge il {v}% di danni in più.", ja = "ムーンファイアのダメージが{v}%増加します。", zh = "月火术造成的伤害提高{v}%。", ko = "달빛섬광의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["moonfire"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "natural_weapons"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [0, 0.025] }]
+icon = "INV_Staff_01"
+name = { en = "Natural Weapons", de = "Natürliche Waffen", fr = "Armes naturelles", es = "Armas naturales", pt = "Armas Naturais", ru = "Природное оружие", pl = "Naturalna broń", tr = "Doğal Silahlar", it = "Armi naturali", ja = "ナチュラル・ウェポン", zh = "自然武器", ko = "자연의 무기" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "omen_of_clarity"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Nature_CrystalBall"
+name = { en = "Omen of Clarity", de = "Omen der Klarsicht", fr = "Augure de clarté", es = "Presagio de claridad", pt = "Presságio de Clareza", ru = "Знамение ясности", pl = "Omen jasności umysłu", tr = "Berraklık Alameti", it = "Presagio di chiarezza", ja = "オーメン・オブ・クラリティ", zh = "清晰预兆", ko = "청명의 전조" }
+text = { en = "Milestone. Every spell you cast has an {v}% chance to call down a free Starfire.", de = "Meilenstein. Jeder Zauber, den du wirkst, hat eine Chance von {v}%, ein kostenloses Sternenfeuer herabzurufen.", fr = "Jalon. Chaque sort que tu lances a {v}% de chances de faire tomber un Feu stellaire gratuit.", es = "Hito. Cada hechizo que lanzas tiene un {v}% de probabilidad de invocar un Fuego estelar gratis.", pt = "Marco. Cada feitiço que você lança tem {v}% de chance de invocar um Fogo Estelar grátis.", ru = "Веха. Каждое твое заклинание с шансом {v}% обрушивает бесплатный «Звездный огонь».", pl = "Kamień milowy. Każdy rzucony czar ma {v}% szansy, by zesłać darmowy Gwiezdny ogień.", tr = "Dönüm noktası. Yaptığın her büyü {v}% ihtimalle bedava bir Yıldız Ateşi indirir.", it = "Traguardo. Ogni incantesimo che lanci ha il {v}% di probabilità di evocare un Fuoco stellare gratuito.", ja = "【マイルストーン】呪文を唱えるたびに{v}%の確率で無料のスターファイアが降り注ぎます。", zh = "里程碑：你施放的每个法术都有{v}%的几率召唤一次免费的星火术。", ko = "이정표. 주문을 시전할 때마다 {v}% 확률로 별빛 화살이 무료로 떨어집니다." }
+menu_v = 0.18
+plays = [
+    { v = 0.18, play = { cast_cast = { keys = [], cast = "starfire", gap = 0.0 } } },
+]
+
+[[talent]]
+key = "vengeance_druid"
+tree = 0
+row = 2
+col = 2
+ranks = 5
+effects = [{ stat = [4, 0.08] }]
+icon = "Spell_Nature_Purge"
+name = { en = "Vengeance", de = "Rache", fr = "Vengeance", es = "Venganza", pt = "Vingança", ru = "Месть", pl = "Zemsta", tr = "İntikam", it = "Vendetta", ja = "ヴェンジェンス", zh = "复仇", ko = "복수" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+
+[[talent]]
+key = "imp_starfire"
+tree = 0
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Arcane_StarFire"
+name = { en = "Improved Starfire", de = "Verbessertes Sternenfeuer", fr = "Feu stellaire amélioré", es = "Fuego estelar mejorado", pt = "Fogo Estelar Aprimorado", ru = "Улучшенный звездный огонь", pl = "Ulepszony Gwiezdny ogień", tr = "Gelişmiş Yıldız Ateşi", it = "Fuoco stellare migliorato", ja = "改良型スターファイア", zh = "强化星火术", ko = "별빛 화살 연마" }
+text = { en = "Starfire and Starfall cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Sternenfeuer und Sternenregen sind {v}% kürzer.", fr = "Les recharges de Feu stellaire et de Chute d'étoiles sont réduites de {v}%.", es = "Las reutilizaciones de Fuego estelar y Lluvia de estrellas son un {v}% más cortas.", pt = "As recargas de Fogo Estelar e Chuva de Estrelas são {v}% menores.", ru = "Перезарядка «Звездного огня» и «Звездопада» короче на {v}%.", pl = "Czasy odnowienia Gwiezdnego ognia i Gwiezdnego deszczu są krótsze o {v}%.", tr = "Yıldız Ateşi ve Yıldız Düşüşü bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Fuoco stellare e Pioggia di stelle sono più brevi del {v}%.", ja = "スターファイアとスターフォールのクールダウンが{v}%短くなります。", zh = "星火术和星辰坠落的冷却时间缩短{v}%。", ko = "별빛 화살과 별똥별의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["starfire", "starfall"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "moonglow"
+tree = 0
+row = 3
+col = 2
+ranks = 3
+req = "omen_of_clarity"
+effects = [{ stat = [1, 0.03] }]
+icon = "Spell_Nature_Sentinal"
+name = { en = "Moonglow", de = "Mondschein", fr = "Lueur lunaire", es = "Resplandor lunar", pt = "Brilho Lunar", ru = "Лунное сияние", pl = "Księżycowy blask", tr = "Ay Parıltısı", it = "Luce lunare", ja = "ムーングロウ", zh = "月光", ko = "달빛" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "starfall"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Arcane_StarFire"
+name = { en = "Starfall", de = "Sternenregen", fr = "Chute d'étoiles", es = "Lluvia de estrellas", pt = "Chuva de Estrelas", ru = "Звездопад", pl = "Gwiezdny deszcz", tr = "Yıldız Düşüşü", it = "Pioggia di stelle", ja = "スターフォール", zh = "星辰坠落", ko = "별똥별" }
+text = { en = "Milestone. Stars fall around you: a free Starfire every 4 sec.", de = "Meilenstein. Sterne fallen um dich herum: alle 4 Sek. ein kostenloses Sternenfeuer.", fr = "Jalon. Des étoiles tombent autour de toi : un Feu stellaire gratuit toutes les 4 s.", es = "Hito. Caen estrellas a tu alrededor: un Fuego estelar gratis cada 4 s.", pt = "Marco. Estrelas caem ao seu redor: um Fogo Estelar grátis a cada 4 s.", ru = "Веха. Вокруг тебя падают звезды: бесплатный «Звездный огонь» каждые 4 сек.", pl = "Kamień milowy. Wokół ciebie spadają gwiazdy: darmowy Gwiezdny ogień co 4 s.", tr = "Dönüm noktası. Çevrene yıldızlar düşer: her 4 sn'de bir bedava Yıldız Ateşi.", it = "Traguardo. Le stelle cadono attorno a te: un Fuoco stellare gratuito ogni 4 s.", ja = "【マイルストーン】周囲に星が降り注ぎます：4秒ごとに無料のスターファイア。", zh = "里程碑：群星在你身边坠落：每4秒施放一次免费的星火术。", ko = "이정표. 주위에 별이 떨어집니다: 4초마다 별빛 화살을 무료로 시전합니다." }
+menu_v = 4
+plays = [
+    { v = 4.0, play = { every = "starfire" } },
+]
+
+[[talent]]
+key = "imp_hurricane"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Nature_Cyclone"
+name = { en = "Gale Winds", de = "Sturmböen", fr = "Vents de tempête", es = "Vientos de tempestad", pt = "Ventos de Tempestade", ru = "Штормовые ветры", pl = "Wichry burzy", tr = "Fırtına Rüzgarları", it = "Venti di tempesta", ja = "ゲイル・ウィンド", zh = "狂风", ko = "강풍" }
+text = { en = "Hurricane and Typhoon reach {v}% farther.", de = "Hurrikan und Taifun reichen {v}% weiter.", fr = "Ouragan et Typhon portent {v}% plus loin.", es = "Huracán y Tifón llegan un {v}% más lejos.", pt = "Furacão e Tufão alcançam {v}% mais longe.", ru = "«Ураган» и «Тайфун» бьют на {v}% дальше.", pl = "Huragan i Tajfun sięgają o {v}% dalej.", tr = "Kasırga ve Tayfun {v}% daha uzağa erişir.", it = "Uragano e Tifone arrivano il {v}% più lontano.", ja = "ハリケーンとタイフーンの射程が{v}%延びます。", zh = "飓风和台风的范围扩大{v}%。", ko = "허리케인과 태풍의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.1
+mods = [{ area = ["hurricane", "typhoon"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "moonfury"
+tree = 0
+row = 5
+col = 0
+ranks = 5
+effects = []
+icon = "Spell_Nature_MoonGlow"
+name = { en = "Moonfury", de = "Mondzorn", fr = "Fureur lunaire", es = "Furia lunar", pt = "Fúria Lunar", ru = "Лунная ярость", pl = "Księżycowa furia", tr = "Ay Öfkesi", it = "Furia lunare", ja = "ムーンフューリー", zh = "月怒", ko = "달의 분노" }
+text = { en = "Arcane and Nature spells deal {v}% more damage.", de = "Arkan- und Naturzauber verursachen {v}% mehr Schaden.", fr = "Les sorts des Arcanes et de Nature infligent {v}% de dégâts en plus.", es = "Los hechizos Arcanos y de Naturaleza infligen un {v}% más de daño.", pt = "Feitiços Arcanos e de Natureza causam {v}% a mais de dano.", ru = "Заклинания тайной магии и природы наносят на {v}% больше урона.", pl = "Czary magii tajemnej i natury zadają o {v}% więcej obrażeń.", tr = "Gizem ve Doğa büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi Arcani e di Natura infliggono il {v}% di danni in più.", ja = "秘術と自然の呪文のダメージが{v}%増加します。", zh = "奥术和自然法术造成的伤害提高{v}%。", ko = "비전 및 자연 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+mods = [{ school = 72 }]
+mods_v = 0.03
+
+[[talent]]
+key = "natures_reach"
+tree = 0
+row = 5
+col = 2
+ranks = 2
+req = "starfall"
+effects = [{ stat = [3, 0.02] }]
+icon = "Spell_Nature_NatureTouchGrow"
+name = { en = "Nature's Reach", de = "Reichweite der Natur", fr = "Portée de la nature", es = "Alcance de la naturaleza", pt = "Alcance da Natureza", ru = "Длань природы", pl = "Zasięg natury", tr = "Doğanın Erişimi", it = "Portata della natura", ja = "ネイチャーズ・リーチ", zh = "自然延伸", ko = "자연의 영역" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "force_of_nature"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "moonfire" }]
+icon = "Spell_Nature_ForceOfNature"
+name = { en = "Force of Nature", de = "Naturgewalt", fr = "Force de la nature", es = "Fuerza de la naturaleza", pt = "Força da Natureza", ru = "Сила природы", pl = "Moc natury", tr = "Doğa Gücü", it = "Forza della natura", ja = "フォース・オブ・ネイチャー", zh = "自然之力", ko = "자연의 군대" }
+text = { en = "Capstone. Two treants fight at your side, and you start every run with Moonfire.", de = "Schlussstein. Zwei Treants kämpfen an deiner Seite, und du beginnst jeden Lauf mit Mondfeuer.", fr = "Apogée. Deux tréants combattent à tes côtés, et tu commences chaque partie avec Éclat lunaire.", es = "Cúspide. Dos retoños luchan a tu lado y empiezas cada partida con Fuego lunar.", pt = "Ápice. Dois ents lutam ao seu lado, e você começa cada partida com Fogo Lunar.", ru = "Вершина. Два древня сражаются рядом с тобой, а каждый забег ты начинаешь с «Лунного огня».", pl = "Zwieńczenie. Dwa drzewce walczą u twego boku, a każdą rozgrywkę zaczynasz z Księżycowym ogniem.", tr = "Zirve. İki ağaç evladı yanında savaşır ve her oyuna Ay Ateşi ile başlarsın.", it = "Vertice. Due alberi guerrieri combattono al tuo fianco e inizi ogni partita con Fuoco lunare.", ja = "【キャップストーン】2体のトレントが共に戦い、毎ランをムーンファイアを持って始めます。", zh = "终极天赋：两个树人在你身边作战，并且你在每场对局开始时拥有月火术。", ko = "궁극 특성. 나무정령 둘이 곁에서 싸우며, 모든 런을 달빛섬광을 가지고 시작합니다." }
+plays = [
+    { v = 0.0, play = { pet = { pet = "treant", cleave = false } } },
+    { v = 0.0, play = { pet = { pet = "treant", cleave = false } } },
+]
+
+[[talent]]
+key = "ferocity_druid"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Ability_Hunter_Pet_Hyena"
+name = { en = "Ferocity", de = "Wildheit", fr = "Férocité", es = "Ferocidad", pt = "Ferocidade", ru = "Свирепость", pl = "Dzikość", tr = "Yırtıcılık", it = "Ferocia", ja = "フェロシティ", zh = "凶猛", ko = "흉포함" }
+text = { en = "Swipe, Shred and Mangle deal {v}% more damage.", de = "Prankenhieb, Schreddern und Zerfleischen verursachen {v}% mehr Schaden.", fr = "Balayage, Lambeau et Mutiler infligent {v}% de dégâts en plus.", es = "Vapuleo, Triturar y Destrozar infligen un {v}% más de daño.", pt = "Golpe Giratório, Dilacerar e Mutilar causam {v}% a mais de dano.", ru = "«Взмах», «Полоснуть» и «Увечье» наносят на {v}% больше урона.", pl = "Smagnięcie, Rozszarpanie i Okaleczenie zadają o {v}% więcej obrażeń.", tr = "Pençe Darbesi, Parçala ve Sakatla {v}% daha fazla hasar verir.", it = "Spazzata, Dilaniare e Maciullare infliggono il {v}% di danni in più.", ja = "スワイプ、シュレッド、マングルのダメージが{v}%増加します。", zh = "横扫、撕碎和裂伤造成的伤害提高{v}%。", ko = "휘둘러치기, 칼날 발톱, 짓이기기의 피해가 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["swipe", "shred", "mangle"] }]
+mods_v = 0.1
+
+# Ours, not the exe's (2026-11-08 cat tree pass): a dodge chance instead of AS's regeneration.
+[[talent]]
+key = "feral_aggression"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [33, 0.02] }]
+icon = "Ability_Druid_DemoralizingRoar"
+name = { en = "Feral Aggression", de = "Wilde Aggression", fr = "Agressivité farouche", es = "Agresión feral", pt = "Agressão Feral", ru = "Звериная агрессия", pl = "Dzika agresja", tr = "Vahşi Saldırganlık", it = "Aggressività ferale", ja = "フェラル・アグレッション", zh = "野性侵略", ko = "야성의 공격성" }
+text = { en = "{v}% chance to dodge an enemy's blow.", de = "{v}% Chance, dem Schlag eines Feindes auszuweichen.", fr = "{v}% de chances d'esquiver le coup d'un ennemi.", es = "{v}% de probabilidad de esquivar el golpe de un enemigo.", pt = "{v}% de chance de esquivar do golpe de um inimigo.", ru = "Шанс {v}% уклониться от удара врага.", pl = "{v}% szansy na unik przed ciosem przeciwnika.", tr = "Düşman darbesinden kaçınma şansı {v}%.", it = "{v}% di probabilità di schivare il colpo di un nemico.", ja = "{v}%の確率で敵の攻撃を回避します。", zh = "有{v}%的几率躲闪敌人的攻击。", ko = "{v}% 확률로 적의 공격을 회피합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "feral_instinct"
+tree = 1
+row = 1
+col = 0
+ranks = 3
+effects = [{ stat = [2, 0.05] }]
+icon = "Ability_Ambush"
+name = { en = "Feral Instinct", de = "Wilder Instinkt", fr = "Instinct farouche", es = "Instinto feral", pt = "Instinto Feral", ru = "Инстинкт зверя", pl = "Dziki instynkt", tr = "Vahşi İçgüdü", it = "Istinto ferale", ja = "フェラル・インスティンクト", zh = "野性本能", ko = "야생의 본능" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.05
+
+# Ours (2026-11-08): the answer is a Shred, AS's a Swipe.
+# TUNE 2026-11-08: free Shred when struck 10% -> 6% a rank (peers 9-30% in all).
+[[talent]]
+key = "brutal_impact"
+tree = 1
+row = 1
+col = 2
+ranks = 5
+effects = []
+icon = "Ability_Druid_Enrage"
+name = { en = "Enrage", de = "Wutanfall", fr = "Enrager", es = "Enfurecer", pt = "Enfurecer", ru = "Исступление", pl = "Wściekłość", tr = "Öfkelen", it = "Infuriare", ja = "エンレイジ", zh = "激怒", ko = "격노" }
+text = { en = "When an enemy strikes you in melee, {v}% chance to answer with a free Shred.", de = "Wenn ein Feind dich im Nahkampf trifft, besteht eine Chance von {v}%, mit einem kostenlosen Schreddern zu antworten.", fr = "Quand un ennemi te frappe en mêlée, {v}% de chances de répondre par un Lambeau gratuit.", es = "Cuando un enemigo te golpea cuerpo a cuerpo, {v}% de probabilidad de responder con un Triturar gratis.", pt = "Quando um inimigo atinge você em combate corpo a corpo, {v}% de chance de responder com Dilacerar de graça.", ru = "Когда враг бьет тебя в ближнем бою, с шансом {v}% ты отвечаешь бесплатным «Полоснуть».", pl = "Gdy przeciwnik uderzy cię wręcz, {v}% szansy na darmowe Rozszarpanie w odpowiedzi.", tr = "Bir düşman sana yakın dövüşte vurduğunda {v}% ihtimalle bedava Parçala ile karşılık verirsin.", it = "Quando un nemico ti colpisce in mischia, {v}% di probabilità di rispondere con un Dilaniare gratuito.", ja = "敵から近接攻撃を受けると、{v}%の確率で無料のシュレッドで反撃します。", zh = "当敌人对你进行近战攻击时，有{v}%的几率以一次免费的撕碎还击。", ko = "적이 근접 공격으로 당신을 때리면 {v}% 확률로 칼날 발톱을 무료로 반격합니다." }
+menu_v = 0.06
+plays = [
+    { v = 0.06, play = { struck = "shred" } },
+]
+
+# Ours (2026-11-08): Shred starts the run; since 2026-11-09 (cat feedback) the bleed marks Swipe
+# too, the card spells the run picks up, not only the starter.
+[[talent]]
+key = "rake"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "shred" }, { stat = [2, 0.2] }, { stat = [5, 0.08] }]
+icon = "Ability_Druid_Disembowel"
+name = { en = "Rake", de = "Krallenhieb", fr = "Griffure", es = "Arañazo", pt = "Rasgar", ru = "Глубокая рана", pl = "Rozorka", tr = "Pençele", it = "Graffio", ja = "レイク", zh = "斜掠", ko = "갈퀴 발톱" }
+text = { en = "Milestone. Your hide thickens: 20% more maximum health and 8% less damage taken. You start every run with Shred, and everything Shred and Swipe hit bleeds for {v}% of the blow over 6 sec.", de = "Meilenstein. Dein Fell wird dicker: 20% mehr maximale Gesundheit und 8% weniger erlittener Schaden. Du beginnst jeden Lauf mit Schreddern, und alles, was Schreddern und Prankenhieb trifft, blutet für {v}% des Hiebs über 6 Sek.", fr = "Jalon. Ta peau s'épaissit : 20% de santé maximale en plus et 8% de dégâts subis en moins. Tu commences chaque partie avec Lambeau, et tout ce que Lambeau et Balayage touchent saigne pour {v}% du coup en 6 s.", es = "Hito. Tu piel se endurece: 20% más de salud máxima y 8% menos de daño recibido. Empiezas cada partida con Triturar, y todo lo que Triturar y Vapuleo golpean sangra un {v}% del golpe durante 6 s.", pt = "Marco. Seu couro engrossa: 20% a mais de vida máxima e 8% a menos de dano sofrido. Você começa cada partida com Dilacerar, e tudo que Dilacerar e Golpe Giratório atingem sangra {v}% do golpe em 6 s.", ru = "Веха. Твоя шкура грубеет: на 20% больше макс. здоровья и на 8% меньше получаемого урона. Каждый забег ты начинаешь с «Полоснуть», и все, что задели «Полоснуть» и «Взмах», кровоточит на {v}% удара в течение 6 сек.", pl = "Kamień milowy. Twoja skóra grubieje: 20% więcej maksymalnego zdrowia i 8% mniej otrzymywanych obrażeń. Każdą rozgrywkę zaczynasz z Rozszarpaniem, a wszystko, co trafią Rozszarpanie i Smagnięcie, krwawi przez 6 s za {v}% ciosu.", tr = "Dönüm noktası. Postun kalınlaşır: 20% daha fazla azami can ve 8% daha az hasar alırsın. Her oyuna Parçala ile başlarsın ve Parçala ile Pençe Darbesi'nin vurduğu her şey 6 sn içinde darbenin {v}%'si kadar kanar.", it = "Traguardo. La tua pelle si ispessisce: 20% di salute massima in più e 8% di danni subiti in meno. Inizi ogni partita con Dilaniare e tutto ciò che Dilaniare e Spazzata colpiscono sanguina per il {v}% del colpo in 6 s.", ja = "【マイルストーン】毛皮が厚くなります：最大体力20%増加、被ダメージ8%減少。毎ランをシュレッドを持って始め、シュレッドとスワイプが命中したすべての敵は6秒かけてその攻撃の{v}%分出血します。", zh = "里程碑：你的毛皮变得更厚：最大生命值提高20%，受到的伤害降低8%。你在每场对局开始时拥有撕碎，被撕碎和横扫击中的目标会在6秒内流血，造成相当于该次攻击{v}%的伤害。", ko = "이정표. 가죽이 두꺼워집니다: 최대 생명력이 20% 증가하고 받는 피해가 8% 감소합니다. 모든 런을 칼날 발톱을 가지고 시작하며, 칼날 발톱과 휘둘러치기에 맞은 모든 적이 6초에 걸쳐 그 피해의 {v}%만큼 출혈 피해를 입습니다." }
+menu_v = 0.3
+plays = [
+    # Its text's share is unread: ours. `TUNE`
+    { v = 0.3, play = { hit_dot = { keys = ["shred", "swipe"], secs = 6.0 } } },
+]
+
+[[talent]]
+key = "sharpened_claws"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [3, 0.015] }]
+icon = "INV_Misc_MonsterClaw_04"
+name = { en = "Sharpened Claws", de = "Geschärfte Klauen", fr = "Griffes aiguisées", es = "Garras afiladas", pt = "Garras Afiadas", ru = "Заостренные когти", pl = "Naostrzone pazury", tr = "Bilenmiş Pençeler", it = "Artigli affilati", ja = "シャープンド・クロー", zh = "锋利兽爪", ko = "날카로운 발톱" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.015
+
+# Ours (2026-11-08): five ranks of damage to elites and bosses, AS's three of Swipe's cooldown.
+[[talent]]
+key = "predatory_strikes"
+tree = 1
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [19, 0.04] }]
+icon = "Ability_Hunter_Pet_Cat"
+name = { en = "Predatory Strikes", de = "Raubtierschläge", fr = "Frappes prédatrices", es = "Golpes depredadores", pt = "Golpes Predatórios", ru = "Удары хищника", pl = "Drapieżne uderzenia", tr = "Yırtıcı Darbeler", it = "Colpi predatori", ja = "プレデトリー・ストライク", zh = "掠食者的打击", ko = "육식동물의 일격" }
+text = { en = "You deal {v}% more damage to elites and bosses.", de = "Du verursachst {v}% mehr Schaden an Elitegegnern und Bossen.", fr = "Tu infliges {v}% de dégâts en plus aux élites et aux boss.", es = "Infliges un {v}% más de daño a élites y jefes.", pt = "Você causa {v}% a mais de dano a elites e chefes.", ru = "Ты наносишь на {v}% больше урона элите и боссам.", pl = "Zadajesz o {v}% więcej obrażeń elitom i bossom.", tr = "Elitlere ve boss'lara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più a élite e boss.", ja = "エリートとボスに与えるダメージが{v}%増加します。", zh = "你对精英和首领造成的伤害提高{v}%。", ko = "정예와 우두머리에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+
+[[talent]]
+key = "thick_hide"
+tree = 1
+row = 3
+col = 2
+ranks = 3
+req = "rake"
+effects = [{ stat = [5, 0.025] }]
+icon = "INV_Misc_Pelt_Bear_03"
+name = { en = "Thick Hide", de = "Dickes Fell", fr = "Peau épaisse", es = "Piel gruesa", pt = "Couro Grosso", ru = "Толстая шкура", pl = "Gruba skóra", tr = "Kalın Post", it = "Pelle spessa", ja = "シック・ハイド", zh = "厚皮", ko = "두꺼운 가죽" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.025
+
+# Ours (2026-11-08), not in AS: under Predatory Strikes.
+[[talent]]
+key = "predatory_instincts"
+tree = 1
+row = 4
+col = 0
+ranks = 3
+effects = [{ stat = [13, 0.03] }]
+icon = "Ability_Druid_PredatoryInstincts"
+name = { en = "Predatory Instincts", de = "Raubtierinstinkte", fr = "Instincts prédateurs", es = "Instintos depredadores", pt = "Instintos Predatórios", ru = "Инстинкты хищника", pl = "Drapieżne instynkty", tr = "Yırtıcı İçgüdüler", it = "Istinti predatori", ja = "プレデトリー・インスティンクト", zh = "掠食者本能", ko = "포식자의 본능" }
+text = { en = "{v}% chance for any spell to strike twice.", de = "{v}% Chance, dass ein Zauber doppelt trifft.", fr = "{v}% de chances qu'un sort frappe deux fois.", es = "{v}% de probabilidad de que cualquier hechizo golpee dos veces.", pt = "{v}% de chance de qualquer feitiço atingir duas vezes.", ru = "Шанс {v}%, что любое заклинание ударит дважды.", pl = "{v}% szansy, że dowolny czar uderzy dwukrotnie.", tr = "Herhangi bir büyünün iki kez vurma şansı {v}%.", it = "{v}% di probabilità che qualsiasi incantesimo colpisca due volte.", ja = "{v}%の確率であらゆる呪文が2度命中します。", zh = "任何法术都有{v}%的几率打击两次。", ko = "{v}% 확률로 모든 주문이 두 번 적중합니다." }
+menu_v = 0.03
+
+# Ours (2026-11-09, player feedback): the crit's bleed is 200% of the hit, it was 100%; on a cat's
+# meter it came to 9% of the damage. `TUNE`
+[[talent]]
+key = "blood_frenzy"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Ability_GhoulFrenzy"
+name = { en = "Blood Frenzy", de = "Blutraserei", fr = "Frénésie sanguinaire", es = "Frenesí de sangre", pt = "Frenesi Sangrento", ru = "Кровавое безумие", pl = "Krwawy szał", tr = "Kan Çılgınlığı", it = "Frenesia di sangue", ja = "ブラッド・フレンジー", zh = "血之狂乱", ko = "피의 광란" }
+text = { en = "Milestone. Your critical strikes rip the target open: it bleeds for {v}% of the hit over 6 sec.", de = "Meilenstein. Deine kritischen Treffer reißen das Ziel auf: Es blutet für {v}% des Treffers über 6 Sek.", fr = "Jalon. Tes coups critiques déchirent la cible : elle saigne pour {v}% du coup en 6 s.", es = "Hito. Tus golpes críticos desgarran al objetivo: sangra un {v}% del golpe durante 6 s.", pt = "Marco. Seus acertos críticos dilaceram o alvo: ele sangra {v}% do golpe em 6 s.", ru = "Веха. Твои критические удары вспарывают цель: она кровоточит на {v}% удара в течение 6 сек.", pl = "Kamień milowy. Twoje trafienia krytyczne rozrywają cel: krwawi przez 6 s za {v}% trafienia.", tr = "Dönüm noktası. Kritik vuruşların hedefi yırtar: 6 sn içinde vuruşun {v}%'si kadar kanar.", it = "Traguardo. I tuoi colpi critici squarciano il bersaglio: sanguina per il {v}% del colpo in 6 s.", ja = "【マイルストーン】クリティカルが対象を切り裂きます：6秒かけてその攻撃の{v}%分出血します。", zh = "里程碑：你的暴击会撕开目标：使其在6秒内流血，造成相当于该次攻击{v}%的伤害。", ko = "이정표. 치명타가 대상을 찢어발깁니다: 대상이 6초에 걸쳐 그 피해의 {v}%만큼 출혈 피해를 입습니다." }
+menu_v = 2
+plays = [
+    { v = 2.0, play = { crit_bleed = { keys = [], school = 0, secs = 6.0 } } },
+]
+
+[[talent]]
+key = "savage_fury"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Ability_Druid_Ravage"
+name = { en = "Savage Fury", de = "Wilde Wut", fr = "Fureur sauvage", es = "Furia salvaje", pt = "Fúria Selvagem", ru = "Дикая ярость", pl = "Dzika furia", tr = "Vahşi Öfke", it = "Furia selvaggia", ja = "サベージ・フューリー", zh = "野蛮暴怒", ko = "야만의 분노" }
+text = { en = "Shred and Lacerate deal {v}% more damage.", de = "Schreddern und Aufschlitzen verursachen {v}% mehr Schaden.", fr = "Lambeau et Lacérer infligent {v}% de dégâts en plus.", es = "Triturar y Lacerar infligen un {v}% más de daño.", pt = "Dilacerar e Lacerar causam {v}% a mais de dano.", ru = "«Полоснуть» и «Растерзать» наносят на {v}% больше урона.", pl = "Rozszarpanie i Rozcięcie zadają o {v}% więcej obrażeń.", tr = "Parçala ve Yırt {v}% daha fazla hasar verir.", it = "Dilaniare e Lacerazione infliggono il {v}% di danni in più.", ja = "シュレッドとラセレイトのダメージが{v}%増加します。", zh = "撕碎和割伤造成的伤害提高{v}%。", ko = "칼날 발톱과 가르기의 피해가 {v}% 증가합니다." }
+menu_v = 0.15
+mods = [{ damage = ["shred", "lacerate"] }]
+mods_v = 0.15
+
+# TUNE 2026-11-08: all damage 3.5% -> 2.5% a rank (the druid had the most flat damage, 57.5%).
+[[talent]]
+key = "heart_of_wild"
+tree = 1
+row = 5
+col = 0
+ranks = 5
+effects = [{ stat = [0, 0.025] }]
+icon = "Spell_Holy_BlessingOfAgility"
+name = { en = "Heart of the Wild", de = "Herz der Wildnis", fr = "Cœur de la nature", es = "Corazón de lo salvaje", pt = "Coração Selvagem", ru = "Сердце дикой природы", pl = "Serce dziczy", tr = "Yabanın Kalbi", it = "Cuore della natura selvaggia", ja = "ハート・オブ・ザ・ワイルド", zh = "野性之心", ko = "야생의 심장" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.025
+
+# Ours (2026-11-08): a row up, where AS has none, so Rending Claws takes its capstone place;
+# still Cat Form's rival, now as an exclusive pair.
+[[talent]]
+key = "leader_of_pack"
+tree = 1
+row = 5
+col = 1
+ranks = 1
+req = "blood_frenzy"
+exclusive = true
+effects = [{ start_instead = "shred" }, { stat = [2, 0.25] }, { stat = [5, 0.1] }]
+# The model every client sees in the form: the night elf's, the tauren's (race 6) own.
+form = { id = 8, display = 2281, races = [[6, 2289]] }
+icon = "Ability_Racial_BearForm"
+name = { en = "Dire Bear Form", de = "Terrorbärengestalt", fr = "Forme d'ours redoutable", es = "Forma de oso temible", pt = "Forma de Urso Atroz", ru = "Облик лютого медведя", pl = "Forma niedźwiedzia", tr = "Korkunç Ayı Biçimi", it = "Forma di orso imponente", ja = "ダイア・ベア・フォーム", zh = "巨熊形态", ko = "광포한 곰 변신" }
+text = { en = "Capstone. You fight in Dire Bear Form: 25% more maximum health and 10% less damage taken. A free Swipe tears around you every 3 sec, and every enemy Swipe hits heals you for 0.3% of your maximum health. You start every run with Shred instead of Wrath.\nRules out Cat Form.", de = "Schlussstein. Du kämpfst in Terrorbärengestalt: 25% mehr maximale Gesundheit und 10% weniger erlittener Schaden. Alle 3 Sek. reißt ein kostenloser Prankenhieb um dich herum, und jeder von Prankenhieb getroffene Feind heilt dich um 0,3% deiner maximalen Gesundheit. Du beginnst jeden Lauf mit Schreddern statt Zorn.\nSchließt Katzengestalt aus.", fr = "Apogée. Tu combats en forme d'ours redoutable : 25% de santé maximale en plus et 10% de dégâts subis en moins. Un Balayage gratuit déchire autour de toi toutes les 3 s, et chaque ennemi touché par Balayage te soigne de 0,3% de ta santé maximale. Tu commences chaque partie avec Lambeau au lieu de Colère.\nExclut la forme de félin.", es = "Cúspide. Luchas en forma de oso temible: 25% más de salud máxima y 10% menos de daño recibido. Un Vapuleo gratis desgarra a tu alrededor cada 3 s, y cada enemigo alcanzado por Vapuleo te cura un 0,3% de tu salud máxima. Empiezas cada partida con Triturar en lugar de Cólera.\nExcluye la forma de felino.", pt = "Ápice. Você luta na Forma de Urso Atroz: 25% a mais de vida máxima e 10% a menos de dano sofrido. Um Golpe Giratório grátis rasga ao seu redor a cada 3 s, e cada inimigo atingido por Golpe Giratório cura você em 0,3% da sua vida máxima. Você começa cada partida com Dilacerar em vez de Ira.\nExclui a Forma de Gato.", ru = "Вершина. Ты сражаешься в облике лютого медведя: на 25% больше макс. здоровья и на 10% меньше получаемого урона. Каждые 3 сек. вокруг тебя рвет бесплатный «Взмах», а каждый враг, задетый «Взмахом», лечит тебя на 0,3% макс. здоровья. Каждый забег ты начинаешь с «Полоснуть» вместо «Гнева».\nИсключает облик кошки.", pl = "Zwieńczenie. Walczysz w formie niedźwiedzia: 25% więcej maksymalnego zdrowia i 10% mniej otrzymywanych obrażeń. Darmowe Smagnięcie rozrywa wszystko wokół ciebie co 3 s, a każde trafienie Smagnięciem leczy cię o 0,3% maksymalnego zdrowia. Każdą rozgrywkę zaczynasz z Rozszarpaniem zamiast Gniewu.\nWyklucza formę kota.", tr = "Zirve. Korkunç Ayı Biçimi'nde savaşırsın: 25% daha fazla azami can ve 10% daha az hasar. Her 3 sn'de çevrende bedava bir Pençe Darbesi savrulur ve düşmana isabet eden her Pençe Darbesi azami canının 0,3%'ü kadar iyileştirir. Her oyuna Gazap yerine Parçala ile başlarsın.\nKedi Biçimi'ni dışlar.", it = "Vertice. Combatti in Forma di orso imponente: 25% di salute massima in più e 10% di danni subiti in meno. Una Spazzata gratuita squarcia attorno a te ogni 3 s e ogni nemico colpito da Spazzata ti cura dello 0,3% della tua salute massima. Inizi ogni partita con Dilaniare invece di Ira.\nEsclude Forma di gatto.", ja = "【キャップストーン】ダイア・ベア・フォームで戦います：最大体力25%増加、被ダメージ10%減少。3秒ごとに無料のスワイプが周囲を引き裂き、スワイプが命中した敵1体ごとに最大体力の0.3%を回復します。毎ランをラースの代わりにシュレッドを持って始めます。\nキャット・フォームとは両立できません。", zh = "终极天赋：你以巨熊形态作战：最大生命值提高25%，受到的伤害降低10%。每3秒在你周围施放一次免费的横扫，横扫每击中一个敌人，为你恢复相当于最大生命值0.3%的生命值。你在每场对局开始时拥有撕碎而非愤怒。\n与猎豹形态互斥。", ko = "궁극 특성. 광포한 곰 변신 상태로 싸웁니다: 최대 생명력이 25% 증가하고 받는 피해가 10% 감소합니다. 3초마다 휘둘러치기가 무료로 주위를 할퀴며, 휘둘러치기에 맞은 적 하나마다 최대 생명력의 0.3%를 회복합니다. 모든 런을 천벌 대신 칼날 발톱을 가지고 시작합니다.\n표범 변신과 함께 선택할 수 없습니다." }
+plays = [
+    { v = 3.0, play = { every = "swipe" } },
+    { v = 0.003, play = { hit_heal = ["swipe"] } },
+]
+
+[[talent]]
+key = "primal_fury"
+tree = 1
+row = 5
+col = 2
+ranks = 2
+req = "blood_frenzy"
+effects = [{ stat = [14, 0.005] }]
+icon = "Ability_Racial_Cannibalize"
+name = { en = "Primal Fury", de = "Urtümliche Wut", fr = "Fureur primordiale", es = "Furia primigenia", pt = "Fúria Primal", ru = "Первобытная ярость", pl = "Pierwotna furia", tr = "İlkel Öfke", it = "Furia primordiale", ja = "プライマル・フューリー", zh = "原始狂怒", ko = "원시의 분노" }
+text = { en = "{v}% of all the damage you deal heals you.", de = "{v}% des gesamten Schadens, den du verursachst, heilt dich.", fr = "{v}% de tous les dégâts que tu infliges te soignent.", es = "El {v}% de todo el daño que infliges te cura.", pt = "{v}% de todo o dano que você causa cura você.", ru = "{v}% всего наносимого тобой урона лечит тебя.", pl = "{v}% wszystkich zadanych obrażeń leczy cię.", tr = "Verdiğin tüm hasarın {v}%'si seni iyileştirir.", it = "Il {v}% di tutti i danni che infliggi ti cura.", ja = "与えたすべてのダメージの{v}%だけ体力を回復します。", zh = "你造成的所有伤害的{v}%会治疗你。", ko = "주는 모든 피해의 {v}%만큼 생명력을 회복합니다." }
+menu_v = 0.005
+
+# Ours (2026-11-08), not in AS: in Dire Bear Form's old place. Three ranks, so not a capstone:
+# Cat Form beside it stays open.
+[[talent]]
+key = "rending_claws"
+tree = 1
+row = 6
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Shadow_VampiricAura"
+name = { en = "Rending Claws", de = "Zerfetzende Klauen", fr = "Griffes déchirantes", es = "Garras desgarradoras", pt = "Garras Dilacerantes", ru = "Рвущие когти", pl = "Rozdzierające pazury", tr = "Yırtan Pençeler", it = "Artigli lacerantori", ja = "レンディング・クロー", zh = "撕裂之爪", ko = "찢어발기는 발톱" }
+text = { en = "Shred strikes {v} more targets.", de = "Schreddern trifft {v} weitere Ziele.", fr = "Lambeau frappe {v} cibles de plus.", es = "Triturar golpea {v} objetivos más.", pt = "Dilacerar atinge {v} alvos a mais.", ru = "«Полоснуть» бьет еще {v} целей.", pl = "Rozszarpanie trafia dodatkowe cele: {v}.", tr = "Parçala {v} hedefe daha vurur.", it = "Dilaniare colpisce {v} bersagli in più.", ja = "シュレッドが追加で{v}体の対象に命中します。", zh = "撕碎额外击中{v}个目标。", ko = "칼날 발톱이 대상을 {v}명 더 공격합니다." }
+menu_v = 1
+mods = [{ targets = ["shred"] }]
+mods_v = 1.0
+
+[[talent]]
+key = "cat_form"
+tree = 1
+row = 6
+col = 2
+ranks = 1
+exclusive = true
+effects = [{ start_instead = "shred" }, { stat = [0, 0.1] }, { stat = [3, 0.1] }, { stat = [7, 0.15] }]
+form = { id = 1, display = 892, races = [[6, 8571]] }
+icon = "Ability_Druid_CatForm"
+name = { en = "Cat Form", de = "Katzengestalt", fr = "Forme de félin", es = "Forma de felino", pt = "Forma de Gato", ru = "Облик кошки", pl = "Forma kota", tr = "Kedi Biçimi", it = "Forma di gatto", ja = "キャット・フォーム", zh = "猎豹形态", ko = "표범 변신" }
+text = { en = "Capstone. You fight in Cat Form: 10% more damage, 10% more critical strike chance and 15% faster movement, and Shred's cooldown is 20% shorter. You start every run with Shred instead of Wrath.\nRules out Dire Bear Form.", de = "Schlussstein. Du kämpfst in Katzengestalt: 10% mehr Schaden, 10% mehr kritische Trefferchance und 15% schnellere Bewegung, und die Abklingzeit von Schreddern ist 20% kürzer. Du beginnst jeden Lauf mit Schreddern statt Zorn.\nSchließt Terrorbärengestalt aus.", fr = "Apogée. Tu combats en forme de félin : 10% de dégâts en plus, 10% de chances de critique en plus et 15% de déplacement plus rapide, et la recharge de Lambeau est réduite de 20%. Tu commences chaque partie avec Lambeau au lieu de Colère.\nExclut la forme d'ours redoutable.", es = "Cúspide. Luchas en forma de felino: 10% más de daño, 10% más de probabilidad de golpe crítico y 15% más de velocidad de movimiento, y la reutilización de Triturar es un 20% más corta. Empiezas cada partida con Triturar en lugar de Cólera.\nExcluye la forma de oso temible.", pt = "Ápice. Você luta na Forma de Gato: 10% a mais de dano, 10% a mais de chance de acerto crítico e 15% mais de velocidade de movimento, e a recarga de Dilacerar é 20% menor. Você começa cada partida com Dilacerar em vez de Ira.\nExclui a Forma de Urso Atroz.", ru = "Вершина. Ты сражаешься в облике кошки: на 10% больше урона, на 10% выше шанс крита и на 15% быстрее движение, а перезарядка «Полоснуть» короче на 20%. Каждый забег ты начинаешь с «Полоснуть» вместо «Гнева».\nИсключает облик лютого медведя.", pl = "Zwieńczenie. Walczysz w formie kota: 10% więcej obrażeń, 10% większa szansa na trafienie krytyczne, 15% szybszy ruch, a czas odnowienia Rozszarpania jest krótszy o 20%. Każdą rozgrywkę zaczynasz z Rozszarpaniem zamiast Gniewu.\nWyklucza formę niedźwiedzia.", tr = "Zirve. Kedi Biçimi'nde savaşırsın: 10% daha fazla hasar, 10% daha fazla kritik vuruş şansı ve 15% daha hızlı hareket; Parçala'nın bekleme süresi 20% daha kısadır. Her oyuna Gazap yerine Parçala ile başlarsın.\nKorkunç Ayı Biçimi'ni dışlar.", it = "Vertice. Combatti in Forma di gatto: 10% di danni in più, 10% di probabilità di colpo critico in più e movimento più veloce del 15%; la ricarica di Dilaniare è più breve del 20%. Inizi ogni partita con Dilaniare invece di Ira.\nEsclude Forma di orso imponente.", ja = "【キャップストーン】キャット・フォームで戦います：ダメージ10%増加、クリティカル率10%増加、移動速度15%上昇、シュレッドのクールダウン20%短縮。毎ランをラースの代わりにシュレッドを持って始めます。\nダイア・ベア・フォームとは両立できません。", zh = "终极天赋：你以猎豹形态作战：伤害提高10%，暴击几率提高10%，移动速度提高15%，撕碎的冷却时间缩短20%。你在每场对局开始时拥有撕碎而非愤怒。\n与巨熊形态互斥。", ko = "궁극 특성. 표범 변신 상태로 싸웁니다: 피해가 10%, 치명타율이 10%, 이동 속도가 15% 증가하고, 칼날 발톱의 재사용 대기시간이 20% 감소합니다. 모든 런을 천벌 대신 칼날 발톱을 가지고 시작합니다.\n광포한 곰 변신과 함께 선택할 수 없습니다." }
+mods = [{ cooldown = ["shred"] }]
+mods_v = 0.2
+
+[[talent]]
+key = "imp_motw"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [2, 0.02] }]
+icon = "Spell_Nature_Regeneration"
+name = { en = "Improved Mark of the Wild", de = "Verbessertes Mal der Wildnis", fr = "Marque du fauve améliorée", es = "Marca de lo salvaje mejorada", pt = "Marca do Selvagem Aprimorada", ru = "Улучшенный знак дикой природы", pl = "Ulepszony Znak dziczy", tr = "Gelişmiş Yabanın Nişanı", it = "Marchio della Natura migliorato", ja = "改良型マーク・オブ・ザ・ワイルド", zh = "强化野性印记", ko = "야생의 징표 연마" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "furor"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [6, 0.6] }]
+icon = "Spell_Holy_BlessingOfStamina"
+name = { en = "Furor", de = "Ungestüm", fr = "Furie", es = "Furor", pt = "Furor", ru = "Неистовство", pl = "Szał", tr = "Hiddet", it = "Furore", ja = "フューラー", zh = "兽性狂怒", ko = "격정" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.6
+
+[[talent]]
+key = "imp_healing_touch"
+tree = 2
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "Spell_Nature_HealingTouch"
+name = { en = "Improved Healing Touch", de = "Verbesserte heilende Berührung", fr = "Toucher guérisseur amélioré", es = "Toque de sanación mejorado", pt = "Toque Curativo Aprimorado", ru = "Улучшенное целительное прикосновение", pl = "Ulepszone Dotknięcie uzdrowienia", tr = "Gelişmiş Şifa Dokunuşu", it = "Tocco curativo migliorato", ja = "改良型ヒーリング・タッチ", zh = "强化治疗之触", ko = "치유의 손길 연마" }
+text = { en = "Regrowth, Rejuvenation and Wild Growth heal {v}% more.", de = "Nachwachsen, Verjüngung und Wildwuchs heilen {v}% mehr.", fr = "Rétablissement, Récupération et Croissance sauvage soignent {v}% de plus.", es = "Recrecimiento, Rejuvenecimiento y Crecimiento salvaje curan un {v}% más.", pt = "Recrescimento, Rejuvenescimento e Crescimento Selvagem curam {v}% a mais.", ru = "«Восстановление», «Омоложение» и «Буйный рост» лечат на {v}% больше.", pl = "Odrost, Odmłodzenie i Dziki wzrost leczą o {v}% więcej.", tr = "Yeniden Büyüme, Gençleşme ve Vahşi Büyüme {v}% daha fazla iyileştirir.", it = "Ricrescita, Rinvigorimento e Crescita selvaggia curano il {v}% in più.", ja = "リグロウス、リジュヴェネーション、ワイルド・グロウスの回復量が{v}%増加します。", zh = "愈合、回春术和野性成长的治疗效果提高{v}%。", ko = "재생, 회복, 급속 성장의 치유량이 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["regrowth", "rejuvenation", "wild_growth"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "natures_focus"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.02] }]
+icon = "Spell_Nature_HealingWaveGreater"
+name = { en = "Nature's Focus", de = "Fokus der Natur", fr = "Focalisation de la nature", es = "Concentración de la naturaleza", pt = "Foco da Natureza", ru = "Концентрация природы", pl = "Skupienie natury", tr = "Doğanın Odağı", it = "Concentrazione della natura", ja = "ネイチャーズ・フォーカス", zh = "自然集中", ko = "자연의 집중" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "swiftmend"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "INV_Relics_IdolofRejuvenation"
+name = { en = "Swiftmend", de = "Rasche Heilung", fr = "Prompte guérison", es = "Alivio presto", pt = "Cura Rápida", ru = "Быстрое исцеление", pl = "Szybkie uzdrowienie", tr = "Çabuk İyileş", it = "Guarigione rapida", ja = "スウィフトメンド", zh = "迅捷治愈", ko = "신속한 치유" }
+text = { en = "Milestone. Falling below 40% health makes a free Regrowth bloom on you, once every 8 sec.", de = "Meilenstein. Fällst du unter 40% Gesundheit, erblüht ein kostenloses Nachwachsen auf dir, einmal alle 8 Sek.", fr = "Jalon. Tomber sous 40% de santé fait éclore un Rétablissement gratuit sur toi, une fois toutes les 8 s.", es = "Hito. Caer por debajo del 40% de salud hace brotar un Recrecimiento gratis sobre ti, una vez cada 8 s.", pt = "Marco. Cair abaixo de 40% de vida faz um Recrescimento grátis florescer em você, uma vez a cada 8 s.", ru = "Веха. При падении здоровья ниже 40% на тебе расцветает бесплатное «Восстановление», раз в 8 сек.", pl = "Kamień milowy. Spadek poniżej 40% zdrowia wywołuje na tobie darmowy Odrost, raz na 8 s.", tr = "Dönüm noktası. Canın 40%'ın altına düşünce üzerinde bedava bir Yeniden Büyüme açar, 8 sn'de bir.", it = "Traguardo. Scendere sotto il 40% di salute fa sbocciare su di te una Ricrescita gratuita, una volta ogni 8 s.", ja = "【マイルストーン】体力が40%を下回ると、無料のリグロウスが自分に咲きます（8秒に1回まで）。", zh = "里程碑：生命值降到40%以下时，会在你身上绽放一次免费的愈合，每8秒最多一次。", ko = "이정표. 생명력이 40% 아래로 떨어지면 재생이 무료로 피어납니다. 8초에 한 번만 발동합니다." }
+menu_v = 1
+plays = [
+    { v = 8.0, play = { low = { below = 0.4, spell = "regrowth" } } },
+]
+
+# TUNE 2026-11-08: regeneration 0.6 -> 0.3 a rank: with Furor the tree regenerated 4.8 health a sec, more than any other class.
+[[talent]]
+key = "reflection"
+tree = 2
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [6, 0.3] }]
+icon = "Spell_Frost_WindWalkOn"
+name = { en = "Reflection", de = "Reflexion", fr = "Réflexion", es = "Reflejo", pt = "Reflexão", ru = "Отражение", pl = "Refleksja", tr = "Yansıma", it = "Riflessione", ja = "リフレクション", zh = "反射", ko = "반사" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.3
+
+# TUNE 2026-11-08: all damage 3.5% -> 2.5% a rank (a healing tree; the druid had the most flat damage).
+[[talent]]
+key = "tranquil_spirit"
+tree = 2
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [0, 0.025] }]
+icon = "Spell_Holy_ElunesGrace"
+name = { en = "Tranquil Spirit", de = "Ruhiger Geist", fr = "Esprit tranquille", es = "Espíritu tranquilo", pt = "Espírito Tranquilo", ru = "Безмятежный дух", pl = "Spokojny duch", tr = "Dingin Ruh", it = "Spirito tranquillo", ja = "トランクィル・スピリット", zh = "宁静之魂", ko = "평온한 정신" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "imp_rejuvenation"
+tree = 2
+row = 3
+col = 2
+ranks = 3
+req = "swiftmend"
+effects = []
+icon = "Spell_Nature_Rejuvenation"
+name = { en = "Improved Rejuvenation", de = "Verbesserte Verjüngung", fr = "Récupération améliorée", es = "Rejuvenecimiento mejorado", pt = "Rejuvenescimento Aprimorado", ru = "Улучшенное омоложение", pl = "Ulepszone Odmłodzenie", tr = "Gelişmiş Gençleşme", it = "Rinvigorimento migliorato", ja = "改良型リジュヴェネーション", zh = "强化回春术", ko = "회복 연마" }
+text = { en = "Rejuvenation's cooldown is {v}% shorter.", de = "Die Abklingzeit von Verjüngung ist {v}% kürzer.", fr = "La recharge de Récupération est réduite de {v}%.", es = "La reutilización de Rejuvenecimiento es un {v}% más corta.", pt = "A recarga de Rejuvenescimento é {v}% menor.", ru = "Перезарядка «Омоложения» короче на {v}%.", pl = "Czas odnowienia Odmłodzenia jest krótszy o {v}%.", tr = "Gençleşme'nin bekleme süresi {v}% daha kısa.", it = "La ricarica di Rinvigorimento è più breve del {v}%.", ja = "リジュヴェネーションのクールダウンが{v}%短くなります。", zh = "回春术的冷却时间缩短{v}%。", ko = "회복의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["rejuvenation"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "tranquility"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Nature_Tranquility"
+name = { en = "Tranquility", de = "Gelassenheit", fr = "Tranquillité", es = "Tranquilidad", pt = "Tranquilidade", ru = "Спокойствие", pl = "Spokój", tr = "Huzur", it = "Tranquillità", ja = "トランクィリティ", zh = "宁静", ko = "평온" }
+text = { en = "Milestone. Every heal you cast also strikes every enemy within 12 yd for {v}% of the healing as Nature damage.", de = "Meilenstein. Jede Heilung, die du wirkst, trifft zudem jeden Feind im Umkreis von 12 m für {v}% der Heilung als Naturschaden.", fr = "Jalon. Chaque soin que tu lances frappe aussi chaque ennemi à 12 m pour {v}% du soin en dégâts de Nature.", es = "Hito. Cada curación que lanzas golpea además a todo enemigo a 12 m por un {v}% de la curación como daño de Naturaleza.", pt = "Marco. Cada cura que você lança também atinge todo inimigo a 12 m por {v}% da cura como dano de Natureza.", ru = "Веха. Каждое твое лечение также бьет каждого врага в радиусе 12 м на {v}% от лечения уроном природы.", pl = "Kamień milowy. Każde twoje leczenie uderza też każdego przeciwnika w promieniu 12 m za {v}% leczenia jako obrażenia od natury.", tr = "Dönüm noktası. Yaptığın her iyileştirme, 12 m içindeki her düşmana iyileştirmenin {v}%'si kadar Doğa hasarıyla da vurur.", it = "Traguardo. Ogni cura che lanci colpisce anche ogni nemico entro 12 m per il {v}% della cura come danni da Natura.", ja = "【マイルストーン】回復呪文を唱えるたびに、12ヤード以内のすべての敵に回復量の{v}%の自然ダメージを与えます。", zh = "里程碑：你施放的每个治疗法术还会对12码内的所有敌人造成相当于治疗量{v}%的自然伤害。", ko = "이정표. 치유 주문을 시전할 때마다 12미터 안의 모든 적에게 치유량의 {v}%만큼 자연 피해를 줍니다." }
+menu_v = 3
+plays = [
+    # `{v}` in percent, as its text shows it: 3% of the healing.
+    { v = 3.0, play = { heal_strike = { radius = 12.0 } } },
+]
+
+[[talent]]
+key = "gift_of_nature"
+tree = 2
+row = 4
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Nature_ProtectionformNature"
+name = { en = "Gift of Nature", de = "Geschenk der Natur", fr = "Don de la nature", es = "Don de la naturaleza", pt = "Dádiva da Natureza", ru = "Дар природы", pl = "Dar natury", tr = "Doğanın Armağanı", it = "Dono della natura", ja = "ギフト・オブ・ネイチャー", zh = "自然赐福", ko = "자연의 선물" }
+text = { en = "Your heals and shields are {v}% stronger.", de = "Deine Heilungen und Schilde sind {v}% stärker.", fr = "Tes soins et tes boucliers sont {v}% plus puissants.", es = "Tus curaciones y escudos son un {v}% más fuertes.", pt = "Suas curas e escudos são {v}% mais fortes.", ru = "Твое лечение и щиты сильнее на {v}%.", pl = "Twoje leczenie i tarcze są silniejsze o {v}%.", tr = "İyileştirmelerin ve kalkanların {v}% daha güçlü.", it = "Le tue cure e i tuoi scudi sono più forti del {v}%.", ja = "回復とシールドの効果が{v}%高まります。", zh = "你的治疗和护盾效果提高{v}%。", ko = "치유와 보호막의 효과가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = ["heals"]
+mods_v = 0.08
+
+[[talent]]
+key = "imp_tranquility"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [5, 0.015] }]
+icon = "Spell_Nature_Tranquility"
+name = { en = "Improved Tranquility", de = "Verbesserte Gelassenheit", fr = "Tranquillité améliorée", es = "Tranquilidad mejorada", pt = "Tranquilidade Aprimorada", ru = "Улучшенное спокойствие", pl = "Ulepszony Spokój", tr = "Gelişmiş Huzur", it = "Tranquillità migliorata", ja = "改良型トランクィリティ", zh = "强化宁静", ko = "평온 연마" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "natural_shapeshifter"
+tree = 2
+row = 5
+col = 2
+ranks = 3
+req = "tranquility"
+effects = []
+icon = "Spell_Nature_WispSplode"
+name = { en = "Natural Shapeshifter", de = "Natürlicher Gestaltwandler", fr = "Changeforme naturel", es = "Cambiaformas natural", pt = "Mudaforma Natural", ru = "Природный оборотень", pl = "Naturalny zmiennokształtny", tr = "Doğal Biçim Değiştirici", it = "Mutaforma naturale", ja = "ナチュラル・シェイプシフター", zh = "自然变形者", ko = "타고난 변신술사" }
+text = { en = "Insect Swarm and Moonfire deal {v}% more damage.", de = "Insektenschwarm und Mondfeuer verursachen {v}% mehr Schaden.", fr = "Essaim d'insectes et Éclat lunaire infligent {v}% de dégâts en plus.", es = "Enjambre de insectos y Fuego lunar infligen un {v}% más de daño.", pt = "Enxame de Insetos e Fogo Lunar causam {v}% a mais de dano.", ru = "«Рой насекомых» и «Лунный огонь» наносят на {v}% больше урона.", pl = "Rój owadów i Księżycowy ogień zadają o {v}% więcej obrażeń.", tr = "Böcek Sürüsü ve Ay Ateşi {v}% daha fazla hasar verir.", it = "Sciame d'insetti e Fuoco lunare infliggono il {v}% di danni in più.", ja = "インセクト・スウォームとムーンファイアのダメージが{v}%増加します。", zh = "虫群和月火术造成的伤害提高{v}%。", ko = "곤충 떼와 달빛섬광의 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+mods = [{ damage = ["insect_swarm", "moonfire"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "tree_of_life"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Nature_ResistNature"
+name = { en = "Tree of Life", de = "Baum des Lebens", fr = "Arbre de vie", es = "Árbol de vida", pt = "Árvore da Vida", ru = "Древо жизни", pl = "Drzewo życia", tr = "Yaşam Ağacı", it = "Albero della Vita", ja = "ツリー・オブ・ライフ", zh = "生命之树", ko = "생명의 나무" }
+text = { en = "Capstone. Healing beyond your maximum health becomes a shield, up to 20% of it, and a free Rejuvenation blooms on you every 6 sec.", de = "Schlussstein. Heilung über deine maximale Gesundheit hinaus wird zu einem Schild, bis zu 20% davon, und alle 6 Sek. erblüht eine kostenlose Verjüngung auf dir.", fr = "Apogée. Les soins au-delà de ta santé maximale deviennent un bouclier, jusqu'à 20% de celle-ci, et une Récupération gratuite éclot sur toi toutes les 6 s.", es = "Cúspide. La curación por encima de tu salud máxima se convierte en un escudo, hasta el 20% de esta, y un Rejuvenecimiento gratis brota sobre ti cada 6 s.", pt = "Ápice. A cura além da sua vida máxima vira um escudo, de até 20% dela, e um Rejuvenescimento grátis floresce em você a cada 6 s.", ru = "Вершина. Лечение сверх макс. здоровья превращается в щит, до 20% от него, а каждые 6 сек. на тебе расцветает бесплатное «Омоложение».", pl = "Zwieńczenie. Leczenie ponad twoje maksymalne zdrowie zamienia się w tarczę, do 20% jego wartości, a darmowe Odmłodzenie rozkwita na tobie co 6 s.", tr = "Zirve. Azami canını aşan iyileştirme kalkana dönüşür, en fazla azami canının 20%'sine kadar; ayrıca her 6 sn'de üzerinde bedava bir Gençleşme açar.", it = "Vertice. Le cure oltre la tua salute massima diventano uno scudo, fino al 20% di essa, e un Rinvigorimento gratuito sboccia su di te ogni 6 s.", ja = "【キャップストーン】最大体力を超えた回復はシールドになり（最大体力の20%まで）、6秒ごとに無料のリジュヴェネーションが自分に咲きます。", zh = "终极天赋：超出你最大生命值的治疗量会转化为护盾，最多为最大生命值的20%，并且每6秒在你身上绽放一次免费的回春术。", ko = "궁극 특성. 최대 생명력을 넘는 치유량이 최대 생명력의 20%까지 보호막이 되며, 6초마다 회복이 무료로 피어납니다." }
+menu_v = 0.2
+plays = [
+    { v = 6.0, play = { every = "rejuvenation" } },
+    # Its shield shows as Tree of Life (33891).
+    { v = 0.2, play = { overshield = { aura = 33891 } } },
+]

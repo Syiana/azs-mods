@@ -1,0 +1,20 @@
+# Uhk'loc's abilities, Un'Goro Crater.
+
+[[boss]]
+key = "uhkloc"
+
+[[boss.kit]]
+every = 8.0
+ability = { stomp = { spell = 8078, radius = 9.0, warn = 1.6, knock = 13.0 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { rain = { spell = 6524, count = 4, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.8 } }
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

@@ -1,0 +1,60 @@
+# The rogue's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Footpad's") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Shadowcraft pieces: Shadowcraft Armor, tier 0 (ItemSet 184).
+[[set_look]]
+key = "rogue_uncommon"
+rarity = 1
+pieces = [
+    [0, 28180, 1, "Helmet_41"], [1, 28179, 3, "Shoulder_07"],
+    [2, 28160, 5, "Chest_Leather_07"], [3, 28177, 6, "Belt_03"],
+    [4, 28161, 7, "Pants_02"], [5, 28162, 8, "Boots_08"],
+    [6, 24190, 9, "Bracer_07"], [7, 28166, 10, "Gauntlets_24"],
+]
+
+# Nightslayer pieces: Nightslayer Armor, tier 1 (ItemSet 204).
+[[set_look]]
+key = "rogue_rare"
+rarity = 2
+pieces = [
+    [0, 31514, 1, "Helmet_41"], [1, 31504, 3, "Shoulder_25"],
+    [2, 31105, 5, "Chest_Cloth_07"], [3, 31339, 6, "Belt_23"],
+    [4, 31340, 7, "Pants_06"], [5, 31109, 8, "Boots_08"],
+    [6, 31106, 9, "Bracer_02"], [7, 31503, 10, "Gauntlets_21"],
+]
+
+# Bloodfang pieces: Bloodfang Armor, tier 2 (ItemSet 213).
+[[set_look]]
+key = "rogue_epic"
+rarity = 3
+pieces = [
+    [0, 33743, 1, "Helmet_41"], [1, 33653, 3, "Shoulder_23"],
+    [2, 33650, 5, "Chest_Cloth_07"], [3, 31110, 6, "Belt_23"],
+    [4, 31115, 7, "Pants_06"], [5, 31111, 8, "Boots_08"],
+    [6, 31127, 9, "Bracer_02"], [7, 33651, 10, "Gauntlets_21"],
+]
+
+# Bonescythe pieces: Bonescythe Armor, tier 3 (ItemSet 524).
+[[set_look]]
+key = "rogue_legendary"
+rarity = 4
+pieces = [
+    [0, 41849, 1, "Helmet_58"], [1, 35064, 3, "Shoulder_29"],
+    [2, 35054, 5, "Chest_Plate02"], [3, 36349, 6, "Belt_27"],
+    [4, 35065, 7, "Pants_Plate_05"], [5, 36351, 8, "Boots_Plate_06"],
+    [6, 35053, 9, "Bracer_15"], [7, 35055, 10, "Gauntlets_28"],
+]
+
+# Field Marshal's pieces: Field Marshal's Vestments, the Alliance's rank 13 PvP set (ItemSet 394).
+[[set_look]]
+key = "rogue_pvp"
+rarity = 5
+pieces = [
+    [0, 30330, 1, "Helmet_41"], [1, 30328, 3, "Shoulder_23"],
+    [2, 30327, 5, "Chest_Cloth_07"], [4, 30329, 7, "Pants_06"],
+    [5, 30333, 8, "Boots_08"], [7, 30334, 10, "Gauntlets_21"],
+]

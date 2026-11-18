@@ -1,0 +1,292 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "coldarra"
+order = 31
+name = { en = "Coldarra", de = "Kaltarra", fr = "Frigorre", es = "Frigoarra", pt = "Frioarra", ru = "Холодарра", pl = "Coldarra", tr = "Coldarra", it = "Coldarra", ja = "コールダラ", zh = "考达拉", ko = "콜다라" }
+subtitle = { en = "The Eye of Eternity", de = "Das Auge der Ewigkeit", fr = "L'Œil de l'éternité", es = "El Ojo de la Eternidad", pt = "O Olho da Eternidade", ru = "Око Вечности", pl = "Oko Wieczności", tr = "Sonsuzluk Gözü", it = "L'Occhio dell'Eternità", ja = "永遠の瞳", zh = "永恒之眼", ko = "영원의 눈" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Dungeon_NexusRaid"
+map = 571
+map_name = "Northrend"
+area = 4024
+center = [3900.0, 6600.0]
+radius = 100.0
+map_bounds = [8570.83, 2806.25, 4897.92, 1054.17]
+health_factor = 29.13
+gold_factor = 4.41
+late_factor = 0.4
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+weather = { fine = 50, snow = 50 }
+
+[[zone.enemy]]
+entry = 4900
+name = { en = "Coldarra Wyrmkin", de = "Wyrmkin von Kaltarra", fr = "Wyrmide de Frigorre", es = "Vermis de Frigoarra", pt = "Vermes de Frioarra", ru = "Змеелюд Холодарры", pl = "Wyrmin z Coldarra", tr = "Coldarra Ejder Soyu", it = "Dragonide di Coldarra", ja = "コールダラ・ワームキン", zh = "考达拉龙人", ko = "콜다라 용족" }
+type = "dragonkin"
+display = 196
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 4901
+name = { en = "Arcane Serpent", de = "Arkane Schlange", fr = "Serpent arcanique", es = "Serpiente arcana", pt = "Serpente Arcana", ru = "Тайный змей", pl = "Magiczny wąż", tr = "Gizem Yılanı", it = "Serpente arcano", ja = "アーケイン・サーペント", zh = "奥术巨蛇", ko = "비전 뱀" }
+type = "beast"
+display = 4312
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+
+[[zone.enemy]]
+entry = 4902
+name = { en = "Azure Spellbinder", de = "Azurblauer Zauberbinder", fr = "Lieur de sorts azur", es = "Ligahechizos azur", pt = "Prendefeitiços Azul", ru = "Лазурный чародей-вязатель", pl = "Lazurowy zaklinacz", tr = "Gök Mavisi Büyü Bağlayıcı", it = "Legaincantesimi Azzurro", ja = "アズール・スペルバインダー", zh = "碧蓝缚法者", ko = "하늘빛 주문결속자" }
+type = "dragonkin"
+display = 6761
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.9
+
+[[zone.enemy]]
+entry = 4903
+name = { en = "Coldarra Spellweaver", de = "Zauberwirker von Kaltarra", fr = "Tisseur de sorts de Frigorre", es = "Tejehechizos de Frigoarra", pt = "Tecelão de Feitiços de Frioarra", ru = "Заклинатель Холодарры", pl = "Tkacz czarów z Coldarra", tr = "Coldarra Büyü Dokuyucusu", it = "Tessincantesimi di Coldarra", ja = "コールダラ・スペルウィーヴァー", zh = "考达拉织法者", ko = "콜다라 주문술사" }
+type = "dragonkin"
+display = 25247
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.9
+role = { ranged = { spell = 13748, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4904
+name = { en = "Crystalline Tender", de = "Kristallener Hüter", fr = "Soigneur cristallin", es = "Cuidador cristalino", pt = "Zelador Cristalino", ru = "Кристаллический смотритель", pl = "Krystaliczny opiekun", tr = "Kristal Bakıcı", it = "Custode cristallino", ja = "クリスタルの世話役", zh = "水晶照料者", ko = "수정 보살핌이" }
+type = "elemental"
+display = 27688
+icon = "Spell_Nature_EarthElemental_Totem"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+role = { exploder = { spell = 9874, burst = 568, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 4905
+name = { en = "Crystalline Ice Giant", de = "Kristallener Eisriese", fr = "Géant des glaces cristallin", es = "Gigante de hielo cristalino", pt = "Gigante de Gelo Cristalino", ru = "Кристаллический ледяной великан", pl = "Krystaliczny lodowy olbrzym", tr = "Kristal Buz Devi", it = "Gigante di ghiaccio cristallino", ja = "クリスタルのアイス・ジャイアント", zh = "水晶冰霜巨人", ko = "수정 얼음 거인" }
+type = "giant"
+display = 24531
+icon = "Achievement_Dungeon_UlduarRaid_IceGiant_01"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.45
+
+[[zone.enemy]]
+entry = 4906
+name = { en = "Azure Whelpling", de = "Azurblauer Welpling", fr = "Dragonnet azur", es = "Vástago azur", pt = "Dragonete Azul", ru = "Лазурный дракончик", pl = "Lazurowe pisklę", tr = "Gök Mavisi Ejder Yavrusu", it = "Draghetto azzurro", ja = "アズール・ウェルプリング", zh = "碧蓝雏龙", ko = "새끼 푸른용" }
+type = "dragonkin"
+display = 6293
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 1.6
+
+[[zone.enemy]]
+entry = 4907
+name = { en = "Mage Hunter Ascendant", de = "Aufgestiegener Magierjäger", fr = "Chasseur de mages ascendant", es = "Cazador de magos ascendente", pt = "Caçador de Magos Ascendente", ru = "Возвысившийся охотник на магов", pl = "Wstępujący łowca magów", tr = "Yükselen Büyücü Avcısı", it = "Cacciamaghi Asceso", ja = "メイジハンター・アセンダント", zh = "法师猎手升腾者", ko = "마법사 사냥꾼 승천자" }
+type = "humanoid"
+display = 24907
+icon = "INV_Misc_Head_Human_02"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4908
+name = { en = "Crystalline Protector", de = "Kristallener Beschützer", fr = "Protecteur cristallin", es = "Protector cristalino", pt = "Protetor Cristalino", ru = "Кристаллический защитник", pl = "Krystaliczny protektor", tr = "Kristal Koruyucu", it = "Protettore cristallino", ja = "クリスタルの守護者", zh = "水晶保护者", ko = "수정 수호자" }
+type = "elemental"
+display = 27450
+icon = "Spell_Nature_EarthElemental_Totem"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.6
+
+[[zone.elite]]
+entry = 4910
+name = { en = "Azure Drake", de = "Azurblauer Drache", fr = "Drake azur", es = "Draco azur", pt = "Draco Azul", ru = "Лазурный дракон", pl = "Lazurowy drake", tr = "Gök Mavisi Ejder", it = "Drago azzurro", ja = "アズール・ドレイク", zh = "碧蓝幼龙", ko = "푸른용" }
+type = "dragonkin"
+display = 24714
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.8
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16099, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 4911
+name = { en = "Azure Scale-Binder", de = "Azurblauer Schuppenbinder", fr = "Lieur d'écailles azur", es = "Ligaescamas azur", pt = "Atador de Escamas Azul", ru = "Лазурный вязатель чешуи", pl = "Lazurowy wiązacz łusek", tr = "Gök Mavisi Pul Bağlayıcı", it = "Legascaglie Azzurro", ja = "アズール・スケイルバインダー", zh = "碧蓝缚鳞者", ko = "하늘빛 비늘결속사" }
+type = "dragonkin"
+display = 25195
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 1449, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 6.0 } }, { nova = { spell = 1449, radius = 6.0, warn = 1.4 } }], 0.6] }
+
+[[zone.elite]]
+entry = 4912
+name = { en = "Coldarra Arcane Guardian", de = "Arkaner Wächter von Kaltarra", fr = "Gardien arcanique de Frigorre", es = "Guardián arcano de Frigoarra", pt = "Guardião Arcano de Frioarra", ru = "Тайный страж Холодарры", pl = "Magiczny strażnik z Coldarra", tr = "Coldarra Gizem Muhafızı", it = "Guardiano arcano di Coldarra", ja = "コールダラのアーケイン・ガーディアン", zh = "考达拉奥术守护者", ko = "콜다라 비전 수호자" }
+type = "mechanical"
+display = 16347
+icon = "Ability_GolemStormBolt"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 4990
+name = { en = "Drakos the Interrogator", de = "Drakos der Befrager", fr = "Drakos l'Interrogateur", es = "Drakos el Interrogador", pt = "Drakos, o Interrogador", ru = "Дракос Дознаватель", pl = "Drakos Przesłuchiwacz", tr = "Sorgucu Drakos", it = "Drakos l'Interrogatore", ja = "尋問官ドラコス", zh = "审讯者达库斯", ko = "심문관 드라코스" }
+type = "dragonkin"
+display = 25195
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.8
+minute = 4
+yell = { en = "The prisoners shall not go free! The word of Malygos is law!", de = "Die Gefangenen kommen nicht frei! Malygos' Wort ist Gesetz!", fr = "Les prisonniers ne seront pas libérés ! La parole de Malygos fait loi !", es = "¡Los prisioneros no quedarán libres! ¡La palabra de Malygos es ley!", pt = "Os prisioneiros não serão libertados! A palavra de Malygos é lei!", ru = "Пленники не выйдут на свободу! Слово Малигоса - закон!", pl = "Więźniowie nie odzyskają wolności! Słowo Malygosa jest prawem!", tr = "Mahkûmlar özgür kalmayacak! Malygos'un sözü kanundur!", it = "I prigionieri non saranno liberati! La parola di Malygos è legge!", ja = "囚人どもは解放させぬ！マリゴスの言葉こそ法だ！", zh = "囚犯们不得释放！玛里苟斯的话就是法律！", ko = "죄수들은 풀려나지 못한다! 말리고스의 말이 곧 법이다!" }
+kit = "drakos_the_interrogator"
+
+[[zone.boss]]
+entry = 4991
+name = { en = "Varos Cloudstrider", de = "Varos Wolkenwanderer", fr = "Varos Marcheur des nuées", es = "Varos Caminanubes", pt = "Varos Andanuvens", ru = "Варос Заоблачный Странник", pl = "Varos Chmurokrok", tr = "Varos Bulutgezer", it = "Varos Vagasnuvole", ja = "ヴァロス・クラウドストライダー", zh = "瓦尔洛斯·云击", ko = "바로스 클라우드스트라이더" }
+type = "dragonkin"
+display = 196
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.6
+minute = 8
+yell = { en = "There will be no mercy!", de = "Es wird keine Gnade geben!", fr = "Il n'y aura aucune pitié !", es = "¡No habrá piedad!", pt = "Não haverá piedade!", ru = "Пощады не будет!", pl = "Nie będzie litości!", tr = "Merhamet olmayacak!", it = "Non ci sarà pietà!", ja = "情けはかけぬ！", zh = "绝不留情！", ko = "자비는 없다!" }
+kit = "varos_cloudstrider"
+
+[[zone.boss]]
+entry = 4992
+name = { en = "Anomalus", de = "Anomalus", fr = "Anomalus", es = "Anomalus", pt = "Anomalus", ru = "Аномалус", pl = "Anomalus", tr = "Anomalus", it = "Anomalus", ja = "アノマルス", zh = "艾诺玛鲁斯", ko = "아노말루스" }
+type = "elemental"
+display = 22731
+icon = "Achievement_Boss_Anomalus"
+health = 21000
+damage = 46
+speed = 5.0
+size = 0.6
+minute = 12
+yell = { en = "Chaos beckons.", de = "Das Chaos ruft.", fr = "Le chaos appelle.", es = "El caos reclama.", pt = "O caos chama.", ru = "Хаос зовет.", pl = "Chaos wzywa.", tr = "Kaos çağırıyor.", it = "Il caos chiama.", ja = "混沌が手招きしている。", zh = "混乱在召唤。", ko = "혼돈이 손짓한다." }
+kit = "anomalus"
+
+[[zone.boss]]
+entry = 4993
+name = { en = "Ley-Guardian Eregos", de = "Leywächter Eregos", fr = "Gardien des lignes Eregos", es = "Guardián de líneas Eregos", pt = "Guardião das Linhas Eregos", ru = "Хранитель силовых линий Эрегос", pl = "Strażnik Linii Mocy Eregos", tr = "Ley Muhafızı Eregos", it = "Guardiano delle Linee Eregos", ja = "レイ・ガーディアン・エレゴス", zh = "魔网守护者埃雷苟斯", ko = "마력의 수호자 에레고스" }
+type = "dragonkin"
+display = 24714
+icon = "Achievement_Boss_Eregos"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.6
+minute = 16
+yell = { en = "You brash interlopers are out of your element!", de = "Ihr dreisten Eindringlinge seid hier fehl am Platz!", fr = "Vous, intrus insolents, êtes hors de votre élément !", es = "¡Intrusos descarados, estáis fuera de vuestro elemento!", pt = "Seus intrusos atrevidos estão fora do seu elemento!", ru = "Вы, наглые чужаки, не в своей стихии!", pl = "Zuchwali intruzi! Jesteście nie w swoim żywiole!", tr = "Siz küstah davetsiz misafirler kendi ortamınızın dışındasınız!", it = "Voi sfacciati intrusi siete fuori dal vostro elemento!", ja = "生意気な侵入者どもめ、ここは貴様らの居場所ではない！", zh = "你们这些鲁莽的闯入者，这里可不是你们的地盘！", ko = "무례한 침입자들, 너희가 설 자리가 아니다!" }
+kit = "ley_guardian_eregos"
+
+[[zone.boss]]
+entry = 2108
+name = { en = "Malygos", de = "Malygos", fr = "Malygos", es = "Malygos", pt = "Malygos", ru = "Малигос", pl = "Malygos", tr = "Malygos", it = "Malygos", ja = "マリゴス", zh = "玛里苟斯", ko = "말리고스" }
+type = "dragonkin"
+display = 26752
+icon = "Achievement_Boss_Malygos_01"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.4
+minute = 20
+yell = { en = "My patience has reached its limit. I will be rid of you!", de = "Meine Geduld ist am Ende. Ich werde mich eurer entledigen!", fr = "Ma patience a des limites. Je vais me débarrasser de vous !", es = "Mi paciencia se ha agotado. ¡Me desharé de vosotros!", pt = "Minha paciência chegou ao limite. Vou me livrar de vocês!", ru = "Моё терпение на исходе. Я избавлюсь от вас!", pl = "Moja cierpliwość się skończyła. Pozbędę się was!", tr = "Sabrım sınırına ulaştı. Sizden kurtulacağım!", it = "La mia pazienza è al limite. Mi libererò di voi!", ja = "我が忍耐も限界だ。貴様らを始末してくれる！", zh = "我的耐心已经到了极限。我要除掉你们！", ko = "내 인내심도 한계에 다다랐다. 너희를 없애 주마!" }
+final = true
+kit = "malygos"

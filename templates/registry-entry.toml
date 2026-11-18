@@ -1,0 +1,68 @@
+# The registry entry of a package: copy this file to packages/<id>.toml in a fork of
+# Syiana/azs-mods and open a pull request with it. The file name must be the `id` below.
+#
+# These are all the keys an entry may hold (tools/packages.py, ENTRY_KEYS); any other key is
+# refused. `python tools/packages.py check` in the registry checks the entry as the pull
+# request's check does. Texts may not hold a control character or `|`.
+
+# The package's id in the catalog: lower-case letters, digits and -, at most 64 characters, not
+# starting or ending with -. It never changes afterwards.
+id = "example"
+
+# "mod" (a locked content profile, played as Modded) or "map" (a Map Builder export).
+kind = "mod"
+
+# What the Mods window shows. Not empty; at most 80 characters each.
+name = "Example Mod"
+author = "yourname"
+
+# The GitHub repository whose releases hold the zip: owner/name.
+repo = "yourname/azs-mod-example"
+
+# One line on what it does, at most 400 characters (optional).
+description = "Fireball hits harder and comes a little faster."
+
+# Your licence's name, at most 40 characters, for example "MIT" or "CC-BY-4.0" (optional, but a
+# reviewer asks for it). Ship the licence text as LICENSE in the zip.
+license = "MIT"
+
+# The namespace you own: author.name, lower-case parts of letters, digits, _ and -, at most 64
+# characters. Names starting with "azs." are the game's. It is the id of your package in
+# profile.json and the folder packs/<namespace>/. No entry may own a namespace inside another's
+# (yourname.example and yourname.example.extra overlap).
+namespace = "yourname.example"
+
+# Ids of other registry packages this one builds on (optional, default []). Your profile may then
+# carry their packages, exactly as some version of them pins them (a profile carries every
+# package it uses). The launcher does not install yours while one it requires is missing from the
+# catalog or blocked. No circles.
+requires = []
+
+# The state of the newest version (optional, default "active"):
+#   "active"      offered in the Mods window
+#   "deprecated"  still installs, with a notice that gives the reason
+#   "blocked"     not installed any more; a launcher turns a chosen profile of that version off
+#                 at its first start after it has read a catalog that names the block (opening
+#                 GET MORE reads it; saves kept), and the pin does not move on to a newer
+#                 release while the package is blocked
+# A deprecated or blocked package says why in `reason` (at most 400 characters).
+status = "active"
+reason = ""
+
+# Older versions to block, each { version, reason }; `version` is the release tag the registry
+# pinned. At most 16, each version once, and only versions packages.json has pinned (optional).
+# To withdraw the newest version and ship a fix, list its tag here, keep status = "active" and
+# publish the fix as a new release.
+blocked = []
+# blocked = [{ version = "v1", reason = "Breaks saves." }]
+
+# Up to 4 https:// folders that also serve the pinned zip as <sha256>.zip, exact bytes
+# (optional). The launcher falls back to them when GitHub does not serve the pinned bytes.
+mirrors = []
+
+# Where the zip comes from: a GitHub release asset (the only type). `asset` is the asset's file
+# name, ending in .zip; one * stands for the version. The newest release (not a draft, not a
+# prerelease) with exactly one matching asset is the one pinned.
+[source]
+type = "release"
+asset = "example-*.zip"

@@ -1,0 +1,9 @@
+# What an author's editor, OS or tools leave in a mod folder; none of it belongs in a profile.
+*.zip
+*.bak
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

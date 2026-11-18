@@ -1,0 +1,16 @@
+# Mr. Smite's abilities, Elwynn Forest.
+
+[[boss]]
+key = "mr_smite"
+
+[[boss.kit]]
+every = 8.0
+ability = "charge"
+
+[[boss.kit]]
+every = 7.0
+ability = { nova = { spell = 6432, radius = 9.0, warn = 1.8 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

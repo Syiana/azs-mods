@@ -1,0 +1,43 @@
+# The priest's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "priest_0"
+profile = 0
+text = { en = "Holy wrath and shadow alike strike true.", de = "Heiliger Zorn wie Schatten treffen gleichermaßen sicher.", fr = "Courroux sacré comme ombre frappent juste.", es = "La cólera sagrada y la sombra golpean por igual.", pt = "A ira sagrada e a sombra atingem igualmente certeiras.", ru = "И святой гнев, и тьма бьют точно.", pl = "Święty gniew i cień uderzają równie celnie.", tr = "Kutsal gazap da gölge de isabetle vurur.", it = "Ira sacra e ombra colpiscono entrambe a segno.", ja = "聖なる怒りも闇も、等しく狙いを外さない。", zh = "神圣之怒与暗影之力同样精准。", ko = "신성한 분노도, 어둠도 정확히 꽂힌다." }
+
+[[piece_lore]]
+key = "priest_1"
+profile = 1
+text = { en = "Woven with wards against harm.", de = "Gewoben mit Schutzzaubern gegen Schaden.", fr = "Tissé de protections contre le mal.", es = "Tejido con protecciones contra el daño.", pt = "Tecido com proteções contra o mal.", ru = "Сплетено с оберегами от вреда.", pl = "Przetkane osłonami przed krzywdą.", tr = "Zarara karşı korumalarla dokunmuş.", it = "Intessuto di protezioni contro il male.", ja = "害をはね返す守りが織り込まれている。", zh = "织入了抵御伤害的结界。", ko = "해악을 막는 수호의 주문으로 짜였다." }
+
+[[piece_lore]]
+key = "priest_2"
+profile = 2
+text = { en = "Its wearer's prayers are answered swiftly.", de = "Die Gebete seines Trägers werden schnell erhört.", fr = "Les prières de son porteur sont vite exaucées.", es = "Las plegarias de quien lo lleva se responden enseguida.", pt = "As preces de quem o usa são atendidas depressa.", ru = "Молитвы владельца быстро бывают услышаны.", pl = "Modlitwy noszącego zostają szybko wysłuchane.", tr = "Giyenin duaları çabucak kabul olur.", it = "Le preghiere di chi lo indossa sono esaudite in fretta.", ja = "持ち主の祈りは素早く聞き届けられる。", zh = "穿戴者的祈祷很快就会得到回应。", ko = "착용자의 기도는 빠르게 응답받는다." }
+
+[[piece_lore]]
+key = "priest_3"
+profile = 3
+text = { en = "Light of step and certain of word.", de = "Leichten Schrittes und sicheren Wortes.", fr = "Le pas léger et la parole sûre.", es = "Paso ligero y palabra segura.", pt = "Passo leve e palavra certa.", ru = "Лёгок шаг и твёрдо слово.", pl = "Lekki krok i pewne słowo.", tr = "Adımı hafif, sözü kesin.", it = "Passo leggero e parola sicura.", ja = "足取りは軽く、言葉は確か。", zh = "步履轻盈，言辞笃定。", ko = "가벼운 발걸음, 확고한 말씀." }
+
+[[piece_lore]]
+key = "priest_4"
+profile = 4
+text = { en = "Meditation woven into every thread.", de = "Meditation, in jeden Faden gewoben.", fr = "La méditation tissée dans chaque fil.", es = "Meditación tejida en cada hilo.", pt = "Meditação tecida em cada fio.", ru = "Медитация вплетена в каждую нить.", pl = "Medytacja wpleciona w każdą nić.", tr = "Her ipliğine meditasyon işlenmiş.", it = "Meditazione intessuta in ogni filo.", ja = "糸の一本一本に瞑想が織り込まれている。", zh = "每一根丝线都织入了冥想。", ko = "실 한 올마다 명상이 엮여 있다." }
+
+[[piece_lore]]
+key = "priest_5"
+profile = 5
+text = { en = "Blessed to sustain its wearer through any trial.", de = "Gesegnet, um seinen Träger durch jede Prüfung zu tragen.", fr = "Béni pour soutenir son porteur dans toutes les épreuves.", es = "Bendecido para sostener a quien lo lleva en cualquier prueba.", pt = "Abençoado para amparar quem o usa em qualquer provação.", ru = "Благословлено поддерживать владельца в любом испытании.", pl = "Pobłogosławione, by podtrzymać noszącego w każdej próbie.", tr = "Giyenini her sınavda ayakta tutmak için kutsanmış.", it = "Benedetto per sostenere chi lo indossa in ogni prova.", ja = "いかなる試練でも持ち主を支えるよう祝福されている。", zh = "受过祝福，助穿戴者渡过一切考验。", ko = "어떤 시련에서도 착용자를 지탱하도록 축복받았다." }
+
+[[piece_lore]]
+key = "priest_6"
+profile = 6
+text = { en = "The zealot's garb, made to walk into the fray.", de = "Das Gewand des Eiferers, gemacht, um ins Getümmel zu schreiten.", fr = "La tenue du zélote, faite pour se jeter dans la mêlée.", es = "El atuendo del fanático, hecho para entrar en la refriega.", pt = "O traje do zelote, feito para entrar na refrega.", ru = "Одеяние фанатика, чтобы идти в самую гущу.", pl = "Szata gorliwca, stworzona, by wkroczyć w wir walki.", tr = "Bağnazın giysisi, kargaşanın içine yürümek için yapılmış.", it = "L'abito dello zelota, fatto per gettarsi nella mischia.", ja = "戦いの渦中へ歩み入るための、熱狂者の装い。", zh = "狂热者的长袍，为投身战斗而制。", ko = "전장으로 걸어 들어가기 위해 지은 광신자의 옷." }
+
+[[piece_lore]]
+key = "priest_7"
+profile = 7
+text = { en = "Its blessings reach far and fall true.", de = "Seine Segnungen reichen weit und treffen sicher.", fr = "Ses bénédictions portent loin et tombent juste.", es = "Sus bendiciones llegan lejos y caen certeras.", pt = "Suas bênçãos alcançam longe e caem certeiras.", ru = "Его благословения достают далеко и ложатся точно.", pl = "Jego błogosławieństwa sięgają daleko i trafiają celnie.", tr = "Kutsamaları uzağa erişir ve isabetle iner.", it = "Le sue benedizioni arrivano lontano e cadono sicure.", ja = "その祝福は遠くまで届き、確かに降りそそぐ。", zh = "其祝福远及四方，精准降临。", ko = "그 축복은 멀리 닿고 정확히 내린다." }

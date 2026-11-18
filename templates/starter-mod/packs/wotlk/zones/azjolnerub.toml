@@ -1,0 +1,310 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "azjolnerub"
+order = 30
+name = { en = "Azjol-Nerub", de = "Azjol-Nerub", fr = "Azjol-Nérub", es = "Azjol-Nerub", pt = "Azjol-Nerub", ru = "Азжол-Неруб", pl = "Azjol-Nerub", tr = "Azjol-Nerub", it = "Azjol-Nerub", ja = "アズジョル・ネルブ", zh = "艾卓-尼鲁布", ko = "아졸네룹" }
+subtitle = { en = "The Fallen Kingdom", de = "Das gefallene Königreich", fr = "Le royaume déchu", es = "El Reino Caído", pt = "O Reino Caído", ru = "Павшее королевство", pl = "Upadłe królestwo", tr = "Düşmüş Krallık", it = "Il Regno Caduto", ja = "堕ちた王国", zh = "陨落王国", ko = "몰락한 왕국" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Dungeon_AzjolUppercity"
+map = 571
+map_name = "Northrend"
+area = 3477
+center = [3620.0, 2090.0]
+radius = 100.0
+map_bounds = [3627.08, -1981.25, 5575.0, 1835.42]
+health_factor = 26.97
+gold_factor = 4.3
+late_factor = 0.4
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+weather = { fine = 55, snow = 45 }
+
+[[zone.enemy]]
+entry = 4800
+name = { en = "Anub'ar Skirmisher", de = "Plänkler der Anub'ar", fr = "Tirailleur anub'ar", es = "Escaramuzador anub'ar", pt = "Escaramuçador Anub'ar", ru = "Застрельщик Ануб'ар", pl = "Harcownik Anub'ar", tr = "Anub'ar Çatışmacısı", it = "Schermagliatore Anub'ar", ja = "アヌバールの散兵", zh = "阿努巴尔散兵", ko = "아눕아르 척후병" }
+type = "humanoid"
+display = 23565
+icon = "INV_Misc_Head_Nerubian_01"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 4801
+name = { en = "Anub'ar Darter", de = "Flitzer der Anub'ar", fr = "Fléchette anub'ar", es = "Dardero anub'ar", pt = "Dardejador Anub'ar", ru = "Метатель Ануб'ар", pl = "Strzelec Anub'ar", tr = "Anub'ar Fırlatıcısı", it = "Saettatore Anub'ar", ja = "アヌバール・ダーター", zh = "阿努巴尔飞虫", ko = "아눕아르 투창병" }
+type = "humanoid"
+display = 23913
+icon = "INV_Misc_Head_Nerubian_01"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.8
+
+[[zone.enemy]]
+entry = 4802
+name = { en = "Anub'ar Warrior", de = "Krieger der Anub'ar", fr = "Guerrier anub'ar", es = "Guerrero anub'ar", pt = "Guerreiro Anub'ar", ru = "Воин Ануб'ар", pl = "Wojownik Anub'ar", tr = "Anub'ar Savaşçısı", it = "Guerriero Anub'ar", ja = "アヌバールの戦士", zh = "阿努巴尔战士", ko = "아눕아르 전사" }
+type = "undead"
+display = 25239
+icon = "INV_Misc_Head_Nerubian_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.95
+
+[[zone.enemy]]
+entry = 4803
+name = { en = "Anub'ar Webspinner", de = "Netzspinner der Anub'ar", fr = "Fileur de toile anub'ar", es = "Tejedor de redes anub'ar", pt = "Tecelão de Teias Anub'ar", ru = "Ткач паутины Ануб'ар", pl = "Przędzarz Anub'ar", tr = "Anub'ar Ağ Örücüsü", it = "Tessiragnatele Anub'ar", ja = "アヌバールの巣紡ぎ", zh = "阿努巴尔织网者", ko = "아눕아르 거미줄술사" }
+type = "humanoid"
+display = 23564
+icon = "INV_Misc_Head_Nerubian_01"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.9
+role = { ranged = { spell = 21067, range = 16.0, every = 3.0, speed = 40.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 4804
+name = { en = "Anub'ar Crypt Fiend", de = "Gruftbestie der Anub'ar", fr = "Démon des cryptes anub'ar", es = "Alimaña de la cripta anub'ar", pt = "Monstro da Cripta Anub'ar", ru = "Склепный демон Ануб'ар", pl = "Krypowy demon Anub'ar", tr = "Anub'ar Mahzen Canavarı", it = "Demone della cripta Anub'ar", ja = "アヌバール・クリプト・フィーンド", zh = "阿努巴尔地穴恶魔", ko = "아눕아르 지하마귀" }
+type = "undead"
+display = 6841
+icon = "INV_Misc_Head_Nerubian_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 4805
+name = { en = "Anub'ar Crusher", de = "Zermalmer der Anub'ar", fr = "Broyeur anub'ar", es = "Triturador anub'ar", pt = "Esmagador Anub'ar", ru = "Крушитель Ануб'ар", pl = "Miażdżyciel Anub'ar", tr = "Anub'ar Ezicisi", it = "Frantumatore Anub'ar", ja = "アヌバール・クラッシャー", zh = "阿努巴尔粉碎者", ko = "아눕아르 분쇄자" }
+type = "undead"
+display = 21978
+icon = "INV_Misc_Head_Nerubian_01"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.75
+
+[[zone.enemy]]
+entry = 4806
+name = { en = "Skittering Swarmer", de = "Wuselnder Schwärmer", fr = "Essaimeur grouillant", es = "Enjambrador correteante", pt = "Enxameador Correria", ru = "Снующий роевик", pl = "Pełzający rojowiec", tr = "Koşuşturan Akıncı", it = "Sciamante sfrecciante", ja = "這い回るスウォーマー", zh = "疾行虫群", ko = "종종걸음 떼벌레" }
+type = "beast"
+display = 23571
+icon = "Ability_Hunter_Pet_Spider"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 4807
+name = { en = "Anub'ar Necromancer", de = "Nekromant der Anub'ar", fr = "Nécromancien anub'ar", es = "Nigromante anub'ar", pt = "Necromante Anub'ar", ru = "Некромант Ануб'ар", pl = "Nekromanta Anub'ar", tr = "Anub'ar Ölü Çağıran", it = "Negromante Anub'ar", ja = "アヌバール・ネクロマンサー", zh = "阿努巴尔通灵师", ko = "아눕아르 강령술사" }
+type = "humanoid"
+display = 24102
+icon = "INV_Misc_Head_Nerubian_01"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.9
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4808
+name = { en = "Anub'ar Champion", de = "Champion der Anub'ar", fr = "Champion anub'ar", es = "Campeón anub'ar", pt = "Campeão Anub'ar", ru = "Защитник Ануб'ар", pl = "Czempion Anub'ar", tr = "Anub'ar Şampiyonu", it = "Campione Anub'ar", ja = "アヌバール・チャンピオン", zh = "阿努巴尔勇士", ko = "아눕아르 용사" }
+type = "undead"
+display = 21981
+icon = "INV_Misc_Head_Nerubian_01"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.9
+
+[[zone.elite]]
+entry = 4810
+name = { en = "Anub'ar Venomancer", de = "Giftmagier der Anub'ar", fr = "Venimancien anub'ar", es = "Venenomante anub'ar", pt = "Venenomante Anub'ar", ru = "Ядомант Ануб'ар", pl = "Jadomistrz Anub'ar", tr = "Anub'ar Zehir Büyücüsü", it = "Maestro di veleni Anub'ar", ja = "アヌバール・ヴェノマンサー", zh = "阿努巴尔毒术师", ko = "아눕아르 독술사" }
+type = "humanoid"
+display = 24129
+icon = "INV_Misc_Head_Nerubian_01"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 6917, count = 3, radius = 3.0, spread = 6.0, warn = 1.4, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 12.0, warn = 1.5, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 4811
+name = { en = "Anub'ar Guardian", de = "Wächter der Anub'ar", fr = "Gardien anub'ar", es = "Guardián anub'ar", pt = "Guardião Anub'ar", ru = "Страж Ануб'ар", pl = "Strażnik Anub'ar", tr = "Anub'ar Muhafızı", it = "Guardiano Anub'ar", ja = "アヌバール・ガーディアン", zh = "阿努巴尔守护者", ko = "아눕아르 수호병" }
+type = "undead"
+display = 23155
+icon = "INV_Misc_Head_Nerubian_01"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.2
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 4812
+name = { en = "Crypt Scarab Swarmlord", de = "Schwarmfürst der Gruftskarabäen", fr = "Seigneur d'essaim de scarabées des cryptes", es = "Señor del enjambre de escarabajos de la cripta", pt = "Senhor do Enxame de Escaravelhos da Cripta", ru = "Повелитель роя склепных скарабеев", pl = "Władca roju skarabeuszy z krypty", tr = "Mahzen Scarab Sürü Lordu", it = "Signore dello sciame di scarabei della cripta", ja = "クリプト・スカラベの群れの王", zh = "地穴甲虫虫群领主", ko = "지하 딱정벌레 무리군주" }
+type = "beast"
+display = 10005
+icon = "Ability_Hunter_Pet_Spider"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.8
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 6917, count = 3, radius = 3.0, spread = 6.0, warn = 1.4, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 12.0, warn = 1.5, factor = 1.0 } }
+
+[[zone.boss]]
+entry = 4890
+name = { en = "Krik'thir the Gatewatcher", de = "Krik'thir der Torwächter", fr = "Krik'thir le Gardien des portes", es = "Krik'thir el Vigilante de la Puerta", pt = "Krik'thir, o Vigia do Portão", ru = "Крик'тир Страж Врат", pl = "Krik'thir Strażnik Bramy", tr = "Kapı Bekçisi Krik'thir", it = "Krik'thir il Guardiano del Cancello", ja = "門番クリクシア", zh = "看门者克里克希尔", ko = "문지기 크릭시르" }
+type = "humanoid"
+display = 23562
+icon = "Achievement_Boss_Krikthir"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.6
+minute = 4
+yell = { en = "This kingdom belongs to the Scourge! Only the dead may enter.", de = "Dieses Königreich gehört der Geißel! Nur die Toten dürfen eintreten.", fr = "Ce royaume appartient au Fléau ! Seuls les morts peuvent entrer.", es = "¡Este reino pertenece a la Plaga! Solo los muertos pueden entrar.", pt = "Este reino pertence ao Flagelo! Só os mortos podem entrar.", ru = "Это королевство принадлежит Плети! Входить могут лишь мертвые.", pl = "To królestwo należy do Plagi! Tylko umarli mogą wejść.", tr = "Bu krallık Yıkım ordusuna ait! Yalnızca ölüler girebilir.", it = "Questo regno appartiene al Flagello! Solo i morti possono entrare.", ja = "この王国はスカージのものだ！死者のみが立ち入れる。", zh = "这个王国属于天灾军团！只有死者才能进入。", ko = "이 왕국은 스컬지의 것이다! 오직 죽은 자만이 들어올 수 있다." }
+kit = "krikthir_the_gatewatcher"
+
+[[zone.boss]]
+entry = 4891
+name = { en = "Hadronox", de = "Hadronox", fr = "Hadronox", es = "Hadronox", pt = "Hadronox", ru = "Хадронокс", pl = "Hadronox", tr = "Hadronox", it = "Hadronox", ja = "ハドロノクス", zh = "哈多诺克斯", ko = "하드로녹스" }
+type = "beast"
+display = 18043
+icon = "Achievement_Boss_Hadronox"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.4
+minute = 8
+yell = { en = "Hadronox crawls up from the depths!", de = "Hadronox kriecht aus der Tiefe empor!", fr = "Hadronox remonte des profondeurs !", es = "¡Hadronox trepa desde las profundidades!", pt = "Hadronox rasteja das profundezas!", ru = "Хадронокс выползает из глубин!", pl = "Hadronox wypełza z głębin!", tr = "Hadronox derinliklerden sürünerek çıkıyor!", it = "Hadronox risale dalle profondità!", ja = "ハドロノクスが深淵から這い上がってくる！", zh = "哈多诺克斯从深渊中爬了上来！", ko = "하드로녹스가 심연에서 기어 올라옵니다!" }
+kit = "hadronox"
+
+[[zone.boss]]
+entry = 4892
+name = { en = "Elder Nadox", de = "Urahne Nadox", fr = "Ancien Nadox", es = "Anciano Nadox", pt = "Ancião Nadox", ru = "Старейшина Надокс", pl = "Starszy Nadox", tr = "Yaşlı Nadox", it = "Anziano Nadox", ja = "長老ナドックス", zh = "纳多克斯长老", ko = "장로 나독스" }
+type = "undead"
+display = 21979
+icon = "Achievement_Boss_ElderNadox"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.0
+minute = 12
+yell = { en = "The secrets of the deep shall remain hidden.", de = "Die Geheimnisse der Tiefe sollen verborgen bleiben.", fr = "Les secrets des profondeurs resteront cachés.", es = "Los secretos de las profundidades permanecerán ocultos.", pt = "Os segredos das profundezas permanecerão ocultos.", ru = "Тайны глубин останутся скрытыми.", pl = "Sekrety głębin pozostaną ukryte.", tr = "Derinliklerin sırları gizli kalacak.", it = "I segreti delle profondità resteranno nascosti.", ja = "深淵の秘密は隠されたままでなければならぬ。", zh = "深渊的秘密将永远隐藏。", ko = "심연의 비밀은 감춰진 채로 남으리라." }
+kit = "elder_nadox"
+
+[[zone.boss]]
+entry = 4893
+name = { en = "Herald Volazj", de = "Herold Volazj", fr = "Héraut Volazj", es = "Heraldo Volazj", pt = "Arauto Volazj", ru = "Глашатай Волазж", pl = "Zwiastun Volazj", tr = "Müjdeci Volazj", it = "Araldo Volazj", ja = "使者ヴォラズジ", zh = "传令官沃拉兹", ko = "사자 볼라즈" }
+type = "elemental"
+display = 28002
+icon = "Achievement_Boss_HeraldVolazj"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.4
+minute = 16
+yell = { en = "Shgla'yos plahf mh'naus.", de = "Shgla'yos plahf mh'naus.", fr = "Shgla'yos plahf mh'naus.", es = "Shgla'yos plahf mh'naus.", pt = "Shgla'yos plahf mh'naus.", ru = "Shgla'yos plahf mh'naus.", pl = "Shgla'yos plahf mh'naus.", tr = "Shgla'yos plahf mh'naus.", it = "Shgla'yos plahf mh'naus.", ja = "Shgla'yos plahf mh'naus.", zh = "Shgla'yos plahf mh'naus.", ko = "슈글라요스 플라프 므나우스." }
+kit = "herald_volazj"
+
+[[zone.boss]]
+entry = 2107
+name = { en = "Anub'arak", de = "Anub'arak", fr = "Anub'arak", es = "Anub'arak", pt = "Anub'arak", ru = "Ануб'арак", pl = "Anub'arak", tr = "Anub'arak", it = "Anub'arak", ja = "アヌバラク", zh = "阿努巴拉克", ko = "아눕아락" }
+type = "undead"
+display = 27856
+icon = "Achievement_Boss_Anubarak"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.6
+minute = 20
+yell = { en = "This place will serve as your tomb!", de = "Dieser Ort wird euer Grab sein!", fr = "Cet endroit sera votre tombeau !", es = "¡Este lugar será vuestra tumba!", pt = "Este lugar será o seu túmulo!", ru = "Это место станет вашей могилой!", pl = "To miejsce posłuży wam za grób!", tr = "Burası sizin mezarınız olacak!", it = "Questo luogo sarà la vostra tomba!", ja = "ここが貴様らの墓場となる！", zh = "这里将成为你们的坟墓！", ko = "이곳이 너희의 무덤이 되리라!" }
+final = true
+kit = "anubarak"
+
+# Azjol-Nerub: the spider kingdom's gate in Dragonblight (Krik'thir, Hadronox), the gardens
+# over the Old Kingdom (Elder Nadox, Herald Volazj), and Icemist's frozen shore, where Anub'arak
+# breaks out of the ground.
+[[zone.arena]]
+name = { en = "Moonrest Gardens", de = "Mondruhgärten", fr = "Jardins du Repos lunaire", es = "Jardines del Reposo Lunar", pt = "Jardins do Repouso da Lua", ru = "Сады Лунного Покоя", pl = "Ogrody Moonrest", tr = "Ayhuzuru Bahçeleri", it = "Giardini di Riposo Lunare", ja = "ムーンレスト庭園", zh = "月眠花园", ko = "달쉼터 정원" }
+center = [3132.0, 2310.0]
+radius = 85.0
+from_boss = 2
+
+[[zone.arena]]
+name = { en = "Icemist Village", de = "Eisnebeldorf", fr = "Village de Brumeglace", es = "Aldea Bruma de Hielo", pt = "Vila Névoa de Gelo", ru = "Деревня Ледяной Мглы", pl = "Wioska Icemist", tr = "Buzsis Köyü", it = "Villaggio di Nebbiaghiacciata", ja = "アイスミスト村", zh = "冰雾村", ko = "얼음안개 마을" }
+center = [4054.0, 2218.0]
+radius = 85.0
+from_boss = 4

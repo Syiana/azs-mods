@@ -1,0 +1,281 @@
+# The shop's name styles (survivors-sim namestyles.rs). A style's place plus one is its wire id: new ones go at the end.
+#
+# Every style, in the client's table order: `wire_id` is the index plus one, so new ones go at
+# the end. `TUNE` the prices; price 0 is not sold: only the Game Pass gives it (`pass_only`).
+
+[[name_style]]
+key = "royal_gold"
+name = "Royal Gold"
+price = 8000
+
+[[name_style]]
+key = "crimson_queen"
+name = "Crimson Queen"
+price = 8000
+
+[[name_style]]
+key = "frost_crusade"
+name = "Frost Crusade"
+price = 8000
+
+[[name_style]]
+key = "pure_white"
+name = "Pure White"
+price = 3000
+
+[[name_style]]
+key = "fel_fire"
+name = "Fel Fire"
+price = 12000
+
+[[name_style]]
+key = "void_touched"
+name = "Void-Touched"
+price = 12000
+
+[[name_style]]
+key = "ember"
+name = "Ember"
+price = 12000
+
+[[name_style]]
+key = "shadow"
+name = "Shadow"
+price = 5000
+
+[[name_style]]
+key = "rose"
+name = "Rose"
+price = 5000
+
+[[name_style]]
+key = "ancient_bronze"
+name = "Ancient Bronze"
+price = 5000
+
+# Animated (the client's `Anim`): a scrolling rainbow, a breathing glow or a sweeping sheen.
+[[name_style]]
+key = "prismatic"
+name = "Prismatic"
+price = 25000
+
+[[name_style]]
+key = "unicorn"
+name = "Unicorn Dream"
+price = 18000
+
+[[name_style]]
+key = "arcane_surge"
+name = "Arcane Surge"
+price = 15000
+
+[[name_style]]
+key = "holy_radiance"
+name = "Holy Radiance"
+price = 15000
+
+[[name_style]]
+key = "frostbound"
+name = "Frostbound"
+price = 15000
+
+[[name_style]]
+key = "molten"
+name = "Molten"
+price = 15000
+
+# Game Pass season 2 (Secrets of Ulduar): titan silver-blue with Algalon's starlight sheen.
+[[name_style]]
+key = "herald_titans"
+name = "Herald of the Titans"
+price = 0
+
+# The second set (2026-11-06): more colours, and more that move.
+[[name_style]]
+key = "moonsilver"
+name = "Moonsilver"
+price = 7000
+
+[[name_style]]
+key = "obsidian"
+name = "Obsidian"
+price = 6000
+
+[[name_style]]
+key = "sunrise"
+name = "Sunrise"
+price = 7000
+
+[[name_style]]
+key = "bloodmoon"
+name = "Bloodmoon"
+price = 9000
+
+[[name_style]]
+key = "deep_sea"
+name = "Deep Sea"
+price = 7000
+
+[[name_style]]
+key = "emerald_dream"
+name = "Emerald Dream"
+price = 9000
+
+[[name_style]]
+key = "twilight"
+name = "Twilight"
+price = 9000
+
+[[name_style]]
+key = "lichborne"
+name = "Lichborne"
+price = 9000
+
+[[name_style]]
+key = "verdigris"
+name = "Verdigris"
+price = 5000
+
+[[name_style]]
+key = "dragonfire"
+name = "Dragonfire"
+price = 9000
+
+[[name_style]]
+key = "phoenix"
+name = "Phoenix"
+price = 18000
+
+[[name_style]]
+key = "nightsky"
+name = "Night Sky"
+price = 15000
+
+[[name_style]]
+key = "stormcaller"
+name = "Stormcaller"
+price = 15000
+
+[[name_style]]
+key = "celestial"
+name = "Celestial"
+price = 18000
+
+[[name_style]]
+key = "venom"
+name = "Venom"
+price = 15000
+
+[[name_style]]
+key = "aurora"
+name = "Aurora"
+price = 20000
+
+[[name_style]]
+key = "hellfire"
+name = "Hellfire"
+price = 12000
+
+[[name_style]]
+key = "voidheart"
+name = "Voidheart"
+price = 12000
+
+[[name_style]]
+key = "starlight"
+name = "Starlight"
+price = 15000
+
+[[name_style]]
+key = "sunfury"
+name = "Sunfury"
+price = 12000
+
+[[name_style]]
+key = "thunderstruck"
+name = "Thunderstruck"
+price = 15000
+
+[[name_style]]
+key = "plaguebringer"
+name = "Plaguebringer"
+price = 9000
+
+[[name_style]]
+key = "royal_purple"
+name = "Royal Purple"
+price = 8000
+
+[[name_style]]
+key = "rose_gold"
+name = "Rose Gold"
+price = 9000
+
+[[name_style]]
+key = "titanium"
+name = "Titanium"
+price = 6000
+
+[[name_style]]
+key = "lava"
+name = "Lava"
+price = 12000
+
+[[name_style]]
+key = "shadowflame"
+name = "Shadowflame"
+price = 15000
+
+[[name_style]]
+key = "glacier"
+name = "Glacier"
+price = 9000
+
+[[name_style]]
+key = "bloodthirst"
+name = "Bloodthirst"
+price = 12000
+
+[[name_style]]
+key = "wildheart"
+name = "Wildheart"
+price = 9000
+
+[[name_style]]
+key = "candy"
+name = "Candy"
+price = 15000
+
+[[name_style]]
+key = "spectrum"
+name = "Spectrum"
+price = 25000
+
+# Recruit a Friend's (price 0, not sold, `crate::referral`): the recruit's welcome, warm
+# gold on crimson; the recruiter's third milestone, crimson and gold with a sweeping sheen.
+[[name_style]]
+key = "brother_in_arms"
+name = "Brother in Arms"
+price = 0
+
+[[name_style]]
+key = "warbanner"
+name = "Warbanner"
+price = 0
+
+# Hallow's End's own (price 0: not sold for gold), in its Event Shop alone (`crate::events`):
+# a pumpkin's glowing orange, a witch's violet with fel-green light, a ghost's pale mist.
+[[name_style]]
+key = "jack_o_lantern"
+name = "Jack-o'-Lantern"
+price = 0
+
+[[name_style]]
+key = "witching_hour"
+name = "Witching Hour"
+price = 0
+
+[[name_style]]
+key = "restless_spirit"
+name = "Restless Spirit"
+price = 0

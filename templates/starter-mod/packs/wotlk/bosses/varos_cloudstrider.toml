@@ -1,0 +1,16 @@
+# Varos Cloudstrider: the Azure Ring Captain's Energize Cores, Arcane Barrage.
+
+[[boss]]
+key = "varos_cloudstrider"
+
+[[boss.kit]]
+every = 14.0
+ability = { sweep = { spell = 50785, len = 26.0, w = 5.0, warn = 1.8, lasts = 5.0, tick = 0.7 } }
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 50804 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

@@ -1,0 +1,287 @@
+# Alterac Valley, "The Frozen Wilds".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "av"
+order = 8
+name = { en = "Alterac Valley", de = "Alteractal", fr = "Vallée d'Alterac", es = "Valle de Alterac", pt = "Vale Alterac", ru = "Альтеракская долина", pl = "Dolina Alterac", tr = "Alterac Vadisi", it = "Valle d'Alterac", ja = "アルタラック・ヴァレー", zh = "奥特兰克山谷", ko = "알터랙 계곡" }
+subtitle = { en = "The Frozen Wilds", de = "Die gefrorene Wildnis", fr = "Les terres gelées", es = "Tierras salvajes heladas", pt = "A Selva Congelada", ru = "Ледяные пустоши", pl = "Mroźne pustkowia", tr = "Donmuş Yabanlar", it = "Le Lande Ghiacciate", ja = "凍てつく荒野", zh = "冰封荒野", ko = "얼어붙은 황야" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_BG_winAV"
+map = 30
+map_name = "PVPZone01"
+area = 2597
+center = [-230.0, -290.0]
+radius = 100.0
+map_bounds = [1781.25, -2456.25, 1085.42, -1739.58]
+health_factor = 2.95
+gold_factor = 1.88
+late_factor = 0.18
+hour = 14
+weather = { fine = 55, snow = 45 }
+
+[[zone.enemy]]
+entry = 300
+name = { en = "Trogg Tunneler", de = "Troggtunnelgräber", fr = "Creuseur de tunnels trogg", es = "Tunelador trogg", pt = "Escavador Trogg", ru = "Троггский проходчик", pl = "Tunelarz troggów", tr = "Trogg Tünelcisi", it = "Scavatunnel Trogg", ja = "トログのトンネル掘り", zh = "掘地穴居人", ko = "트로그 굴착꾼" }
+type = "humanoid"
+display = 160
+icon = "INV_Misc_Head_Orc_01"
+health = 30
+damage = 4
+swing = 1.6
+speed = 5.2
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 301
+name = { en = "Starving Frostwolf", de = "Hungernder Frostwolf", fr = "Loup-de-givre affamé", es = "Lobo Gélido hambriento", pt = "Lobo do Gelo Faminto", ru = "Голодный морозный волк", pl = "Wygłodniały Mroźny Wilk", tr = "Aç Buzkurt", it = "Lupo Gelo affamato", ja = "飢えたフロストウルフ", zh = "饥饿的霜狼", ko = "굶주린 서리늑대" }
+type = "beast"
+display = 776
+icon = "Ability_Hunter_Pet_Wolf"
+health = 24
+damage = 5
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.6
+size = 0.8
+
+[[zone.enemy]]
+entry = 308
+name = { en = "Winterax Axe Thrower", de = "Axtwerfer der Winterax", fr = "Lanceur de haches Hache-d'hiver", es = "Lanzador de hachas Hacha Invernal", pt = "Lançador de Machados Machado Invernal", ru = "Метатель топоров Зимнего Топора", pl = "Rzucający toporami z klanu Winterax", tr = "Kışbaltası Balta Atıcısı", it = "Lanciatore d'asce Asciainverno", ja = "ウィンターアックスの斧投げ", zh = "冰斧掷斧者", ko = "겨울도끼 도끼투척병" }
+type = "humanoid"
+display = 665
+icon = "INV_Misc_Head_Troll_01"
+health = 34
+damage = 6
+swing = 1.7
+speed = 5.6
+cost = 1.2
+from = 1.2
+role = { ranged = { spell = 16075, range = 16.0, every = 3.0, speed = 20.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 303
+name = { en = "Crushridge Ogre Mage", de = "Ogermagier der Brecherkämme", fr = "Mage ogre Crête-broyeuse", es = "Mago ogro Cresta Aplastada", pt = "Mago Ogro do Cume Esmagado", ru = "Огр-маг Дробильного Хребта", pl = "Ogr-mag z Crushridge", tr = "Ezgitepe Ogre Büyücüsü", it = "Ogre mago Crestafranta", ja = "クラッシュリッジ・オーガメイジ", zh = "碎岭食人魔法师", ko = "분쇄산맥 오우거 마법사" }
+type = "humanoid"
+display = 33
+icon = "Achievement_Reputation_Ogre"
+health = 48
+damage = 8
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 302
+name = { en = "Snowfall Wendigo", de = "Schneewehenwendigo", fr = "Wendigo des neiges", es = "Wendigo de las nevadas", pt = "Wendigo da Nevasca", ru = "Вендиго снегопада", pl = "Wendigo z Snowfall", tr = "Karyağışı Wendigosu", it = "Wendigo di Nevecaduta", ja = "スノーフォール・ウェンディゴ", zh = "落雪雪怪", ko = "눈내림 웬디고" }
+type = "beast"
+display = 927
+icon = "Ability_Hunter_Pet_Gorilla"
+health = 70
+damage = 8
+swing = 2.0
+speed = 5.0
+cost = 2.0
+from = 3.0
+
+[[zone.enemy]]
+entry = 304
+name = { en = "Crushridge Brute", de = "Rohling der Brecherkämme", fr = "Brute Crête-broyeuse", es = "Bruto Cresta Aplastada", pt = "Bruto do Cume Esmagado", ru = "Громила Дробильного Хребта", pl = "Brutal z Crushridge", tr = "Ezgitepe Vahşisi", it = "Bruto Crestafranta", ja = "クラッシュリッジ・ブルート", zh = "碎岭蛮兵", ko = "분쇄산맥 야수" }
+type = "humanoid"
+display = 415
+icon = "Achievement_Reputation_Ogre"
+health = 170
+damage = 12
+swing = 2.4
+speed = 4.4
+cost = 3.0
+from = 4.5
+size = 1.2
+
+[[zone.enemy]]
+entry = 305
+name = { en = "Ice Revenant", de = "Eiswiedergänger", fr = "Revenant de glace", es = "Revenante de hielo", pt = "Aparição de Gelo", ru = "Ледяной призрак", pl = "Lodowe widmo", tr = "Buz Hortlağı", it = "Spettro di ghiaccio", ja = "アイス・レヴナント", zh = "寒冰亡魂", ko = "얼음 망령" }
+type = "elemental"
+display = 110
+icon = "Spell_Frost_SummonWaterElemental_2"
+health = 90
+damage = 9
+swing = 1.8
+speed = 5.6
+cost = 2.0
+from = 6.0
+size = 0.7
+role = { exploder = { spell = 9874, burst = 22519, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 309
+name = { en = "Winterax Shadow Hunter", de = "Schattenjäger der Winterax", fr = "Chasseur des ombres Hache-d'hiver", es = "Cazador de las sombras Hacha Invernal", pt = "Caçador das Sombras Machado Invernal", ru = "Охотник за тенями Зимнего Топора", pl = "Łowca cieni z klanu Winterax", tr = "Kışbaltası Gölge Avcısı", it = "Cacciaombre Asciainverno", ja = "ウィンターアックス・シャドウハンター", zh = "冰斧暗影猎手", ko = "겨울도끼 암흑사냥꾼" }
+type = "humanoid"
+display = 661
+icon = "INV_Misc_Head_Troll_01"
+health = 56
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.5
+
+[[zone.enemy]]
+entry = 310
+name = { en = "Frostwolf Packleader", de = "Rudelführer der Frostwölfe", fr = "Chef de meute Loup-de-givre", es = "Líder de manada Lobo Gélido", pt = "Líder da Matilha Lobo do Gelo", ru = "Вожак стаи Морозных Волков", pl = "Przywódca stada Mroźnych Wilków", tr = "Buzkurt Sürü Lideri", it = "Capobranco Lupo Gelo", ja = "フロストウルフの群れの長", zh = "霜狼头狼", ko = "서리늑대 우두머리" }
+type = "beast"
+display = 868
+icon = "Ability_Hunter_Pet_Wolf"
+health = 200
+damage = 14
+swing = 1.6
+speed = 6.4
+cost = 3.5
+from = 9.0
+size = 1.2
+
+[[zone.elite]]
+entry = 306
+name = { en = "Alterac Yeti Lord", de = "Yetifürst des Alterac", fr = "Seigneur yéti d'Alterac", es = "Señor yeti de Alterac", pt = "Senhor Yeti de Alterac", ru = "Владыка йети Альтерака", pl = "Pan yeti z Alterac", tr = "Alterac Yeti Lordu", it = "Signore Yeti di Alterac", ja = "アルタラック・イエティロード", zh = "奥特兰克雪人之王", ko = "알터랙 예티 군주" }
+type = "beast"
+display = 3208
+icon = "Ability_Hunter_Pet_Gorilla"
+health = 750
+damage = 22
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 6.0, warn = 1.4, knock = 9.0 } }], 1.0] }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 307
+name = { en = "Mountain Giant", de = "Berggigant", fr = "Géant des montagnes", es = "Gigante de la montaña", pt = "Gigante da Montanha", ru = "Горный великан", pl = "Górski olbrzym", tr = "Dağ Devi", it = "Gigante di montagna", ja = "マウンテン・ジャイアント", zh = "山岭巨人", ko = "산악 거인" }
+type = "giant"
+display = 1918
+icon = "Achievement_Reputation_Ogre"
+health = 1000
+damage = 28
+swing = 2.6
+speed = 4.6
+cost = 14.0
+from = 8.5
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 311
+name = { en = "Winterax Warlord", de = "Kriegsherr der Winterax", fr = "Seigneur de guerre Hache-d'hiver", es = "Señor de la guerra Hacha Invernal", pt = "Senhor da Guerra Machado Invernal", ru = "Полководец Зимнего Топора", pl = "Wódz wojenny z klanu Winterax", tr = "Kışbaltası Savaş Lordu", it = "Signore della guerra Asciainverno", ja = "ウィンターアックス・ウォーロード", zh = "冰斧督军", ko = "겨울도끼 전쟁군주" }
+type = "humanoid"
+display = 13989
+icon = "INV_Misc_Head_Troll_01"
+health = 1200
+damage = 32
+swing = 2.2
+speed = 5.6
+cost = 15.0
+from = 13.0
+size = 1.8
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.boss]]
+entry = 390
+name = { en = "Korrak the Bloodrager", de = "Korrak der Blutrüstige", fr = "Korrak le Sanguinaire", es = "Korrak el Rabioso", pt = "Korrak, o Sanguinário", ru = "Коррак Кровавый", pl = "Korrak Krwawy Szaleniec", tr = "Kan Öfkelisi Korrak", it = "Korrak il Furiasangue", ja = "ブラッドレイジャー・コラック", zh = "血怒者科尔拉克", ko = "피분노 코락" }
+type = "humanoid"
+display = 10169
+icon = "INV_Misc_Head_Orc_01"
+health = 4000
+damage = 25
+speed = 5.6
+size = 1.4399999
+minute = 4
+yell = { en = "Korrak smash puny ones!", de = "Korrak zerschmettert Schwächlinge!", fr = "Korrak écraser faibles !", es = "¡Korrak aplasta a los canijos!", pt = "Korrak esmaga fracotes!", ru = "Коррак крушить слабаков!", pl = "Korrak zmiażdżyć małych!", tr = "Korrak ufaklıkları ezer!", it = "Korrak schiacciare deboli!", ja = "コラック、ちびども叩き潰す！", zh = "科尔拉克砸扁小东西！", ko = "코락 약한 놈들 박살!" }
+kit = "korrak_the_bloodrager"
+
+[[zone.boss]]
+entry = 391
+name = { en = "Ivus the Forest Lord", de = "Ivus der Waldfürst", fr = "Ivus le Seigneur de la forêt", es = "Ivus el Señor del Bosque", pt = "Ivus, o Senhor da Floresta", ru = "Ивус Лесной Владыка", pl = "Ivus, Pan Lasu", tr = "Orman Lordu Ivus", it = "Ivus il Signore della Foresta", ja = "森の王アイヴァス", zh = "森林之王伊弗斯", ko = "숲의 군주 이부스" }
+type = "elemental"
+display = 14884
+icon = "Ability_Druid_ForceofNature"
+health = 10000
+damage = 33
+speed = 5.2
+size = 0.8
+minute = 8
+yell = { en = "Who disturbs the slumber of the forest?", de = "Wer stört den Schlummer des Waldes?", fr = "Qui trouble le sommeil de la forêt ?", es = "¿Quién perturba el sueño del bosque?", pt = "Quem perturba o sono da floresta?", ru = "Кто тревожит сон леса?", pl = "Kto zakłóca sen lasu?", tr = "Ormanın uykusunu kim bozuyor?", it = "Chi disturba il sonno della foresta?", ja = "森の眠りを妨げるのは誰だ？", zh = "是谁打扰了森林的沉睡？", ko = "누가 숲의 잠을 깨우느냐?" }
+kit = "ivus_the_forest_lord"
+
+[[zone.boss]]
+entry = 392
+name = { en = "Lokholar the Ice Lord", de = "Lokholar der Eisfürst", fr = "Lokholar le Seigneur des glaces", es = "Lokholar el Señor del Hielo", pt = "Lokholar, o Senhor do Gelo", ru = "Локолар Владыка Льда", pl = "Lokholar, Pan Lodu", tr = "Buz Lordu Lokholar", it = "Lokholar il Signore del Ghiaccio", ja = "氷の王ロクホラー", zh = "冰雪之王洛克霍拉", ko = "얼음 군주 로크홀라" }
+type = "elemental"
+display = 110
+icon = "Spell_Frost_SummonWaterElemental_2"
+health = 19000
+damage = 42
+speed = 5.4
+size = 2.3999999
+minute = 12
+yell = { en = "I am the Ice Lord. Your blood will freeze in your veins!", de = "Ich bin der Eisfürst. Euer Blut wird in euren Adern gefrieren!", fr = "Je suis le Seigneur des glaces. Ton sang va geler dans tes veines !", es = "Soy el Señor del Hielo. ¡Tu sangre se congelará en tus venas!", pt = "Eu sou o Senhor do Gelo. Seu sangue vai congelar nas veias!", ru = "Я Владыка Льда. Твоя кровь застынет в жилах!", pl = "Jestem Panem Lodu. Wasza krew zamarznie w żyłach!", tr = "Ben Buz Lordu'yum. Kanınız damarlarınızda donacak!", it = "Io sono il Signore del Ghiaccio. Il vostro sangue gelerà nelle vene!", ja = "我は氷の王。貴様の血は血管の中で凍りつくだろう！", zh = "我是冰雪之王。你们的血液将在血管中冻结！", ko = "나는 얼음 군주다. 너희 혈관 속의 피가 얼어붙으리라!" }
+kit = "lokholar_the_ice_lord"
+
+[[zone.boss]]
+entry = 394
+name = { en = "Glacius the Frozen Titan", de = "Glacius der gefrorene Titan", fr = "Glacius le Titan gelé", es = "Glacius el Titán Helado", pt = "Glacius, o Titã Congelado", ru = "Глациус Ледяной Титан", pl = "Glacius, Zamrożony Tytan", tr = "Donmuş Titan Glacius", it = "Glacius il Titano Gelato", ja = "凍てつくタイタン・グラシウス", zh = "冰封泰坦格拉西乌斯", ko = "얼어붙은 티탄 글라시우스" }
+type = "giant"
+display = 6209
+icon = "Spell_Frost_SummonWaterElemental_2"
+health = 23250
+damage = 48
+speed = 5.0
+size = 1.3
+minute = 16
+yell = { en = "The mountain remembers. The mountain will bury you!", de = "Der Berg erinnert sich. Der Berg wird euch begraben!", fr = "La montagne se souvient. La montagne t'ensevelira !", es = "La montaña recuerda. ¡La montaña te enterrará!", pt = "A montanha lembra. A montanha vai enterrar você!", ru = "Гора помнит. Гора похоронит тебя!", pl = "Góra pamięta. Góra was pogrzebie!", tr = "Dağ hatırlar. Dağ sizi gömecek!", it = "La montagna ricorda. La montagna vi seppellirà!", ja = "山は覚えている。山が貴様を埋めるだろう！", zh = "高山铭记一切。高山会埋葬你们！", ko = "산은 기억한다. 산이 너희를 묻으리라!" }
+kit = "glacius_the_frozen_titan"
+
+[[zone.boss]]
+entry = 393
+name = { en = "Azuregos", de = "Azuregos", fr = "Azuregos", es = "Azuregos", pt = "Azuregos", ru = "Азурегос", pl = "Azuregos", tr = "Azuregos", it = "Azuregos", ja = "アズレゴス", zh = "艾索雷苟斯", ko = "아주어고스" }
+type = "dragonkin"
+display = 11460
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 58500
+damage = 60
+speed = 6.0
+size = 1.04
+minute = 20
+yell = { en = "This place is under my protection. The mysteries of the arcane shall remain inviolate!", de = "Dieser Ort steht unter meinem Schutz. Die Mysterien der Arkanen sollen unangetastet bleiben!", fr = "Ce lieu est sous ma protection. Les mystères des arcanes resteront inviolés !", es = "Este lugar está bajo mi protección. ¡Los misterios de lo arcano permanecerán inviolables!", pt = "Este lugar está sob minha proteção. Os mistérios do arcano permanecerão invioláveis!", ru = "Это место под моей защитой. Тайны волшебства останутся нерушимыми!", pl = "To miejsce jest pod moją opieką. Tajemnice magii pozostaną nienaruszone!", tr = "Burası benim korumam altında. Gizemin sırları dokunulmaz kalacak!", it = "Questo luogo è sotto la mia protezione. I misteri dell'arcano resteranno inviolati!", ja = "この地は我が守護下にある。秘術の神秘は決して侵させぬ！", zh = "此地受我庇护。奥术的奥秘不容侵犯！", ko = "이곳은 내가 지키는 곳이다. 비전의 신비는 결코 더럽혀지지 않으리라!" }
+final = true
+kit = "azuregos"

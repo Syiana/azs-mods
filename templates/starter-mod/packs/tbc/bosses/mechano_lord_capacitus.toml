@@ -1,0 +1,16 @@
+# Mechano-Lord Capacitus: Head Crack, Nether Charges.
+
+[[boss]]
+key = "mechano_lord_capacitus"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 35161, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 34303, count = 4, radius = 5.0, spread = 10.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

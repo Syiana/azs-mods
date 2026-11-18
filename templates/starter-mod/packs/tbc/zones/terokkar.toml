@@ -1,0 +1,296 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "terokkar"
+order = 14
+name = { en = "Terokkar Forest", de = "Wälder von Terokkar", fr = "Forêt de Terokkar", es = "Bosque de Terokkar", pt = "Floresta de Terokkar", ru = "Лес Тероккар", pl = "Las Terokkar", tr = "Terokkar Ormanı", it = "Foresta di Terokkar", ja = "テロッカーの森", zh = "泰罗卡森林", ko = "테로카르 숲" }
+subtitle = { en = "Shadows of Auchindoun", de = "Schatten von Auchindoun", fr = "Les ombres d'Auchindoun", es = "Sombras de Auchindoun", pt = "Sombras de Auchindoun", ru = "Тени Аукиндона", pl = "Cienie Auchindoun", tr = "Auchindoun'un Gölgeleri", it = "Ombre di Auchindoun", ja = "アウキンドンの影", zh = "奥金顿之影", ko = "아킨둔의 그림자" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Terrokar"
+map = 530
+map_name = "Expansion01"
+area = 3519
+center = [-2600.0, 4300.0]
+radius = 100.0
+map_bounds = [7083.33, 1683.33, -1000.0, -4600.0]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 7.08
+gold_factor = 2.54
+late_factor = 0.4
+hour = 18
+weather = { fine = 85, rain = 15 }
+# Hills no hero walks up (the navmesh climbs 70 degrees, a hero 50) hold no rift crystal, portal,
+# chest or boss: places a hero is asked to reach lie on ground a 45 degree walker gets to. The
+# mesh smooths rough ground, so the margin under the client's 50 keeps the highest ridge, whose
+# way up leans 45 to 50, out of it; the ground within 100 yd of the centre that places may stand
+# on shrinks by about 8 % (the hillsides themselves; measured on the baked mesh, 2026-11-15).
+climb = 45.0
+
+[[zone.enemy]]
+entry = 3200
+name = { en = "Timber Worg", de = "Waldworg", fr = "Worg des forêts", es = "Huargo del bosque", pt = "Worg da Mata", ru = "Лесной ворг", pl = "Worg z puszczy", tr = "Kereste Worg'u", it = "Worg del legname", ja = "ティンバー・ウォーグ", zh = "林地座狼", ko = "숲 늑대" }
+type = "beast"
+display = 165
+icon = "Ability_Hunter_Pet_Wolf"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 3201
+name = { en = "Warp Stalker", de = "Sphärenjäger", fr = "Traqueur dimensionnel", es = "Acechador de distorsión", pt = "Espreitador Dimensional", ru = "Прыгун-ловец", pl = "Prześladowca osnowy", tr = "Çarpık Takipçi", it = "Inseguitore dell'Ordito", ja = "ワープ・ストーカー", zh = "迁跃潜猎者", ko = "차원 추적자" }
+type = "beast"
+display = 19996
+icon = "Ability_Hunter_Pet_WarpStalker"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.85
+
+[[zone.enemy]]
+entry = 3202
+name = { en = "Skettis Talonite", de = "Krallenkrieger von Skettis", fr = "Griffonite de Skettis", es = "Garrita de Skettis", pt = "Garrita de Skettis", ru = "Когтит Скеттиса", pl = "Szpon z Skettis", tr = "Skettis Pençeli", it = "Talonita di Skettis", ja = "スケッティス・タロナイト", zh = "斯克提斯利爪", ko = "스케티스 발톱병" }
+type = "humanoid"
+display = 17006
+icon = "Ability_Hunter_Pet_Vulture"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 3203
+name = { en = "Skettis Windwalker", de = "Windläufer von Skettis", fr = "Marchevent de Skettis", es = "Caminavientos de Skettis", pt = "Andaventos de Skettis", ru = "Ветроход Скеттиса", pl = "Wędrowiec wiatru ze Skettis", tr = "Skettis Rüzgar Yürüyeni", it = "Camminavento di Skettis", ja = "スケッティス・ウィンドウォーカー", zh = "斯克提斯驭风者", ko = "스케티스 바람걸음" }
+type = "humanoid"
+display = 17005
+icon = "Ability_Hunter_Pet_Vulture"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.85
+role = { ranged = { spell = 9532, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3204
+name = { en = "Ethereal Spellbinder", de = "Astraler Zauberbinder", fr = "Lieur de sorts éthérien", es = "Ligahechizos etéreo", pt = "Prendefeitiços Etéreo", ru = "Эфириал-чародей", pl = "Eteryczny zaklinacz", tr = "Ruhani Büyü Bağlayıcı", it = "Legaincantesimi etereo", ja = "エセリアル・スペルバインダー", zh = "虚灵缚法者", ko = "에테리얼 주문결속자" }
+type = "humanoid"
+display = 17191
+icon = "Spell_Arcane_Arcane04"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+
+[[zone.enemy]]
+entry = 3205
+name = { en = "Ironjaw Basilisk", de = "Eisenkieferbasilisk", fr = "Basilic mâchefer", es = "Basilisco Quijada de Hierro", pt = "Basilisco Mandíbula de Ferro", ru = "Железнозубый василиск", pl = "Bazyliszek Ironjaw", tr = "Demirçene Basilisk'i", it = "Basilisco Mascellaferro", ja = "アイアンジョー・バジリスク", zh = "铁颚蜥蜴", ko = "무쇠턱 바실리스크" }
+type = "beast"
+display = 16876
+icon = "Ability_Hunter_Pet_Crocolisk"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+
+[[zone.enemy]]
+entry = 3206
+name = { en = "Skettis Kaliri", de = "Kaliri von Skettis", fr = "Kaliri de Skettis", es = "Kaliri de Skettis", pt = "Kaliri de Skettis", ru = "Калири Скеттиса", pl = "Kaliri ze Skettis", tr = "Skettis Kaliri'si", it = "Kaliri di Skettis", ja = "スケッティス・カリリ", zh = "斯克提斯卡利鸟", ko = "스케티스 칼리리" }
+type = "beast"
+display = 16883
+icon = "Ability_Hunter_Pet_Vulture"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.8
+
+[[zone.enemy]]
+entry = 3207
+name = { en = "Auchenai Voidcaller", de = "Leerenrufer der Auchenai", fr = "Évocateur du Vide auchenaï", es = "Clamavacío auchenai", pt = "Evocador do Vazio Auchenai", ru = "Заклинатель Бездны из Аукенаев", pl = "Przywoływacz Pustki Auchenai", tr = "Auchenai Boşluk Çağıran", it = "Evocavuoto Auchenai", ja = "アウケナイの虚無を呼ぶ者", zh = "奥金尼召唤者", ko = "아키나이 공허소환사" }
+type = "demon"
+display = 17704
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3208
+name = { en = "Unbound Voidwraith", de = "Entfesselter Leerengeist", fr = "Âme-du-Vide libérée", es = "Ánima del vacío liberada", pt = "Espectro do Vazio Libertado", ru = "Освобожденный дух Бездны", pl = "Nieskrępowane widmo Pustki", tr = "Bağsız Boşluk Hayaleti", it = "Spettro del Vuoto libero", ja = "解き放たれたヴォイドレイス", zh = "无拘的虚空幽灵", ko = "해방된 공허 망령" }
+type = "demon"
+display = 18069
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 1.1
+role = { exploder = { spell = 9874, burst = 30852, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.elite]]
+entry = 3210
+name = { en = "Skettis Talonguard", de = "Krallenwache von Skettis", fr = "Garde-serre de Skettis", es = "Guardia de garras de Skettis", pt = "Guarda-garra de Skettis", ru = "Страж Скеттиса", pl = "Szponowy strażnik ze Skettis", tr = "Skettis Pençe Muhafızı", it = "Guardia Artiglio di Skettis", ja = "スケッティス・タロンガード", zh = "斯克提斯爪卫", ko = "스케티스 발톱경비병" }
+type = "humanoid"
+display = 17857
+icon = "Ability_Hunter_Pet_Vulture"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.3
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 3211
+name = { en = "Shadowmaster", de = "Schattenmeister", fr = "Maître de l'ombre", es = "Maestro de las sombras", pt = "Mestre das Sombras", ru = "Мастер теней", pl = "Mistrz cienia", tr = "Gölge Ustası", it = "Maestro d'ombra", ja = "シャドウマスター", zh = "暗影大师", ko = "어둠의 대가" }
+type = "demon"
+display = 16635
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.1
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.elite]]
+entry = 3212
+name = { en = "Vengeful Spirit", de = "Rachsüchtiger Geist", fr = "Esprit vengeur", es = "Espíritu vengativo", pt = "Espírito Vingativo", ru = "Мстительный дух", pl = "Mściwy duch", tr = "İntikamcı Ruh", it = "Spirito vendicativo", ja = "復讐の霊", zh = "复仇之魂", ko = "복수의 혼령" }
+type = "undead"
+display = 16162
+icon = "Achievement_Halloween_Ghost_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 8.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { wander = { spell = 28547, count = 1, radius = 3.0, speed = 3.5, lasts = 6.0, tick = 0.5 } }
+
+[[zone.boss]]
+entry = 3290
+name = { en = "Pandemonius", de = "Pandemonius", fr = "Pandemonius", es = "Pandemonius", pt = "Pandemonius", ru = "Пандемониус", pl = "Pandemonius", tr = "Pandemonius", it = "Pandemonius", ja = "パンデモニウス", zh = "潘德莫努斯", ko = "판데모니우스" }
+type = "demon"
+display = 18170
+icon = "Spell_Shadow_SummonVoidWalker"
+health = 4600
+damage = 28
+speed = 5.8
+size = 2.0
+minute = 4
+yell = { en = "I will feed on your soul!", de = "Ich werde mich an eurer Seele laben!", fr = "Je vais me repaître de votre âme !", es = "¡Me alimentaré de tu alma!", pt = "Vou me alimentar da sua alma!", ru = "Я пожру вашу душу!", pl = "Pożywię się waszymi duszami!", tr = "Ruhunuzla besleneceğim!", it = "Mi nutrirò della tua anima!", ja = "貴様の魂を喰らってくれる！", zh = "我要吞食你的灵魂！", ko = "네 영혼을 먹어 치우리라!" }
+kit = "pandemonius"
+
+[[zone.boss]]
+entry = 3291
+name = { en = "Shirrak the Dead Watcher", de = "Shirrak der Totenwächter", fr = "Shirrak le Veillemort", es = "Shirrak el Vigía de la Muerte", pt = "Shirrak, o Vigia Morto", ru = "Ширрак Страж Мертвых", pl = "Shirrak Martwy Strażnik", tr = "Ölü Gözcü Shirrak", it = "Shirrak il Veglia-morti", ja = "死の監視者シラク", zh = "死亡观察者希尔拉克", ko = "죽음의 감시인 쉬라크" }
+type = "beast"
+display = 18043
+icon = "Ability_Hunter_Pet_Bat"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.4
+minute = 8
+yell = { en = "Shirrak stirs in the crypts below!", de = "Shirrak regt sich in den Krypten darunter!", fr = "Shirrak s'agite dans les cryptes en contrebas !", es = "¡Shirrak se agita en las criptas de abajo!", pt = "Shirrak se agita nas criptas abaixo!", ru = "Ширрак шевелится в склепах внизу!", pl = "Shirrak budzi się w krypcie poniżej!", tr = "Shirrak aşağıdaki mahzenlerde kıpırdıyor!", it = "Shirrak si agita nelle cripte sottostanti!", ja = "シラックが地下の墓所でうごめく！", zh = "希拉克在地下墓穴中苏醒！", ko = "쉬라크가 아래 납골당에서 꿈틀거립니다!" }
+kit = "shirrak_the_dead_watcher"
+
+[[zone.boss]]
+entry = 3292
+name = { en = "Exarch Maladaar", de = "Exarch Maladaar", fr = "Exarque Maladaar", es = "Exarca Maladaar", pt = "Exarca Maladaar", ru = "Экзарх Маладаар", pl = "Egzarcha Maladaar", tr = "Eksarh Maladaar", it = "Esarca Maladaar", ja = "エクザーク・マラダール", zh = "大主教玛拉达尔", ko = "총독 말라다르" }
+type = "humanoid"
+display = 17463
+icon = "Achievement_Boss_Exarch_Maladaar"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.4
+minute = 12
+yell = { en = "You will pay for this intrusion!", de = "Für dieses Eindringen werdet ihr bezahlen!", fr = "Vous paierez cette intrusion !", es = "¡Pagaréis por esta intrusión!", pt = "Vocês pagarão por esta invasão!", ru = "Вы заплатите за это вторжение!", pl = "Zapłacicie za to wtargnięcie!", tr = "Bu izinsiz girişin bedelini ödeyeceksiniz!", it = "Pagherete per questa intrusione!", ja = "この侵入の報いを受けるがいい！", zh = "你们会为这次闯入付出代价！", ko = "이 침입의 대가를 치르게 될 것이다!" }
+kit = "exarch_maladaar"
+
+[[zone.boss]]
+entry = 3293
+name = { en = "Darkweaver Syth", de = "Dunkelwirker Syth", fr = "Tisseur noir Syth", es = "Tejeoscuro Syth", pt = "Tecelão Sombrio Syth", ru = "Темнотканный Сит", pl = "Mrocznotkacz Syth", tr = "Karanlık Dokuyucu Syth", it = "Tessiscuro Syth", ja = "闇を織る者サイス", zh = "黑暗编织者塞斯", ko = "흑마술사 시스" }
+type = "humanoid"
+display = 17858
+icon = "Ability_Hunter_Pet_Vulture"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.0
+minute = 16
+yell = { en = "The elements answer my call!", de = "Die Elemente folgen meinem Ruf!", fr = "Les éléments répondent à mon appel !", es = "¡Los elementos responden a mi llamada!", pt = "Os elementos atendem ao meu chamado!", ru = "Стихии отвечают на мой зов!", pl = "Żywioły odpowiadają na moje wezwanie!", tr = "Elementler çağrıma cevap veriyor!", it = "Gli elementi rispondono al mio richiamo!", ja = "エレメントが我が呼び声に応える！", zh = "元素回应我的召唤！", ko = "정령이 내 부름에 응답한다!" }
+kit = "darkweaver_syth"
+
+[[zone.boss]]
+entry = 2003
+name = { en = "Talon King Ikiss", de = "Klauenkönig Ikiss", fr = "Roi-serre Ikiss", es = "Rey Garra Ikiss", pt = "Rei Garra Ikiss", ru = "Король Когтей Икисс", pl = "Szponiasty Król Ikiss", tr = "Pençe Kralı Ikiss", it = "Re Artiglio Ikiss", ja = "タロンキング・イキス", zh = "利爪之王艾吉斯", ko = "갈퀴대왕 이키스" }
+type = "humanoid"
+display = 17859
+icon = "Achievement_Boss_TalonKingIkiss"
+health = 60000
+damage = 66
+speed = 6.0
+size = 2.0
+minute = 20
+yell = { en = "No! You shall not pass!", de = "Nein! Ihr kommt nicht vorbei!", fr = "Non ! Vous ne passerez pas !", es = "¡No! ¡No pasaréis!", pt = "Não! Vocês não passarão!", ru = "Нет! Вы не пройдете!", pl = "Nie! Nie przejdziecie!", tr = "Hayır! Geçemeyeceksiniz!", it = "No! Non passerete!", ja = "否！ここは通さぬ！", zh = "不！你们休想通过！", ko = "안 돼! 지나갈 수 없다!" }
+final = true
+kit = "talon_king_ikiss"

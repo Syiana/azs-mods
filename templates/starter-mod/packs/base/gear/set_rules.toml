@@ -1,0 +1,11 @@
+# How a set wakes (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# Armor pieces that wake the small and the big bonus, and the least stars each of them needs.
+key = "rules"
+pieces = [4, 8]
+stars = [1, 3]
+# All eight pieces at this many stars empower the big bonus, by this factor.
+empower_stars = 5
+empower = 1.5

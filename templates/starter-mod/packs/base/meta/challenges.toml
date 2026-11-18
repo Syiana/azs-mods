@@ -1,0 +1,60 @@
+# The run challenges (survivors-sim challenges.rs), in the window's order; the rules are the server's
+# code, matched by key. `bonus_pct` is what each pays.
+#
+# Every challenge, in the order the window lists them. Bonuses `TUNE`.
+
+[[challenge]]
+key = "hardcore"
+icon = "Ability_Warrior_Rampage"
+bonus_pct = 20
+name = { en = "Hardcore", de = "Hardcore", fr = "Hardcore", es = "Hardcore", pt = "Hardcore", ru = "Хардкор", pl = "Hardcore", tr = "Hardcore", it = "Hardcore", ja = "ハードコア", zh = "硬核", ko = "하드코어" }
+text = { en = "Enemies deal 50% more damage and have 25% more health.", de = "Feinde verursachen 50% mehr Schaden und haben 25% mehr Gesundheit.", fr = "Les ennemis infligent 50% de dégâts en plus et ont 25% de santé en plus.", es = "Los enemigos infligen un 50% más de daño y tienen un 25% más de salud.", pt = "Os inimigos causam 50% a mais de dano e têm 25% a mais de vida.", ru = "Враги наносят на 50% больше урона и имеют на 25% больше здоровья.", pl = "Przeciwnicy zadają o 50% więcej obrażeń i mają o 25% więcej zdrowia.", tr = "Düşmanlar 50% daha fazla hasar verir ve 25% daha fazla cana sahiptir.", it = "I nemici infliggono il 50% di danni in più e hanno il 25% di salute in più.", ja = "敵のダメージが50%増加し、体力が25%増加します。", zh = "敌人造成的伤害提高50%，生命值提高25%。", ko = "적이 50% 더 많은 피해를 주고 생명력이 25% 많습니다." }
+
+[[challenge]]
+key = "one_life"
+icon = "INV_Misc_Bone_HumanSkull_01"
+bonus_pct = 15
+name = { en = "One Life", de = "Ein Leben", fr = "Une seule vie", es = "Una vida", pt = "Uma Vida", ru = "Одна жизнь", pl = "Jedno życie", tr = "Tek Can", it = "Una vita", ja = "命はひとつ", zh = "一命通关", ko = "단 하나의 목숨" }
+text = { en = "No revives and no extra lives: a hero who falls is out.", de = "Keine Wiederbelebung und keine Extraleben: Wer fällt, ist raus.", fr = "Ni résurrection ni vie supplémentaire : un héros qui tombe est éliminé.", es = "Sin resurrecciones ni vidas extra: el héroe que cae queda fuera.", pt = "Sem reviver e sem vidas extras: o herói que cai está fora.", ru = "Ни воскрешений, ни лишних жизней: павший герой выбывает.", pl = "Bez wskrzeszeń i dodatkowych żyć: bohater, który padnie, odpada.", tr = "Diriltme ve ek can yok: düşen kahraman elenir.", it = "Niente resurrezioni né vite extra: un eroe che cade è fuori.", ja = "蘇生も追加ライフもなし：倒れたヒーローは脱落します。", zh = "无法复活，也没有额外生命：倒下的英雄即被淘汰。", ko = "부활도 추가 목숨도 없습니다: 쓰러진 영웅은 탈락합니다." }
+
+[[challenge]]
+key = "speed_up"
+icon = "Ability_Rogue_Sprint"
+bonus_pct = 10
+name = { en = "Speed Up", de = "Beschleunigt", fr = "Accéléré", es = "Más rápido", pt = "Acelerado", ru = "Ускорение", pl = "Przyspieszenie", tr = "Hızlandır", it = "Accelerato", ja = "スピードアップ", zh = "加速", ko = "가속" }
+text = { en = "Enemies move and spawn 25% faster.", de = "Feinde bewegen sich und erscheinen 25% schneller.", fr = "Les ennemis se déplacent et apparaissent 25% plus vite.", es = "Los enemigos se mueven y aparecen un 25% más rápido.", pt = "Os inimigos se movem e surgem 25% mais rápido.", ru = "Враги двигаются и появляются на 25% быстрее.", pl = "Przeciwnicy poruszają się i pojawiają o 25% szybciej.", tr = "Düşmanlar 25% daha hızlı hareket eder ve belirir.", it = "I nemici si muovono e compaiono il 25% più in fretta.", ja = "敵の移動と出現が25%速くなります。", zh = "敌人的移动和刷新速度加快25%。", ko = "적이 25% 더 빠르게 움직이고 나타납니다." }
+
+[[challenge]]
+key = "half_xp"
+icon = "INV_Misc_Book_09"
+bonus_pct = 15
+name = { en = "Half XP", de = "Halbe Erfahrung", fr = "Demi-XP", es = "Mitad de XP", pt = "Metade de XP", ru = "Половина опыта", pl = "Połowa doświadczenia", tr = "Yarım TP", it = "Metà esperienza", ja = "経験値半減", zh = "经验减半", ko = "경험치 절반" }
+text = { en = "Experience orbs give half as much.", de = "Erfahrungskugeln geben nur halb so viel.", fr = "Les orbes d'expérience donnent moitié moins.", es = "Las esferas de experiencia dan la mitad.", pt = "As esferas de experiência dão metade.", ru = "Сферы опыта дают вдвое меньше.", pl = "Kulki doświadczenia dają o połowę mniej.", tr = "Tecrübe küreleri yarı kadar verir.", it = "Le sfere di esperienza ne danno la metà.", ja = "経験値オーブの獲得量が半分になります。", zh = "经验球提供的经验值减半。", ko = "경험치 구슬이 절반만 줍니다." }
+
+[[challenge]]
+key = "half_damage"
+icon = "Ability_Warrior_Disarm"
+bonus_pct = 20
+name = { en = "Half Damage", de = "Halber Schaden", fr = "Demi-dégâts", es = "Mitad de daño", pt = "Metade do Dano", ru = "Половина урона", pl = "Połowa obrażeń", tr = "Yarım Hasar", it = "Metà danni", ja = "ダメージ半減", zh = "伤害减半", ko = "피해 절반" }
+text = { en = "Your heroes deal half damage.", de = "Deine Helden verursachen nur halben Schaden.", fr = "Tes héros infligent moitié moins de dégâts.", es = "Tus héroes infligen la mitad de daño.", pt = "Seus heróis causam metade do dano.", ru = "Твои герои наносят вдвое меньше урона.", pl = "Twoi bohaterowie zadają połowę obrażeń.", tr = "Kahramanların yarı hasar verir.", it = "I tuoi eroi infliggono metà dei danni.", ja = "ヒーローの与えるダメージが半分になります。", zh = "你的英雄造成的伤害减半。", ko = "영웅이 절반의 피해만 줍니다." }
+
+[[challenge]]
+key = "glass_cannon"
+icon = "Spell_Fire_SelfDestruct"
+bonus_pct = 15
+name = { en = "Glass Cannon", de = "Glaskanone", fr = "Canon de verre", es = "Cañón de cristal", pt = "Canhão de Vidro", ru = "Стеклянная пушка", pl = "Szklana armata", tr = "Cam Top", it = "Cannone di vetro", ja = "ガラスの大砲", zh = "玻璃大炮", ko = "유리 대포" }
+text = { en = "Your health counts half: every blow you take hits twice as hard.", de = "Deine Gesundheit zählt halb: Jeder Treffer trifft dich doppelt so hart.", fr = "Ta santé compte pour moitié : chaque coup que tu encaisses frappe deux fois plus fort.", es = "Tu salud cuenta la mitad: cada golpe que recibes pega el doble de fuerte.", pt = "Sua vida conta pela metade: cada golpe que você sofre bate duas vezes mais forte.", ru = "Твое здоровье считается вдвое меньше: каждый удар бьет вдвое сильнее.", pl = "Twoje zdrowie liczy się o połowę: każdy otrzymany cios uderza dwa razy mocniej.", tr = "Canın yarım sayılır: aldığın her darbe iki kat sert vurur.", it = "La tua salute vale metà: ogni colpo che subisci colpisce il doppio.", ja = "体力が半分扱いになります：受ける攻撃がすべて2倍の威力になります。", zh = "你的生命值只算一半：你受到的每次攻击伤害加倍。", ko = "생명력이 절반으로 계산됩니다: 받는 모든 공격이 두 배로 아픕니다." }
+
+[[challenge]]
+key = "no_healing"
+icon = "Ability_Warrior_SavageBlow"
+bonus_pct = 15
+name = { en = "No Healing", de = "Keine Heilung", fr = "Aucun soin", es = "Sin curación", pt = "Sem Cura", ru = "Без лечения", pl = "Bez leczenia", tr = "İyileştirme Yok", it = "Niente cure", ja = "回復なし", zh = "禁止治疗", ko = "치유 금지" }
+text = { en = "Heals and regeneration do nothing. Shields still work.", de = "Heilung und Regeneration wirken nicht. Schilde wirken weiterhin.", fr = "Les soins et la régénération n'ont aucun effet. Les boucliers fonctionnent toujours.", es = "La curación y la regeneración no hacen nada. Los escudos siguen funcionando.", pt = "Cura e regeneração não fazem nada. Escudos ainda funcionam.", ru = "Лечение и регенерация не действуют. Щиты по-прежнему работают.", pl = "Leczenie i regeneracja nie działają. Tarcze nadal działają.", tr = "İyileştirmeler ve yenilenme işe yaramaz. Kalkanlar yine çalışır.", it = "Cure e rigenerazione non fanno nulla. Gli scudi funzionano ancora.", ja = "回復と再生は効果がありません。シールドは機能します。", zh = "治疗和生命恢复无效。护盾仍然有效。", ko = "치유와 재생이 아무 효과도 없습니다. 보호막은 그대로 작동합니다." }
+
+[[challenge]]
+key = "no_dash"
+icon = "Ability_Rogue_Trip"
+bonus_pct = 10
+name = { en = "No Dash", de = "Kein Ausweichsprung", fr = "Aucune esquive", es = "Sin esquiva", pt = "Sem Esquiva", ru = "Без рывка", pl = "Bez zrywu", tr = "Atılma Yok", it = "Niente scatto", ja = "ダッシュなし", zh = "禁止冲刺", ko = "돌진 금지" }
+text = { en = "Your heroes cannot dash.", de = "Deine Helden können keinen Ausweichsprung nutzen.", fr = "Tes héros ne peuvent pas esquiver.", es = "Tus héroes no pueden esquivar.", pt = "Seus heróis não podem esquivar.", ru = "Твои герои не могут делать рывок.", pl = "Twoi bohaterowie nie mogą wykonywać zrywu.", tr = "Kahramanların atılamaz.", it = "I tuoi eroi non possono scattare.", ja = "ヒーローはダッシュできません。", zh = "你的英雄无法冲刺。", ko = "영웅이 돌진할 수 없습니다." }

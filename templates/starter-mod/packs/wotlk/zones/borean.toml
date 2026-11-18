@@ -1,0 +1,295 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "borean"
+order = 24
+name = { en = "Borean Tundra", de = "Boreanische Tundra", fr = "Toundra Boréenne", es = "Tundra Boreal", pt = "Tundra Boreana", ru = "Борейская тундра", pl = "Tundra Borejska", tr = "Boreas Tundrası", it = "Tundra Boreale", ja = "ボアリアン・ツンドラ", zh = "北风苔原", ko = "북풍의 땅" }
+subtitle = { en = "The Nexus War", de = "Der Nexuskrieg", fr = "La guerre du Nexus", es = "La Guerra del Nexo", pt = "A Guerra do Nexus", ru = "Война за Нексус", pl = "Wojna o Nexus", tr = "Nexus Savaşı", it = "La Guerra del Nexus", ja = "ネクサス戦争", zh = "魔枢之战", ko = "마력의 탑 전쟁" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_BoreanTundra_01"
+map = 571
+map_name = "Northrend"
+area = 3537
+center = [3300.0, 5000.0]
+radius = 100.0
+map_bounds = [8570.83, 2806.25, 4897.92, 1054.17]
+health_factor = 17.0
+gold_factor = 3.64
+late_factor = 0.4
+hour = 10
+weather = { fine = 55, rain = 10, snow = 35 }
+# Northrend's first pair drops Uncommon, not its place's Common: a hero here holds the Common set
+# already (2026-11-13). `TUNE`
+gear_rarity = "uncommon"
+
+[[zone.enemy]]
+entry = 4200
+name = { en = "Scourged Ghoul", de = "Geißelghul", fr = "Goule du Fléau", es = "Necrófago azotado", pt = "Carniçal do Flagelo", ru = "Вурдалак Плети", pl = "Ghul dotknięty Plagą", tr = "Yıkım Ordusu Gulyabanisi", it = "Ghoul del Flagello", ja = "スカージ化したグール", zh = "天灾食尸鬼", ko = "스컬지 구울" }
+type = "undead"
+display = 24992
+icon = "Ability_GhoulFrenzy"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 4201
+name = { en = "Snowfall Wolf", de = "Schneefallwolf", fr = "Loup de Chute-de-Neige", es = "Lobo de Nevada", pt = "Lobo da Neve Caída", ru = "Волк Снегопада", pl = "Wilk z Snowfall", tr = "Karyağışı Kurdu", it = "Lupo di Nevecaduta", ja = "スノーフォール・ウルフ", zh = "落雪狼", ko = "눈내림 늑대" }
+type = "beast"
+display = 776
+icon = "Ability_Hunter_Pet_Wolf"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.75
+
+[[zone.enemy]]
+entry = 4202
+name = { en = "Nerubian Skirmisher", de = "Nerubischer Plänkler", fr = "Tirailleur nérubien", es = "Escaramuzador nerubiano", pt = "Escaramuçador Nerubiano", ru = "Нерубский застрельщик", pl = "Harcownik nerubów", tr = "Nerubyalı Çatışmacı", it = "Schermagliatore Nerubiano", ja = "ネルビアンの散兵", zh = "蛛魔散兵", ko = "네루비안 척후병" }
+type = "humanoid"
+display = 23561
+icon = "INV_Misc_Head_Nerubian_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.85
+
+[[zone.enemy]]
+entry = 4203
+name = { en = "Kvaldir Mistweaver", de = "Nebelwirker der Kvaldir", fr = "Tisseur de brume kvaldir", es = "Tejenieblas kvaldir", pt = "Tecelão de Névoa Kvaldir", ru = "Ткач тумана квалдиров", pl = "Tkacz mgieł Kvaldirów", tr = "Kvaldir Sis Dokuyucusu", it = "Tessinebbia Kvaldir", ja = "クヴァルディアのミストウィーヴァー", zh = "克瓦迪尔织雾者", ko = "크발디르 안개술사" }
+type = "humanoid"
+display = 23553
+icon = "INV_Misc_Head_Vrykul"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.9
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4204
+name = { en = "Wooly Rhino", de = "Wollnashorn", fr = "Rhinocéros laineux", es = "Rinoceronte lanudo", pt = "Rinoceronte Lanoso", ru = "Шерстистый носорог", pl = "Włochaty nosorożec", tr = "Yünlü Gergedan", it = "Rinoceronte lanoso", ja = "ウーリー・ライノ", zh = "长毛犀牛", ko = "털북숭이 코뿔소" }
+type = "beast"
+display = 26264
+icon = "Ability_Hunter_Pet_Rhino"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.8
+
+[[zone.enemy]]
+entry = 4205
+name = { en = "Wooly Mammoth", de = "Wollmammut", fr = "Mammouth laineux", es = "Mamut lanudo", pt = "Mamute Lanoso", ru = "Шерстистый мамонт", pl = "Włochaty mamut", tr = "Yünlü Mamut", it = "Mammut lanoso", ja = "ウーリー・マンモス", zh = "长毛猛犸象", ko = "털북숭이 매머드" }
+type = "beast"
+display = 25449
+icon = "Ability_Mount_Mammoth_Brown"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 0.55
+
+[[zone.enemy]]
+entry = 4206
+name = { en = "Borean Condor", de = "Boreanischer Kondor", fr = "Condor boréen", es = "Cóndor boreal", pt = "Condor Boreano", ru = "Борейский кондор", pl = "Kondor borejski", tr = "Boreas Akbabası", it = "Condor boreale", ja = "ボアリアン・コンドル", zh = "北风秃鹰", ko = "북풍의 땅 콘도르" }
+type = "beast"
+display = 23482
+icon = "Ability_Hunter_Pet_Vulture"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.7
+
+[[zone.enemy]]
+entry = 4207
+name = { en = "Nerubian Spider-Priest", de = "Nerubischer Spinnenpriester", fr = "Prêtre-araignée nérubien", es = "Sacerdote araña nerubiano", pt = "Sacerdote-aranha Nerubiano", ru = "Нерубский паук-жрец", pl = "Pajęczy kapłan nerubów", tr = "Nerubyalı Örümcek Rahibi", it = "Sacerdote ragno nerubiano", ja = "ネルビアンの蜘蛛司祭", zh = "蛛魔蜘蛛祭司", ko = "네루비안 거미사제" }
+type = "humanoid"
+display = 23569
+icon = "INV_Misc_Head_Nerubian_01"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.85
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4208
+name = { en = "Magnataur Huntress", de = "Jägerin der Magnataur", fr = "Chasseresse magnataure", es = "Cazadora magnataur", pt = "Caçadora Magnataur", ru = "Охотница магнатавров", pl = "Łowczyni magnataurów", tr = "Magnataur Avcısı", it = "Cacciatrice Magnataur", ja = "マグナタウルの女狩人", zh = "猛犸人女猎手", ko = "마그나타우르 여사냥꾼" }
+type = "giant"
+display = 24835
+icon = "Achievement_Dungeon_UlduarRaid_IceGiant_01"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 0.7
+
+[[zone.elite]]
+entry = 4210
+name = { en = "Kvaldir Raider", de = "Plünderer der Kvaldir", fr = "Pillard kvaldir", es = "Asaltante kvaldir", pt = "Saqueador Kvaldir", ru = "Налетчик квалдиров", pl = "Najeźdźca Kvaldirów", tr = "Kvaldir Akıncısı", it = "Predone Kvaldir", ja = "クヴァルディアの略奪者", zh = "克瓦迪尔袭击者", ko = "크발디르 약탈자" }
+type = "humanoid"
+display = 25772
+icon = "INV_Misc_Head_Vrykul"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.elite]]
+entry = 4211
+name = { en = "Magnataur Alpha", de = "Alpha der Magnataur", fr = "Alpha magnataure", es = "Alfa magnataur", pt = "Alfa Magnataur", ru = "Альфа магнатавров", pl = "Alfa magnataurów", tr = "Magnataur Alfası", it = "Magnataur alfa", ja = "マグナタウル・アルファ", zh = "猛犸人首领", ko = "마그나타우르 우두머리" }
+type = "giant"
+display = 24844
+icon = "Achievement_Dungeon_UlduarRaid_IceGiant_01"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.75
+
+[[zone.elite.kit]]
+every = 11.0
+ability = { stomp = { spell = 20549, radius = 7.0, warn = 1.8, knock = 10.0 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 9.0, arc = 80.0, warn = 1.4, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 4212
+name = { en = "Nerubian Warlord", de = "Nerubischer Kriegsherr", fr = "Seigneur de guerre nérubien", es = "Señor de la guerra nerubiano", pt = "Senhor da Guerra Nerubiano", ru = "Нерубский полководец", pl = "Wódz wojenny nerubów", tr = "Nerubyalı Savaş Lordu", it = "Signore della guerra nerubiano", ja = "ネルビアン・ウォーロード", zh = "蛛魔督军", ko = "네루비안 전쟁군주" }
+type = "humanoid"
+display = 23562
+icon = "INV_Misc_Head_Nerubian_01"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.4
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+# Serfex hunts the Borean Tundra in 3.3.5a.
+[[zone.boss]]
+entry = 4793
+name = { en = "Serfex the Reaver", de = "Serfex der Häscher", fr = "Serfex le Saccageur", es = "Serfex el Atracador", pt = "Serfex, o Saqueador", ru = "Серфекс Похититель", pl = "Serfex Rabuś", tr = "Yağmacı Serfex", it = "Serfex il Razziatore", ja = "略奪者サーフェクス", zh = "掠夺者瑟菲克斯", ko = "파괴자 세르펙스" }
+type = "beast"
+display = 26818
+icon = "Ability_Hunter_Pet_Ravager"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.4
+minute = 4
+yell = { en = "Serfex bursts from the earth!", de = "Serfex bricht aus der Erde hervor!", fr = "Serfex jaillit de la terre !", es = "¡Serfex irrumpe desde la tierra!", pt = "Serfex irrompe da terra!", ru = "Серфекс вырывается из земли!", pl = "Serfex wyrywa się z ziemi!", tr = "Serfex yerden fışkırıyor!", it = "Serfex erompe dalla terra!", ja = "サーフェックスが大地から飛び出した！", zh = "瑟菲克斯破土而出！", ko = "서펙스가 땅을 뚫고 튀어나옵니다!" }
+kit = "serfex_the_reaver"
+
+[[zone.boss]]
+entry = 4291
+name = { en = "Ormorok the Tree-Shaper", de = "Ormorok der Baumformer", fr = "Ormorok le Façonneur d'arbres", es = "Ormorok el Moldeaárboles", pt = "Ormorok, o Moldador de Árvores", ru = "Орморок Древоформ", pl = "Ormorok Kształtujący Drzewa", tr = "Ağaç Biçimleyen Ormorok", it = "Ormorok il Plasmaalberi", ja = "樹を形作る者オルモロク", zh = "塑树者奥莫洛克", ko = "나무형상가 오르모로크" }
+type = "giant"
+display = 26551
+icon = "Ability_Druid_ForceofNature"
+health = 11500
+damage = 36
+speed = 5.6
+size = 1.0
+minute = 8
+yell = { en = "Noo!", de = "Neiiin!", fr = "Nooon !", es = "¡Noo!", pt = "Nãão!", ru = "Не-е-ет!", pl = "Nie!", tr = "Hayır!", it = "Noo!", ja = "やめろぉ！", zh = "不——！", ko = "안 돼!" }
+kit = "ormorok_the_tree_shaper"
+
+[[zone.boss]]
+entry = 4292
+name = { en = "Icehorn", de = "Eishorn", fr = "Corne-de-glace", es = "Cuernohielo", pt = "Chifre de Gelo", ru = "Ледяной Рог", pl = "Icehorn", tr = "Buzboynuz", it = "Cornoghiaccio", ja = "アイスホーン", zh = "冰角", ko = "얼음뿔" }
+type = "beast"
+display = 27235
+icon = "Ability_Hunter_Pet_Rhino"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.0
+minute = 12
+yell = { en = "Icehorn charges out of the tundra!", de = "Eishorn stürmt aus der Tundra heran!", fr = "Corne-de-glace charge hors de la toundra !", es = "¡Cuernohielo carga desde la tundra!", pt = "Chifre de Gelo investe da tundra!", ru = "Ледяной Рог несется из тундры!", pl = "Icehorn wypada z tundry!", tr = "Buzboynuz tundradan hücuma geçiyor!", it = "Cornoghiaccio carica fuori dalla tundra!", ja = "アイスホーンがツンドラから突進してくる！", zh = "冰角从苔原上冲了出来！", ko = "얼음뿔이 툰드라에서 돌진해 나옵니다!" }
+kit = "icehorn"
+
+[[zone.boss]]
+entry = 4293
+name = { en = "Kvaldir High-Shaman", de = "Hochschamane der Kvaldir", fr = "Grand chaman kvaldir", es = "Alto chamán kvaldir", pt = "Alto Xamã Kvaldir", ru = "Верховный шаман квалдиров", pl = "Arcyszaman Kvaldirów", tr = "Kvaldir Yüce Şamanı", it = "Alto sciamano Kvaldir", ja = "クヴァルディアの大シャーマン", zh = "克瓦迪尔高阶萨满祭司", ko = "크발디르 고위 주술사" }
+type = "humanoid"
+display = 25774
+icon = "INV_Misc_Head_Vrykul"
+health = 26000
+damage = 54
+speed = 5.8
+size = 2.4
+minute = 16
+yell = { en = "The sea will claim you!", de = "Das Meer wird euch holen!", fr = "La mer vous réclamera !", es = "¡El mar os reclamará!", pt = "O mar vai reclamar vocês!", ru = "Море заберет вас!", pl = "Morze was zabierze!", tr = "Deniz sizi alacak!", it = "Il mare vi reclamerà!", ja = "海が貴様をさらっていく！", zh = "大海会吞没你！", ko = "바다가 너를 데려가리라!" }
+kit = "kvaldir_high_shaman"
+
+[[zone.boss]]
+entry = 2101
+name = { en = "Keristrasza", de = "Keristrasza", fr = "Keristrasza", es = "Keristrasza", pt = "Keristrasza", ru = "Керистраза", pl = "Keristrasza", tr = "Keristrasza", it = "Keristrasza", ja = "ケリストラッサ", zh = "克莉斯塔萨", ko = "케리스트라자" }
+type = "dragonkin"
+display = 1687
+icon = "Achievement_Boss_Keristrasza"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.6
+minute = 20
+yell = { en = "Preserve? Why? There's no truth in it!", de = "Bewahren? Wozu? Darin liegt keine Wahrheit!", fr = "Préserver ? Pourquoi ? Il n'y a aucune vérité là-dedans !", es = "¿Preservar? ¿Por qué? ¡No hay verdad en ello!", pt = "Preservar? Por quê? Não há verdade nisso!", ru = "Сохранить? Зачем? В этом нет правды!", pl = "Zachować? Po co? Nie ma w tym prawdy!", tr = "Korumak mı? Neden? İçinde hakikat yok!", it = "Preservare? Perché? Non c'è verità in questo!", ja = "保存だと？なぜだ？そこに真実などない！", zh = "保存？为什么？那里面没有真相！", ko = "보존하라고? 왜? 거기엔 진실이 없는데!" }
+final = true
+kit = "keristrasza"

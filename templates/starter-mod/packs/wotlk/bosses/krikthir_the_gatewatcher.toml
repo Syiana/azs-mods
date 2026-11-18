@@ -1,0 +1,16 @@
+# Krik'thir the Gatewatcher: Mind Flay, Frenzy, his watchers.
+
+[[boss]]
+key = "krikthir_the_gatewatcher"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 52586 } }
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 6 }

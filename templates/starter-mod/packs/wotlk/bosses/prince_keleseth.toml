@@ -1,0 +1,16 @@
+# Prince Keleseth: Shadow Bolt, Frost Tomb, his skeletons.
+
+[[boss]]
+key = "prince_keleseth"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 43667 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { pool = { spell = 48400, burst = 0, radius = 5.0, warn = 2.0, factor = 2.6 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 6 }

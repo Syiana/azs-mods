@@ -1,0 +1,16 @@
+# Hadronox: Acid Cloud, Web Grab.
+
+[[boss]]
+key = "hadronox"
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 53400, burst = 53400, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { tether = { spell = 53406, reach = 16.0, warn = 1.6, lasts = 4.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

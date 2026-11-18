@@ -1,0 +1,20 @@
+# Lord Marrowgar: Bone Storm, Coldflame, Bone Slice.
+
+[[boss]]
+key = "lord_marrowgar"
+
+[[boss.kit]]
+every = 16.0
+ability = { whirlwind = { spell = 69075, radius = 8.0, lasts = 6.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { line = { spell = 69146, len = 30.0, w = 5.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 69055, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.6 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

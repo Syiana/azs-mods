@@ -1,0 +1,16 @@
+# Attumen the Huntsman: Shadow Cleave, the mounted Charge.
+
+[[boss]]
+key = "attumen_the_huntsman"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 29832, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

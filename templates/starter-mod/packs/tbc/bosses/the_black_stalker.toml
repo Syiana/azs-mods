@@ -1,0 +1,16 @@
+# The Black Stalker: Chain Lightning, Static Charge (carried into the horde), Spore Striders.
+
+[[boss]]
+key = "the_black_stalker"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 31717 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { bomb = { spell = 31715, radius = 7.0, time = 5.0, warn = 1.8, factor = 15.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 10 }

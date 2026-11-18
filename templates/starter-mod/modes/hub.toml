@@ -1,0 +1,180 @@
+# Hub: a place to meet, not a run. Up to sixteen heroes stand around in Dalaran, show their
+# looks and emote; nothing comes at them, nothing is earned, nothing ends. See docs/PLAN-HUB.md.
+
+name = "Hub"
+extends = "standard"
+
+[card]
+order = 4
+icon = "INV_Misc_Note_02"
+color = [0.3, 0.7, 0.45]
+tag = "SOCIAL · 1-16"
+text = "A quiet square in Dalaran, the city of the Kirin Tor, to meet friends: no horde, no clock, no end. Show your wings and horns, emote, and just hang out."
+rules = [
+    "Up to sixteen heroes",
+    "No enemies, no death, no end",
+    "Nothing is earned or recorded",
+]
+rewards = []
+
+[i18n.de]
+name = "Treffpunkt"
+tag = "SOZIAL · 1-16"
+text = "Ein ruhiger Platz in Dalaran, der Stadt der Kirin Tor, um Freunde zu treffen: keine Horde, keine Uhr, kein Ende. Zeig deine Flügel und Hörner, nutze Emotes und häng einfach ab."
+rules = [
+    "Bis zu sechzehn Helden",
+    "Keine Gegner, kein Tod, kein Ende",
+    "Nichts wird verdient oder gezählt",
+]
+rewards = []
+
+[i18n.fr]
+name = "Lieu de rencontre"
+tag = "SOCIAL · 1-16"
+text = "Une place tranquille de Dalaran, la cité des Kirin Tor, pour retrouver des amis : pas de horde, pas de chrono, pas de fin. Montre tes ailes et tes cornes, fais des emotes et profite, tout simplement."
+rules = [
+    "Jusqu'à seize héros",
+    "Pas d'ennemis, pas de mort, pas de fin",
+    "Rien n'est gagné ni enregistré",
+]
+rewards = []
+
+[i18n.es]
+name = "Punto de encuentro"
+tag = "SOCIAL · 1-16"
+text = "Una plaza tranquila de Dalaran, la ciudad de los Kirin Tor, para quedar con amigos: sin horda, sin reloj, sin final. Enseña tus alas y cuernos, usa emotes y relájate."
+rules = [
+    "Hasta dieciséis héroes",
+    "Sin enemigos, sin muerte, sin final",
+    "No se gana ni se registra nada",
+]
+rewards = []
+
+[i18n.pt]
+name = "Ponto de Encontro"
+tag = "SOCIAL · 1-16"
+text = "Uma praça tranquila em Dalaran, a cidade dos Kirin Tor, para encontrar amigos: sem horda, sem relógio, sem fim. Mostre suas asas e chifres, use emotes e simplesmente relaxe."
+rules = [
+    "Até dezesseis heróis",
+    "Sem inimigos, sem morte, sem fim",
+    "Nada é ganho nem registrado",
+]
+rewards = []
+
+[i18n.ru]
+name = "Место встреч"
+tag = "СОЦИАЛЬНЫЙ · 1-16"
+text = "Тихая площадь в Даларане, городе Кирин-Тора, чтобы встречаться с друзьями: ни орды, ни таймера, ни конца. Покажи свои крылья и рога, используй эмоции и просто отдыхай."
+rules = [
+    "До шестнадцати героев",
+    "Ни врагов, ни смерти, ни конца",
+    "Ничего не зарабатывается и не записывается",
+]
+rewards = []
+
+[i18n.it]
+name = "Punto di incontro"
+tag = "SOCIALE · 1-16"
+text = "Una piazza tranquilla a Dalaran, la città dei Kirin Tor, per incontrare gli amici: niente orda, niente tempo, niente fine. Mostra ali e corna, fai emote e rilassati."
+rules = [
+    "Fino a sedici eroi",
+    "Niente nemici, niente morte, niente fine",
+    "Non si guadagna né si registra nulla",
+]
+rewards = []
+
+[i18n.pl]
+name = "Centrum"
+tag = "TOWARZYSKI · 1-16"
+text = "Spokojny plac w Dalaranie, mieście Kirin Tor, na spotkania ze znajomymi: bez hordy, bez zegara, bez końca. Pokaż skrzydła i rogi, używaj emotek i po prostu spędzaj czas."
+rules = [
+    "Do szesnastu bohaterów",
+    "Bez przeciwników, bez śmierci, bez końca",
+    "Nic się nie zdobywa ani nie zapisuje",
+]
+rewards = []
+
+[i18n.tr]
+name = "Merkez"
+tag = "SOSYAL · 1-16"
+text = "Dalaran'da, Kirin Tor'un şehrinde, arkadaşlarla buluşmak için sakin bir meydan: sürü yok, süre yok, son yok. Kanatlarını ve boynuzlarını göster, emote yap ve takıl."
+rules = [
+    "On altıya kadar kahraman",
+    "Düşman yok, ölüm yok, son yok",
+    "Hiçbir şey kazanılmaz veya kaydedilmez",
+]
+rewards = []
+
+[i18n.ja]
+name = "集いの広場"
+tag = "ソーシャル・1-16"
+text = "キリン・トアの都ダラランにある静かな広場で、友達と会えます。群れも時間制限も終わりもありません。翼や角を見せ合い、エモートで楽しみましょう。"
+rules = [
+    "最大16人のヒーロー",
+    "敵も死も終わりもありません",
+    "何も獲得・記録されません",
+]
+rewards = []
+
+[i18n.zh]
+name = "聚会广场"
+tag = "社交 · 1-16"
+text = "达拉然——肯瑞托之城中的一处宁静广场，与朋友相聚：没有怪潮，没有时限，也没有终点。展示你的翅膀和犄角，做做表情动作，尽情闲逛。"
+rules = [
+    "最多十六名英雄",
+    "没有敌人，没有死亡，没有终点",
+    "不会获得或记录任何东西",
+]
+rewards = []
+
+[i18n.ko]
+name = "만남의 광장"
+tag = "소셜 · 1-16"
+text = "키린 토의 도시 달라란의 조용한 광장에서 친구들과 만나십시오. 무리도, 시간 제한도, 끝도 없습니다. 날개와 뿔을 뽐내고 감정 표현을 하며 어울려 보십시오."
+rules = [
+    "최대 16명의 영웅",
+    "적도, 죽음도, 끝도 없습니다",
+    "아무것도 얻거나 기록하지 않습니다",
+]
+rewards = []
+
+[hub]
+enabled = true
+# Dalaran (`places.rs`), the floating city; `hubs open … place=elwynn` meets in Elwynn instead.
+place = "dalaran"
+# Heroes roam this far from the place's centre, no pillars; the terrain ships this far out.
+roam = 400.0
+
+[coop]
+max_heroes = 16
+
+[difficulty]
+max_tier = 0
+
+# Off as well, though a hub's clock never runs: nothing timed should ever start.
+[rift_bar]
+enabled = false
+
+[rifts]
+enabled = false
+
+[vault]
+enabled = false
+
+[lairs]
+first_seconds = []
+
+[cursed_chest]
+enabled = false
+
+[caches]
+enabled = false
+
+[runes]
+enabled = false
+
+[magnets]
+enabled = false
+
+[events]
+enabled = false

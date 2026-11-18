@@ -1,0 +1,315 @@
+# Scarlet Monastery, "The Crusade's Last Stand".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "sm"
+order = 7
+name = { en = "Scarlet Monastery", de = "Scharlachrotes Kloster", fr = "Monastère écarlate", es = "Monasterio Escarlata", pt = "Mosteiro Escarlate", ru = "Монастырь Алого ордена", pl = "Szkarłatny Klasztor", tr = "Kızıl Manastır", it = "Monastero Scarlatto", ja = "スカーレット・モナステリー", zh = "血色修道院", ko = "붉은십자군 수도원" }
+subtitle = { en = "The Crusade's Last Stand", de = "Das letzte Gefecht des Kreuzzugs", fr = "Le dernier combat de la Croisade", es = "La última batalla de la Cruzada", pt = "A Última Batalha da Cruzada", ru = "Последний бой Алого похода", pl = "Ostatni bastion Krucjaty", tr = "Seferin Son Direnişi", it = "L'ultima resistenza della Crociata", ja = "聖戦士団の最後の砦", zh = "十字军的最后防线", ko = "십자군의 최후 저항" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Tirisfalglades_01"
+# Inside the instance, in the Graveyard's walled cemetery between the crypts (map 189,
+# `monestary_cemetery.wmo`). Like Naxxramas it is a WMO over flat placeholder tiles, so the arena
+# stands on its floor (`floor` below, `places::floor`) and the void past its walls is
+# blocked (`places::floor_only`).
+map = 189
+map_name = "MonasteryInstances"
+area = 796
+# The cemetery's middle: its walls stand at x 1736 to 1860, y 1234 to 1366.
+center = [1798.0, 1300.0]
+# Wall to wall some 60 yd from the middle, the crypts inside it. `TUNE`
+radius = 50.0
+# DungeonMap 137, the Monastery's floor 1 (the Graveyard): the cemetery's WMO group draws on it
+# (`DungeonMapChunk`), so it is the rect the client reads the hero's map position against here,
+# and the minimap's pins fall where the chests stand.
+map_bounds = [1567.97, 947.986, 2030.1814, 1616.8586]
+health_factor = 2.33
+gold_factor = 1.77
+late_factor = 0.12
+hour = 12
+weather = { fine = 85, rain = 15 }
+# The cemetery's floor, read off its WMO: the grass and the path lie at 18 to 19.
+floor = 18.5
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [1963.2422, 1480.355]
+turn = 0
+yaw = -45.0
+pitch = 33.84
+distance = 0.0
+lift = -3.48
+scale = 0.24
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 1300
+name = { en = "Scarlet Monk", de = "Scharlachroter Mönch", fr = "Moine écarlate", es = "Monje Escarlata", pt = "Monge Escarlate", ru = "Монах Алого ордена", pl = "Szkarłatny mnich", tr = "Kızıl Keşiş", it = "Monaco Scarlatto", ja = "スカーレット・モンク", zh = "血色僧侣", ko = "붉은십자군 수도사" }
+type = "humanoid"
+display = 2603
+icon = "INV_Misc_Head_Human_01"
+health = 30
+damage = 4
+swing = 1.6
+speed = 5.6
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 1301
+name = { en = "Scarlet Tracking Hound", de = "Scharlachroter Spürhund", fr = "Limier écarlate", es = "Sabueso rastreador Escarlata", pt = "Cão de Rastreio Escarlate", ru = "Ищейка Алого ордена", pl = "Szkarłatny pies tropiący", tr = "Kızıl İz Sürücü Tazı", it = "Segugio Scarlatto", ja = "スカーレットの追跡犬", zh = "血色追踪犬", ko = "붉은십자군 추적견" }
+type = "beast"
+display = 2709
+icon = "Ability_Hunter_Pet_Wolf"
+health = 26
+damage = 5
+swing = 1.3
+speed = 8.0
+cost = 1.0
+from = 0.5
+size = 1.1
+
+[[zone.enemy]]
+entry = 1302
+name = { en = "Scarlet Scout", de = "Scharlachroter Späher", fr = "Éclaireur écarlate", es = "Explorador Escarlata", pt = "Batedor Escarlate", ru = "Разведчик Алого ордена", pl = "Szkarłatny zwiadowca", tr = "Kızıl Gözcü", it = "Esploratore Scarlatto", ja = "スカーレットの斥候", zh = "血色斥候", ko = "붉은십자군 정찰병" }
+type = "humanoid"
+display = 2516
+icon = "INV_Misc_Head_Human_01"
+health = 26
+damage = 5
+swing = 1.3
+speed = 7.4
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 1303
+name = { en = "Scarlet Adept", de = "Scharlachroter Adept", fr = "Adepte écarlate", es = "Adepto Escarlata", pt = "Adepto Escarlate", ru = "Адепт Алого ордена", pl = "Szkarłatny adept", tr = "Kızıl Ehil", it = "Adepto Scarlatto", ja = "スカーレット・アデプト", zh = "血色专家", ko = "붉은십자군 숙련자" }
+type = "humanoid"
+display = 5726
+icon = "INV_Misc_Head_Human_02"
+health = 38
+damage = 8
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 1.1
+role = { ranged = { spell = 31759, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1304
+name = { en = "Scarlet Centurion", de = "Scharlachroter Zenturio", fr = "Centurion écarlate", es = "Centurión Escarlata", pt = "Centurião Escarlate", ru = "Центурион Алого ордена", pl = "Szkarłatny centurion", tr = "Kızıl Yüzbaşı", it = "Centurione Scarlatto", ja = "スカーレット・センチュリオン", zh = "血色百夫长", ko = "붉은십자군 백부장" }
+type = "humanoid"
+display = 2499
+icon = "INV_Misc_Head_Human_01"
+health = 60
+damage = 9
+swing = 1.8
+speed = 5.6
+cost = 1.5
+from = 3.0
+size = 1.2
+
+[[zone.enemy]]
+entry = 1305
+name = { en = "Scarlet Defender", de = "Scharlachroter Verteidiger", fr = "Défenseur écarlate", es = "Defensor Escarlata", pt = "Defensor Escarlate", ru = "Защитник Алого ордена", pl = "Szkarłatny obrońca", tr = "Kızıl Savunucu", it = "Difensore Scarlatto", ja = "スカーレット・ディフェンダー", zh = "血色防御者", ko = "붉은십자군 수비대" }
+type = "humanoid"
+display = 2462
+icon = "INV_Misc_Head_Human_01"
+health = 140
+damage = 12
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 4.5
+size = 1.6
+
+[[zone.enemy]]
+entry = 1306
+name = { en = "Scarlet Gallant", de = "Scharlachroter Kavalier", fr = "Galant écarlate", es = "Galante Escarlata", pt = "Galante Escarlate", ru = "Кавалер Алого ордена", pl = "Szkarłatny kawaler", tr = "Kızıl Yiğit", it = "Galante Scarlatto", ja = "スカーレット・ギャラント", zh = "血色骑士", ko = "붉은십자군 기사" }
+type = "humanoid"
+display = 2463
+icon = "INV_Misc_Head_Human_01"
+health = 55
+damage = 9
+swing = 1.4
+speed = 7.2
+cost = 1.5
+from = 6.0
+size = 1.15
+
+[[zone.enemy]]
+entry = 1307
+name = { en = "Scarlet Wizard", de = "Scharlachroter Zauberer", fr = "Sorcier écarlate", es = "Hechicero Escarlata", pt = "Mago Escarlate", ru = "Чародей Алого ордена", pl = "Szkarłatny czarodziej", tr = "Kızıl Büyücü", it = "Mago Scarlatto", ja = "スカーレット・ウィザード", zh = "血色巫师", ko = "붉은십자군 마법사" }
+type = "humanoid"
+display = 2525
+icon = "INV_Misc_Head_Human_02"
+health = 52
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 1.2
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 1308
+name = { en = "Scarlet Protector", de = "Scharlachroter Beschützer", fr = "Protecteur écarlate", es = "Protector Escarlata", pt = "Protetor Escarlate", ru = "Покровитель Алого ордена", pl = "Szkarłatny protektor", tr = "Kızıl Koruyucu", it = "Protettore Scarlatto", ja = "スカーレット・プロテクター", zh = "血色保卫者", ko = "붉은십자군 수호병" }
+type = "humanoid"
+display = 2476
+icon = "INV_Misc_Head_Human_01"
+health = 190
+damage = 14
+swing = 2.0
+speed = 5.4
+cost = 3.5
+from = 9.0
+size = 1.9
+
+[[zone.elite]]
+entry = 1309
+name = { en = "Scarlet Myrmidon", de = "Scharlachroter Myrmidone", fr = "Myrmidon écarlate", es = "Mirmidón Escarlata", pt = "Mirmidão Escarlate", ru = "Мирмидон Алого ордена", pl = "Szkarłatny myrmidon", tr = "Kızıl Myrmidon", it = "Mirmidone Scarlatto", ja = "スカーレット・ミュルミドン", zh = "血色仆从", ko = "붉은십자군 미르미돈" }
+type = "humanoid"
+display = 2514
+icon = "INV_Misc_Head_Human_01"
+health = 800
+damage = 24
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.25
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }
+
+[[zone.elite]]
+entry = 1310
+name = { en = "Scarlet Champion", de = "Scharlachrote Championesse", fr = "Champion écarlate", es = "Campeón Escarlata", pt = "Campeão Escarlate", ru = "Защитница Алого ордена", pl = "Szkarłatny czempion", tr = "Kızıl Şampiyon", it = "Campione Scarlatto", ja = "スカーレット・チャンピオン", zh = "血色勇士", ko = "붉은십자군 용사" }
+type = "humanoid"
+display = 2460
+icon = "INV_Misc_Head_Human_01"
+health = 950
+damage = 26
+swing = 2.2
+speed = 5.4
+cost = 13.0
+from = 8.5
+size = 1.6
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { combo = [["charge", { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.2, factor = 1.1 } }], 1.0] }
+
+[[zone.elite]]
+entry = 1311
+name = { en = "Scarlet Abbot", de = "Scharlachroter Abt", fr = "Abbé écarlate", es = "Abad Escarlata", pt = "Abade Escarlate", ru = "Аббат Алого ордена", pl = "Szkarłatny opat", tr = "Kızıl Başrahip", it = "Abate Scarlatto", ja = "スカーレット・アボット", zh = "血色修道院长", ko = "붉은십자군 대수도원장" }
+type = "humanoid"
+display = 2492
+icon = "INV_Misc_Head_Human_02"
+health = 1150
+damage = 32
+swing = 2.2
+speed = 5.2
+cost = 15.0
+from = 13.0
+size = 1.875
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { puddle = { spell = 26573, burst = 26573, radius = 5.0, warn = 1.6, factor = 1.0, lasts = 5.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { pool = { spell = 0, burst = 23860, radius = 4.5, warn = 1.6, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 1390
+name = { en = "Houndmaster Loksey", de = "Hundemeister Loksey", fr = "Maître-chien Loksey", es = "Maestro de sabuesos Loksey", pt = "Mestre-canino Loksey", ru = "Псарь Локси", pl = "Pan psiarni Loksey", tr = "Tazı Ustası Loksey", it = "Mastro dei segugi Loksey", ja = "ハウンドマスター・ロクシー", zh = "驯犬者洛克希", ko = "사냥개조련사 록시" }
+type = "humanoid"
+display = 2040
+icon = "INV_Misc_Head_Human_01"
+health = 3900
+damage = 25
+speed = 6.2
+size = 3.6
+minute = 4
+yell = { en = "Release the hounds!", de = "Lasst die Hunde los!", fr = "Lâchez les chiens !", es = "¡Soltad a los sabuesos!", pt = "Soltem os cães!", ru = "Спустить собак!", pl = "Spuścić psy!", tr = "Tazıları salın!", it = "Liberate i segugi!", ja = "猟犬を放て！", zh = "放狗！", ko = "사냥개를 풀어라!" }
+kit = "houndmaster_loksey"
+
+[[zone.boss]]
+entry = 1391
+name = { en = "Arcanist Doan", de = "Arkanist Doan", fr = "Arcaniste Doan", es = "Arcanista Doan", pt = "Arcanista Doan", ru = "Магистр Доан", pl = "Arcymag Doan", tr = "Arkanist Doan", it = "Arcanista Doan", ja = "アルカニスト・ドアン", zh = "秘法师杜安", ko = "신비술사 도안" }
+type = "humanoid"
+display = 5266
+icon = "INV_Misc_Head_Human_02"
+health = 9600
+damage = 33
+speed = 5.6
+size = 2.8799999
+minute = 7
+yell = { en = "You will not defile these mysteries!", de = "Ihr werdet diese Geheimnisse nicht entweihen!", fr = "Vous ne souillerez pas ces mystères !", es = "¡No profanaréis estos misterios!", pt = "Vocês não profanarão estes mistérios!", ru = "Вы не осквернете эти тайны!", pl = "Nie zbezcześcicie tych tajemnic!", tr = "Bu sırları kirletemeyeceksiniz!", it = "Non profanerete questi misteri!", ja = "この神秘を汚させはせぬ！", zh = "你们休想亵渎这些秘密！", ko = "이 신비를 더럽히게 두지 않으리라!" }
+kit = "arcanist_doan"
+
+[[zone.boss]]
+entry = 1392
+name = { en = "Herod", de = "Herod", fr = "Hérode", es = "Herod", pt = "Herod", ru = "Ирод", pl = "Herod", tr = "Herod", it = "Erode", ja = "ヘロド", zh = "赫洛德", ko = "헤로드" }
+type = "humanoid"
+display = 2041
+icon = "INV_Misc_Head_Human_01"
+health = 18500
+damage = 42
+speed = 6.4
+size = 2.7692308
+minute = 11
+yell = { en = "Ah, I've been waiting for a real challenge!", de = "Ah, ich habe auf eine echte Herausforderung gewartet!", fr = "Ah, j'attendais un vrai défi !", es = "¡Ah, esperaba un desafío de verdad!", pt = "Ah, eu esperava por um desafio de verdade!", ru = "А, я ждал настоящего вызова!", pl = "Ach, czekałem na prawdziwe wyzwanie!", tr = "Ah, gerçek bir meydan okumayı bekliyordum!", it = "Ah, aspettavo una vera sfida!", ja = "ああ、本物の挑戦を待っていたぞ！", zh = "啊，我一直在等一个真正的挑战！", ko = "아, 진정한 도전을 기다리고 있었지!" }
+kit = "herod"
+
+[[zone.boss]]
+entry = 1393
+name = { en = "Scarlet Commander Mograine", de = "Scharlachroter Kommandant Mograine", fr = "Commandant écarlate Mograine", es = "Comandante Escarlata Mograine", pt = "Comandante Escarlate Mograine", ru = "Командир Алого ордена Могрейн", pl = "Szkarłatny dowódca Mograine", tr = "Kızıl Komutan Mograine", it = "Comandante Scarlatto Mograine", ja = "スカーレット司令官モグレイン", zh = "血色十字军指挥官莫格莱尼", ko = "붉은십자군 사령관 모그레인" }
+type = "humanoid"
+display = 2042
+icon = "INV_Misc_Head_Human_01"
+health = 30000
+damage = 48
+speed = 6.2
+size = 2.5
+minute = 14
+yell = { en = "Infidels! They must be purified!", de = "Ungläubige! Sie müssen geläutert werden!", fr = "Infidèles ! Ils doivent être purifiés !", es = "¡Infieles! ¡Deben ser purificados!", pt = "Infiéis! Devem ser purificados!", ru = "Неверные! Их нужно очистить!", pl = "Niewierni! Trzeba ich oczyścić!", tr = "Kâfirler! Arındırılmaları gerek!", it = "Infedeli! Devono essere purificati!", ja = "異端者どもめ！浄化せねばならぬ！", zh = "异教徒！必须净化他们！", ko = "이교도들! 정화해야 한다!" }
+kit = "scarlet_commander_mograine"
+
+[[zone.boss]]
+entry = 1394
+name = { en = "High Inquisitor Whitemane", de = "Hochinquisitorin Weißsträhne", fr = "Grand inquisiteur Blanchetête", es = "Alta inquisidora Melenablanca", pt = "Alta Inquisidora Whitemane", ru = "Верховный инквизитор Вайтмейн", pl = "Najwyższy inkwizytor Whitemane", tr = "Yüksek Engizisyoncu Whitemane", it = "Alto Inquisitore Whitemane", ja = "大審問官ホワイトメイン", zh = "大检察官怀特迈恩", ko = "대심문관 화이트메인" }
+type = "humanoid"
+display = 2043
+icon = "INV_Misc_Head_Human_02"
+health = 57000
+damage = 58
+speed = 6.0
+size = 2.8799999
+minute = 18
+yell = { en = "Mograine has fallen? You shall pay for this treachery!", de = "Mograine ist gefallen? Für diesen Verrat werdet Ihr bezahlen!", fr = "Mograine est tombé ? Vous paierez pour cette traîtrise !", es = "¿Mograine ha caído? ¡Pagaréis por esta traición!", pt = "Mograine caiu? Vocês pagarão por essa traição!", ru = "Могрейн пал? Вы заплатите за это предательство!", pl = "Mograine padł? Zapłacicie za tę zdradę!", tr = "Mograine düştü mü? Bu hainliğin bedelini ödeyeceksiniz!", it = "Mograine è caduto? Pagherete per questo tradimento!", ja = "モグレインが倒れただと？この裏切りの報いを受けるがいい！", zh = "莫格莱尼倒下了？你们要为这背叛付出代价！", ko = "모그레인이 쓰러졌다고? 이 배신의 대가를 치르게 해 주마!" }
+final = true
+kit = "high_inquisitor_whitemane"

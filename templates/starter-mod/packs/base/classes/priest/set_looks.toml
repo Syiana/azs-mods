@@ -1,0 +1,60 @@
+# The priest's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Acolyte's") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Devout pieces: Vestments of the Devout, tier 0 (ItemSet 182).
+[[set_look]]
+key = "priest_uncommon"
+rarity = 1
+pieces = [
+    [0, 31104, 1, "Crown_01"], [1, 31103, 3, "Shoulder_02"],
+    [2, 30422, 20, "Chest_Cloth_11"], [3, 30425, 6, "Belt_10"],
+    [4, 30424, 7, "Pants_08"], [5, 30430, 8, "Boots_05"],
+    [6, 30426, 9, "Belt_31"], [7, 30427, 10, "Gauntlets_14"],
+]
+
+# Prophecy pieces: Vestments of Prophecy, tier 1 (ItemSet 202).
+[[set_look]]
+key = "priest_rare"
+rarity = 2
+pieces = [
+    [0, 31371, 1, "Helmet_34"], [1, 30623, 3, "Shoulder_02"],
+    [2, 31490, 20, "Chest_Cloth_03"], [3, 30621, 6, "Belt_22"],
+    [4, 28198, 7, "Pants_08"], [5, 31718, 8, "Boots_07"],
+    [6, 30617, 9, "Bracer_09"], [7, 30620, 10, "Gauntlets_14"],
+]
+
+# Transcendence pieces: Vestments of Transcendence, tier 2 (ItemSet 211).
+[[set_look]]
+key = "priest_epic"
+rarity = 3
+pieces = [
+    [0, 34233, 1, "Helmet_24"], [1, 34048, 3, "Shoulder_02"],
+    [2, 34047, 20, "Chest_Cloth_03"], [3, 34053, 6, "Belt_22"],
+    [4, 34049, 7, "Pants_08"], [5, 34055, 8, "Boots_07"],
+    [6, 34052, 9, "Bracer_09"], [7, 34051, 10, "Gauntlets_14"],
+]
+
+# Faith pieces: Vestments of Faith, tier 3 (ItemSet 525).
+[[set_look]]
+key = "priest_legendary"
+rarity = 4
+pieces = [
+    [0, 56051, 1, "Crown_01"], [1, 35149, 3, "Shoulder_25"],
+    [2, 36354, 20, "Chest_Cloth_43"], [3, 35143, 6, "Belt_08"],
+    [4, 35154, 7, "Pants_Cloth_05"], [5, 35148, 8, "Boots_Fabric_01"],
+    [6, 35144, 9, "Bracer_13"], [7, 35145, 10, "Gauntlets_17"],
+]
+
+# Field Marshal's pieces: Field Marshal's Raiment, the Alliance's rank 13 PvP set (ItemSet 389).
+[[set_look]]
+key = "priest_pvp"
+rarity = 5
+pieces = [
+    [0, 32980, 1, "Helmet_24"], [1, 33005, 3, "Shoulder_02"],
+    [2, 32984, 20, "Chest_Cloth_02"], [4, 32991, 7, "Pants_06"],
+    [5, 32992, 8, "Boots_07"], [7, 32990, 10, "Gauntlets_14"],
+]

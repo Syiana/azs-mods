@@ -1,0 +1,60 @@
+# The mage's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Apprentice's") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Magister's pieces: Magister's Regalia, tier 0 (ItemSet 181).
+[[set_look]]
+key = "mage_uncommon"
+rarity = 1
+pieces = [
+    [0, 31087, 1, "Crown_02"], [1, 30211, 3, "Shoulder_23"],
+    [2, 29591, 20, "Chest_Cloth_25"], [3, 29596, 6, "Belt_08"],
+    [4, 29273, 7, "Pants_06"], [5, 29594, 8, "Boots_02"],
+    [6, 29597, 9, "Jewelry_Ring_23"], [7, 29593, 10, "Gauntlets_17"],
+]
+
+# Arcanist pieces: Arcanist Regalia, tier 1 (ItemSet 201).
+[[set_look]]
+key = "mage_rare"
+rarity = 2
+pieces = [
+    [0, 31517, 1, "Helmet_53"], [1, 30586, 3, "Shoulder_02"],
+    [2, 30581, 20, "Chest_Cloth_03"], [3, 30583, 6, "Belt_30"],
+    [4, 30582, 7, "Pants_08"], [5, 30587, 8, "Boots_07"],
+    [6, 30584, 9, "Belt_29"], [7, 30585, 10, "Gauntlets_14"],
+]
+
+# Netherwind pieces: Netherwind Regalia, tier 2 (ItemSet 210).
+[[set_look]]
+key = "mage_epic"
+rarity = 3
+pieces = [
+    [0, 34218, 1, "Helmet_70"], [1, 34254, 3, "Shoulder_32"],
+    [2, 34038, 20, "Chest_Cloth_03"], [3, 34046, 6, "Belt_22"],
+    [4, 34039, 7, "Pants_08"], [5, 34044, 8, "Boots_07"],
+    [6, 34045, 9, "Bracer_09"], [7, 34041, 10, "Gauntlets_14"],
+]
+
+# Frostfire pieces: Frostfire Regalia, tier 3 (ItemSet 526).
+[[set_look]]
+key = "mage_legendary"
+rarity = 4
+pieces = [
+    [0, 36440, 1, "Crown_01"], [1, 35326, 3, "Shoulder_25"],
+    [2, 35523, 20, "Chest_Cloth_43"], [3, 35519, 6, "Belt_03"],
+    [4, 35522, 7, "Pants_Cloth_05"], [5, 35525, 8, "Boots_Fabric_01"],
+    [6, 35677, 9, "Bracer_13"], [7, 35521, 10, "Gauntlets_17"],
+]
+
+# Field Marshal's pieces: Field Marshal's Regalia, the Alliance's rank 13 PvP set (ItemSet 388).
+[[set_look]]
+key = "mage_pvp"
+rarity = 5
+pieces = [
+    [0, 32978, 1, "Helmet_24"], [1, 33004, 3, "Shoulder_23"],
+    [2, 32981, 20, "Chest_Cloth_12"], [4, 28715, 7, "Pants_08"],
+    [5, 33009, 8, "Boots_Cloth_03"], [7, 32988, 10, "Gauntlets_14"],
+]

@@ -1,0 +1,25 @@
+# Scourgelord Tyrannus: Forceful Smash, Mark of Rimefang (her Icy Blasts follow the hero), a
+# leap into Hoarfrost, Overlord's Brand.
+
+[[boss]]
+key = "scourgelord_tyrannus"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 69155, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.8 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { trail = { spell = 69232, count = 5, radius = 5.0, warn = 1.8, gap = 0.9, factor = 2.0 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ leap = { spell = 69155, radius = 6.0, reach = 16.0, warn = 1.6, factor = 2.4 } }, { nova = { spell = 69246, radius = 10.0, warn = 2.2 } }], 1.6] }
+
+[[boss.kit]]
+every = 16.0
+ability = { tether = { spell = 69172, reach = 16.0, warn = 1.6, lasts = 5.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

@@ -1,0 +1,82 @@
+key = "hunter"
+# The `ChrClasses` id.
+id = 3
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [1, 2, 3, 4, 5, 6, 7, 0]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 240
+# Balance (2026-11-08, damage -3 to -5 on 2026-11-14): less damage and a little less tough. 8 % more taken is 7 % less
+# effective health (1 / 1.08 = 0.93).
+damage_pct = -5
+taken_pct = 8
+# A smaller pickup radius keeps collecting orbs part of fighting at range.
+pickup_pct = -25
+power = "mana"
+starter = "auto_shot"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's,
+# the pandaren (15 Horde, 17 Alliance) as Mists of Pandaria's.
+races = [3, 4, 11, 12, 2, 6, 8, 10, 9, 15, 17]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    12282, # Worn Battleaxe
+    2504, # Worn Shortbow
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 781
+dash_legend = { en = "Disengage's Frost Trap is 60% wider and holds twice as long.", de = "Die Frostfalle von Rückzug ist 60% größer und hält doppelt so lange fest.", fr = "Le Piège de givre de Désengagement est 60% plus large et retient deux fois plus longtemps.", es = "La Trampa de escarcha de Disengage es un 60% más ancha y retiene el doble de tiempo.", pt = "A Armadilha de Gelo de Desengajar é 60% maior e prende por o dobro do tempo.", ru = "Ледяная ловушка «Отрыва» шире на 60% и удерживает вдвое дольше.", pl = "Mroźna pułapka Odskoku jest o 60% szersza i trzyma dwa razy dłużej.", tr = "Geri Sıçrayış'ın Buz Tuzağı 60% daha geniş ve iki kat uzun tutar.", it = "La Trappola di ghiaccio di Disimpegno è più larga del 60% e dura il doppio.", ja = "ディスエンゲージのフロスト・トラップの範囲が60%広がり、拘束時間が2倍になります。", zh = "逃脱放出的冰霜陷阱范围扩大60%，冻结时间翻倍。", ko = "철수의 냉기의 덫 범위가 60% 넓어지고 두 배 오래 붙잡아 둡니다." }
+bot_name = "Bothunter"
+bot_order = 2
+name = { en = "Hunter", de = "Jäger", fr = "Chasseur", es = "Cazador", pt = "Caçador", ru = "Охотник", pl = "Łowca", tr = "Avcı", it = "Cacciatore", ja = "ハンター", zh = "猎人", ko = "사냥꾼" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [0.67, 0.83, 0.45]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "hunter_venom"
+tone = 4
+price = 12000
+name = { en = "Viper's Venom", de = "Vipergift", fr = "Venin de vipère", es = "Veneno de víbora", pt = "Veneno de Víbora", ru = "Яд гадюки", pl = "Jad żmii", tr = "Engerek Zehri", it = "Veleno di vipera", ja = "ヴァイパーの毒", zh = "蝰蛇之毒", ko = "독사의 독" }
+
+[[colors]]
+key = "hunter_ember"
+tone = 2
+price = 12000
+name = { en = "Wildfire", de = "Wildfeuer", fr = "Feu follet", es = "Fuego salvaje", pt = "Fogo Selvagem", ru = "Дикий огонь", pl = "Niszczycielski ogień", tr = "Yangın", it = "Fuoco selvaggio", ja = "野火", zh = "野火", ko = "들불" }
+
+[[colors]]
+key = "hunter_frost"
+tone = 8
+price = 15000
+name = { en = "Frostbite", de = "Frostbiss", fr = "Morsure de givre", es = "Mordedura de escarcha", pt = "Mordida de Gelo", ru = "Обморожение", pl = "Odmrożenie", tr = "Donma", it = "Congelamento", ja = "フロストバイト", zh = "霜寒刺骨", ko = "동상" }
+
+[[colors]]
+key = "hunter_arcane"
+tone = 10
+price = 15000
+name = { en = "Arcane Hunt", de = "Arkanjagd", fr = "Chasse arcanique", es = "Caza arcana", pt = "Caça Arcana", ru = "Тайная охота", pl = "Magiczny pościg", tr = "Gizem Avı", it = "Caccia arcana", ja = "アーケイン・ハント", zh = "奥术狩猎", ko = "비전 사냥" }
+
+[[colors]]
+key = "hunter_blood"
+tone = 1
+price = 18000
+name = { en = "Blood Hunt", de = "Blutjagd", fr = "Chasse sanglante", es = "Caza de sangre", pt = "Caça Sangrenta", ru = "Кровавая охота", pl = "Krwawy pościg", tr = "Kan Avı", it = "Caccia di sangue", ja = "血の狩り", zh = "鲜血狩猎", ko = "피의 사냥" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "hunter_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "hunter_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

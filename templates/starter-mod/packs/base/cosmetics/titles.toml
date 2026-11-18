@@ -1,0 +1,175 @@
+# The shop's titles (survivors-sim titles.rs): CharTitles.dbc `id` and `mask`, `%s` the hero's name.
+#
+# Every title, in the shop's order. Ids and mask ids are stock 3.3.5a `CharTitles.dbc`
+# (enUS 12340, checked against the client's own file). `TUNE` the prices.
+
+# Earned.
+[[title]]
+key = "kingslayer"
+id = 175
+mask = 140
+name = "%s the Kingslayer"
+source = { achievement = "kingslayer" }
+
+[[title]]
+key = "immortal"
+id = 141
+mask = 108
+name = "%s the Immortal"
+source = { achievement = "immortal" }
+
+[[title]]
+key = "frozen_wastes"
+id = 129
+mask = 97
+name = "%s, Champion of the Frozen Wastes"
+source = { achievement = "northrend_campaign" }
+
+[[title]]
+key = "naaru"
+id = 53
+mask = 36
+name = "%s, Champion of the Naaru"
+source = { achievement = "outland_campaign" }
+
+[[title]]
+key = "hand_of_adal"
+id = 64
+mask = 39
+name = "%s, Hand of A'dal"
+source = { achievement = "black_temple" }
+
+[[title]]
+key = "grand_crusader"
+id = 170
+mask = 135
+name = "Grand Crusader %s"
+source = { achievement = "tier_5" }
+
+[[title]]
+key = "undying"
+id = 142
+mask = 109
+name = "%s the Undying"
+source = { achievement = "survive_20" }
+
+[[title]]
+key = "naxxramas"
+id = 122
+mask = 90
+name = "%s, Conqueror of Naxxramas"
+source = { zone = "naxx" }
+
+[[title]]
+key = "scarab_lord"
+id = 46
+mask = 33
+name = "Scarab Lord %s"
+source = { zone = "aq" }
+
+[[title]]
+key = "herald"
+id = 166
+mask = 131
+name = "%s, Herald of the Titans"
+source = { zone = "stormpeaks" }
+
+[[title]]
+key = "twilight"
+id = 121
+mask = 89
+name = "Twilight Vanquisher %s"
+source = { zone = "dragonblight" }
+
+[[title]]
+key = "ashen_verdict"
+id = 176
+mask = 141
+name = "%s of the Ashen Verdict"
+source = { zone = "icecrown" }
+
+[[title]]
+key = "arena_master"
+id = 82
+mask = 50
+name = "Arena Master %s"
+source = { zone = "arena" }
+
+# Sold.
+[[title]]
+key = "love_fool"
+id = 135
+mask = 103
+name = "%s the Love Fool"
+source = { shop = 3000 }
+
+[[title]]
+key = "jenkins"
+id = 143
+mask = 110
+name = "%s Jenkins"
+source = { shop = 5000 }
+
+[[title]]
+key = "explorer"
+id = 78
+mask = 47
+name = "%s the Explorer"
+source = { shop = 6000 }
+
+[[title]]
+key = "patient"
+id = 172
+mask = 137
+name = "%s the Patient"
+source = { shop = 8000 }
+
+[[title]]
+key = "ebon_blade"
+id = 92
+mask = 60
+name = "%s of the Ebon Blade"
+source = { shop = 10000 }
+
+[[title]]
+key = "bloodsail"
+id = 144
+mask = 111
+name = "Bloodsail Admiral %s"
+source = { shop = 12000 }
+
+[[title]]
+key = "insane"
+id = 145
+mask = 112
+name = "%s the Insane"
+source = { shop = 25000 }
+
+# The Game Pass's.
+[[title]]
+key = "gladiator"
+id = 42
+mask = 29
+name = "Gladiator %s"
+source = "pass"
+
+[[title]]
+key = "starcaller"
+id = 164
+mask = 129
+name = "Starcaller %s"
+source = "pass"
+
+[[title]]
+key = "light_of_dawn"
+id = 173
+mask = 138
+name = "%s the Light of Dawn"
+source = "pass"
+
+[[title]]
+key = "wrathful"
+id = 177
+mask = 142
+name = "Wrathful Gladiator %s"
+source = "pass"

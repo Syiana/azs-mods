@@ -1,0 +1,16 @@
+# Harbinger Skyriss: Mind Rend, Fear, his split images.
+
+[[boss]]
+key = "harbinger_skyriss"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 36924 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { nova = { spell = 39415, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

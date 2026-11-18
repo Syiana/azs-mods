@@ -1,0 +1,43 @@
+# Arcane Trinity, the mage's Exotic set (the balance team's rework document of 2026-11-13). It replaces
+# Wall of Flesh, name and all. The 4-piece: every fifth Arcane Explosion you cast (a free one, a double hit
+# and an echo count; the images' do not) is an Arcane Nova instead, 300% of its damage and radius, and what
+# it strikes is slowed by 30% (a boss and a guardian too, in full) and takes 50% more damage for 3 sec. The 8-piece: you start with
+# Mirror Image, and once it is cast the three images stay for the run in a triangle 10 m round you; each
+# casts your Arcane Explosion round itself whenever you cast it, for {v}% of its damage (60%, empowered
+# 90%). A yard is 0.9144 m.
+
+[[set_bonus]]
+key = "mage_exotic_4"
+tier = "exotic"
+pieces = 4
+# `every` counts the casts of the spell; the big nova is drawn with look 910903 (below), not with the spell's own.
+mechanic = { kind = "nova_every", spell = "arcane_explosion", every = 5, damage = 3.0, area = 3.0, slow = 30, vulnerability = 0.5, secs = 3.0, visual = 910903 }
+text = { en = "Arcane Trinity: Every fifth Arcane Explosion becomes an Arcane Nova with 300% of your Arcane Explosion's damage and radius. Enemies hit are slowed by 30% and take 50% more damage for 3 sec.", de = "Arkane Dreifaltigkeit: Jede fünfte Arkane Explosion wird zu einer Arkanen Nova mit 300% des Schadens und des Radius deiner Arkanen Explosion. Getroffene Gegner sind 3 Sek. lang um 30% verlangsamt und erleiden 50% mehr Schaden.", fr = "Trinité arcanique : Une Explosion des arcanes sur cinq devient une Nova des arcanes qui inflige 300 % des dégâts et a 300 % du rayon de votre Explosion des arcanes. Les ennemis touchés sont ralentis de 30 % et subissent 50 % de dégâts supplémentaires pendant 3 s.", es = "Trinidad arcana: Una de cada cinco Explosiones Arcanas se convierte en una Nova Arcana con el 300 % del daño y del radio de tu Explosión Arcana. Los enemigos alcanzados se ralentizan un 30 % y reciben un 50 % más de daño durante 3 s.", pt = "Trindade Arcana: Uma a cada cinco Explosões Arcanas se torna uma Nova Arcana com 300% do dano e do raio da sua Explosão Arcana. Inimigos atingidos ficam 30% mais lentos e recebem 50% a mais de dano por 3 s.", ru = "Чародейская троица: Каждый пятый «Взрыв чародейства» становится «Кольцом чародейства» с 300% урона и радиуса вашего «Взрыва чародейства». Поражённые враги на 3 сек. замедляются на 30% и получают на 50% больше урона.", it = "Trinità arcana: Un’Esplosione arcana su cinque diventa una Nova arcana con il 300% dei danni e del raggio della tua Esplosione arcana. I nemici colpiti sono rallentati del 30% e subiscono il 50% di danni in più per 3 s.", pl = "Tajemna Trójca: Co piąta Magiczna eksplozja staje się Magiczną Novą o 300% obrażeń i promienia twojej Magicznej eksplozji. Trafieni wrogowie są spowolnieni o 30% i otrzymują o 50% więcej obrażeń przez 3 sek.", tr = "Gizem Üçlüsü: Her beşinci Gizemli Patlama, Gizemli Patlamanın hasarının ve yarıçapının %300’üne sahip bir Gizemli Nova’ya dönüşür. Vurulan düşmanlar 3 sn boyunca %30 yavaşlar ve %50 daha fazla hasar alır.", ja = "アーケイン・トリニティ：アーケイン・エクスプロージョンの5回目ごとが、ダメージと半径がアーケイン・エクスプロージョンの300%のアーケイン・ノヴァになります。命中した敵は3秒間30%スローになり、受けるダメージが50%増加します。", zh = "奥术三位一体：每第五次魔爆术会变为奥术新星，伤害和半径为你的魔爆术的300%。被击中的敌人减速30%，受到的伤害提高50%，持续3秒。", ko = "비전 삼위일체: 신비한 폭발 다섯 번째마다 비전 회오리가 되어 신비한 폭발의 피해와 반경이 300%가 됩니다. 맞은 적은 3초 동안 30% 감속되고 받는 피해가 50% 증가합니다." }
+
+# The big nova is the explosion of Malygos' Arcane Bomb (spell 56431) without the bomb that flies to it,
+# drawn at twice its size. The stock row has no impact kit: the explosion (Arcane Barrage Impact) is the
+# spell's cast kit, which the client draws where the caster stands, so `cast_scale` scales it, not `impact_scale`.
+# `tools/class-spell-vfx.py` writes it into the client's tables; rebuild the patch for it to show, and tune
+# `cast_scale` in the client. `alpha`: the client draws it at a fifth of the stock alpha, as the full
+# explosion flashed the whole screen (the tables do not carry it, so no patch rebuild for it).
+[[set_bonus.look]]
+visual = 910903
+source = 56431
+no_missile = true
+cast_scale = 2.0
+alpha = 0.2
+
+[[set_bonus]]
+key = "mage_exotic_8"
+tier = "exotic"
+pieces = 8
+# Three images at 180, +60 and -60 degrees from where you face (behind you, front left, front right),
+# 10 m (10.93613 yd) from you; `damage` is the share `{v}` shows (0.6, empowered 0.9); `alpha`: how solid
+# the client draws them.
+mechanic = { kind = "formation_images", spell = "mirror_image", cast = "arcane_explosion", radius = 10.93613, angles = [180.0, 60.0, -60.0], damage = 0.6, empowers = true, alpha = 0.7 }
+text = { en = "Arcane Trinity: You start with Mirror Image. Once cast, your three Mirror Images stay active and flank you at 10 m. They cast your Arcane Explosion for {v}% of your damage.", de = "Arkane Dreifaltigkeit: Du startest mit Spiegelbild. Einmal gewirkt, bleiben deine drei Spiegelbilder dauerhaft aktiv und flankieren dich im Abstand von 10 m. Sie wirken deine Arkane Explosion mit {v}% deines Schadens.", fr = "Trinité arcanique : Vous commencez avec Image miroir. Une fois lancées, vos trois images miroir restent actives en permanence et vous flanquent à 10 m. Elles lancent votre Explosion des arcanes avec {v} % de vos dégâts.", es = "Trinidad arcana: Empiezas con Imagen reflejada. Una vez lanzada, tus tres imágenes permanecen activas y te flanquean a 10 m. Lanzan tu Explosión Arcana con el {v} % de tu daño.", pt = "Trindade Arcana: Você começa com Imagem Espelhada. Depois de lançada, suas três imagens permanecem ativas e flanqueiam você a 10 m. Elas lançam sua Explosão Arcana com {v}% do seu dano.", ru = "Чародейская троица: Вы начинаете с «Зеркальным изображением». После первого применения три ваши копии остаются активными навсегда и сопровождают вас на расстоянии 10 м. Они применяют ваш «Взрыв чародейства» с {v}% вашего урона.", it = "Trinità arcana: Inizi con Immagine speculare. Una volta evocate, le tue tre immagini restano sempre attive e ti affiancano a 10 m. Lanciano la tua Esplosione arcana con il {v}% dei tuoi danni.", pl = "Tajemna Trójca: Zaczynasz z Lustrzanym odbiciem. Po jednokrotnym użyciu twoje trzy odbicia pozostają aktywne na stałe i flankują cię w odległości 10 m. Rzucają twoją Magiczną eksplozję z {v}% twoich obrażeń.", tr = "Gizem Üçlüsü: Ayna Görüntüsü ile başlarsın. Bir kez çağrıldığında üç görüntün kalıcı olarak etkin kalır ve seni 10 m uzaktan kuşatır. Gizemli Patlamanı hasarının %{v}’si ile yaparlar.", ja = "アーケイン・トリニティ：ミラー・イメージを持って始めます。一度唱えると3体のミラー・イメージが消えずに残り、10メートル離れてあなたの両側を固めます。ミラー・イメージはあなたのダメージの{v}%でアーケイン・エクスプロージョンを唱えます。", zh = "奥术三位一体：你在对局开始时拥有镜像。施放后，你的三个镜像会持续存在，在你身边10码处护卫。它们施放你的魔爆术，造成相当于你的伤害{v}%的伤害。", ko = "비전 삼위일체: 환영 복제를 가지고 시작합니다. 한 번 시전하면 환영 복제 셋이 계속 활동하며 10미터 거리에서 당신의 양옆을 지킵니다. 환영은 당신 피해의 {v}%로 신비한 폭발을 시전합니다." }
+
+# The run starts with Mirror Image as well as the class's first spell (a card with no boosts, like the starter).
+[[set_bonus.part]]
+effects = [{ start_with = "mirror_image" }]
+fixed = true

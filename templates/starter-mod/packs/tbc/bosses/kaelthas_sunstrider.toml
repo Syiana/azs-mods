@@ -1,0 +1,29 @@
+# Kael'thas Sunstrider: Fireball, Flamestrike, Gravity Lapse into Flamestrike, Pyroblast, the
+# Phoenix that turns to an egg.
+
+[[boss]]
+key = "kaelthas_sunstrider"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 36805 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 36735, count = 5, radius = 6.0, spread = 10.0, warn = 1.8, factor = 2.6 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { combo = [[{ stomp = { spell = 35941, radius = 12.0, warn = 2.0, knock = 14.0 } }, { rain = { spell = 36735, count = 4, radius = 6.0, spread = 10.0, warn = 1.8, factor = 2.6 } }], 1.6] }
+
+[[boss.kit]]
+every = 12.0
+ability = { pool = { spell = 0, burst = 36819, radius = 6.0, warn = 3.0, factor = 3.0 } }
+
+[[boss.kit]]
+every = 18.0
+ability = { eggs = { hatch = 2, count = 3, radius = 6.0, health = 0.03, lasts = 10.0 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 14 }

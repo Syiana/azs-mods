@@ -1,0 +1,429 @@
+# The shop's tabards (survivors-sim tabards.rs). patch-W's come first (their place is their display);
+# a stock one names its own `item` entry and `display`.
+#
+# Every tabard: first patch-W's, in its order (`data/dl/SOURCES/wowcustom-tabards`'
+# tabards.json, built by `tools/tabards-source.js`, displays from `FIRST_ID`), then the stock
+# ones after them (which patch-W does not count). `TUNE` the prices.
+
+[[tabard]]
+key = "anglers"
+name = "Anglers Tabard"
+price = 4000
+
+[[tabard]]
+key = "brewmasters"
+name = "Brewmasters Tabard"
+price = 4000
+
+[[tabard]]
+key = "pandaren_elders"
+name = "Pandaren Elders Tabard"
+price = 4000
+
+[[tabard]]
+key = "lorewalkers"
+name = "Lorewalkers Tabard"
+price = 4000
+
+[[tabard]]
+key = "shadopan"
+name = "Shado-Pan Tabard"
+price = 4000
+
+[[tabard]]
+key = "kirintor"
+name = "Kirin Tor Tabard"
+price = 4000
+
+[[tabard]]
+key = "undercity"
+name = "Undercity Tabard"
+price = 4000
+
+[[tabard]]
+key = "reliquary"
+name = "Reliquary Tabard"
+price = 4000
+
+[[tabard]]
+key = "sunreaver"
+name = "Sunreaver Tabard"
+price = 4000
+
+[[tabard]]
+key = "timewalker"
+name = "Timewalker Tabard"
+price = 5000
+
+[[tabard]]
+key = "arakkoa"
+name = "Arakkoa Tabard"
+price = 4000
+
+[[tabard]]
+key = "wrynn"
+name = "Wrynn's Vanguard Tabard"
+price = 4000
+
+[[tabard]]
+key = "exarchs"
+name = "Exarchs Tabard"
+price = 4000
+
+[[tabard]]
+key = "ruby"
+name = "Ruby Tabard"
+price = 4000
+
+[[tabard]]
+key = "illidari"
+name = "Illidari Tabard"
+price = 5000
+
+[[tabard]]
+key = "illidari_purple"
+name = "Illidari Tabard (Purple)"
+price = 5000
+
+[[tabard]]
+key = "nightfallen"
+name = "Nightfallen Tabard"
+price = 4000
+
+[[tabard]]
+key = "army_light"
+name = "Army of the Light Tabard"
+price = 5000
+
+[[tabard]]
+key = "voidelf"
+name = "Void Elf Tabard"
+price = 5000
+
+[[tabard]]
+key = "coa"
+name = "Crimson Tabard"
+price = 4000
+
+[[tabard]]
+key = "war_effort"
+name = "War Effort Tabard"
+price = 4000
+
+[[tabard]]
+key = "champions"
+name = "Champions of Azeroth Tabard"
+price = 5000
+
+[[tabard]]
+key = "legion_gladiator"
+name = "Gladiator's Tabard"
+price = 6000
+
+[[tabard]]
+key = "talanji"
+name = "Talanji's Expedition Tabard"
+price = 4000
+
+[[tabard]]
+key = "undercity_red"
+name = "Undercity Tabard (Red)"
+price = 4000
+
+[[tabard]]
+key = "zandalari"
+name = "Zandalari Tabard"
+price = 5000
+
+# The PvP tabards (tools/tabards-source.js ADDED).
+[[tabard]]
+key = "pvp_stormpike"
+name = "Stormpike Battle Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_frostwolf"
+name = "Frostwolf Battle Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_competitor"
+name = "Competitor's Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_alliance"
+name = "Alliance Battle Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_horde"
+name = "Horde Battle Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_alliance_officer"
+name = "Alliance Officer's Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_horde_officer"
+name = "Horde Officer's Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_s13"
+name = "Season 13 Gladiator's Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_s14"
+name = "Season 14 Gladiator's Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_s16"
+name = "Season 16 Gladiator's Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_draenor_alliance"
+name = "Draenor Gladiator's Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_draenor_horde"
+name = "Draenor Gladiator's Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion3_alliance"
+name = "Legion Season 3 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion3_horde"
+name = "Legion Season 3 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion4_alliance"
+name = "Legion Season 4 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion4_horde"
+name = "Legion Season 4 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion5_horde"
+name = "Legion Season 5 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion6_alliance"
+name = "Legion Season 6 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion6_horde"
+name = "Legion Season 6 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion7_alliance"
+name = "Legion Season 7 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_legion7_horde"
+name = "Legion Season 7 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa1_alliance"
+name = "BfA Season 1 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa1_horde"
+name = "BfA Season 1 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa2_alliance"
+name = "BfA Season 2 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa2_horde"
+name = "BfA Season 2 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa3_alliance"
+name = "BfA Season 3 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa3_horde"
+name = "BfA Season 3 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa4_alliance"
+name = "BfA Season 4 Tabard (Alliance)"
+price = 6000
+
+[[tabard]]
+key = "pvp_bfa4_horde"
+name = "BfA Season 4 Tabard (Horde)"
+price = 6000
+
+[[tabard]]
+key = "pvp_sl1"
+name = "Shadowlands Season 1 Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_sl2"
+name = "Shadowlands Season 2 Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_sl3"
+name = "Shadowlands Season 3 Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_sl4"
+name = "Shadowlands Season 4 Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_sl5"
+name = "Shadowlands Season 5 Tabard"
+price = 6000
+
+[[tabard]]
+key = "pvp_wildhammer"
+name = "Wildhammer Battle Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_dragonmaw"
+name = "Dragonmaw Battle Tabard"
+price = 5000
+
+[[tabard]]
+key = "pvp_korkron"
+name = "Kor'kron Tabard"
+price = 5000
+
+# Northrend's factions (3.3.5a's own items and displays).
+[[tabard]]
+key = "argent_crusade"
+name = "Tabard of the Argent Crusade"
+price = 4500
+item = 43154
+display = 54171
+
+[[tabard]]
+key = "ebon_blade"
+name = "Tabard of the Ebon Blade"
+price = 4500
+item = 43155
+display = 54175
+
+[[tabard]]
+key = "wyrmrest"
+name = "Tabard of the Wyrmrest Accord"
+price = 4500
+item = 43156
+display = 54177
+
+[[tabard]]
+key = "kirin_tor"
+name = "Tabard of the Kirin Tor"
+price = 4500
+item = 43157
+display = 54176
+
+[[tabard]]
+key = "argent_crusader"
+name = "Argent Crusader's Tabard"
+price = 5500
+item = 46874
+display = 60400
+
+# The Argent Tournament's champion tabards of each capital.
+[[tabard]]
+key = "champion_stormwind"
+name = "Stormwind Tabard"
+price = 5000
+item = 45574
+display = 59973
+
+[[tabard]]
+key = "champion_ironforge"
+name = "Ironforge Tabard"
+price = 5000
+item = 45577
+display = 59977
+
+[[tabard]]
+key = "champion_gnomeregan"
+name = "Gnomeregan Tabard"
+price = 5000
+item = 45578
+display = 59976
+
+[[tabard]]
+key = "champion_darnassus"
+name = "Darnassus Tabard"
+price = 5000
+item = 45579
+display = 59974
+
+[[tabard]]
+key = "champion_exodar"
+name = "Exodar Tabard"
+price = 5000
+item = 45580
+display = 59975
+
+[[tabard]]
+key = "champion_orgrimmar"
+name = "Orgrimmar Tabard"
+price = 5000
+item = 45581
+display = 59978
+
+[[tabard]]
+key = "champion_darkspear"
+name = "Darkspear Tabard"
+price = 5000
+item = 45582
+display = 59979
+
+[[tabard]]
+key = "champion_undercity"
+name = "Undercity Tabard"
+price = 5000
+item = 45583
+display = 59983
+
+[[tabard]]
+key = "champion_thunder_bluff"
+name = "Thunder Bluff Tabard"
+price = 5000
+item = 45584
+display = 59982
+
+[[tabard]]
+key = "champion_silvermoon"
+name = "Silvermoon City Tabard"
+price = 5000
+item = 45585
+display = 59980

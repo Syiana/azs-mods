@@ -1,0 +1,561 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "mage_arcane"
+index = 0
+icon = "Spell_Holy_MagicalSentry"
+background = "MageArcane"
+name = { en = "Arcane", de = "Arkan", fr = "Arcanes", es = "Arcano", pt = "Arcano", ru = "Тайная магия", pl = "Magia tajemna", tr = "Gizem", it = "Arcano", ja = "アーケイン", zh = "奥术", ko = "비전" }
+
+[[talent_tree]]
+key = "mage_fire"
+index = 1
+icon = "Spell_Fire_FireBolt02"
+background = "MageFire"
+name = { en = "Fire", de = "Feuer", fr = "Feu", es = "Fuego", pt = "Fogo", ru = "Огонь", pl = "Ogień", tr = "Ateş", it = "Fuoco", ja = "ファイア", zh = "火焰", ko = "화염" }
+
+[[talent_tree]]
+key = "mage_frost"
+index = 2
+icon = "Spell_Frost_FrostBolt02"
+background = "MageFrost"
+name = { en = "Frost", de = "Frost", fr = "Givre", es = "Escarcha", pt = "Gelo", ru = "Лед", pl = "Mróz", tr = "Buz", it = "Gelo", ja = "フロスト", zh = "冰霜", ko = "냉기" }
+
+[[talent]]
+key = "arcane_focus"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Spell_Holy_Devotion"
+name = { en = "Arcane Focus", de = "Arkaner Fokus", fr = "Focalisation des arcanes", es = "Enfoque arcano", pt = "Foco Arcano", ru = "Концентрация тайной магии", pl = "Skupienie tajemne", tr = "Gizem Odağı", it = "Focus arcano", ja = "アーケイン・フォーカス", zh = "奥术集中", ko = "비전 집중" }
+text = { en = "Arcane spells deal {v}% more damage.", de = "Arkanzauber verursachen {v}% mehr Schaden.", fr = "Les sorts des Arcanes infligent {v}% de dégâts en plus.", es = "Los hechizos Arcanos infligen un {v}% más de daño.", pt = "Feitiços Arcanos causam {v}% a mais de dano.", ru = "Заклинания тайной магии наносят на {v}% больше урона.", pl = "Czary magii tajemnej zadają o {v}% więcej obrażeń.", tr = "Gizem büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi Arcani infliggono il {v}% di danni in più.", ja = "秘術の呪文のダメージが{v}%増加します。", zh = "奥术法术造成的伤害提高{v}%。", ko = "비전 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = [{ school = 64 }]
+mods_v = 0.05
+
+[[talent]]
+key = "arcane_subtlety"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = [{ stat = [12, 0.08] }]
+icon = "Spell_Holy_DispelMagic"
+name = { en = "Arcane Subtlety", de = "Arkane Feinheit", fr = "Subtilité des arcanes", es = "Sutileza arcana", pt = "Sutileza Arcana", ru = "Тонкость тайной магии", pl = "Subtelność tajemna", tr = "Gizem İncelği", it = "Sottigliezza arcana", ja = "アーケイン・サトルティ", zh = "奥术精妙", ko = "비전 미묘함" }
+text = { en = "Increases your luck by {v}%.", de = "Erhöht dein Glück um {v}%.", fr = "Augmente ta chance de {v}%.", es = "Aumenta tu suerte un {v}%.", pt = "Aumenta sua sorte em {v}%.", ru = "Увеличивает твою удачу на {v}%.", pl = "Zwiększa twoje szczęście o {v}%.", tr = "Şansını {v}% artırır.", it = "Aumenta la tua fortuna del {v}%.", ja = "幸運が{v}%増加します。", zh = "使你的幸运提高{v}%。", ko = "행운이 {v}% 증가합니다." }
+menu_v = 0.08
+
+[[talent]]
+key = "imp_arcane_explosion"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Nature_WispSplode"
+name = { en = "Improved Arcane Explosion", de = "Verbesserte arkane Explosion", fr = "Explosion des arcanes améliorée", es = "Explosión Arcana mejorada", pt = "Explosão Arcana Aprimorada", ru = "Улучшенный взрыв чародейства", pl = "Ulepszona Magiczna eksplozja", tr = "Gelişmiş Gizemli Patlama", it = "Esplosione arcana migliorata", ja = "改良型アーケイン・エクスプロージョン", zh = "强化魔爆术", ko = "신비한 폭발 연마" }
+text = { en = "Arcane Explosion reaches {v}% farther.", de = "Arkane Explosion reicht {v}% weiter.", fr = "Explosion des arcanes porte {v}% plus loin.", es = "Explosión Arcana llega un {v}% más lejos.", pt = "Explosão Arcana alcança {v}% mais longe.", ru = "«Взрыв чародейства» бьет на {v}% дальше.", pl = "Magiczna eksplozja sięga o {v}% dalej.", tr = "Gizemli Patlama {v}% daha uzağa erişir.", it = "Esplosione arcana arriva il {v}% più lontano.", ja = "アーケイン・エクスプロージョンの範囲が{v}%広がります。", zh = "魔爆术的范围扩大{v}%。", ko = "신비한 폭발의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.12
+mods = [{ area = ["arcane_explosion"] }]
+mods_v = 0.12
+
+[[talent]]
+key = "magic_absorption"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.04] }]
+icon = "Spell_Nature_AstralRecalGroup"
+name = { en = "Magic Absorption", de = "Magieabsorption", fr = "Absorption de la magie", es = "Absorción de magia", pt = "Absorção de Magia", ru = "Поглощение магии", pl = "Pochłanianie magii", tr = "Büyü Emilimi", it = "Assorbimento magico", ja = "マジック・アブソープション", zh = "魔法吸收", ko = "마법 흡수" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.04
+
+# Ours (2026-11-10, tester feedback): Arcane Explosion also starts the run, the early clearing the tree lacked.
+[[talent]]
+key = "arcane_concentration"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "arcane_explosion" }]
+icon = "Spell_Shadow_ManaBurn"
+name = { en = "Arcane Concentration", de = "Arkane Konzentration", fr = "Concentration des arcanes", es = "Concentración arcana", pt = "Concentração Arcana", ru = "Чародейская концентрация", pl = "Koncentracja tajemna", tr = "Gizem Yoğunlaşması", it = "Concentrazione arcana", ja = "アーケイン・コンセントレーション", zh = "节能施法", ko = "정신 집중" }
+text = { en = "Milestone. Clearcasting: every spell you cast has a {v}% chance to set off a free Arcane Explosion. You start every run with Arcane Explosion.", de = "Meilenstein. Freizaubern: Jeder Zauber, den du wirkst, hat eine Chance von {v}%, eine kostenlose Arkane Explosion auszulösen. Du beginnst jeden Lauf mit Arkaner Explosion.", fr = "Jalon. Idées claires : chaque sort que tu lances a {v}% de chances de déclencher une Explosion des arcanes gratuite. Tu commences chaque partie avec Explosion des arcanes.", es = "Hito. Lanzamiento despejado: cada hechizo que lanzas tiene un {v}% de probabilidad de activar una Explosión Arcana gratis. Empiezas cada partida con Explosión Arcana.", pt = "Marco. Lançamento Límpido: cada feitiço que você lança tem {v}% de chance de acionar uma Explosão Arcana grátis. Você começa cada partida com Explosão Arcana.", ru = "Веха. Ясность мысли: каждое твое заклинание с шансом {v}% запускает бесплатный «Взрыв чародейства». Ты начинаешь каждый забег со «Взрывом чародейства».", pl = "Kamień milowy. Jasność umysłu: każdy rzucony czar ma {v}% szansy na darmową Magiczną eksplozję. Każdą rozgrywkę zaczynasz z Magiczną eksplozją.", tr = "Dönüm noktası. Berrak Büyü: yaptığın her büyü {v}% ihtimalle bedava bir Gizemli Patlama tetikler. Her oyuna Gizemli Patlama ile başlarsın.", it = "Traguardo. Lancio chiaro: ogni incantesimo che lanci ha il {v}% di probabilità di innescare una Esplosione arcana gratuita. Inizi ogni partita con Esplosione arcana.", ja = "【マイルストーン】クリアキャスティング：呪文を唱えるたびに{v}%の確率で無料のアーケイン・エクスプロージョンが発動します。毎ランをアーケイン・エクスプロージョンを持って始めます。", zh = "里程碑：节能施法：你施放的每个法术都有{v}%的几率触发一次免费的魔爆术。你在每场对局开始时拥有魔爆术。", ko = "이정표. 정신 집중: 주문을 시전할 때마다 {v}% 확률로 신비한 폭발을 무료로 일으킵니다. 모든 런을 신비한 폭발을 가지고 시작합니다." }
+menu_v = 0.3
+plays = [
+    { v = 0.3, play = { cast_cast = { keys = [], cast = "arcane_explosion", gap = 0.0 } } },
+]
+
+[[talent]]
+key = "arcane_meditation"
+tree = 0
+row = 2
+col = 2
+ranks = 3
+effects = [{ stat = [6, 0.6] }]
+icon = "Spell_Shadow_SiphonMana"
+name = { en = "Arcane Meditation", de = "Arkane Meditation", fr = "Méditation des arcanes", es = "Meditación arcana", pt = "Meditação Arcana", ru = "Чародейская медитация", pl = "Medytacja tajemna", tr = "Gizem Meditasyonu", it = "Meditazione arcana", ja = "アーケイン・メディテーション", zh = "奥术冥想", ko = "비전 명상" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.6
+
+[[talent]]
+key = "arcane_mind"
+tree = 0
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [1, 0.025] }]
+icon = "Spell_Shadow_Charm"
+name = { en = "Arcane Mind", de = "Arkaner Geist", fr = "Esprit des arcanes", es = "Mente arcana", pt = "Mente Arcana", ru = "Чародейский разум", pl = "Umysł tajemny", tr = "Gizem Zihni", it = "Mente arcana", ja = "アーケイン・マインド", zh = "奥术心智", ko = "비전 정신" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "imp_blink"
+tree = 0
+row = 3
+col = 2
+ranks = 3
+req = "arcane_concentration"
+effects = [{ stat = [7, 0.03] }]
+icon = "Spell_Arcane_Blink"
+name = { en = "Improved Blink", de = "Verbessertes Blinzeln", fr = "Transfert amélioré", es = "Parpadeo mejorado", pt = "Piscar Aprimorado", ru = "Улучшенная вспышка", pl = "Ulepszone Mrugnięcie", tr = "Gelişmiş Işınlanma", it = "Blink migliorato", ja = "改良型ブリンク", zh = "强化闪现术", ko = "점멸 연마" }
+text = { en = "Increases your movement speed by {v}%.", de = "Erhöht dein Bewegungstempo um {v}%.", fr = "Augmente ta vitesse de déplacement de {v}%.", es = "Aumenta tu velocidad de movimiento un {v}%.", pt = "Aumenta sua velocidade de movimento em {v}%.", ru = "Увеличивает твою скорость движения на {v}%.", pl = "Zwiększa szybkość ruchu o {v}%.", tr = "Hareket hızını {v}% artırır.", it = "Aumenta la tua velocità di movimento del {v}%.", ja = "移動速度が{v}%上昇します。", zh = "使你的移动速度提高{v}%。", ko = "이동 속도가 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "presence_of_mind"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Nature_EnchantArmor"
+name = { en = "Presence of Mind", de = "Geistesgegenwart", fr = "Présence spirituelle", es = "Presencia de ánimo", pt = "Presença de Espírito", ru = "Хладнокровие", pl = "Obecność umysłu", tr = "Zihin Uyanıklığı", it = "Presenza mentale", ja = "プレゼンス・オブ・マインド", zh = "气定神闲", ko = "냉정" }
+text = { en = "Milestone. Arcane Missiles fires {v} more missiles, and each missile leaps on to another enemy for its full damage.", de = "Meilenstein. Arkane Geschosse feuert {v} weitere Geschosse ab, und jedes Geschoss springt mit vollem Schaden auf einen weiteren Feind über.", fr = "Jalon. Projectiles des arcanes tire {v} projectiles de plus, et chaque projectile bondit sur un autre ennemi pour ses dégâts complets.", es = "Hito. Misiles Arcanos dispara {v} misiles más, y cada misil salta a otro enemigo con todo su daño.", pt = "Marco. Mísseis Arcanos dispara {v} mísseis a mais, e cada míssil salta para outro inimigo com o dano total.", ru = "Веха. «Чародейские стрелы» выпускают еще {v} стрел, и каждая стрела перескакивает на другого врага с полным уроном.", pl = "Kamień milowy. Magiczne pociski wystrzeliwują dodatkowe pociski: {v}, a każdy przeskakuje na kolejnego przeciwnika z pełnymi obrażeniami.", tr = "Dönüm noktası. Gizemli Füzeler {v} füze daha atar ve her füze tam hasarıyla başka bir düşmana sıçrar.", it = "Traguardo. Dardi arcani lancia {v} dardi in più e ogni dardo salta su un altro nemico con tutto il suo danno.", ja = "【マイルストーン】アーケイン・ミサイルのミサイルが{v}発増え、各ミサイルが別の敵に飛び移って全ダメージを与えます。", zh = "里程碑：奥术飞弹额外发射{v}枚飞弹，每枚飞弹还会跳跃到另一个敌人身上，造成全额伤害。", ko = "이정표. 신비한 화살이 화살을 {v}발 더 발사하며, 각 화살은 다른 적에게 튀어 전체 피해를 줍니다." }
+menu_v = 2
+mods = [{ targets = ["arcane_missiles"] }, { leap = ["arcane_missiles"] }]
+mods_v = 2.0
+
+[[talent]]
+key = "arcane_instability"
+tree = 0
+row = 4
+col = 2
+ranks = 3
+effects = [{ stat = [0, 0.02] }, { stat = [3, 0.01] }]
+icon = "Spell_Shadow_Teleport"
+name = { en = "Arcane Instability", de = "Arkane Instabilität", fr = "Instabilité des arcanes", es = "Inestabilidad arcana", pt = "Instabilidade Arcana", ru = "Нестабильность тайной магии", pl = "Niestabilność tajemna", tr = "Gizem Dengesizliği", it = "Instabilità arcana", ja = "アーケイン・インスタビリティ", zh = "奥术不稳定", ko = "비전 불안정" }
+text = { en = "Increases all damage and your critical strike chance by {v}%.", de = "Erhöht jeglichen Schaden und deine kritische Trefferchance um {v}%.", fr = "Augmente tous les dégâts et tes chances de coup critique de {v}%.", es = "Aumenta todo el daño y tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta todo o dano e sua chance de acerto crítico em {v}%.", ru = "Увеличивает весь урон и твой шанс критического удара на {v}%.", pl = "Zwiększa wszystkie obrażenia i szansę na trafienie krytyczne o {v}%.", tr = "Tüm hasarı ve kritik vuruş şansını {v}% artırır.", it = "Aumenta del {v}% tutti i danni e la tua probabilità di colpo critico.", ja = "すべてのダメージとクリティカル率が{v}%増加します。", zh = "使你造成的所有伤害和暴击几率提高{v}%。", ko = "모든 피해와 치명타율이 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "arcane_fortitude"
+tree = 0
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [5, 0.025] }]
+icon = "Spell_Arcane_ArcaneResilience"
+name = { en = "Arcane Fortitude", de = "Arkane Seelenstärke", fr = "Robustesse des arcanes", es = "Entereza arcana", pt = "Fortitude Arcana", ru = "Стойкость тайной магии", pl = "Hart tajemny", tr = "Gizem Sebatı", it = "Fortezza arcana", ja = "アーケイン・フォーティチュード", zh = "奥术坚韧", ko = "비전 인내" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "arcane_reach"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "presence_of_mind"
+effects = [{ stat = [13, 0.025] }]
+icon = "Spell_Arcane_StarFire"
+name = { en = "Arcane Reach", de = "Arkane Reichweite", fr = "Portée des arcanes", es = "Alcance arcano", pt = "Alcance Arcano", ru = "Дальность тайной магии", pl = "Zasięg tajemny", tr = "Gizem Erişimi", it = "Portata arcana", ja = "アーケイン・リーチ", zh = "奥术延伸", ko = "비전 범위 확대" }
+text = { en = "{v}% chance for any spell to strike twice.", de = "{v}% Chance, dass ein Zauber doppelt trifft.", fr = "{v}% de chances qu'un sort frappe deux fois.", es = "{v}% de probabilidad de que cualquier hechizo golpee dos veces.", pt = "{v}% de chance de qualquer feitiço atingir duas vezes.", ru = "Шанс {v}%, что любое заклинание ударит дважды.", pl = "{v}% szansy, że dowolny czar uderzy dwukrotnie.", tr = "Herhangi bir büyünün iki kez vurma şansı {v}%.", it = "{v}% di probabilità che qualsiasi incantesimo colpisca due volte.", ja = "{v}%の確率であらゆる呪文が2度命中します。", zh = "任何法术都有{v}%的几率打击两次。", ko = "{v}% 확률로 모든 주문이 두 번 적중합니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "arcane_power"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = [{ stat = [13, 0.2] }, { start_instead = "arcane_missiles" }]
+icon = "Spell_Nature_Lightning"
+name = { en = "Arcane Power", de = "Arkane Macht", fr = "Puissance des arcanes", es = "Poder Arcano", pt = "Poder Arcano", ru = "Мощь тайной магии", pl = "Magiczna moc", tr = "Gizem Gücü", it = "Potere arcano", ja = "アーケイン・パワー", zh = "奥术强化", ko = "신비의 마법 강화" }
+text = { en = "Capstone. You start every run with Arcane Missiles instead of Fireball, and your spells strike twice {v}% more often. Your echoes cascade: a spell that strikes twice rolls again to strike once more, up to 3 more times in a row.", de = "Schlussstein. Du beginnst jeden Lauf mit Arkanen Geschossen statt Feuerball, und deine Zauber treffen {v}% öfter doppelt. Deine Echos kaskadieren: Ein Zauber, der doppelt trifft, würfelt erneut, um noch einmal zu treffen, bis zu 3 weitere Male in Folge.", fr = "Apogée. Tu commences chaque partie avec Projectiles des arcanes au lieu de Boule de feu, et tes sorts frappent deux fois {v}% plus souvent. Tes échos se propagent : un sort qui frappe deux fois retente sa chance de frapper une fois de plus, jusqu'à 3 fois de suite.", es = "Cúspide. Empiezas cada partida con Misiles Arcanos en lugar de Bola de fuego, y tus hechizos golpean dos veces un {v}% más a menudo. Tus ecos se propagan: un hechizo que golpea dos veces tira de nuevo para golpear una vez más, hasta 3 veces seguidas.", pt = "Ápice. Você começa cada partida com Mísseis Arcanos em vez de Bola de Fogo, e seus feitiços atingem duas vezes {v}% mais vezes. Seus ecos se propagam: um feitiço que atinge duas vezes rola de novo para atingir mais uma vez, até 3 vezes seguidas.", ru = "Вершина. Каждый забег ты начинаешь с «Чародейских стрел» вместо «Огненного шара», а твои заклинания бьют дважды на {v}% чаще. Твое эхо каскадом: заклинание, ударившее дважды, снова бросает кость и может ударить еще раз, до 3 раз подряд.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Magicznymi pociskami zamiast Kuli ognia, a twoje czary uderzają dwukrotnie o {v}% częściej. Echa kaskadują: czar, który uderza dwa razy, losuje ponownie i może uderzyć jeszcze raz, do 3 razy z rzędu.", tr = "Zirve. Her oyuna Ateş Topu yerine Gizemli Füzeler ile başlarsın ve büyülerin {v}% daha sık iki kez vurur. Yankıların çağlar: iki kez vuran büyü bir kez daha vurmak için yeniden zar atar, arka arkaya en fazla 3 kez daha.", it = "Vertice. Inizi ogni partita con Dardi arcani invece di Palla di fuoco e i tuoi incantesimi colpiscono due volte il {v}% più spesso. I tuoi echi si propagano: un incantesimo che colpisce due volte tira di nuovo per colpire ancora, fino a 3 volte di fila.", ja = "【キャップストーン】毎ランをファイアボールの代わりにアーケイン・ミサイルを持って始め、呪文が2度命中する確率が{v}%増加します。エコーが連鎖します：2度命中した呪文はさらにもう1度命中する判定を行い、最大3回まで続きます。", zh = "终极天赋：你在每场对局开始时拥有奥术飞弹而非火球术，你的法术打击两次的几率提高{v}%。回响会连锁：打击两次的法术会再次判定是否再打击一次，最多连续3次。", ko = "궁극 특성. 모든 런을 화염구 대신 신비한 화살을 가지고 시작하며, 주문이 두 번 적중할 확률이 {v}% 증가합니다. 메아리가 연쇄됩니다: 두 번 적중한 주문은 다시 판정하여 한 번 더 적중할 수 있으며, 최대 3번까지 연속됩니다." }
+menu_v = 0.2
+plays = [
+    { v = 1.0, play = { cascade = 3 } },
+]
+
+[[talent]]
+key = "imp_fireball"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = []
+icon = "Spell_Fire_FlameBolt"
+name = { en = "Improved Fireball", de = "Verbesserter Feuerball", fr = "Boule de feu améliorée", es = "Bola de fuego mejorada", pt = "Bola de Fogo Aprimorada", ru = "Улучшенный огненный шар", pl = "Ulepszona Kula ognia", tr = "Gelişmiş Ateş Topu", it = "Palla di fuoco migliorata", ja = "改良型ファイアボール", zh = "强化火球术", ko = "화염구 연마" }
+text = { en = "Fireball's cooldown is {v}% shorter.", de = "Die Abklingzeit von Feuerball ist {v}% kürzer.", fr = "La recharge de Boule de feu est réduite de {v}%.", es = "La reutilización de Bola de fuego es un {v}% más corta.", pt = "A recarga de Bola de Fogo é {v}% menor.", ru = "Перезарядка «Огненного шара» короче на {v}%.", pl = "Czas odnowienia Kuli ognia jest krótszy o {v}%.", tr = "Ateş Topu'nun bekleme süresi {v}% daha kısa.", it = "La ricarica di Palla di fuoco è più breve del {v}%.", ja = "ファイアボールのクールダウンが{v}%短くなります。", zh = "火球术的冷却时间缩短{v}%。", ko = "화염구의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.04
+mods = [{ cooldown = ["fireball"] }]
+mods_v = 0.04
+
+[[talent]]
+key = "impact"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Fire_MeteorStorm"
+name = { en = "Impact", de = "Einschlag", fr = "Impact", es = "Impacto", pt = "Impacto", ru = "Сотрясение", pl = "Uderzenie", tr = "Çarpma", it = "Impatto", ja = "インパクト", zh = "冲击", ko = "충격" }
+text = { en = "Your Fire spells have a {v}% chance to stun what they hit for 1 sec.", de = "Deine Feuerzauber haben eine Chance von {v}%, ihr Ziel 1 Sek. lang zu betäuben.", fr = "Tes sorts de Feu ont {v}% de chances d'étourdir leur cible pendant 1 s.", es = "Tus hechizos de Fuego tienen un {v}% de probabilidad de aturdir a su objetivo durante 1 s.", pt = "Seus feitiços de Fogo têm {v}% de chance de atordoar o que atingem por 1 s.", ru = "Твои заклинания огня с шансом {v}% оглушают цель на 1 сек.", pl = "Twoje czary ognia mają {v}% szansy, by ogłuszyć trafionych na 1 s.", tr = "Ateş büyülerin vurduğu şeyi {v}% ihtimalle 1 sn sersemletir.", it = "I tuoi incantesimi di Fuoco hanno il {v}% di probabilità di stordire ciò che colpiscono per 1 s.", ja = "炎の呪文が{v}%の確率で命中した敵を1秒間スタンさせます。", zh = "你的火焰法术有{v}%的几率使击中的目标昏迷1秒。", ko = "화염 주문이 {v}% 확률로 맞힌 대상을 1초 동안 기절시킵니다." }
+menu_v = 0.01
+mods = [{ stun = [4, 1.0] }]
+mods_v = 1.0
+
+[[talent]]
+key = "flame_throwing"
+tree = 1
+row = 1
+col = 0
+ranks = 2
+effects = []
+icon = "Spell_Fire_Flare"
+name = { en = "Flame Throwing", de = "Flammenwerfen", fr = "Lance-flammes", es = "Lanzallamas", pt = "Lança-chamas", ru = "Метание пламени", pl = "Miotanie płomieni", tr = "Alev Fırlatma", it = "Lancio di fiamme", ja = "フレイム・スローイング", zh = "火焰投掷", ko = "화염 투척" }
+text = { en = "Fire spells cover {v}% more ground.", de = "Feuerzauber decken {v}% mehr Fläche ab.", fr = "Les sorts de Feu couvrent {v}% de terrain en plus.", es = "Los hechizos de Fuego cubren un {v}% más de terreno.", pt = "Feitiços de Fogo cobrem {v}% a mais de terreno.", ru = "Заклинания огня накрывают на {v}% больше земли.", pl = "Czary ognia pokrywają o {v}% więcej terenu.", tr = "Ateş büyüleri {v}% daha fazla alan kaplar.", it = "Gli incantesimi di Fuoco coprono il {v}% di terreno in più.", ja = "炎の呪文の効果範囲が{v}%広がります。", zh = "火焰法术覆盖的范围扩大{v}%。", ko = "화염 주문의 범위가 {v}% 넓어집니다." }
+menu_v = 0.06
+mods = [{ school_area = 4 }]
+mods_v = 0.06
+
+[[talent]]
+key = "imp_flamestrike"
+tree = 1
+row = 1
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Fire_SoulBurn"
+name = { en = "Improved Flamestrike", de = "Verbesserter Flammenstoß", fr = "Choc de flammes amélioré", es = "Choque de llamas mejorado", pt = "Impacto de Chamas Aprimorado", ru = "Улучшенный огненный столб", pl = "Ulepszony Ognisty słup", tr = "Gelişmiş Alev Çarpması", it = "Colonna di fuoco migliorata", ja = "改良型フレイムストライク", zh = "强化烈焰风暴", ko = "불기둥 연마" }
+text = { en = "Flamestrike and Blast Wave deal {v}% more damage.", de = "Flammenstoß und Druckwelle verursachen {v}% mehr Schaden.", fr = "Choc de flammes et Onde de choc infligent {v}% de dégâts en plus.", es = "Choque de llamas y Onda expansiva infligen un {v}% más de daño.", pt = "Impacto de Chamas e Onda Explosiva causam {v}% a mais de dano.", ru = "«Огненный столб» и «Взрывная волна» наносят на {v}% больше урона.", pl = "Ognisty słup i Fala wybuchu zadają o {v}% więcej obrażeń.", tr = "Alev Çarpması ve Patlama Dalgası {v}% daha fazla hasar verir.", it = "Colonna di fuoco e Onda esplosiva infliggono il {v}% di danni in più.", ja = "フレイムストライクとブラスト・ウェーブのダメージが{v}%増加します。", zh = "烈焰风暴和冲击波造成的伤害提高{v}%。", ko = "불기둥과 화염 폭풍의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = [{ damage = ["flamestrike", "blast_wave"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "ignite"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Fire_Incinerate"
+name = { en = "Ignite", de = "Entzünden", fr = "Enflammer", es = "Ignición", pt = "Ignição", ru = "Воспламенение", pl = "Zapłon", tr = "Tutuştur", it = "Infiammare", ja = "イグナイト", zh = "点燃", ko = "발화" }
+text = { en = "Milestone. Your Fire critical strikes ignite the target for {v}% of the hit over 4 sec.", de = "Meilenstein. Deine kritischen Treffer mit Feuerzaubern entzünden das Ziel für {v}% des Treffers über 4 Sek.", fr = "Jalon. Tes coups critiques de Feu enflamment la cible pour {v}% du coup en 4 s.", es = "Hito. Tus golpes críticos de Fuego prenden al objetivo por un {v}% del golpe durante 4 s.", pt = "Marco. Seus acertos críticos de Fogo incendeiam o alvo por {v}% do golpe em 4 s.", ru = "Веха. Твои критические удары огнем поджигают цель на {v}% удара в течение 4 сек.", pl = "Kamień milowy. Twoje trafienia krytyczne ogniem podpalają cel za {v}% trafienia przez 4 s.", tr = "Dönüm noktası. Ateş kritik vuruşların hedefi tutuşturur: 4 sn içinde vuruşun {v}%'si kadar hasar.", it = "Traguardo. I tuoi colpi critici di Fuoco incendiano il bersaglio per il {v}% del colpo in 4 s.", ja = "【マイルストーン】炎の呪文のクリティカルが対象を燃え上がらせ、4秒かけてその攻撃の{v}%のダメージを与えます。", zh = "里程碑：你的火焰法术暴击会点燃目标，在4秒内造成相当于该次攻击{v}%的伤害。", ko = "이정표. 화염 치명타가 대상을 불태워 4초에 걸쳐 그 피해의 {v}%를 줍니다." }
+menu_v = 0.8
+plays = [
+    { v = 0.8, play = { crit_bleed = { keys = [], school = 4, secs = 4.0 } } },
+]
+
+[[talent]]
+key = "incinerate"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Fire_FlameShock"
+name = { en = "Incinerate", de = "Verbrennen", fr = "Incinération", es = "Incinerar", pt = "Incinerar", ru = "Испепеление", pl = "Spopielenie", tr = "Yak Kül Et", it = "Incenerire", ja = "インシネレート", zh = "烧尽", ko = "소각" }
+text = { en = "Fire Blast deals {v}% more damage.", de = "Feuerschlag verursacht {v}% mehr Schaden.", fr = "Explosion de feu inflige {v}% de dégâts en plus.", es = "Explosión de fuego inflige un {v}% más de daño.", pt = "Explosão de Fogo causa {v}% a mais de dano.", ru = "«Огненный взрыв» наносит на {v}% больше урона.", pl = "Ognisty podmuch zadaje o {v}% więcej obrażeń.", tr = "Ateş Patlaması {v}% daha fazla hasar verir.", it = "Vampata infligge il {v}% di danni in più.", ja = "ファイア・ブラストのダメージが{v}%増加します。", zh = "火焰冲击造成的伤害提高{v}%。", ko = "화염 작렬의 피해가 {v}% 증가합니다." }
+menu_v = 0.12
+mods = [{ damage = ["fire_blast"] }]
+mods_v = 0.12
+
+[[talent]]
+key = "master_elements"
+tree = 1
+row = 3
+col = 0
+ranks = 3
+effects = [{ stat = [4, 0.08] }]
+icon = "Spell_Fire_MasterOfElements"
+name = { en = "Master of Elements", de = "Meister der Elemente", fr = "Maître des éléments", es = "Maestro de los elementos", pt = "Mestre dos Elementos", ru = "Повелитель стихий", pl = "Mistrz żywiołów", tr = "Elementlerin Efendisi", it = "Maestro degli elementi", ja = "マスター・オブ・エレメンツ", zh = "元素大师", ko = "원소의 대가" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.08
+
+[[talent]]
+key = "critical_mass"
+tree = 1
+row = 3
+col = 2
+ranks = 3
+req = "ignite"
+effects = [{ stat = [3, 0.015] }]
+icon = "Spell_Nature_WispHeal"
+name = { en = "Critical Mass", de = "Kritische Masse", fr = "Masse critique", es = "Masa crítica", pt = "Massa Crítica", ru = "Критическая масса", pl = "Masa krytyczna", tr = "Kritik Kütle", it = "Massa critica", ja = "クリティカル・マス", zh = "临界质量", ko = "임계질량" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "hot_streak"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Fire_Fireball"
+name = { en = "Hot Streak", de = "Kampfeshitze", fr = "Série chaude", es = "Racha ardiente", pt = "Sequência Quente", ru = "Горячая серия", pl = "Ognista passa", tr = "Ateşli Seri", it = "Serie incandescente", ja = "ホット・ストリーク", zh = "法术连击", ko = "연속 발화" }
+text = { en = "Milestone. Every fourth Fire critical strike casts a free Pyroblast, at most twice a second.", de = "Meilenstein. Jeder vierte kritische Treffer mit Feuerzaubern wirkt einen kostenlosen Pyroschlag, höchstens zweimal pro Sekunde.", fr = "Jalon. Un coup critique de Feu sur quatre lance une Explosion pyrotechnique gratuite, au plus deux fois par seconde.", es = "Hito. Cada cuarto golpe crítico de Fuego lanza una Piroexplosión gratis, como máximo dos veces por segundo.", pt = "Marco. A cada quatro acertos críticos de Fogo, lança uma Piroexplosão grátis, no máximo duas vezes por segundo.", ru = "Веха. Каждый четвертый критический удар огнем применяет бесплатную «Огненную глыбу», не чаще двух раз в секунду.", pl = "Kamień milowy. Co czwarte trafienie krytyczne ogniem rzuca darmowy Piropocisk, najwyżej dwa razy na sekundę.", tr = "Dönüm noktası. Her dördüncü Ateş kritik vuruşu bedava bir Pyroblast yapar, saniyede en fazla iki kez.", it = "Traguardo. Ogni quarto colpo critico di Fuoco lancia un Piroscoppio gratuito, al massimo due volte al secondo.", ja = "【マイルストーン】炎の呪文のクリティカル4回ごとに無料のパイロブラストを唱えます（1秒に2回まで）。", zh = "里程碑：每第四次火焰法术暴击会免费施放一次炎爆术，每秒最多两次。", ko = "이정표. 화염 치명타 4번마다 불덩이 작렬을 무료로 시전합니다. 초당 최대 2번입니다." }
+menu_v = 4
+plays = [
+    { v = 4.0, play = { nth_crit = { school = 4, cast = "pyroblast", gap = 0.5 } } },
+]
+
+[[talent]]
+key = "fire_power"
+tree = 1
+row = 4
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Fire_Immolation"
+name = { en = "Fire Power", de = "Feuermacht", fr = "Puissance du feu", es = "Poder del fuego", pt = "Poder do Fogo", ru = "Мощь огня", pl = "Moc ognia", tr = "Ateş Gücü", it = "Potere del fuoco", ja = "ファイア・パワー", zh = "火焰强化", ko = "화염 마법 강화" }
+text = { en = "Fire spells deal {v}% more damage.", de = "Feuerzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de Feu infligent {v}% de dégâts en plus.", es = "Los hechizos de Fuego infligen un {v}% más de daño.", pt = "Feitiços de Fogo causam {v}% a mais de dano.", ru = "Заклинания огня наносят на {v}% больше урона.", pl = "Czary ognia zadają o {v}% więcej obrażeń.", tr = "Ateş büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Fuoco infliggono il {v}% di danni in più.", ja = "炎の呪文のダメージが{v}%増加します。", zh = "火焰法术造成的伤害提高{v}%。", ko = "화염 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = [{ school = 4 }]
+mods_v = 0.04
+
+[[talent]]
+key = "burning_soul"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [2, 0.03] }]
+icon = "Spell_Fire_Fire"
+name = { en = "Burning Soul", de = "Brennende Seele", fr = "Âme ardente", es = "Alma ardiente", pt = "Alma Ardente", ru = "Пылающая душа", pl = "Płonąca dusza", tr = "Yanan Ruh", it = "Anima ardente", ja = "バーニング・ソウル", zh = "燃烧之魂", ko = "불타는 영혼" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "imp_blast_wave"
+tree = 1
+row = 5
+col = 2
+ranks = 3
+req = "hot_streak"
+effects = []
+icon = "Spell_Holy_Excorcism_02"
+name = { en = "Improved Blast Wave", de = "Verbesserte Druckwelle", fr = "Onde de choc améliorée", es = "Onda expansiva mejorada", pt = "Onda Explosiva Aprimorada", ru = "Улучшенная взрывная волна", pl = "Ulepszona Fala wybuchu", tr = "Gelişmiş Patlama Dalgası", it = "Onda esplosiva migliorata", ja = "改良型ブラスト・ウェーブ", zh = "强化冲击波", ko = "화염 폭풍 연마" }
+text = { en = "Blast Wave, Pyroblast, Dragon's Breath and Living Bomb cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Druckwelle, Pyroschlag, Drachenodem und Lebende Bombe sind {v}% kürzer.", fr = "Les recharges d'Onde de choc, Explosion pyrotechnique, Souffle du dragon et Bombe vivante sont réduites de {v}%.", es = "Las reutilizaciones de Onda expansiva, Piroexplosión, Aliento de dragón y Bomba viviente son un {v}% más cortas.", pt = "As recargas de Onda Explosiva, Piroexplosão, Sopro do Dragão e Bomba Viva são {v}% menores.", ru = "Перезарядка «Взрывной волны», «Огненной глыбы», «Дыхания дракона» и «Живой бомбы» короче на {v}%.", pl = "Czasy odnowienia Fali wybuchu, Piropocisku, Smoczego oddechu i Żywej bomby są krótsze o {v}%.", tr = "Patlama Dalgası, Pyroblast, Ejderha Nefesi ve Canlı Bomba bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Onda esplosiva, Piroscoppio, Soffio di drago e Bomba vivente sono più brevi del {v}%.", ja = "ブラスト・ウェーブ、パイロブラスト、ドラゴンズ・ブレス、リビング・ボムのクールダウンが{v}%短くなります。", zh = "冲击波、炎爆术、龙息术和活动炸弹的冷却时间缩短{v}%。", ko = "화염 폭풍, 불덩이 작렬, 용의 숨결, 살아있는 폭탄의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.08
+mods = [{ cooldown = ["blast_wave", "pyroblast", "dragons_breath", "living_bomb"] }]
+mods_v = 0.08
+
+[[talent]]
+key = "pyroclasm"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_with = "pyroblast" }]
+icon = "Spell_Fire_Fireball02"
+name = { en = "Pyroclasm", de = "Pyroklasmus", fr = "Pyroclasme", es = "Piroclasma", pt = "Piroclasma", ru = "Пироклазм", pl = "Piroklazm", tr = "Piroklazm", it = "Piroclasma", ja = "パイロクラズム", zh = "火焰冲撞", ko = "화산 폭발" }
+text = { en = "Capstone. You start every run with Pyroblast, and enemies killed by your Fire spells explode for {v}% of their maximum health on everything within 6 yd, at most 3 a second.", de = "Schlussstein. Du beginnst jeden Lauf mit Pyroschlag, und durch deine Feuerzauber getötete Feinde explodieren für {v}% ihrer maximalen Gesundheit auf alles im Umkreis von 6 m, höchstens 3 pro Sekunde.", fr = "Apogée. Tu commences chaque partie avec Explosion pyrotechnique, et les ennemis tués par tes sorts de Feu explosent pour {v}% de leur santé maximale sur tout ce qui est à 6 m, 3 par seconde au plus.", es = "Cúspide. Empiezas cada partida con Piroexplosión, y los enemigos muertos por tus hechizos de Fuego explotan por un {v}% de su salud máxima sobre todo lo que esté a 6 m, 3 por segundo como máximo.", pt = "Ápice. Você começa cada partida com Piroexplosão, e inimigos mortos pelos seus feitiços de Fogo explodem por {v}% da vida máxima sobre tudo num raio de 6 m, no máximo 3 por segundo.", ru = "Вершина. Каждый забег ты начинаешь с «Огненной глыбы», а враги, убитые твоими заклинаниями огня, взрываются, нанося {v}% своего макс. здоровья всем в радиусе 6 м, не более 3 в секунду.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Piropociskiem, a przeciwnicy zabici czarami ognia wybuchają za {v}% swojego maksymalnego zdrowia, raniąc wszystko w promieniu 6 m, najwyżej 3 na sekundę.", tr = "Zirve. Her oyuna Pyroblast ile başlarsın ve Ateş büyülerinle öldürdüğün düşmanlar patlar, 6 m içindeki her şeye azami canlarının {v}%'si kadar hasar verir, saniyede en fazla 3 kez.", it = "Vertice. Inizi ogni partita con Piroscoppio e i nemici uccisi dai tuoi incantesimi di Fuoco esplodono per il {v}% della loro salute massima su tutto entro 6 m, al massimo 3 al secondo.", ja = "【キャップストーン】毎ランをパイロブラストを持って始め、炎の呪文で倒した敵が爆発して6ヤード以内のすべてに最大体力の{v}%のダメージを与えます（1秒に3体まで）。", zh = "终极天赋：你在每场对局开始时拥有炎爆术，被你的火焰法术杀死的敌人会爆炸，对6码内的所有目标造成相当于其最大生命值{v}%的伤害，每秒最多3次。", ko = "궁극 특성. 모든 런을 불덩이 작렬을 가지고 시작하며, 화염 주문으로 처치한 적이 폭발하여 6미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 줍니다. 초당 최대 3번입니다." }
+menu_v = 0.25
+plays = [
+    { v = 0.25, play = { kill_burst = { keys = ["fireball", "fire_blast", "pyroblast", "flamestrike", "blast_wave", "dragons_breath", "living_bomb"], dotted = false, radius = 6.0, gap = 0.33333334 } } },
+]
+
+[[talent]]
+key = "frost_warding"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [5, 0.01] }]
+icon = "Spell_Frost_FrostWard"
+name = { en = "Frost Warding", de = "Frostschutz", fr = "Protection contre le givre", es = "Resguardo de escarcha", pt = "Proteção contra Gelo", ru = "Защита от льда", pl = "Osłona mrozu", tr = "Buz Koruması", it = "Protezione dal gelo", ja = "フロスト・ウォーディング", zh = "冰霜防护", ko = "냉기 수호" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "imp_frostbolt"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Frost_FrostBolt02"
+name = { en = "Improved Frostbolt", de = "Verbesserter Frostblitz", fr = "Éclair de givre amélioré", es = "Descarga de escarcha mejorada", pt = "Seta de Gelo Aprimorada", ru = "Улучшенная ледяная стрела", pl = "Ulepszony Lodowy pocisk", tr = "Gelişmiş Buz Oku", it = "Dardo di ghiaccio migliorato", ja = "改良型フロストボルト", zh = "强化寒冰箭", ko = "얼음화살 연마" }
+text = { en = "Frostbolt, Frostfire Bolt and Ice Lance cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Frostblitz, Frostfeuerblitz und Eislanze sind {v}% kürzer.", fr = "Les temps de recharge d'Éclair de givre, d'Éclair de givrefeu et de Javelot de glace sont réduits de {v}%.", es = "Los tiempos de reutilización de Descarga de escarcha, Descarga de pirofrío y Lanza de hielo se reducen un {v}%.", pt = "Os tempos de recarga de Seta de Gelo, Seta de Fogofrio e Lança de Gelo são {v}% menores.", ru = "Время восстановления Ледяной стрелы, Стрелы ледяного огня и Ледяного копья сокращается на {v}%.", pl = "Czasy odnowienia Lodowego pocisku, Pocisku ognistego lodu i Lodowej lancy są krótsze o {v}%.", tr = "Buz Oku, Buzalev Oku ve Buz Mızrağı bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Dardo di ghiaccio, Dardo di fuoco gelido e Lancia di ghiaccio sono più brevi del {v}%.", ja = "フロストボルト、フロストファイア・ボルト、アイス・ランスのクールダウンが{v}%短くなります。", zh = "寒冰箭、霜火之箭和冰枪术的冷却时间缩短{v}%。", ko = "얼음화살, 얼음불꽃 화살, 얼음창의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.04
+mods = [{ cooldown = ["frostbolt", "frostfire_bolt", "ice_lance"] }]
+mods_v = 0.04
+
+[[talent]]
+key = "elemental_precision"
+tree = 2
+row = 1
+col = 0
+ranks = 3
+effects = [{ stat = [0, 0.02] }]
+icon = "Spell_Ice_MagicDamage"
+name = { en = "Elemental Precision", de = "Elementarpräzision", fr = "Précision élémentaire", es = "Precisión elemental", pt = "Precisão Elemental", ru = "Точность стихий", pl = "Precyzja żywiołów", tr = "Elemental Hassasiyet", it = "Precisione elementale", ja = "エレメンタル・プレシジョン", zh = "元素精准", ko = "원소 정밀도" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "ice_shards"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [4, 0.06] }]
+icon = "Spell_Frost_IceShard"
+name = { en = "Ice Shards", de = "Eissplitter", fr = "Éclats de glace", es = "Esquirlas de hielo", pt = "Estilhaços de Gelo", ru = "Ледяные осколки", pl = "Lodowe odłamki", tr = "Buz Parçaları", it = "Schegge di ghiaccio", ja = "アイス・シャード", zh = "寒冰碎片", ko = "얼음 파편" }
+text = { en = "Increases your critical strike damage by {v}%.", de = "Erhöht deinen kritischen Schaden um {v}%.", fr = "Augmente tes dégâts critiques de {v}%.", es = "Aumenta tu daño de golpe crítico un {v}%.", pt = "Aumenta seu dano de acerto crítico em {v}%.", ru = "Увеличивает урон твоих критических ударов на {v}%.", pl = "Zwiększa obrażenia od trafień krytycznych o {v}%.", tr = "Kritik vuruş hasarını {v}% artırır.", it = "Aumenta i danni dei tuoi colpi critici del {v}%.", ja = "クリティカルダメージが{v}%増加します。", zh = "使你的暴击伤害提高{v}%。", ko = "치명타 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+
+# TUNE 2026-11-08: freeze chance 1.5% -> 5%: a milestone that barely showed (Blackout stuns at 7.5%).
+[[talent]]
+key = "frostbite"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Frost_FrostArmor"
+name = { en = "Frostbite", de = "Erfrierung", fr = "Morsure de givre", es = "Mordedura de escarcha", pt = "Mordida de Gelo", ru = "Обморожение", pl = "Odmrożenie", tr = "Donma", it = "Congelamento", ja = "フロストバイト", zh = "霜寒刺骨", ko = "동상" }
+text = { en = "Milestone. Your Frost spells have a {v}% chance to freeze what they hit in place for 1.5 sec.", de = "Meilenstein. Deine Frostzauber haben eine Chance von {v}%, ihr Ziel 1,5 Sek. lang einzufrieren.", fr = "Jalon. Tes sorts de givre ont {v}% de chances de figer leur cible sur place pendant 1,5 s.", es = "Hito. Tus hechizos de escarcha tienen un {v}% de probabilidad de congelar en el sitio a su objetivo durante 1,5 s.", pt = "Marco. Seus feitiços de Gelo têm {v}% de chance de congelar o alvo no lugar por 1,5 s.", ru = "Веха. Твои заклинания льда с вероятностью {v}% замораживают цель на месте на 1,5 сек.", pl = "Kamień milowy. Twoje czary mrozu mają {v}% szansy, by unieruchomić trafionych w lodzie na 1,5 s.", tr = "Dönüm noktası. Buz büyülerin {v}% ihtimalle vurduğu şeyi 1,5 sn yerinde dondurur.", it = "Traguardo. I tuoi incantesimi di Gelo hanno il {v}% di probabilità di congelare sul posto ciò che colpiscono per 1,5 s.", ja = "【マイルストーン】冷気の呪文が{v}%の確率で命中した敵を1.5秒間その場に凍りつかせます。", zh = "里程碑：你的冰霜法术有{v}%的几率将击中的目标冻结在原地1.5秒。", ko = "이정표. 냉기 주문이 {v}% 확률로 맞힌 대상을 1.5초 동안 그 자리에 얼립니다." }
+menu_v = 0.05
+mods = [{ stun = [16, 1.5] }]
+mods_v = 5.0
+
+[[talent]]
+key = "piercing_ice"
+tree = 2
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Frost_Frostbolt"
+name = { en = "Piercing Ice", de = "Durchdringendes Eis", fr = "Glace perçante", es = "Hielo penetrante", pt = "Gelo Penetrante", ru = "Пронзающий лед", pl = "Przeszywający lód", tr = "Delici Buz", it = "Ghiaccio perforante", ja = "ピアシング・アイス", zh = "刺骨寒冰", ko = "관통하는 얼음" }
+text = { en = "Frost spells deal {v}% more damage.", de = "Frostzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de givre infligent {v}% de dégâts en plus.", es = "Los hechizos de escarcha infligen un {v}% más de daño.", pt = "Feitiços de Gelo causam {v}% a mais de dano.", ru = "Заклинания льда наносят на {v}% больше урона.", pl = "Czary mrozu zadają o {v}% więcej obrażeń.", tr = "Buz büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Gelo infliggono il {v}% di danni in più.", ja = "冷気の呪文のダメージが{v}%増加します。", zh = "冰霜法术造成的伤害提高{v}%。", ko = "냉기 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = [{ school = 16 }]
+mods_v = 0.05
+
+[[talent]]
+key = "shatter"
+tree = 2
+row = 3
+col = 0
+ranks = 5
+effects = [{ stat = [18, 0.05] }]
+icon = "Spell_Frost_FrostShock"
+name = { en = "Shatter", de = "Zertrümmern", fr = "Brise", es = "Quebrar", pt = "Estilhaçar", ru = "Дробление", pl = "Rozbicie", tr = "Parçalanma", it = "Frantumare", ja = "シャッター", zh = "碎冰", ko = "산산조각" }
+text = { en = "You deal {v}% more damage to frozen, stunned, slowed or fleeing enemies.", de = "Du verursachst {v}% mehr Schaden an eingefrorenen, betäubten, verlangsamten oder fliehenden Feinden.", fr = "Tu infliges {v}% de dégâts en plus aux ennemis gelés, étourdis, ralentis ou en fuite.", es = "Infliges un {v}% más de daño a los enemigos congelados, aturdidos, ralentizados o que huyen.", pt = "Você causa {v}% a mais de dano a inimigos congelados, atordoados, lentos ou em fuga.", ru = "Ты наносишь на {v}% больше урона замороженным, оглушенным, замедленным и бегущим врагам.", pl = "Zadajesz o {v}% więcej obrażeń zamrożonym, ogłuszonym, spowolnionym lub uciekającym przeciwnikom.", tr = "Donmuş, sersemlemiş, yavaşlamış veya kaçan düşmanlara {v}% daha fazla hasar verirsin.", it = "Infliggi il {v}% di danni in più ai nemici congelati, storditi, rallentati o in fuga.", ja = "凍結・スタン・スロー・逃走状態の敵に与えるダメージが{v}%増加します。", zh = "你对被冻结、昏迷、减速或逃跑的敌人造成的伤害提高{v}%。", ko = "빙결, 기절, 감속, 도주 상태인 적에게 주는 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+
+[[talent]]
+key = "arctic_reach"
+tree = 2
+row = 3
+col = 2
+ranks = 2
+req = "frostbite"
+effects = []
+icon = "Spell_Shadow_DarkRitual"
+name = { en = "Arctic Reach", de = "Arktische Reichweite", fr = "Allonge arctique", es = "Alcance ártico", pt = "Alcance Ártico", ru = "Арктическая дальность", pl = "Arktyczny zasięg", tr = "Kutup Erişimi", it = "Portata artica", ja = "アークティック・リーチ", zh = "极寒延伸", ko = "극지의 범위" }
+text = { en = "Frost Nova, Cone of Cold and Blizzard reach {v}% farther.", de = "Frostnova, Kältekegel und Blizzard reichen {v}% weiter.", fr = "La portée de Nova de givre, de Cône de froid et de Blizzard augmente de {v}%.", es = "Nova de escarcha, Cono de frío y Ventisca alcanzan un {v}% más lejos.", pt = "Nova de Gelo, Cone de Frio e Nevasca alcançam {v}% mais longe.", ru = "Дальность Кольца льда, Конуса холода и Снежной бури увеличивается на {v}%.", pl = "Lodowa nova, Stożek zimna i Zamieć sięgają o {v}% dalej.", tr = "Buz Nova, Soğuk Konisi ve Kar Fırtınası {v}% daha uzağa erişir.", it = "Nova di ghiaccio, Cono di freddo e Bufera di neve arrivano il {v}% più lontano.", ja = "フロスト・ノヴァ、コーン・オブ・コールド、ブリザードの範囲が{v}%広がります。", zh = "冰霜新星、冰锥术和暴风雪的范围扩大{v}%。", ko = "얼음 회오리, 냉기 돌풍, 눈보라의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.1
+mods = [{ area = ["frost_nova", "cone_of_cold", "blizzard"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "splitting_ice"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Frost_WizardMark"
+name = { en = "Splitting Ice", de = "Splitterndes Eis", fr = "Glace fendante", es = "Hielo astillante", pt = "Gelo Fendente", ru = "Раскалывающийся лед", pl = "Pękający lód", tr = "Bölünen Buz", it = "Ghiaccio divisore", ja = "スプリッティング・アイス", zh = "分裂寒冰", ko = "갈라지는 얼음" }
+text = { en = "Milestone. Frostbolt splinters on impact: {v}% of its damage to every enemy within 5 yd of its target.", de = "Meilenstein. Frostblitz zersplittert beim Aufprall: {v}% seines Schadens an jeden Feind im Umkreis von 5 m um sein Ziel.", fr = "Jalon. Éclair de givre éclate à l'impact : {v}% de ses dégâts à chaque ennemi à moins de 5 m de sa cible.", es = "Hito. Descarga de escarcha se astilla al impactar: un {v}% de su daño a cada enemigo a menos de 5 m de su objetivo.", pt = "Marco. Seta de Gelo se estilhaça no impacto: {v}% do seu dano a cada inimigo a até 5 m do alvo.", ru = "Веха. Ледяная стрела раскалывается при попадании: {v}% ее урона получает каждый враг в радиусе 5 м от цели.", pl = "Kamień milowy. Lodowy pocisk rozpryskuje się przy trafieniu: {v}% jego obrażeń dla każdego przeciwnika w promieniu 5 m od celu.", tr = "Dönüm noktası. Buz Oku çarpınca parçalanır: hasarının {v}%'si hedefinin 5 m çevresindeki her düşmana gider.", it = "Traguardo. Dardo di ghiaccio si frantuma all'impatto: il {v}% dei suoi danni a ogni nemico entro 5 m dal bersaglio.", ja = "【マイルストーン】フロストボルトが着弾時に砕け散ります：対象の5ヤード以内のすべての敵にそのダメージの{v}%を与えます。", zh = "里程碑：寒冰箭在命中时碎裂：对目标5码内的所有敌人造成相当于其伤害{v}%的伤害。", ko = "이정표. 얼음화살이 적중하면 산산조각 납니다: 대상 주위 5미터 안의 모든 적에게 피해의 {v}%를 줍니다." }
+menu_v = 1
+plays = [
+    { v = 1.0, play = { cleave = { keys = ["frostbolt"], n = 99, radius = 5.0, stun = 0.0 } } },
+]
+
+[[talent]]
+key = "frost_channeling"
+tree = 2
+row = 4
+col = 2
+ranks = 3
+effects = [{ stat = [1, 0.025] }]
+icon = "Spell_Frost_Stun"
+name = { en = "Frost Channeling", de = "Frostkanalisierung", fr = "Canalisation du givre", es = "Canalización de escarcha", pt = "Canalização de Gelo", ru = "Ледяная концентрация", pl = "Kanałowanie mrozu", tr = "Buz Yönlendirme", it = "Canalizzazione del gelo", ja = "フロスト・チャネリング", zh = "冰霜导能", ko = "냉기 집중" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.025
+
+[[talent]]
+key = "permafrost"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [2, 0.03] }]
+icon = "Spell_Frost_Wisp"
+name = { en = "Permafrost", de = "Permafrost", fr = "Permagel", es = "Permafrost", pt = "Permagelo", ru = "Вечная мерзлота", pl = "Wieczna zmarzlina", tr = "Daimi Don", it = "Permafrost", ja = "パーマフロスト", zh = "极寒冰霜", ko = "영구동토" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.03
+
+[[talent]]
+key = "imp_ice_barrier"
+tree = 2
+row = 5
+col = 2
+ranks = 3
+req = "splitting_ice"
+effects = []
+icon = "Spell_Ice_Lament"
+name = { en = "Improved Ice Barrier", de = "Verbesserte Eisbarriere", fr = "Barrière de glace améliorée", es = "Barrera de hielo mejorada", pt = "Barreira de Gelo Aprimorada", ru = "Улучшенная ледяная преграда", pl = "Ulepszona Lodowa bariera", tr = "Gelişmiş Buz Bariyeri", it = "Barriera di ghiaccio migliorata", ja = "改良型アイス・バリア", zh = "强化寒冰护体", ko = "얼음 보호막 연마" }
+text = { en = "Ice Barrier absorbs {v}% more.", de = "Eisbarriere absorbiert {v}% mehr.", fr = "Barrière de glace absorbe {v}% de dégâts en plus.", es = "Barrera de hielo absorbe un {v}% más.", pt = "Barreira de Gelo absorve {v}% a mais.", ru = "Ледяная преграда поглощает на {v}% больше урона.", pl = "Lodowa bariera pochłania o {v}% więcej.", tr = "Buz Bariyeri {v}% daha fazla emer.", it = "Barriera di ghiaccio assorbe il {v}% in più.", ja = "アイス・バリアの吸収量が{v}%増加します。", zh = "寒冰护体吸收的伤害提高{v}%。", ko = "얼음 보호막의 흡수량이 {v}% 증가합니다." }
+menu_v = 0.2
+mods = [{ damage = ["ice_barrier"] }]
+mods_v = 0.2
+
+# Ours (2026-11-10, tester feedback): the elemental's casts copy the hero's Frostbolt (`blow_cast`), so it
+# scales with the run's upgrades; its own bolt alone did not.
+[[talent]]
+key = "water_elemental"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = [{ start_instead = "frostbolt" }]
+icon = "Spell_Frost_SummonWaterElemental"
+name = { en = "Summon Water Elemental", de = "Wasserelementar beschwören", fr = "Invocation d'un élémentaire d'eau", es = "Invocar elemental de agua", pt = "Invocar Elemental da Água", ru = "Призыв элементаля воды", pl = "Przyzwanie żywiołaka wody", tr = "Su Elementali Çağır", it = "Evocare elementale dell'acqua", ja = "サモン・ウォーター・エレメンタル", zh = "召唤水元素", ko = "물의 정령 소환" }
+text = { en = "Capstone. You start every run with Frostbolt instead of Fireball. A Water Elemental fights at your side, hurling Frostbolts, and each of its casts also fires a free copy of your Frostbolt with all your upgrades, Splitting Ice included. A free Frost Nova bursts from you every 8 sec.", de = "Schlussstein. Du beginnst jeden Lauf mit Frostblitz statt Feuerball. Ein Wasserelementar kämpft an deiner Seite und schleudert Frostblitze, und mit jedem Zauber feuert er zusätzlich eine kostenlose Kopie deines Frostblitzes mit allen deinen Verbesserungen, Splitterndes Eis eingeschlossen. Alle 8 Sek. bricht eine kostenlose Frostnova aus dir hervor.", fr = "Clé de voûte. Tu commences chaque partie avec Éclair de givre au lieu de Boule de feu. Un élémentaire d'eau combat à tes côtés en lançant des Éclairs de givre, et chacun de ses sorts tire aussi une copie gratuite de ton Éclair de givre avec toutes tes améliorations, Glace fendante comprise. Une Nova de givre gratuite jaillit de toi toutes les 8 s.", es = "Piedra angular. Empiezas cada partida con Descarga de escarcha en lugar de Bola de fuego. Un elemental de agua lucha a tu lado lanzando Descargas de escarcha, y cada uno de sus lanzamientos dispara además una copia gratis de tu Descarga de escarcha con todas tus mejoras, incluido Hielo astillante. Una Nova de escarcha gratis estalla de ti cada 8 s.", pt = "Pedra angular. Você começa cada partida com Seta de Gelo em vez de Bola de Fogo. Um Elemental da Água luta ao seu lado lançando Setas de Gelo, e cada lançamento dele também dispara uma cópia grátis da sua Seta de Gelo com todos os seus aprimoramentos, Gelo Fendente incluído. Uma Nova de Gelo grátis explode de você a cada 8 s.", ru = "Вершина. Ты начинаешь каждый забег с Ледяной стрелы вместо Огненного шара. Элементаль воды сражается рядом с тобой, метая Ледяные стрелы, и каждый его бросок выпускает еще и бесплатную копию твоей Ледяной стрелы со всеми твоими улучшениями, включая «Раскалывающийся лед». Бесплатное Кольцо льда вырывается из тебя каждые 8 сек.", pl = "Zwieńczenie. Każdą rozgrywkę zaczynasz z Lodowym pociskiem zamiast Kuli ognia. Żywiołak wody walczy u twego boku i ciska Lodowe pociski, a każdy jego rzut wypuszcza też darmową kopię twojego Lodowego pocisku ze wszystkimi twoimi ulepszeniami, w tym z Pękającym lodem. Darmowa Lodowa nova wybucha z ciebie co 8 s.", tr = "Zirve. Her oyuna Ateş Topu yerine Buz Oku ile başlarsın. Bir Su Elementali yanında savaşıp Buz Okları fırlatır ve her atışında ayrıca Buz Okunun bedava bir kopyasını, tüm geliştirmelerin ve Bölünen Buz dahil, fırlatır. Her 8 sn'de senden bedava bir Buz Nova patlar.", it = "Vertice. Inizi ogni partita con Dardo di ghiaccio invece di Palla di fuoco. Un elementale dell'acqua combatte al tuo fianco lanciando Dardi di ghiaccio e ogni suo lancio spara anche una copia gratuita del tuo Dardo di ghiaccio con tutti i tuoi potenziamenti, Ghiaccio divisore incluso. Una Nova di ghiaccio gratuita esplode da te ogni 8 s.", ja = "【キャップストーン】毎ランをファイアボールの代わりにフロストボルトを持って始めます。ウォーター・エレメンタルが共に戦ってフロストボルトを放ち、その詠唱のたびにあなたのすべての強化（スプリッティング・アイスを含む）を備えたフロストボルトの複製も無料で放たれます。8秒ごとに無料のフロスト・ノヴァが炸裂します。", zh = "终极天赋：你在每场对局开始时拥有寒冰箭而非火球术。一个水元素在你身边作战，投掷寒冰箭，它每次施法还会免费发射一枚你的寒冰箭复制品，带有你的所有强化，包括分裂寒冰。每8秒会从你身上爆发一次免费的冰霜新星。", ko = "궁극 특성. 모든 런을 화염구 대신 얼음화살을 가지고 시작합니다. 물의 정령이 곁에서 싸우며 얼음화살을 던지고, 시전할 때마다 당신의 모든 강화가 적용된 얼음화살을 무료로 하나 더 발사합니다. 갈라지는 얼음도 포함됩니다. 8초마다 얼음 회오리가 무료로 터져 나옵니다." }
+plays = [
+    { v = 0.0, play = { pet = { pet = "water_elemental", cleave = false } } },
+    { v = 8.0, play = { every = "frost_nova" } },
+]
+behaviors = [
+    { behavior = "blow_cast", pet = "water_elemental", spell = "frostbolt" },
+]

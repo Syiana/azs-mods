@@ -1,0 +1,38 @@
+# The shop's portrait frames (survivors-sim frames.rs). A frame's place plus one is its wire id.
+#
+# Every border, in the shop's order: `wire_id` is the index plus one. `TUNE` the prices.
+
+[[frame]]
+key = "rare_silver"
+name = "Rare Silver Dragon"
+source = { shop = 4000 }
+
+[[frame]]
+key = "elite_gold"
+name = "Elite Gold Dragon"
+source = { shop = 6000 }
+
+[[frame]]
+key = "rare_elite"
+name = "Rare Elite Dragon"
+source = { shop = 9000 }
+
+[[frame]]
+key = "fel_green"
+name = "Fel Dragon"
+source = { shop = 10000 }
+
+[[frame]]
+key = "titan_bronze"
+name = "Titan Bronze"
+source = { shop = 10000 }
+
+[[frame]]
+key = "ebon_blade"
+name = "Ebon Blade"
+source = { shop = 12000 }
+
+[[frame]]
+key = "lich_frost"
+name = "Lich King's Frost"
+source = { achievement = "kingslayer" }

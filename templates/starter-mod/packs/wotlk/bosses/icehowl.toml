@@ -1,0 +1,16 @@
+# Icehowl: Massive Crash then Trample, Arctic Breath.
+
+[[boss]]
+key = "icehowl"
+
+[[boss.kit]]
+every = 13.0
+ability = { combo = [[{ stomp = { spell = 66683, radius = 10.0, warn = 1.8, knock = 14.0 } }, { rush = { spell = 66734, len = 30.0, w = 6.0, warn = 1.8, factor = 2.6 } }], 1.4] }
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 66689, range = 14.0, arc = 60.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

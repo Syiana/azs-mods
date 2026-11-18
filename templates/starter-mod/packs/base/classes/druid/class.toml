@@ -1,0 +1,77 @@
+key = "druid"
+# The `ChrClasses` id.
+id = 11
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [1, 2, 3, 4, 5, 6, 7, 0]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 205
+# Casters walk to their orbs and coins (2026-11-10); a hybrid only by a quarter (10 yd -> 7.5 yd),
+# and a melee build gives it back with the talent stat 35.
+pickup_pct = -25
+power = "mana"
+starter = "wrath"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's.
+races = [4, 12, 6]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    35, # Bent Staff
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 49376
+dash_legend = { en = "Feral Charge's bleed is twice as strong, and a roar at its end stuns the enemies round you.", de = "Die Blutung von Wilde Attacke ist doppelt so stark, und ein Brüllen an ihrem Ende betäubt die Feinde um dich.", fr = "Le saignement de Charge farouche est deux fois plus fort, et un rugissement à la fin étourdit les ennemis autour de toi.", es = "La hemorragia de Carga feral es el doble de fuerte, y un rugido al final aturde a los enemigos a tu alrededor.", pt = "O sangramento de Investida Feral é duas vezes mais forte, e um rugido no fim atordoa os inimigos ao seu redor.", ru = "Кровотечение от «Звериной атаки» вдвое сильнее, а рев в конце оглушает врагов вокруг тебя.", pl = "Krwawienie z Szarży dzikiej jest dwa razy silniejsze, a ryk na jej końcu ogłusza przeciwników wokół ciebie.", tr = "Vahşi Hamle'nin kanaması iki kat güçlü, sonundaki kükreme çevrendeki düşmanları sersemletir.", it = "Il sanguinamento di Carica ferale è due volte più forte e un ruggito alla fine stordisce i nemici attorno a te.", ja = "フェラル・チャージの出血効果が2倍になり、終点での咆哮が周囲の敵をスタンさせます。", zh = "野性冲锋的流血效果翻倍，冲锋结束时的咆哮使你周围的敌人昏迷。", ko = "야성의 돌진의 출혈이 두 배로 강해지고, 끝에서 내지르는 포효가 주위의 적을 기절시킵니다." }
+bot_name = "Botdruid"
+bot_order = 9
+name = { en = "Druid", de = "Druide", fr = "Druide", es = "Druida", pt = "Druida", ru = "Друид", pl = "Druid", tr = "Druid", it = "Druido", ja = "ドルイド", zh = "德鲁伊", ko = "드루이드" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [1, 0.49, 0.04]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "druid_emerald"
+tone = 6
+price = 12000
+name = { en = "Emerald Dream", de = "Smaragdtraum", fr = "Rêve d'émeraude", es = "Sueño Esmeralda", pt = "Sonho Esmeralda", ru = "Изумрудный сон", pl = "Szmaragdowy Sen", tr = "Zümrüt Rüya", it = "Sogno di Smeraldo", ja = "エメラルド・ドリーム", zh = "翡翠梦境", ko = "에메랄드의 꿈" }
+
+[[colors]]
+key = "druid_ember"
+tone = 2
+price = 12000
+name = { en = "Autumn", de = "Herbstglut", fr = "Automne", es = "Otoño", pt = "Outono", ru = "Осень", pl = "Jesień", tr = "Sonbahar", it = "Autunno", ja = "秋", zh = "秋意", ko = "가을" }
+
+[[colors]]
+key = "druid_azure"
+tone = 9
+price = 15000
+name = { en = "Azure Moon", de = "Azurmond", fr = "Lune d'azur", es = "Luna azur", pt = "Lua Azul", ru = "Лазурная луна", pl = "Lazurowy księżyc", tr = "Gök Ay", it = "Luna azzurra", ja = "紺碧の月", zh = "蔚蓝之月", ko = "하늘빛 달" }
+
+[[colors]]
+key = "druid_arcane"
+tone = 10
+price = 15000
+name = { en = "Starfall", de = "Sternenregen", fr = "Chute d'étoiles", es = "Lluvia de estrellas", pt = "Chuva de Estrelas", ru = "Звездопад", pl = "Gwiezdny deszcz", tr = "Yıldız Düşüşü", it = "Pioggia di stelle", ja = "スターフォール", zh = "星辰坠落", ko = "별똥별" }
+
+[[colors]]
+key = "druid_teal"
+tone = 7
+price = 18000
+name = { en = "Tidal Grove", de = "Gezeitenhain", fr = "Bosquet des marées", es = "Arboleda de las mareas", pt = "Bosque das Marés", ru = "Приливная роща", pl = "Gaj przypływów", tr = "Gelgit Koruluğu", it = "Bosco delle maree", ja = "潮の森", zh = "潮汐林地", ko = "물결의 숲" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "druid_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "druid_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

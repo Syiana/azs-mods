@@ -1,0 +1,20 @@
+# Razorscale: Flame Breath, Devouring Flame, Wing Buffet, the Dark Rune dwarves.
+
+[[boss]]
+key = "razorscale"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 63317, range = 16.0, arc = 70.0, warn = 1.4, factor = 2.6 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 63236, burst = 63236, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { stomp = { spell = 62666, radius = 10.0, warn = 1.8, knock = 14.0 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

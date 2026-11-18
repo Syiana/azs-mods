@@ -1,0 +1,289 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "hyjal"
+order = 21
+name = { en = "Hyjal Summit", de = "Hyjalgipfel", fr = "Sommet d'Hyjal", es = "Cima Hyjal", pt = "Pico Hyjal", ru = "Вершина Хиджала", pl = "Szczyt Hyjal", tr = "Hyjal Zirvesi", it = "Vetta Hyjal", ja = "ハイジャル・サミット", zh = "海加尔峰", ko = "하이잘 정상" }
+subtitle = { en = "The Battle for Mount Hyjal", de = "Die Schlacht um den Hyjal", fr = "La bataille du mont Hyjal", es = "La batalla del Monte Hyjal", pt = "A Batalha pelo Monte Hyjal", ru = "Битва за гору Хиджал", pl = "Bitwa o Górę Hyjal", tr = "Hyjal Dağı Savaşı", it = "La battaglia per il Monte Hyjal", ja = "ハイジャル山の戦い", zh = "海加尔山之战", ko = "하이잘 산 전투" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_Tanaris_01"
+map = 1
+map_name = "Kalimdor"
+area = 3606
+center = [-8225.0, -4368.8]
+radius = 100.0
+map_bounds = [-218.75, -7118.75, -5875.0, -10475.0]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 12.14
+gold_factor = 3.31
+late_factor = 0.4
+hour = 14
+weather = { fine = 85, rain = 15 }
+
+[[zone.enemy]]
+entry = 3900
+name = { en = "Ghoul", de = "Ghul", fr = "Goule", es = "Necrófago", pt = "Carniçal", ru = "Вурдалак", pl = "Ghul", tr = "Gulyabani", it = "Ghoul", ja = "グール", zh = "食尸鬼", ko = "구울" }
+type = "undead"
+display = 137
+icon = "Ability_GhoulFrenzy"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 3901
+name = { en = "Fel Stalker", de = "Teufelspirscher", fr = "Traqueur gangrené", es = "Acechador vil", pt = "Espreitador Vil", ru = "Охотник Скверны", pl = "Prześladowca Zła", tr = "Fel Takipçisi", it = "Inseguitore vile", ja = "フェル・ストーカー", zh = "邪能潜伏者", ko = "지옥 추적자" }
+type = "demon"
+display = 850
+icon = "Spell_Shadow_SummonFelHunter"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 1.6
+
+[[zone.enemy]]
+entry = 3902
+name = { en = "Gargoyle", de = "Gargoyle", fr = "Gargouille", es = "Gárgola", pt = "Gárgula", ru = "Горгулья", pl = "Gargulec", tr = "Gargoyle", it = "Gargoyle", ja = "ガーゴイル", zh = "石像鬼", ko = "가고일" }
+type = "undead"
+display = 7533
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.9
+
+[[zone.enemy]]
+entry = 3903
+name = { en = "Shadowy Necromancer", de = "Schattenhafter Nekromant", fr = "Nécromancien ténébreux", es = "Nigromante sombrío", pt = "Necromante Sombrio", ru = "Темный некромант", pl = "Cienisty nekromanta", tr = "Gölgeli Ölü Çağıran", it = "Negromante oscuro", ja = "シャドウィ・ネクロマンサー", zh = "阴影通灵师", ko = "어둠의 강령술사" }
+type = "humanoid"
+display = 22196
+icon = "INV_Misc_Head_Human_02"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.5
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3904
+name = { en = "Crypt Fiend", de = "Gruftbestie", fr = "Démon des cryptes", es = "Maligno de la cripta", pt = "Demônio da Cripta", ru = "Склепный изверг", pl = "Krypowy demon", tr = "Mahzen Canavarı", it = "Demone della cripta", ja = "クリプト・フィーンド", zh = "地穴恶魔", ko = "지하마귀" }
+type = "undead"
+display = 3004
+icon = "INV_Misc_Head_Nerubian_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.9
+
+[[zone.enemy]]
+entry = 3905
+name = { en = "Abomination", de = "Monstrosität", fr = "Abomination", es = "Abominación", pt = "Abominação", ru = "Порождение", pl = "Poczwara", tr = "Canavar", it = "Abominio", ja = "アボミネーション", zh = "憎恶", ko = "누더기골렘" }
+type = "undead"
+display = 1061
+icon = "Spell_Shadow_AbominationExplosion"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 3906
+name = { en = "Banshee", de = "Banshee", fr = "Banshee", es = "Alma en pena", pt = "Banshee", ru = "Банши", pl = "Banshee", tr = "Banşi", it = "Banshee", ja = "バンシー", zh = "女妖", ko = "밴시" }
+type = "undead"
+display = 915
+icon = "Achievement_Halloween_Ghost_01"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+
+[[zone.enemy]]
+entry = 3907
+name = { en = "Skeletal Mage", de = "Skelettmagier", fr = "Mage squelette", es = "Mago esquelético", pt = "Mago Esquelético", ru = "Скелет-маг", pl = "Szkieletowy mag", tr = "İskelet Büyücü", it = "Mago scheletrico", ja = "スケルトン・メイジ", zh = "骷髅法师", ko = "해골 마법사" }
+type = "undead"
+display = 1245
+icon = "Spell_Shadow_AnimateDead"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 3908
+name = { en = "Giant Infernal", de = "Riesige Höllenbestie", fr = "Infernal géant", es = "Infernal gigante", pt = "Infernal Gigante", ru = "Гигантский инфернал", pl = "Olbrzymi piekielnik", tr = "Dev Cehennem Yaratığı", it = "Infernale gigante", ja = "ジャイアント・インファーナル", zh = "巨型地狱火", ko = "거대 지옥불정령" }
+type = "demon"
+display = 169
+icon = "Spell_Shadow_SummonInfernal"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 1.1
+
+[[zone.elite]]
+entry = 3910
+name = { en = "Doomguard", de = "Verdammniswache", fr = "Garde funeste", es = "Guardia apocalíptico", pt = "Guarda da Perdição", ru = "Страж Судьбы", pl = "Strażnik zagłady", tr = "Kıyamet Muhafızı", it = "Guardia Fatale", ja = "ドゥームガード", zh = "末日守卫", ko = "파멸의 수호병" }
+type = "demon"
+display = 17097
+icon = "Spell_Shadow_SummonInfernal"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 1.2
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { rain = { spell = 5740, count = 3, radius = 4.0, spread = 9.0, warn = 1.8, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite]]
+entry = 3911
+name = { en = "Towering Infernal", de = "Turmhohe Höllenbestie", fr = "Infernal colossal", es = "Infernal imponente", pt = "Infernal Colossal", ru = "Громадный инфернал", pl = "Górujący piekielnik", tr = "Heybetli Cehennem Yaratığı", it = "Infernale torreggiante", ja = "そびえ立つインファーナル", zh = "高耸的地狱火", ko = "우뚝 솟은 지옥불정령" }
+type = "demon"
+display = 16874
+icon = "Spell_Shadow_SummonInfernal"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.5
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 0, burst = 2120, radius = 4.5, warn = 1.6, factor = 1.2 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { nova = { spell = 8349, radius = 7.0, warn = 1.6 } }
+
+[[zone.elite]]
+entry = 3912
+name = { en = "Frost Lich", de = "Frostlich", fr = "Liche de givre", es = "Lich de escarcha", pt = "Lich do Gelo", ru = "Ледяной лич", pl = "Mroźny licz", tr = "Buz Lich'i", it = "Lich del gelo", ja = "フロスト・リッチ", zh = "冰霜巫妖", ko = "서리 리치" }
+type = "undead"
+display = 7919
+icon = "Spell_Shadow_RaiseDead"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.2
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 8.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { wander = { spell = 28547, count = 1, radius = 3.0, speed = 3.5, lasts = 6.0, tick = 0.5 } }
+
+[[zone.boss]]
+entry = 3990
+name = { en = "Rage Winterchill", de = "Furor Winterfrost", fr = "Rage Froidhiver", es = "Rage Frioinvierno", pt = "Rage Frioinverno", ru = "Мороз Зимней Стужи", pl = "Rage Winterchill", tr = "Rage Kışsoğuğu", it = "Rage Gelainverno", ja = "レイジ・ウィンターチル", zh = "雷基·冬寒", ko = "격노한 윈터칠" }
+type = "undead"
+display = 17444
+icon = "Spell_Shadow_RaiseDead"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.0
+minute = 4
+yell = { en = "The Legion's final conquest has begun!", de = "Der letzte Eroberungsfeldzug der Legion hat begonnen!", fr = "La dernière conquête de la Légion a commencé !", es = "¡La conquista final de la Legión ha comenzado!", pt = "A conquista final da Legião começou!", ru = "Последнее завоевание Легиона началось!", pl = "Ostateczny podbój Legionu się rozpoczął!", tr = "Lejyon'un son fethi başladı!", it = "La conquista finale della Legione è iniziata!", ja = "リージョンの最後の征服が始まった！", zh = "燃烧军团的最终征服开始了！", ko = "군단의 마지막 정복이 시작되었다!" }
+kit = "rage_winterchill"
+
+[[zone.boss]]
+entry = 3991
+name = { en = "Anetheron", de = "Anetheron", fr = "Anetheron", es = "Anetheron", pt = "Anetheron", ru = "Анетерон", pl = "Anetheron", tr = "Anetheron", it = "Anetheron", ja = "アネセロン", zh = "安纳塞隆", ko = "아네테론" }
+type = "demon"
+display = 130
+icon = "Spell_Shadow_SummonInfernal"
+health = 11500
+damage = 36
+speed = 5.6
+size = 2.6
+minute = 8
+yell = { en = "You are defenders of a doomed world!", de = "Ihr verteidigt eine dem Untergang geweihte Welt!", fr = "Vous défendez un monde condamné !", es = "¡Sois defensores de un mundo condenado!", pt = "Vocês defendem um mundo condenado!", ru = "Вы защищаете обреченный мир!", pl = "Jesteście obrońcami skazanego świata!", tr = "Siz, mahkûm bir dünyanın savunucularısınız!", it = "Siete difensori di un mondo condannato!", ja = "貴様らは滅びゆく世界の守り手だ！", zh = "你们是一个注定毁灭的世界的守卫者！", ko = "너희는 멸망할 세계의 수호자일 뿐이다!" }
+kit = "anetheron"
+
+[[zone.boss]]
+entry = 3992
+name = { en = "Kaz'rogal", de = "Kaz'rogal", fr = "Kaz'rogal", es = "Kaz'rogal", pt = "Kaz'rogal", ru = "Каз'рогал", pl = "Kaz'rogal", tr = "Kaz'rogal", it = "Kaz'rogal", ja = "カズロガル", zh = "卡兹洛加", ko = "카즈로갈" }
+type = "demon"
+display = 17096
+icon = "Spell_Shadow_SummonInfernal"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.4
+minute = 12
+yell = { en = "Cry for mercy! Your meaningless lives will soon be forfeit!", de = "Fleht um Gnade! Eure bedeutungslosen Leben sind bald verwirkt!", fr = "Implorez grâce ! Vos vies insignifiantes seront bientôt perdues !", es = "¡Suplicad piedad! ¡Vuestras vidas sin sentido pronto estarán perdidas!", pt = "Implorem por misericórdia! Suas vidas insignificantes logo serão perdidas!", ru = "Молите о пощаде! Ваши никчемные жизни скоро оборвутся!", pl = "Błagajcie o litość! Wasze bezwartościowe życia wkrótce przepadną!", tr = "Merhamet dileyin! Anlamsız hayatlarınız yakında elden gidecek!", it = "Implorate pietà! Le vostre vite insignificanti saranno presto perdute!", ja = "慈悲を乞え！貴様らの無意味な命はまもなく尽きる！", zh = "哭喊着求饶吧！你们毫无意义的生命很快就要结束了！", ko = "자비를 구걸해라! 너희의 무의미한 목숨은 곧 끝나리라!" }
+kit = "kazrogal"
+
+[[zone.boss]]
+entry = 3993
+name = { en = "Azgalor", de = "Azgalor", fr = "Azgalor", es = "Azgalor", pt = "Azgalor", ru = "Азгалор", pl = "Azgalor", tr = "Azgalor", it = "Azgalor", ja = "アズガロア", zh = "阿兹加洛", ko = "아즈갈로" }
+type = "demon"
+display = 16632
+icon = "Spell_Shadow_SummonInfernal"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.6
+minute = 16
+yell = { en = "Abandon all hope!", de = "Gebt alle Hoffnung auf!", fr = "Abandonnez tout espoir !", es = "¡Abandonad toda esperanza!", pt = "Abandonem toda a esperança!", ru = "Оставьте всякую надежду!", pl = "Porzućcie wszelką nadzieję!", tr = "Tüm umutları bırakın!", it = "Abbandonate ogni speranza!", ja = "すべての希望を捨てよ！", zh = "放弃一切希望吧！", ko = "모든 희망을 버려라!" }
+kit = "azgalor"
+
+[[zone.boss]]
+entry = 2010
+name = { en = "Archimonde", de = "Archimonde", fr = "Archimonde", es = "Archimonde", pt = "Archimonde", ru = "Архимонд", pl = "Archimonde", tr = "Archimonde", it = "Archimonde", ja = "アーキモンド", zh = "阿克蒙德", ko = "아키몬드" }
+type = "demon"
+display = 18286
+icon = "Spell_Shadow_SummonInfernal"
+health = 60000
+damage = 66
+speed = 6.0
+minute = 20
+yell = { en = "All of your efforts have been in vain!", de = "All eure Mühen waren vergebens!", fr = "Tous vos efforts ont été vains !", es = "¡Todos vuestros esfuerzos han sido en vano!", pt = "Todos os seus esforços foram em vão!", ru = "Все ваши усилия были напрасны!", pl = "Wszystkie wasze wysiłki poszły na marne!", tr = "Bütün çabalarınız boşunaydı!", it = "Tutti i vostri sforzi sono stati vani!", ja = "貴様らの努力はすべて無駄だった！", zh = "你们所有的努力都是徒劳！", ko = "너희의 모든 노력은 헛수고였다!" }
+final = true
+kit = "archimonde"

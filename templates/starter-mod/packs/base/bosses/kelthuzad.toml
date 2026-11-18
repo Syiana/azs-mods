@@ -1,0 +1,32 @@
+# Kel'Thuzad's abilities, Naxxramas.
+
+[[boss]]
+key = "kelthuzad"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 116 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 3.0, factor = 3.5 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { combo = [[{ nova = { spell = 27808, radius = 10.0, warn = 2.2 } }, { leap = { spell = 27808, radius = 6.0, reach = 16.0, warn = 1.6, factor = 2.4 } }], 1.6] }
+
+[[boss.kit]]
+every = 13.0
+ability = { rush = { spell = 28478, len = 40.0, w = 6.0, warn = 1.8, factor = 2.6 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { pool = { spell = 0, burst = 27810, radius = 5.0, warn = 2.8, factor = 3.0 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { bomb = { spell = 27819, radius = 7.0, time = 5.0, warn = 2.0, factor = 20.0 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { adds = 14 }

@@ -1,0 +1,20 @@
+# Lar'korwi's abilities, Un'Goro Crater.
+
+[[boss]]
+key = "larkorwi"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 6917 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { combo = [[{ blink = { spell = 1856, distance = 6.0 } }, { line = { spell = 6917, len = 16.0, w = 4.0, warn = 1.0, factor = 2.2 } }], 0.4] }
+
+[[boss.kit]]
+every = 11.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 5.0, warn = 1.5, factor = 1.2, lasts = 8.0, tick = 0.3 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 10 }

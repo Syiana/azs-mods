@@ -1,0 +1,20 @@
+# Noth the Plaguebringer's abilities, Naxxramas.
+
+[[boss]]
+key = "noth_the_plaguebringer"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 686 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { pool = { spell = 10, burst = 122, radius = 9.0, warn = 1.5, factor = 2.5 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 8.0 } }, { nova = { spell = 27808, radius = 9.0, warn = 2.0 } }], 0.5] }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 8 }

@@ -1,0 +1,241 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "smite"
+id = 585
+visual = 910078
+vfx = { source = 585, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "holy"
+shape = { strike = { targets = 1 } }
+hit = 42
+cooldown = 1.2
+range = 28.0
+name = { en = "Smite", de = "Göttliche Pein", fr = "Châtiment", es = "Aplastar", pt = "Punição", ru = "Кара", pl = "Kara", tr = "Cezalandır", it = "Punire", ja = "スマイト", zh = "惩击", ko = "성스러운 일격" }
+icon = "Spell_Holy_HolySmite"
+
+[[spell]]
+key = "sw_pain"
+id = 589
+visual = 910079
+vfx = { source = 589, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "shadow"
+shape = { dot = { targets = 2, secs = 6.0, ticks = 2, cap = 1 } }
+hit = 72
+cooldown = 1.6
+range = 28.0
+name = { en = "Shadow Word: Pain", de = "Schattenwort: Schmerz", fr = "Mot de l'ombre : Douleur", es = "Palabra de las Sombras: Dolor", pt = "Palavra da Sombra: Dor", ru = "Слово Тьмы: Боль", pl = "Słowo Cienia: Ból", tr = "Gölge Sözü: Acı", it = "Parola dell'Ombra: Dolore", ja = "シャドウ・ワード：ペイン", zh = "暗言术：痛", ko = "어둠의 권능: 고통" }
+icon = "Spell_Shadow_ShadowWordPain"
+
+[[spell]]
+key = "mind_blast"
+id = 8092
+visual = 910080
+vfx = { source = 8092, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 115
+cooldown = 4.0
+range = 28.0
+name = { en = "Mind Blast", de = "Gedankenschlag", fr = "Attaque mentale", es = "Explosión mental", pt = "Ataque Mental", ru = "Взрыв разума", pl = "Eksplozja umysłu", tr = "Zihin Patlaması", it = "Esplosione mentale", ja = "マインド・ブラスト", zh = "心灵震爆", ko = "정신 분열" }
+icon = "Spell_Shadow_UnholyFrenzy"
+
+[[spell]]
+key = "holy_nova"
+id = 15237
+visual = 910081
+vfx = { source = 15237, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { nova = { radius = 10.0 } }
+hit = 14
+cooldown = 4.0
+range = 10.0
+rider = { mend = { pct = 4 } }
+name = { en = "Holy Nova", de = "Heilige Nova", fr = "Nova sacrée", es = "Nova Sagrada", pt = "Nova Sagrada", ru = "Кольцо света", pl = "Święta nova", tr = "Kutsal Nova", it = "Nova sacra", ja = "ホーリー・ノヴァ", zh = "神圣新星", ko = "신성한 폭발" }
+icon = "Spell_Holy_HolyNova"
+
+[[spell]]
+key = "pw_shield"
+id = 17
+visual = 910082
+vfx = { source = 17, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { shield = { share = 32 } }
+hit = 0
+cooldown = 12.0
+range = 0.0
+name = { en = "Power Word: Shield", de = "Machtwort: Schild", fr = "Mot de pouvoir : Bouclier", es = "Palabra de poder: Escudo", pt = "Palavra de Poder: Escudo", ru = "Слово силы: Щит", pl = "Słowo Mocy: Tarcza", tr = "Güç Sözü: Kalkan", it = "Parola del Potere: Scudo", ja = "パワー・ワード：シールド", zh = "真言术：盾", ko = "신의 권능: 보호막" }
+icon = "Spell_Holy_PowerWordShield"
+
+[[spell]]
+key = "renew"
+id = 139
+visual = 910083
+vfx = { source = 139, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { heal = { share = 36, secs = 10.0 } }
+hit = 0
+cooldown = 10.0
+range = 0.0
+name = { en = "Renew", de = "Erneuerung", fr = "Rénovation", es = "Renovar", pt = "Renovar", ru = "Обновление", pl = "Odnowienie", tr = "Yenile", it = "Rinnovamento", ja = "リニュー", zh = "恢复", ko = "소생" }
+icon = "Spell_Holy_Renew"
+
+[[spell]]
+key = "holy_fire"
+id = 14914
+visual = 910084
+vfx = { source = 14914, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "fire"
+shape = { strike = { targets = 1 } }
+hit = 160
+cooldown = 5.0
+range = 28.0
+name = { en = "Holy Fire", de = "Heiliges Feuer", fr = "Feu sacré", es = "Fuego Sagrado", pt = "Fogo Sagrado", ru = "Священный огонь", pl = "Święty ogień", tr = "Kutsal Ateş", it = "Fuoco sacro", ja = "ホーリー・ファイア", zh = "神圣之火", ko = "신성한 불꽃" }
+icon = "Spell_Holy_SearingLight"
+
+[[spell]]
+key = "mind_flay"
+id = 15407
+visual = 910085
+vfx = { source = 15407, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "shadow"
+shape = { cone = { length = 16.0 } }
+hit = 34
+cooldown = 2.5
+range = 16.0
+rider = { slow = { pct = 50, secs = 2.0 } }
+name = { en = "Mind Flay", de = "Gedankenschinden", fr = "Fouet mental", es = "Tortura mental", pt = "Açoite Mental", ru = "Пытка разума", pl = "Dręczenie umysłu", tr = "Zihin Kırbacı", it = "Tortura mentale", ja = "マインド・フレイ", zh = "精神鞭笞", ko = "정신의 채찍" }
+icon = "Spell_Shadow_SiphonMana"
+
+[[spell]]
+key = "psychic_scream"
+id = 8122
+visual = 910086
+vfx = { source = 8122, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { nova = { radius = 10.0 } }
+hit = 5
+cooldown = 12.0
+range = 10.0
+rider = { flee = { secs = 3.0 } }
+name = { en = "Psychic Scream", de = "Psychischer Schrei", fr = "Cri psychique", es = "Grito psíquico", pt = "Grito Psíquico", ru = "Устрашающий крик", pl = "Psychiczny krzyk", tr = "Zihinsel Çığlık", it = "Urlo psichico", ja = "サイキック・スクリーム", zh = "心灵尖啸", ko = "영혼의 절규" }
+icon = "Spell_Shadow_PsychicScream"
+
+[[spell]]
+key = "devouring_plague"
+id = 2944
+visual = 910087
+vfx = { source = 2944, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { dot = { targets = 3, secs = 6.0, ticks = 2, cap = 1 } }
+hit = 107
+cooldown = 6.0
+range = 28.0
+rider = { drain = { pct = 30 } }
+name = { en = "Devouring Plague", de = "Verschlingende Seuche", fr = "Peste dévorante", es = "Plaga devoradora", pt = "Peste Devoradora", ru = "Пожирающая чума", pl = "Wyniszczająca plaga", tr = "Yutan Veba", it = "Piaga divorante", ja = "ディヴァウリング・プレイグ", zh = "噬灵瘟疫", ko = "파멸의 역병" }
+icon = "Spell_Shadow_DevouringPlague"
+
+[[spell]]
+key = "lightwell"
+id = 724
+visual = 910088
+vfx = { source = 724, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { totem = { radius = 0.0, every = 1.0, secs = 10.0 } }
+# The well itself: the Lightwell of Wrath of the Lich King (NPCs 31883 and 31897, display 27769). Without
+# a model it stood unseen.
+stands = 27769
+hit = 80
+cooldown = 14.3
+range = 25.0
+name = { en = "Lightwell", de = "Brunnen des Lichts", fr = "Puits de lumière", es = "Pozo de Luz", pt = "Poço de Luz", ru = "Источник Света", pl = "Studnia światła", tr = "Işık Pınarı", it = "Pozzo di luce", ja = "ライトウェル", zh = "光束泉", ko = "빛샘" }
+icon = "Spell_Holy_SummonLightwell"
+
+# AS's talents name Penance ("three bolts of holy light at the nearest enemies"); the rest are
+# Wrath of the Lich King's.
+[[spell]]
+key = "penance"
+id = 47540
+visual = 910089
+visual_every = 0.12
+vfx = { source = 47666, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.4 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.55 } }
+school = "holy"
+shape = { missiles = { count = 3 } }
+hit = 51
+cooldown = 2.2
+range = 26.0
+name = { en = "Penance", de = "Sühne", fr = "Pénitence", es = "Penitencia", pt = "Penitência", ru = "Исповедь", pl = "Pokuta", tr = "Kefaret", it = "Penitenza", ja = "ペナンス", zh = "苦修", ko = "회개" }
+icon = "Spell_Holy_Penance"
+
+[[spell]]
+key = "mind_sear"
+id = 48045
+visual = 910090
+vfx = { source = 48045, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 }, area = { model = "Spells/Shadow_Fissure_Base.mdx", slot = "base", scale = 0.55 } }
+school = "shadow"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 5.0 } }
+hit = 19
+cooldown = 8.0
+range = 30.0
+name = { en = "Mind Sear", de = "Gedankenexplosion", fr = "Brûlure mentale", es = "Abrasar mente", pt = "Queimadura Mental", ru = "Иссушение разума", pl = "Palenie umysłu", tr = "Zihin Kavurması", it = "Bruciatura mentale", ja = "マインド・シアー", zh = "精神灼烧", ko = "정신 불태우기" }
+icon = "Spell_Shadow_MindShear"
+
+[[spell]]
+key = "vampiric_touch"
+id = 34914
+visual = 910091
+vfx = { source = 34914, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { dot = { targets = 2, secs = 15.0, ticks = 5, cap = 1 } }
+hit = 89
+cooldown = 5.0
+range = 30.0
+rider = { drain = { pct = 20 } }
+name = { en = "Vampiric Touch", de = "Vampirberührung", fr = "Toucher vampirique", es = "Toque vampírico", pt = "Toque Vampírico", ru = "Прикосновение вампира", pl = "Wampiryczny dotyk", tr = "Vampir Dokunuşu", it = "Tocco vampirico", ja = "ヴァンパイリック・タッチ", zh = "吸血鬼之触", ko = "흡혈의 손길" }
+icon = "Spell_Holy_Stoicism"
+
+[[spell]]
+key = "circle_of_healing"
+id = 34861
+visual = 910092
+vfx = { source = 34861, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { heal = { share = 20, secs = 0.0 } }
+hit = 0
+cooldown = 8.0
+range = 0.0
+tags = ["group_heal"]
+name = { en = "Circle of Healing", de = "Kreis der Heilung", fr = "Cercle de soins", es = "Círculo de sanación", pt = "Círculo de Cura", ru = "Круг исцеления", pl = "Krąg uzdrowienia", tr = "Şifa Çemberi", it = "Cerchio di guarigione", ja = "サークル・オブ・ヒーリング", zh = "治疗之环", ko = "치유의 마법진" }
+icon = "Spell_Holy_CircleOfRenewal"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "power_infusion"
+id = 10060
+visual = 910093
+vfx = { source = 10060, cast = { model = "Spells/Holy_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Holy_ImpactDD_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "holy"
+shape = { haste = { pct = 40, secs = 10.0 } }
+hit = 0
+cooldown = 25.0
+range = 30.0
+name = { en = "Power Infusion", de = "Seele der Macht", fr = "Infusion de puissance", es = "Infusión de poder", pt = "Infusão de Poder", ru = "Придание сил", pl = "Wzmocnienie mocy", tr = "Güç Aşılaması", it = "Infusione di potere", ja = "パワー・インフュージョン", zh = "能量灌注", ko = "마력 주입" }
+icon = "Spell_Holy_PowerInfusion"
+
+[[spell]]
+key = "dispersion"
+id = 47585
+visual = 910094
+vfx = { source = 47585, cast = { model = "Spells/Shadow_Precast_Low_Hand.mdx", slot = "rhand", scale = 0.6 }, impact = { model = "Spells/Shadow_ImpactDot_Med_Chest.mdx", slot = "chest", scale = 0.75 } }
+school = "shadow"
+shape = { immune = { secs = 4.0 } }
+hit = 0
+cooldown = 45.0
+range = 0.0
+name = { en = "Dispersion", de = "Dispersion", fr = "Dispersion", es = "Dispersión", pt = "Dispersão", ru = "Слияние с Тьмой", pl = "Rozproszenie", tr = "Dağılma", it = "Dispersione", ja = "ディスパージョン", zh = "消散", ko = "분산" }
+icon = "Spell_Shadow_Dispersion"

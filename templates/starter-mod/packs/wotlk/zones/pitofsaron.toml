@@ -1,0 +1,323 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "pitofsaron"
+order = 34
+name = { en = "Pit of Saron", de = "Grube von Saron", fr = "Fosse de Saron", es = "Foso de Saron", pt = "Fosso de Saron", ru = "Яма Сарона", pl = "Jama Saron", tr = "Saron Çukuru", it = "Fossa di Saron", ja = "サロンの穴", zh = "萨隆矿坑", ko = "사론의 구덩이" }
+subtitle = { en = "The Forgemaster's Pit", de = "Die Grube des Schmiedemeisters", fr = "La fosse du maître-forge", es = "El Foso del Maestro de forja", pt = "O Fosso do Mestre-ferreiro", ru = "Яма Начальника Кузни", pl = "Jama Kowala Zła", tr = "Demir Ustasının Çukuru", it = "La Fossa del Forgiamastro", ja = "鍛冶長の穴", zh = "熔炉之主的矿坑", ko = "제련장인의 구덩이" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "achievement_dungeon_icecrown_pitofsaron"
+map = 571
+map_name = "Northrend"
+area = 4813
+center = [6765.0, 1123.0]
+radius = 100.0
+map_bounds = [5443.75, -827.08, 9427.08, 5245.83]
+health_factor = 36.7
+gold_factor = 4.74
+late_factor = 0.4
+hour = 12
+# Noon, not night: at night the night dimming (Night Darkness) made the run almost black. The edge
+# stays the night's, as it was (`dark_sky`).
+dark_sky = true
+weather = { fine = 50, snow = 50 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [6796.8022, 1153.1481]
+turn = 0
+yaw = 0.0
+pitch = 26.0
+distance = 0.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 5200
+name = { en = "Wrathbone Laborer", de = "Arbeiter der Zornknochen", fr = "Ouvrier os-de-colère", es = "Peón Hueso de Ira", pt = "Operário Osso de Ira", ru = "Работник Костей Гнева", pl = "Robotnik Wrathbone", tr = "Gazapkemik İşçisi", it = "Operaio Ossaira", ja = "ラースボーンの労働者", zh = "怒骨劳工", ko = "격노뼈 일꾼" }
+type = "undead"
+display = 27514
+icon = "Spell_Shadow_AnimateDead"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+# The runners (Wrathbringer, Deathbringer, Gargoyle) stay at or under the hero's base pace (7.0 yd/s,
+# enemies run at 1.05 times their `speed`), so outrunning them needs no speed stacking; they come later.
+[[zone.enemy]]
+entry = 5201
+name = { en = "Ymirjar Wrathbringer", de = "Zornbringer der Ymirjar", fr = "Porte-colère ymirjar", es = "Trae-ira Ymirjar", pt = "Traz-ira Ymirjar", ru = "Несущий гнев Имирьяр", pl = "Zwiastun gniewu Ymirjar", tr = "Ymirjar Gazap Getiren", it = "Portaira Ymirjar", ja = "イミアジャー・ラースブリンガー", zh = "依米亚尔怒火使者", ko = "이미야르 격노인도자" }
+type = "humanoid"
+display = 25838
+icon = "INV_Misc_Head_Vrykul"
+health = 28
+damage = 6
+swing = 1.3
+speed = 6.6
+cost = 1.0
+from = 3.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 5202
+name = { en = "Ymirjar Deathbringer", de = "Todesbringer der Ymirjar", fr = "Porte-mort ymirjar", es = "Trae-muerte Ymirjar", pt = "Traz-morte Ymirjar", ru = "Несущий смерть Имирьяр", pl = "Zwiastun śmierci Ymirjar", tr = "Ymirjar Ölüm Getiren", it = "Portamorte Ymirjar", ja = "イミアジャー・デスブリンガー", zh = "依米亚尔死亡使者", ko = "이미야르 죽음인도자" }
+type = "humanoid"
+display = 25837
+icon = "INV_Misc_Head_Vrykul"
+health = 26
+damage = 6
+swing = 1.4
+speed = 6.6
+cost = 1.2
+from = 5.0
+size = 0.85
+
+[[zone.enemy]]
+entry = 5203
+name = { en = "Ymirjar Skycaller", de = "Himmelsrufer der Ymirjar", fr = "Hèle-ciel ymirjar", es = "Llamacielos Ymirjar", pt = "Chama-céu Ymirjar", ru = "Призывающий небо Имирьяр", pl = "Przywoływacz nieba Ymirjar", tr = "Ymirjar Gök Çağıran", it = "Evocacieli Ymirjar", ja = "イミアジャー・スカイコーラー", zh = "依米亚尔唤天者", ko = "이미야르 하늘부름이" }
+type = "humanoid"
+display = 25796
+icon = "INV_Misc_Head_Vrykul"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.85
+role = { ranged = { spell = 29120, range = 16.0, every = 3.0, speed = 30.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 5204
+name = { en = "Wrathbone Coldwraith", de = "Kältegeist der Zornknochen", fr = "Spectre froid os-de-colère", es = "Espectro gélido Hueso de Ira", pt = "Espectro Gélido Osso de Ira", ru = "Ледяной призрак Костей Гнева", pl = "Mroźne widmo Wrathbone", tr = "Gazapkemik Soğuk Hayalet", it = "Spettro del freddo Ossaira", ja = "ラースボーン・コールドレイス", zh = "怒骨冷魂", ko = "격노뼈 냉기 망령" }
+type = "undead"
+display = 26915
+icon = "Achievement_Halloween_Ghost_01"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+role = { ranged = { spell = 9672, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 5205
+name = { en = "Plagueborn Horror", de = "Seuchengeborener Schrecken", fr = "Horreur née de la peste", es = "Horror engendrado por la plaga", pt = "Horror Nascido da Peste", ru = "Порождённый чумой ужас", pl = "Zgroza zrodzona z plagi", tr = "Vebadan Doğan Dehşet", it = "Orrore nato dalla peste", ja = "プレイグボーン・ホラー", zh = "疫生恐魔", ko = "역병태생 공포" }
+type = "undead"
+display = 18082
+icon = "Spell_Shadow_AbominationExplosion"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+role = { exploder = { spell = 9874, burst = 30109, reach = 3.0, radius = 5.0, fuse = 1.6, factor = 4.0 } }
+
+[[zone.enemy]]
+entry = 5206
+name = { en = "Stonespine Gargoyle", de = "Steinrückengargoyle", fr = "Gargouille échine-de-pierre", es = "Gárgola Espinapétrea", pt = "Gárgula Espinha de Pedra", ru = "Гаргулья Каменного Хребта", pl = "Gargulec Stonespine", tr = "Taşomurga Gargoyle'u", it = "Gargoyle Spinadipietra", ja = "ストーンスパイン・ガーゴイル", zh = "石脊石像鬼", ko = "돌등뼈 가고일" }
+type = "undead"
+display = 26799
+icon = "Achievement_Dungeon_UlduarRaid_IronGolem_01"
+health = 62
+damage = 10
+swing = 1.4
+speed = 6.4
+cost = 1.5
+from = 4.0
+size = 0.65
+
+[[zone.enemy]]
+entry = 5207
+name = { en = "Glacial Revenant", de = "Gletscherwiedergänger", fr = "Revenant glaciaire", es = "Renacido glacial", pt = "Aparição Glacial", ru = "Ледниковый призрак", pl = "Lodowe widmo", tr = "Buzul Hortlağı", it = "Spettro glaciale", ja = "グレイシャル・レヴナント", zh = "冰川亡魂", ko = "빙하 망령" }
+type = "elemental"
+display = 26649
+icon = "Spell_Frost_SummonWaterElemental_2"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.95
+
+[[zone.enemy]]
+entry = 5208
+name = { en = "Hungering Ghoul", de = "Hungernder Ghul", fr = "Goule affamée", es = "Necrófago hambriento", pt = "Carniçal Faminto", ru = "Голодный вурдалак", pl = "Wygłodniały ghul", tr = "Aç Gulyabani", it = "Ghoul affamato", ja = "飢えたグール", zh = "饥饿的食尸鬼", ko = "굶주린 구울" }
+type = "undead"
+display = 28292
+icon = "Ability_GhoulFrenzy"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+size = 1.3
+
+[[zone.elite]]
+entry = 5210
+name = { en = "Plagueborn Abomination", de = "Seuchengeborene Monstrosität", fr = "Abomination née de la peste", es = "Abominación engendrada por la plaga", pt = "Abominação Nascida da Peste", ru = "Порождённое чумой поганище", pl = "Poczwara zrodzona z plagi", tr = "Vebadan Doğan Canavar", it = "Abominio nato dalla peste", ja = "プレイグボーン・アボミネーション", zh = "疫生憎恶", ko = "역병태생 누더기골렘" }
+type = "undead"
+display = 24301
+icon = "Spell_Shadow_AbominationExplosion"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.45
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 4.5, warn = 2.0, factor = 1.0, lasts = 6.0, tick = 0.5 } }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 5211
+name = { en = "Iceborn Proto-Drake", de = "Eisgeborener Protodrache", fr = "Proto-drake né de la glace", es = "Protodraco nacido del hielo", pt = "Protodraco Nascido do Gelo", ru = "Рождённый льдом протодракон", pl = "Proto-smok zrodzony z lodu", tr = "Buzdan Doğan Proto-Ejder", it = "Proto-drago nato dal ghiaccio", ja = "アイスボーン・プロトドレイク", zh = "冰生始祖幼龙", ko = "얼음태생 원시비룡" }
+type = "dragonkin"
+display = 22657
+icon = "INV_PET_FROSTWYRM"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 0.7
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { cone = { spell = 16099, range = 10.0, arc = 70.0, warn = 1.4, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { rain = { spell = 122, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 5212
+name = { en = "Fallen Val'kyr", de = "Gefallene Val'kyr", fr = "Val'kyr déchue", es = "Val'kyr caída", pt = "Val'kyr Caída", ru = "Павшая валь'кира", pl = "Upadła Val'kyr", tr = "Düşmüş Val'kyr", it = "Val'kyr caduta", ja = "堕ちたヴァルキール", zh = "堕落的瓦格里", ko = "타락한 발키르" }
+type = "undead"
+display = 31312
+icon = "inv_helm_armor_spiritvalkyr_d_01_blue"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 1.5
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.boss]]
+entry = 5290
+name = { en = "Forgemaster Garfrost", de = "Schmiedemeister Garfrost", fr = "Maître-forge Garfrost", es = "Maestro de forja Garfrost", pt = "Mestre-ferreiro Garfrost", ru = "Начальник кузни Гарфрост", pl = "Kowal Garfrost", tr = "Demir Ustası Garfrost", it = "Forgiamastro Garfrost", ja = "鍛冶長ガーフロスト", zh = "熔炉之主加弗斯特", ko = "제련장인 가프로스트" }
+type = "giant"
+display = 24531
+icon = "Achievement_Boss_Forgemaster"
+health = 4600
+damage = 28
+speed = 5.8
+size = 0.8
+minute = 4
+yell = { en = "Tiny creatures under feet, you bring Garfrost something good to eat!", de = "Winzige Kreaturen unter den Füßen, ihr bringt Garfrost was Gutes zum Essen!", fr = "Petites bestioles sous les pieds, vous apportez à Garfrost quelque chose de bon à manger !", es = "¡Bichitos bajo los pies, traéis a Garfrost algo rico para comer!", pt = "Criaturinhas debaixo dos pés, vocês trazem algo gostoso para Garfrost comer!", ru = "Мелкие твари под ногами, вы принесли Гарфросту что-то вкусненькое!", pl = "Małe stworzonka pod stopami, przynieście Garfrostowi coś dobrego do jedzenia!", tr = "Ayaklar altındaki minik yaratıklar, Garfrost'a yiyecek güzel bir şey getirdiniz!", it = "Piccole creature sotto i piedi, portate a Garfrost qualcosa di buono da mangiare!", ja = "足元のちっちゃいの、ガーフロストにうまいもの持ってきた！", zh = "小小东西脚下爬，带给加弗斯特好吃的！", ko = "발밑의 작은 것들, 가프로스트에게 맛있는 것을 가져와라!" }
+kit = "forgemaster_garfrost"
+
+[[zone.boss]]
+entry = 5291
+name = { en = "Ick", de = "Ick", fr = "Ick", es = "Ick", pt = "Ick", ru = "Ик", pl = "Ick", tr = "Ick", it = "Ick", ja = "イック", zh = "伊克", ko = "이크" }
+type = "undead"
+display = 15961
+icon = "INV_Misc_Head_Undead_02"
+health = 11500
+damage = 36
+speed = 5.6
+size = 0.9
+minute = 8
+yell = { en = "Our work must not be interrupted! Ick! Take care of them!", de = "Unsere Arbeit darf nicht gestört werden! Ick! Kümmere dich um sie!", fr = "Notre travail ne doit pas être interrompu ! Ick ! Occupe-toi d'eux !", es = "¡Nuestro trabajo no debe ser interrumpido! ¡Ick! ¡Ocúpate de ellos!", pt = "Nosso trabalho não deve ser interrompido! Ick! Cuide deles!", ru = "Нашу работу нельзя прерывать! Ик! Займись ими!", pl = "Naszej pracy nie wolno przerywać! Ick! Zajmij się nimi!", tr = "İşimiz yarıda kesilmemeli! Ick! Onlarla ilgilen!", it = "Il nostro lavoro non deve essere interrotto! Ick! Occupati di loro!", ja = "我らの仕事を邪魔させてはならん！イック！始末しろ！", zh = "我们的工作绝不能被打断！伊克！解决他们！", ko = "우리 작업을 방해하게 둘 수 없다! 이크! 저놈들을 처리해라!" }
+kit = "ick"
+
+[[zone.boss]]
+entry = 5292
+name = { en = "Devourer of Souls", de = "Seelenverschlinger", fr = "Dévoreur d'âmes", es = "Devorador de Almas", pt = "Devorador de Almas", ru = "Пожиратель Душ", pl = "Pożeracz Dusz", tr = "Ruh Yiyen", it = "Divoratore di Anime", ja = "魂を喰らう者", zh = "噬魂者", ko = "영혼의 포식자" }
+type = "undead"
+display = 30148
+icon = "Achievement_Boss_DevourerofSouls"
+health = 21000
+damage = 46
+speed = 5.0
+size = 2.4
+minute = 12
+yell = { en = "You dare look upon the host of souls? I SHALL DEVOUR YOU WHOLE!", de = "Ihr wagt es, die Schar der Seelen anzusehen? ICH WERDE EUCH MIT HAUT UND HAAR VERSCHLINGEN!", fr = "Vous osez regarder la horde des âmes ? JE VAIS VOUS DÉVORER TOUT CRUS !", es = "¿Osáis mirar a la hueste de almas? ¡OS DEVORARÉ ENTEROS!", pt = "Vocês ousam encarar a legião de almas? EU VOU DEVORÁ-LOS INTEIROS!", ru = "Вы посмели взглянуть на сонм душ? Я ПОГЛОЩУ ВАС ЦЕЛИКОМ!", pl = "Śmiecie patrzeć na zastęp dusz? POŻRĘ WAS W CAŁOŚCI!", tr = "Ruhlar ordusuna bakmaya cüret mi ediyorsunuz? SİZİ BÜTÜN OLARAK YUTACAĞIM!", it = "Osate guardare la schiera di anime? VI DIVORERÒ INTERI!", ja = "魂の群れを目にするというのか？丸ごと喰らってくれるわ！", zh = "你们竟敢窥视灵魂之主？我要把你们整个吞下！", ko = "감히 영혼의 무리를 바라보느냐? 너희를 통째로 집어삼키리라!" }
+kit = "devourer_of_souls"
+
+[[zone.boss]]
+entry = 5293
+name = { en = "Rimefang", de = "Raufang", fr = "Givrecroc", es = "Colmillo Glacial", pt = "Presa Gélida", ru = "Ледозуб", pl = "Rimefang", tr = "Kırağıdiş", it = "Brinazanna", ja = "ライムファング", zh = "霜牙", ko = "서리송곳니" }
+type = "dragonkin"
+display = 24165
+icon = "INV_PET_FROSTWYRM"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.2
+minute = 16
+yell = { en = "Rimefang sweeps down from the frozen sky!", de = "Raufang stößt aus dem gefrorenen Himmel herab!", fr = "Givrecroc fond du ciel gelé !", es = "¡Colmillo Glacial desciende en picado del cielo helado!", pt = "Presa Gélida mergulha do céu congelado!", ru = "Ледозуб пикирует с замёрзшего неба!", pl = "Rimefang spada z zamarzniętego nieba!", tr = "Kırağıdiş donmuş gökten süzülüyor!", it = "Brinazanna si abbatte dal cielo gelato!", ja = "ライムファングが凍てつく空から舞い降りてきた！", zh = "霜牙从冰封的天空中俯冲而下！", ko = "서리송곳니가 얼어붙은 하늘에서 내리꽂힙니다!" }
+kit = "rimefang"
+
+[[zone.boss]]
+entry = 2111
+name = { en = "Scourgelord Tyrannus", de = "Geißelfürst Tyrannus", fr = "Seigneur du Fléau Tyrannus", es = "Señor de la Plaga Tyrannus", pt = "Senhor do Flagelo Tyrannus", ru = "Повелитель Плети Тираний", pl = "Władca Plagi Tyrannus", tr = "Yıkım Lordu Tyrannus", it = "Signore del Flagello Tyrannus", ja = "スカージロード・ティラヌス", zh = "天灾领主泰兰努斯", ko = "스컬지군주 티라누스" }
+type = "undead"
+display = 30277
+icon = "Achievement_Boss_ScourgelordTyrannus"
+health = 60000
+damage = 66
+speed = 6.0
+size = 1.6
+minute = 20
+yell = { en = "Alas, brave, brave adventurers, your meddling has reached its end.", de = "Ach, tapfere, tapfere Abenteurer, eure Einmischung hat ihr Ende gefunden.", fr = "Hélas, braves, si braves aventuriers, votre ingérence prend fin.", es = "Ay, valientes, valientes aventureros, vuestra intromisión ha llegado a su fin.", pt = "Ai, bravos, bravos aventureiros, a intromissão de vocês chegou ao fim.", ru = "Увы, храбрые, такие храбрые искатели приключений, вашему вмешательству пришёл конец.", pl = "Niestety, dzielni, dzielni poszukiwacze przygód, wasze wtrącanie się dobiegło końca.", tr = "Heyhat, cesur, cesur maceracılar, müdahaleniz sona erdi.", it = "Ahimè, coraggiosi, coraggiosi avventurieri, la vostra ingerenza è giunta al termine.", ja = "ああ、勇敢なる、勇敢なる冒険者たちよ、お節介もここまでだ。", zh = "唉，勇敢的，勇敢的冒险者们，你们的多管闲事到此为止了。", ko = "아아, 용감한, 용감한 모험가들이여, 너희의 참견도 이제 끝이다." }
+final = true
+kit = "scourgelord_tyrannus"
+
+# The Pit of Saron: the forge pit (Garfrost, Ick), the Valley of Lost Hope where the souls are
+# devoured and Rimefang circles, and the Pit of Fiends, where Scourgelord Tyrannus stands.
+[[zone.arena]]
+name = { en = "The Valley of Lost Hope", de = "Das Tal der Verlorenen Hoffnung", fr = "La vallée de l'Espoir perdu", es = "El Valle de la Esperanza Perdida", pt = "O Vale da Esperança Perdida", ru = "Долина Потерянной Надежды", pl = "Dolina Straconej Nadziei", tr = "Kayıp Umut Vadisi", it = "La Valle della Speranza Perduta", ja = "失われた希望の谷", zh = "失落希望之谷", ko = "잃어버린 희망의 골짜기" }
+center = [7296.0, 1338.0]
+radius = 95.0
+from_boss = 2
+
+[[zone.arena]]
+name = { en = "The Pit of Fiends", de = "Die Grube der Scheusale", fr = "La fosse des Démons", es = "El Foso de los Malvados", pt = "O Fosso dos Maléficos", ru = "Яма Извергов", pl = "Jama Demonów", tr = "Canavarlar Çukuru", it = "La Fossa dei Demoni", ja = "魔物の穴", zh = "恶魔之坑", ko = "마귀의 구덩이" }
+center = [7198.0, 649.0]
+radius = 75.0
+from_boss = 4

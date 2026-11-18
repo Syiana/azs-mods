@@ -1,0 +1,29 @@
+# Snippet: a boss kit of your own (what a boss does in the fight, and how often).
+#
+# Goes in:  packs/<your package>/bosses/glade_warden.toml
+# Used by:  a zone's [[zone.boss]] with kit = "yourname.example:glade_warden" (see zone.toml).
+# Lock:     nothing to declare: a new entry is no override.
+# Rules:    - The key carries your package's name: "<your package>:<name>".
+#           - Each [[boss.kit]] entry comes due every `every` seconds. The abilities are the game's
+#             vocabulary (cone, nova, stomp, charge, adds, summon, meteor, wave, combo, ...), listed
+#             with their numbers in the content reference, "A boss kit".
+#           - `spell` numbers are spell ids of the player's own client: they give the cast its look.
+#           - `warn` is the seconds of warning a hero has to step out.
+#           - A boss kit can also call a Lua script: see snippets/script-boss/.
+# Checked:  together with zone.toml, in a copy of templates/starter-mod with
+#           `azs-content profile-check`.
+
+[[boss]]
+key = "yourname.example:glade_warden"
+
+[[boss.kit]]
+every = 9.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.4, factor = 1.0 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 4 }
+
+[[boss.kit]]
+every = 20.0
+ability = { combo = [["charge", { stomp = { spell = 8078, radius = 6.0, warn = 1.4, knock = 8.0 } }], 1.0] }

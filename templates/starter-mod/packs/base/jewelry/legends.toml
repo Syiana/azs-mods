@@ -1,0 +1,1031 @@
+# Every spell's legendary amulet (AS's `FUN_145c6a210`, `re/NUMBERS.md` 17.5 and 17.9) by AS's spell key,
+# its effects at rank 1, then the generic one of each shape for the spells AS does not have.
+# `as_only` marks AS's spells the port has none of (racials).
+[[legend]]
+key = "cleave"
+spell = "cleave"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Cleave"
+effects = [{ targets = 4 }, { damage = 0.5 }, { burn = { share = 0.8, secs = 6.0 } }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "whirlwind"
+spell = "whirlwind"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Whirlwind"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "thunder_clap"
+spell = "thunder_clap"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Thunder Clap"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "mortal_strike"
+spell = "mortal_strike"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Mortal Strike"
+effects = [{ targets = 4 }, { damage = 0.5 }, { burn = { share = 0.8, secs = 6.0 } }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "execute"
+spell = "execute"
+name = { en = "The Reaper's Amulet", de = "Amulett des Schnitters", fr = "Amulette du faucheur", es = "Amuleto del segador", pt = "Amuleto do Ceifador", ru = "Амулет Жнеца", pl = "Amulet Żniwiarza", tr = "Orakçının Muskası", it = "Amuleto del Mietitore", ja = "死神のアミュレット", zh = "收割者护符", ko = "수확자의 부적" }
+spell_name = "Execute"
+effects = [{ damage = 0.45 }, "reset", { splash = { share = 0.5, radius = 6.0 } }]
+icon = "INV_Jewelry_Necklace_27Naxxramas"
+
+[[legend]]
+key = "demo_shout"
+spell = "demo_shout"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Demoralizing Shout"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }, { weaken = 0.35 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "battle_shout"
+spell = "battle_shout"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Battle Shout"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "bloodthirst"
+spell = "bloodthirst"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Bloodthirst"
+effects = [{ targets = 4 }, { damage = 0.5 }, { burn = { share = 0.8, secs = 6.0 } }, { cast_shield = 0.3 }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "rend"
+spell = "rend"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Rend"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "shield_slam"
+spell = "shield_slam"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Shield Slam"
+effects = [{ targets = 4 }, { damage = 0.5 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "bloodrage"
+spell = "bloodrage"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Bloodrage"
+effects = [{ damage = 0.6 }, { area = 0.4 }, { power = 0.5 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "consecration"
+spell = "consecration"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Consecration"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "exorcism"
+spell = "exorcism"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Exorcism"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "hammer_of_wrath"
+spell = "hammer_of_wrath"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Hammer of Wrath"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "holy_shock"
+spell = "holy_shock"
+name = { en = "Stormcaller's Amulet", de = "Amulett des Sturmrufers", fr = "Amulette de l'invocateur de tempêtes", es = "Amuleto del clamatormentas", pt = "Amuleto do Clamatempestade", ru = "Амулет призывателя бурь", pl = "Amulet przywoływacza burzy", tr = "Fırtına Çağırıcının Muskası", it = "Amuleto dell'evocatempeste", ja = "嵐を呼ぶ者のアミュレット", zh = "风暴召唤者护符", ko = "폭풍부름의 부적" }
+spell_name = "Holy Shock"
+effects = [{ targets = 4 }, { damage = 0.2 }, { again = 0.3 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_02"
+
+[[legend]]
+key = "holy_wrath"
+spell = "holy_wrath"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Holy Wrath"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "judgement"
+spell = "judgement"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Judgement"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "hammer_of_justice"
+spell = "hammer_of_justice"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Hammer of Justice"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "holy_light"
+spell = "holy_light"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Holy Light"
+effects = [{ power = 0.6 }, { cooldown = 0.35 }, { cast_shield = 0.4 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "divine_shield"
+spell = "divine_shield"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Divine Shield"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }, { immune_explode = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "holy_shield"
+spell = "holy_shield"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Holy Shield"
+effects = [{ duration = 1.0 }, { power = 0.6 }, { cooldown = 0.35 }, { immune_explode = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "redemption"
+spell = "redemption"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Redemption"
+effects = [{ damage = 0.6 }, { area = 0.4 }, { power = 0.5 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "auto_shot"
+spell = "auto_shot"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Auto Shot"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "arcane_shot"
+spell = "arcane_shot"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Arcane Shot"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "multi_shot"
+spell = "multi_shot"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Multi-Shot"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "serpent_sting"
+spell = "serpent_sting"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Serpent Sting"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "volley"
+spell = "volley"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Volley"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "explosive_trap"
+spell = "explosive_trap"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Explosive Trap"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "concussive_shot"
+spell = "concussive_shot"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Concussive Shot"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "aimed_shot"
+spell = "aimed_shot"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Aimed Shot"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "immolation_trap"
+spell = "immolation_trap"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Immolation Trap"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "frost_trap"
+spell = "frost_trap"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Frost Trap"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "hunters_mark"
+spell = "hunters_mark"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Hunter's Mark"
+effects = [{ damage = 0.6 }, { area = 0.4 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "sinister_strike"
+spell = "sinister_strike"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Sinister Strike"
+effects = [{ targets = 4 }, { damage = 0.5 }, { burn = { share = 0.8, secs = 6.0 } }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "eviscerate"
+spell = "eviscerate"
+name = { en = "The Reaper's Amulet", de = "Amulett des Schnitters", fr = "Amulette du faucheur", es = "Amuleto del segador", pt = "Amuleto do Ceifador", ru = "Амулет Жнеца", pl = "Amulet Żniwiarza", tr = "Orakçının Muskası", it = "Amuleto del Mietitore", ja = "死神のアミュレット", zh = "收割者护符", ko = "수확자의 부적" }
+spell_name = "Eviscerate"
+effects = [{ damage = 0.45 }, "reset", { splash = { share = 0.5, radius = 6.0 } }]
+icon = "INV_Jewelry_Necklace_27Naxxramas"
+
+[[legend]]
+key = "blade_flurry"
+spell = "blade_flurry"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Blade Flurry"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "rupture"
+spell = "rupture"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Rupture"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "kidney_shot"
+spell = "kidney_shot"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Kidney Shot"
+effects = [{ targets = 4 }, { damage = 0.5 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "gouge"
+spell = "gouge"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Gouge"
+effects = [{ targets = 4 }, { damage = 0.5 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "ghostly_strike"
+spell = "ghostly_strike"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Ghostly Strike"
+effects = [{ targets = 4 }, { damage = 0.5 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "adrenaline_rush"
+spell = "adrenaline_rush"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Adrenaline Rush"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "backstab"
+spell = "backstab"
+name = { en = "The Reaper's Amulet", de = "Amulett des Schnitters", fr = "Amulette du faucheur", es = "Amuleto del segador", pt = "Amuleto do Ceifador", ru = "Амулет Жнеца", pl = "Amulet Żniwiarza", tr = "Orakçının Muskası", it = "Amuleto del Mietitore", ja = "死神のアミュレット", zh = "收割者护符", ko = "수확자의 부적" }
+spell_name = "Backstab"
+effects = [{ damage = 0.45 }, "reset", { splash = { share = 0.5, radius = 6.0 } }]
+icon = "INV_Jewelry_Necklace_27Naxxramas"
+
+[[legend]]
+key = "slice_and_dice"
+spell = "slice_and_dice"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Slice and Dice"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "seal_fate"
+spell = "seal_fate"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Seal Fate"
+effects = [{ damage = 0.6 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "smite"
+spell = "smite"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Smite"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "sw_pain"
+spell = "sw_pain"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Shadow Word: Pain"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "mind_blast"
+spell = "mind_blast"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Mind Blast"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "holy_nova"
+spell = "holy_nova"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Holy Nova"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "pw_shield"
+spell = "pw_shield"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Power Word: Shield"
+effects = [{ power = 0.6 }, { cooldown = 0.35 }, { shield_burst = { share = 0.5, radius = 10.0 } }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "renew"
+spell = "renew"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Vampiric Renew"
+effects = [{ power = 0.6 }, { cooldown = 0.35 }, { hot_leech = 0.05 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "holy_fire"
+spell = "holy_fire"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Holy Fire"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "mind_flay"
+spell = "mind_flay"
+name = { en = "Breath of the Black Dragon", de = "Atem des Schwarzen Drachen", fr = "Souffle du dragon noir", es = "Aliento del dragón negro", pt = "Sopro do Dragão Negro", ru = "Дыхание Чёрного дракона", pl = "Oddech Czarnego Smoka", tr = "Kara Ejderha'nın Nefesi", it = "Soffio del drago nero", ja = "黒竜の吐息", zh = "黑龙之息", ko = "검은용의 숨결" }
+spell_name = "Mind Flay"
+effects = [{ area = 0.6 }, { damage = 0.3 }, { burn = { share = 0.5, secs = 4.0 } }]
+icon = "INV_Jewelry_Necklace_19"
+
+[[legend]]
+key = "psychic_scream"
+spell = "psychic_scream"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Psychic Scream"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "devouring_plague"
+spell = "devouring_plague"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Devouring Plague"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "lightwell"
+spell = "lightwell"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Lightwell"
+effects = [{ damage = 0.6 }, { jump = { n = 3, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "lightning_bolt"
+spell = "lightning_bolt"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Lightning Bolt"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "chain_lightning"
+spell = "chain_lightning"
+name = { en = "Talisman of the Tempest", de = "Talisman des Ungewitters", fr = "Talisman de la tempête", es = "Talismán de la tempestad", pt = "Talismã da Tempestade", ru = "Талисман бури", pl = "Talizman nawałnicy", tr = "Kasırga Tılsımı", it = "Talismano della tempesta", ja = "大嵐のタリスマン", zh = "暴风护符", ko = "폭풍우의 부적" }
+# TUNE 2026-11-10 (tester feedback): the Elemental Fury talent already takes the falloff away, so the
+# amulet lets each jump hit 3% harder than the one before, with or without the talent.
+spell_name = "Chain Lightning"
+effects = [{ targets = 4 }, { damage = 0.2 }, { jump_gain = 0.03 }]
+icon = "INV_Jewelry_Necklace_30Naxxramas"
+
+[[legend]]
+key = "earth_shock"
+spell = "earth_shock"
+name = { en = "Earthshatter Seal", de = "Siegel der Erdzerschmetterung", fr = "Sceau de brise-terre", es = "Sello de quebrantatierra", pt = "Selo Quebra-terra", ru = "Печать сокрушения земли", pl = "Pieczęć kruszącej ziemi", tr = "Yer Yıkan Mührü", it = "Sigillo frantumaterra", ja = "大地砕きの印章", zh = "碎地印记", ko = "대지분쇄의 인장" }
+fixed = 0.75
+effects = [{ vs_low = { share = 0.75, below = 0.35 } }, { kill_cooldown_cut = 0.5 }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "flame_shock"
+spell = "flame_shock"
+name = { en = "Emberwake Pendant", de = "Glutspuranhänger", fr = "Pendentif de sillage de braise", es = "Colgante de estela de ascuas", pt = "Pendente do Rastro de Brasas", ru = "Подвеска тлеющего следа", pl = "Wisiorek tlącego śladu", tr = "Kor İzi Kolyesi", it = "Pendente della scia di braci", ja = "残り火のペンダント", zh = "余烬之痕坠饰", ko = "잿불자국 펜던트" }
+fixed = 0.4
+effects = [{ damage = 0.4 }, { tick_splash = { n = 2, share = 0.5, radius = 6.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "frost_shock"
+spell = "frost_shock"
+name = { en = "Winter's Embrace", de = "Umarmung des Winters", fr = "Étreinte de l'hiver", es = "Abrazo del invierno", pt = "Abraço do Inverno", ru = "Объятия зимы", pl = "Uścisk zimy", tr = "Kışın Kucağı", it = "Abbraccio dell'inverno", ja = "冬の抱擁", zh = "冬之拥抱", ko = "겨울의 포옹" }
+fixed = 0.75
+effects = [{ slow = { pct = 70, secs = 6.0 } }, { vs_slowed = 0.75 }]
+icon = "INV_Jewelry_Necklace_19"
+
+[[legend]]
+key = "magma_totem"
+spell = "magma_totem"
+name = { en = "Amulet of the Ancients", de = "Amulett der Uralten", fr = "Amulette des anciens", es = "Amuleto de los antiguos", pt = "Amuleto dos Antigos", ru = "Амулет древних", pl = "Amulet Starożytnych", tr = "Kadimlerin Muskası", it = "Amuleto degli Antichi", ja = "古の者のアミュレット", zh = "先古护符", ko = "고대인의 부적" }
+spell_name = "Magma Totem"
+effects = [{ duration = 1.0 }, { area = 0.5 }, { damage = 0.5 }, { totem_heal = 0.01 }]
+icon = "INV_Jewelry_Necklace_23"
+
+[[legend]]
+key = "searing_totem"
+spell = "searing_totem"
+name = { en = "Amulet of the Ancients", de = "Amulett der Uralten", fr = "Amulette des anciens", es = "Amuleto de los antiguos", pt = "Amuleto dos Antigos", ru = "Амулет древних", pl = "Amulet Starożytnych", tr = "Kadimlerin Muskası", it = "Amuleto degli Antichi", ja = "古の者のアミュレット", zh = "先古护符", ko = "고대인의 부적" }
+spell_name = "Searing Totem"
+effects = [{ duration = 1.0 }, { damage = 0.5 }, { totem_heal = 0.01 }]
+icon = "INV_Jewelry_Necklace_23"
+
+[[legend]]
+key = "fire_nova"
+spell = "fire_nova"
+name = { en = "Cinderheart Pendant", de = "Glutherzanhänger", fr = "Pendentif de cœur de cendre", es = "Colgante de corazón de ceniza", pt = "Pendente do Coração de Cinzas", ru = "Подвеска пепельного сердца", pl = "Wisiorek żużlowego serca", tr = "Küllü Yürek Kolyesi", it = "Pendente del cuore di cenere", ja = "燃えさしの心臓のペンダント", zh = "烬心坠饰", ko = "잿불심장 펜던트" }
+fixed = 0.5
+effects = [{ area = 0.5 }, { damage = 0.25 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "stormstrike"
+spell = "stormstrike"
+name = { en = "Eye of the Tempest", de = "Auge des Ungewitters", fr = "Œil de la tempête", es = "Ojo de la tempestad", pt = "Olho da Tempestade", ru = "Око бури", pl = "Oko nawałnicy", tr = "Fırtınanın Gözü", it = "Occhio della tempesta", ja = "大嵐の瞳", zh = "暴风之眼", ko = "폭풍우의 눈" }
+effects = ["tempest"]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "rockbiter"
+spell = "rockbiter"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Rockbiter Weapon"
+effects = [{ targets = 4 }, { damage = 0.5 }, { burn = { share = 0.8, secs = 6.0 } }]
+icon = "INV_Jewelry_Necklace_18"
+
+# Lava Burst and Lava Lash had only the generic amulet of their shape (tester feedback, 2026-11-10).
+[[legend]]
+key = "lava_burst"
+spell = "lava_burst"
+name = { en = "Magmaheart Pendant", de = "Magmaherz-Anhänger", fr = "Pendentif de cœur de magma", es = "Colgante de corazón de magma", pt = "Pendente do Coração de Magma", ru = "Подвеска сердца магмы", pl = "Wisiorek serca magmy", tr = "Magma Kalbi Kolyesi", it = "Pendente del cuore di magma", ja = "マグマの心臓のペンダント", zh = "熔心坠饰", ko = "마그마심장 펜던트" }
+spell_name = "Lava Burst"
+effects = [{ damage = 0.25 }, { cooldown = 0.2 }, "crit_dotted"]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "lava_lash"
+spell = "lava_lash"
+name = { en = "Cinderlash Pendant", de = "Aschepeitschen-Anhänger", fr = "Pendentif du fouet de cendres", es = "Colgante de látigo de ceniza", pt = "Pendente do Chicote de Cinzas", ru = "Подвеска пепельного бича", pl = "Wisiorek popielnego bicza", tr = "Kül Kırbacı Kolyesi", it = "Pendente della frusta di cenere", ja = "燃えさしの鞭のペンダント", zh = "烬鞭坠饰", ko = "잿불채찍 펜던트" }
+spell_name = "Lava Lash"
+effects = [{ targets = 2 }, { damage = 0.4 }, { dot_reap = 0.4 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "fireball"
+spell = "fireball"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Fireball"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "frostbolt"
+spell = "frostbolt"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Frostbolt"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "arcane_missiles"
+spell = "arcane_missiles"
+name = { en = "Stormcaller's Amulet", de = "Amulett des Sturmrufers", fr = "Amulette de l'invocateur de tempêtes", es = "Amuleto del clamatormentas", pt = "Amuleto do Clamatempestade", ru = "Амулет призывателя бурь", pl = "Amulet przywoływacza burzy", tr = "Fırtına Çağırıcının Muskası", it = "Amuleto dell'evocatempeste", ja = "嵐を呼ぶ者のアミュレット", zh = "风暴召唤者护符", ko = "폭풍부름의 부적" }
+spell_name = "Arcane Missiles"
+effects = [{ targets = 4 }, { damage = 0.2 }, { again = 0.3 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_02"
+
+[[legend]]
+key = "frost_nova"
+spell = "frost_nova"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Frost Nova"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "arcane_explosion"
+spell = "arcane_explosion"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Arcane Explosion"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "blizzard"
+spell = "blizzard"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Blizzard"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "flamestrike"
+spell = "flamestrike"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Flamestrike"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "fire_blast"
+spell = "fire_blast"
+name = { en = "Stormcaller's Amulet", de = "Amulett des Sturmrufers", fr = "Amulette de l'invocateur de tempêtes", es = "Amuleto del clamatormentas", pt = "Amuleto do Clamatempestade", ru = "Амулет призывателя бурь", pl = "Amulet przywoływacza burzy", tr = "Fırtına Çağırıcının Muskası", it = "Amuleto dell'evocatempeste", ja = "嵐を呼ぶ者のアミュレット", zh = "风暴召唤者护符", ko = "폭풍부름의 부적" }
+spell_name = "Fire Blast"
+effects = [{ targets = 4 }, { damage = 0.2 }, { again = 0.3 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_02"
+
+[[legend]]
+key = "cone_of_cold"
+spell = "cone_of_cold"
+name = { en = "Breath of the Black Dragon", de = "Atem des Schwarzen Drachen", fr = "Souffle du dragon noir", es = "Aliento del dragón negro", pt = "Sopro do Dragão Negro", ru = "Дыхание Чёрного дракона", pl = "Oddech Czarnego Smoka", tr = "Kara Ejderha'nın Nefesi", it = "Soffio del drago nero", ja = "黒竜の吐息", zh = "黑龙之息", ko = "검은용의 숨결" }
+spell_name = "Cone of Cold"
+effects = [{ area = 0.6 }, { damage = 0.3 }, { burn = { share = 0.5, secs = 4.0 } }]
+icon = "INV_Jewelry_Necklace_19"
+
+[[legend]]
+key = "blast_wave"
+spell = "blast_wave"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Blast Wave"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "pyroblast"
+spell = "pyroblast"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Pyroblast"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "ice_barrier"
+spell = "ice_barrier"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Ice Barrier"
+effects = [{ power = 0.6 }, { cooldown = 0.35 }, { power = 1.0 }, { shield_burst = { share = 0.5, radius = 10.0 } }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "polymorph"
+spell = "polymorph"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Polymorph"
+effects = [{ damage = 0.6 }, { area = 0.4 }, { twice = 0.5 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "shadow_bolt"
+spell = "shadow_bolt"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Shadow Bolt"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "corruption"
+spell = "corruption"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Corruption"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "immolate"
+spell = "immolate"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Immolate"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "curse_of_agony"
+spell = "curse_of_agony"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Curse of Agony"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "rain_of_fire"
+spell = "rain_of_fire"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Rain of Fire"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "hellfire"
+spell = "hellfire"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Hellfire"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "death_coil"
+spell = "death_coil"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Death Coil"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "searing_pain"
+spell = "searing_pain"
+name = { en = "Stormcaller's Amulet", de = "Amulett des Sturmrufers", fr = "Amulette de l'invocateur de tempêtes", es = "Amuleto del clamatormentas", pt = "Amuleto do Clamatempestade", ru = "Амулет призывателя бурь", pl = "Amulet przywoływacza burzy", tr = "Fırtına Çağırıcının Muskası", it = "Amuleto dell'evocatempeste", ja = "嵐を呼ぶ者のアミュレット", zh = "风暴召唤者护符", ko = "폭풍부름의 부적" }
+spell_name = "Searing Pain"
+effects = [{ targets = 4 }, { damage = 0.2 }, { again = 0.3 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_02"
+
+[[legend]]
+key = "drain_life"
+spell = "drain_life"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Drain Life"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "fear"
+spell = "fear"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Fear"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "soul_fire"
+spell = "soul_fire"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Soulfire"
+effects = [{ damage = 0.6 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "demonic_empowerment"
+spell = "demonic_empowerment"
+name = { en = "The Legionlord's Medallion", de = "Medaillon des Legionsfürsten", fr = "Médaillon du seigneur de la Légion", es = "Medallón del señor de la Legión", pt = "Medalhão do Senhor da Legião", ru = "Медальон повелителя Легиона", pl = "Medalion Władcy Legionu", tr = "Lejyon Lordu'nun Madalyonu", it = "Medaglione del Signore della Legione", ja = "レギオン卿のメダリオン", zh = "军团领主勋章", ko = "군단군주의 메달" }
+spell_name = "Demonic Empowerment"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }, { power = 1.0 }]
+icon = "INV_Jewelry_Necklace_13"
+
+[[legend]]
+key = "wrath"
+spell = "wrath"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Wrath"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "moonfire"
+spell = "moonfire"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Moonfire"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "starfire"
+spell = "starfire"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Starfire"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "hurricane"
+spell = "hurricane"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+spell_name = "Hurricane"
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "insect_swarm"
+spell = "insect_swarm"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+spell_name = "Insect Swarm"
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "entangling_roots"
+spell = "entangling_roots"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+spell_name = "Entangling Roots"
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "rejuvenation"
+spell = "rejuvenation"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Vampiric Rejuvenation"
+effects = [{ power = 0.6 }, { cooldown = 0.35 }, { hot_leech = 0.05 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "regrowth"
+spell = "regrowth"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Regrowth"
+effects = [{ power = 0.6 }, { cooldown = 0.35 }, { cast_shield = 0.4 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "thorns"
+spell = "thorns"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Thorns"
+effects = [{ power = 0.6 }, { thorns_stun = { chance = 0.25, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "swipe"
+spell = "swipe"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Swipe"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "shred"
+spell = "shred"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+spell_name = "Shred"
+effects = [{ targets = 4 }, { damage = 0.5 }, { jump = { n = 2, share = 0.5 } }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "faerie_fire"
+spell = "faerie_fire"
+name = { en = "Charm of the Fated Hour", de = "Glücksbringer der Schicksalsstunde", fr = "Charme de l'heure fatidique", es = "Amuleto de la hora fatídica", pt = "Amuleto da Hora Fatídica", ru = "Оберег роковой минуты", pl = "Talizman przeznaczonej godziny", tr = "Kader Saati Tılsımı", it = "Ciondolo dell'ora fatale", ja = "運命の刻の護符", zh = "宿命时刻符咒", ko = "운명의 시간의 부적" }
+spell_name = "Faerie Fire"
+effects = [{ damage = 0.6 }, { area = 0.4 }, { twice = 0.5 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "perception"
+spell = "perception"
+as_only = true
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Perception"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "blood_fury"
+spell = "blood_fury"
+as_only = true
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Blood Fury"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "stoneform"
+spell = "stoneform"
+as_only = true
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Stoneform"
+effects = [{ power = 0.6 }, { cooldown = 0.35 }, { shield_burst = { share = 0.5, radius = 10.0 } }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "shadowmeld"
+spell = "shadowmeld"
+as_only = true
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Shadowmeld"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "will_of_the_forsaken"
+spell = "will_of_the_forsaken"
+as_only = true
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Will of the Forsaken"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "war_stomp"
+spell = "war_stomp"
+as_only = true
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "War Stomp"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "escape_artist"
+spell = "escape_artist"
+as_only = true
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+spell_name = "Escape Artist"
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "berserking"
+spell = "berserking"
+as_only = true
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Berserking"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "penance"
+spell = "penance"
+name = { en = "Stormcaller's Amulet", de = "Amulett des Sturmrufers", fr = "Amulette de l'invocateur de tempêtes", es = "Amuleto del clamatormentas", pt = "Amuleto do Clamatempestade", ru = "Амулет призывателя бурь", pl = "Amulet przywoływacza burzy", tr = "Fırtına Çağırıcının Muskası", it = "Amuleto dell'evocatempeste", ja = "嵐を呼ぶ者のアミュレット", zh = "风暴召唤者护符", ko = "폭풍부름의 부적" }
+spell_name = "Penance"
+effects = [{ targets = 4 }, { damage = 0.2 }, { again = 0.3 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_02"
+
+[[legend]]
+key = "arcane_power"
+spell = "arcane_power"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+spell_name = "Arcane Power"
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "generic_bolt"
+form = "bolt"
+name = { en = "Eye of the Splitting Sky", de = "Auge des gespaltenen Himmels", fr = "Œil du ciel fendu", es = "Ojo del cielo hendido", pt = "Olho do Céu Rachado", ru = "Око раскалывающегося неба", pl = "Oko rozdartego nieba", tr = "Yarılan Göğün Gözü", it = "Occhio del cielo spaccato", ja = "裂ける空の瞳", zh = "裂天之眼", ko = "갈라진 하늘의 눈" }
+effects = [{ targets = 1 }, { damage = 0.2 }, { jump = { n = 2, share = 0.3 } }]
+icon = "INV_Jewelry_Necklace_16"
+
+[[legend]]
+key = "generic_missiles"
+form = "missiles"
+name = { en = "Stormcaller's Amulet", de = "Amulett des Sturmrufers", fr = "Amulette de l'invocateur de tempêtes", es = "Amuleto del clamatormentas", pt = "Amuleto do Clamatempestade", ru = "Амулет призывателя бурь", pl = "Amulet przywoływacza burzy", tr = "Fırtına Çağırıcının Muskası", it = "Amuleto dell'evocatempeste", ja = "嵐を呼ぶ者のアミュレット", zh = "风暴召唤者护符", ko = "폭풍부름의 부적" }
+effects = [{ targets = 4 }, { damage = 0.2 }, { again = 0.3 }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_02"
+
+[[legend]]
+key = "generic_nova"
+form = "nova"
+name = { en = "Heart of the Earthshaker", de = "Herz des Erdenschüttlers", fr = "Cœur du Secoueur de terre", es = "Corazón del Sacudetierras", pt = "Coração do Abalador da Terra", ru = "Сердце Сотрясателя земли", pl = "Serce Poruszyciela ziemi", tr = "Yer Sarsanın Kalbi", it = "Cuore dello Scuotiterra", ja = "アースシェイカーの心臓", zh = "撼地者之心", ko = "대지진동자의 심장" }
+effects = [{ area = 0.6 }, { damage = 0.35 }, { stun = { chance = 1.0, secs = 1.5 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_03"
+
+[[legend]]
+key = "generic_ground"
+form = "ground"
+name = { en = "Amulet of the Inferno", de = "Amulett des Infernos", fr = "Amulette de l'inferno", es = "Amuleto del Averno", pt = "Amuleto do Inferno", ru = "Амулет инферно", pl = "Amulet Piekła", tr = "Cehennem Muskası", it = "Amuleto dell'inferno", ja = "業火のアミュレット", zh = "地狱火护符", ko = "불지옥의 부적" }
+effects = [{ area = 0.5 }, { duration = 1.0 }, { damage = 0.5 }, { kill_explode = { share = 0.3, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_AhnQiraj_04"
+
+[[legend]]
+key = "generic_chain"
+form = "chain"
+name = { en = "Talisman of the Tempest", de = "Talisman des Ungewitters", fr = "Talisman de la tempête", es = "Talismán de la tempestad", pt = "Talismã da Tempestade", ru = "Талисман бури", pl = "Talizman nawałnicy", tr = "Kasırga Tılsımı", it = "Talismano della tempesta", ja = "大嵐のタリスマン", zh = "暴风护符", ko = "폭풍우의 부적" }
+effects = [{ targets = 4 }, { damage = 0.2 }, "no_falloff"]
+icon = "INV_Jewelry_Necklace_30Naxxramas"
+
+[[legend]]
+key = "generic_melee"
+form = "melee"
+name = { en = "Medallion of the Bladestorm", de = "Medaillon des Klingensturms", fr = "Médaillon de la Tempête de lames", es = "Medallón de la Tormenta de acero", pt = "Medalhão da Tempestade de Lâminas", ru = "Медальон Вихря клинков", pl = "Medalion Burzy ostrzy", tr = "Kılıç Fırtınası Madalyonu", it = "Medaglione della Tempesta di lame", ja = "ブレードストームのメダリオン", zh = "剑刃风暴勋章", ko = "칼날폭풍의 메달" }
+effects = [{ targets = 4 }, { damage = 0.5 }, { burn = { share = 0.8, secs = 6.0 } }]
+icon = "INV_Jewelry_Necklace_18"
+
+[[legend]]
+key = "generic_dot"
+form = "dot"
+name = { en = "Pendant of the Plague", de = "Anhänger der Seuche", fr = "Pendentif de la peste", es = "Colgante de la plaga", pt = "Pendente da Praga", ru = "Подвеска чумы", pl = "Wisiorek plagi", tr = "Veba Kolyesi", it = "Pendente della peste", ja = "疫病のペンダント", zh = "瘟疫坠饰", ko = "역병의 펜던트" }
+effects = [{ targets = 3 }, { damage = 0.9 }, { dot_burst = { share = 0.2, radius = 7.0 } }]
+icon = "INV_Jewelry_Necklace_28Naxxramas"
+
+[[legend]]
+key = "generic_execute"
+form = "execute"
+name = { en = "The Reaper's Amulet", de = "Amulett des Schnitters", fr = "Amulette du faucheur", es = "Amuleto del segador", pt = "Amuleto do Ceifador", ru = "Амулет Жнеца", pl = "Amulet Żniwiarza", tr = "Orakçının Muskası", it = "Amuleto del Mietitore", ja = "死神のアミュレット", zh = "收割者护符", ko = "수확자의 부적" }
+effects = [{ damage = 0.45 }, "reset", { splash = { share = 0.5, radius = 6.0 } }]
+icon = "INV_Jewelry_Necklace_27Naxxramas"
+
+[[legend]]
+key = "generic_cone"
+form = "cone"
+name = { en = "Breath of the Black Dragon", de = "Atem des Schwarzen Drachen", fr = "Souffle du dragon noir", es = "Aliento del dragón negro", pt = "Sopro do Dragão Negro", ru = "Дыхание Чёрного дракона", pl = "Oddech Czarnego Smoka", tr = "Kara Ejderha'nın Nefesi", it = "Soffio del drago nero", ja = "黒竜の吐息", zh = "黑龙之息", ko = "검은용의 숨결" }
+effects = [{ area = 0.6 }, { damage = 0.3 }, { burn = { share = 0.5, secs = 4.0 } }]
+icon = "INV_Jewelry_Necklace_19"
+
+[[legend]]
+key = "generic_lasting"
+form = "lasting"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+effects = [{ duration = 1.0 }, { power = 0.6 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "generic_totem"
+form = "totem"
+name = { en = "Amulet of the Ancients", de = "Amulett der Uralten", fr = "Amulette des anciens", es = "Amuleto de los antiguos", pt = "Amuleto dos Antigos", ru = "Амулет древних", pl = "Amulet Starożytnych", tr = "Kadimlerin Muskası", it = "Amuleto degli Antichi", ja = "古の者のアミュレット", zh = "先古护符", ko = "고대인의 부적" }
+effects = [{ duration = 1.0 }, { area = 0.5 }, { damage = 0.5 }, { totem_heal = 0.01 }]
+icon = "INV_Jewelry_Necklace_23"
+
+[[legend]]
+key = "generic_instant"
+form = "instant"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+effects = [{ power = 0.6 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "generic_immune"
+form = "immune"
+name = { en = "The Eternal Talisman", de = "Der ewige Talisman", fr = "Le talisman éternel", es = "El talismán eterno", pt = "O Talismã Eterno", ru = "Вечный талисман", pl = "Wieczny talizman", tr = "Ebedi Tılsım", it = "Il Talismano eterno", ja = "永遠のタリスマン", zh = "永恒护符", ko = "영원의 부적" }
+effects = [{ duration = 1.0 }, { cooldown = 0.35 }]
+icon = "INV_Jewelry_Necklace_21"
+
+[[legend]]
+key = "generic_summon"
+form = "summon"
+name = { en = "The Legionlord's Medallion", de = "Medaillon des Legionsfürsten", fr = "Médaillon du seigneur de la Légion", es = "Medallón del señor de la Legión", pt = "Medalhão do Senhor da Legião", ru = "Медальон повелителя Легиона", pl = "Medalion Władcy Legionu", tr = "Lejyon Lordu'nun Madalyonu", it = "Medaglione del Signore della Legione", ja = "レギオン卿のメダリオン", zh = "军团领主勋章", ko = "군단군주의 메달" }
+effects = [{ duration = 1.0 }, { damage = 0.5 }, { targets = 1 }]
+icon = "INV_Jewelry_Necklace_23"
+
+# The demon hunter's mark (the port's own, after Hunter's Mark's).
+[[legend]]
+key = "spectral_sight"
+spell = "spectral_sight"
+name = { en = "Eye of Leotheras", de = "Auge des Leotheras", fr = "Œil de Leotheras", es = "Ojo de Leotheras", pt = "Olho de Leotheras", ru = "Око Леотераса", pl = "Oko Leotherasa", tr = "Leotheras'ın Gözü", it = "Occhio di Leotheras", ja = "レオセラスの瞳", zh = "莱欧瑟拉斯之眼", ko = "레오테라스의 눈" }
+spell_name = "Spectral Sight"
+effects = [{ damage = 0.6 }, { area = 0.4 }]
+icon = "INV_Jewelry_Necklace_21"

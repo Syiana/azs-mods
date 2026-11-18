@@ -1,0 +1,8 @@
+# Your package. Rename the folder and this key together to "<you>.<mod>" (lower case letters,
+# digits, _ and -); names starting with "azs." belong to the game. The same id goes into
+# profile.json (the package's "id") and into your registry entry's `namespace`.
+key = "yourname.example"
+# The game's packs your package builds on. List the same ones as "dependencies" in profile.json.
+requires = ["base"]
+# After the game's packs (base 0, tbc 1, wotlk 2).
+order = 10

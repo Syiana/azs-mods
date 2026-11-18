@@ -1,0 +1,61 @@
+# The warrior's run sets dressed as the real sets they are named after (`[[set_look]]`,
+# docs/HOWTO-CONTENT.md "A set look"): its pieces of each rarity show these displays and icons. A
+# piece is (gear slot 0-7 head to hands, ItemDisplayInfo id, InventoryType, icon without INV_),
+# read off the client's ItemSet.dbc, Item.dbc and ItemDisplayInfo.dbc (3.3.5a). The Common set
+# ("Recruit's") is no real set and keeps its armor kind's icons. The PvP set has no belt and no
+# bracers: those two keep their armor kind's icons too.
+
+# Valor pieces: Battlegear of Valor, tier 0 (ItemSet 189).
+[[set_look]]
+key = "warrior_uncommon"
+rarity = 1
+pieces = [
+    [0, 42241, 1, "Helmet_02"], [1, 29964, 3, "Shoulder_30"],
+    [2, 29958, 5, "Chest_Plate03"], [3, 29959, 6, "Belt_34"],
+    [4, 29963, 7, "Pants_04"], [5, 29960, 8, "Boots_Plate_03"],
+    [6, 29961, 9, "Bracer_18"], [7, 29962, 10, "Gauntlets_26"],
+]
+
+# Might pieces: Battlegear of Might, tier 1 (ItemSet 209).
+[[set_look]]
+key = "warrior_rare"
+rarity = 2
+pieces = [
+    [0, 41847, 1, "Helmet_09"], [1, 31024, 3, "Shoulder_15"],
+    [2, 31021, 5, "Chest_Plate16"], [3, 31019, 6, "Belt_09"],
+    [4, 31023, 7, "Pants_04"], [5, 31025, 8, "Boots_Plate_04"],
+    [6, 31020, 9, "Bracer_19"], [7, 31022, 10, "Gauntlets_10"],
+]
+
+# Wrath pieces: Battlegear of Wrath, tier 2 (ItemSet 218).
+[[set_look]]
+key = "warrior_epic"
+rarity = 3
+pieces = [
+    [0, 34215, 1, "Helmet_71"], [1, 34253, 3, "Shoulder_34"],
+    [2, 33983, 5, "Chest_Plate16"], [3, 33990, 6, "Belt_09"],
+    [4, 33986, 7, "Pants_04"], [5, 33989, 8, "Boots_Plate_04"],
+    [6, 33982, 9, "Bracer_19"], [7, 33984, 10, "Gauntlets_10"],
+]
+
+# Dreadnaught pieces: Dreadnaught's Battlegear, tier 3 (ItemSet 523).
+[[set_look]]
+key = "warrior_legendary"
+rarity = 4
+pieces = [
+    [0, 36730, 1, "Helmet_58"], [1, 35177, 3, "Shoulder_29"],
+    [2, 35049, 5, "Chest_Plate02"], [3, 35058, 6, "Belt_27"],
+    [4, 35051, 7, "Pants_Plate_05"], [5, 35067, 8, "Boots_Plate_06"],
+    [6, 35044, 9, "Bracer_15"], [7, 35050, 10, "Gauntlets_28"],
+]
+
+# Field Marshal's pieces: Field Marshal's Battlegear, the Alliance's rank 13 PvP set (ItemSet
+# 384).
+[[set_look]]
+key = "warrior_pvp"
+rarity = 5
+pieces = [
+    [0, 38343, 1, "Helmet_05"], [1, 30318, 3, "Shoulder_20"],
+    [2, 30315, 5, "Chest_Plate03"], [4, 30317, 7, "Pants_04"],
+    [5, 30319, 8, "Boots_Plate_09"], [7, 30321, 10, "Gauntlets_29"],
+]

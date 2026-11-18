@@ -1,0 +1,20 @@
+# Lord Falconcrest's abilities, Arathi Basin.
+
+[[boss]]
+key = "lord_falconcrest"
+
+[[boss.kit]]
+every = 9.0
+ability = { combo = [[{ blink = { spell = 1856, distance = 6.0 } }, { cone = { spell = 15284, range = 10.0, arc = 70.0, warn = 1.1, factor = 2.2 } }], 0.4] }
+
+[[boss.kit]]
+every = 9.0
+ability = { nova = { spell = 1680, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 8.0
+ability = "charge"
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

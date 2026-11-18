@@ -1,0 +1,106 @@
+# The hunter's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: play nth_cast [auto_shot] -> multi_shot every v
+[[set_bonus]]
+key = "hunter_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Every {v} Auto Shots fire a free Multi-Shot.", de = "Jeder {v}. Automatische Schuss feuert einen kostenlosen Mehrfachschuss ab.", fr = "Tous les {v} Tirs automatiques, des Flèches multiples gratuites partent.", es = "Cada {v} Disparos automáticos lanzan un Disparo múltiple gratuito.", pt = "A cada {v} Disparos Automáticos, um Tiro Múltiplo grátis é disparado.", ru = "Каждый {v}-й выстрел «Автоматической стрельбы» даёт бесплатный «Залп».", pl = "Co {v}. Automatyczny Strzał odpala darmowy Wielostrzał.", tr = "Her {v} Auto Shot'ta bir bedava Multi-Shot atılır.", it = "Ogni {v} Spari automatici lanciano uno Sparo multiplo gratuito.", ja = "オート・ショットを{v}回放つごとに、無料のマルチショットを放ちます。", zh = "每{v}次自动射击会免费发射一次多重射击。", ko = "자동 사격을 {v}번 할 때마다 일제 사격을 무료로 발사합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 5.0, play = { nth_cast = { keys = ["auto_shot"], cast = "multi_shot" } } }]
+empowered = 4.0
+shows = "v"
+
+# Original: play dot_spread [serpent_sting] to round(2p) enemies on death
+[[set_bonus]]
+key = "hunter_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "When its victim dies, Serpent Sting leaps to {v} enemies near it.", de = "Stirbt sein Opfer, springt Schlangenbiss auf {v} Feinde in dessen Nähe über.", fr = "Quand sa victime meurt, Morsure de serpent saute sur {v} ennemis proches.", es = "Cuando su víctima muere, Picadura de serpiente salta a {v} enemigos cercanos.", pt = "Quando a vítima morre, Picada de Serpente salta para {v} inimigos próximos.", ru = "Когда жертва умирает, «Укус змеи» перескакивает на ближайших к ней врагов: {v}.", pl = "Gdy ofiara ginie, Żądło Węża przeskakuje na {v} pobliskich wrogów.", tr = "Kurbanı öldüğünde Serpent Sting yakınındaki {v} düşmana sıçrar.", it = "Quando la sua vittima muore, Puntura di serpente balza su {v} nemici vicini.", ja = "サーペント・スティングの対象が死ぬと、近くの敵{v}体に飛び移ります。", zh = "当目标死亡时，毒蛇钉刺会跳跃到附近的{v}个敌人身上。", ko = "독사 쐐기에 걸린 적이 죽으면 근처의 적 {v}명에게 옮겨 갑니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 2.0, play = { dot_spread = { keys = ["serpent_sting"], radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+# Original: mod area [explosive_trap] +0.50p; mod damage +0.30p
+[[set_bonus]]
+key = "hunter_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Explosive Trap is {v}% wider and deals {v2}% more damage.", de = "Sprengfalle ist {v}% breiter und verursacht {v2}% mehr Schaden.", fr = "Piège explosif est {v}% plus large et inflige {v2}% de dégâts en plus.", es = "Trampa explosiva es un {v}% más amplia e inflige un {v2}% más de daño.", pt = "Armadilha Explosiva fica {v}% mais larga e causa {v2}% a mais de dano.", ru = "«Взрывная ловушка» на {v}% шире и наносит на {v2}% больше урона.", pl = "Wybuchowa Pułapka jest szersza o {v}% i zadaje o {v2}% więcej obrażeń.", tr = "Explosive Trap %{v} daha geniştir ve %{v2} daha fazla hasar verir.", it = "Trappola esplosiva è più ampia del {v}% e infligge il {v2}% di danni in più.", ja = "エクスプローシブ・トラップの範囲が{v}%広がり、ダメージが{v2}%増加します。", zh = "爆炸陷阱的范围扩大{v}%，造成的伤害提高{v2}%。", ko = "폭발의 덫의 범위가 {v}% 넓어지고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["explosive_trap"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["explosive_trap"] }]
+mods_v = 0.3
+shows = "v2"
+percent = true
+
+# Original: mod follow [volley]; mod duration [volley] +0.50p
+[[set_bonus]]
+key = "hunter_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Volley moves with you and lasts {v}% longer.", de = "Salve wandert mit dir und hält {v}% länger an.", fr = "Salve se déplace avec vous et dure {v}% plus longtemps.", es = "Descarga se mueve contigo y dura un {v}% más.", pt = "Saraivada se move com você e dura {v}% a mais.", ru = "«Град стрел» движется вместе с вами и длится на {v}% дольше.", pl = "Salwa porusza się razem z tobą i trwa o {v}% dłużej.", tr = "Volley seninle birlikte hareket eder ve %{v} daha uzun sürer.", it = "Raffica si muove con te e dura il {v}% in più.", ja = "ボレーが自分と共に移動し、持続時間が{v}%延びます。", zh = "乱射会随你移动，持续时间延长{v}%。", ko = "연발 사격이 당신을 따라 움직이며 지속시간이 {v}% 길어집니다." }
+
+[[set_bonus.part]]
+mods = [{ follow = ["volley"] }]
+mods_v = 0.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ duration = ["volley"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+# Original: play splash [aimed_shot] share 0.60, +round(4p) enemies
+[[set_bonus]]
+key = "hunter_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Aimed Shot pierces to {v} more enemies for 60% of its damage.", de = "Gezielter Schuss durchbohrt {v} weitere Feinde für 60% seines Schadens.", fr = "Visée perce {v} ennemis de plus pour 60% de ses dégâts.", es = "Disparo apuntado atraviesa a {v} enemigos más con el 60% de su daño.", pt = "Tiro Mirado atravessa {v} inimigos a mais com 60% do seu dano.", ru = "Прицельный выстрел пронзает ещё {v} противников, нанося 60% своего урона.", pl = "Celny strzał przebija {v} kolejnych wrogów za 60% swoich obrażeń.", tr = "Nişanlı Atış {v} düşmanı daha deler ve hasarının %60'ını verir.", it = "Sparo mirato trapassa {v} nemici in più per il 60% dei suoi danni.", ja = "エイムド・ショットが追加で{v}体の敵を貫通し、そのダメージの60%を与えます。", zh = "瞄准射击可穿透{v}个额外的敌人，造成相当于其伤害60%的伤害。", ko = "조준 사격이 적을 {v}명 더 관통하며 피해의 60%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 4.0, play = { splash = { keys = ["aimed_shot"], share = 0.6, radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+# Original: mod targets +v; damage +1.5; cooldown 0.40; stat vs_held +1.0p
+[[set_bonus]]
+key = "hunter_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Concussive Shot strikes {v} more enemies, deals 150% more damage and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Erschütternder Schuss trifft {v} weitere Feinde, verursacht 150% mehr Schaden und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Trait de choc frappe {v} ennemis de plus, inflige 150% de dégâts en plus et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Disparo conmocionador golpea a {v} enemigos más, inflige un 150% más de daño y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Tiro Concussivo atinge {v} inimigos a mais, causa 150% mais dano e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Контузящий выстрел поражает ещё {v} противников, наносит на 150% больше урона и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Wstrząsający strzał trafia {v} kolejnych wrogów, zadaje o 150% więcej obrażeń i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Sarsıcı Atış {v} düşmana daha vurur, %150 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Sparo stordente colpisce {v} nemici in più, infligge il 150% di danni in più e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "コンカッシブ・ショットが追加で{v}体の敵に命中し、ダメージが150%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "震荡射击额外击中{v}个敌人，造成的伤害提高150%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "충격포가 적을 {v}명 더 공격하고, 피해가 150% 증가하며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["concussive_shot"] }]
+mods_v = 5.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["concussive_shot"] }]
+mods_v = 1.5
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["concussive_shot"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true

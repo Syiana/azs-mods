@@ -1,2 +1,5 @@
 # packages.json is signed byte for byte: the same bytes on every checkout.
 packages.json text eol=lf
+# The starter mod's lock hashes its files' bytes, and the snippets go into such folders: LF on every checkout.
+templates/** text eol=lf
+templates/**/*.png binary

@@ -1,0 +1,20 @@
+# Tyrant Devilsaur's abilities, Un'Goro Crater.
+
+[[boss]]
+key = "tyrant_devilsaur"
+
+[[boss.kit]]
+every = 15.0
+ability = { combo = [["charge", "charge", "charge"], 1.8] }
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 10.0, arc = 80.0, warn = 1.0, factor = 2.2 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 20549, radius = 10.0, warn = 1.8, knock = 14.0 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

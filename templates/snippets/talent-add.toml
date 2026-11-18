@@ -1,0 +1,33 @@
+# Snippet: add a talent to a class the game already has (here the mage's Frost tree).
+#
+# Goes in:  packs/<your package>/classes/mage/talents.toml
+#           The folder name is the shipped class's key (mage, warrior, ...).
+# Lock:     nothing to declare: a new entry is no override.
+# Rules:    - The key carries your package's name: "<your package>:<name>". The game refuses a
+#             new entry of a mod without it.
+#           - `tree` is 0, 1 or 2 (the class's three trees; a mod adds no fourth). `row` is 0 to 6.
+#             The game sorts every tree by `row`: the shipped talents keep their places and yours
+#             stands after the talents its row already has. `col` only orders a row's talents.
+#           - A `req` (optional) names a talent of a row above, in the same tree.
+#           - `name` and `text` carry all twelve languages: en de fr es pt ru it pl tr ja zh ko.
+#           - `{v}` in the text is the talent's value per rank (`menu_v` in the hero menu,
+#             `mods_v` in the run).
+#           - `mods = [{ school = 16 }]`: more damage for that school's spells. School numbers:
+#             2 holy, 4 fire, 8 nature, 16 frost, 32 shadow, 64 arcane (as the shipped
+#             talents write them).
+#           - `icon` is the name of an icon of the player's own client (Interface\Icons\...).
+# Checked:  in a copy of templates/starter-mod with `azs-content profile-check`.
+
+[[talent]]
+key = "yourname.example:frost_veins"
+tree = 2
+row = 1
+col = 3
+ranks = 3
+effects = []
+icon = "Spell_Frost_FrostShock"
+name = { en = "Frost Veins", de = "Frostadern", fr = "Veines de givre", es = "Venas de escarcha", pt = "Veias de Gelo", ru = "Ледяные вены", pl = "Mroźne żyły", tr = "Buz Damarları", it = "Vene di gelo", ja = "フロスト・ヴェイン", zh = "冰霜之脉", ko = "서리 혈관" }
+text = { en = "Frost spells deal {v}% more damage.", de = "Frostzauber verursachen {v}% mehr Schaden.", fr = "Les sorts de Givre infligent {v}% de dégâts en plus.", es = "Los hechizos de Escarcha infligen un {v}% más de daño.", pt = "Feitiços de Gelo causam {v}% a mais de dano.", ru = "Заклинания льда наносят на {v}% больше урона.", pl = "Czary mrozu zadają o {v}% więcej obrażeń.", tr = "Buz büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi di Gelo infliggono il {v}% di danni in più.", ja = "冷気の呪文のダメージが{v}%増加します。", zh = "冰霜法术造成的伤害提高{v}%。", ko = "냉기 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+mods = [{ school = 16 }]
+mods_v = 0.02

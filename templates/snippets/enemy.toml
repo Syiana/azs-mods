@@ -1,0 +1,48 @@
+# Snippet: more enemies for your zone: a ranged enemy and a second elite with a kit of its own.
+#
+# Goes in:  the end of your zone's file, packs/<your package>/zones/glade.toml (zone.toml). An
+#           enemy belongs to the [[zone]] above it; it is no entry of its own.
+# Lock:     nothing to declare.
+# Rules:    - `name` carries all twelve languages: en de fr es pt ru it pl tr ja zh ko.
+#           - `entry` names the creature: unique in its zone (a number no other zone uses avoids
+#             confusion).
+#           - `display` is a CreatureDisplayInfo id of the player's client, `spell` a spell id of it.
+#           - `cost` is what it takes of the wave director's budget, `from` the minute it starts
+#             to come.
+#           - `role` (normal enemies only): `ranged` stops `range` yards off and throws `spell`;
+#             `exploder` walks up and bursts. An elite takes no `role`.
+#           - An elite's kit cannot call a Lua script; only boss kits and phases do.
+# Checked:  appended to zone.toml, with boss-kit.toml, in a copy of templates/starter-mod with
+#           `azs-content profile-check`. Not played in a run.
+
+[[zone.enemy]]
+entry = 990003
+name = { en = "Glade Hexer", de = "Lichtungshexer", fr = "Envoûteur de la clairière", es = "Hechicero del claro", pt = "Enfeitiçador da Clareira", ru = "Полянный колдун", pl = "Czarownik z polany", tr = "Açıklık Büyücüsü", it = "Fattucchiere della radura", ja = "空き地の呪術師", zh = "林地妖术师", ko = "빈터 주술사" }
+type = "humanoid"
+display = 163
+icon = "INV_Misc_Head_Kobold_01"
+health = 30
+damage = 6
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+role = { ranged = { spell = 9053, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.elite]]
+entry = 990011
+name = { en = "Grey Alpha", de = "Grauer Leitwolf", fr = "Mâle alpha gris", es = "Alfa gris", pt = "Alfa Cinzento", ru = "Серый вожак", pl = "Szary samiec alfa", tr = "Gri Alfa", it = "Alfa grigio", ja = "灰色のアルファ", zh = "灰色头狼", ko = "회색 우두머리" }
+type = "beast"
+display = 246
+icon = "Ability_Hunter_Pet_Wolf"
+health = 800
+damage = 22
+swing = 1.6
+speed = 6.6
+cost = 13.0
+from = 6.0
+size = 1.62
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }

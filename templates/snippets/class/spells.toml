@@ -1,0 +1,26 @@
+# Snippet: the new class's spells (see class.toml in this folder).
+#
+# Goes in:  packs/<your package>/classes/frost_knight/spells.toml
+# Rules:    - Each spell names its class by the class's whole key (`class = "<your package>:..."`):
+#             a folder name stands for a class only when it is the class's key, which a
+#             namespaced key never is.
+#           - The first spell of the file is the class's starter (class.toml `starter`).
+#           - `id` is a spell id of the player's client: it gives the spell its visuals and its
+#             name on the run's cards and meter. Give a spell an id no other spell of the profile
+#             has, or it reads as that spell in the run.
+#           - Every field of a spell (shape, school, riders, meters): the content reference,
+#             "A spell".
+
+[[spell]]
+key = "yourname.example:rime_strike"
+class = "yourname.example:frost_knight"
+# 51416: a rank of Frost Strike in the 3.3.5a client that no shipped spell uses (49143, the first
+# rank, is the death knight's).
+id = 51416
+school = "frost"
+shape = { strike = { targets = 1 } }
+hit = 30
+cooldown = 1.5
+range = 5.0
+name = { en = "Rime Strike", de = "Raureifstoß", fr = "Frappe de givre", es = "Golpe de escarcha", pt = "Golpe de Geada", ru = "Удар инея", pl = "Uderzenie szronu", tr = "Kırağı Darbesi", it = "Colpo di brina", ja = "ライム・ストライク", zh = "霜凇打击", ko = "상고대 일격" }
+icon = "Spell_Deathknight_EmpowerRuneBlade"

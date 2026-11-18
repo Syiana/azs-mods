@@ -1,0 +1,16 @@
+# Nazan: Cone of Fire, his burning Fireballs that leave fire on the ground.
+
+[[boss]]
+key = "nazan"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 30926, range = 14.0, arc = 60.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 34653, burst = 34653, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

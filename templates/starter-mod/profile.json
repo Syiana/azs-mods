@@ -1,0 +1,2017 @@
+{
+  "lock": {
+    "name": "yourname-example",
+    "packages": [
+      {
+        "id": "base",
+        "version": "1",
+        "kind": "gameplay",
+        "variant": null,
+        "dependencies": [],
+        "overrides": [],
+        "required_assets": [],
+        "objects": [
+          {
+            "path": "packs/base/account/levels.toml",
+            "hash": "a7cecd30b3509caea1d7bd87358c5ae1fac0bc1cc9ab4ebf346e99937ccc9106",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/account/races.toml",
+            "hash": "94986235b44a7d15e3338d544cb0c485430907176df3f90ee54ca22ccaa1ca14",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/account/tree.toml",
+            "hash": "f070767c6ff9068afdcc534943af67986f3f30a43cac8bc83711239006f8633b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/alzzin_the_wildshaper.toml",
+            "hash": "1b98dcbd87e42fc2feb4974258e98cc809b6d393fea99d0578427a187f7f547e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/anubrekhan.toml",
+            "hash": "c53fa5b7fd1f595994e861924b54e290357a3cd8776ca42cfb51e50bc2417533",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/arcanist_doan.toml",
+            "hash": "8084cd9f7ded7883f95e797300b403e2282db0e5288cab83123270af5cd6b611",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/azuregos.toml",
+            "hash": "f605848bb9b1656031b942481cc0952d7311b6afeb8735985804b4912cbfc120",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/bloodlord_mandokir.toml",
+            "hash": "233f6c38f6e5df31530576fbccfde4e1e6ba7abb5d818e2d652a10e6ca4b0a19",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/cthun.toml",
+            "hash": "f66de6b5fca029fcefc2a0296877d319f9da21b38d64a50bc9634db9fe8e0214",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/doomguard_commander.toml",
+            "hash": "6f401498a4aa0e116217e7535889cf525c0cf978d6d84ddca1992b49f8fdfba1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/edwin_vancleef.toml",
+            "hash": "33940095227b90658de3a737d1191fe8f1754ba3d41ea2123bb2c68a99b58d01",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/emperor_dagran_thaurissan.toml",
+            "hash": "49b11718d06251f2edd03f622603973cdf189272c534b28cf24b4dda325ba975",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/general_angerforge.toml",
+            "hash": "e2715908cbfca1f51c7c46c2d9e4823355a5f15b8aa78be3534e95bb54151f09",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/general_rajaxx.toml",
+            "hash": "ee8688a1baad98c3a29ef4d9b35f707becf685a0ac0da3a9edf256d2ef4d0315",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/glacius_the_frozen_titan.toml",
+            "hash": "c5ff11b52cbd35ffa84384ec68ebd74baa428f2f2e07c0d4a5d9a8f312f5f429",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/hakkar_the_soulflayer.toml",
+            "hash": "6c3693278f627c94d4323157e2200c2969f2fe1d02b745076cd3e5f2f8bccd9a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/herod.toml",
+            "hash": "c14bb19e4ce3889e129e1c8e21eee24eae67a41d4bacda98a5e549f14fc6a573",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/high_inquisitor_whitemane.toml",
+            "hash": "b63a125e4170edda55ac4c60140d2810d47c8fed9c3d5c5dae1703073e942419",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/high_priest_venoxis.toml",
+            "hash": "183b0b60293bf625ec30f63161d493a524278b51b24afefbe378b6750dacb9e3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/high_priestess_jeklik.toml",
+            "hash": "ac0a7e4e9d68e1aefedd45551b1f02c2e4661fa81cf7dfe628f3807f6c62f8bc",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/hogger.toml",
+            "hash": "0594ebc061c7d8ef10a5cf35b24e7d46a2f431842bff469d812554db2f56c884",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/houndmaster_loksey.toml",
+            "hash": "85b29b7a2f2b30af4c2ca847725ed3a757d43572819897f48ee41fbf4d611062",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/immolthar.toml",
+            "hash": "c8c337ac511a9cdc6ab84984428487ca8fb0ea25dba4de0724ee07a44537bd6c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/ivus_the_forest_lord.toml",
+            "hash": "0d9f6dee75e787a94d3db3f6ac340aea82fa10bcc4be2f416a2e84de4215f58a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/jindo_the_hexxer.toml",
+            "hash": "1ac7aaddc3833f311e0d9fd620bd8c110dc66eb183f7cc09329fd66d55f5c5d1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/kelthuzad.toml",
+            "hash": "2572cf6bd7c2c522908c448ef0605e5cfa9e89e677bbb3bc291f8275114e5cc5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/king_gordok.toml",
+            "hash": "d110ce59321f60d5469d047f48d8aa3e0f320dd9a24b1c1b79332e14c206319f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/king_mosh.toml",
+            "hash": "c55d595d59d232b114cdd0d3bbf9fdc1013c641e4a4b81998dcb29d72542f658",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/korrak_the_bloodrager.toml",
+            "hash": "6440c699ca05b8e6360eeb52b731abfaa13fc17e92079cdfc3146f7d95c7f0bb",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/kovork.toml",
+            "hash": "944144f3b302a17492d439704be77a4d3a23083f902a3163c75b1056a069533a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/kurinnaxx.toml",
+            "hash": "e18602591fa4a3d4d9563b4999a70f2f85c02b891d20e634117897e4efcbf624",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/larkorwi.toml",
+            "hash": "f6e1728cd552159d676599fe885adae659009e0f73d65b2ddd49741bc908182b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/lokholar_the_ice_lord.toml",
+            "hash": "8090c6a8a46ca76fcbe90b94f110ceaaf88d967b15d12974f36d636d2a15dd90",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/lord_aliden_perenolde.toml",
+            "hash": "8364c376bc2d87c590796c234f37d1934c6765d6845c74f70262b9397181aa75",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/lord_falconcrest.toml",
+            "hash": "e5d47798d6382aa7a9fd1974aed56e1c88ac5ef57f3e6156555cfe8c0cbfbd02",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/lord_helnurath.toml",
+            "hash": "8a7f68559761e603569fa4e7155128ddd14d6402326e0edd683ccf669c2fbf39",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/lord_kazzak.toml",
+            "hash": "10f136b92a4ebf090cf2d1ddb8821e212c497f46462b1267479253b18b4b0c69",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/lupos.toml",
+            "hash": "f1bb95593fc674ce363fdc01db5585dfe8db21da7281613aec9ddd9c3aff8685",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/majordomo_executus.toml",
+            "hash": "3eadb7a82f8516a3f77ff236eff68340de4ef89eb5afe90e3e9b49ad52abb893",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/mannoroths_herald.toml",
+            "hash": "e4cbb640ab995bd9f504998fd11cc16eb11ff8d7797ffdcfe168a4fbd69709e2",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/marez_cowl.toml",
+            "hash": "6edb8618bb39c6b52a24f480ba692b415611d1035fd729a689af4ed5b4a1b2c3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/morbent_fel.toml",
+            "hash": "3dd9ab1eaf64f0fe887534a68c001035aee436310ac6ff3976a3b19cc5440c99",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/morladim.toml",
+            "hash": "204a61239c5e0c81d14244ad2b16a8a84355b0805f5d313487f0eb53b1309efd",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/mother_fang.toml",
+            "hash": "27389b578e97e4c6940f73839be672000207ad6ae81a9f481392b50085790e0f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/mr_smite.toml",
+            "hash": "cd6340473db41a9f7ceec1f1674a0a89a32282f122674b76528ef64b008576cb",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/naraxis.toml",
+            "hash": "94c8c195c6474390e840a81a26f39a7f4da5609168d2c87bcb17ae5f3f08fadb",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/nefarian.toml",
+            "hash": "c87a07e21cb84b381c6c30e30337a5960437d11c727220f96075741ce39cd4a5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/nimar_the_slayer.toml",
+            "hash": "f7ccf894c0b0cd26d77567d2269677e2714009b0aa8c3290589b1ede56194a6b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/noth_the_plaguebringer.toml",
+            "hash": "6e6b83522df2870ac107f29abed6a100aece665f376f4a2fe536d989f29870c7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/ossirian_the_unscarred.toml",
+            "hash": "530d700bf090eec0501d346d04ffceea4902965235f328e2f6208359dda7f90f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/patchwerk.toml",
+            "hash": "87997e385a641c569b212d49d71956a74d962a3530a770c96cfed1a71689cc98",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/princess_huhuran.toml",
+            "hash": "65d7e43a73dfe6dd57271a9fedb97ea003822f7f0c3ce8cbfd46d9f8c3988629",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/ravasaur_matriarch.toml",
+            "hash": "5529da830663d967254469d3f07c9f77f5132f3679e59a418884ac48eab98be1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/rhahkzor.toml",
+            "hash": "0cf2ca5f47894bed22e9f42ba24a207c72d5da8d85d9414723ea71200ffc3828",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/sapphiron.toml",
+            "hash": "26be3da66b75bd77a861ba5b3be2cfabc859e87f1ddac06114e17e4329257a2d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/scarlet_commander_mograine.toml",
+            "hash": "ebcff97c6acb97ced48fb36fe4ba32f19da019d10aa0439f6aed61c25f459d7a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/stitches.toml",
+            "hash": "f2d5b350f161bd580f61c4c673d511495efbd196438cb543fe9613f5dfd6dce0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/tendris_warpwood.toml",
+            "hash": "d2e51a092a5b383524749c575887f0c0077291a613f5a27fd529da8efe28b85a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/tyrant_devilsaur.toml",
+            "hash": "69da714aa2254b58cb0a08f9ecec67b712aa1ff3aad4ec6e791825ef1a2909ba",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/uhkloc.toml",
+            "hash": "4313c0014d2b7a6b6cb1aaefd314a4c4b6eec60a0b641044b7a4a6db58e2aa92",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/varimathras.toml",
+            "hash": "0da50597119d592beb3176e2dfb71f3d501321f066d8b3f0a2a526c876ca6812",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/warchief_rend_blackhand.toml",
+            "hash": "59f1f5b771f885c40d61689b114977f67b2642405a90a17ffef9e37c0aa66bab",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/bosses/zevrim_thornhoof.toml",
+            "hash": "4c6659f4c8428a6f9b77eb908eff6480971b3ae5971fde17c1de5464b93c50c4",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cards.toml",
+            "hash": "317f98641cbca92e19cacf8e4a2c1856ff792526c6206fda84391b5133ee8961",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/druid/class.toml",
+            "hash": "4913be439842cb330eab90adc68baceda91341d2d45d6a39fe70398fa68618c2",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/druid/piece_lore.toml",
+            "hash": "b05f294d7094c96871bbdddb1292652f4b14602496430fb445ca0f501898e73f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/druid/set_bonuses.toml",
+            "hash": "aff4bda6ea121adafb3abc77aa06878502ed9619eb2c28e0d93f995ecafd62eb",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/druid/set_looks.toml",
+            "hash": "d5c5a279c33757a6c068868d228c072335508d5c51d49e969647573b0e70a5b8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/druid/spells.toml",
+            "hash": "f53d96ac31a09868a972e7b3d1e44a11a15b9984d23230950943a9181f29fe8c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/druid/talents.toml",
+            "hash": "e06e491dfbeb57d121167d89be103c594d3b413b03c2723d425523d0b965ab12",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/hunter/class.toml",
+            "hash": "9f2368e69f7bcad4b9d862d0aefcac54dfe834e47bcf4fe9789a2121c442424a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/hunter/piece_lore.toml",
+            "hash": "919d3bd37f417a3ab31e1c0966340d89bac55ae0d1b6c0651a2fd07e533d6286",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/hunter/set_bonuses.toml",
+            "hash": "e8023a248ec9e0911d1f89b1ae653eef2f0251a948a5decdf59f9a40b64fbf8d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/hunter/set_looks.toml",
+            "hash": "2a459f49fc2cc0fdc3f689138b933cc3e5d411fc72fca9b7d040981a630fba53",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/hunter/spells.toml",
+            "hash": "2879f1fb292afa38b93e91ec0e25971b267e3e507eabe549648746658d5a0f6f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/hunter/talents.toml",
+            "hash": "489b4c2d5d72253e946eb57f001da38914334deabc09ed05dc1c1f8d23f2cc40",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/mage/class.toml",
+            "hash": "3641bf6d5d766df6a5792c4c6dd417a064b6e18ece2be2d96876cc3157862a2d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/mage/piece_lore.toml",
+            "hash": "602baedbea7dfcce188a25c27850ebfbacd6d5a7b41fdc07d20eac5ae7c40e99",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/mage/set_bonuses.toml",
+            "hash": "f3f0ae2532876b53bca1daa0675f1d6bdd6effb6cce230a72dc7279cdfd75a0e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/mage/set_looks.toml",
+            "hash": "ebd3ba15e32b9df64bb9108c006a3266687afc24186acc557ac62c9f120881db",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/mage/spells.toml",
+            "hash": "d28051dffc037f41fa0903bc61af2a46dbacdd8650951adc3383803128e9e03d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/mage/talents.toml",
+            "hash": "83085c192828246c469d3851df590cf71becddc498f91559456a54e1f2421263",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/paladin/class.toml",
+            "hash": "75952cb9bf1afddd33dcb53bbb666948e6eaf9822473022aec1ee1eb04c42ba4",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/paladin/piece_lore.toml",
+            "hash": "14bd198776fc822832eee4ecf7e077d5ed8a4ecf500e2c2bb1a1003c068c2ab5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/paladin/set_bonuses.toml",
+            "hash": "cdb6e0562d77ec52b93241c5f61219a7399fe075394451f532b123b6dbee6b4e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/paladin/set_looks.toml",
+            "hash": "0c452f3876053c15bf6561179d4d57b54cdcdacd9f3abbae3e1a8f120432a623",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/paladin/spells.toml",
+            "hash": "224b4d36a2b84b7fad8a70ac3b4fe1dfde9073c3cfa6ecb3d8894e4313187297",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/paladin/talents.toml",
+            "hash": "8e82fcd26b3530229d4bea76ea7877aea36baa0b12edf8d95f137187f5581b4f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/priest/class.toml",
+            "hash": "9c8759ed320c776d90477b781e3b305948e1974a831f2529da56fba5de4a8f09",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/priest/piece_lore.toml",
+            "hash": "4b083d0fa0432177cd3ed4f190c3640014af21242bc0a66d9c82eacc5b5c4290",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/priest/set_bonuses.toml",
+            "hash": "fbbf6b7cc821073160c7882bfd760a15b9c4d514c22c1143f16d8e8097792a29",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/priest/set_looks.toml",
+            "hash": "47fc777f416270d93943d670bfde6fae25cdbcc7e865d21952fac3def9e0ebaa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/priest/spells.toml",
+            "hash": "6e0d24c9ca4762df8799c72423a797e0772bf9adf641272327aab4b3b3846233",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/priest/talents.toml",
+            "hash": "1f26c4295e3f64982d04204473ba7408b8fdce2818e5b75f9964cb2d33ed7916",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/rogue/class.toml",
+            "hash": "6e53c6a26c3bb6e18fd40e7a76042b0cedd36cfb76328c27782a1906104648ab",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/rogue/piece_lore.toml",
+            "hash": "4ef3ff626e5bf928ccf898cfc0d5ce78b26e0aae7fc6ea9a2544b950c359d03e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/rogue/set_bonuses.toml",
+            "hash": "82f71338e6f43c093ae8cfba58f82ecd4c110d0309b35a10137d780fbe2e6b76",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/rogue/set_looks.toml",
+            "hash": "1c827dff420fd82de6dccd0c652d533bb223dfd21cc5d867f633842017d1ec2b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/rogue/spells.toml",
+            "hash": "15e4909641db769eabbb2465c7020ea1e214fc971a767b3c0234f83f7e4375d1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/rogue/talents.toml",
+            "hash": "5f01602f84ab3db9903c838b729c771d5ef955f3df1e04156b1a9c0dc66cf175",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/shaman/class.toml",
+            "hash": "9242305b31bb67a4bb01e7da9248f15458d51b08b7ffb8bbdd819e8515c3a5d6",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/shaman/piece_lore.toml",
+            "hash": "9c3b2b1dfedb4b8666e5bd8172a323e5e7d46fba52009308d5b5cf03f782018e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/shaman/set_bonuses.toml",
+            "hash": "029d6dd220292a0708c6d5311dc5659e433c020f4b51d2b0bbbfaf7eb87fcca8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/shaman/set_looks.toml",
+            "hash": "69119c47ea92b7f4af89f1a03d01c54cd9e76088179aafd37b501f3526936c7d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/shaman/spells.toml",
+            "hash": "246ac9d949e1dfbf480d2240868ff55f4b72baefc31919d37d05025733af3e1d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/shaman/talents.toml",
+            "hash": "ae9620ea8d0a3f9863ce6f2ceb09e1e7a72ad10c4e59fd0491501633c866d1f5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warlock/class.toml",
+            "hash": "4941f1bb0f5fc0557d877838bcb218dfbe666620d7c56ba652d984570644311b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warlock/piece_lore.toml",
+            "hash": "9c851ce8c7377dd0afa3262887d593a6cd43ae321b1c09ab281f4bfcec364cd7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warlock/set_bonuses.toml",
+            "hash": "8f8d9cc688cd7ae654ad7e1f96ea6079519b4e89029193ec8be6c766d2a26431",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warlock/set_looks.toml",
+            "hash": "b557589aca53486968621fc99f930d1fe89bacfefb66e1c014e32126dc48bc74",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warlock/spells.toml",
+            "hash": "0da706b0f9016107867fa60ab76337584330272317380e2bdff9e279c2c26e6f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warlock/talents.toml",
+            "hash": "0d4bc42179881b99bf49655f8f0c1f3629cbf0d4cec34192c1f3ff53e1b0fcfa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warrior/class.toml",
+            "hash": "36b5adb169833cabb3c0afac53d07db9f70f315fd68102177c43493548ec5909",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warrior/piece_lore.toml",
+            "hash": "b88f9319b248d3cd2649d6df6497a4e6a3709f3b1a3ebfc1b87fa9de11e03c17",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warrior/set_bonuses.toml",
+            "hash": "dc50711a8ca367032e4cd2785e0685bca10713bc3b3ef0148a445394ac7dd645",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warrior/set_looks.toml",
+            "hash": "8994d9ed27c67012eb060a25f37aeef512dee65ef00e80d1429655a3bb967a07",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warrior/spells.toml",
+            "hash": "058deb455c032d70e48223c8a3f88488205950d046b61a9479d3560ad264e99e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/classes/warrior/talents.toml",
+            "hash": "dca0859f3f6014ef03af570cea976aef974518b1927e6a279dcae02b71ea7c29",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/dyes.toml",
+            "hash": "cfdeae587eb5c2c0b4def90a30d3c9ae63e8aec6ba7db8dde488f63f858be949",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/emotes.toml",
+            "hash": "1d1a31526b05a9bcd842789381c528d57698d2d03493ffbd928ee3ed178f1d68",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/enchants.toml",
+            "hash": "56459bfb4f28cc91cdba36f49c8c9e552cab9582cd446e629cccbcaaced078be",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/form_skins.toml",
+            "hash": "c174d5ca0c40f978fc5fe34d927444b91f15c382339f74f001cd6f0da8b92cc2",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/frames.toml",
+            "hash": "21912205151de8f5da57f360c6769e6939bb628e30f052aa8131d36641cdc28d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/horns.toml",
+            "hash": "992d023ee143ac9597c62ee1c52118b6b75961d4daaeab5ef5b96ce5d98738b0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/killfx.toml",
+            "hash": "ade4d6acc1b332630a59499f64cac59ddc16f0e99d4521b2c6b7a12e4f864fe2",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/looks.toml",
+            "hash": "e0201d7228777f54019527cf8adbd297f5ab195125d532096a21bb797f270e8e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/mounts.toml",
+            "hash": "e426c8abc2c290c342387678d9229377ebd329b8f5d3218606dd9eddaa14eb64",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/namestyles.toml",
+            "hash": "147533841fd43eb31b8e1c7577dda88d46ca438069aed39f3ca3552fe738514d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/pets.toml",
+            "hash": "a6cbf03a87f905e7a506a655ebed7aafdf056db445be2ab01cbd6975c6d39dd7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/spell_colors.toml",
+            "hash": "f37b701248081898fd4a11bd1c557fe9519928a659adbccc49bd9fcff0c41d4c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/spell_skins.toml",
+            "hash": "055eabd9dbac58d08b7950caa9d03be5d43afeeb80e5252f4514749279402585",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/tabards.toml",
+            "hash": "befb3968428930adae59d27410b639b7b685111005a30046a6f00ce933616a4c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/titles.toml",
+            "hash": "2482048c178c40e0a90ce6dabf53e8a7b9c3a9197f1b830c9ece8ef364fb9532",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/trails.toml",
+            "hash": "937eb7050ee38b1263733fa1ac03166e40f2d4130c1a4ae64900a1c5ff758faf",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/wardrobe.toml",
+            "hash": "4cb3c937ee0deda827982579c1fca3f5d1720e5427b0aacdb53aaabd83738800",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/weapon_looks.toml",
+            "hash": "b20e8be4e8a1d512e13aeee5e687d4934ac3202686b298b8703781c86af8a801",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/cosmetics/wings.toml",
+            "hash": "0868953919ab9a1e9934319e92f706a0ebd95909303477c4a7e270c10b439397",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/gear/piece_lore.toml",
+            "hash": "038193fce0c4d3ab688f8fef3d773cd8d439fda7b28f5f113e0d04ff202277b0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/gear/piece_scale.toml",
+            "hash": "78de45e8b0aa49419ecece8f1f7f1c2f1e193e8f25193cf85d19319a487023a3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/gear/pieces.toml",
+            "hash": "6858a06192be61dac0bee0beaa07e75ab7800b3bab0437f25f3b15a47f7457d5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/gear/set_bonuses.toml",
+            "hash": "755faddd08ed7d6c44fef474dc3425884d9836af6aff409c8fc84e08310b1a5e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/gear/set_rules.toml",
+            "hash": "fa5cd3f35fdd3932d95044d9e6e6516b81fd6bfd45deb9167561050d6e377a83",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/de.toml",
+            "hash": "edc21a4b31f0b4f8a725a64efd9f9bb8a0ea30ee32c41c0c3d1c0004cbdd853c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/en.toml",
+            "hash": "437a963492a7174d740db4a6e4b6562998dc7b66260027d97ce56a42f068f233",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/es.toml",
+            "hash": "18f4481561bb4932d45f5bff5a97e4da5c9c652433565d9f924a2ea270669aab",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/fr.toml",
+            "hash": "aaf8713e5367d5425cb69a673a9bdd1e929b22aab74dcfc6e142bdd786d58b87",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/it.toml",
+            "hash": "d0a3fd56578ceabbade9150e6e691958f778890222aedd9bd08e37d666d5f45b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/ja.toml",
+            "hash": "5e03ab9b8253df6d8001254c4362fc4fe148d0fbebd691b49d1d316f62263511",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/ko.toml",
+            "hash": "6e0937cbb069cb7f2cf0338cacbdb82688971bce619d8ef647c239420f9f7f75",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/pl.toml",
+            "hash": "5abfcaa0fb376ac93a2e8c7be330f6369650f4077d2aafa4bd5e347e922f2bec",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/pt.toml",
+            "hash": "233d58fd55d53afaa6373675de78375ffa67fd4194386de37ea60cc3656cf71a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/ru.toml",
+            "hash": "a0b13aee95a47578db1675e41fa1331fbce0ae57d4a622002be65ca4cfbfc79b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/tr.toml",
+            "hash": "1340c42d70d830a1ed2112b3ead56eab8bc22fad479fa62a993db82f0a3c20a7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/i18n/zh.toml",
+            "hash": "99de1f8f33c6f2cc1d0da2bc02da2af4853b1eb727159c8dac5dbd898fdaadf1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/jewelry/amulets.toml",
+            "hash": "ef7b555319a0ce68e5ace3fe983eddf1ae4a758e6e4b6331e28b8ccde4a0fb40",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/jewelry/jewels.toml",
+            "hash": "5eb0f0328de99d56a292d503e8a76f0276881aed1c29a1690a6ee5b0e46b4b0d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/jewelry/legends.toml",
+            "hash": "f15d58e8ed1276aeb96563a0c83d05904d11c2c5ae80815c50960ca44507e5b4",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/meta/achievements.toml",
+            "hash": "bf41010052142c865336f35c3ef5da8589b281855a74264b0aa0a931eb73d95f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/meta/challenges.toml",
+            "hash": "23556049f0a7a83067e72589fc77d9a6e88f1199899bc5993958ff6760768a28",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/meta/companions.toml",
+            "hash": "ac7f6f1b24843c799b8cbf0869fe81d5107a5bf31dda1a22c52c6c847e1f10b5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/meta/holidays.toml",
+            "hash": "c6713489b6d0db67c04c3f37e11e6284b7ba2703010258347ef09669e45b0b58",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/meta/menu.toml",
+            "hash": "69665a10dd8b37e2ce5114830854fb44ca363c72706def51554cb0558fb155c8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/meta/pass.toml",
+            "hash": "c24da56fa82f18251a4237e862b2c92e3eb7846285a3eba85e8638d0eabcc4e0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/meta/referral.toml",
+            "hash": "88a1d897e73f69effdfad883be27acbb4047789f2f0759428a89284cd9e0a624",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/mutators/affixes.toml",
+            "hash": "e951f78d5d8876c20dc9f46ade71424f128bf4e5c4d96012e9ae40f37ffdbfea",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/mutators/examples.toml",
+            "hash": "6732507961be842b2df7512266c47438a129cad24b52fb39560456cad4a00a7d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/pack.toml",
+            "hash": "9e1c7ab4412b2a1955fea05a45eb5fd8e784dd7c6082782d27d779c8cb6e65f7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/es.toml",
+            "hash": "17495e64d8f59669ad0cda059f176d6f1dce2277dadb3c1a6a0f785708de7e34",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/fr.toml",
+            "hash": "83a8f56c8cb62638f237060f1cad94c1dde5f241b13d4df13bdd3dbbca3f99b0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/it.toml",
+            "hash": "32468f64926bf54bbb662535951ea172e201ff329d0a7c64c057babb81cfaf1a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/ja.toml",
+            "hash": "898e4c82ce9aed2dc91e9afcfd44052c3f5df464bf2d50cc7810d22a6ef36188",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/ko.toml",
+            "hash": "bcad6c0a4b4ef85bbab427d57842b5adefda5976f9f137bfa09f042dcdfbaabc",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/pl.toml",
+            "hash": "67f6bb3a8fbdc96225b7554a92e62bf66ced891d1ff267980e2ae56a0f73b4aa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/pt.toml",
+            "hash": "f502c7da6cae90c6d1f254e9dc7c056e28192928288c224d989eee8b4cd618bd",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/ru.toml",
+            "hash": "1765287770a881c5f41dd356ae96ae5834b905730a956ecca1f09b6c10537983",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/tr.toml",
+            "hash": "628365e3ec516ef8674734e8c0f1bcf07259c6aca15ba04bbfeb295301cde7cd",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/phrases/zh.toml",
+            "hash": "52ed4a2245b2b4a900beb5134c0e5e0adcfcd4389a03297976d8171f1b63021f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/talent_looks.toml",
+            "hash": "4ac49a8ce641f814ed25a6724edcdf9cdab49ee808a36ddf8ddb0c58beb5e17d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/ab.toml",
+            "hash": "34451edcbe9fbeaf6f387e8a53f799684858c73432a96891d39b8d22c334a1f3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/aq.toml",
+            "hash": "4c06724f407384e2c8fe2722733744b972adc26657551cf48dea4105b95f889e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/arena.toml",
+            "hash": "c992ecc408ddf07220ecbde04115ef68edee054e09dfaf22c967a1feae1d5fa5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/av.toml",
+            "hash": "c6ae75bdd61ca15b6184e916cbb9c30792d8f955de25fe83f4d0768efedbe8c5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/brm.toml",
+            "hash": "f8e7f9b201f010d00184f088065e0e7874d7bf3926498f3bf32e6386ff57501f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/duskwood.toml",
+            "hash": "f8f88d1bccf850c5d3c5f4355304626170cfcd16519cd9dd07698329016ca944",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/elwynn.toml",
+            "hash": "c2b9834b2a64e93bfa5d541021ae2bb2b0e62036881f91345d79980137f509e1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/feralas.toml",
+            "hash": "22ca53ac1631e9c54368547f22982618e6466d65ea23f24e6274a4f4ecd3fe6a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/naxx.toml",
+            "hash": "4e24d3804c4e81d856127a37b7b87fba0f472ba70946278a468e811873fc5a0f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/sm.toml",
+            "hash": "9ad899ba5e349532a9dbed4092043e02713f3ad4ed4e5855db9e71f4f38e2940",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/ungoro.toml",
+            "hash": "2acbe44e7c60a8fc79c261d9a3b833e14ef637c20d99558fcdd93eaefbb64fee",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/base/zones/wsg.toml",
+            "hash": "9a882e000df05a589ccb106b024d520704727942807b6ea87e7b3b0293675064",
+            "kind": "gameplay"
+          },
+          {
+            "path": "modes/daily.toml",
+            "hash": "3c89fa6427f2ab7879c94618ff0218549a272235d4f79b1a73b2726851605a44",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/dungeon.toml",
+            "hash": "7f8e8210680920f36eff67a0fb26d8703a06b7c2ba5483517c8182393cb74964",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/hub.toml",
+            "hash": "ce90e3cecb4bcc2f046f357d9cc899b1a899610ae8f20b94c54c099d9b1f8cc1",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/proving.toml",
+            "hash": "04c9d1e2ba1157e079efda02654bffa00e183003b8524cecd12109183e49a436",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/scripted_encounters.toml",
+            "hash": "bd45b1bded5e23778180a91ed511db5ae313cab3872d06bd8d25c75a609b8616",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/standard.toml",
+            "hash": "8e76fbb5a122f98bb1f978117cb685f14970a145af010fad39e87db6ccd36428",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/swarm.toml",
+            "hash": "f4406fe5b11a64deb5493ee37903201043f557d6470953c145b19d5d22117344",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/test.toml",
+            "hash": "8fbcc17d42fbab43441d7b85192afc72d4969f0a6e92f235f57f9d42ec5b4fdb",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/timed_bosses.toml",
+            "hash": "f58f12f84eec3e075e2bef00dba693816f1294cb73237291aea71138da71f06b",
+            "kind": "mode"
+          },
+          {
+            "path": "modes/warband.toml",
+            "hash": "d3e595bf9bdf16c8a5c717aaa29476f3e84427632a3c535b0f7d6818e458caf0",
+            "kind": "mode"
+          }
+        ]
+      },
+      {
+        "id": "tbc",
+        "version": "1",
+        "kind": "gameplay",
+        "variant": null,
+        "dependencies": [
+          {
+            "id": "base",
+            "version": "1"
+          }
+        ],
+        "overrides": [],
+        "required_assets": [],
+        "objects": [
+          {
+            "path": "packs/tbc/bosses/akilzon.toml",
+            "hash": "5fe48df8714afbf62c98d897bbaf8fcb5f76e19f58af6ed6ded431927b7e36db",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/anetheron.toml",
+            "hash": "b2c36000565cbd7ec1cedeaf8de9e034959512fd6d89ce452cc2c7d259d4201e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/archimonde.toml",
+            "hash": "1ffd35655cc948102fcd6a16d78996442c0cc5fdd7ab4be85a244b3884c4c2ba",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/attumen_the_huntsman.toml",
+            "hash": "988ff9c4558e13ffb7d9cdd2d06bf38b1cc018559534edde289e44dccbbc60f8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/azgalor.toml",
+            "hash": "73967a3feb547b18a2f73e799fe0e9b55f1e4037b13a3da4c63217ddc77b4a8a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/brutallus.toml",
+            "hash": "54279c12a9ef3e8bb8607409d289f102ab496b112de9fe9b611dcb9ed493d245",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/darkweaver_syth.toml",
+            "hash": "19fc566c5318353911e01b6e40c284e8ac9a20e87d2c64ece8defcea145554fc",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/exarch_maladaar.toml",
+            "hash": "c83e08463e207c2d6b8fc3614358451a38afd698aff630d93932fafd99d2bc76",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/felmyst.toml",
+            "hash": "733adf09bcdde684b1421854bc640437743895a5b566a038569b6a19353d8ecc",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/ghazan.toml",
+            "hash": "d3e3ec0955c42d53c58808b328ed38a57f07652c72c9ddea1a1880c91d575281",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/gruul.toml",
+            "hash": "05e115be0ddc4379087db0356418967b3aa32d503f85a2c8737bfed0f8f4267a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/gurn_grubnosh.toml",
+            "hash": "5fbf8ce6eb86d2521833c29f81860e8c8b17dfc4b9579aefb0d075ee17397930",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/gurok_the_usurper.toml",
+            "hash": "708a50540afac9a5e562d43d170ea1b36f7a26262229727fd35edce8c3793d4e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/gurtogg_bloodboil.toml",
+            "hash": "59142a10070aea39914aadaf36f7e2f1a9fd28191a8ce076398c4d049747cea6",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/gutripper.toml",
+            "hash": "cc418399f74039e50221afb75e2b19c6f762263f4a093a100aaeaec328bf06a2",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/halazzi.toml",
+            "hash": "8e49d8e2d6a5735e45202b66f25221a648c91f4b45c2d66eb6d9d67747e69fac",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/harbinger_skyriss.toml",
+            "hash": "78350cda8a09b5e7548584ead46df36f01ceaaa75c8f108af53b8fb82f00b4b9",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/high_king_maulgar.toml",
+            "hash": "774ba1c889ca5a7b7ac41865577bee8ce548908815396bbdf453c7055cb73b90",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/high_warlord_najentus.toml",
+            "hash": "15a384297b0a47028f7c7da6d44830c07aa0893ad61e73327eef921d23f80a47",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/hungarfen.toml",
+            "hash": "bbd77b6e1049782a79232cc16d4e024d51a390ffe20f7134c46320bcc04d345a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/illidan_stormrage.toml",
+            "hash": "e58b32c0e63d7e49d930a4d7dbd90a57bcab6f41c30ca0c76ca81b917287e473",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/janalai.toml",
+            "hash": "6fedf5c919e8a8cca20e8c968cddcd8a2fdba73a19bc4f8819a474051dc67ae7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/kaelthas_sunstrider.toml",
+            "hash": "90c963c8148919c6abc9c244b57569b98aadf6e9655a6060724e8d12150f3655",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/kalecgos.toml",
+            "hash": "a04fd45b3abb08780d6bff0227cd5b8a71b7a09ae52b8bd14252d561409216b0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/kargath_bladefist.toml",
+            "hash": "c3fe120f911bae792e27534af6ebf5f1c9c35c33e31ccd9b97f61fa51c1a0299",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/kazrogal.toml",
+            "hash": "5a7b86d1b047580cd1668ac3eba433b3949353efb1ed7377776732a093984b4c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/kelidan_the_breaker.toml",
+            "hash": "9c2fdfd68e63e175541ee1eb3db024d75d849b311b33009a0ad850e965f0a916",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/kiljaeden.toml",
+            "hash": "032a9ea47f9c2567888fd7a6c3d532e2a67a6a592c7e08f4af9875cc6c50296e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/krosh_firehand.toml",
+            "hash": "8c53cfabf028b4844d0c61ab5d31c565b87f08f13517d19f42651e7c16fdccf9",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/lady_vashj.toml",
+            "hash": "244297386ea3d31e228b5988fdf2a761619865717d2d06dc26c9aa783dd86d44",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/laj.toml",
+            "hash": "def4d999b5cb7bf9a1da55b7a220e7ddc4fc5244e075b7b91f21ca0cbe887388",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/maggoc.toml",
+            "hash": "0b3f2b514454438db5a9dc7f68c948289642ab275fb7798f0320fd9f88f786d9",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/maiden_of_virtue.toml",
+            "hash": "f6dcf6a12affb2527cf543b9b322e06835fd7cc4b75046cde03d8f9cae41faf8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/mechano_lord_capacitus.toml",
+            "hash": "819fe3a8df1e4fcf2364964512643c0d26b88f012f8fb34e1a6c798c998f1dfa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/mogor.toml",
+            "hash": "34efa310feae57d4cc7c70b7d5b8cbee5d7778952a62a64bb3ca56727e0c46ad",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/muru.toml",
+            "hash": "c3e32e2a5b9e0fca98147e5191445b8e0a7ac6753c5215e05aa91a8a0104825c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/nalorakk.toml",
+            "hash": "8611497eddd1be8d804882b79dc9c91927347ed74c23b5f4dae0bdfa18d881b4",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/nazan.toml",
+            "hash": "58b7a2c2e1f2bc25740bafb64d69650c20e1242dac32596473514461e7564318",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/nexus_king_salhadaar.toml",
+            "hash": "a6927a4f8cffef768d99916e4fb95f815417e90442200e69446aca80b62de3de",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/nexus_prince_shaffar.toml",
+            "hash": "aadc9c1fc88029933285389f217041ee096de76382e6d1fc102caad41f58afe7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/nightbane.toml",
+            "hash": "9e89513b83c32b6b144521ec351a9d61d03d1aa0f96b671291a6b9ac563d468c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/nuramoc.toml",
+            "hash": "68891123cd9f7856d97b3680056e9b907466e700660146e2dc7a37dabda5e951",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/omor_the_unscarred.toml",
+            "hash": "7a2d903b44063727e37fd170bfd74fe8bc1849130b97b8b0765ab104f56f9d8c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/pandemonius.toml",
+            "hash": "547462d97be0b4deb17aae67ed7aae4238deb21f41c5970acf1e70a464417895",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/prince_malchezaar.toml",
+            "hash": "90edaacfb187a84ced266a601b49186f2fef3d12a7e61f65df1c2b42cb417121",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/quagmirran.toml",
+            "hash": "1df13d7a2c3d28c1da94e2bbb987c5f2d99166dea63695c3d15bb9de9fcb3f66",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/rage_winterchill.toml",
+            "hash": "4cd186afc1e3547b15d4b0bc012c530a8cdaa1ac29a73a1e2b7f3722d09132a3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/shirrak_the_dead_watcher.toml",
+            "hash": "058b9a08cc0b10dba3b40f6f065f14127ff5bbe36d678f0121fe27604325c099",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/supremus.toml",
+            "hash": "3bc54a76ebd2a4f2135d9beaeea4a88c424ab056d37ef5ef199fe0fa3efa257d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/talon_king_ikiss.toml",
+            "hash": "7b51199150891f88a4975485d92e9c2b47b13d0303fe853ade1074427e02a4c2",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/teron_gorefiend.toml",
+            "hash": "63ba7645dcac38e068b00b6ffaab9591189d3cc4d47561dcee9f6b78d517cf3e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/the_black_stalker.toml",
+            "hash": "7cc10cf696206062eb4b7be9eb7140de13423a0e8823291dcfb5198579c53f40",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/the_curator.toml",
+            "hash": "4478fce13597ebb102b3ccc8e9c3a8a937b284748fa495f30dd71e72c3407339",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/the_fel_reaver.toml",
+            "hash": "a310f1ccd22647f0147e285d60cdb84c14e7faf3d00f3959113287eaadba7a83",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/voidhunter_yar.toml",
+            "hash": "9d5ba6ea1a7341f5f0f27761e8a8716397cc95974fcbdb75c93cc9201b387726",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/warmaul_champion.toml",
+            "hash": "e971ae63122599d0be3bb19a10dfcae8472c9c3655ef37c36617afbe9e6feb6a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/warp_splinter.toml",
+            "hash": "1517dcb550cd82248ccf786c56694cc43852ca6e2a70e1ec05dbf4d9f4cf5312",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/watchkeeper_gargolmar.toml",
+            "hash": "d0e05647e6806cbeb8e46d4d28c9c1f0eed41c7c74ef5b239674017dd1871427",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/yor.toml",
+            "hash": "baab8bf241668ccf7534baf62c56740bb715b0de006dc054cd796c000f8f8f70",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/bosses/zuljin.toml",
+            "hash": "cd878ef2c09626cd2cebcecd7129b9aba4848dc2f8192f60bdf44aff91e66439",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/deathknight/set_bonuses.toml",
+            "hash": "31be878464125de923e83d8810a26473ca1a1eaf35c830ff77436d636664c336",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/demonhunter/set_bonuses.toml",
+            "hash": "e040b00ff3844625f39cb01bcea8b1770e94b6bb657e0361ad1318b99df08aa1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/druid/set_bonuses.toml",
+            "hash": "9b8d91c2d3a721fe9ee4041e5097a1578b3cc4c39c374a4eed3076a11000b7bc",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/hunter/set_bonuses.toml",
+            "hash": "a6484bf4208f4597152572e2791830e923e082d669cade02774a825877ac3461",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/mage/set_bonuses.toml",
+            "hash": "7ef19ef6c6a7f5c02b23781e0bcaba5fa89c1e21b6d7ec985b8884f73ab9101d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/monk/class.toml",
+            "hash": "c24ba6831893e26684d53c1d943a28956e9d257135d7fd2074c182a7fffedb5c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/monk/set_bonuses.toml",
+            "hash": "e6dee40b509d4c9cc4c7a02ff58a6aa1f3f12a86c62cd770c74680560905aacd",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/monk/spells.toml",
+            "hash": "876c3ff1f9a71f890d7c5416ebcd22aea52b5ef7c22ed9f1974f9ee54c668861",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/monk/talents.toml",
+            "hash": "0dbd205a06e937bad6eb7a1e3a794691dc3d5d8f931db05004cda5f5842f5e73",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/paladin/set_bonuses.toml",
+            "hash": "5aa97e99addb6a92a591e7907a293d2f88bf7d480070acd3397c1c32895cc0fa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/priest/set_bonuses.toml",
+            "hash": "c80018af4e51950ee67228340663aedb20189e186f7a82cacd9aaf2480160bca",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/rogue/set_bonuses.toml",
+            "hash": "f02e28d360cfe70a5df00065614efe3f825de231be9cf66bcc0de64f13f222df",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/shaman/set_bonuses.toml",
+            "hash": "771a341e89f945900f0790aa801ec7bd49a2598f488ff4da7c798618859fdfc6",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/warlock/set_bonuses.toml",
+            "hash": "100bf3b6853cbb31de0858e3479c7454fc070acc389b7f291749ed95d7dd59f3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/classes/warrior/set_bonuses.toml",
+            "hash": "fbbdf315674cd5b5e1be4b801c1a57f6e7f604d4085ea4c0a64a7456e2c384f9",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/gear/set_bonuses.toml",
+            "hash": "5dd94b5afa3c66fc5d93166e198d88a24ed7fa855b20edff6604b9f661b4f583",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/gear_tiers.toml",
+            "hash": "807a05bab53265e0d797752ac8b20a3da32728c414ffa615387e9d420a367d5a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/jewelry.toml",
+            "hash": "da34f2e27fa5ff4311b0d9ead66ee03b3f5ec19b53da1b5861e5f3c44d6e41ed",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/pack.toml",
+            "hash": "5371f79afda815670236717cfa7d4e46e18a676432241303b2af18e43fbfb816",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/bladesedge.toml",
+            "hash": "742c3e73f9831ac78d3216c993360739e82e14b8e00fc5f1c143b404db17573e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/eots.toml",
+            "hash": "1c512e143d9a077494f95236be82883e22805c614a82b7534d3dcb4c32bf5c9c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/hellfire.toml",
+            "hash": "d287f53e6abf6d178cbba2e0c9dee097941aa1590f72d821f435af43779fb9c0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/hyjal.toml",
+            "hash": "59e3756b90d362642443f677667ff9ed5114f414a74a7a4fe956937ae663c210",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/karazhan.toml",
+            "hash": "c0d4c88ed8ecc371937c4771601b28e71ab9040a50b4943646fca0bc29ada956",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/nagrand.toml",
+            "hash": "dbc7dc1aa6dd2e5758e366000b7f8bbe26ac36111ffb6926fe73b81e48287206",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/netherstorm.toml",
+            "hash": "0e02bdac291ad5e0bb6b08f33548a06f8e4cd0ce5927f74ac4fa811bd1043c3d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/queldanas.toml",
+            "hash": "48994bc854afe0ce15e6f2896704732cb4876a22f5c4e48e0f293e035ddc1072",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/shadowmoon.toml",
+            "hash": "01f536a683e365a526ccd01a8ceff30ec31eacd9ad2017aaa89a41118e9e1b8c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/terokkar.toml",
+            "hash": "003f4fe2f38594abbf8c3216eae601980e7b2ae9906b551165d75af58d7aa513",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/zangarmarsh.toml",
+            "hash": "844d3421d1201a1638b67897843946e152014eb763cff6270972609c2f8f88ff",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/tbc/zones/zulaman.toml",
+            "hash": "454766d7a7536971bb363e1bbb7215c2ce7148e31186c8b886cca67d4225bce6",
+            "kind": "gameplay"
+          }
+        ]
+      },
+      {
+        "id": "wotlk",
+        "version": "1",
+        "kind": "gameplay",
+        "variant": null,
+        "dependencies": [
+          {
+            "id": "base",
+            "version": "1"
+          }
+        ],
+        "overrides": [],
+        "required_assets": [],
+        "objects": [
+          {
+            "path": "packs/wotlk/bosses/acidmaw.toml",
+            "hash": "d96120a317e92adc1f01db0ed953bb7559b6da0a6a51b40889611072a80ec251",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/anomalus.toml",
+            "hash": "848f8cf785fe8e006e76b806338dd8454f349363c7bb9a66e160eccecd9885e0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/anubarak.toml",
+            "hash": "73c007340744d10602bdceea9cab65d965bc9c511d588a3cd8fa4381b6307be0",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/artruis_the_heartless.toml",
+            "hash": "14c75ff1a8377642a0686cb6ad67525ebae41ccc031972b9b806940577d94f80",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/avatar_of_freya.toml",
+            "hash": "cc71b1877065d79f02dabb09022cbad4401d43595de13a4961b7b84257effba1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/blood_queen_lanathel.toml",
+            "hash": "0f2b6e5d78bce60e54d08b19f4159b6d16f5207334b63c7d9ba2ac202b9584ee",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/devourer_of_souls.toml",
+            "hash": "20e884ac282a7e36f94e34c759653f3d9711321ad6b83cb54ecfe30fad844cf7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/drakkari_colossus.toml",
+            "hash": "5a462dd474210d46f78e6358731b8f703a843d0fcaac385910247ad8efa41984",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/drakos_the_interrogator.toml",
+            "hash": "eaaf1dbdbe81a4409b962a6b46ace9b9d569b61d6c333fa1934a719bd69ca4ad",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/eck_the_ferocious.toml",
+            "hash": "749f8f983c9e667251d3575717bb4cfc9d8ce96777e8bc78783a27f4a7e847cb",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/elder_nadox.toml",
+            "hash": "8485b822e13cc7b8ced220669f861ca549b9ae7834f8e63ee2eded18418421f4",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/festergut.toml",
+            "hash": "cdcb502e4bacfb4b795c2a409cb561c93f9b3236f78dbc4db81464287bdfd0ac",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/forgemaster_garfrost.toml",
+            "hash": "37ff229c6593fb77f1ec2a3b6852a8ba491c150a071d9e1ea9c48c001676be49",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/galdarah.toml",
+            "hash": "7d6134bc82fb46d05aa0f3220c11d6f03087c7b3dda8ded862881ceda039cb87",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/gammothra_the_tormentor.toml",
+            "hash": "774f9fd06cb94dc28b3205a3e17a74262c4aacd4dd852bae88752a16b0efe417",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/general_bjarngrim.toml",
+            "hash": "814570dd18bbea1d0b9770b49fbf6f41b975b57c6dfc58e8cfe410196a011639",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/gormok_the_impaler.toml",
+            "hash": "ddba3375f7c66d5fa65750e22ee4e00ba20a235c8e915c3c99f42760b819e476",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/gortok_palehoof.toml",
+            "hash": "5fc6f40ab993a5fe4a31a97bd5e7e2d3c8ed79b16b74942e6da4adb04a2fcc76",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/hadronox.toml",
+            "hash": "f5b0ef9e1d42373b435ca20d0a2dda669308023663a629f2366662c49afabf6f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/herald_volazj.toml",
+            "hash": "2238c42a16d573504c99e2dc58975f207509203d2dd7f985f66632e9b45f5101",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/hodir.toml",
+            "hash": "9833f769d2ab76c08a61ed41d70f04664ff22e7bf330b9ee3894017112024fa1",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/icehorn.toml",
+            "hash": "537c2b94e74de1d45a2db937b42fc26c048c5905316db0afba97678f91560ea4",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/icehowl.toml",
+            "hash": "4f1051f674f3caaf9b9d0f92f4812f26513379c183b9a7ac1bab9f0b8b8ede1f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/ick.toml",
+            "hash": "a282ef5ee1019e472ee78831aa1f847e26b5dd47d224270102d6b79ecd3ff4c8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/ingvar_the_plunderer.toml",
+            "hash": "38084f0a6e34b1a7fb6015da14ea7700e9e59e27408a5fac4172e0e166f8a3d9",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/keristrasza.toml",
+            "hash": "7b44d03887e29e0c2938fd3b93035812d98ef58b787e895dca83fea20f7dd36e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/king_dred.toml",
+            "hash": "2ebd70a4e945f3843a51e4f8b171c174c9da14c4fa68a67548d760618f261552",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/king_krush.toml",
+            "hash": "c3de365cb7b59148c8fcfc4960dcb0a65fe0c65aba68fc6dbee78f2dcf73a495",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/krikthir_the_gatewatcher.toml",
+            "hash": "55b63643dc4bcc6fd323b5117d51f33a9a18869b2ec51c9faed01682fb0b4c2c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/krystallus.toml",
+            "hash": "0a689fb9110fb125837d072f402f3e5023feb29aa3e0e59d730b603932e6cdc5",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/kvaldir_high_shaman.toml",
+            "hash": "3c24f72c813c53f87b3f40313f61ac2a90dd0d3858a15795a80111cc31433053",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/lady_deathwhisper.toml",
+            "hash": "5f94bf820f6d0081cb2c4669c51841d328d4254542b7fa620b478ab34117a547",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/ley_guardian_eregos.toml",
+            "hash": "b11416e1f280aba499798a7fc80ab28071f87e0b27adf7d1a8cea13975648ac2",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/loquenahak.toml",
+            "hash": "ef2c05fe56d1ca16ee7a0709629e06cd116938584c83e9eb81e3ac4829d77533",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/lord_jaraxxus.toml",
+            "hash": "fdc2c7b704132dc7e479215955c4f92701118b978c46c4ef91c5e348f11d35ac",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/lord_marrowgar.toml",
+            "hash": "545ed93e07c97f580dc89568f4c032dd8794377a515bf97e146bf71f86bf8eae",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/malygos.toml",
+            "hash": "3f123f7f8e80aa3375263f046ba912fc9569684bc4012bc7657b6e8320485030",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/moorabi.toml",
+            "hash": "b5b9580b071b21a4916fc9ce49e4c7f59549acea39df045bafd323487735f357",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/novos_the_summoner.toml",
+            "hash": "7d57453dbac5177d982b4c3a608349107a483c988d56c88ebde8e65dabd91143",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/old_crystalbark.toml",
+            "hash": "585bc1bfeca6b341057f7bb07cea3c31363bb0b08be603d6f92d25fdcc708470",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/ormorok_the_tree_shaper.toml",
+            "hash": "b38b5c2c1882f2166f1ab8069a99fe36e6d52922f0dceba9968687f842645d99",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/prince_keleseth.toml",
+            "hash": "e1885574bc5567dcd9ecabfb3f968ae73471758b6b0678cf3cfe6b3033c96972",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/razorscale.toml",
+            "hash": "a14bdee49891bc5a7ba35cfb74c9f2888f13077903946881e11b50019e2cfb89",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/rimefang.toml",
+            "hash": "85ffbdc70d993be11aecb561789e0c817135296b810d243bd4ad8711ebc45921",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/sartharion.toml",
+            "hash": "4080941a1f96ce09f5f05ebc981eb03fd61659015251949a97fabb6c15d1ac3e",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/scourgelord_tyrannus.toml",
+            "hash": "5f1701ea4b45e3ee62fe73933d7b28d0e7e580e7968cc3aa52618f148d00fd73",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/serfex_the_reaver.toml",
+            "hash": "7de633c021cf498345428368890d4193fbbecfc4f1cb59aa59dd06c4d4967ead",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/shadron.toml",
+            "hash": "9d16a74f7321162c7e26d88948075804ca87bb99f6590dbb08d5fc7d09678c30",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/skadi_the_ruthless.toml",
+            "hash": "3f50133c5ecf5cd712c922bc8ab47c7b42f8f02aa11371e2c09b115add7d0718",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/skarvald_the_constructor.toml",
+            "hash": "5e8ad247b7bbdf31aec9e477ece16c98cdd5c34084cea02b31aef88947e662d6",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/sladran.toml",
+            "hash": "92dd12e2b648a7cdc5ae0bb08c9442db66eaac642d1a8771890b3b735bacfcc9",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/tenebron.toml",
+            "hash": "090dcbbba293b0bb54dba3d841d0922505ea56abac66a52cb25d66ad82447dff",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/the_black_knight.toml",
+            "hash": "4a85a374b10f93219dc79b9f4e8e133817cc9e000c15c69c43771210908ce395",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/the_lich_king.toml",
+            "hash": "45922adeaf19dc6092e4a12357f16c279e59e47394b0a408d8b7cd2dcf706c88",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/the_prophet_tharonja.toml",
+            "hash": "c4405c441a0273fb02a4c4d78b446291c429bd1b9ba7792cfe15df85e423b29a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/trollgore.toml",
+            "hash": "8ed4da0f3a6632c518d8a4962f79c8d940eec8cb3b6cdd47493c8fede562f994",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/ursoc.toml",
+            "hash": "91eb8661b40fc52acb0cc790271228edf1e952e9ca0c4fdd9f1e37483cc1306d",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/varos_cloudstrider.toml",
+            "hash": "77bbc33190a4cf8860d7ac34227ffc8d4ebc67cc90878ea4859c35826420a0d8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/vesperon.toml",
+            "hash": "0155e365719855b4aca4bb3ea546c606c48f666d95c8e4bc31d337366325f2bc",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/bosses/yogg_saron.toml",
+            "hash": "91e59df8f50431d99ab87516d08b8393a1626dafcb0ce68eae0c44301c240507",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/deathknight/class.toml",
+            "hash": "e63437b66c6cb5fbe1006f0488fa2e58e798f701d37290f644b2b74f43b3e3fa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/deathknight/set_bonuses.toml",
+            "hash": "5bf770754d8b46ae88c74d93c69493b366efe30415adf04c3a8046f64dc8da99",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/deathknight/set_looks.toml",
+            "hash": "9e6e0717a2baf36b4874bd72ab30859d2b10915bd7157e54285708fe26db0556",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/deathknight/spells.toml",
+            "hash": "85e50853b9f8d93f9285b764f7f49dba83ededde778afe82ccd061a761189b36",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/deathknight/talents.toml",
+            "hash": "98c898e7c3051c5789eac6a94f5cc72eef2108996b193d090bf5da26ab02cda7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/demonhunter/class.toml",
+            "hash": "0338f1504e2d9dc7afbd9f75a32ff1d484e770123bcc50804de27ecd638d7aaa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/demonhunter/set_bonuses.toml",
+            "hash": "8a7d062cfe89ce2188b50b1bfd79d6e14cd34f003bebaf92ce27d51c9e2cb523",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/demonhunter/spells.toml",
+            "hash": "23486378a3b3ec83c9b4d0bc39b2a25f95c4f9f7530c82eeb00da43796762c56",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/demonhunter/talents.toml",
+            "hash": "85458e564aa921deeaba6eab6f2e906c46aa5132cd95393a31dd7c7ae0bc4baa",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/druid/set_bonuses.toml",
+            "hash": "1aad1108f5ec9c32e2fdb800912ac5e9b5528fff287d91c7d069706382338986",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/hunter/set_bonuses.toml",
+            "hash": "f8463983966dde48f3f9934a373fb6f4a225a89b30202787dcc629d4563fb28f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/mage/set_bonuses.toml",
+            "hash": "039ba2b7f4a1c206d63aa1f17050181a2c77a75485db5dfd282001b963ad92c7",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/monk/set_bonuses.toml",
+            "hash": "6136525432d02b33133510159af81444d415f186a0c61b10196280d304e5b160",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/paladin/set_bonuses.toml",
+            "hash": "94dd11671f25d32dc90ce50e10ec43e7b308cee1db1226283fa78ded282239e3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/priest/set_bonuses.toml",
+            "hash": "cd1060775b96e483d421f35efc539c66b63a802088fe6c8c12b25c2172e686e3",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/rogue/set_bonuses.toml",
+            "hash": "d1ca6a99b537d6a95f60dd8a32b96c704e39e42aa755af30a855506334b4bbb8",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/shaman/set_bonuses.toml",
+            "hash": "83db1af6426666d198f363efbd8d50186ec8c0842e8bcf6639d0a83e7d7219cd",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/warlock/set_bonuses.toml",
+            "hash": "5d771c37fec0797d6dd197e247ffe024d19a53ed4f63a8ede193be95beacb49a",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/classes/warrior/set_bonuses.toml",
+            "hash": "236c2b3955246c7f3fb4a1d3eb3adc7b2edfb7c8dbceb205878b319cdd7ea291",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/gear/set_bonuses.toml",
+            "hash": "f52d2fd2c55ceba2db519d40837ee68d1461072aebdd6a70571bb0211831c031",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/gear_tiers.toml",
+            "hash": "35d4760c2ee84a89c718a7c84f3b40e41d9edf6f28018f8b5c20220c0d1a825b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/jewelry.toml",
+            "hash": "464773a00f5dc18df3200b317b3d129e3ecb7f6f3f27b809d0a227e7ee70ab70",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/pack.toml",
+            "hash": "9e8edded85ae5cf47d696f20e465a794a0e0958ce54fcb6f8dc09da57f7ebb1c",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/azjolnerub.toml",
+            "hash": "47537f5fe46d1e58f868377878f08c0b67475371293aed73e5363e55af277b13",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/borean.toml",
+            "hash": "399a76328e238dc4d64f137da2574730d99c2051ffda4bfa824bef332d213543",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/coldarra.toml",
+            "hash": "9945b86022c7e310098577126b2430821c3043015c7bd296d9aa191ab9d812bc",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/dragonblight.toml",
+            "hash": "042fdb1693cce9d8cd537f6f43a86a6bb00d0b3e40bc9486235845b3599fb7a6",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/fjord.toml",
+            "hash": "714c4742c4f0b7de0af345eb4dfef8fb47d284b9425d21925834e28d3ad6ff76",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/grizzly.toml",
+            "hash": "5774ff3b6d7285b8bcd1c6fcf3dbba282129b74af2fd111b66a920cf97c0afb9",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/icc.toml",
+            "hash": "426bd114ceac466bde22587a83a6757617a693521803cc012f5dd5253dc1a74b",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/icecrown.toml",
+            "hash": "cd7d7bb53fd7821462a88c33445bc5c7c4af11307a007150c2df7a53230c952f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/pitofsaron.toml",
+            "hash": "03c44df5f6f122b6597716947cf84a4c298f43bea3427dd2e9e21002d2a5588f",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/sholazar.toml",
+            "hash": "5178c80956fa4db5ca4b2688f6b8d3e6d7c6a66e7ce1267d6abc66c138c86408",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/stormpeaks.toml",
+            "hash": "5a2d8d4e186db1358bfde4e8c5b5638b6d032f48f305f1ec6817d7f01bf93861",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/wotlk/zones/zuldrak.toml",
+            "hash": "ad76afba011d3f405863b2f0cf3c634112469b4b817fd0ccc91eaadd83db0d61",
+            "kind": "gameplay"
+          }
+        ]
+      },
+      {
+        "id": "yourname.example",
+        "version": "1",
+        "kind": "gameplay",
+        "variant": null,
+        "dependencies": [
+          {
+            "id": "base",
+            "version": "1"
+          }
+        ],
+        "overrides": [
+          {
+            "dependency": "base",
+            "entity": "spell:fireball"
+          }
+        ],
+        "required_assets": [],
+        "objects": [
+          {
+            "path": "packs/yourname.example/overrides.toml",
+            "hash": "00d5af2829d3243c4e4cd736d75234e696d37840f4639544209f0ea59d03fedd",
+            "kind": "gameplay"
+          },
+          {
+            "path": "packs/yourname.example/pack.toml",
+            "hash": "ba8d287750ccc060752ca3500799513fe863982fcd486c22a8188dd21f9ab085",
+            "kind": "gameplay"
+          }
+        ]
+      }
+    ]
+  },
+  "compatibility": {
+    "content_schema": 1,
+    "simulation_abi": 1,
+    "protocol_abi": 1,
+    "required_capabilities": []
+  }
+}

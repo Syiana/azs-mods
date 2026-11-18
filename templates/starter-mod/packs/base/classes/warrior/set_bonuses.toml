@@ -1,0 +1,96 @@
+# The warrior's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: mod targets [cleave] +v; mod area [cleave] +0.30p
+[[set_bonus]]
+key = "warrior_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Cleave strikes {v} more enemies in a {v2}% wider arc.", de = "Spalten trifft {v} Feinde mehr in einem um {v2}% breiteren Bogen.", fr = "Enchaînement frappe {v} ennemis de plus dans un arc {v2}% plus large.", es = "Rajar alcanza a {v} enemigos más en un arco un {v2}% más amplio.", pt = "Fender atinge mais {v} inimigos num arco {v2}% mais largo.", ru = "«Рассекающий удар» поражает больше врагов (+{v}) по дуге на {v2}% шире.", pl = "Rozpłatanie trafia o {v} wrogów więcej, w łuku szerszym o {v2}%.", tr = "Cleave, %{v2} daha geniş bir yayda {v} düşmana daha vurur.", it = "Fendente colpisce {v} nemici in più in un arco più ampio del {v2}%.", ja = "クリーヴが{v2}%広い弧で追加の{v}体の敵に命中します。", zh = "顺劈斩额外击中{v}个敌人，攻击弧度扩大{v2}%。", ko = "회전베기가 {v2}% 더 넓은 호로 적을 {v}명 더 공격합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["cleave"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ area = ["cleave"] }]
+mods_v = 0.3
+shows = "v2"
+percent = true
+
+# Original: play recast [thunder_clap] share 0.50p
+[[set_bonus]]
+key = "warrior_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Thunder Clap claps again for {v}% of its damage.", de = "Donnerknall schlägt erneut für {v}% seines Schadens zu.", fr = "Coup de tonnerre frappe de nouveau pour {v}% de ses dégâts.", es = "Atronar vuelve a retumbar con un {v}% de su daño.", pt = "Trovoada ressoa de novo com {v}% do seu dano.", ru = "«Удар грома» гремит повторно, нанося {v}% своего урона.", pl = "Grzmot uderza ponownie, zadając {v}% swoich obrażeń.", tr = "Thunder Clap, hasarının %{v}'i kadar bir kez daha patlar.", it = "Schianto del tuono scoppia di nuovo per il {v}% dei suoi danni.", ja = "サンダー・クラップがもう一度鳴り響き、そのダメージの{v}%を与えます。", zh = "雷霆一击会再震击一次，造成相当于其伤害{v}%的伤害。", ko = "천둥벼락이 한 번 더 울려 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.5, play = { recast = { keys = ["thunder_clap"], delay = 0.3 } } }]
+shows = "v"
+percent = true
+
+# Original: mod area [whirlwind] +0.50p; mod damage [whirlwind] +0.30p
+[[set_bonus]]
+key = "warrior_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Whirlwind is {v}% wider and deals {v2}% more damage.", de = "Wirbelwind ist {v}% breiter und verursacht {v2}% mehr Schaden.", fr = "Tourbillon est {v}% plus large et inflige {v2}% de dégâts en plus.", es = "Torbellino es un {v}% más amplio e inflige un {v2}% más de daño.", pt = "Redemoinho fica {v}% mais largo e causa {v2}% a mais de dano.", ru = "«Вихрь» на {v}% шире и наносит на {v2}% больше урона.", pl = "Wir jest szerszy o {v}% i zadaje o {v2}% więcej obrażeń.", tr = "Whirlwind %{v} daha geniştir ve %{v2} daha fazla hasar verir.", it = "Turbine è più ampio del {v}% e infligge il {v2}% di danni in più.", ja = "ワールウィンドの範囲が{v}%広がり、ダメージが{v2}%増加します。", zh = "旋风斩的范围扩大{v}%，造成的伤害提高{v2}%。", ko = "소용돌이의 범위가 {v}% 넓어지고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["whirlwind"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["whirlwind"] }]
+mods_v = 0.3
+shows = "v2"
+percent = true
+
+# Original: play hit_buff [bloodthirst] +0.05p damage per hit, 8 s, cap 5
+[[set_bonus]]
+key = "warrior_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Each Bloodthirst hit gives {v}% damage for 8 sec, stacking 5 times.", de = "Jeder Treffer von Blutdurst gewährt 8 Sek. lang {v}% Schaden, bis zu 5-mal stapelbar.", fr = "Chaque coup de Sanguinaire donne {v}% de dégâts pendant 8 s, cumulable 5 fois.", es = "Cada golpe de Sed de sangre otorga un {v}% de daño durante 8 s, acumulable 5 veces.", pt = "Cada acerto de Sede de Sangue concede {v}% de dano por 8 s, acumulando 5 vezes.", ru = "Каждое попадание «Жажды крови» даёт +{v}% к урону на 8 сек., суммируется до 5 раз.", pl = "Każde trafienie Żądzy Krwi zwiększa twoje obrażenia o {v}% na 8 s, kumulując się do 5 razy.", tr = "Her Bloodthirst vuruşu 8 sn boyunca %{v} hasar bonusu verir, 5 kez birikir.", it = "Ogni colpo di Sete di sangue dà il {v}% di danni per 8 sec, cumulabile 5 volte.", ja = "ブラッドサーストが命中するたびに8秒間ダメージが{v}%増加します（5回まで累積）。", zh = "每次嗜血命中使你的伤害提高{v}%，持续8秒，最多叠加5次。", ko = "피의 갈증이 적중할 때마다 8초 동안 피해가 {v}% 증가하며, 5번까지 중첩됩니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.05, play = { hit_buff = { keys = ["bloodthirst"], secs = 8.0, cap = 5 } } }]
+shows = "v"
+percent = true
+
+# Original: mod targets [execute] +v; play kill_trim [execute] 0.5p s off the other cooldowns
+[[set_bonus]]
+key = "warrior_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Execute strikes {v} more of the most wounded enemies, and each of its kills takes {v2} sec off your other spells' cooldowns.", de = "Hinrichten trifft {v} der am schwersten verwundeten Feinde mehr, und jeder seiner Kills verkürzt die Abklingzeiten deiner anderen Zauber um {v2} Sek.", fr = "Exécution frappe {v} des ennemis les plus blessés de plus, et chacune de ses victimes réduit de {v2} s le temps de recharge de vos autres sorts.", es = "Ejecutar alcanza a {v} de los enemigos más heridos más, y cada muerte que causa reduce {v2} s el tiempo de reutilización de tus demás hechizos.", pt = "Executar atinge mais {v} dos inimigos mais feridos, e cada abate dele tira {v2} s da recarga dos seus outros feitiços.", ru = "«Казнь» поражает больше самых раненых врагов (+{v}), и каждое убийство ею сокращает время восстановления других ваших заклинаний на {v2} сек.", pl = "Egzekucja trafia o {v} najbardziej rannych wrogów więcej, a każde zabójstwo nią skraca odnowienie twoich pozostałych czarów o {v2} s.", tr = "Execute en yaralı {v} düşmana daha vurur ve her öldürmesi diğer büyülerinin bekleme süresini {v2} sn kısaltır.", it = "Esecuzione colpisce {v} nemici in più tra i più feriti, e ogni sua uccisione toglie {v2} sec ai tempi di recupero dei tuoi altri incantesimi.", ja = "エクセキュートが最も傷ついた敵にさらに{v}体命中し、それで敵を倒すたびに他の呪文のクールダウンが{v2}秒短くなります。", zh = "斩杀额外击中{v}个伤势最重的敌人，其每次击杀使你其他法术的冷却时间减少{v2}秒。", ko = "마무리 일격이 가장 크게 다친 적을 {v}명 더 공격하며, 마무리 일격으로 처치할 때마다 다른 주문의 재사용 대기시간이 {v2}초 줄어듭니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["execute"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+plays = [{ v = 0.5, play = { kill_trim = ["execute"] } }]
+shows = "v2"
+
+# Original: play expose [mortal_strike] +0.20p damage taken, 4 s
+[[set_bonus]]
+key = "warrior_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Enemies hit by Mortal Strike take {v}% more damage from everything for 4 sec.", de = "Von Tödlicher Stoß getroffene Feinde erleiden 4 Sek. lang {v}% mehr Schaden aus jeder Quelle.", fr = "Les ennemis touchés par Frappe mortelle subissent {v}% de dégâts en plus de toutes sources pendant 4 s.", es = "Los enemigos alcanzados por Golpe mortal reciben un {v}% más de daño de todo durante 4 s.", pt = "Inimigos atingidos por Golpe Mortal sofrem {v}% a mais de dano de tudo por 4 s.", ru = "Враги, задетые «Смертельным ударом», получают на {v}% больше урона от всего в течение 4 сек.", pl = "Wrogowie trafieni Śmiertelnym Ciosem otrzymują przez 4 s o {v}% więcej obrażeń ze wszystkich źródeł.", tr = "Mortal Strike ile vurulan düşmanlar 4 sn boyunca her şeyden %{v} daha fazla hasar alır.", it = "I nemici colpiti da Colpo mortale subiscono il {v}% di danni in più da tutto per 4 sec.", ja = "モータル・ストライクを受けた敵は、4秒間あらゆるダメージを{v}%多く受けます。", zh = "被致死打击击中的敌人受到的所有伤害提高{v}%，持续4秒。", ko = "필사의 일격에 맞은 적은 4초 동안 모든 피해를 {v}% 더 받습니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.2, play = { expose = { keys = ["mortal_strike"], secs = 4.0 } } }]
+shows = "v"
+percent = true

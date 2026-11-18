@@ -1,0 +1,80 @@
+key = "paladin"
+# The `ChrClasses` id.
+id = 2
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [6, 7, 0, 1, 2, 3, 4, 5]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 245
+# Balance (2026-11-08): a little more damage for a little more risk. 11 % more taken is
+# 10 % less effective health (1 / 1.11 = 0.90).
+damage_pct = 5
+taken_pct = 11
+power = "mana"
+starter = "consecration"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's.
+races = [1, 3, 11, 10]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    2361, # Battleworn Hammer
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 1044
+dash_legend = { en = "Divine Steed's holy ground lasts twice as long and burns the enemies in it.", de = "Der heilige Boden von Göttliches Ross hält doppelt so lange und verbrennt die Feinde darin.", fr = "Le sol sacré du Destrier divin dure deux fois plus longtemps et brûle les ennemis qui s'y trouvent.", es = "El suelo sagrado de Corcel divino dura el doble y quema a los enemigos que hay en él.", pt = "O solo sagrado do Corcel Divino dura o dobro e queima os inimigos que estão nele.", ru = "Священная земля Божественного скакуна держится вдвое дольше и обжигает врагов на ней.", pl = "Święta ziemia Boskiego rumaka trwa dwa razy dłużej i pali stojących na niej przeciwników.", tr = "İlahi At'ın kutsal zemini iki kat uzun sürer ve içindeki düşmanları yakar.", it = "Il terreno sacro di Destriero divino dura il doppio e brucia i nemici al suo interno.", ja = "ディヴァイン・スティードの聖なる大地の持続時間が2倍になり、その上の敵を焼きます。", zh = "神圣战马留下的圣地持续时间翻倍，并会灼烧其中的敌人。", ko = "신성한 군마의 신성한 땅이 두 배 오래 지속되고 그 위의 적을 불태웁니다." }
+bot_name = "Botpaladin"
+bot_order = 4
+# Its own mount in the victory scene (`CreatureDisplayInfo`).
+mount = { alliance = 14584, horde = 19085 }
+name = { en = "Paladin", de = "Paladin", fr = "Paladin", es = "Paladín", pt = "Paladino", ru = "Паладин", pl = "Paladyn", tr = "Paladin", it = "Paladino", ja = "パラディン", zh = "圣骑士", ko = "성기사" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [0.96, 0.55, 0.73]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "paladin_gold"
+tone = 3
+price = 12000
+name = { en = "Radiant Light", de = "Strahlendes Licht", fr = "Lumière radieuse", es = "Luz radiante", pt = "Luz Radiante", ru = "Сияющий свет", pl = "Promienne światło", tr = "Parlak Işık", it = "Luce radiosa", ja = "輝く光", zh = "灿烂圣光", ko = "찬란한 빛" }
+
+[[colors]]
+key = "paladin_azure"
+tone = 9
+price = 15000
+name = { en = "Azure Light", de = "Azurlicht", fr = "Lumière azur", es = "Luz azur", pt = "Luz Azur", ru = "Лазурный свет", pl = "Lazurowe światło", tr = "Gök Işık", it = "Luce azzurra", ja = "紺碧の光", zh = "蔚蓝圣光", ko = "하늘빛 광휘" }
+
+[[colors]]
+key = "paladin_crimson"
+tone = 13
+price = 15000
+name = { en = "Crimson Crusade", de = "Karmesinkreuzzug", fr = "Croisade cramoisie", es = "Cruzada carmesí", pt = "Cruzada Carmesim", ru = "Багровый крестовый поход", pl = "Szkarłatna krucjata", tr = "Kızıl Sefer", it = "Crociata cremisi", ja = "深紅の聖戦", zh = "赤红远征", ko = "진홍 성전" }
+
+[[colors]]
+key = "paladin_emerald"
+tone = 6
+price = 15000
+name = { en = "Emerald Dawn", de = "Smaragdmorgen", fr = "Aube émeraude", es = "Alba esmeralda", pt = "Alvorecer Esmeralda", ru = "Изумрудный рассвет", pl = "Szmaragdowy świt", tr = "Zümrüt Şafak", it = "Alba di smeraldo", ja = "エメラルドの夜明け", zh = "翡翠黎明", ko = "에메랄드 여명" }
+
+[[colors]]
+key = "paladin_void"
+tone = 11
+price = 18000
+name = { en = "Shadowlight", de = "Schattenlicht", fr = "Ombre-lumière", es = "Luz sombría", pt = "Luz Sombria", ru = "Теневой свет", pl = "Światłocień", tr = "Gölge Işığı", it = "Luce d'ombra", ja = "シャドウライト", zh = "暗影圣光", ko = "그림자빛" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "paladin_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "paladin_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

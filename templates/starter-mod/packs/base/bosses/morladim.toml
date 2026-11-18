@@ -1,0 +1,20 @@
+# Mor'Ladim's abilities, Duskwood.
+
+[[boss]]
+key = "morladim"
+
+[[boss.kit]]
+every = 8.0
+ability = "charge"
+
+[[boss.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 6.0, lasts = 4.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 27810, count = 1, radius = 3.0, speed = 4.2, lasts = 7.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { adds = 6 }

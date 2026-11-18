@@ -1,0 +1,20 @@
+# Nightbane: Smoldering Breath, Charred Earth, Rain of Bones and its skeletons.
+
+[[boss]]
+key = "nightbane"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 30210, range = 14.0, arc = 70.0, warn = 1.4, factor = 2.6 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 30129, burst = 30129, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { rain = { spell = 37098, count = 5, radius = 4.0, spread = 10.0, warn = 1.6, factor = 2.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

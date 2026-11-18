@@ -1,0 +1,414 @@
+# The shop's head pieces (survivors-sim horns.rs), in patch-W's order: a piece's place is its display id.
+#
+# Every head piece, in patch-W's order: the Sun Horns' six colours, then the head cosmetics of
+# patch-H (`tools/cosmetics-patch.js`' HEADS, displays from `FIRST_HEAD_ID`). `TUNE` the prices.
+
+[[horns]]
+key = "gold"
+name = "Sun Horns (Gold)"
+price = 6000
+
+[[horns]]
+key = "fel"
+name = "Sun Horns (Fel)"
+price = 8000
+
+[[horns]]
+key = "frost"
+name = "Sun Horns (Frost)"
+price = 8000
+
+[[horns]]
+key = "shadow"
+name = "Sun Horns (Shadow)"
+price = 8000
+
+[[horns]]
+key = "blood"
+name = "Sun Horns (Blood)"
+price = 10000
+
+[[horns]]
+key = "bone"
+name = "Sun Horns (Bone)"
+price = 10000
+
+[[horns]]
+key = "beast"
+name = "Beast Horns"
+price = 7000
+
+[[horns]]
+key = "beast_tall"
+name = "Tall Beast Horns"
+price = 7000
+
+[[horns]]
+key = "betrayer"
+name = "Betrayer Horns"
+price = 7000
+
+[[horns]]
+key = "betrayer_tall"
+name = "Tall Betrayer Horns"
+price = 7000
+
+[[horns]]
+key = "curved"
+name = "Curved Horns"
+price = 7000
+
+[[horns]]
+key = "dreadlord"
+name = "Dreadlord Horns"
+price = 7000
+
+[[horns]]
+key = "high"
+name = "High Horns"
+price = 7000
+
+[[horns]]
+key = "oni"
+name = "Oni Horns"
+price = 7000
+
+[[horns]]
+key = "oni_tall"
+name = "Tall Oni Horns"
+price = 7000
+
+[[horns]]
+key = "ram"
+name = "Ram Horns"
+price = 7000
+
+[[horns]]
+key = "ram_tall"
+name = "Tall Ram Horns"
+price = 7000
+
+[[horns]]
+key = "wide"
+name = "Wide Horns"
+price = 7000
+
+[[horns]]
+key = "heart_blue"
+name = "Heart Crown (Blue)"
+price = 9000
+
+[[horns]]
+key = "heart_pink"
+name = "Heart Crown (Pink)"
+price = 9000
+
+[[horns]]
+key = "heart_purple"
+name = "Heart Crown (Purple)"
+price = 9000
+
+[[horns]]
+key = "heart_red"
+name = "Heart Crown (Red)"
+price = 9000
+
+[[horns]]
+key = "crown_gold"
+name = "Royal Crown"
+price = 9000
+
+[[horns]]
+key = "crown_nazmir"
+name = "Blood Crown"
+price = 9000
+
+[[horns]]
+key = "crown_ethereal"
+name = "Ethereal Crown"
+price = 9000
+
+[[horns]]
+key = "crown_ethereal_dark"
+name = "Dark Ethereal Crown"
+price = 9000
+
+[[horns]]
+key = "crown_dream"
+name = "Dream Crown"
+price = 9000
+
+[[horns]]
+key = "crown_warlock"
+name = "Fel Crown"
+price = 9000
+
+[[horns]]
+key = "crown_maw"
+name = "Maw Crown"
+price = 9000
+
+[[horns]]
+key = "crown_flower"
+name = "Flower Crown"
+price = 9000
+
+[[horns]]
+key = "ears_cat"
+name = "Cat Ears"
+price = 5000
+
+[[horns]]
+key = "ears_bunny"
+name = "Black Bunny Ears"
+price = 5000
+
+[[horns]]
+key = "hood_fox"
+name = "Fox Hood"
+price = 5000
+
+[[horns]]
+key = "antler_skull"
+name = "Antlered Skull"
+price = 5000
+
+[[horns]]
+key = "hat_witch"
+name = "Spider Witch Hat"
+price = 4000
+
+[[horns]]
+key = "hat_party"
+name = "Party Hat"
+price = 4000
+
+[[horns]]
+key = "hat_firework"
+name = "Firework Hat"
+price = 4000
+
+[[horns]]
+key = "hat_sun"
+name = "Sun Hat"
+price = 4000
+
+[[horns]]
+key = "hat_buckled"
+name = "Buckled Hat"
+price = 4000
+
+[[horns]]
+key = "hat_jester"
+name = "Jester Hat"
+price = 4000
+
+[[horns]]
+key = "hat_spring"
+name = "Spring Hat"
+price = 4000
+
+[[horns]]
+key = "mask_skull"
+name = "Laughing Skull"
+price = 5000
+
+[[horns]]
+key = "mask_pig"
+name = "Pig Nose"
+price = 5000
+
+[[horns]]
+key = "mask_darkmoon"
+name = "Darkmoon Mask"
+price = 5000
+
+[[horns]]
+key = "mask_drust"
+name = "Drust Mask"
+price = 5000
+
+[[horns]]
+key = "mask_venthyr"
+name = "Venthyr Mask"
+price = 5000
+
+[[horns]]
+key = "mask_serpent"
+name = "Serpent Skull"
+price = 5000
+
+[[horns]]
+key = "glasses_sun"
+name = "Sunglasses"
+price = 5000
+
+[[horns]]
+key = "eyes_maw"
+name = "Maw Eyes"
+price = 5000
+
+[[horns]]
+key = "helm_void"
+name = "Void Elf"
+price = 8000
+
+[[horns]]
+key = "helm_hunger"
+name = "Hungering Darkness"
+price = 8000
+
+[[horns]]
+key = "helm_spirit"
+name = "Spiritbringer"
+price = 8000
+
+[[horns]]
+key = "helm_rune"
+name = "Spirit Rune"
+price = 8000
+
+[[horns]]
+key = "helm_sunmoon"
+name = "Sun & Moon"
+price = 8000
+
+[[horns]]
+key = "helm_fire_priest"
+name = "Flame Halo"
+price = 10000
+
+[[horns]]
+key = "helm_fire_shaman"
+name = "Flame Crest"
+price = 10000
+
+[[horns]]
+key = "helm_dragonrider"
+name = "Dragonrider"
+price = 8000
+
+[[horns]]
+key = "mage_blue"
+name = "Dragon Mage (Blue)"
+price = 9000
+
+[[horns]]
+key = "mage_green"
+name = "Dragon Mage (Green)"
+price = 9000
+
+[[horns]]
+key = "mage_orange"
+name = "Dragon Mage (Orange)"
+price = 9000
+
+[[horns]]
+key = "mage_pink"
+name = "Dragon Mage (Pink)"
+price = 9000
+
+[[horns]]
+key = "mage_purple"
+name = "Dragon Mage (Purple)"
+price = 9000
+
+[[horns]]
+key = "mage_white"
+name = "Dragon Mage (White)"
+price = 9000
+
+[[horns]]
+key = "mage_yellow"
+name = "Dragon Mage (Yellow)"
+price = 9000
+
+[[horns]]
+key = "paladin_blue"
+name = "Dragon Paladin (Blue)"
+price = 9000
+
+[[horns]]
+key = "paladin_green"
+name = "Dragon Paladin (Green)"
+price = 9000
+
+[[horns]]
+key = "paladin_purple"
+name = "Dragon Paladin (Purple)"
+price = 9000
+
+[[horns]]
+key = "paladin_red"
+name = "Dragon Paladin (Red)"
+price = 9000
+
+[[horns]]
+key = "paladin_white"
+name = "Dragon Paladin (White)"
+price = 9000
+
+[[horns]]
+key = "paladin_gold"
+name = "Dragon Paladin (Gold)"
+price = 9000
+
+[[horns]]
+key = "dk_fel"
+name = "Fel Knight (Fel)"
+price = 10000
+
+[[horns]]
+key = "dk_fel_dark"
+name = "Fel Knight (Dark Fel)"
+price = 10000
+
+[[horns]]
+key = "dh_gold"
+name = "Illidari (Gold)"
+price = 10000
+
+[[horns]]
+key = "dh_cyan"
+name = "Illidari (Cyan)"
+price = 10000
+
+[[horns]]
+key = "dh_fel"
+name = "Illidari (Fel)"
+price = 10000
+
+[[horns]]
+key = "dh_emerald"
+name = "Illidari (Emerald)"
+price = 10000
+
+[[horns]]
+key = "halo_blue"
+name = "Dragon Halo (Blue)"
+price = 8000
+
+[[horns]]
+key = "halo_purple"
+name = "Dragon Halo (Purple)"
+price = 8000
+
+[[horns]]
+key = "halo_red"
+name = "Dragon Halo (Red)"
+price = 8000
+
+[[horns]]
+key = "halo_teal"
+name = "Dragon Halo (Teal)"
+price = 8000
+
+[[horns]]
+key = "halo_white"
+name = "Dragon Halo (White)"
+price = 8000
+
+[[horns]]
+key = "halo_yellow"
+name = "Dragon Halo (Yellow)"
+price = 8000

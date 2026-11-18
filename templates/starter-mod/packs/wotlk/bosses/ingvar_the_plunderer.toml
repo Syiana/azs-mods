@@ -1,0 +1,24 @@
+# Ingvar the Plunderer: Smash, Staggering Roar, Dark Smash then Dreadful Roar, the Shadow Axe.
+
+[[boss]]
+key = "ingvar_the_plunderer"
+
+[[boss.kit]]
+every = 8.0
+ability = { cone = { spell = 42669, range = 12.0, arc = 90.0, warn = 1.4, factor = 2.8 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { nova = { spell = 42708, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { combo = [[{ cone = { spell = 42723, range = 12.0, arc = 90.0, warn = 1.4, factor = 2.8 } }, { nova = { spell = 42729, radius = 10.0, warn = 2.2 } }], 1.6] }
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 42748, count = 1, radius = 3.5, speed = 4.5, lasts = 8.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

@@ -1,0 +1,77 @@
+key = "priest"
+# The `ChrClasses` id.
+id = 5
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [7, 0, 1, 2, 3, 4, 5, 6]
+# Health at level 1 (`{hp} health` on the picker): AS's class table (0x147104f98, `+0x70`).
+health = 170
+# A smaller pickup radius keeps collecting orbs part of fighting at range.
+pickup_pct = -25
+power = "mana"
+starter = "smite"
+# As 3.3.5a's character creation allows them; the worgen (12) and the goblins (9) as Cataclysm's,
+# the pandaren (15 Horde, 17 Alliance) as Mists of Pandaria's.
+races = [1, 3, 4, 11, 12, 5, 8, 10, 9, 15, 17]
+# `CharStartOutfit`'s weapons (the human's, or the most common race's where the human has none),
+# by item entry (`content.rs` holds their `Item.dbc` rows).
+starter_weapons = [
+    35, # Bent Staff
+]
+# The legendary dash card: the class dash's spell for its icon, and what it does.
+dash_spell = 1706
+dash_legend = { en = "Leap of Faith's shield also shields every friend within 10 yd of where you land.", de = "Der Schild von Glaubenssprung schützt auch jeden Freund im Umkreis von 10 Metern um deine Landung.", fr = "Le bouclier de Saut de foi protège aussi chaque allié à moins de 10 m de ton point d'atterrissage.", es = "El escudo de Salto de fe también protege a cada aliado a menos de 10 m de donde aterrizas.", pt = "O escudo de Salto de Fé também protege cada aliado a até 10 m de onde você pousa.", ru = "Щит Прыжка веры также защищает каждого союзника в радиусе 10 м от места твоего приземления.", pl = "Tarcza Skoku wiary chroni też każdego znajomego w promieniu 10 m od miejsca lądowania.", tr = "İman Atılışı'nın kalkanı, indiğin yerin 10 m çevresindeki her dostu da korur.", it = "Lo scudo di Salto di fede protegge anche ogni amico entro 10 m dal punto di atterraggio.", ja = "リープ・オブ・フェイスのシールドが、着地点から10ヤード以内のすべての味方にも張られます。", zh = "信仰飞跃的护盾还会保护你落地点10码内的所有队友。", ko = "신앙의 도약의 보호막이 착지 지점 10미터 안의 모든 아군에게도 보호막을 씌웁니다." }
+bot_name = "Botpriest"
+bot_order = 1
+name = { en = "Priest", de = "Priester", fr = "Prêtre", es = "Sacerdote", pt = "Sacerdote", ru = "Жрец", pl = "Kapłan", tr = "Rahip", it = "Sacerdote", ja = "プリースト", zh = "牧师", ko = "사제" }
+# 3.3.5a's RAID_CLASS_COLORS.
+color = [1, 1, 1]
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "priest_gold"
+tone = 3
+price = 12000
+name = { en = "Holy Radiance", de = "Heiliges Strahlen", fr = "Rayonnement sacré", es = "Resplandor sagrado", pt = "Radiância Sagrada", ru = "Священное сияние", pl = "Święty blask", tr = "Kutsal Parıltı", it = "Radiosità sacra", ja = "聖なる輝き", zh = "神圣光辉", ko = "신성한 광휘" }
+
+[[colors]]
+key = "priest_azure"
+tone = 9
+price = 12000
+name = { en = "Azure Grace", de = "Azurgnade", fr = "Grâce azur", es = "Gracia azur", pt = "Graça Azur", ru = "Лазурная милость", pl = "Lazurowa łaska", tr = "Gök Lütuf", it = "Grazia azzurra", ja = "紺碧の恩寵", zh = "蔚蓝恩典", ko = "하늘빛 은총" }
+
+[[colors]]
+key = "priest_emerald"
+tone = 6
+price = 15000
+name = { en = "Emerald Grace", de = "Smaragdgnade", fr = "Grâce émeraude", es = "Gracia esmeralda", pt = "Graça Esmeralda", ru = "Изумрудная милость", pl = "Szmaragdowa łaska", tr = "Zümrüt Lütuf", it = "Grazia di smeraldo", ja = "エメラルドの恩寵", zh = "翡翠恩典", ko = "에메랄드 은총" }
+
+[[colors]]
+key = "priest_rose"
+tone = 12
+price = 15000
+name = { en = "Rose Light", de = "Rosenlicht", fr = "Lumière rose", es = "Luz rosa", pt = "Luz Rosa", ru = "Розовый свет", pl = "Różane światło", tr = "Gül Işığı", it = "Luce rosa", ja = "薔薇の光", zh = "玫瑰之光", ko = "장밋빛" }
+
+[[colors]]
+key = "priest_void"
+tone = 11
+price = 18000
+name = { en = "Void Light", de = "Leerenlicht", fr = "Lumière du Vide", es = "Luz del Vacío", pt = "Luz do Vazio", ru = "Свет Бездны", pl = "Światło Pustki", tr = "Boşluk Işığı", it = "Luce del Vuoto", ja = "ヴォイドの光", zh = "虚空之光", ko = "공허의 빛" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "priest_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "priest_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

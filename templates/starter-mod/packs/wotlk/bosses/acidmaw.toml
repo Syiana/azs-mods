@@ -1,0 +1,16 @@
+# Acidmaw: Acidic Spew, Slime Pool.
+
+[[boss]]
+key = "acidmaw"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 66818, range = 14.0, arc = 60.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 66883, burst = 66883, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

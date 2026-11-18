@@ -1,0 +1,334 @@
+# The races' bonuses, as Azeroth Survivors' picker lists them (`race.<key>.line1`-`line3`): one
+# racial that acts on its own (`active`) and one or two that always hold. The draenei and the
+# blood elves are 3.3.5a's and not in AS; their bonuses are the port's own, in AS's manner. So
+# are the Worgen's, the Goblins' and the Pandaren's (patch-U's playable rows, Cataclysm's and
+# Mists of Pandaria's racials in AS's manner, shown as 3.3.5a spells: Darkflight as Dash, Rocket
+# Jump as the Rocket Jump effect, Quaking Palm as Bash). `TUNE` for all.
+#
+# `racials` are the picker lines' keys as the hero menu has them (the name in lower case, words
+# joined by `_`): the active one, then the lasting ones. `third` names the bonuses the third
+# line carries; the second carries the rest. The order is the hero menu's.
+#
+# `male` and `female` are the race's models (`CreatureDisplayInfo.dbc`, `ChrRaces.dbc`'s; the
+# worgen's, the goblins' and the pandaren's are patch-U's), `faction` its faction template
+# (`ChrRaces.dbc`'s; the worgen ride with the humans, the goblins and the pandaren with the orcs,
+# as the Shadowsong client's race 15 does), `side` the war's side it fights
+# on (`alliance` or `horde`: which of a faction's spells it is dealt).
+
+# "Perception: every 30 sec, +15% damage for 10 sec", "+20% experience", "+20% gold".
+[[race]]
+key = "human"
+name = { en = "Human", de = "Mensch", fr = "Humain", es = "Humano", pt = "Humano", ru = "Человек", pl = "Człowiek", tr = "İnsan", it = "Umano", ja = "ヒューマン", zh = "人类", ko = "인간" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Perception", de = "Wachsamkeit", fr = "Perception", es = "Percepción", pt = "Percepção", ru = "Внимательность", pl = "Spostrzegawczość", tr = "Algı", it = "Percezione", ja = "パーセプション", zh = "感知", ko = "지각력" }, effect = { en = "every 30 sec, +15% damage for 10 sec", de = "alle 30 Sek. +15% Schaden für 10 Sek.", fr = "toutes les 30 s, +15% de dégâts pendant 10 s", es = "cada 30 s, +15% de daño durante 10 s", pt = "a cada 30 s, +15% de dano por 10 s", ru = "каждые 30 сек. +15% урона на 10 сек.", pl = "co 30 s: +15% obrażeń przez 10 s", tr = "her 30 sn'de bir 10 sn boyunca +15% hasar", it = "ogni 30 s, +15% danni per 10 s", ja = "30秒ごとに10秒間ダメージ+15%", zh = "每30秒，伤害提高15%，持续10秒", ko = "30초마다 10초 동안 피해 +15%" }, icon = "Spell_Nature_Sleep" },
+    { name = { en = "The Human Spirit", de = "Menschlicher Geist", fr = "L'esprit humain", es = "El espíritu humano", pt = "O Espírito Humano", ru = "Человеческий дух", pl = "Duch ludzki", tr = "İnsan Ruhu", it = "Spirito umano", ja = "ヒューマン・スピリット", zh = "人类精神", ko = "인간의 정신력" }, effect = { en = "+20% experience", de = "+20% Erfahrung", fr = "+20% d'expérience", es = "+20% de experiencia", pt = "+20% de experiência", ru = "+20% опыта", pl = "+20% doświadczenia", tr = "+20% tecrübe", it = "+20% esperienza", ja = "経験値+20%", zh = "经验值+20%", ko = "경험치 +20%" }, icon = "INV_Enchant_ShardBrilliantSmall" },
+    { name = { en = "Diplomacy", de = "Diplomatie", fr = "Diplomatie", es = "Diplomacia", pt = "Diplomacia", ru = "Дипломатия", pl = "Dyplomacja", tr = "Diplomasi", it = "Diplomazia", ja = "ディプロマシー", zh = "外交", ko = "외교술" }, effect = { en = "+20% gold", de = "+20% Gold", fr = "+20% d'or", es = "+20% de oro", pt = "+20% de ouro", ru = "+20% золота", pl = "+20% złota", tr = "+20% altın", it = "+20% oro", ja = "ゴールド+20%", zh = "金币+20%", ko = "골드 +20%" }, icon = "INV_Misc_Note_02" },
+]
+id = 1
+male = 49
+female = 50
+faction = 1
+side = "alliance"
+spell = 20600
+active = { fury = { every = 30.0, pct = 15, secs = 10.0 } }
+racials = ["perception", "the_human_spirit", "diplomacy"]
+xp_pct = 20
+gold_pct = 20
+third = ["gold"]
+
+# "Blood Fury: every 40 sec, +35% damage for 12 sec", "+10% max health".
+[[race]]
+key = "orc"
+name = { en = "Orc", de = "Orc", fr = "Orc", es = "Orco", pt = "Orc", ru = "Орк", pl = "Ork", tr = "Ork", it = "Orco", ja = "オーク", zh = "兽人", ko = "오크" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Blood Fury", de = "Kochendes Blut", fr = "Fureur sanguinaire", es = "Furia sangrienta", pt = "Fúria Sangrenta", ru = "Кровавое неистовство", pl = "Krwawa furia", tr = "Kan Öfkesi", it = "Furia sanguinaria", ja = "ブラッド・フューリー", zh = "血性狂怒", ko = "피의 격노" }, effect = { en = "every 40 sec, +35% damage for 12 sec", de = "alle 40 Sek. +35% Schaden für 12 Sek.", fr = "toutes les 40 s, +35% de dégâts pendant 12 s", es = "cada 40 s, +35% de daño durante 12 s", pt = "a cada 40 s, +35% de dano por 12 s", ru = "каждые 40 сек. +35% урона на 12 сек.", pl = "co 40 s: +35% obrażeń przez 12 s", tr = "her 40 sn'de bir 12 sn boyunca +35% hasar", it = "ogni 40 s, +35% danni per 12 s", ja = "40秒ごとに12秒間ダメージ+35%", zh = "每40秒，伤害提高35%，持续12秒", ko = "40초마다 12초 동안 피해 +35%" }, icon = "Racial_Orc_BerserkerStrength" },
+    { name = { en = "Hardiness", de = "Abhärtung", fr = "Robustesse", es = "Dureza", pt = "Robustez", ru = "Закалка", pl = "Hart ducha", tr = "Sertlik", it = "Robustezza", ja = "ハーディネス", zh = "坚毅", ko = "강건함" }, effect = { en = "+10% max health", de = "+10% max. Gesundheit", fr = "+10% de santé max.", es = "+10% de salud máx.", pt = "+10% de vida máx.", ru = "+10% макс. здоровья", pl = "+10% maks. zdrowia", tr = "+10% azami can", it = "+10% salute massima", ja = "最大体力+10%", zh = "最大生命值+10%", ko = "최대 생명력 +10%" }, icon = "INV_Helmet_23" },
+]
+id = 2
+male = 51
+female = 52
+faction = 2
+side = "horde"
+spell = 20572
+active = { fury = { every = 40.0, pct = 35, secs = 12.0 } }
+racials = ["blood_fury", "hardiness"]
+health_pct = 10
+
+# "Stoneform: every 30 sec, a shield absorbing 45% of max health", "+6% damage", "+30% pickup range".
+[[race]]
+key = "dwarf"
+# The race's mount for the steed without a shop mount: Creature/Ram/PVPRidingRam (brown).
+mount = 14347
+name = { en = "Dwarf", de = "Zwerg", fr = "Nain", es = "Enano", pt = "Anão", ru = "Дворф", pl = "Krasnolud", tr = "Cüce", it = "Nano", ja = "ドワーフ", zh = "矮人", ko = "드워프" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Stoneform", de = "Steingestalt", fr = "Forme de pierre", es = "Forma de piedra", pt = "Forma de Pedra", ru = "Каменная форма", pl = "Kamienna forma", tr = "Taş Biçimi", it = "Forma di pietra", ja = "ストーンフォーム", zh = "石像形态", ko = "석화" }, effect = { en = "every 30 sec, a shield absorbing 45% of max health", de = "alle 30 Sek. ein Schild, der 45% der max. Gesundheit absorbiert", fr = "toutes les 30 s, un bouclier absorbant 45% de la santé max.", es = "cada 30 s, un escudo que absorbe el 45% de la salud máx.", pt = "a cada 30 s, um escudo que absorve 45% da vida máx.", ru = "каждые 30 сек. щит, поглощающий 45% макс. здоровья", pl = "co 30 s: tarcza pochłaniająca 45% maks. zdrowia", tr = "her 30 sn'de bir azami canın 45%'ini emen kalkan", it = "ogni 30 s, uno scudo che assorbe il 45% della salute massima", ja = "30秒ごとに最大体力の45%を吸収するシールド", zh = "每30秒获得一个护盾，吸收相当于最大生命值45%的伤害", ko = "30초마다 최대 생명력의 45%를 흡수하는 보호막" }, icon = "Spell_Shadow_UnholyStrength" },
+    { name = { en = "Gun Specialization", de = "Schusswaffenspezialisierung", fr = "Spécialisation Fusils", es = "Especialización en armas de fuego", pt = "Especialização em Armas de Fogo", ru = "Специализация на огнестрельном оружии", pl = "Specjalizacja: broń palna", tr = "Tüfek Uzmanlığı", it = "Specializzazione nelle armi da fuoco", ja = "ガン・スペシャライゼーション", zh = "枪械专精", ko = "총기류 전문화" }, effect = { en = "+6% damage", de = "+6% Schaden", fr = "+6% de dégâts", es = "+6% de daño", pt = "+6% de dano", ru = "+6% урона", pl = "+6% obrażeń", tr = "+6% hasar", it = "+6% danni", ja = "ダメージ+6%", zh = "伤害+6%", ko = "피해 +6%" }, icon = "INV_Musket_03" },
+    { name = { en = "Treasure Finding", de = "Schatzsuche", fr = "Chasseur de trésors", es = "Hallar tesoros", pt = "Busca de Tesouros", ru = "Поиск сокровищ", pl = "Wyczucie skarbów", tr = "Hazine Bulma", it = "Cercatesori", ja = "トレジャー・ファインディング", zh = "寻找财宝", ko = "보물 찾기" }, effect = { en = "+30% pickup range", de = "+30% Aufsammelreichweite", fr = "+30% de portée de ramassage", es = "+30% de alcance de recogida", pt = "+30% de alcance de coleta", ru = "+30% радиуса подбора", pl = "+30% zasięgu zbierania", tr = "+30% toplama menzili", it = "+30% raggio di raccolta", ja = "回収範囲+30%", zh = "拾取范围+30%", ko = "획득 반경 +30%" }, icon = "Racial_Dwarf_FindTreasure" },
+]
+id = 3
+male = 53
+female = 54
+faction = 3
+side = "alliance"
+spell = 20594
+active = { shield = { every = 30.0, share = 45 } }
+racials = ["stoneform", "gun_specialization", "treasure_finding"]
+damage_pct = 6
+pickup_pct = 30
+third = ["pickup"]
+
+# "Shadowmeld: near death, 3 sec of immunity (75 sec cooldown)", "+8% movement speed", "+5% damage reduction".
+[[race]]
+key = "nightelf"
+# The race's mount for the steed without a shop mount: Creature/FrostSabre/PVPRidingFrostSabre (black spotted).
+mount = 14632
+name = { en = "Night Elf", de = "Nachtelf", fr = "Elfe de la nuit", es = "Elfo de la noche", pt = "Elfo Noturno", ru = "Ночной эльф", pl = "Nocny elf", tr = "Gece Elfi", it = "Elfo della Notte", ja = "ナイトエルフ", zh = "暗夜精灵", ko = "나이트 엘프" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Shadowmeld", de = "Schattenhaftigkeit", fr = "Camouflage dans l'ombre", es = "Fusión de sombras", pt = "Fusão Sombria", ru = "Слиться с тенью", pl = "Zlanie się z cieniem", tr = "Gölgeye Karışma", it = "Fondersi nell'ombra", ja = "シャドウメルド", zh = "影遁", ko = "그림자 숨기" }, effect = { en = "near death, 3 sec of immunity (75 sec cooldown)", de = "kurz vor dem Tod 3 Sek. Immunität (75 Sek. Abklingzeit)", fr = "près de la mort, 3 s d'immunité (recharge 75 s)", es = "cerca de la muerte, 3 s de inmunidad (reutilización 75 s)", pt = "perto da morte, 3 s de imunidade (recarga de 75 s)", ru = "при смерти: 3 сек. неуязвимости (перезарядка 75 сек.)", pl = "tuż przed śmiercią 3 s odporności (odnowienie 75 s)", tr = "ölüme yakınken 3 sn dokunulmazlık (75 sn bekleme)", it = "in fin di vita, 3 s di immunità (ricarica 75 s)", ja = "瀕死時に3秒間無敵（クールダウン75秒）", zh = "濒死时免疫伤害3秒（冷却时间75秒）", ko = "죽음 직전에 3초 동안 무적 (재사용 대기시간 75초)" }, icon = "Ability_Ambush" },
+    { name = { en = "Quickness", de = "Schnelligkeit", fr = "Rapidité", es = "Rapidez", pt = "Rapidez", ru = "Проворство", pl = "Żwawość", tr = "Tezlik", it = "Rapidità", ja = "クイックネス", zh = "迅捷", ko = "날렵함" }, effect = { en = "+8% movement speed", de = "+8% Bewegungstempo", fr = "+8% de vitesse de déplacement", es = "+8% de velocidad de movimiento", pt = "+8% de velocidade de movimento", ru = "+8% скорости движения", pl = "+8% szybkości ruchu", tr = "+8% hareket hızı", it = "+8% velocità di movimento", ja = "移動速度+8%", zh = "移动速度+8%", ko = "이동 속도 +8%" }, icon = "Ability_Rogue_Sprint" },
+    { name = { en = "Nature Resistance", de = "Naturwiderstand", fr = "Résistance à la Nature", es = "Resistencia a la naturaleza", pt = "Resistência à Natureza", ru = "Сопротивление природе", pl = "Odporność na naturę", tr = "Doğa Direnci", it = "Resistenza alla natura", ja = "ネイチャー・レジスタンス", zh = "自然抗性", ko = "자연 저항" }, effect = { en = "+5% damage reduction", de = "+5% Schadensverringerung", fr = "+5% de réduction des dégâts", es = "+5% de reducción de daño", pt = "+5% de redução de dano", ru = "-5% получаемого урона", pl = "+5% redukcji obrażeń", tr = "+5% hasar azaltma", it = "+5% riduzione dei danni", ja = "被ダメージ-5%", zh = "伤害减免+5%", ko = "피해 감소 +5%" }, icon = "Spell_Nature_SpiritArmor" },
+]
+id = 4
+male = 55
+female = 56
+faction = 4
+side = "alliance"
+spell = 58984
+active = { escape = { secs = 3.0, cooldown = 75.0 } }
+racials = ["shadowmeld", "quickness", "nature_resistance"]
+speed_pct = 8
+armor_pct = 5
+third = ["armor"]
+
+# "Will of the Forsaken: near death, 4 sec of immunity (60 sec cooldown)", "every kill heals 1 health", "+4% damage reduction".
+[[race]]
+key = "scourge"
+# The race's mount for the steed without a shop mount: Creature/UndeadHorse/RidingUndeadHorse (blue).
+mount = 10671
+name = { en = "Undead", de = "Untoter", fr = "Mort-vivant", es = "No-muerto", pt = "Morto-vivo", ru = "Нежить", pl = "Nieumarły", tr = "Ölümsüz", it = "Non Morto", ja = "アンデッド", zh = "亡灵", ko = "언데드" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Will of the Forsaken", de = "Wille der Verlassenen", fr = "Volonté des Réprouvés", es = "Voluntad de los Renegados", pt = "Vontade dos Renegados", ru = "Воля Отреченных", pl = "Wola Opuszczonych", tr = "Terkedilmişlerin İradesi", it = "Volontà dei Reietti", ja = "ウィル・オブ・ザ・フォーセイクン", zh = "亡灵意志", ko = "포세이큰의 의지" }, effect = { en = "near death, 4 sec of immunity (60 sec cooldown)", de = "kurz vor dem Tod 4 Sek. Immunität (60 Sek. Abklingzeit)", fr = "près de la mort, 4 s d'immunité (recharge 60 s)", es = "cerca de la muerte, 4 s de inmunidad (reutilización 60 s)", pt = "perto da morte, 4 s de imunidade (recarga de 60 s)", ru = "при смерти: 4 сек. неуязвимости (перезарядка 60 сек.)", pl = "tuż przed śmiercią 4 s odporności (odnowienie 60 s)", tr = "ölüme yakınken 4 sn dokunulmazlık (60 sn bekleme)", it = "in fin di vita, 4 s di immunità (ricarica 60 s)", ja = "瀕死時に4秒間無敵（クールダウン60秒）", zh = "濒死时免疫伤害4秒（冷却时间60秒）", ko = "죽음 직전에 4초 동안 무적 (재사용 대기시간 60초)" }, icon = "Spell_Shadow_RaiseDead" },
+    { name = { en = "Cannibalize", de = "Kannibalismus", fr = "Cannibalisme", es = "Canibalismo", pt = "Canibalizar", ru = "Каннибализм", pl = "Kanibalizm", tr = "Yamyamlık", it = "Cannibalizzare", ja = "カニバライズ", zh = "食尸", ko = "시체 먹기" }, effect = { en = "every kill heals 1 health", de = "jeder Kill heilt 1 Gesundheit", fr = "chaque mort rend 1 point de santé", es = "cada baja cura 1 de salud", pt = "cada morte cura 1 de vida", ru = "каждое убийство лечит на 1 здоровья", pl = "każde zabójstwo leczy 1 zdrowia", tr = "her öldürme 1 can iyileştirir", it = "ogni uccisione cura 1 salute", ja = "敵を倒すたびに体力を1回復", zh = "每次击杀恢复1点生命值", ko = "적을 처치할 때마다 생명력 1 회복" }, icon = "Ability_Racial_Cannibalize" },
+    { name = { en = "Shadow Resistance", de = "Schattenwiderstand", fr = "Résistance à l'Ombre", es = "Resistencia a las Sombras", pt = "Resistência às Sombras", ru = "Сопротивление темной магии", pl = "Odporność na cień", tr = "Gölge Direnci", it = "Resistenza all'ombra", ja = "シャドウ・レジスタンス", zh = "暗影抗性", ko = "암흑 저항" }, effect = { en = "+4% damage reduction", de = "+4% Schadensverringerung", fr = "+4% de réduction des dégâts", es = "+4% de reducción de daño", pt = "+4% de redução de dano", ru = "-4% получаемого урона", pl = "+4% redukcji obrażeń", tr = "+4% hasar azaltma", it = "+4% riduzione dei danni", ja = "被ダメージ-4%", zh = "伤害减免+4%", ko = "피해 감소 +4%" }, icon = "Spell_Shadow_AntiShadow" },
+]
+id = 5
+male = 57
+female = 58
+faction = 5
+side = "horde"
+spell = 7744
+active = { escape = { secs = 4.0, cooldown = 60.0 } }
+racials = ["will_of_the_forsaken", "cannibalize", "shadow_resistance"]
+armor_pct = 4
+kill_heal = 1
+third = ["armor"]
+
+# "War Stomp: every 15 sec, stuns nearby enemies for 2 sec", "+15% max health".
+[[race]]
+key = "tauren"
+# The race's mount for the steed without a shop mount: Creature/Kodobeast/RidingKodo (yellow).
+mount = 11641
+name = { en = "Tauren", de = "Taure", fr = "Tauren", es = "Tauren", pt = "Tauren", ru = "Таурен", pl = "Tauren", tr = "Tauren", it = "Tauren", ja = "タウレン", zh = "牛头人", ko = "타우렌" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "War Stomp", de = "Kriegsdonner", fr = "Choc martial", es = "Pisotón de guerra", pt = "Pisada de Guerra", ru = "Громовая поступь", pl = "Wojenny tupot", tr = "Savaş Tepmesi", it = "Zoccolo di guerra", ja = "ウォー・ストンプ", zh = "战争践踏", ko = "전투 발구르기" }, effect = { en = "every 15 sec, stuns nearby enemies for 2 sec", de = "alle 15 Sek. werden Feinde in der Nähe 2 Sek. betäubt", fr = "toutes les 15 s, étourdit les ennemis proches pendant 2 s", es = "cada 15 s, aturde a los enemigos cercanos durante 2 s", pt = "a cada 15 s, atordoa inimigos próximos por 2 s", ru = "каждые 15 сек. оглушает врагов рядом на 2 сек.", pl = "co 15 s ogłusza pobliskich przeciwników na 2 s", tr = "her 15 sn'de bir yakındaki düşmanları 2 sn sersemletir", it = "ogni 15 s, stordisce i nemici vicini per 2 s", ja = "15秒ごとに周囲の敵を2秒間スタン", zh = "每15秒，使附近的敌人昏迷2秒", ko = "15초마다 주위의 적을 2초 동안 기절" }, icon = "Ability_WarStomp" },
+    { name = { en = "Endurance", de = "Ausdauer", fr = "Endurance", es = "Aguante", pt = "Resistência", ru = "Выносливость", pl = "Wytrzymałość", tr = "Metanet", it = "Resistenza", ja = "エンデュランス", zh = "耐久", ko = "지구력" }, effect = { en = "+15% max health", de = "+15% max. Gesundheit", fr = "+15% de santé max.", es = "+15% de salud máx.", pt = "+15% de vida máx.", ru = "+15% макс. здоровья", pl = "+15% maks. zdrowia", tr = "+15% azami can", it = "+15% salute massima", ja = "最大体力+15%", zh = "最大生命值+15%", ko = "최대 생명력 +15%" }, icon = "Spell_Nature_UnyeildingStamina" },
+]
+id = 6
+male = 59
+female = 60
+faction = 6
+side = "horde"
+spell = 20549
+active = { hold = { every = 15.0, secs = 2.0, radius = 8.0, root = false } }
+racials = ["war_stomp", "endurance"]
+health_pct = 15
+
+# "Escape Artist: every 20 sec, roots nearby enemies for 2 sec", "-8% cooldowns", "+20% luck".
+[[race]]
+key = "gnome"
+# The race's mount for the steed without a shop mount: Creature/MechaStrider/PvPMechaStrider (green and black).
+mount = 14374
+name = { en = "Gnome", de = "Gnom", fr = "Gnome", es = "Gnomo", pt = "Gnomo", ru = "Гном", pl = "Gnom", tr = "Gnom", it = "Gnomo", ja = "ノーム", zh = "侏儒", ko = "노움" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Escape Artist", de = "Entfesselungskünstler", fr = "Virtuose de l'évasion", es = "Artista del escape", pt = "Mestre da Fuga", ru = "Мастер побега", pl = "Mistrz ucieczki", tr = "Kaçış Ustası", it = "Artista della fuga", ja = "エスケープ・アーティスト", zh = "逃命专家", ko = "탈출의 명수" }, effect = { en = "every 20 sec, roots nearby enemies for 2 sec", de = "alle 20 Sek. werden Feinde in der Nähe 2 Sek. festgewurzelt", fr = "toutes les 20 s, enracine les ennemis proches pendant 2 s", es = "cada 20 s, inmoviliza a los enemigos cercanos durante 2 s", pt = "a cada 20 s, imobiliza inimigos próximos por 2 s", ru = "каждые 20 сек. опутывает врагов рядом на 2 сек.", pl = "co 20 s unieruchamia pobliskich przeciwników na 2 s", tr = "her 20 sn'de bir yakındaki düşmanları 2 sn köklendirir", it = "ogni 20 s, immobilizza i nemici vicini per 2 s", ja = "20秒ごとに周囲の敵を2秒間移動不能にする", zh = "每20秒，使附近的敌人定身2秒", ko = "20초마다 주위의 적을 2초 동안 속박" }, icon = "Ability_Rogue_Trip" },
+    { name = { en = "Expansive Mind", de = "Scharfsinn", fr = "Esprit expansif", es = "Mente expansiva", pt = "Mente Expansiva", ru = "Развитый ум", pl = "Rozległy umysł", tr = "Geniş Zihin", it = "Mente espansa", ja = "エクスパンシブ・マインド", zh = "心智扩展", ko = "넓은 지혜" }, effect = { en = "-8% cooldowns", de = "-8% Abklingzeiten", fr = "-8% de recharges", es = "-8% de reutilizaciones", pt = "-8% de recargas", ru = "-8% перезарядки", pl = "-8% odnowień", tr = "-8% bekleme süreleri", it = "-8% ricariche", ja = "クールダウン-8%", zh = "冷却时间-8%", ko = "재사용 대기시간 -8%" }, icon = "INV_Enchant_EssenceEternalLarge" },
+    { name = { en = "Engineering Specialization", de = "Ingenieursspezialisierung", fr = "Spécialisation Ingénierie", es = "Especialización en ingeniería", pt = "Especialização em Engenharia", ru = "Специализация на инженерном деле", pl = "Specjalizacja: inżynieria", tr = "Mühendislik Uzmanlığı", it = "Specializzazione in ingegneria", ja = "エンジニアリング・スペシャライゼーション", zh = "工程学专精", ko = "기계공학 전문화" }, effect = { en = "+20% luck", de = "+20% Glück", fr = "+20% de chance", es = "+20% de suerte", pt = "+20% de sorte", ru = "+20% удачи", pl = "+20% szczęścia", tr = "+20% şans", it = "+20% fortuna", ja = "幸運+20%", zh = "幸运+20%", ko = "행운 +20%" }, icon = "INV_Misc_Gear_01" },
+]
+id = 7
+male = 1563
+female = 1564
+faction = 115
+side = "alliance"
+spell = 20589
+active = { hold = { every = 20.0, secs = 2.0, radius = 8.0, root = true } }
+racials = ["escape_artist", "expansive_mind", "engineering_specialization"]
+cooldown_pct = 8
+luck_pct = 20
+third = ["luck"]
+
+# "Berserking: every 35 sec, cooldowns recover 30% faster for 10 sec", "+1.5 health per second", "+3% critical strike".
+[[race]]
+key = "troll"
+# The race's mount for the steed without a shop mount: Creature/RidingRaptor/PvPRidingRaptor (crimson).
+mount = 14341
+name = { en = "Troll", de = "Troll", fr = "Troll", es = "Trol", pt = "Troll", ru = "Тролль", pl = "Troll", tr = "Troll", it = "Troll", ja = "トロール", zh = "巨魔", ko = "트롤" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Berserking", de = "Berserker", fr = "Berserker", es = "Rabia", pt = "Berserker", ru = "Берсерк", pl = "Szał bojowy", tr = "Çılgın Savaşçılık", it = "Berserker", ja = "バーサーキング", zh = "狂暴", ko = "광폭화" }, effect = { en = "every 35 sec, cooldowns recover 30% faster for 10 sec", de = "alle 35 Sek. laden Abklingzeiten 10 Sek. lang 30% schneller", fr = "toutes les 35 s, les recharges sont 30% plus rapides pendant 10 s", es = "cada 35 s, las reutilizaciones se recuperan un 30% más rápido durante 10 s", pt = "a cada 35 s, as recargas se recuperam 30% mais rápido por 10 s", ru = "каждые 35 сек. перезарядка идет на 30% быстрее в течение 10 сек.", pl = "co 35 s: odnowienia regenerują się o 30% szybciej przez 10 s", tr = "her 35 sn'de bir 10 sn boyunca bekleme süreleri 30% daha hızlı yenilenir", it = "ogni 35 s, le ricariche si completano il 30% più in fretta per 10 s", ja = "35秒ごとに10秒間クールダウンの回復が30%速くなる", zh = "每35秒，冷却速度加快30%，持续10秒", ko = "35초마다 10초 동안 재사용 대기시간 30% 빠르게 회복" }, icon = "Racial_Troll_Berserk" },
+    { name = { en = "Regeneration", de = "Regeneration", fr = "Régénération", es = "Regeneración", pt = "Regeneração", ru = "Регенерация", pl = "Regeneracja", tr = "Yenilenme", it = "Rigenerazione", ja = "リジェネレーション", zh = "再生", ko = "재생력" }, effect = { en = "+2 health per second", de = "+2 Gesundheit pro Sekunde", fr = "+2 de santé par seconde", es = "+2 de salud por segundo", pt = "+2 de vida por segundo", ru = "+2 здоровья в секунду", pl = "+2 zdrowia na sekundę", tr = "saniyede +2 can", it = "+2 salute al secondo", ja = "毎秒体力+2", zh = "每秒恢复2点生命值", ko = "초당 생명력 +2" }, icon = "Spell_Nature_Regenerate" },
+    { name = { en = "Throwing Specialization", de = "Wurfwaffenspezialisierung", fr = "Spécialisation Armes de jet", es = "Especialización en armas arrojadizas", pt = "Especialização em Arremesso", ru = "Специализация на метательном оружии", pl = "Specjalizacja: broń miotana", tr = "Fırlatma Uzmanlığı", it = "Specializzazione nel lancio", ja = "スローイング・スペシャライゼーション", zh = "投掷专精", ko = "투척 무기 전문화" }, effect = { en = "+3% critical strike", de = "+3% kritische Trefferchance", fr = "+3% de critique", es = "+3% de golpe crítico", pt = "+3% de acerto crítico", ru = "+3% шанса крита", pl = "+3% trafień krytycznych", tr = "+3% kritik vuruş", it = "+3% colpo critico", ja = "クリティカル率+3%", zh = "暴击+3%", ko = "치명타 +3%" }, icon = "INV_ThrowingAxe_03" },
+]
+id = 8
+male = 1478
+female = 1479
+faction = 116
+side = "horde"
+spell = 26297
+active = { haste = { every = 35.0, pct = 30, secs = 10.0 } }
+racials = ["berserking", "regeneration", "throwing_specialization"]
+crit_pct = 3
+regen = 2
+third = ["crit"]
+
+# The port's own: Arcane Torrent stuns everything close every 25 sec; +10% luck, -4% cooldowns.
+[[race]]
+key = "bloodelf"
+# The race's mount for the steed without a shop mount: Creature/Cockatrice/CockatriceMount (a hawkstrider).
+mount = 18696
+name = { en = "Blood Elf", de = "Blutelf", fr = "Elfe de sang", es = "Elfo de sangre", pt = "Elfo Sangrento", ru = "Эльф крови", pl = "Krwawy elf", tr = "Kan Elfi", it = "Elfo del Sangue", ja = "ブラッドエルフ", zh = "血精灵", ko = "블러드 엘프" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Arcane Torrent", de = "Arkaner Strom", fr = "Torrent arcanique", es = "Torrente Arcano", pt = "Torrente Arcana", ru = "Волшебный поток", pl = "Magiczny odpływ", tr = "Gizemli Sel", it = "Torrente arcano", ja = "アーケイン・トレント", zh = "奥术洪流", ko = "비전 격류" }, effect = { en = "every 25 sec, stuns nearby enemies for 1.5 sec", de = "alle 25 Sek. werden Feinde in der Nähe 1,5 Sek. betäubt", fr = "toutes les 25 s, étourdit les ennemis proches pendant 1,5 s", es = "cada 25 s, aturde a los enemigos cercanos durante 1,5 s", pt = "a cada 25 s, atordoa inimigos próximos por 1,5 s", ru = "каждые 25 сек. оглушает врагов рядом на 1,5 сек.", pl = "co 25 s ogłusza pobliskich przeciwników na 1,5 s", tr = "her 25 sn'de bir yakındaki düşmanları 1,5 sn sersemletir", it = "ogni 25 s, stordisce i nemici vicini per 1,5 s", ja = "25秒ごとに周囲の敵を1.5秒間スタン", zh = "每25秒，使附近的敌人昏迷1.5秒", ko = "25초마다 주위의 적을 1.5초 동안 기절" }, icon = "Spell_Shadow_Teleport" },
+    { name = { en = "Arcane Affinity", de = "Arkane Affinität", fr = "Affinité arcanique", es = "Afinidad arcana", pt = "Afinidade Arcana", ru = "Сродство с магией", pl = "Magiczne powinowactwo", tr = "Gizem Yakınlığı", it = "Affinità arcana", ja = "アーケイン・アフィニティ", zh = "奥术亲和", ko = "비전 친화력" }, effect = { en = "+10% luck, -4% cooldowns", de = "+10% Glück, -4% Abklingzeiten", fr = "+10% de chance, -4% de recharges", es = "+10% de suerte, -4% de reutilizaciones", pt = "+10% de sorte, -4% de recargas", ru = "+10% удачи, -4% перезарядки", pl = "+10% szczęścia, -4% odnowień", tr = "+10% şans, -4% bekleme süreleri", it = "+10% fortuna, -4% ricariche", ja = "幸運+10%、クールダウン-4%", zh = "幸运+10%，冷却时间-4%", ko = "행운 +10%, 재사용 대기시간 -4%" }, icon = "Spell_Holy_MagicalSentry" },
+]
+id = 10
+male = 15476
+female = 15475
+faction = 1610
+side = "horde"
+spell = 28730
+active = { hold = { every = 25.0, secs = 1.5, radius = 8.0, root = false } }
+racials = ["arcane_torrent", "arcane_affinity"]
+cooldown_pct = 4
+luck_pct = 10
+
+# The port's own: Gift of the Naaru heals 20% below half health (60 sec); Heroic Presence +4% damage.
+[[race]]
+key = "draenei"
+# The race's mount for the steed without a shop mount: Creature/RidingElekk/RidingElekk.
+mount = 17063
+name = { en = "Draenei", de = "Draenei", fr = "Draeneï", es = "Draenei", pt = "Draenei", ru = "Дреней", pl = "Draenei", tr = "Draenei", it = "Draenei", ja = "ドレナイ", zh = "德莱尼", ko = "드레나이" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Gift of the Naaru", de = "Gabe der Naaru", fr = "Don des Naaru", es = "Don de los naaru", pt = "Dádiva dos Naaru", ru = "Дар наару", pl = "Dar naaru", tr = "Naaru'nun Armağanı", it = "Dono dei Naaru", ja = "ギフト・オブ・ザ・ナールー", zh = "纳鲁的赐福", ko = "나루의 선물" }, effect = { en = "below half health, heals 20% over 5 sec (60 sec cooldown)", de = "unter halber Gesundheit 20% Heilung über 5 Sek. (60 Sek. Abklingzeit)", fr = "sous la moitié de la santé, soigne 20% en 5 s (recharge 60 s)", es = "con menos de la mitad de salud, cura un 20% en 5 s (reutilización 60 s)", pt = "abaixo da metade da vida, cura 20% em 5 s (recarga de 60 s)", ru = "при здоровье ниже половины лечит 20% за 5 сек. (перезарядка 60 сек.)", pl = "poniżej połowy zdrowia leczy 20% przez 5 s (odnowienie 60 s)", tr = "canın yarının altındayken 5 sn içinde 20% iyileştirir (60 sn bekleme)", it = "sotto metà salute, cura il 20% in 5 s (ricarica 60 s)", ja = "体力が半分を下回ると5秒かけて20%回復（クールダウン60秒）", zh = "生命值低于一半时，在5秒内恢复20%生命值（冷却时间60秒）", ko = "생명력이 절반 아래일 때 5초에 걸쳐 20% 회복 (재사용 대기시간 60초)" }, icon = "Spell_Holy_HolyProtection" },
+    { name = { en = "Heroic Presence", de = "Heldenhafte Präsenz", fr = "Présence héroïque", es = "Presencia heroica", pt = "Presença Heroica", ru = "Героическое присутствие", pl = "Bohaterska obecność", tr = "Kahramanca Duruş", it = "Presenza eroica", ja = "ヒロイック・プレゼンス", zh = "英勇灵气", ko = "영웅의 존재" }, effect = { en = "+4% damage", de = "+4% Schaden", fr = "+4% de dégâts", es = "+4% de daño", pt = "+4% de dano", ru = "+4% урона", pl = "+4% obrażeń", tr = "+4% hasar", it = "+4% danni", ja = "ダメージ+4%", zh = "伤害+4%", ko = "피해 +4%" }, icon = "INV_Helmet_21" },
+]
+id = 11
+male = 16125
+female = 16126
+faction = 1629
+side = "alliance"
+spell = 28880
+active = { gift = { share = 20, cooldown = 60.0 } }
+racials = ["gift_of_the_naaru", "heroic_presence"]
+damage_pct = 4
+
+# The port's own: Darkflight, every 30 sec +40% run speed for 6 sec; Viciousness +4% critical
+# strike; +5% damage.
+[[race]]
+key = "worgen"
+name = { en = "Worgen", de = "Worgen", fr = "Worgen", es = "Huargen", pt = "Worgen", ru = "Ворген", pl = "Worgen", tr = "Worgen", it = "Worgen", ja = "ウォーゲン", zh = "狼人", ko = "늑대인간" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Darkflight", de = "Dunkelflug", fr = "Vol sombre", es = "Vuelo oscuro", pt = "Voo Sombrio", ru = "Темное бегство", pl = "Mroczny lot", tr = "Karanlık Uçuş", it = "Volo oscuro", ja = "ダークフライト", zh = "疾步夜行", ko = "어둠의 질주" }, effect = { en = "every 30 sec, +40% movement speed for 6 sec", de = "alle 30 Sek. +40% Bewegungstempo für 6 Sek.", fr = "toutes les 30 s, +40% de vitesse de déplacement pendant 6 s", es = "cada 30 s, +40% de velocidad de movimiento durante 6 s", pt = "a cada 30 s, +40% de velocidade de movimento por 6 s", ru = "каждые 30 сек. +40% скорости движения на 6 сек.", pl = "co 30 s: +40% szybkości ruchu przez 6 s", tr = "her 30 sn'de bir 6 sn boyunca +40% hareket hızı", it = "ogni 30 s, +40% velocità di movimento per 6 s", ja = "30秒ごとに6秒間移動速度+40%", zh = "每30秒，移动速度提高40%，持续6秒", ko = "30초마다 6초 동안 이동 속도 +40%" }, icon = "Ability_Druid_Dash" },
+    { name = { en = "Viciousness", de = "Bösartigkeit", fr = "Cruauté", es = "Ferocidad", pt = "Crueldade", ru = "Жестокость", pl = "Okrucieństwo", tr = "Gaddarlık", it = "Ferocia", ja = "ヴィシャスネス", zh = "凶残", ko = "포악함" }, effect = { en = "+4% critical strike", de = "+4% kritische Trefferchance", fr = "+4% de critique", es = "+4% de golpe crítico", pt = "+4% de acerto crítico", ru = "+4% шанса крита", pl = "+4% trafień krytycznych", tr = "+4% kritik vuruş", it = "+4% colpo critico", ja = "クリティカル率+4%", zh = "暴击+4%", ko = "치명타 +4%" }, icon = "Ability_Druid_Rake" },
+    { name = { en = "Flayer", de = "Schinder", fr = "Écorcheur", es = "Desollador", pt = "Esfolador", ru = "Свежеватель", pl = "Oprawca", tr = "Derisoyan", it = "Scuoiatore", ja = "フレイヤー", zh = "剥皮者", ko = "가죽 벗기기" }, effect = { en = "+5% damage", de = "+5% Schaden", fr = "+5% de dégâts", es = "+5% de daño", pt = "+5% de dano", ru = "+5% урона", pl = "+5% obrażeń", tr = "+5% hasar", it = "+5% danni", ja = "ダメージ+5%", zh = "伤害+5%", ko = "피해 +5%" }, icon = "Ability_Ghoulfrenzy" },
+]
+id = 12
+male = 90301
+female = 90302
+faction = 1
+side = "alliance"
+spell = 1850
+active = { sprint = { every = 30.0, pct = 40, secs = 6.0 } }
+racials = ["darkflight", "viciousness", "flayer"]
+damage_pct = 5
+crit_pct = 4
+third = ["damage"]
+
+# The port's own: Rocket Jump, near death 3 sec of immunity (70 sec cooldown); Best Deals
+# Anywhere +25% gold; Time is Money -5% cooldowns.
+[[race]]
+key = "goblin"
+name = { en = "Goblin", de = "Goblin", fr = "Gobelin", es = "Goblin", pt = "Goblin", ru = "Гоблин", pl = "Goblin", tr = "Goblin", it = "Goblin", ja = "ゴブリン", zh = "地精", ko = "고블린" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Rocket Jump", de = "Raketensprung", fr = "Saut de fusée", es = "Salto cohete", pt = "Salto de Foguete", ru = "Прыжок на ракете", pl = "Rakietowy skok", tr = "Roket Atlayışı", it = "Salto a razzo", ja = "ロケット・ジャンプ", zh = "火箭跳", ko = "로켓 점프" }, effect = { en = "near death, 3 sec of immunity (70 sec cooldown)", de = "kurz vor dem Tod 3 Sek. Immunität (70 Sek. Abklingzeit)", fr = "près de la mort, 3 s d'immunité (recharge 70 s)", es = "cerca de la muerte, 3 s de inmunidad (reutilización 70 s)", pt = "perto da morte, 3 s de imunidade (recarga de 70 s)", ru = "при смерти: 3 сек. неуязвимости (перезарядка 70 сек.)", pl = "tuż przed śmiercią 3 s odporności (odnowienie 70 s)", tr = "ölüme yakınken 3 sn dokunulmazlık (70 sn bekleme)", it = "in fin di vita, 3 s di immunità (ricarica 70 s)", ja = "瀕死時に3秒間無敵（クールダウン70秒）", zh = "濒死时免疫伤害3秒（冷却时间70秒）", ko = "죽음 직전에 3초 동안 무적 (재사용 대기시간 70초)" }, icon = "INV_Gizmo_RocketBoot_01" },
+    { name = { en = "Best Deals Anywhere", de = "Die besten Preise weit und breit", fr = "Les meilleures affaires", es = "Las mejores ofertas", pt = "As Melhores Ofertas", ru = "Лучшие цены в округе", pl = "Najlepsze oferty w okolicy", tr = "Her Yerde En İyi Fiyat", it = "Affari ovunque", ja = "ベスト・ディール・エニウェア", zh = "物美价廉", ko = "최고의 흥정" }, effect = { en = "+25% gold", de = "+25% Gold", fr = "+25% d'or", es = "+25% de oro", pt = "+25% de ouro", ru = "+25% золота", pl = "+25% złota", tr = "+25% altın", it = "+25% oro", ja = "ゴールド+25%", zh = "金币+25%", ko = "골드 +25%" }, icon = "INV_Misc_Coin_02" },
+    { name = { en = "Time is Money", de = "Zeit ist Geld", fr = "Le temps, c'est de l'argent", es = "El tiempo es oro", pt = "Tempo é Dinheiro", ru = "Время - деньги", pl = "Czas to pieniądz", tr = "Zaman Paradır", it = "Il tempo è denaro", ja = "タイム・イズ・マネー", zh = "时间就是金钱", ko = "시간은 금이다" }, effect = { en = "-5% cooldowns", de = "-5% Abklingzeiten", fr = "-5% de recharges", es = "-5% de reutilizaciones", pt = "-5% de recargas", ru = "-5% перезарядки", pl = "-5% odnowień", tr = "-5% bekleme süreleri", it = "-5% ricariche", ja = "クールダウン-5%", zh = "冷却时间-5%", ko = "재사용 대기시간 -5%" }, icon = "INV_Misc_PocketWatch_01" },
+]
+id = 9
+male = 6894
+female = 6895
+faction = 2
+side = "horde"
+spell = 44608
+active = { escape = { secs = 3.0, cooldown = 70.0 } }
+racials = ["rocket_jump", "best_deals_anywhere", "time_is_money"]
+gold_pct = 25
+cooldown_pct = 5
+third = ["cooldown"]
+
+# The port's own: Quaking Palm, every 20 sec stuns enemies within 6 yd for 3 sec; Epicurean +10%
+# max health; Inner Peace +15% experience.
+[[race]]
+key = "pandaren"
+name = { en = "Pandaren", de = "Pandaren", fr = "Pandaren", es = "Pandaren", pt = "Pandaren", ru = "Пандарен", pl = "Pandaren", tr = "Pandaren", it = "Pandaren", ja = "パンダレン", zh = "熊猫人", ko = "판다렌" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Quaking Palm", de = "Bebende Handfläche", fr = "Paume tremblante", es = "Palma temblorosa", pt = "Palma Trêmula", ru = "Дрожащая ладонь", pl = "Drżąca dłoń", tr = "Sarsıcı Avuç", it = "Palmo tremante", ja = "クエイキング・パーム", zh = "震山掌", ko = "진동의 장" }, effect = { en = "every 20 sec, stuns nearby enemies for 3 sec", de = "alle 20 Sek. Gegner in der Nähe 3 Sek. betäubt", fr = "toutes les 20 s, étourdit les ennemis proches pendant 3 s", es = "cada 20 s, aturde a los enemigos cercanos durante 3 s", pt = "a cada 20 s, atordoa inimigos próximos por 3 s", ru = "каждые 20 сек. оглушает врагов рядом на 3 сек.", pl = "co 20 s ogłusza pobliskich przeciwników na 3 s", tr = "her 20 sn'de bir yakındaki düşmanları 3 sn sersemletir", it = "ogni 20 s, stordisce i nemici vicini per 3 s", ja = "20秒ごとに周囲の敵を3秒間スタン", zh = "每20秒，使附近的敌人昏迷3秒", ko = "20초마다 주위의 적을 3초 동안 기절" }, icon = "Ability_Druid_Bash" },
+    { name = { en = "Epicurean", de = "Feinschmecker", fr = "Épicurien", es = "Epicúreo", pt = "Epicurista", ru = "Гурман", pl = "Smakosz", tr = "Gurme", it = "Epicureo", ja = "エピキュリアン", zh = "美食家", ko = "미식가" }, effect = { en = "+10% max health", de = "+10% maximale Gesundheit", fr = "+10% de santé max.", es = "+10% de salud máx.", pt = "+10% de vida máx.", ru = "+10% макс. здоровья", pl = "+10% maks. zdrowia", tr = "+10% azami can", it = "+10% salute massima", ja = "最大体力+10%", zh = "最大生命值+10%", ko = "최대 생명력 +10%" }, icon = "INV_Misc_Food_15" },
+    { name = { en = "Inner Peace", de = "Innerer Frieden", fr = "Paix intérieure", es = "Paz interior", pt = "Paz Interior", ru = "Внутренний мир", pl = "Wewnętrzny spokój", tr = "İç Huzur", it = "Pace interiore", ja = "インナー・ピース", zh = "内心平静", ko = "내면의 평화" }, effect = { en = "+15% experience", de = "+15% Erfahrung", fr = "+15% d'expérience", es = "+15% de experiencia", pt = "+15% de experiência", ru = "+15% опыта", pl = "+15% doświadczenia", tr = "+15% tecrübe", it = "+15% esperienza", ja = "経験値+15%", zh = "经验值+15%", ko = "경험치 +15%" }, icon = "Spell_Nature_Tranquility" },
+]
+id = 15
+male = 90303
+female = 90304
+faction = 2
+side = "horde"
+spell = 5211
+active = { hold = { every = 20.0, secs = 3.0, radius = 6.0, root = false } }
+racials = ["quaking_palm", "epicurean", "inner_peace"]
+health_pct = 10
+xp_pct = 15
+third = ["xp"]
+
+# The Pandaren who follow Tushui, for the Alliance: the same people as `pandaren` (its `kin`), on
+# the same bodies, with the same bonuses (the check holds them equal).
+[[race]]
+key = "pandaren_alliance"
+kin = "pandaren"
+name = { en = "Pandaren", de = "Pandaren", fr = "Pandaren", es = "Pandaren", pt = "Pandaren", ru = "Пандарен", pl = "Pandaren", tr = "Pandaren", it = "Pandaren", ja = "パンダレン", zh = "熊猫人", ko = "판다렌" }
+# The picker's lines, one a racial in `racials`' order: name, what it does, icon.
+lines = [
+    { name = { en = "Quaking Palm", de = "Bebende Handfläche", fr = "Paume tremblante", es = "Palma temblorosa", pt = "Palma Trêmula", ru = "Дрожащая ладонь", pl = "Drżąca dłoń", tr = "Sarsıcı Avuç", it = "Palmo tremante", ja = "クエイキング・パーム", zh = "震山掌", ko = "진동의 장" }, effect = { en = "every 20 sec, stuns nearby enemies for 3 sec", de = "alle 20 Sek. Gegner in der Nähe 3 Sek. betäubt", fr = "toutes les 20 s, étourdit les ennemis proches pendant 3 s", es = "cada 20 s, aturde a los enemigos cercanos durante 3 s", pt = "a cada 20 s, atordoa inimigos próximos por 3 s", ru = "каждые 20 сек. оглушает врагов рядом на 3 сек.", pl = "co 20 s ogłusza pobliskich przeciwników na 3 s", tr = "her 20 sn'de bir yakındaki düşmanları 3 sn sersemletir", it = "ogni 20 s, stordisce i nemici vicini per 3 s", ja = "20秒ごとに周囲の敵を3秒間スタン", zh = "每20秒，使附近的敌人昏迷3秒", ko = "20초마다 주위의 적을 3초 동안 기절" }, icon = "Ability_Druid_Bash" },
+    { name = { en = "Epicurean", de = "Feinschmecker", fr = "Épicurien", es = "Epicúreo", pt = "Epicurista", ru = "Гурман", pl = "Smakosz", tr = "Gurme", it = "Epicureo", ja = "エピキュリアン", zh = "美食家", ko = "미식가" }, effect = { en = "+10% max health", de = "+10% maximale Gesundheit", fr = "+10% de santé max.", es = "+10% de salud máx.", pt = "+10% de vida máx.", ru = "+10% макс. здоровья", pl = "+10% maks. zdrowia", tr = "+10% azami can", it = "+10% salute massima", ja = "最大体力+10%", zh = "最大生命值+10%", ko = "최대 생명력 +10%" }, icon = "INV_Misc_Food_15" },
+    { name = { en = "Inner Peace", de = "Innerer Frieden", fr = "Paix intérieure", es = "Paz interior", pt = "Paz Interior", ru = "Внутренний мир", pl = "Wewnętrzny spokój", tr = "İç Huzur", it = "Pace interiore", ja = "インナー・ピース", zh = "内心平静", ko = "내면의 평화" }, effect = { en = "+15% experience", de = "+15% Erfahrung", fr = "+15% d'expérience", es = "+15% de experiencia", pt = "+15% de experiência", ru = "+15% опыта", pl = "+15% doświadczenia", tr = "+15% tecrübe", it = "+15% esperienza", ja = "経験値+15%", zh = "经验值+15%", ko = "경험치 +15%" }, icon = "Spell_Nature_Tranquility" },
+]
+id = 17
+male = 90303
+female = 90304
+faction = 1
+side = "alliance"
+spell = 5211
+active = { hold = { every = 20.0, secs = 3.0, radius = 6.0, root = false } }
+racials = ["quaking_palm", "epicurean", "inner_peace"]
+health_pct = 10
+xp_pct = 15
+third = ["xp"]

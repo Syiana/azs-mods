@@ -1,0 +1,16 @@
+# Maggoc: a gronn's Arcing Smash and its leap.
+
+[[boss]]
+key = "maggoc"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 8374, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 6.0, reach = 14.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

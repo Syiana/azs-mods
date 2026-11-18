@@ -1,0 +1,43 @@
+# The warrior's flavor line for each piece profile, shown on Epic and better pieces (re/NUMBERS.md 14.7).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+[[piece_lore]]
+key = "warrior_0"
+profile = 0
+text = { en = "Notched by a hundred killing blows.", de = "Gekerbt von hundert tödlichen Hieben.", fr = "Ébréché par cent coups fatals.", es = "Mellado por cien golpes mortales.", pt = "Marcado por cem golpes mortais.", ru = "Зазубрено сотней смертельных ударов.", pl = "Wyszczerbione przez setki śmiertelnych ciosów.", tr = "Yüz öldürücü darbeyle çentiklenmiş.", it = "Segnato da cento colpi mortali.", ja = "百の止めの一撃で刃こぼれした。", zh = "上面的缺口来自上百次致命一击。", ko = "백 번의 결정타에 이가 빠졌다." }
+
+[[piece_lore]]
+key = "warrior_1"
+profile = 1
+text = { en = "Hammered thick enough to turn an axe.", de = "Dick genug gehämmert, um eine Axt abzulenken.", fr = "Martelé assez épais pour arrêter une hache.", es = "Forjado lo bastante grueso para desviar un hacha.", pt = "Martelado grosso o bastante para desviar um machado.", ru = "Выковано настолько толстым, что отводит топор.", pl = "Wykute tak grubo, że odbija topór.", tr = "Bir baltayı savuşturacak kadar kalın dövülmüş.", it = "Battuto abbastanza spesso da deviare un'ascia.", ja = "斧をも弾くほど厚く鍛えられた。", zh = "锻打得足够厚实，足以挡开斧刃。", ko = "도끼도 튕겨 낼 만큼 두껍게 두드렸다." }
+
+[[piece_lore]]
+key = "warrior_2"
+profile = 2
+text = { en = "Worn by those who never tire of the charge.", de = "Getragen von jenen, die des Ansturms nie müde werden.", fr = "Porté par ceux qui ne se lassent jamais de charger.", es = "Lo llevan quienes nunca se cansan de cargar.", pt = "Usado por quem nunca se cansa da investida.", ru = "Для тех, кто никогда не устаёт от атаки.", pl = "Noszone przez tych, których nigdy nie męczy szarża.", tr = "Hücumdan asla yorulmayanların giydiği.", it = "Indossato da chi non si stanca mai di caricare.", ja = "突撃に決して疲れぬ者がまとう。", zh = "由永不厌倦冲锋的人所穿戴。", ko = "돌격에 지치지 않는 자들이 입는다." }
+
+[[piece_lore]]
+key = "warrior_3"
+profile = 3
+text = { en = "Light enough to reach the foe first, and find the gap in its armor.", de = "Leicht genug, um den Feind als Erster zu erreichen und die Lücke in seiner Rüstung zu finden.", fr = "Assez léger pour atteindre l'ennemi le premier, et trouver la faille dans son armure.", es = "Lo bastante ligero para llegar primero al enemigo y encontrar el hueco en su armadura.", pt = "Leve o bastante para alcançar o inimigo primeiro e achar a brecha na armadura.", ru = "Достаточно лёгкое, чтобы первым добраться до врага и найти брешь в его броне.", pl = "Dość lekkie, by dopaść wroga pierwszym i znaleźć lukę w jego zbroi.", tr = "Düşmana ilk ulaşacak ve zırhındaki boşluğu bulacak kadar hafif.", it = "Abbastanza leggero da raggiungere il nemico per primo e trovare il varco nella sua armatura.", ja = "誰よりも早く敵に届き、鎧の隙間を見つけるほど軽い。", zh = "轻便得足以率先接敌，并找到其护甲的缝隙。", ko = "적에게 먼저 닿을 만큼 가볍고, 갑옷의 틈을 찾아낸다." }
+
+[[piece_lore]]
+key = "warrior_4"
+profile = 4
+text = { en = "A veteran's gear: the wounds close, and the next blow is ready.", de = "Die Ausrüstung eines Veteranen: Wunden schließen sich, und der nächste Hieb ist bereit.", fr = "L'équipement d'un vétéran : les blessures se referment, et le coup suivant est prêt.", es = "Equipo de veterano: las heridas se cierran y el siguiente golpe está listo.", pt = "Equipamento de veterano: as feridas fecham, e o próximo golpe está pronto.", ru = "Снаряжение ветерана: раны затягиваются, и следующий удар уже готов.", pl = "Rynsztunek weterana: rany się zamykają, a kolejny cios jest gotowy.", tr = "Bir gazinin teçhizatı: yaralar kapanır ve sonraki darbe hazırdır.", it = "Equipaggiamento da veterano: le ferite si chiudono e il prossimo colpo è pronto.", ja = "古強者の装備：傷はふさがり、次の一撃の準備は整っている。", zh = "老兵的装备：伤口愈合，下一击已经就绪。", ko = "역전의 용사의 장비: 상처는 아물고, 다음 일격은 준비되어 있다." }
+
+[[piece_lore]]
+key = "warrior_5"
+profile = 5
+text = { en = "Made for those who bleed and keep standing.", de = "Gemacht für jene, die bluten und dennoch stehen bleiben.", fr = "Fait pour ceux qui saignent et restent debout.", es = "Hecho para quienes sangran y siguen en pie.", pt = "Feito para quem sangra e continua de pé.", ru = "Для тех, кто истекает кровью и продолжает стоять.", pl = "Dla tych, którzy krwawią i wciąż stoją.", tr = "Kanayıp ayakta kalanlar için yapılmış.", it = "Fatto per chi sanguina e resta in piedi.", ja = "血を流しても立ち続ける者のために作られた。", zh = "为流血仍屹立不倒的人而制。", ko = "피를 흘리면서도 버티고 서는 자들을 위해 만들어졌다." }
+
+[[piece_lore]]
+key = "warrior_6"
+profile = 6
+text = { en = "Made for running down what flees.", de = "Gemacht, um zu jagen, was flieht.", fr = "Fait pour rattraper ce qui fuit.", es = "Hecho para dar caza a lo que huye.", pt = "Feito para alcançar quem foge.", ru = "Чтобы догонять бегущих.", pl = "Stworzone, by dopadać uciekających.", tr = "Kaçanı yakalamak için yapılmış.", it = "Fatto per inseguire chi fugge.", ja = "逃げる者を追い詰めるために作られた。", zh = "为追杀逃敌而制。", ko = "도망치는 것을 쫓아가 쓰러뜨리기 위해 만들어졌다." }
+
+[[piece_lore]]
+key = "warrior_7"
+profile = 7
+text = { en = "Every sweep of the blade carries further.", de = "Jeder Schwung der Klinge reicht weiter.", fr = "Chaque balayage de la lame porte plus loin.", es = "Cada tajo de la hoja llega más lejos.", pt = "Cada golpe da lâmina vai mais longe.", ru = "Каждый взмах клинка достаёт дальше.", pl = "Każdy zamach ostrza sięga dalej.", tr = "Kılıcın her savruluşu daha uzağa erişir.", it = "Ogni fendente della lama arriva più lontano.", ja = "刃のひと振りごとに、より遠くまで届く。", zh = "刀锋的每一次横扫都能触及更远。", ko = "칼날을 휘두를 때마다 더 멀리 뻗어 나간다." }

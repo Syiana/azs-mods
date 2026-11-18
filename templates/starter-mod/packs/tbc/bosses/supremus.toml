@@ -1,0 +1,20 @@
+# Supremus: Molten Punch, Hateful Strike, the Volcanic Geysers.
+
+[[boss]]
+key = "supremus"
+
+[[boss.kit]]
+every = 12.0
+ability = { rush = { spell = 40126, len = 30.0, w = 6.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 41926, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.6 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 40118, burst = 40276, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

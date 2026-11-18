@@ -1,0 +1,30 @@
+# Kil'jaeden: Legion Lightning, Shadow Spikes, Armageddon into Flame Dart, Fire Bloom (carried
+# into the horde), Darkness of a Thousand Souls one shelters from in the dragons' shields, the
+# Sinister Reflections.
+
+[[boss]]
+key = "kiljaeden"
+
+[[boss.kit]]
+every = 4.5
+ability = { bolt = { spell = 45664 } }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 45885, count = 5, radius = 5.0, spread = 10.0, warn = 1.8, factor = 2.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { combo = [[{ rain = { spell = 45909, count = 4, radius = 6.0, spread = 10.0, warn = 1.8, factor = 2.6 } }, { nova = { spell = 45740, radius = 11.0, warn = 2.2 } }], 1.6] }
+
+[[boss.kit]]
+every = 16.0
+ability = { bomb = { spell = 45641, radius = 7.0, time = 5.0, warn = 2.0, factor = 18.0 } }
+
+[[boss.kit]]
+every = 24.0
+ability = { towers = { spell = 46605, count = 3, radius = 4.0, spacing = 12.0, time = 5.0, factor = 6.0 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { adds = 14 }

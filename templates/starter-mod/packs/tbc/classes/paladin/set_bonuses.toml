@@ -1,0 +1,21 @@
+# The paladin's 8-piece set bonuses: one change to one of its spells per tier (docs/HOWTO-CONTENT.md "A set bonus").
+
+[[set_bonus]]
+key = "paladin_exotic_4"
+tier = "exotic"
+pieces = 4
+scripted = true
+text = { en = "Consecrated Path: Consecration is bound to you and follows you as you move.", de = "Geweihter Pfad: Weihe ist an dich gebunden und folgt dir, wenn du dich bewegst.", fr = "Chemin consacré : Consécration est liée à vous et vous suit dans vos déplacements.", es = "Senda consagrada: Consagración queda ligada a ti y te sigue cuando te mueves.", pt = "Caminho Consagrado: Consagração fica vinculada a você e o acompanha ao se mover.", ru = "Освящённый путь: Освящение привязывается к вам и следует за вами при движении.", it = "Sentiero Consacrato: Consacrazione si lega a te e ti segue quando ti muovi.", pl = "Poświęcona Ścieżka: Poświęcenie jest z tobą związane i podąża za tobą, gdy się poruszasz.", tr = "Kutsanmış Yol: Kutsama sana bağlanır ve hareket ettiğinde seni takip eder.", ja = "聖別の道：コンセクレーションがあなたに結びつき、移動に合わせてついてきます。", zh = "奉献之路：奉献与你绑定，随你移动。", ko = "축성된 길: 신성화가 당신에게 묶여 움직이는 대로 따라옵니다." }
+
+[[set_bonus.part]]
+mods = [{ follow = ["consecration"] }]
+mods_v = 0.0
+fixed = true
+
+
+[[set_bonus]]
+key = "paladin_exotic_8"
+tier = "exotic"
+pieces = 8
+mechanic = { kind = "cast_link", spell = "consecration", seal = 8.0, secs = 5.0, width = 1.5, every = 1.0, damage = 0.25, shield = 0.08 }
+text = { en = "Consecrated Path: Consecration leaves a seal for 8 seconds. Your next Consecration connects both locations for 5 seconds. Enemies on the path take 25% Consecration damage per second. Allies crossing it gain a shield for 8% of their maximum health once.", de = "Geweihter Pfad: Weihe hinterlässt 8 Sekunden lang ein Siegel. Deine nächste Weihe verbindet beide Orte für 5 Sekunden. Gegner auf dem Pfad erleiden pro Sekunde 25 % Weiheschaden. Verbündete erhalten beim Überqueren einmal einen Schild für 8 % ihres maximalen Lebens.", fr = "Chemin consacré : Consécration laisse un sceau pendant 8 s. La suivante relie les deux lieux pendant 5 s. Le chemin inflige 25 % des dégâts de Consécration par seconde et protège une fois les alliés qui le traversent pour 8 % de leurs PV max.", es = "Senda consagrada: Consagración deja un sello durante 8 s. La siguiente conecta ambos lugares durante 5 s. La senda inflige el 25 % de su daño por segundo y otorga una vez a cada aliado que la cruza un escudo del 8 % de su salud máxima.", pt = "Caminho Consagrado: Consagração deixa um selo por 8 s. A próxima liga os dois locais por 5 s. O caminho causa 25% do dano de Consagração por segundo e concede uma vez a cada aliado que o cruza um escudo de 8% da vida máxima.", ru = "Освящённый путь: Освящение оставляет печать на 8 с. Следующее Освящение соединяет места на 5 с. Путь наносит 25% урона Освящения в секунду и один раз даёт пересёкшим его союзникам щит на 8% максимального здоровья.", it = "Poświęcona ścieżka: Poświęcenie zostawia pieczęć na 8 s. Kolejne łączy oba miejsca na 5 s. Ścieżka zadaje co sekundę 25% obrażeń Poświęcenia i raz osłania każdego przechodzącego sojusznika za 8% jego maksymalnego zdrowia.", pl = "Kutsanmış Yol: Kutsama 8 sn boyunca bir mühür bırakır. Sonraki Kutsama iki yeri 5 sn boyunca bağlar. Yol saniyede %25 Kutsama hasarı verir. Yolu geçen müttefikler bir kez azami canlarının %8'i kadar kalkan alır.", tr = "Sentiero Consacrato: Consacrazione lascia un sigillo per 8 s. La successiva collega i due punti per 5 s. Il sentiero infligge il 25% dei danni di Consacrazione al secondo e protegge una volta chi lo attraversa con uno scudo pari all’8% della salute massima.", ja = "聖別の道：コンセクレーションが8秒間印を残します。次のコンセクレーションで両方の位置が5秒間つながります。道の上の敵は毎秒コンセクレーションの25%のダメージを受けます。道を横切った味方は1回だけ最大体力の8%のシールドを得ます。", zh = "奉献之路：奉献会留下一个持续8秒的印记。你的下一次奉献会将两个位置连接5秒。路径上的敌人每秒受到相当于奉献25%的伤害。穿过路径的盟友会获得一次相当于其最大生命值8%的护盾。", ko = "축성된 길: 신성화가 8초 동안 인장을 남깁니다. 다음 신성화가 두 위치를 5초 동안 잇습니다. 길 위의 적은 초당 신성화 피해의 25%를 받습니다. 길을 지나는 아군은 한 번 최대 생명력의 8%에 해당하는 보호막을 얻습니다." }

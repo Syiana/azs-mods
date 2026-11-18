@@ -1,0 +1,548 @@
+# The wardrobe's legendary weapon looks (survivors-sim weapon_looks.rs).
+#
+# Every weapon, in the shop's order (SurvivorsWeaponLooks.lua has the same table). New ones go
+# anywhere: a look names its item entry, not its place. `TUNE` the prices.
+#
+# The rows (entry, display, `InventoryType`, subclass, material, sheath) are `Item.dbc`'s; the
+# Frostmourne row's material is -1 there and 1 (metal) here.
+
+[[weapon_look]]
+key = "frostmourne"
+name = { en = "Frostmourne", de = "Frostgram", fr = "Deuillegivre", es = "Agonía de Escarcha", pt = "Frostmourne", ru = "Ледяная Скорбь", pl = "Frostmourne", tr = "Frostmourne", it = "Frostmourne", ja = "フロストモーン", zh = "霜之哀伤", ko = "서리한" }
+flavour = { en = "The Lich King's runeblade. Whomsoever takes up this blade shall wield power eternal.", de = "Die Runenklinge des Lichkönigs. Wer immer diese Klinge ergreift, wird ewige Macht besitzen.", fr = "La lame runique du roi-liche. Quiconque brandira cette lame détiendra un pouvoir éternel.", es = "La hoja rúnica del Rey Exánime. Quien empuñe esta hoja poseerá un poder eterno.", pt = "A lâmina rúnica do Lorde Lich. Quem empunhar esta lâmina deterá poder eterno.", ru = "Рунный клинок Короля-лича. Кто возьмёт этот клинок, тот обретёт вечную власть.", pl = "Runiczny miecz Króla Lisza. Kto weźmie to ostrze w dłoń, zyska wieczną moc.", tr = "Lich King'in rün kılıcı. Bu kılıcı kim kuşanırsa ebedi güce sahip olur.", it = "La lama runica del Re dei Lich. Chiunque impugni questa lama brandirà un potere eterno.", ja = "リッチキングのルーンブレード。この刃を手に取る者は、永遠の力を振るうであろう。", zh = "巫妖王的符文剑。凡持此剑者，必将执掌永恒之力。", ko = "리치 왕의 룬검. 이 검을 손에 쥐는 자는 영원한 힘을 얻으리라." }
+price = 0
+pieces = [
+    { display = 46609, entry = 36942, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "shadowmourne"
+name = { en = "Shadowmourne", de = "Schattengram", fr = "Deuillombre", es = "Agonía de las Sombras", pt = "Shadowmourne", ru = "Скорбь Тьмы", pl = "Shadowmourne", tr = "Shadowmourne", it = "Shadowmourne", ja = "シャドウモーン", zh = "暗影之哀", ko = "어둠한" }
+flavour = { en = "Forged in Icecrown from the souls of the Scourge's own, to strike down its master.", de = "In Eiskrone aus den Seelen der Geißel geschmiedet, um ihren Herrn zu fällen.", fr = "Forgée dans la Couronne de glace à partir des âmes des siens du Fléau, pour abattre son maître.", es = "Forjada en Corona de Hielo con las almas de los propios siervos de la Plaga, para abatir a su amo.", pt = "Forjada na Coroa de Gelo com as almas dos próprios servos do Flagelo, para derrubar seu mestre.", ru = "Выкован в Ледяной Короне из душ самих слуг Плети, чтобы сразить их повелителя.", pl = "Wykuty w Icecrown z dusz samej Plagi, by powalić jej władcę.", tr = "Buz Tacı'nda Yıkım ordusunun kendi ruhlarından dövüldü, efendisini devirmek için.", it = "Forgiata a Corona di Ghiaccio con le anime dei servi stessi del Flagello, per abbattere il suo padrone.", ja = "スカージ自身の魂からアイスクラウンで鍛えられ、その主を討つためのもの。", zh = "在冰冠冰川用天灾军团自己的灵魂锻造，用以击倒其主人。", ko = "스컬지의 주인을 쓰러뜨리기 위해 얼음왕관에서 스컬지 자신의 영혼으로 벼려 냈다." }
+price = 150000
+pieces = [
+    { display = 65153, entry = 49623, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "warglaives"
+name = { en = "Warglaives of Azzinoth", de = "Kriegsgleven von Azzinoth", fr = "Glaives de guerre d'Azzinoth", es = "Guanteletes de guerra de Azzinoth", pt = "Glaives de Guerra de Azzinoth", ru = "Боевые клинки Аззинота", pl = "Wojenne glewie Azzinotha", tr = "Azzinoth'un Savaş Glaive'leri", it = "Lame da guerra di Azzinoth", ja = "アズィノスのウォーグレイヴ", zh = "埃辛诺斯战刃", ko = "아지노스의 전투검" }
+flavour = { en = "Illidan's twin blades, torn from the doom lord Azzinoth. Both hands, always.", de = "Illidans Zwillingsklingen, dem Verdammnislord Azzinoth entrissen. Immer in beiden Händen.", fr = "Les lames jumelles d'Illidan, arrachées au seigneur funeste Azzinoth. Toujours aux deux mains.", es = "Las hojas gemelas de Illidan, arrebatadas al señor apocalíptico Azzinoth. Siempre en ambas manos.", pt = "As lâminas gêmeas de Illidan, arrancadas do lorde da perdição Azzinoth. Sempre nas duas mãos.", ru = "Парные клинки Иллидана, вырванные у властителя рока Аззинота. Всегда в обеих руках.", pl = "Bliźniacze ostrza Illidana, wyrwane władcy zagłady Azzinothowi. Zawsze w obu dłoniach.", tr = "Illidan'ın ikiz bıçakları, kıyamet lordu Azzinoth'tan koparıldı. İki elde, her zaman.", it = "Le lame gemelle di Illidan, strappate al signore del destino Azzinoth. Entrambe le mani, sempre.", ja = "ドゥームロード・アジノスから奪ったイリダンの双刃。常に両手に。", zh = "伊利丹的双刃，夺自末日领主埃辛诺斯。永远双手齐握。", ko = "파멸의 군주 아지노스에게서 빼앗은 일리단의 쌍둥이 전투검. 언제나 양손에." }
+price = 150000
+pieces = [
+    { display = 45479, entry = 32837, inventory_type = 21, subclass = 7, material = 1, sheath = 1 },
+    { display = 45481, entry = 32838, inventory_type = 22, subclass = 7, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "corruptedashbringer"
+name = { en = "Corrupted Ashbringer", de = "Verderbter Aschenbringer", fr = "Porte-Cendres corrompu", es = "Crematoria corrupta", pt = "Ashbringer Corrompida", ru = "Оскверненный Несущий Пепел", pl = "Skażony Zwiastun Popiołów", tr = "Yozlaşmış Ashbringer", it = "Ashbringer corrotta", ja = "堕落したアッシュブリンガー", zh = "堕落的灰烬使者", ko = "타락한 파멸의 인도자" }
+flavour = { en = "Mograine's blade, bent to the Scourge's will. It still whispers his name.", de = "Mograines Klinge, dem Willen der Geißel gebeugt. Sie flüstert noch immer seinen Namen.", fr = "La lame de Mograine, pliée à la volonté du Fléau. Elle murmure encore son nom.", es = "La hoja de Mograine, doblegada a la voluntad de la Plaga. Aún susurra su nombre.", pt = "A lâmina de Mograine, dobrada à vontade do Flagelo. Ela ainda sussurra o nome dele.", ru = "Клинок Мограйна, подчинённый воле Плети. Он всё ещё шепчет его имя.", pl = "Ostrze Mograine'a, nagięte do woli Plagi. Wciąż szepcze jego imię.", tr = "Mograine'in kılıcı, Yıkım ordusunun iradesine boyun eğdi. Hâlâ onun adını fısıldıyor.", it = "La lama di Mograine, piegata alla volontà del Flagello. Sussurra ancora il suo nome.", ja = "スカージの意志に屈したモグレインの刃。今もなお彼の名をささやく。", zh = "莫格莱尼之剑，屈从于天灾军团的意志。它仍在低语着他的名字。", ko = "스컬지의 뜻에 굴복한 모그레인의 검. 아직도 그의 이름을 속삭인다." }
+price = 150000
+pieces = [
+    { display = 35097, entry = 22691, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "thunderfury"
+name = { en = "Thunderfury, Blessed Blade of the Windseeker", de = "Donnerzorn, Gesegnete Klinge des Windsuchers", fr = "Furie-du-tonnerre, lame bénie du Chercheur de vent", es = "Trueno Furioso, espada bendita del Hijo del Viento", pt = "Trovão Furioso, Lâmina Abençoada do Busca-Ventos", ru = "Громовая Ярость, благословленный клинок Искателя Ветра", pl = "Gromowładny, Błogosławiony Miecz Szukającego Wiatru", tr = "Thunderfury, Rüzgar Arayanın Kutsanmış Kılıcı", it = "Thunderfury, Lama Benedetta del Cercavento", ja = "サンダーフューリー、ウィンドシーカーの祝福されし剣", zh = "雷霆之怒，逐风者的祝福之剑", ko = "천둥격노 - 바람추적자의 축복받은 검" }
+flavour = { en = "The prison of Thunderaan, bound in a blade. Did someone say...?", de = "Thunderaans Kerker, in eine Klinge gebannt. Hat jemand ... gesagt?", fr = "La prison de Thunderaan, enchaînée dans une lame. Quelqu'un a dit... ?", es = "La prisión de Thunderaan, atada a una hoja. ¿Alguien ha dicho...?", pt = "A prisão de Thunderaan, selada numa lâmina. Alguém disse...?", ru = "Темница Тундраана, заключённая в клинок. Кто-то сказал...?", pl = "Więzienie Thunderaana, zamknięte w ostrzu. Ktoś coś mówił...?", tr = "Thunderaan'ın hapishanesi, bir kılıca bağlı. Biri bir şey mi dedi...?", it = "La prigione di Thunderaan, incatenata in una lama. Qualcuno ha detto...?", ja = "刃に封じられたサンダーアーンの牢獄。誰か言った…？", zh = "囚禁桑德兰的牢笼，封印于一把剑中。有人说……吗？", ko = "칼날에 봉인된 썬더안의 감옥. 누가 혹시...?" }
+price = 150000
+pieces = [
+    { display = 30606, entry = 19019, inventory_type = 13, subclass = 7, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "sulfuras"
+name = { en = "Sulfuras, Hand of Ragnaros", de = "Sulfuras, Hand von Ragnaros", fr = "Sulfuras, main de Ragnaros", es = "Sulfuras, Mano de Ragnaros", pt = "Sulfuras, Mão de Ragnaros", ru = "Сульфурас, Рука Рагнароса", pl = "Sulfuras, Ręka Ragnarosa", tr = "Sulfuras, Ragnaros'un Eli", it = "Sulfuras, Mano di Ragnaros", ja = "サルフラス、ラグナロスの手", zh = "萨弗拉斯，炎魔拉格纳罗斯之手", ko = "설퍼라스 - 라그나로스의 손" }
+flavour = { en = "The Firelord's own hammer, still burning with the heart of the Molten Core.", de = "Der Hammer des Feuerfürsten, noch immer glühend vom Herzen des Geschmolzenen Kerns.", fr = "Le marteau du Seigneur du feu en personne, brûlant encore du cœur du Cœur du Magma.", es = "El martillo del Señor del Fuego en persona, aún ardiendo con el corazón del Núcleo de Magma.", pt = "O próprio martelo do Senhor do Fogo, ainda ardendo com o coração do Núcleo Derretido.", ru = "Молот самого Повелителя огня, всё ещё пылающий сердцем Огненных Недр.", pl = "Młot samego Władcy Ognia, wciąż płonący sercem Rdzenia Ognia.", tr = "Ateş Lordu'nun kendi çekici, hâlâ Erimiş Çekirdek'in kalbiyle yanıyor.", it = "Il martello stesso del Signore del Fuoco, che brucia ancora con il cuore del Nucleo Fuso.", ja = "炎の王自身のハンマー。今もモルテン・コアの心臓とともに燃えている。", zh = "炎魔之王的战锤，仍燃烧着熔火之心的火焰。", ko = "불의 군주 자신의 망치. 아직도 화산 심장부의 심장으로 타오른다." }
+price = 150000
+pieces = [
+    { display = 29698, entry = 17182, inventory_type = 17, subclass = 5, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "valanyr"
+name = { en = "Val'anyr, Hammer of Ancient Kings", de = "Val'anyr, Hammer der Uralten Könige", fr = "Val'anyr, marteau des Anciens rois", es = "Val'anyr, Martillo de los Reyes Antiguos", pt = "Val'anyr, Martelo dos Reis Antigos", ru = "Валь'аниир, Молот Древних Королей", pl = "Val'anyr, Młot Dawnych Królów", tr = "Val'anyr, Kadim Kralların Çekici", it = "Val'anyr, Martello dei Re Antichi", ja = "ヴァラニア、古の王たちのハンマー", zh = "瓦兰奈尔，上古王者之锤", ko = "발아니르 - 고대 왕의 망치" }
+flavour = { en = "The hammer the titans gave the first king of the earthen, made whole in Ulduar.", de = "Der Hammer, den die Titanen dem ersten König der Irdenen gaben, in Ulduar wieder vereint.", fr = "Le marteau que les titans donnèrent au premier roi des terrestres, reforgé à Ulduar.", es = "El martillo que los titanes dieron al primer rey de los terrestres, reunificado en Ulduar.", pt = "O martelo que os titãs deram ao primeiro rei dos terrestres, reunido em Ulduar.", ru = "Молот, который титаны дали первому королю земельников, вновь собранный в Ульдуаре.", pl = "Młot, który tytani dali pierwszemu królowi ziemian, odnowiony w Ulduarze.", tr = "Titanların topraklıların ilk kralına verdiği çekiç, Ulduar'da yeniden bütünlendi.", it = "Il martello che i titani diedero al primo re dei terrigeni, ricomposto a Ulduar.", ja = "タイタンがアーセン最初の王に与えたハンマー。ウルドゥアーで完全な姿を取り戻した。", zh = "泰坦赐予第一位土灵之王的战锤，在奥杜尔重铸完整。", ko = "티탄이 토석인의 첫 왕에게 내린 망치. 울두아르에서 온전히 되살아났다." }
+price = 150000
+pieces = [
+    { display = 61655, entry = 46017, inventory_type = 21, subclass = 4, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "thoridal"
+name = { en = "Thori'dal, the Stars' Fury", de = "Thori'dal, der Sternenzorn", fr = "Thori'dal, la Fureur des étoiles", es = "Thori'dal, la Furia de las Estrellas", pt = "Thori'dal, a Fúria das Estrelas", ru = "Тори'дал, Звёздный Гнев", pl = "Thori'dal, Furia Gwiazd", tr = "Thori'dal, Yıldızların Öfkesi", it = "Thori'dal, Furia delle Stelle", ja = "ソリダル、星々の怒り", zh = "索利达尔，群星之怒", ko = "토리달 - 별의 격노" }
+flavour = { en = "The Sunwell's bow. It needs no arrows: it draws the light of the stars.", de = "Der Bogen des Sonnenbrunnens. Er braucht keine Pfeile: Er spannt das Licht der Sterne.", fr = "L'arc du Puits de soleil. Il n'a pas besoin de flèches : il bande la lumière des étoiles.", es = "El arco de la Fuente del Sol. No necesita flechas: tensa la luz de las estrellas.", pt = "O arco do Poço do Sol. Não precisa de flechas: ele retesa a luz das estrelas.", ru = "Лук Солнечного Колодца. Ему не нужны стрелы: он натягивает свет звёзд.", pl = "Łuk Studni Słońca. Nie potrzebuje strzał: czerpie światło gwiazd.", tr = "Güneş Kuyusu'nun yayı. Ok gerektirmez: yıldızların ışığını çeker.", it = "L'arco del Pozzo del Sole. Non ha bisogno di frecce: attinge la luce delle stelle.", ja = "サンウェルの弓。矢はいらない。星々の光を引き絞るのだから。", zh = "太阳之井的长弓。它无需箭矢：它汲取的是星辰之光。", ko = "태양샘의 활. 화살이 필요 없다: 별빛을 당겨 쏜다." }
+price = 150000
+pieces = [
+    { display = 48902, entry = 34334, inventory_type = 15, subclass = 2, material = 1, sheath = 0 },
+]
+
+[[weapon_look]]
+key = "ashbringer"
+name = { en = "Ashbringer", de = "Aschenbringer", fr = "Porte-Cendres", es = "Crematoria", pt = "Ashbringer", ru = "Несущий Пепел", pl = "Zwiastun Popiołów", tr = "Ashbringer", it = "Ashbringer", ja = "アッシュブリンガー", zh = "灰烬使者", ko = "파멸의 인도자" }
+flavour = { en = "The blade of the Silver Hand, pure as the day Mograine first raised it.", de = "Die Klinge der Silbernen Hand, so rein wie an dem Tag, als Mograine sie erhob.", fr = "La lame de la Main d'argent, aussi pure que le jour où Mograine la brandit pour la première fois.", es = "La hoja de la Mano de Plata, pura como el día en que Mograine la alzó por primera vez.", pt = "A lâmina da Mão de Prata, pura como no dia em que Mograine a ergueu pela primeira vez.", ru = "Клинок Серебряной Длани, чистый, как в тот день, когда Мограйн впервые поднял его.", pl = "Ostrze Srebrnej Dłoni, czyste jak w dniu, gdy Mograine uniósł je po raz pierwszy.", tr = "Gümüş El'in kılıcı, Mograine'in ilk kaldırdığı gün kadar saf.", it = "La lama della Mano d'Argento, pura come il giorno in cui Mograine la impugnò per la prima volta.", ja = "シルバーハンドの刃。モグレインが初めて掲げた日のように清らか。", zh = "白银之手的利刃，如莫格莱尼初次举起它时一样纯净。", ko = "은빛 성기사단의 검. 모그레인이 처음 치켜든 그날처럼 순수하다." }
+price = 150000
+pieces = [
+    { display = 23875, entry = 13262, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "atiesh"
+name = { en = "Atiesh, Greatstaff of the Guardian", de = "Atiesh, Großstab des Wächters", fr = "Atiesh, grand bâton du Gardien", es = "Atiesh, gran bastón del Guardián", pt = "Atiesh, Grande Cajado do Guardião", ru = "Атиеш, великий посох Хранителя", pl = "Atiesh, Wielki kostur Strażnika", tr = "Atiesh, Koruyucunun Büyük Asası", it = "Atiesh, Gran Bastone del Guardiano", ja = "アティエッシュ、守護者の大杖", zh = "埃提耶什，守护者的传说之杖", ko = "아티쉬 - 수호자의 대지팡이" }
+flavour = { en = "Medivh's staff, cleansed of Sargeras' taint, piece by piece from Naxxramas.", de = "Medivhs Stab, von Sargeras' Makel befreit, Stück für Stück aus Naxxramas.", fr = "Le bâton de Medivh, purgé de la souillure de Sargeras, morceau par morceau depuis Naxxramas.", es = "El bastón de Medivh, purgado de la mancha de Sargeras, pieza a pieza desde Naxxramas.", pt = "O cajado de Medivh, purificado da mácula de Sargeras, peça por peça, vindo de Naxxramas.", ru = "Посох Медива, очищенный от скверны Саргераса, по частям из Наксрамаса.", pl = "Kostur Medivha, oczyszczony ze skazy Sargerasa, kawałek po kawałku z Naxxramas.", tr = "Medivh'in asası, Sargeras'ın lekesinden arındırıldı, Naxxramas'tan parça parça.", it = "Il bastone di Medivh, purificato dalla corruzione di Sargeras, pezzo per pezzo da Naxxramas.", ja = "メディヴの杖。サルゲラスの穢れを祓い、ナクスラーマスで一片ずつ集められた。", zh = "麦迪文的法杖，已洗净萨格拉斯的污染，一片一片取自纳克萨玛斯。", ko = "살게라스의 오염을 씻어 낸 메디브의 지팡이. 낙스라마스에서 조각조각 모았다." }
+price = 150000
+pieces = [
+    { display = 35632, entry = 22589, inventory_type = 17, subclass = 10, material = 2, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "queldelar"
+name = { en = "Quel'Delar", de = "Quel'Delar", fr = "Quel'Delar", es = "Quel'Delar", pt = "Quel'Delar", ru = "Кель'Делар", pl = "Quel'Delar", tr = "Quel'Delar", it = "Quel'Delar", ja = "クエル・デラー", zh = "奎尔德拉", ko = "쿠엘델라" }
+flavour = { en = "The lost sword of the quel'dorei, reforged in the Sunwell's light.", de = "Das verlorene Schwert der Quel'dorei, im Licht des Sonnenbrunnens neu geschmiedet.", fr = "L'épée perdue des quel'dorei, reforgée dans la lumière du Puits de soleil.", es = "La espada perdida de los quel'dorei, reforjada con la luz de la Fuente del Sol.", pt = "A espada perdida dos quel'dorei, reforjada na luz do Poço do Sol.", ru = "Утраченный меч кель'дорай, перекованный в свете Солнечного Колодца.", pl = "Zaginiony miecz quel'dorei, odkuty w świetle Studni Słońca.", tr = "Quel'dorei'nin kayıp kılıcı, Güneş Kuyusu'nun ışığında yeniden dövüldü.", it = "La spada perduta dei quel'dorei, riforgiata nella luce del Pozzo del Sole.", ja = "クェル・ドレイの失われた剣。サンウェルの光で鍛え直された。", zh = "奎尔多雷失落之剑，在太阳之井的光芒中重铸。", ko = "쿠엘도레이의 잃어버린 검. 태양샘의 빛으로 다시 벼려졌다." }
+price = 150000
+pieces = [
+    { display = 64153, entry = 50047, inventory_type = 21, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "rhokdelar"
+name = { en = "Rhok'delar, Longbow of the Ancient Keepers", de = "Rhok'delar, Langbogen der Uralten Hüter", fr = "Rhok'delar, arc long des Gardiens antiques", es = "Rhok'delar, arco largo de los Guardianes Antiguos", pt = "Rhok'delar, Arco Longo dos Guardiões Antigos", ru = "Рок'делар, длинный лук Древних Хранителей", pl = "Rhok'delar, Długi łuk Prastarych Strażników", tr = "Rhok'delar, Kadim Koruyucuların Uzun Yayı", it = "Rhok'delar, Arco Lungo degli Antichi Custodi", ja = "ロクデラー、古の守り手の長弓", zh = "洛克德拉，上古守护者的长弓", ko = "로크델라 - 고대 수호자의 장궁" }
+flavour = { en = "A hunter's trial against four demons, strung from the ancients' own wood.", de = "Die Prüfung eines Jägers gegen vier Dämonen, aus dem Holz der Uralten gespannt.", fr = "L'épreuve d'un chasseur contre quatre démons, encordé dans le bois même des anciens.", es = "La prueba de un cazador contra cuatro demonios, encordado con la propia madera de los antiguos.", pt = "A provação de um caçador contra quatro demônios, encordoado com a própria madeira dos antigos.", ru = "Испытание охотника в битве с четырьмя демонами, лук, натянутый на дереве самих древних.", pl = "Próba łowcy przeciw czterem demonom, napięta z drewna samych prastarych.", tr = "Bir avcının dört şeytana karşı sınavı, kadimlerin kendi ağacından gerilmiş.", it = "La prova di un cacciatore contro quattro demoni, incordata con il legno stesso degli antichi.", ja = "4体のデーモンに挑むハンターの試練。古の者たちの木で張られた弓。", zh = "猎人对抗四个恶魔的试炼，以先祖之树的木材制弦。", ko = "네 악마에 맞선 사냥꾼의 시험. 고대정령의 나무로 활시위를 걸었다." }
+price = 150000
+pieces = [
+    { display = 31338, entry = 18713, inventory_type = 15, subclass = 2, material = 2, sheath = 0 },
+]
+
+[[weapon_look]]
+key = "gorehowl"
+name = { en = "Gorehowl", de = "Blutschrei", fr = "Hurlesang", es = "Aullasangre", pt = "Uivo Sangrento", ru = "Кровавый Вой", pl = "Gorehowl", tr = "Gorehowl", it = "Gorehowl", ja = "ゴアハウル", zh = "血吼", ko = "피의울음" }
+flavour = { en = "Grom Hellscream's axe, its howl heard on every battlefield of the Horde.", de = "Grom Höllschreis Axt, ihr Heulen auf jedem Schlachtfeld der Horde zu hören.", fr = "La hache de Grom Hurlenfer, dont le hurlement résonne sur tous les champs de bataille de la Horde.", es = "El hacha de Grom Grito Infernal, cuyo aullido resuena en todos los campos de batalla de la Horda.", pt = "O machado de Grom Grito Infernal, cujo uivo ecoa em todos os campos de batalha da Horda.", ru = "Топор Грома Адский Крик, чей вой слышен на всех полях сражений Орды.", pl = "Topór Groma Piekielnego Krzyku, którego ryk słychać na każdym polu bitwy Hordy.", tr = "Grom Hellscream'in baltası, uğultusu Horde'un her savaş alanında duyulur.", it = "L'ascia di Grom Malogrido, il cui ululato risuona su ogni campo di battaglia dell'Orda.", ja = "グロム・ヘルスクリームの斧。その咆哮はホードのあらゆる戦場に響く。", zh = "格罗姆·地狱咆哮的战斧，它的咆哮响彻部落的每一个战场。", ko = "그롬 헬스크림의 도끼. 그 울부짖음은 호드의 모든 전장에 울려 퍼졌다." }
+price = 150000
+pieces = [
+    { display = 40922, entry = 28773, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "arcanite_ripper"
+name = { en = "Arcanite Ripper", de = "Arcanite Ripper", fr = "Arcanite Ripper", es = "Arcanite Ripper", pt = "Arcanite Ripper", ru = "Arcanite Ripper", pl = "Arcanite Ripper", tr = "Arcanite Ripper", it = "Arcanite Ripper", ja = "アーケナイト・リッパー", zh = "奥金斧", ko = "아케이나이트 칼날" }
+flavour = { en = "A skull of bone and steel with a green glow between the strings.", de = "Ein Schädel aus Knochen und Stahl, zwischen den Saiten leuchtet es grün.", fr = "Un crâne d’os et d’acier aux cordes illuminées de vert.", es = "Una calavera de hueso y acero con un brillo verde entre las cuerdas.", pt = "Um crânio de osso e aço com um brilho verde entre as cordas.", ru = "Череп из кости и стали с зелёным сиянием между струнами.", pl = "Czaszka z kości i stali, między strunami tli się zielone światło.", tr = "Kemik ve çelikten bir kafatası, tellerinin arasında yeşil ışık parlar.", it = "Un teschio di osso e acciaio con un bagliore verde tra le corde.", ja = "骨と鋼のドクロ。弦の間に緑の光が灯る。", zh = "由骨与钢制成的头骨，弦间泛着绿光。", ko = "뼈와 강철로 된 해골. 시위 사이로 초록빛이 감돈다." }
+price = 55000
+pieces = [
+    { display = 57732, entry = 39769, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "ashkandi"
+name = { en = "Ashkandi, Greatsword of the Brotherhood", de = "Ashkandi, Greatsword of the Brotherhood", fr = "Ashkandi, Greatsword of the Brotherhood", es = "Ashkandi, Greatsword of the Brotherhood", pt = "Ashkandi, Greatsword of the Brotherhood", ru = "Ashkandi, Greatsword of the Brotherhood", pl = "Ashkandi, Greatsword of the Brotherhood", tr = "Ashkandi, Greatsword of the Brotherhood", it = "Ashkandi, Greatsword of the Brotherhood", ja = "アシュカンディ、同胞団の大剣", zh = "阿什坎迪，兄弟会之剑", ko = "아쉬칸디 - 형제단의 대검" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 45000
+pieces = [
+    { display = 31999, entry = 19334, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "maladath"
+name = { en = "Maladath, Runed Blade of the Black Flight", de = "Maladath, Runed Blade of the Black Flight", fr = "Maladath, Runed Blade of the Black Flight", es = "Maladath, Runed Blade of the Black Flight", pt = "Maladath, Runed Blade of the Black Flight", ru = "Maladath, Runed Blade of the Black Flight", pl = "Maladath, Runed Blade of the Black Flight", tr = "Maladath, Runed Blade of the Black Flight", it = "Maladath, Runed Blade of the Black Flight", ja = "マラダス、黒竜軍団のルーンブレード", zh = "玛拉达斯，黑龙军团的符文之剑", ko = "말라다스 - 검은용군단의 룬검" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 34000
+pieces = [
+    { display = 31866, entry = 19351, inventory_type = 13, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "chromatically_tempered_sword"
+name = { en = "Chromatically Tempered Sword", de = "Chromatically Tempered Sword", fr = "Chromatically Tempered Sword", es = "Chromatically Tempered Sword", pt = "Chromatically Tempered Sword", ru = "Chromatically Tempered Sword", pl = "Chromatically Tempered Sword", tr = "Chromatically Tempered Sword", it = "Chromatically Tempered Sword", ja = "色彩鍛えの剣", zh = "多彩回火之剑", ko = "오색 담금 검" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 32000
+pieces = [
+    { display = 31867, entry = 19352, inventory_type = 13, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "drake_talon_cleaver"
+name = { en = "Drake Talon Cleaver", de = "Drake Talon Cleaver", fr = "Drake Talon Cleaver", es = "Drake Talon Cleaver", pt = "Drake Talon Cleaver", ru = "Drake Talon Cleaver", pl = "Drake Talon Cleaver", tr = "Drake Talon Cleaver", it = "Drake Talon Cleaver", ja = "ドレイク・タロン・クリーヴァー", zh = "龙爪劈斧", ko = "비룡 발톱 도끼" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 25000
+pieces = [
+    { display = 31857, entry = 19353, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "brutality_blade"
+name = { en = "Brutality Blade", de = "Brutality Blade", fr = "Brutality Blade", es = "Brutality Blade", pt = "Brutality Blade", ru = "Brutality Blade", pl = "Brutality Blade", tr = "Brutality Blade", it = "Brutality Blade", ja = "ブルータリティ・ブレード", zh = "残暴之刃", ko = "잔혹의 칼날" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 18000
+pieces = [
+    { display = 31309, entry = 18832, inventory_type = 13, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "bonereavers_edge"
+name = { en = "Bonereaver's Edge", de = "Bonereaver's Edge", fr = "Bonereaver's Edge", es = "Bonereaver's Edge", pt = "Bonereaver's Edge", ru = "Bonereaver's Edge", pl = "Bonereaver's Edge", tr = "Bonereaver's Edge", it = "Bonereaver's Edge", ja = "ボーンリーヴァーズ・エッジ", zh = "碎骨者之刃", ko = "뼈약탈자의 칼날" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 22000
+pieces = [
+    { display = 32199, entry = 17076, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "gutgore_ripper"
+name = { en = "Gutgore Ripper", de = "Gutgore Ripper", fr = "Gutgore Ripper", es = "Gutgore Ripper", pt = "Gutgore Ripper", ru = "Gutgore Ripper", pl = "Gutgore Ripper", tr = "Gutgore Ripper", it = "Gutgore Ripper", ja = "ガットゴア・リッパー", zh = "血污撕裂者", ko = "내장 분쇄기" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 18000
+pieces = [
+    { display = 34111, entry = 17071, inventory_type = 13, subclass = 15, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "kingsfall"
+name = { en = "Kingsfall", de = "Kingsfall", fr = "Kingsfall", es = "Kingsfall", pt = "Kingsfall", ru = "Kingsfall", pl = "Kingsfall", tr = "Kingsfall", it = "Kingsfall", ja = "キングスフォール", zh = "王者之陨", ko = "왕의 몰락" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 44000
+pieces = [
+    { display = 35819, entry = 22802, inventory_type = 13, subclass = 15, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "widows_remorse"
+name = { en = "Widow's Remorse", de = "Widow's Remorse", fr = "Widow's Remorse", es = "Widow's Remorse", pt = "Widow's Remorse", ru = "Widow's Remorse", pl = "Widow's Remorse", tr = "Widow's Remorse", it = "Widow's Remorse", ja = "未亡人の悔恨", zh = "寡妇的悔恨", ko = "과부의 회한" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 35000
+pieces = [
+    { display = 35247, entry = 22806, inventory_type = 13, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "maul_of_the_redeemed_crusader"
+name = { en = "Maul of the Redeemed Crusader", de = "Maul of the Redeemed Crusader", fr = "Maul of the Redeemed Crusader", es = "Maul of the Redeemed Crusader", pt = "Maul of the Redeemed Crusader", ru = "Maul of the Redeemed Crusader", pl = "Maul of the Redeemed Crusader", tr = "Maul of the Redeemed Crusader", it = "Maul of the Redeemed Crusader", ja = "救われし聖戦士のモール", zh = "救赎十字军之槌", ko = "구원받은 성전사의 대형망치" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 32000
+pieces = [
+    { display = 36518, entry = 22809, inventory_type = 17, subclass = 5, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "gressil"
+name = { en = "Gressil, Dawn of Ruin", de = "Gressil, Dawn of Ruin", fr = "Gressil, Dawn of Ruin", es = "Gressil, Dawn of Ruin", pt = "Gressil, Dawn of Ruin", ru = "Gressil, Dawn of Ruin", pl = "Gressil, Dawn of Ruin", tr = "Gressil, Dawn of Ruin", it = "Gressil, Dawn of Ruin", ja = "グレシル、破滅の夜明け", zh = "格雷希尔，毁灭黎明", ko = "그레실 - 파멸의 새벽" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 50000
+pieces = [
+    { display = 36378, entry = 23054, inventory_type = 13, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "claw_of_the_frost_wyrm"
+name = { en = "Claw of the Frost Wyrm", de = "Claw of the Frost Wyrm", fr = "Claw of the Frost Wyrm", es = "Claw of the Frost Wyrm", pt = "Claw of the Frost Wyrm", ru = "Claw of the Frost Wyrm", pl = "Claw of the Frost Wyrm", tr = "Claw of the Frost Wyrm", it = "Claw of the Frost Wyrm", ja = "フロストワームの爪", zh = "冰霜巨龙之爪", ko = "서리고룡의 발톱" }
+flavour = { en = "A relic of the old world.", de = "Ein Relikt der alten Welt.", fr = "Une relique de l’ancien monde.", es = "Una reliquia del viejo mundo.", pt = "Uma relíquia do velho mundo.", ru = "Реликвия старого мира.", pl = "Relikt dawnego świata.", tr = "Eski dünyadan bir yadigâr.", it = "Una reliquia del vecchio mondo.", ja = "古き世界の遺物。", zh = "旧世界的遗物。", ko = "옛 세계의 유물." }
+price = 38000
+pieces = [
+    { display = 35818, entry = 23242, inventory_type = 22, subclass = 13, material = 1, sheath = 7 },
+]
+
+[[weapon_look]]
+key = "fang_of_kalecgos"
+name = { en = "Fang of Kalecgos", de = "Fang of Kalecgos", fr = "Fang of Kalecgos", es = "Fang of Kalecgos", pt = "Fang of Kalecgos", ru = "Fang of Kalecgos", pl = "Fang of Kalecgos", tr = "Fang of Kalecgos", it = "Fang of Kalecgos", ja = "カレクゴスの牙", zh = "卡雷苟斯之牙", ko = "칼렉고스의 송곳니" }
+flavour = { en = "An heirloom of the Burning Crusade.", de = "Ein Erbstück aus dem Brennenden Kreuzzug.", fr = "Un héritage de la Croisade ardente.", es = "Una reliquia de la Cruzada Ardiente.", pt = "Uma relíquia da Cruzada Ardente.", ru = "Наследие Пылающего Легиона.", pl = "Pamiątka z Płonącej Krucjaty.", tr = "Yanan Sefer’den bir yadigâr.", it = "Un cimelio della Crociata Infuocata.", ja = "バーニング・クルセイドの家宝。", zh = "燃烧的远征的传家宝。", ko = "불타는 성전의 가보." }
+price = 32000
+pieces = [
+    { display = 49970, entry = 34165, inventory_type = 13, subclass = 15, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "reign_of_misery"
+name = { en = "Reign of Misery", de = "Reign of Misery", fr = "Reign of Misery", es = "Reign of Misery", pt = "Reign of Misery", ru = "Reign of Misery", pl = "Reign of Misery", tr = "Reign of Misery", it = "Reign of Misery", ja = "悲嘆の治世", zh = "苦难之治", ko = "고통의 통치" }
+flavour = { en = "An heirloom of the Burning Crusade.", de = "Ein Erbstück aus dem Brennenden Kreuzzug.", fr = "Un héritage de la Croisade ardente.", es = "Una reliquia de la Cruzada Ardiente.", pt = "Uma relíquia da Cruzada Ardente.", ru = "Наследие Пылающего Легиона.", pl = "Pamiątka z Płonącej Krucjaty.", tr = "Yanan Sefer’den bir yadigâr.", it = "Un cimelio della Crociata Infuocata.", ja = "バーニング・クルセイドの家宝。", zh = "燃烧的远征的传家宝。", ko = "불타는 성전의 가보." }
+price = 34000
+pieces = [
+    { display = 47992, entry = 34176, inventory_type = 21, subclass = 4, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "crux_of_the_apocalypse"
+name = { en = "Crux of the Apocalypse", de = "Crux of the Apocalypse", fr = "Crux of the Apocalypse", es = "Crux of the Apocalypse", pt = "Crux of the Apocalypse", ru = "Crux of the Apocalypse", pl = "Crux of the Apocalypse", tr = "Crux of the Apocalypse", it = "Crux of the Apocalypse", ja = "黙示録の核心", zh = "天启十字", ko = "대재앙의 핵심" }
+flavour = { en = "An heirloom of the Burning Crusade.", de = "Ein Erbstück aus dem Brennenden Kreuzzug.", fr = "Un héritage de la Croisade ardente.", es = "Una reliquia de la Cruzada Ardiente.", pt = "Uma relíquia da Cruzada Ardente.", ru = "Наследие Пылающего Легиона.", pl = "Pamiątka z Płonącej Krucjaty.", tr = "Yanan Sefer’den bir yadigâr.", it = "Un cimelio della Crociata Infuocata.", ja = "バーニング・クルセイドの家宝。", zh = "燃烧的远征的传家宝。", ko = "불타는 성전의 가보." }
+price = 44000
+pieces = [
+    { display = 48026, entry = 34329, inventory_type = 13, subclass = 15, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "grand_magisters_staff"
+name = { en = "Grand Magister's Staff of Torrents", de = "Grand Magister's Staff of Torrents", fr = "Grand Magister's Staff of Torrents", es = "Grand Magister's Staff of Torrents", pt = "Grand Magister's Staff of Torrents", ru = "Grand Magister's Staff of Torrents", pl = "Grand Magister's Staff of Torrents", tr = "Grand Magister's Staff of Torrents", it = "Grand Magister's Staff of Torrents", ja = "大魔導師の激流の杖", zh = "大魔导师的激流法杖", ko = "대마법학자의 격류 지팡이" }
+flavour = { en = "An heirloom of the Burning Crusade.", de = "Ein Erbstück aus dem Brennenden Kreuzzug.", fr = "Un héritage de la Croisade ardente.", es = "Una reliquia de la Cruzada Ardiente.", pt = "Uma relíquia da Cruzada Ardente.", ru = "Наследие Пылающего Легиона.", pl = "Pamiątka z Płonącej Krucjaty.", tr = "Yanan Sefer’den bir yadigâr.", it = "Un cimelio della Crociata Infuocata.", ja = "バーニング・クルセイドの家宝。", zh = "燃烧的远征的传家宝。", ko = "불타는 성전의 가보." }
+price = 46000
+pieces = [
+    { display = 48030, entry = 34337, inventory_type = 17, subclass = 10, material = 2, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "apolyon"
+name = { en = "Apolyon, the Soul-Render", de = "Apolyon, the Soul-Render", fr = "Apolyon, the Soul-Render", es = "Apolyon, the Soul-Render", pt = "Apolyon, the Soul-Render", ru = "Apolyon, the Soul-Render", pl = "Apolyon, the Soul-Render", tr = "Apolyon, the Soul-Render", it = "Apolyon, the Soul-Render", ja = "アポリオン、魂を裂く者", zh = "阿波莉恩，灵魂撕裂者", ko = "아폴리온 - 영혼 파괴자" }
+flavour = { en = "An heirloom of the Burning Crusade.", de = "Ein Erbstück aus dem Brennenden Kreuzzug.", fr = "Un héritage de la Croisade ardente.", es = "Una reliquia de la Cruzada Ardiente.", pt = "Uma relíquia da Cruzada Ardente.", ru = "Наследие Пылающего Легиона.", pl = "Pamiątka z Płonącej Krucjaty.", tr = "Yanan Sefer’den bir yadigâr.", it = "Un cimelio della Crociata Infuocata.", ja = "バーニング・クルセイドの家宝。", zh = "燃烧的远征的传家宝。", ko = "불타는 성전의 가보." }
+price = 50000
+pieces = [
+    { display = 48023, entry = 34247, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "inevitable_defeat"
+name = { en = "Inevitable Defeat", de = "Inevitable Defeat", fr = "Inevitable Defeat", es = "Inevitable Defeat", pt = "Inevitable Defeat", ru = "Inevitable Defeat", pl = "Inevitable Defeat", tr = "Inevitable Defeat", it = "Inevitable Defeat", ja = "避けられぬ敗北", zh = "必然的失败", ko = "피할 수 없는 패배" }
+flavour = { en = "A trophy from the battles of Northrend.", de = "Eine Trophäe aus den Schlachten Nordends.", fr = "Un trophée des batailles du Norfendre.", es = "Un trofeo de las batallas de Rasganorte.", pt = "Um troféu das batalhas de Nortúndria.", ru = "Трофей из битв Нордскола.", pl = "Trofeum z bitew Northrendu.", tr = "Northrend savaşlarından bir ganimet.", it = "Un trofeo delle battaglie di Nordania.", ja = "ノースレンドの戦いの戦利品。", zh = "诺森德战役的战利品。", ko = "노스렌드 전투의 전리품." }
+price = 33000
+pieces = [
+    { display = 54560, entry = 40343, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "colossal_skull_clad_cleaver"
+name = { en = "Colossal Skull-Clad Cleaver", de = "Colossal Skull-Clad Cleaver", fr = "Colossal Skull-Clad Cleaver", es = "Colossal Skull-Clad Cleaver", pt = "Colossal Skull-Clad Cleaver", ru = "Colossal Skull-Clad Cleaver", pl = "Colossal Skull-Clad Cleaver", tr = "Colossal Skull-Clad Cleaver", it = "Colossal Skull-Clad Cleaver", ja = "巨大な髑髏飾りのクリーヴァー", zh = "巨型颅饰劈刀", ko = "해골장식 거대 도끼" }
+flavour = { en = "A trophy from the battles of Northrend.", de = "Eine Trophäe aus den Schlachten Nordends.", fr = "Un trophée des batailles du Norfendre.", es = "Un trofeo de las batallas de Rasganorte.", pt = "Um troféu das batalhas de Nortúndria.", ru = "Трофей из битв Нордскола.", pl = "Trofeum z bitew Northrendu.", tr = "Northrend savaşlarından bir ganimet.", it = "Un trofeo delle battaglie di Nordania.", ja = "ノースレンドの戦いの戦利品。", zh = "诺森德战役的战利品。", ko = "노스렌드 전투의 전리품." }
+price = 30000
+pieces = [
+    { display = 55709, entry = 37852, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "caress_of_insanity"
+name = { en = "Caress of Insanity", de = "Caress of Insanity", fr = "Caress of Insanity", es = "Caress of Insanity", pt = "Caress of Insanity", ru = "Caress of Insanity", pl = "Caress of Insanity", tr = "Caress of Insanity", it = "Caress of Insanity", ja = "狂気の愛撫", zh = "疯狂之抚", ko = "광기의 손길" }
+flavour = { en = "A trophy from the battles of Northrend.", de = "Eine Trophäe aus den Schlachten Nordends.", fr = "Un trophée des batailles du Norfendre.", es = "Un trofeo de las batallas de Rasganorte.", pt = "Um troféu das batalhas de Nortúndria.", ru = "Трофей из битв Нордскола.", pl = "Trofeum z bitew Northrendu.", tr = "Northrend savaşlarından bir ganimet.", it = "Un trofeo delle battaglie di Nordania.", ja = "ノースレンドの戦いの戦利品。", zh = "诺森德战役的战利品。", ko = "노스렌드 전투의 전리품." }
+price = 40000
+pieces = [
+    { display = 58740, entry = 46097, inventory_type = 13, subclass = 4, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "glorenzelg"
+name = { en = "Glorenzelg, High-Blade of the Silver Hand", de = "Glorenzelg, High-Blade of the Silver Hand", fr = "Glorenzelg, High-Blade of the Silver Hand", es = "Glorenzelg, High-Blade of the Silver Hand", pt = "Glorenzelg, High-Blade of the Silver Hand", ru = "Glorenzelg, High-Blade of the Silver Hand", pl = "Glorenzelg, High-Blade of the Silver Hand", tr = "Glorenzelg, High-Blade of the Silver Hand", it = "Glorenzelg, High-Blade of the Silver Hand", ja = "グロレンゼルグ、シルバーハンドの大剣", zh = "格罗雷泽格，白银之手高阶之刃", ko = "글로렌젤그 - 은빛 성기사단의 대검" }
+flavour = { en = "A trophy from the battles of Northrend.", de = "Eine Trophäe aus den Schlachten Nordends.", fr = "Un trophée des batailles du Norfendre.", es = "Un trofeo de las batallas de Rasganorte.", pt = "Um troféu das batalhas de Nortúndria.", ru = "Трофей из битв Нордскола.", pl = "Trofeum z bitew Northrendu.", tr = "Northrend savaşlarından bir ganimet.", it = "Un trofeo delle battaglie di Nordania.", ja = "ノースレンドの戦いの戦利品。", zh = "诺森德战役的战利品。", ko = "노스렌드 전투의 전리품." }
+price = 55000
+pieces = [
+    { display = 64397, entry = 50730, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "golden_bow"
+name = { en = "Golden Bow of Quel'Thalas", de = "Golden Bow of Quel'Thalas", fr = "Golden Bow of Quel'Thalas", es = "Golden Bow of Quel'Thalas", pt = "Golden Bow of Quel'Thalas", ru = "Golden Bow of Quel'Thalas", pl = "Golden Bow of Quel'Thalas", tr = "Golden Bow of Quel'Thalas", it = "Golden Bow of Quel'Thalas", ja = "クエル・サラスの黄金の弓", zh = "奎尔萨拉斯金弓", ko = "쿠엘탈라스의 황금 활" }
+flavour = { en = "An heirloom of the Burning Crusade.", de = "Ein Erbstück aus dem Brennenden Kreuzzug.", fr = "Un héritage de la Croisade ardente.", es = "Una reliquia de la Cruzada Ardiente.", pt = "Uma relíquia da Cruzada Ardente.", ru = "Наследие Пылающего Легиона.", pl = "Pamiątka z Płonącej Krucjaty.", tr = "Yanan Sefer’den bir yadigâr.", it = "Un cimelio della Crociata Infuocata.", ja = "バーニング・クルセイドの家宝。", zh = "燃烧的远征的传家宝。", ko = "불타는 성전의 가보." }
+price = 46000
+pieces = [
+    { display = 48294, entry = 34196, inventory_type = 15, subclass = 2, material = 1, sheath = 0 },
+]
+
+[[weapon_look]]
+key = "zods_repeating_longbow"
+name = { en = "Zod's Repeating Longbow", de = "Zod's Repeating Longbow", fr = "Zod's Repeating Longbow", es = "Zod's Repeating Longbow", pt = "Zod's Repeating Longbow", ru = "Zod's Repeating Longbow", pl = "Zod's Repeating Longbow", tr = "Zod's Repeating Longbow", it = "Zod's Repeating Longbow", ja = "ゾッドの連射長弓", zh = "佐德的连射长弓", ko = "조드의 연발 장궁" }
+flavour = { en = "A trophy from the battles of Northrend.", de = "Eine Trophäe aus den Schlachten Nordends.", fr = "Un trophée des batailles du Norfendre.", es = "Un trofeo de las batallas de Rasganorte.", pt = "Um troféu das batalhas de Nortúndria.", ru = "Трофей из битв Нордскола.", pl = "Trofeum z bitew Northrendu.", tr = "Northrend savaşlarından bir ganimet.", it = "Un trofeo delle battaglie di Nordania.", ja = "ノースレンドの戦いの戦利品。", zh = "诺森德战役的战利品。", ko = "노스렌드 전투의 전리품." }
+price = 50000
+pieces = [
+    { display = 65744, entry = 50034, inventory_type = 15, subclass = 2, material = 1, sheath = 0 },
+]
+
+# More weapons (2026-11-13): the Molten Core, Blackwing Lair, Ahn'Qiraj and Naxxramas, the
+# Kael'thas legendaries of Tempest Keep, the Black Temple and Icecrown Citadel. Lok'delar's row
+# has no material in Item.dbc (-1); the look says wood (2), as Atiesh's.
+
+[[weapon_look]]
+key = "benediction"
+name = { en = "Benediction", de = "Segnung", fr = "Bénédiction", es = "Bendición", pt = "Benção", ru = "Благословение", pl = "Błogosławieństwo", tr = "Dua", it = "Benedizione", ja = "ベネディクション", zh = "祈福", ko = "축도" }
+flavour = { en = "The priests' staff of light; speak the right word and it turns to Anathema.", de = "Der Lichtstab der Priester; das richtige Wort, und er wird zu Anathema.", fr = "Le bâton de lumière des prêtres ; prononcez le bon mot et il devient Anathème.", es = "El bastón de luz de los sacerdotes; di la palabra justa y se vuelve Anatema.", pt = "O cajado de luz dos sacerdotes; diga a palavra certa e ele se torna Anátema.", ru = "Посох света жрецов: произнеси верное слово, и он станет Анафемой.", pl = "Kostur światła kapłanów; wypowiedz właściwe słowo, a stanie się Anatemą.", tr = "Rahiplerin ışık asası; doğru sözü söyle, Lanet'e dönüşsün.", it = "Il bastone di luce dei sacerdoti; pronuncia la parola giusta e diventa Anatema.", ja = "プリーストたちの光の杖。正しい言葉を唱えればアナセマに変わる。", zh = "牧师的圣光之杖；念出正确的咒语，它就会化为咒逐。", ko = "사제들의 빛의 지팡이. 올바른 말을 외치면 파문으로 바뀐다." }
+price = 45000
+pieces = [
+    { display = 31347, entry = 18608, inventory_type = 17, subclass = 10, material = 2, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "staff_of_the_shadow_flame"
+name = { en = "Staff of the Shadow Flame", de = "Stab der Schattenflamme", fr = "Bâton de la Flamme de l'ombre", es = "Bastón de la Llama de las Sombras", pt = "Cajado da Chama Sombria", ru = "Посох Темного Пламени", pl = "Kostur Cienistego Płomienia", tr = "Gölge Alevi Asası", it = "Bastone della Fiamma Ombrosa", ja = "シャドウフレイムの杖", zh = "暗影烈焰法杖", ko = "어둠불꽃의 지팡이" }
+flavour = { en = "Pried from Nefarian's lair, still smouldering with black dragonfire.", de = "Aus Nefarians Hort geholt, noch immer glimmend vom schwarzen Drachenfeuer.", fr = "Arraché à l'antre de Nefarian, il couve encore le feu des dragons noirs.", es = "Arrancado de la guarida de Nefarian, aún arde con fuego de dragón negro.", pt = "Arrancado do covil de Nefarian, ainda arde com fogo de dragão negro.", ru = "Вырван из логова Нефариана и всё ещё тлеет черным драконьим огнем.", pl = "Wydarty z leża Nefariana, wciąż tli się czarnym smoczym ogniem.", tr = "Nefarian'ın inından koparıldı, hâlâ kara ejder ateşiyle için için yanıyor.", it = "Strappato alla tana di Nefarian, cova ancora il fuoco dei draghi neri.", ja = "ネファリアンの巣窟からこじ開けて奪ったもの。今も黒竜の炎でくすぶっている。", zh = "撬自奈法利安的巢穴，仍闷燃着黑龙之火。", ko = "네파리안의 둥지에서 뜯어 왔다. 아직도 검은 용의 불길로 그을리고 있다." }
+price = 40000
+pieces = [
+    { display = 31960, entry = 19356, inventory_type = 17, subclass = 10, material = 2, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "spinal_reaper"
+name = { en = "Spinal Reaper", de = "Rückgratschnitter", fr = "Faucheuse d'échine", es = "Segadora espinal", pt = "Ceifadora Espinhal", ru = "Позвоночный жнец", pl = "Kręgosłupowy Żniwiarz", tr = "Omurga Biçen", it = "Mietitrice Spinale", ja = "スパイナル・リーパー", zh = "脊骨收割者", ko = "척추 수확자" }
+flavour = { en = "Golemagg's great axe, notched by a thousand spines in the Molten Core.", de = "Golemaggs große Axt, gekerbt von tausend Rückgraten im Geschmolzenen Kern.", fr = "La grande hache de Golemagg, ébréchée par mille échines au Cœur du Magma.", es = "La gran hacha de Golemagg, mellada por mil espinazos en el Núcleo de Magma.", pt = "O grande machado de Golemagg, lascado por mil espinhas no Núcleo Derretido.", ru = "Огромный топор Големагга, иззубренный тысячей хребтов в Огненных Недрах.", pl = "Wielki topór Golemagga, wyszczerbiony na tysiącu kręgosłupów w Roztopionym Jądrze.", tr = "Golemagg'ın büyük baltası, Erimiş Çekirdek'te bin omurgada çentiklenmiş.", it = "La grande ascia di Golemagg, scheggiata da mille spine nel Nucleo Ardente.", ja = "ゴレマッグの大斧。モルテン・コアで千の棘に刃こぼれした。", zh = "古雷曼格的巨斧，在熔火之心被上千根尖刺磨出缺口。", ko = "골레마그의 거대한 도끼. 화산 심장부에서 수천 개의 등뼈에 이가 빠졌다." }
+price = 35000
+pieces = [
+    { display = 32200, entry = 17104, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "dalrends_blades"
+name = { en = "Dal'Rend's Blades", de = "Dal'Rends Klingen", fr = "Lames de Dal'Rend", es = "Hojas de Dal'Rend", pt = "Lâminas de Dal'Rend", ru = "Клинки Дал'Ренда", pl = "Ostrza Dal'Renda", tr = "Dal'Rend'in Kılıçları", it = "Lame di Dal'Rend", ja = "ダルレンドの双刃", zh = "达尔伦德的双刃", ko = "달렌드의 검" }
+flavour = { en = "Warchief Rend Blackhand's twin swords, the Sacred Charge and the Tribal Guardian.", de = "Die Zwillingsschwerter von Kriegshäuptling Rend Schwarzfaust, Heiliger Ansturm und Stammeswächter.", fr = "Les épées jumelles du chef de guerre Rend Main-Noire, la Charge sacrée et le Gardien tribal.", es = "Las espadas gemelas del jefe de guerra Rend Puño Negro, la Carga sagrada y el Guardián tribal.", pt = "As espadas gêmeas do chefe guerreiro Rend Mão-negra, a Carga Sagrada e o Guardião Tribal.", ru = "Парные мечи вождя Ренда Чернорука: Священный натиск и Племенной страж.", pl = "Bliźniacze miecze wodza Renda Czarnorękiego: Święta Szarża i Plemienny Strażnik.", tr = "Savaş reisi Rend Blackhand'in ikiz kılıçları, Kutsal Hücum ve Kabile Muhafızı.", it = "Le spade gemelle del capoguerra Rend Manonera, la Carica Sacra e il Guardiano Tribale.", ja = "大族長レンド・ブラックハンドの双剣、聖なる突撃と部族の守護者。", zh = "大酋长雷德·黑手的双剑：神圣冲锋与部族守护者。", ko = "대족장 렌드 블랙핸드의 쌍검, 신성한 돌격과 부족의 수호자." }
+price = 30000
+pieces = [
+    { display = 25648, entry = 12940, inventory_type = 21, subclass = 7, material = 1, sheath = 3 },
+    { display = 25647, entry = 12939, inventory_type = 22, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "quelserrar"
+name = { en = "Quel'Serrar", de = "Quel'Serrar", fr = "Quel'Serrar", es = "Quel'Serrar", pt = "Quel'Serrar", ru = "Кель'Серрар", pl = "Quel'Serrar", tr = "Quel'Serrar", it = "Quel'Serrar", ja = "クエル・セラー", zh = "奎尔塞拉", ko = "쿠엘세라" }
+flavour = { en = "The high elves' ancient blade, tempered anew in Onyxia's breath.", de = "Die uralte Klinge der Hochelfen, neu gehärtet in Onyxias Atem.", fr = "L'antique lame des hauts-elfes, retrempée dans le souffle d'Onyxia.", es = "La antigua hoja de los altos elfos, templada de nuevo en el aliento de Onyxia.", pt = "A antiga lâmina dos altos elfos, temperada de novo no sopro de Onyxia.", ru = "Древний клинок высших эльфов, заново закаленный дыханием Ониксии.", pl = "Pradawne ostrze wysokich elfów, zahartowane na nowo w oddechu Onyksji.", tr = "Yüksek elflerin kadim kılıcı, Onyxia'nın nefesinde yeniden su verildi.", it = "L'antica lama degli alti elfi, temprata di nuovo nel soffio di Onyxia.", ja = "ハイエルフの古の刃。オニクシアの吐息で新たに鍛え直された。", zh = "高等精灵的古老之剑，在奥妮克希亚的吐息中重新淬炼。", ko = "하이 엘프의 고대 검. 오닉시아의 숨결로 새로이 담금질되었다." }
+price = 40000
+pieces = [
+    { display = 52784, entry = 18348, inventory_type = 13, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "lokdelar"
+name = { en = "Lok'delar, Stave of the Ancient Keepers", de = "Lok'delar, Stab der Uralten Hüter", fr = "Lok'delar, bâton des anciens gardiens", es = "Lok'delar, Bastón de los Antiguos Vigilantes", pt = "Lok'delar, Cajado dos Guardiões Ancestrais", ru = "Лок'делар, Посох Древних Хранителей", pl = "Lok'delar, Kostur Pradawnych Strażników", tr = "Lok'delar, Kadim Bekçilerin Asası", it = "Lok'delar, Bastone degli Antichi Custodi", ja = "ロークデラー、古の守り手の杖", zh = "洛克迪拉，上古守护者的长杖", ko = "록델라 - 고대 수호자의 지팡이" }
+flavour = { en = "Rhok'delar's twin, carved from the same ancient as the bow.", de = "Rhok'delars Zwilling, aus demselben Urtum geschnitzt wie der Bogen.", fr = "Le jumeau de Rhok'delar, taillé dans le même ancien que l'arc.", es = "El gemelo de Rhok'delar, tallado del mismo anciano que el arco.", pt = "O gêmeo de Rhok'delar, entalhado do mesmo anciente que o arco.", ru = "Близнец Рок'делара, вырезанный из того же древа, что и лук.", pl = "Bliźniak Rhok'delara, wyrzeźbiony z tego samego pradrzewa co łuk.", tr = "Rhok'delar'ın ikizi, yayla aynı kadim ağaçtan oyuldu.", it = "Il gemello di Rhok'delar, intagliato dallo stesso antico dell'arco.", ja = "ロクデラーの片割れ。弓と同じ古き樹から削り出された。", zh = "洛克德拉的孪生兄弟，取自与那把弓同一棵古树。", ko = "록델라의 쌍둥이. 그 활과 같은 고대정령에게서 깎아 냈다." }
+price = 45000
+pieces = [
+    { display = 31163, entry = 18715, inventory_type = 17, subclass = 10, material = 2, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "dark_edge_of_insanity"
+name = { en = "Dark Edge of Insanity", de = "Dunkle Schneide des Wahnsinns", fr = "Sombre lame de la démence", es = "Filo oscuro de la locura", pt = "Gume Sombrio da Insanidade", ru = "Темное лезвие безумия", pl = "Mroczne Ostrze Szaleństwa", tr = "Deliliğin Karanlık Ağzı", it = "Taglio Oscuro della Follia", ja = "狂気の暗き刃", zh = "疯狂之暗锋", ko = "광기의 검은 칼날" }
+flavour = { en = "Cut from C'Thun's lair. Hold it too long and you begin to listen.", de = "Aus C'Thuns Hort geschnitten. Wer sie zu lange hält, beginnt zuzuhören.", fr = "Taillée dans l'antre de C'Thun. Tenez-la trop longtemps et vous commencez à écouter.", es = "Cortado de la guarida de C'Thun. Si lo sostienes demasiado, empiezas a escuchar.", pt = "Cortado do covil de C'Thun. Segure-o por tempo demais e você começa a ouvir.", ru = "Вырезано в логове К'Туна. Держи его слишком долго, и начнешь прислушиваться.", pl = "Wycięte z leża C'Thuna. Trzymaj je zbyt długo, a zaczniesz słuchać.", tr = "C'Thun'un inından kesildi. Çok uzun tutarsan dinlemeye başlarsın.", it = "Tagliato nella tana di C'Thun. Tienilo troppo a lungo e inizierai ad ascoltare.", ja = "クトゥーンの巣窟から切り出された。長く握っていると、耳を傾け始めてしまう。", zh = "取自克苏恩的巢穴。握得太久，你便会开始倾听。", ko = "쑨의 둥지에서 잘라 냈다. 너무 오래 쥐고 있으면 귀를 기울이게 된다." }
+price = 45000
+pieces = [
+    { display = 33435, entry = 21134, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "deaths_sting"
+name = { en = "Death's Sting", de = "Todesstachel", fr = "Dard de la mort", es = "Aguijón de la muerte", pt = "Ferrão da Morte", ru = "Жало смерти", pl = "Żądło Śmierci", tr = "Ölümün İğnesi", it = "Pungiglione della Morte", ja = "死の針", zh = "死亡之刺", ko = "죽음의 침" }
+flavour = { en = "A Qiraji fang of a dagger: the old god's own bite.", de = "Ein Qiraji-Reißzahn von einem Dolch: der Biss des alten Gottes selbst.", fr = "Un croc qiraji en guise de dague : la morsure même du dieu très ancien.", es = "Un colmillo qiraji convertido en daga: el mordisco del propio dios antiguo.", pt = "Uma presa qiraji feita adaga: a mordida do próprio deus antigo.", ru = "Киражский клык вместо кинжала: укус самого древнего бога.", pl = "Qiraji kieł zamiast sztyletu: ukąszenie samego pradawnego boga.", tr = "Hançer niyetine bir Qiraji dişi: kadim tanrının ta kendi ısırığı.", it = "Una zanna qiraji fatta pugnale: il morso stesso del dio antico.", ja = "牙のようなキラジの短剣。古の神そのものの牙。", zh = "形如其拉獠牙的匕首：古神的噬咬。", ko = "퀴라지의 송곳니 같은 단검: 고대 신 자신의 이빨." }
+price = 40000
+pieces = [
+    { display = 34513, entry = 21126, inventory_type = 13, subclass = 15, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "might_of_menethil"
+name = { en = "Might of Menethil", de = "Macht von Menethil", fr = "Puissance de Menethil", es = "Poder de Menethil", pt = "Poder de Menethil", ru = "Мощь Менетила", pl = "Moc Menethila", tr = "Menethil'in Kudreti", it = "Potenza di Menethil", ja = "メネシルの力", zh = "米奈希尔之力", ko = "메네실의 힘" }
+flavour = { en = "King Terenas's hammer, carried off to Naxxramas by the Scourge.", de = "König Terenas' Hammer, von der Geißel nach Naxxramas verschleppt.", fr = "Le marteau du roi Terenas, emporté à Naxxramas par le Fléau.", es = "El martillo del rey Terenas, llevado a Naxxramas por la Plaga.", pt = "O martelo do rei Terenas, levado para Naxxramas pelo Flagelo.", ru = "Молот короля Теренаса, унесенный Плетью в Наксрамас.", pl = "Młot króla Terenasa, wywleczony przez Plagę do Naxxramas.", tr = "Kral Terenas'ın çekici, Yıkım ordusunca Naxxramas'a götürüldü.", it = "Il martello di re Terenas, portato a Naxxramas dal Flagello.", ja = "スカージにナクスラーマスへ持ち去られた、テレナス王のハンマー。", zh = "泰瑞纳斯国王的战锤，被天灾军团带到了纳克萨玛斯。", ko = "스컬지가 낙스라마스로 가져간 테레나스 왕의 망치." }
+price = 40000
+pieces = [
+    { display = 35239, entry = 22798, inventory_type = 17, subclass = 5, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "warp_slicer"
+name = { en = "Warp Slicer", de = "Warpschnitter", fr = "Tranche-distorsion", es = "Cercenadora de distorsión", pt = "Fatiador Dobra-espaço", ru = "Искажающий рассекатель", pl = "Tnące Zakrzywienie", tr = "Bükülme Doğrayıcı", it = "Fendicurvatura", ja = "ワープ・スライサー", zh = "扭曲切割者", ko = "차원 절단기" }
+flavour = { en = "One of the seven weapons Kael'thas Sunstrider tore from the Nether.", de = "Eine der sieben Waffen, die Kael'thas Sonnenwanderer dem Nether entriss.", fr = "L'une des sept armes que Kael'thas Haut-Soleil arracha au Néant.", es = "Una de las siete armas que Kael'thas Caminante del Sol arrancó del Vacío Abisal.", pt = "Uma das sete armas que Kael'thas Andassol arrancou da Espiral Etérea.", ru = "Одно из семи орудий, что Кэл'тас Солнечный Скиталец вырвал из Пустоты.", pl = "Jedna z siedmiu broni, które Kael'thas Słoneczny Wędrowiec wydarł Netherowi.", tr = "Kael'thas Sunstrider'ın Hiçlik'ten kopardığı yedi silahtan biri.", it = "Una delle sette armi che Kael'thas Solealto strappò al Vuoto Fatuo.", ja = "ケイルサス・サンストライダーがネザーから引き出した七つの武器のひとつ。", zh = "凯尔萨斯·逐日者从幽冥中夺来的七件武器之一。", ko = "캘타스 선스트라이더가 황천에서 뜯어 온 일곱 무기 중 하나." }
+price = 150000
+pieces = [
+    { display = 41867, entry = 30311, inventory_type = 13, subclass = 7, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "infinity_blade"
+name = { en = "Infinity Blade", de = "Unendlichkeitsklinge", fr = "Lame d'infinité", es = "Hoja infinita", pt = "Lâmina do Infinito", ru = "Клинок бесконечности", pl = "Ostrze Nieskończoności", tr = "Sonsuzluk Bıçağı", it = "Lama dell'Infinito", ja = "インフィニティ・ブレード", zh = "无尽之刃", ko = "무한의 칼날" }
+flavour = { en = "Kael'thas's dagger, its edge bent through time itself.", de = "Kael'thas' Dolch, seine Schneide durch die Zeit selbst gebogen.", fr = "La dague de Kael'thas, au fil courbé à travers le temps lui-même.", es = "La daga de Kael'thas, con el filo curvado a través del propio tiempo.", pt = "A adaga de Kael'thas, com o gume dobrado através do próprio tempo.", ru = "Кинжал Кэл'таса, чье лезвие изогнуто сквозь само время.", pl = "Sztylet Kael'thasa, którego ostrze wygięło się przez sam czas.", tr = "Kael'thas'ın hançeri, ağzı zamanın kendisinden bükülmüş.", it = "Il pugnale di Kael'thas, il filo piegato attraverso il tempo stesso.", ja = "ケイルサスの短剣。その刃は時そのものを曲げる。", zh = "凯尔萨斯的匕首，其锋刃扭曲了时间本身。", ko = "캘타스의 단검. 그 날은 시간 자체를 꿰뚫어 휘었다." }
+price = 150000
+pieces = [
+    { display = 41872, entry = 30312, inventory_type = 13, subclass = 15, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "devastation"
+name = { en = "Devastation", de = "Verwüstung", fr = "Dévastation", es = "Devastación", pt = "Devastação", ru = "Разрушение", pl = "Dewastacja", tr = "Harabiyet", it = "Devastazione", ja = "デヴァステーション", zh = "毁灭之力", ko = "황폐" }
+flavour = { en = "Kael'thas's great axe, burning with the Sunwell's stolen fire.", de = "Kael'thas' große Axt, brennend vom gestohlenen Feuer des Sonnenbrunnens.", fr = "La grande hache de Kael'thas, brûlante du feu volé au Puits de soleil.", es = "La gran hacha de Kael'thas, ardiendo con el fuego robado de la Fuente del Sol.", pt = "O grande machado de Kael'thas, ardendo com o fogo roubado da Nascente do Sol.", ru = "Огромный топор Кэл'таса, пылающий похищенным огнем Солнечного Колодца.", pl = "Wielki topór Kael'thasa, płonący skradzionym ogniem Studni Słońca.", tr = "Kael'thas'ın büyük baltası, Güneş Kuyusu'ndan çalınan ateşle yanıyor.", it = "La grande ascia di Kael'thas, ardente del fuoco rubato al Pozzo Solare.", ja = "ケイルサスの大斧。サンウェルから盗んだ炎で燃えている。", zh = "凯尔萨斯的巨斧，燃烧着从太阳之井盗来的火焰。", ko = "캘타스의 거대한 도끼. 태양샘에서 훔친 불로 타오른다." }
+price = 150000
+pieces = [
+    { display = 41560, entry = 30316, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "cosmic_infuser"
+name = { en = "Cosmic Infuser", de = "Kosmischer Infusor", fr = "Infuseur cosmique", es = "Infusor cósmico", pt = "Infusor Cósmico", ru = "Космический вдохновитель", pl = "Kosmiczny Napełniacz", tr = "Kozmik Aşılayıcı", it = "Infusore Cosmico", ja = "コズミック・インフューザー", zh = "宇宙灌注者", ko = "우주 주입기" }
+flavour = { en = "A scepter of Tempest Keep that pours the stars into its wielder.", de = "Ein Zepter der Festung der Stürme, das die Sterne in seinen Träger gießt.", fr = "Un sceptre du donjon de la Tempête qui verse les étoiles en son porteur.", es = "Un cetro del Castillo de la Tempestad que vierte las estrellas en su portador.", pt = "Um cetro da Bastilha da Tormenta que derrama as estrelas em quem o empunha.", ru = "Скипетр Крепости Бурь, вливающий звезды в своего владельца.", pl = "Berło Twierdzy Burz, które wlewa gwiazdy w swego posiadacza.", tr = "Fırtına Kalesi'nin bir asası, yıldızları taşıyanına akıtır.", it = "Uno scettro della Fortezza della Tempesta che riversa le stelle in chi lo impugna.", ja = "テンペスト・キープの笏。星々の力を持ち主に注ぎ込む。", zh = "风暴要塞的权杖，将星辰之力灌注于持有者。", ko = "별을 사용자에게 쏟아붓는 폭풍우 요새의 홀." }
+price = 150000
+pieces = [
+    { display = 41873, entry = 30317, inventory_type = 21, subclass = 4, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "staff_of_disintegration"
+name = { en = "Staff of Disintegration", de = "Stab der Auflösung", fr = "Bâton de désintégration", es = "Bastón de desintegración", pt = "Cajado da Desintegração", ru = "Посох распада", pl = "Kostur Dezintegracji", tr = "Parçalanma Asası", it = "Bastone della Disintegrazione", ja = "分解の杖", zh = "瓦解法杖", ko = "분해의 지팡이" }
+flavour = { en = "The prince's own staff, crackling with the energies of the Eye.", de = "Der Stab des Prinzen selbst, knisternd von den Energien des Auges.", fr = "Le bâton du prince en personne, crépitant des énergies de l'Œil.", es = "El bastón del propio príncipe, crepitando con las energías del Ojo.", pt = "O cajado do próprio príncipe, crepitando com as energias do Olho.", ru = "Посох самого принца, потрескивающий энергиями Ока.", pl = "Kostur samego księcia, trzeszczący energiami Oka.", tr = "Prensin kendi asası, Göz'ün enerjileriyle çatırdıyor.", it = "Il bastone del principe in persona, crepitante delle energie dell'Occhio.", ja = "王子自身の杖。アイの力でぱちぱちと音を立てている。", zh = "王子本人的法杖，噼啪作响着风暴要塞的能量。", ko = "왕자 자신의 지팡이. 눈의 에너지로 지직거린다." }
+price = 150000
+pieces = [
+    { display = 41895, entry = 30313, inventory_type = 17, subclass = 10, material = 1, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "netherstrand_longbow"
+name = { en = "Netherstrand Longbow", de = "Netherfaserlangbogen", fr = "Arc long brin-de-Néant", es = "Arco largo de fibra abisal", pt = "Arco Longo de Fio Etéreo", ru = "Пустотный длинный лук", pl = "Długi Łuk z Pasm Netheru", tr = "Hiçlik Telli Uzun Yay", it = "Arco Lungo Filafatuo", ja = "ネザーストランドの長弓", zh = "虚空之弦长弓", ko = "황천매듭 장궁" }
+flavour = { en = "Strung with threads of the Nether, it looses arrows of pure light.", de = "Mit Fäden des Nethers bespannt, verschießt er Pfeile aus reinem Licht.", fr = "Tendu de fils du Néant, il décoche des flèches de lumière pure.", es = "Encordado con hilos del Vacío Abisal, dispara flechas de luz pura.", pt = "Encordoado com fios da Espiral Etérea, dispara flechas de luz pura.", ru = "Натянутый нитями Пустоты, он пускает стрелы чистого света.", pl = "Naciągnięty nićmi Netheru, wypuszcza strzały z czystego światła.", tr = "Hiçlik iplikleriyle gerilmiş, saf ışıktan oklar fırlatır.", it = "Incordato con fili del Vuoto, scocca frecce di pura luce.", ja = "ネザーの糸を張った弓。純粋な光の矢を放つ。", zh = "以幽冥丝线为弦，射出纯粹的光之箭。", ko = "황천의 실로 시위를 걸어, 순수한 빛의 화살을 쏜다." }
+price = 150000
+pieces = [
+    { display = 41875, entry = 30318, inventory_type = 15, subclass = 2, material = 2, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "twinblade_of_the_phoenix"
+name = { en = "Twinblade of the Phoenix", de = "Zwillingsklinge des Phönix", fr = "Lame jumelle du phénix", es = "Hoja gemela del fénix", pt = "Lâmina Gêmea da Fênix", ru = "Парный клинок феникса", pl = "Bliźniacze Ostrze Feniksa", tr = "Ankanın İkiz Kılıcı", it = "Lama Gemella della Fenice", ja = "フェニックスの双刃", zh = "凤凰双刃", ko = "불사조의 쌍날검" }
+flavour = { en = "Al'ar's fire in steel, won in the halls of Tempest Keep.", de = "Al'ars Feuer in Stahl, errungen in den Hallen der Festung der Stürme.", fr = "Le feu d'Al'ar fait acier, gagné dans les salles du donjon de la Tempête.", es = "El fuego de Al'ar hecho acero, ganado en las salas del Castillo de la Tempestad.", pt = "O fogo de Al'ar em aço, conquistado nos salões da Bastilha da Tormenta.", ru = "Пламя Ал'ара в стали, добытое в залах Крепости Бурь.", pl = "Ogień Al'ara w stali, zdobyty w salach Twierdzy Burz.", tr = "Al'ar'ın ateşi çelikte, Fırtına Kalesi'nin salonlarında kazanıldı.", it = "Il fuoco di Al'ar nell'acciaio, conquistato nelle sale della Fortezza della Tempesta.", ja = "鋼に宿ったアルアーの炎。テンペスト・キープの広間で勝ち取られた。", zh = "铸入钢铁的奥之火，赢自风暴要塞的大厅。", ko = "강철에 깃든 알라르의 불꽃. 폭풍우 요새의 전당에서 얻었다." }
+price = 38000
+pieces = [
+    { display = 42183, entry = 29993, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "black_bow_of_the_betrayer"
+name = { en = "Black Bow of the Betrayer", de = "Schwarzer Bogen des Verräters", fr = "Arc noir du traître", es = "Arco negro del traidor", pt = "Arco Negro do Traidor", ru = "Черный лук Предателя", pl = "Czarny Łuk Zdrajcy", tr = "Hainin Kara Yayı", it = "Arco Nero del Traditore", ja = "裏切り者の黒き弓", zh = "背叛者的黑弓", ko = "배신자의 검은 활" }
+flavour = { en = "Taken from Illidan's own temple, it drinks the mana of its marks.", de = "Aus Illidans eigenem Tempel geholt, trinkt er das Mana seiner Ziele.", fr = "Pris dans le temple d'Illidan, il boit le mana de ses cibles.", es = "Tomado del templo del propio Illidan, bebe el maná de sus blancos.", pt = "Tomado do templo do próprio Illidan, ele bebe o mana de seus alvos.", ru = "Взятый в храме самого Иллидана, он пьет ману своих целей.", pl = "Zabrany ze świątyni samego Illidana, pije manę swoich celów.", tr = "Illidan'ın kendi tapınağından alındı, hedeflerinin manasını içer.", it = "Preso dal tempio stesso di Illidan, beve il mana dei suoi bersagli.", ja = "イリダン自身の神殿から奪われた。斬った者のマナを飲み干す。", zh = "取自伊利丹的神殿，它会吸取目标的法力。", ko = "일리단의 신전에서 가져왔다. 표적의 마나를 들이켠다." }
+price = 45000
+pieces = [
+    { display = 45485, entry = 32336, inventory_type = 15, subclass = 2, material = 1, sheath = 0 },
+]
+
+[[weapon_look]]
+key = "bryntroll"
+name = { en = "Bryntroll, the Bone Arbiter", de = "Bryntroll, der Knochenschlichter", fr = "Bryntroll, l'arbitre des os", es = "Bryntroll, el Árbitro de Huesos", pt = "Bryntroll, o Árbitro de Ossos", ru = "Бринтролл, Костяной арбитр", pl = "Bryntroll, Kościany Arbiter", tr = "Bryntroll, Kemik Hakemi", it = "Bryntroll, l'Arbitro delle Ossa", ja = "ブリントロール、骨の裁定者", zh = "布莱恩特罗尔，骸骨仲裁者", ko = "브린트롤 - 뼈의 심판자" }
+flavour = { en = "Forged in Icecrown, it drinks the life of all it cleaves.", de = "In Eiskrone geschmiedet, trinkt es das Leben von allem, was es spaltet.", fr = "Forgé dans la Couronne de glace, il boit la vie de tout ce qu'il fend.", es = "Forjada en Corona de Hielo, bebe la vida de todo lo que hiende.", pt = "Forjado na Coroa de Gelo, ele bebe a vida de tudo o que fende.", ru = "Выкованный в Ледяной Короне, он пьет жизнь всего, что рассекает.", pl = "Wykuty w Icecrown, pije życie wszystkiego, co rozpłata.", tr = "Buz Tacı'nda dövüldü, yardığı her şeyin hayatını içer.", it = "Forgiata a Corona di Ghiaccio, beve la vita di tutto ciò che fende.", ja = "アイスクラウンで鍛えられ、斬り裂くすべての命を飲み干す。", zh = "锻造于冰冠冰川，吸取它劈开的一切生命。", ko = "얼음왕관에서 벼려 냈다. 베어 낸 모든 것의 생명을 들이켠다." }
+price = 50000
+pieces = [
+    { display = 64879, entry = 50709, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+[[weapon_look]]
+key = "archus"
+name = { en = "Archus, Greatstaff of Antonidas", de = "Archus, Großstab von Antonidas", fr = "Archus, grand bâton d'Antonidas", es = "Archus, gran bastón de Antonidas", pt = "Archus, Grão-cajado de Antonidas", ru = "Архус, великий посох Антонидаса", pl = "Archus, Wielki Kostur Antonidasa", tr = "Archus, Antonidas'ın Büyük Asası", it = "Archus, Grande Bastone di Antonidas", ja = "アーカス、アントニダスの大杖", zh = "阿库斯，安东尼达斯的巨杖", ko = "아르쿠스 - 안토니다스의 대지팡이" }
+flavour = { en = "Dalaran's archmage's greatstaff, raised again in the Lich King's citadel.", de = "Der Großstab von Dalarans Erzmagier, in der Zitadelle des Lichkönigs erneut erhoben.", fr = "Le grand bâton de l'archimage de Dalaran, relevé dans la citadelle du roi-liche.", es = "El gran bastón del archimago de Dalaran, alzado de nuevo en la ciudadela del Rey Exánime.", pt = "O grão-cajado do arquimago de Dalaran, erguido de novo na cidadela do Lich Rei.", ru = "Великий посох верховного мага Даларана, вновь поднятый в цитадели Короля-лича.", pl = "Wielki kostur arcymaga Dalaranu, wzniesiony znów w cytadeli Króla Lisza.", tr = "Dalaran başbüyücüsünün büyük asası, Lich King'in kalesinde yeniden kaldırıldı.", it = "Il grande bastone dell'arcimago di Dalaran, rialzato nella cittadella del Re dei Lich.", ja = "ダラランの大魔術師の大杖。リッチキングの城塞で再び掲げられた。", zh = "达拉然大法师的巨杖，在巫妖王的堡垒中重现于世。", ko = "달라란 대마법사의 거대한 지팡이. 리치 왕의 성채에서 다시 일어섰다." }
+price = 50000
+pieces = [
+    { display = 64334, entry = 50731, inventory_type = 17, subclass = 10, material = 2, sheath = 2 },
+]
+
+[[weapon_look]]
+key = "royal_scepter_of_terenas"
+name = { en = "Royal Scepter of Terenas II", de = "Königliches Zepter von Terenas II.", fr = "Sceptre royal de Terenas II", es = "Cetro real de Terenas II", pt = "Cetro Real de Terenas II", ru = "Королевский скипетр Теренаса II", pl = "Królewskie Berło Terenasa II", tr = "Terenas II'nin Kraliyet Asası", it = "Scettro Reale di Terenas II", ja = "テレナス2世の王笏", zh = "泰瑞纳斯二世的皇家权杖", ko = "테레나스 2세의 왕홀" }
+flavour = { en = "The scepter of Lordaeron's last king, taken back from his son's citadel.", de = "Das Zepter von Lordaerons letztem König, zurückgeholt aus der Zitadelle seines Sohnes.", fr = "Le sceptre du dernier roi de Lordaeron, repris dans la citadelle de son fils.", es = "El cetro del último rey de Lordaeron, recuperado de la ciudadela de su hijo.", pt = "O cetro do último rei de Lordaeron, retomado da cidadela de seu filho.", ru = "Скипетр последнего короля Лордерона, отнятый в цитадели его сына.", pl = "Berło ostatniego króla Lordaeronu, odebrane z cytadeli jego syna.", tr = "Lordaeron'un son kralının asası, oğlunun kalesinden geri alındı.", it = "Lo scettro dell'ultimo re di Lordaeron, ripreso dalla cittadella di suo figlio.", ja = "ロルデロン最後の王の笏。その息子の城塞から取り戻された。", zh = "洛丹伦末代国王的权杖，从他儿子的堡垒中夺回。", ko = "로데론 마지막 왕의 홀. 그 아들의 성채에서 되찾아 왔다." }
+price = 45000
+pieces = [
+    { display = 64521, entry = 50734, inventory_type = 21, subclass = 4, material = 1, sheath = 3 },
+]
+
+[[weapon_look]]
+key = "shadows_edge"
+name = { en = "Shadow's Edge", de = "Klinge der Schatten", fr = "Lame des ombres", es = "Filo de las sombras", pt = "Lâmina das Sombras", ru = "Клинок теней", pl = "Ostrze cienia", tr = "Gölgenin Kıyısı", it = "Lama dell'ombra", ja = "シャドウズ・エッジ", zh = "暗影之锋", ko = "어둠의 칼날" }
+flavour = { en = "Darion Mograine's charge to the brave: the axe that becomes Shadowmourne.", de = "Darion Mograines Auftrag an die Tapferen: die Axt, aus der Schattengram wird.", fr = "La mission de Darion Mograine aux braves : la hache qui devient Deuillombre.", es = "El encargo de Darion Mograine a los valientes: el hacha que se convierte en Agonía de las Sombras.", pt = "A missão de Darion Mograine aos bravos: o machado que se torna Shadowmourne.", ru = "Поручение Дариона Моргрейна храбрецам: топор, что станет Скорбью Тьмы.", pl = "Zadanie Dariona Mograine'a dla dzielnych: topór, który staje się Shadowmourne.", tr = "Darion Mograine'in cesurlara görevi: Shadowmourne'a dönüşen balta.", it = "L'incarico di Darion Mograine ai coraggiosi: l'ascia che diventa Shadowmourne.", ja = "勇者へのダリオン・モグレインの託し：シャドウモーンとなる斧。", zh = "达里安·莫格莱尼托付给勇者的使命：这把斧将化为暗影之哀。", ko = "다리온 모그레인이 용사에게 맡긴 사명: 어둠한이 될 도끼." }
+price = 55000
+pieces = [
+    { display = 63876, entry = 49888, inventory_type = 17, subclass = 1, material = 1, sheath = 1 },
+]
+
+# A sword of our own, not a stock item: its model is built by tools/bloodmourne.py on the scan of Frostmourne,
+# its display is the cosmetics patch's (tools/cosmetics-patch.js) and its item entry is ours, which the
+# server alone answers. The admins' weapon.
+[[weapon_look]]
+key = "bloodmourne"
+name = { en = "Bloodmourne", de = "Blutgram", fr = "Deuillesang", es = "Agonía de Sangre", pt = "Bloodmourne", ru = "Кровавая Скорбь", pl = "Bloodmourne", tr = "Bloodmourne", it = "Bloodmourne", ja = "ブラッドモーン", zh = "血之哀伤", ko = "핏빛한" }
+flavour = { en = "Frostmourne's shards, bound again by blood. The blade has never stopped bleeding.", de = "Frostgrams Scherben, von Blut wieder zusammengehalten. Die Klinge hat nie aufgehört zu bluten.", fr = "Les éclats de Deuillegivre, de nouveau liés par le sang. La lame n'a jamais cessé de saigner.", es = "Los fragmentos de Agonía de Escarcha, unidos de nuevo por la sangre. La hoja nunca ha dejado de sangrar.", pt = "Os estilhaços da Frostmourne, unidos de novo pelo sangue. A lâmina nunca parou de sangrar.", ru = "Осколки Ледяной Скорби, вновь скреплённые кровью. Клинок так и не перестал кровоточить.", pl = "Odłamki Frostmourne, na nowo spojone krwią. Ostrze nigdy nie przestało krwawić.", tr = "Frostmourne'un parçaları, kanla yeniden birleştirildi. Kılıç kanamayı hiç bırakmadı.", it = "I frammenti di Frostmourne, di nuovo uniti dal sangue. La lama non ha mai smesso di sanguinare.", ja = "フロストモーンの破片が、血によって再び繋ぎ合わされた。この刃は決して血を流すのをやめない。", zh = "霜之哀伤的碎片，被鲜血重新凝结在一起。这把剑从未停止流血。", ko = "서리한의 파편이 피로 다시 이어졌다. 이 검은 결코 피 흘리기를 멈추지 않는다." }
+price = 0
+admin = true
+pieces = [
+    { display = 90961, entry = 980001, inventory_type = 17, subclass = 8, material = 1, sheath = 1 },
+]

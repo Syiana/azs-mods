@@ -1,0 +1,16 @@
+# Nimar the Slayer's abilities, Arathi Basin.
+
+[[boss]]
+key = "nimar_the_slayer"
+
+[[boss.kit]]
+every = 10.0
+ability = { combo = [["charge", "charge"], 1.7] }
+
+[[boss.kit]]
+every = 11.0
+ability = { whirlwind = { spell = 1680, radius = 6.0, lasts = 4.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

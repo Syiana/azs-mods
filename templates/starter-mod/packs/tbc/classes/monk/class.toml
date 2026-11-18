@@ -1,0 +1,133 @@
+# The monk, Mists of Pandaria's class, after a friend's 3.3.5a backport (the Shadowsong client,
+# data/dl/SOURCES/shadowsong): fists and feet, chi and brews, three stances. AS has no monk, so
+# every number here is ours. `TUNE`
+#
+# Chi: the generators (Jab, Spinning Crane Kick, Expel Harm, Keg Smash) gather it, the spenders
+# (Tiger Palm, Blackout Kick, Rising Sun Kick, Fists of Fury, Touch of Death, Breath of Fire) spend
+# it when it is there to hit harder; nothing waits for it. Brews come back on their own and
+# strengthen each stance's own brew (Fortifying, Tigereye, Mana Tea), which a hand deals only once
+# its stance talent is taken (`needs`).
+key = "monk"
+# The `ChrClasses` id, as the Shadowsong client numbers the monk (patch-{ adds the row).
+id = 12
+# Which piece profile (`gear/pieces.toml`) sits in each armor slot, head to hands: the original's
+# (class id * 3 + slot) mod 8. A class wears each of the eight once.
+piece_profiles = [6, 7, 0, 1, 2, 3, 4, 5]
+# Health at level 1: the warrior's. `TUNE`
+health = 230
+# Balance (2026-11-10): the monk read as weak in every stance (the strikes reach one enemy a blow, 6 yd,
+# on 200 health and no class bonus). Tougher and a little stronger, as the warrior is. 6 % less taken is
+# 6 % more effective health.
+damage_pct = 4
+taken_pct = -6
+power = "energy"
+starter = "jab"
+# As Mists of Pandaria's character creation allows them: no worgen, no goblins.
+races = [1, 3, 4, 7, 11, 2, 5, 8, 6, 10, 15, 17]
+# A staff, as the monk's first weapon (`content.rs` holds its `Item.dbc` row).
+starter_weapons = [
+    35, # Bent Staff
+]
+# The legendary dash card: Roll's icon, and what it does.
+dash_spell = 900051
+dash_legend = { en = "Your Roll ends in a Flying Serpent Kick: every enemy where you land is struck and slowed.", de = "Deine Rolle endet in einem Tritt der fliegenden Schlange: Jeder Gegner am Landepunkt wird getroffen und verlangsamt.", fr = "Ta roulade se termine par un Coup de pied du serpent volant : chaque ennemi là où tu atterris est frappé et ralenti.", es = "Tu voltereta termina en una Patada de serpiente voladora: cada enemigo donde aterrizas recibe un golpe y se ralentiza.", pt = "Sua Rolagem termina em um Chute da Serpente Voadora: todo inimigo onde você pousa é atingido e fica lento.", ru = "Твой кувырок заканчивается Ударом летящего змея: каждый враг в месте приземления получает урон и замедляется.", pl = "Twój Przewrót kończy się Latającym kopnięciem węża: każdy przeciwnik w miejscu lądowania zostaje trafiony i spowolniony.", tr = "Yuvarlanman Uçan Yılan Tekmesi ile biter: indiğin yerdeki her düşman vurulur ve yavaşlar.", it = "La tua Rotolata termina in un Calcio del serpente volante: ogni nemico dove atterri viene colpito e rallentato.", ja = "ロールの最後がフライング・サーペント・キックになります：着地点のすべての敵に命中し、スローにします。", zh = "你的滚地翻以一记翔龙在天收尾：落点处的每个敌人都会受到打击并被减速。", ko = "구르기가 비룡차기로 끝납니다: 착지 지점의 모든 적이 공격받고 감속됩니다." }
+bot_name = "Botmonk"
+bot_order = 10
+name = { en = "Monk", de = "Mönch", fr = "Moine", es = "Monje", pt = "Monge", ru = "Монах", pl = "Mnich", tr = "Keşiş", it = "Monaco", ja = "モンク", zh = "武僧", ko = "수도사" }
+# Mists of Pandaria's RAID_CLASS_COLORS.MONK (jade green).
+color = [0.0, 1.0, 0.59]
+# Played once a hero of the account has beaten Classic's last zone; a mode's `[unlocks]` may say
+# otherwise.
+unlock = "classic"
+# Fists and staff: a swing every 2.2 sec, as the warrior's. `TUNE`
+swing = { beat = 2.2 }
+
+# Its gear (the run's own tables have no monk): leather, five sets from the Shado-Pan's novices
+# to Mists' tiers, a staff Common to Legendary, its icons the druid's staves. Ours. `TUNE`
+[gear]
+armor = "leather"
+sets = [
+    { en = "Initiate's", de = "Novizen", fr = "d'initié", es = "de iniciado", pt = "do Iniciado", ru = "Посвященного", pl = "Nowicjusza", tr = "Müptedi", it = "dell'Iniziato", ja = "修行者の", zh = "新手", ko = "수련생의" },
+    { en = "Shado-Pan", de = "Shado-Pan", fr = "Shado-Pan", es = "Shado-Pan", pt = "Shado-Pan", ru = "Шадо-Пан", pl = "Shado-Pan", tr = "Shado-Pan", it = "Shado-Pan", ja = "シャドーパン", zh = "影踪派", ko = "음영파" },
+    { en = "Red Crane", de = "Roter Kranich", fr = "Grue rouge", es = "Grulla Roja", pt = "Garça Vermelha", ru = "Красного журавля", pl = "Czerwonego Żurawia", tr = "Kızıl Turna", it = "Gru Rossa", ja = "レッドクレーン", zh = "赤精", ko = "붉은 학" },
+    { en = "Thousandfold Blades", de = "der tausendfachen Klingen", fr = "des mille lames", es = "de las mil hojas", pt = "das Mil Lâminas", ru = "тысячи клинков", pl = "Tysiąckroć ostrzy", tr = "Bin Katlı Bıçaklar", it = "delle Mille Lame", ja = "千刃の", zh = "千刃", ko = "천 겹의 칼날" },
+    { en = "Fire-Charm", de = "des Feuerzaubers", fr = "du sortilège de feu", es = "del hechizo de fuego", pt = "do Feitiço de Fogo", ru = "огненных чар", pl = "Ognisty amulet", tr = "Ateş Tılsımı", it = "dell'Incanto del Fuoco", ja = "火のお守りの", zh = "火焰符咒", ko = "화염 부적" },
+]
+weapons = [[
+    { en = "Worn Bo Staff", de = "Abgenutzter Bo-Stab", fr = "Bâton bo usé", es = "Bastón bo desgastado", pt = "Bastão Bo Gasto", ru = "Потрепанный посох бо", pl = "Zużyty kij bo", tr = "Yıpranmış Bo Asası", it = "Bastone Bo consumato", ja = "使い古された棍", zh = "破旧的长棍", ko = "낡은 봉" },
+    { en = "Shado-Pan Staff", de = "Shado-Pan-Stab", fr = "Bâton Shado-Pan", es = "Bastón Shado-Pan", pt = "Bastão Shado-Pan", ru = "Посох Шадо-Пан", pl = "Kij Shado-Pan", tr = "Shado-Pan Asası", it = "Bastone Shado-Pan", ja = "シャドーパンの杖", zh = "影踪派法杖", ko = "음영파 지팡이" },
+    { en = "Staff of the Red Crane", de = "Stab des Roten Kranichs", fr = "Bâton de la Grue rouge", es = "Bastón de la Grulla Roja", pt = "Bastão da Garça Vermelha", ru = "Посох Красного журавля", pl = "Kij Czerwonego Żurawia", tr = "Kızıl Turna Asası", it = "Bastone della Gru Rossa", ja = "レッドクレーンの杖", zh = "赤精之杖", ko = "붉은 학의 지팡이" },
+    { en = "Staff of the Celestials", de = "Stab der Himmlischen", fr = "Bâton des Célestes", es = "Bastón de los Celestiales", pt = "Bastão dos Celestiais", ru = "Посох Небожителей", pl = "Kij Niebian", tr = "Göksellerin Asası", it = "Bastone dei Celestiali", ja = "天神の杖", zh = "天神之杖", ko = "천신의 지팡이" },
+    { en = "Fu Zan, the Wanderer's Companion", de = "Fu Zan, der Wanderergefährte", fr = "Fu Zan, compagnon du voyageur", es = "Fu Zan, compañero del Errante", pt = "Fu Zan, Companheiro do Andarilho", ru = "Фу Цзань, спутник странника", pl = "Fu Zan, Towarzysz Wędrowca", tr = "Fu Zan, Gezginin Yoldaşı", it = "Fu Zan, il Compagno del Viandante", ja = "フー・ザン、放浪者の伴侶", zh = "伏赞，流浪者之伴", ko = "방랑자의 동반자 푸 잔" },
+]]
+weapon_icons = [["Staff_21", "Staff_15", "Staff_14", "Staff_31", "Staff_Medivh", "Staff_35"]]
+# Its gear holds the staff, but a legendary's look may put a one-hand weapon in each hand, as
+# Mists' windwalkers fight; a two-hand look in the main hand empties the off hand again.
+off_hand_looks = true
+
+# The class's own meters (`ResourceDef`). Hidden for now (`hidden`): the spells gather and spend
+# them, but no tooltip, power bar or HUD crystal shows them.
+[[resources]]
+key = "chi"
+hidden = true
+max = 4
+start = 0
+name = { en = "Chi", de = "Chi", fr = "Chi", es = "Chi", pt = "Chi", ru = "Ци", pl = "Chi", tr = "Chi", it = "Chi", ja = "気", zh = "真气", ko = "기" }
+
+[[resources]]
+key = "brew"
+hidden = true
+max = 3
+start = 1
+# One brew comes back every 9 sec. `TUNE`
+every = 9.0
+name = { en = "Brew", de = "Gebräu", fr = "Brassin", es = "Brebaje", pt = "Elixir", ru = "Хмель", pl = "Napar", tr = "Demleme", it = "Infuso", ja = "ブリュー", zh = "美酒", ko = "양조주" }
+
+# The class colours, five a class, in the menu's order; the client's table
+# (`SurvivorsSpellColors.lua` `CLASS_COLORS`) is the same. `TUNE` the prices.
+
+[[colors]]
+key = "monk_emerald"
+tone = 6
+price = 12000
+name = { en = "Jade Serpent", de = "Jadeschlange", fr = "Serpent de jade", es = "Serpiente de jade", pt = "Serpente de Jade", ru = "Нефритовая змея", pl = "Nefrytowy Wąż", tr = "Yeşim Yılan", it = "Serpente di giada", ja = "翡翠の蛇", zh = "玉珑", ko = "비취 뱀" }
+
+[[colors]]
+key = "monk_teal"
+tone = 7
+price = 12000
+name = { en = "Serpent's Mist", de = "Schlangennebel", fr = "Brume du serpent", es = "Niebla de la serpiente", pt = "Névoa da Serpente", ru = "Туман змеи", pl = "Mgła węża", tr = "Yılanın Sisi", it = "Nebbia del serpente", ja = "蛇の霧", zh = "玉珑之雾", ko = "뱀의 안개" }
+
+[[colors]]
+key = "monk_gold"
+tone = 3
+price = 15000
+name = { en = "Celestial Gold", de = "Himmlisches Gold", fr = "Or céleste", es = "Oro celestial", pt = "Ouro Celestial", ru = "Небесное золото", pl = "Niebiańskie złoto", tr = "Göksel Altın", it = "Oro celeste", ja = "天上の金", zh = "天神之金", ko = "천상의 황금" }
+
+[[colors]]
+key = "monk_ember"
+tone = 2
+price = 15000
+name = { en = "Firebrew", de = "Feuerbräu", fr = "Brassin ardent", es = "Brebaje ígneo", pt = "Elixir de Fogo", ru = "Огненный хмель", pl = "Ognisty napar", tr = "Ateş Demlemesi", it = "Infuso di fuoco", ja = "火酒", zh = "火焰酒", ko = "불꽃 양조주" }
+
+[[colors]]
+key = "monk_azure"
+tone = 9
+price = 18000
+name = { en = "Windwalk", de = "Windläufer", fr = "Marche-vent", es = "Viajero del viento", pt = "Andarilho do Vento", ru = "Танцующий с ветром", pl = "Marsz wiatru", tr = "Rüzgar Yürüyüşü", it = "Camminavento", ja = "風歩き", zh = "御风", ko = "바람걸음" }
+
+# Hallow's End's two-tone colours: its shop sells each for every class at once.
+
+[[colors]]
+key = "monk_pumpkin_hex"
+tone = 14
+price = 0
+holiday = "hallows_end"
+name = { en = "Pumpkin Hex", de = "Kürbisfluch", fr = "Maléfice de citrouille", es = "Maleficio de calabaza", pt = "Feitiço de Abóbora", ru = "Тыквенный сглаз", pl = "Dyniowy urok", tr = "Balkabağı Büyüsü", it = "Malia della zucca", ja = "カボチャの呪い", zh = "南瓜妖术", ko = "호박 주술" }
+
+[[colors]]
+key = "monk_witchfire"
+tone = 15
+price = 0
+holiday = "hallows_end"
+name = { en = "Witchfire", de = "Hexenfeuer", fr = "Feu de sorcière", es = "Fuego de bruja", pt = "Fogo de Bruxa", ru = "Ведьмин огонь", pl = "Ogień wiedźm", tr = "Cadı Ateşi", it = "Fuoco stregato", ja = "魔女の炎", zh = "巫火", ko = "마녀불" }

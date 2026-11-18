@@ -1,0 +1,16 @@
+# Pandemonius: Void Blast, three in a row.
+
+[[boss]]
+key = "pandemonius"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 32325 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { combo = [[{ bolt = { spell = 32325 } }, { bolt = { spell = 32325 } }, { bolt = { spell = 32325 } }], 0.6] }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 6 }

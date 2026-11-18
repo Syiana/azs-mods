@@ -1,0 +1,100 @@
+# The priest's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: play cleave [smite] n 1, share 0.50p
+[[set_bonus]]
+key = "priest_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Smite leaps to a second enemy for {v}% of its damage.", de = "Göttliche Pein springt auf einen zweiten Feind über, für {v}% ihres Schadens.", fr = "Châtiment bondit sur un second ennemi pour {v}% de ses dégâts.", es = "Punición salta a un segundo enemigo con un {v}% de su daño.", pt = "Punição salta para um segundo inimigo com {v}% do seu dano.", ru = "«Кара» перескакивает на второго врага с {v}% урона.", pl = "Porażenie przeskakuje na drugiego wroga, zadając {v}% swoich obrażeń.", tr = "Smite, hasarının %{v}'i ile ikinci bir düşmana sıçrar.", it = "Punire balza su un secondo nemico per il {v}% dei suoi danni.", ja = "スマイトが2体目の敵に飛び移り、そのダメージの{v}%を与えます。", zh = "惩击会跳跃到第二个敌人身上，造成相当于其伤害{v}%的伤害。", ko = "성스러운 일격이 두 번째 적에게 튀어 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.5, play = { cleave = { keys = ["smite"], n = 1, radius = 8.0, stun = 0.0 } } }]
+shows = "v"
+percent = true
+
+# Original: play shield_burst radius 8, 2.0p of what it absorbed
+[[set_bonus]]
+key = "priest_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "When Power Word: Shield breaks it explodes for {v}% of what it absorbed on everything within 8 yards.", de = "Wenn Machtwort: Schild bricht, explodiert es und fügt allem innerhalb von 8 m {v}% dessen zu, was es absorbiert hat.", fr = "Quand Mot de pouvoir : Bouclier se brise, il explose pour {v}% de ce qu'il a absorbé sur tout ce qui se trouve à moins de 8 m.", es = "Cuando Palabra de poder: escudo se rompe, explota por el {v}% de lo que absorbió sobre todo lo que haya a 8 m.", pt = "Quando Palavra de Poder: Escudo se rompe, explode com {v}% do que absorveu em tudo a até 8 m.", ru = "Когда «Слово силы: Щит» разрушается, он взрывается, нанося {v}% поглощённого всему в радиусе 8 м.", pl = "Gdy Słowo Mocy: Tarcza pęka, wybucha, zadając {v}% pochłoniętych obrażeń wszystkiemu w promieniu 8 jd.", tr = "Power Word: Shield kırıldığında patlar ve 8 m içindeki her şeye emdiği miktarın %{v}'i kadar hasar verir.", it = "Quando Parola del Potere: Scudo si rompe, esplode per il {v}% di ciò che ha assorbito su tutto entro 8 m.", ja = "パワー・ワード：シールドが壊れると爆発し、8ヤード以内のすべてに吸収した量の{v}%のダメージを与えます。", zh = "真言术：盾破碎时会爆炸，对8码内的所有目标造成相当于其吸收量{v}%的伤害。", ko = "신의 권능: 보호막이 깨지면 폭발하여 8미터 안의 모든 대상에게 흡수한 양의 {v}%만큼 피해를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 2.0, play = { shield_burst = { radius = 8.0 } } }]
+shows = "v"
+percent = true
+
+# Original: mod targets [sw_pain] +v; mod damage +0.20p
+[[set_bonus]]
+key = "priest_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Shadow Word: Pain strikes {v} more enemies and deals {v2}% more damage.", de = "Schattenwort: Schmerz trifft {v} Feinde mehr und verursacht {v2}% mehr Schaden.", fr = "Mot de l'ombre : Douleur frappe {v} ennemis de plus et inflige {v2}% de dégâts en plus.", es = "Palabra de las Sombras: dolor alcanza a {v} enemigos más e inflige un {v2}% más de daño.", pt = "Palavra Sombria: Dor atinge mais {v} inimigos e causa {v2}% a mais de dano.", ru = "«Слово Тьмы: Боль» поражает больше врагов (+{v}) и наносит на {v2}% больше урона.", pl = "Słowo Cienia: Ból trafia o {v} wrogów więcej i zadaje {v2}% więcej obrażeń.", tr = "Shadow Word: Pain {v} düşmana daha vurur ve %{v2} daha fazla hasar verir.", it = "Parola dell'Ombra: Dolore colpisce {v} nemici in più e infligge il {v2}% di danni in più.", ja = "シャドウ・ワード：ペインが追加で{v}体の敵に命中し、ダメージが{v2}%増加します。", zh = "暗言术：痛额外击中{v}个敌人，造成的伤害提高{v2}%。", ko = "어둠의 권능: 고통이 적을 {v}명 더 공격하고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["sw_pain"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["sw_pain"] }]
+mods_v = 0.2
+shows = "v2"
+percent = true
+
+# Original: play recast [holy_nova] share 0.60p; mod area [holy_nova] +0.30p
+[[set_bonus]]
+key = "priest_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Holy Nova rings twice, the second for {v}%, and is {v2}% wider.", de = "Heilige Nova erklingt zweimal, beim zweiten Mal für {v}%, und ist {v2}% breiter.", fr = "Nova sacrée retentit deux fois, la seconde pour {v}%, et est {v2}% plus large.", es = "Nova Sagrada resuena dos veces, la segunda con un {v}%, y es un {v2}% más amplia.", pt = "Nova Sagrada ressoa duas vezes, a segunda com {v}%, e fica {v2}% mais larga.", ru = "«Кольцо света» звучит дважды, второй раз на {v}%, и становится на {v2}% шире.", pl = "Święta Nowa rozbrzmiewa dwa razy, za drugim razem za {v}%, i jest szersza o {v2}%.", tr = "Holy Nova iki kez çınlar, ikincisi %{v} ile, ve %{v2} daha geniştir.", it = "Nova sacra risuona due volte, la seconda per il {v}%, ed è più ampia del {v2}%.", ja = "ホーリー・ノヴァが2度響き（2度目は{v}%）、範囲が{v2}%広がります。", zh = "神圣新星会扩散两次，第二次造成{v}%的伤害，范围扩大{v2}%。", ko = "신성한 폭발이 두 번 울려 퍼지며, 두 번째는 {v}%의 피해를 주고, 범위가 {v2}% 넓어집니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.6, play = { recast = { keys = ["holy_nova"], delay = 0.3 } } }]
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ area = ["holy_nova"] }]
+mods_v = 0.3
+shows = "v2"
+percent = true
+
+# Original: play kill_cast [mind_flay] -> mind_blast, once per 1.0 s (0.67 s empowered)
+[[set_bonus]]
+key = "priest_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "A Mind Flay kill fires a free Mind Blast, once every {v} sec.", de = "Ein Kill mit Gedankenschinden feuert einen kostenlosen Gedankenschlag ab, höchstens einmal alle {v} Sek.", fr = "Un ennemi tué par Fouet mental déclenche une Attaque mentale gratuite, au plus une fois toutes les {v} s.", es = "Una muerte con Tortura mental lanza una Explosión mental gratuita, una vez cada {v} s.", pt = "Uma morte por Açoite Mental dispara uma Explosão Mental grátis, uma vez a cada {v} s.", ru = "Убийство «Пыткой разума» выпускает бесплатный «Взрыв разума», не чаще раза в {v} сек.", pl = "Zabójstwo Biczowaniem Umysłu odpala darmowy Wybuch Umysłu, najwyżej raz na {v} s.", tr = "Mind Flay ile öldürmek {v} sn'de bir kez bedava bir Mind Blast atar.", it = "Un'uccisione con Tortura mentale lancia un'Esplosione mentale gratuita, una volta ogni {v} sec.", ja = "マインド・フレイで敵を倒すと、無料のマインド・ブラストを放ちます（{v}秒に1回まで）。", zh = "精神鞭笞击杀敌人时会免费发射一次心灵震爆，每{v}秒一次。", ko = "정신의 채찍으로 적을 처치하면 정신 분열을 무료로 발사합니다. {v}초에 한 번만 발동합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 1.0, play = { kill_cast = { keys = ["mind_flay"], spell = "mind_blast" } } }]
+empowered = 0.67
+shows = "v"
+
+# Original: mod damage +9.0; cooldown 0.40; stat vs_held +1.0p
+[[set_bonus]]
+key = "priest_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Psychic Scream deals 900% more damage and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Psychischer Schrei verursacht 900% mehr Schaden und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Cri psychique inflige 900% de dégâts en plus et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Alarido psíquico inflige un 900% más de daño y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Grito Psíquico causa 900% mais dano e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Ментальный крик наносит на 900% больше урона и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Psychiczny krzyk zadaje o 900% więcej obrażeń i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Psişik Çığlık %900 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Urlo psichico infligge il 900% di danni in più e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "サイキック・スクリームのダメージが900%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "心灵尖啸造成的伤害提高900%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "영혼의 절규의 피해가 900% 증가하고 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ damage = ["psychic_scream"] }]
+mods_v = 9.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["psychic_scream"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true

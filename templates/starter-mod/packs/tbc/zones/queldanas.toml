@@ -1,0 +1,304 @@
+#
+# The place off the zone map, `map_bounds` off `WorldMapArea.dbc`, the health factor carrying
+# AS's climb on by 8% a zone; the creatures are 3.3.5a's own of the place (`CreatureDisplayInfo.dbc`
+# ids), on the stats of Naxxramas's roles (the zone's health factor makes them stronger).
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "queldanas"
+order = 22
+name = { en = "Isle of Quel'Danas", de = "Insel von Quel'Danas", fr = "Île de Quel'Danas", es = "Isla de Quel'Danas", pt = "Ilha de Quel'Danas", ru = "Остров Кель'Данас", pl = "Wyspa Quel'Danas", tr = "Quel'Danas Adası", it = "Isola di Quel'Danas", ja = "クエル・ダナス島", zh = "奎尔丹纳斯岛", ko = "쿠엘다나스 섬" }
+subtitle = { en = "The Sunwell", de = "Der Sonnenbrunnen", fr = "Le Puits de soleil", es = "El Pozo del Sol", pt = "A Nascente do Sol", ru = "Солнечный Колодец", pl = "Studnia Słońca", tr = "Güneş Kuyusu", it = "Il Pozzo del Sole", ja = "サンウェル", zh = "太阳之井", ko = "태양샘" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_IsleOfQuelDanas"
+map = 530
+map_name = "Expansion01"
+area = 4080
+center = [12600.0, -6900.0]
+radius = 100.0
+map_bounds = [-5302.08, -8629.17, 13568.75, 11350.0]
+# 90 % of AS's climb (2026-11-09: Burning Crusade was too hard on Normal).
+health_factor = 13.11
+gold_factor = 3.42
+late_factor = 0.4
+hour = 12
+weather = { fine = 85, rain = 15 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+focus = [12871.137, -6863.4517]
+turn = 0
+yaw = 0.0
+pitch = 26.0
+distance = 8.5
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 4100
+name = { en = "Wretched Skulker", de = "Elender Schleicher", fr = "Rôdeur misérable", es = "Merodeador miserable", pt = "Espreitador Miserável", ru = "Жалкий соглядатай", pl = "Nędzny skradacz", tr = "Sefil Sinsi", it = "Furtivo miserabile", ja = "レッチド・スカルカー", zh = "可悲的潜伏者", ko = "비참한 잠복자" }
+type = "humanoid"
+display = 15513
+icon = "INV_Misc_Head_Elf_02"
+health = 30
+damage = 5
+swing = 1.6
+speed = 5.4
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 4101
+name = { en = "Sunblade Dragonhawk", de = "Drachenfalke der Sonnenklingen", fr = "Faucon-dragon Lame-du-soleil", es = "Dracohalcón Hojasol", pt = "Falcodraco Lâmina do Sol", ru = "Дракондор из клана Солнечного Клинка", pl = "Smoczy jastrząb Sunblade", tr = "Güneş Bıçağı Ejderşahini", it = "Falcodrago Lamasolare", ja = "サンブレード・ドラゴンホーク", zh = "炎刃龙鹰", ko = "태양칼날 용매" }
+type = "beast"
+display = 17545
+icon = "Ability_Hunter_Pet_DragonHawk"
+health = 28
+damage = 6
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.5
+size = 0.75
+
+[[zone.enemy]]
+entry = 4102
+name = { en = "Wretched Fiend", de = "Elende Bestie", fr = "Démon misérable", es = "Maligno miserable", pt = "Demônio Miserável", ru = "Жалкий изверг", pl = "Nędzny demon", tr = "Sefil Canavar", it = "Demone miserabile", ja = "レッチド・フィーンド", zh = "可悲的魔仆", ko = "비참한 마귀" }
+type = "humanoid"
+display = 22843
+icon = "INV_Misc_Head_Elf_02"
+health = 26
+damage = 6
+swing = 1.4
+speed = 8.0
+cost = 1.2
+from = 1.2
+
+[[zone.enemy]]
+entry = 4103
+name = { en = "Eredar Sorcerer", de = "Hexer der Eredar", fr = "Sorcier érédar", es = "Hechicero eredar", pt = "Feiticeiro Eredar", ru = "Чародей эредаров", pl = "Czarownik Eredar", tr = "Eredar Büyücüsü", it = "Stregone Eredar", ja = "エレダーの魔術師", zh = "艾瑞达巫师", ko = "에레다르 마술사" }
+type = "demon"
+display = 20191
+icon = "Spell_Shadow_SummonInfernal"
+health = 42
+damage = 9
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.45
+role = { ranged = { spell = 35913, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4104
+name = { en = "Wrath Enforcer", de = "Zornvollstrecker", fr = "Exécuteur de la colère", es = "Ejecutor de ira", pt = "Executor da Ira", ru = "Каратель Гнева", pl = "Egzekutor Gniewu", tr = "Gazap Zorbası", it = "Esecutore dell'Ira", ja = "ラース・エンフォーサー", zh = "愤怒执行者", ko = "격노 집행자" }
+type = "demon"
+display = 17542
+icon = "Spell_Shadow_SummonFelGuard"
+health = 90
+damage = 11
+swing = 2.0
+speed = 5.4
+cost = 2.0
+from = 3.0
+size = 0.95
+
+[[zone.enemy]]
+entry = 4105
+name = { en = "Felguard Slayer", de = "Schlächter der Teufelswache", fr = "Tueur gangregarde", es = "Asesino de guardia vil", pt = "Matador da Guarda Vil", ru = "Убийца стражей Скверны", pl = "Zabójca Straży Zła", tr = "Fel Muhafız Katili", it = "Uccisore Vilguardia", ja = "フェルガード・スレイヤー", zh = "恶魔卫士屠杀者", ko = "지옥수호병 학살자" }
+type = "demon"
+display = 5049
+icon = "Spell_Shadow_SummonFelGuard"
+health = 190
+damage = 14
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 5.5
+size = 1.05
+
+[[zone.enemy]]
+entry = 4106
+name = { en = "Mana Serpent", de = "Manaschlange", fr = "Serpent de mana", es = "Serpiente de maná", pt = "Serpente de Mana", ru = "Змей маны", pl = "Wąż many", tr = "Mana Yılanı", it = "Serpente del mana", ja = "マナ・サーペント", zh = "法力巨蛇", ko = "마나 뱀" }
+type = "beast"
+display = 15501
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 62
+damage = 10
+swing = 1.4
+speed = 7.0
+cost = 1.5
+from = 4.0
+size = 0.8
+
+[[zone.enemy]]
+entry = 4107
+name = { en = "Painmistress", de = "Schmerzensherrin", fr = "Maîtresse de la douleur", es = "Ama del dolor", pt = "Senhora da Dor", ru = "Владычица боли", pl = "Pani Bólu", tr = "Acı Hanımı", it = "Signora del Dolore", ja = "ペインミストレス", zh = "痛苦女王", ko = "고통의 여주인" }
+type = "demon"
+display = 10925
+icon = "Spell_Shadow_SummonSuccubus"
+health = 62
+damage = 11
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.0
+size = 0.75
+role = { ranged = { spell = 9613, range = 18.0, every = 3.5, speed = 24.0, radius = 1.6, factor = 0.8 } }
+
+[[zone.enemy]]
+entry = 4108
+name = { en = "Apocalypse Guard", de = "Apokalypsenwache", fr = "Garde de l'apocalypse", es = "Guardia del apocalipsis", pt = "Guarda do Apocalipse", ru = "Страж Апокалипсиса", pl = "Strażnik Apokalipsy", tr = "Kıyamet Muhafızı", it = "Guardia dell'Apocalisse", ja = "アポカリプス・ガード", zh = "天启卫士", ko = "대재앙의 경비병" }
+type = "demon"
+display = 17099
+icon = "Spell_Shadow_SummonInfernal"
+health = 240
+damage = 16
+swing = 2.2
+speed = 5.6
+cost = 3.5
+from = 9.0
+
+[[zone.elite]]
+entry = 4110
+name = { en = "Sunblade Protector", de = "Beschützer der Sonnenklingen", fr = "Protecteur lamesoleil", es = "Protector Hojasol", pt = "Protetor Lâmina do Sol", ru = "Защитник Солнечного Клинка", pl = "Protektor Sunblade", tr = "Güneş Bıçağı Koruyucusu", it = "Protettore Lamasolare", ja = "サンブレード・プロテクター", zh = "炎刃保护者", ko = "태양칼날 수호병" }
+type = "mechanical"
+display = 18951
+icon = "Ability_GolemStormBolt"
+health = 950
+damage = 28
+swing = 2.0
+speed = 5.6
+cost = 12.0
+from = 4.0
+size = 0.45
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { rain = { spell = 1449, count = 3, radius = 4.0, spread = 9.0, warn = 1.6, factor = 1.0 } }
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [[{ blink = { spell = 1953, distance = 6.0 } }, { nova = { spell = 1449, radius = 6.0, warn = 1.4 } }], 0.6] }
+
+[[zone.elite]]
+entry = 4111
+name = { en = "Pit Overlord", de = "Grubenoberanführer", fr = "Seigneur de la fosse", es = "Señor del foso", pt = "Senhor do Fosso", ru = "Повелитель Преисподней", pl = "Władca Dołu", tr = "Çukur Efendisi", it = "Sovrano della Fossa", ja = "ピット・オーバーロード", zh = "深渊领主", ko = "구덩이 대군주" }
+type = "demon"
+display = 17469
+icon = "Spell_Shadow_SummonInfernal"
+health = 1150
+damage = 31
+swing = 2.4
+speed = 4.8
+cost = 13.0
+from = 8.5
+size = 1.2
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { rain = { spell = 5740, count = 3, radius = 4.0, spread = 9.0, warn = 1.8, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { whirlwind = { spell = 1680, radius = 5.0, lasts = 3.0, tick = 0.5 } }
+
+[[zone.elite]]
+entry = 4112
+name = { en = "Hand of the Deceiver", de = "Hand des Betrügers", fr = "Main du Traître", es = "Mano del Impostor", pt = "Mão do Enganador", ru = "Длань Обманщика", pl = "Ręka Zwodziciela", tr = "Aldatıcının Eli", it = "Mano dell'Ingannatore", ja = "ハンド・オブ・ザ・ディシーヴァー", zh = "欺诈者之手", ko = "기만자의 손" }
+type = "demon"
+display = 19214
+icon = "Spell_Shadow_SummonInfernal"
+health = 1400
+damage = 37
+swing = 2.6
+speed = 4.8
+cost = 15.0
+from = 13.0
+size = 0.4
+
+[[zone.elite.kit]]
+every = 9.0
+ability = { pool = { spell = 27810, burst = 0, radius = 5.0, warn = 2.0, factor = 1.3 } }
+
+[[zone.elite.kit]]
+every = 14.0
+ability = { tether = { spell = 689, reach = 15.0, warn = 1.5, lasts = 4.0, tick = 0.4 } }
+
+[[zone.boss]]
+entry = 4190
+name = { en = "Kalecgos", de = "Kalecgos", fr = "Kalecgos", es = "Kalecgos", pt = "Kalecgos", ru = "Калесгос", pl = "Kalecgos", tr = "Kalecgos", it = "Kalecgos", ja = "カレクゴス", zh = "卡雷苟斯", ko = "칼렉고스" }
+type = "dragonkin"
+display = 23345
+icon = "INV_Misc_Head_Dragon_Blue"
+health = 4600
+damage = 28
+speed = 5.8
+size = 1.4
+minute = 4
+yell = { en = "No longer will I be a slave to Malygos!", de = "Nie wieder werde ich Malygos' Sklave sein!", fr = "Je ne serai plus l'esclave de Malygos !", es = "¡Ya no seré esclavo de Malygos!", pt = "Nunca mais serei escravo de Malygos!", ru = "Я больше не буду рабом Малигоса!", pl = "Nie będę już niewolnikiem Malygosa!", tr = "Artık Malygos'un kölesi olmayacağım!", it = "Non sarò più schiavo di Malygos!", ja = "もはやマリゴスの奴隷にはならぬ！", zh = "我再也不会做玛里苟斯的奴隶了！", ko = "더 이상 말리고스의 노예로 살지 않겠다!" }
+kit = "kalecgos"
+
+[[zone.boss]]
+entry = 4191
+name = { en = "Brutallus", de = "Brutallus", fr = "Brutallus", es = "Brutallus", pt = "Brutallus", ru = "Бруталл", pl = "Brutallus", tr = "Brutallus", it = "Brutallus", ja = "ブルータルス", zh = "布鲁塔卢斯", ko = "브루탈루스" }
+type = "giant"
+display = 22711
+icon = "Spell_Fire_Elemental_Totem"
+health = 11500
+damage = 36
+speed = 5.6
+size = 0.5
+minute = 8
+yell = { en = "Ah, more lambs to the slaughter!", de = "Ah, noch mehr Lämmer zur Schlachtbank!", fr = "Ah, encore des agneaux pour l'abattoir !", es = "¡Ah, más corderos para el matadero!", pt = "Ah, mais cordeiros para o abate!", ru = "А, еще ягнята на заклание!", pl = "Ach, kolejne jagnięta na rzeź!", tr = "Ah, kesime giden daha çok kuzu!", it = "Ah, altri agnelli al macello!", ja = "ああ、また屠られる子羊どもか！", zh = "啊，又来了一群待宰的羔羊！", ko = "아, 도살장에 끌려온 어린양이 또 왔군!" }
+kit = "brutallus"
+
+[[zone.boss]]
+entry = 4192
+name = { en = "Felmyst", de = "Teufelsruch", fr = "Gangrebrume", es = "Brumavil", pt = "Névoa Vil", ru = "Пакостень", pl = "Felmyst", tr = "Felmyst", it = "Felmyst", ja = "フェルミスト", zh = "菲米丝", ko = "펠미스트" }
+type = "dragonkin"
+display = 27066
+icon = "INV_Misc_Head_Dragon_Green"
+health = 21000
+damage = 46
+speed = 5.0
+size = 1.6
+minute = 12
+yell = { en = "Glory to Kil'jaeden! Death to all who oppose!", de = "Ruhm für Kil'jaeden! Tod allen, die sich widersetzen!", fr = "Gloire à Kil'jaeden ! Mort à ceux qui s'opposent !", es = "¡Gloria a Kil'jaeden! ¡Muerte a todos los que se opongan!", pt = "Glória a Kil'jaeden! Morte a todos que se opõem!", ru = "Слава Кил'джедену! Смерть всем, кто встанет на пути!", pl = "Chwała Kil'jaedenowi! Śmierć wszystkim, którzy mu się sprzeciwiają!", tr = "Kil'jaeden'e zafer! Karşı çıkan herkese ölüm!", it = "Gloria a Kil'jaeden! Morte a chi si oppone!", ja = "キルジェイデンに栄光を！逆らう者すべてに死を！", zh = "荣耀归于基尔加丹！反抗者都得死！", ko = "킬제덴께 영광을! 맞서는 자에게는 죽음을!" }
+kit = "felmyst"
+
+[[zone.boss]]
+entry = 4193
+name = { en = "M'uru", de = "M'uru", fr = "M'uru", es = "M'uru", pt = "M'uru", ru = "М'ууру", pl = "M'uru", tr = "M'uru", it = "M'uru", ja = "ムール", zh = "穆鲁", ko = "므우루" }
+type = "elemental"
+display = 23404
+icon = "Spell_Arcane_Arcane01"
+health = 26000
+damage = 54
+speed = 5.8
+size = 1.6
+minute = 16
+yell = { en = "M'uru's darkness spills over the field!", de = "M'urus Finsternis ergießt sich über das Feld!", fr = "Les ténèbres de M'uru se répandent sur le champ !", es = "¡La oscuridad de M'uru se derrama sobre el campo!", pt = "A escuridão de M'uru se derrama sobre o campo!", ru = "Тьма М'ууру заливает поле!", pl = "Ciemność M'uru rozlewa się po polu!", tr = "M'uru'nun karanlığı sahaya taşıyor!", it = "L'oscurità di M'uru si riversa sul campo!", ja = "ムールの闇が戦場にあふれ出す！", zh = "穆鲁的黑暗笼罩了战场！", ko = "므우루의 어둠이 전장에 넘쳐흐릅니다!" }
+kit = "muru"
+
+[[zone.boss]]
+entry = 2012
+name = { en = "Kil'jaeden", de = "Kil'jaeden", fr = "Kil'jaeden", es = "Kil'jaeden", pt = "Kil'jaeden", ru = "Кил'джеден", pl = "Kil'jaeden", tr = "Kil'jaeden", it = "Kil'jaeden", ja = "キルジェイデン", zh = "基尔加丹", ko = "킬제덴" }
+type = "demon"
+display = 23200
+icon = "ACHIEVEMENT_BOSS_KILJAEDAN"
+health = 60000
+damage = 66
+speed = 6.0
+size = 0.59999996
+minute = 20
+yell = { en = "The expendable have perished. So be it!", de = "Die Entbehrlichen sind gefallen. So sei es!", fr = "Les sacrifiables ont péri. Qu'il en soit ainsi !", es = "Los prescindibles han perecido. ¡Que así sea!", pt = "Os dispensáveis pereceram. Que assim seja!", ru = "Расходный материал погиб. Да будет так!", pl = "Zbędni zginęli. Niech tak będzie!", tr = "Harcanabilirler yok oldu. Öyle olsun!", it = "I sacrificabili sono periti. Così sia!", ja = "捨て駒は死んだ。それもよかろう！", zh = "可牺牲的都已经牺牲了。就这样吧！", ko = "소모품들은 죽었군. 그렇게 될 일이었지!" }
+final = true
+kit = "kiljaeden"

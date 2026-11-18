@@ -1,0 +1,132 @@
+# The amulets of AS's table 0x14747D980 (17.4): a fixed rarity, a growth g toward three times their
+# numbers with each rank, their stats at rank 1 and what they do past them.
+[[amulet]]
+key = "mark_of_fordring"
+rarity = "common"
+growth = 0.6
+effects = [["damage", 0.15]]
+icon = "INV_Jewelry_Talisman_07"
+name = { en = "Mark of Fordring", de = "Fordrings Mal", fr = "Marque de Fordring", es = "Marca de Fordring", pt = "Marca de Fordring", ru = "Знак Фордринга", pl = "Znak Fordringa", tr = "Fordring'in İşareti", it = "Marchio di Fordring", ja = "フォードリングの証", zh = "弗丁的印记", ko = "폴드링의 징표" }
+
+[[amulet]]
+key = "talvash"
+rarity = "common"
+growth = 0.6
+effects = [["cooldown", 0.1]]
+icon = "INV_Jewelry_Necklace_02"
+name = { en = "Talvash's Enhancing Necklace", de = "Talvashs verstärkende Halskette", fr = "Collier d'amélioration de Talvash", es = "Collar de mejora de Talvash", pt = "Colar de Aprimoramento de Talvash", ru = "Усиливающее ожерелье Талваша", pl = "Naszyjnik wzmocnień Talvasha", tr = "Talvash'ın Güçlendirici Kolyesi", it = "Collana potenziante di Talvash", ja = "タルヴァッシュの強化ネックレス", zh = "塔瓦斯的强化项链", ko = "탈바쉬의 강화 목걸이" }
+
+[[amulet]]
+key = "south_seas_kelp"
+rarity = "common"
+growth = 0.6
+effects = [["luck", 0.3], ["gold", 0.25]]
+icon = "INV_Jewelry_Necklace_26"
+name = { en = "Pristine Enchanted South Seas Kelp", de = "Makelloser verzauberter Südmeertang", fr = "Varech des mers du Sud enchanté et intact", es = "Alga de los Mares del Sur encantada e impoluta", pt = "Alga Encantada dos Mares do Sul Intacta", ru = "Нетронутая зачарованная ламинария Южных морей", pl = "Nieskazitelny zaczarowany wodorost Mórz Południowych", tr = "Bozulmamış Büyülü Güney Denizleri Yosunu", it = "Alga incantata dei Mari del Sud, incontaminata", ja = "極上の魔力を帯びた南海の昆布", zh = "原始的附魔南海海藻", ko = "마법부여된 깨끗한 남쪽바다 다시마" }
+
+[[amulet]]
+key = "prestor"
+rarity = "uncommon"
+growth = 0.5
+effects = [["damage", 0.16], ["crit", 0.04]]
+icon = "INV_Jewelry_Necklace_17"
+name = { en = "Prestor's Talisman of Connivery", de = "Prestors Talisman der Hinterlist", fr = "Talisman de connivence de Prestor", es = "Talismán de connivencia de Prestor", pt = "Talismã de Conivência de Prestor", ru = "Талисман попустительства Престора", pl = "Talizman knowań Prestora", tr = "Prestor'un Danışıklı Tılsımı", it = "Talismano di connivenza di Prestor", ja = "プレスターの陰謀のタリスマン", zh = "普瑞斯托的诡计护符", ko = "프레스터의 음모의 부적" }
+
+[[amulet]]
+key = "animated_chain"
+rarity = "uncommon"
+growth = 0.5
+effects = [["max_health", 0.25], ["reduction", 0.08]]
+icon = "INV_Jewelry_Necklace_01"
+name = { en = "Animated Chain Necklace", de = "Belebte Kettenhalskette", fr = "Collier de chaîne animé", es = "Collar de cadena animado", pt = "Colar de Corrente Animado", ru = "Оживлённое цепное ожерелье", pl = "Ożywiony łańcuszek", tr = "Canlı Zincir Kolye", it = "Collana di catene animata", ja = "動くチェーンネックレス", zh = "活化锁链项链", ko = "살아있는 사슬 목걸이" }
+
+[[amulet]]
+key = "woven_ivy"
+rarity = "uncommon"
+growth = 0.5
+effects = [["regen", 6.0], ["max_health", 0.12], ["speed", 0.12]]
+icon = "INV_Misc_Herb_15"
+name = { en = "Woven Ivy Necklace", de = "Halskette aus geflochtenem Efeu", fr = "Collier de lierre tressé", es = "Collar de hiedra trenzada", pt = "Colar de Hera Trançada", ru = "Ожерелье из плетёного плюща", pl = "Naszyjnik z plecionego bluszczu", tr = "Dokunmuş Sarmaşık Kolye", it = "Collana di edera intrecciata", ja = "蔦編みのネックレス", zh = "编织常春藤项链", ko = "엮은 담쟁이 목걸이" }
+
+[[amulet]]
+key = "darkmoon"
+rarity = "uncommon"
+growth = 0.5
+effects = [["cooldown", 0.12], ["speed", 0.08]]
+icon = "INV_Jewelry_Necklace_14"
+name = { en = "Amulet of the Darkmoon", de = "Amulett des Dunkelmonds", fr = "Amulette de Sombrelune", es = "Amuleto de Luna Negra", pt = "Amuleto da Lua Negra", ru = "Амулет Новолуния", pl = "Amulet Mrocznego Księżyca", tr = "Kararay Muskası", it = "Amuleto di Lunacupa", ja = "ダークムーンのアミュレット", zh = "暗月护符", ko = "다크문 부적" }
+
+[[amulet]]
+key = "jeklik"
+rarity = "rare"
+growth = 0.35
+effects = [["lifesteal", 0.03], ["kill_heal", 1.0]]
+icon = "INV_Jewelry_Necklace_03"
+name = { en = "Jeklik's Opaline Talisman", de = "Jekliks opalisierender Talisman", fr = "Talisman opalin de Jeklik", es = "Talismán opalino de Jeklik", pt = "Talismã Opalino de Jeklik", ru = "Опаловый талисман Джеклик", pl = "Opalowy talizman Jeklik", tr = "Jeklik'in Opal Tılsımı", it = "Talismano opalino di Jeklik", ja = "ジェクリクの乳白のタリスマン", zh = "耶克里克的乳白护符", ko = "제클릭의 오팔 부적" }
+
+[[amulet]]
+key = "eye_of_hakkar"
+rarity = "rare"
+growth = 0.35
+effects = [["crit", 0.048]]
+special = { ignite = 0.8 }
+icon = "INV_Jewelry_Necklace_22"
+name = { en = "The Eye of Hakkar", de = "Das Auge Hakkars", fr = "L'Œil de Hakkar", es = "El Ojo de Hakkar", pt = "O Olho de Hakkar", ru = "Око Хаккара", pl = "Oko Hakkara", tr = "Hakkar'ın Gözü", it = "L'Occhio di Hakkar", ja = "ハッカーの瞳", zh = "哈卡之眼", ko = "학카르의 눈" }
+
+[[amulet]]
+key = "steadfast_might"
+rarity = "rare"
+growth = 0.35
+effects = [["reduction", 0.1], ["max_health", 0.15], ["thorns", 1.0]]
+icon = "INV_Jewelry_Amulet_03"
+name = { en = "Medallion of Steadfast Might", de = "Medaillon der unerschütterlichen Macht", fr = "Médaillon de puissance inébranlable", es = "Medallón de poder inquebrantable", pt = "Medalhão do Poder Inabalável", ru = "Медальон непоколебимой мощи", pl = "Medalion niezłomnej potęgi", tr = "Sarsılmaz Kudret Madalyonu", it = "Medaglione della potenza incrollabile", ja = "不動の力のメダリオン", zh = "坚定之力勋章", ko = "불굴의 힘의 메달" }
+
+[[amulet]]
+key = "enlightenment"
+rarity = "epic"
+growth = 0.35
+special = { jump = 0.3 }
+icon = "INV_Jewelry_Necklace_10"
+name = { en = "Choker of Enlightenment", de = "Halsreif der Erleuchtung", fr = "Ras-du-cou de l'illumination", es = "Gargantilla de iluminación", pt = "Gargantilha da Iluminação", ru = "Ожерелье просветления", pl = "Obroża oświecenia", tr = "Aydınlanma Gerdanlığı", it = "Girocollo dell'illuminazione", ja = "啓蒙のチョーカー", zh = "启迪项圈", ko = "깨달음의 목장식" }
+
+[[amulet]]
+key = "vek_nilash"
+rarity = "epic"
+growth = 0.25
+effects = [["targets", 1.0], ["damage", 0.05]]
+icon = "INV_Jewelry_Necklace_AhnQiraj_01"
+name = { en = "Amulet of Vek'nilash", de = "Amulett von Vek'nilash", fr = "Amulette de Vek'nilash", es = "Amuleto de Vek'nilash", pt = "Amuleto de Vek'nilash", ru = "Амулет Век'нилаша", pl = "Amulet Vek'nilasha", tr = "Vek'nilash Muskası", it = "Amuleto di Vek'nilash", ja = "ヴェクニラッシュのアミュレット", zh = "维克尼拉斯的护符", ko = "베클니라쉬의 부적" }
+
+[[amulet]]
+key = "fallen_dragon"
+rarity = "epic"
+growth = 0.25
+effects = [["max_health", 0.2], ["regen", 5.0]]
+special = "cheat_death"
+icon = "INV_Jewelry_Necklace_12"
+name = { en = "Pendant of the Fallen Dragon", de = "Anhänger des gefallenen Drachen", fr = "Pendentif du dragon déchu", es = "Colgante del dragón caído", pt = "Pendente do Dragão Caído", ru = "Подвеска павшего дракона", pl = "Wisiorek upadłego smoka", tr = "Düşmüş Ejderha Kolyesi", it = "Pendente del drago caduto", ja = "堕ちたドラゴンのペンダント", zh = "堕落之龙的坠饰", ko = "쓰러진 용의 펜던트" }
+
+[[amulet]]
+key = "malice_stone"
+rarity = "epic"
+growth = 0.25
+effects = [["echo", 0.2], ["cooldown", 0.08]]
+icon = "INV_Jewelry_Necklace_29Naxxramas"
+name = { en = "Malice Stone Pendant", de = "Bosheitssteinanhänger", fr = "Pendentif en pierre de malice", es = "Colgante de piedra de malicia", pt = "Pendente de Pedra da Malícia", ru = "Подвеска из камня злобы", pl = "Wisiorek Kamienia Złośliwości", tr = "Kötülük Taşı Kolyesi", it = "Pendente di pietra della malizia", ja = "悪意の石のペンダント", zh = "恶意之石坠饰", ko = "악의의 돌 펜던트" }
+
+[[amulet]]
+key = "onyxia_tooth"
+rarity = "legendary"
+growth = 0.25
+effects = [["crit", 0.04], ["crit_damage", 0.195]]
+special = { splash = 0.3 }
+icon = "INV_Jewelry_Necklace_09"
+name = { en = "Onyxia Tooth Pendant", de = "Onyxiazahnanhänger", fr = "Pendentif en dent d'Onyxia", es = "Colgante de diente de Onyxia", pt = "Pendente de Dente de Onyxia", ru = "Подвеска из зуба Ониксии", pl = "Wisiorek z zębem Onyxii", tr = "Onyxia Dişi Kolyesi", it = "Pendente col dente di Onyxia", ja = "オニクシアの牙のペンダント", zh = "奥妮克希亚之牙坠饰", ko = "오닉시아 이빨 펜던트" }
+
+[[amulet]]
+key = "fire_lord"
+rarity = "legendary"
+growth = 0.25
+special = { explode = 0.15 }
+icon = "INV_Jewelry_Amulet_05"
+name = { en = "Choker of the Fire Lord", de = "Halsreif des Feuerfürsten", fr = "Ras-du-cou du Seigneur du feu", es = "Gargantilla del Señor del Fuego", pt = "Gargantilha do Senhor do Fogo", ru = "Ожерелье Повелителя огня", pl = "Obroża Pana Ognia", tr = "Ateş Lordu Gerdanlığı", it = "Girocollo del Signore del Fuoco", ja = "炎の王のチョーカー", zh = "火焰之王的项圈", ko = "불의 군주의 목장식" }

@@ -1,0 +1,79 @@
+# The 4-piece bonus of each tier: one stat line, the same for every class (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# common: gold and pickup range
+[[set_bonus]]
+key = "common_4"
+tier = "common"
+pieces = 4
+text = { en = "+{v}% gold, +{v2}% pickup range", de = "+{v}% Gold, +{v2}% Aufsammelreichweite", fr = "+{v}% d'or, +{v2}% de portée de ramassage", es = "+{v}% de oro, +{v2}% de alcance de recogida", pt = "+{v}% de ouro, +{v2}% de alcance de coleta", ru = "+{v}% золота, +{v2}% к радиусу подбора", pl = "+{v}% złota, +{v2}% zasięgu zbierania", tr = "+%{v} altın, +%{v2} toplama menzili", it = "+{v}% oro, +{v2}% raggio di raccolta", ja = "ゴールド+{v}%、回収範囲+{v2}%", zh = "金币+{v}%，拾取范围+{v2}%", ko = "골드 +{v}%, 획득 반경 +{v2}%" }
+
+[[set_bonus.part]]
+effects = [{ stat = [36, 0.25] }]
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+effects = [{ stat = [35, 0.3] }]
+shows = "v2"
+percent = true
+
+# uncommon: health regenerated after 3 s unhurt
+[[set_bonus]]
+key = "uncommon_4"
+tier = "uncommon"
+pieces = 4
+text = { en = "{v}% max health per second after 3 seconds unhurt", de = "{v}% max. Gesundheit pro Sekunde nach 3 Sek. ohne Treffer", fr = "{v}% des points de vie max. par seconde après 3 s sans être touché", es = "{v}% de salud máxima por segundo tras 3 segundos sin recibir daño", pt = "{v}% da vida máxima por segundo após 3 segundos sem sofrer dano", ru = "{v}% макс. здоровья в секунду после 3 секунд без урона", pl = "{v}% maks. zdrowia na sekundę po 3 s bez obrażeń", tr = "3 saniye hasar almadan geçince saniyede azami canın %{v} kadarı", it = "{v}% della salute massima al secondo dopo 3 secondi senza danni", ja = "3秒間ダメージを受けないと毎秒最大体力の{v}%を回復", zh = "3秒未受伤害后，每秒恢复{v}%最大生命值", ko = "3초 동안 피해를 받지 않으면 초당 최대 생명력의 {v}% 회복" }
+
+[[set_bonus.part]]
+effects = [{ stat = [38, 0.015] }]
+shows = "v"
+percent = true
+
+# rare: one more target for every spell
+[[set_bonus]]
+key = "rare_4"
+tier = "rare"
+pieces = 4
+text = { en = "+{v} target to every ability", de = "+{v} Ziel für jede Fähigkeit", fr = "+{v} cible pour chaque technique", es = "+{v} objetivo a cada facultad", pt = "+{v} alvo para cada habilidade", ru = "+{v} цель для каждой способности", pl = "+{v} cel dla każdej umiejętności", tr = "Her yeteneğe +{v} hedef", it = "+{v} bersaglio per ogni abilità", ja = "すべてのアビリティの対象+{v}", zh = "所有技能目标+{v}", ko = "모든 능력의 대상 +{v}" }
+
+[[set_bonus.part]]
+effects = [{ stat = [37, 1.0] }]
+shows = "v"
+
+# epic: a chance to strike twice
+[[set_bonus]]
+key = "epic_4"
+tier = "epic"
+pieces = 4
+text = { en = "{v}% chance for an ability to strike twice", de = "{v}% Chance, dass eine Fähigkeit doppelt trifft", fr = "{v}% de chances qu'une technique frappe deux fois", es = "{v}% de probabilidad de que una facultad golpee dos veces", pt = "{v}% de chance de uma habilidade acertar duas vezes", ru = "{v}% вероятность, что способность ударит дважды", pl = "{v}% szansy, że umiejętność uderzy dwa razy", tr = "Bir yeteneğin iki kez vurma şansı %{v}", it = "{v}% di probabilità che un'abilità colpisca due volte", ja = "{v}%の確率でアビリティが2度命中", zh = "技能有{v}%的几率打击两次", ko = "{v}% 확률로 능력이 두 번 적중" }
+
+[[set_bonus.part]]
+effects = [{ stat = [13, 0.06] }]
+shows = "v"
+percent = true
+
+# legendary: critical damage
+[[set_bonus]]
+key = "legendary_4"
+tier = "legendary"
+pieces = 4
+text = { en = "+{v}% critical damage", de = "+{v}% kritischer Schaden", fr = "+{v}% de dégâts critiques", es = "+{v}% de daño crítico", pt = "+{v}% de dano crítico", ru = "+{v}% к критическому урону", pl = "+{v}% obrażeń krytycznych", tr = "+%{v} kritik hasar", it = "+{v}% danni critici", ja = "クリティカルダメージ+{v}%", zh = "暴击伤害+{v}%", ko = "치명타 피해 +{v}%" }
+
+[[set_bonus.part]]
+effects = [{ stat = [4, 0.3] }]
+shows = "v"
+percent = true
+
+# pvp: damage reduction with 5 or more enemies close
+[[set_bonus]]
+key = "pvp_4"
+tier = "pvp"
+pieces = 4
+text = { en = "+{v}% damage reduction with 5 or more enemies close", de = "+{v}% Schadensreduktion bei 5 oder mehr Gegnern in der Nähe", fr = "+{v}% de réduction des dégâts avec 5 ennemis proches ou plus", es = "+{v}% de reducción de daño con 5 o más enemigos cerca", pt = "+{v}% de redução de dano com 5 ou mais inimigos por perto", ru = "+{v}% к снижению урона, когда рядом 5 или больше врагов", pl = "+{v}% redukcji obrażeń przy 5 lub więcej wrogach w pobliżu", tr = "Yakında 5 veya daha fazla düşman varken +%{v} hasar azaltma", it = "+{v}% riduzione dei danni con 5 o più nemici vicini", ja = "近くに敵が5体以上いると被ダメージ軽減+{v}%", zh = "附近有5个或更多敌人时，伤害减免+{v}%", ko = "가까이에 적이 5명 이상일 때 피해 감소 +{v}%" }
+
+[[set_bonus.part]]
+effects = [{ stat = [39, 0.12] }]
+shows = "v"
+percent = true

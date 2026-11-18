@@ -1,0 +1,16 @@
+# Skarvald the Constructor: Charge, Stone Strike.
+
+[[boss]]
+key = "skarvald_the_constructor"
+
+[[boss.kit]]
+every = 8.0
+ability = "charge"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 48583, range = 9.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { adds = 8 }

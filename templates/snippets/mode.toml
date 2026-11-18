@@ -1,0 +1,110 @@
+# Snippet: a game mode of your own, on top of the standard campaign.
+#
+# Goes in:  modes/<your package>/frail_horde.toml (at the top of the profile, beside packs/;
+#           not inside your package's folder). Its key is then "<your package>:frail_horde".
+# Lock:     profile.json, in your package's "objects": this file with "kind": "mode".
+#           `azs-release profile-lock` hashes it; it does not add it to the lock for you.
+# Rules:    - `extends = "standard"` takes every setting of the game's Campaign; write down only
+#             what you change ([horde], [hero], [coop], ...). Every setting and its range: the
+#             game's modes/standard.toml and the content reference, "A mode".
+#           - `[card]` makes the mode show in the Game Modes window; `[i18n.<language>]` gives its
+#             texts in the eleven other languages (de fr es pt ru it pl tr ja zh ko).
+#           - A mode that changes the numbers keeps its runs off the leaderboards; a mod's runs
+#             are Modded anyway. Say so in its rules.
+#           - To replace a game mode whole, write `replaces = "<key>"` instead and declare
+#             { "dependency": "base", "entity": "mode:<key>" } in your package's "overrides".
+# Checked:  in a copy of templates/starter-mod with `azs-content profile-check`, which reads the
+#           sources; it does not validate a mode's settings (its JSON says
+#           "runtime_modes_validated": false). The game's full mode check was not run.
+
+name = "Frail Horde"
+extends = "standard"
+
+[card]
+order = 10
+icon = "Ability_Hunter_Pet_Wasp"
+color = [0.45, 0.7, 0.2]
+tag = "SOLO · CO-OP"
+text = "The campaign's zones with a horde that falls fast."
+rules = ["Enemies have 40% less health"]
+rewards = [["INV_Misc_Coin_01", "Gold"]]
+
+[i18n.de]
+name = "Schwache Horde"
+tag = "SOLO · KOOP"
+text = "Die Zonen der Kampagne mit einer Horde, die schnell fällt."
+rules = ["Gegner haben 40% weniger Gesundheit"]
+rewards = ["Gold"]
+
+[i18n.fr]
+name = "Horde fragile"
+tag = "SOLO · COOP"
+text = "Les zones de la campagne avec une horde qui tombe vite."
+rules = ["Les ennemis ont 40% de santé en moins"]
+rewards = ["Or"]
+
+[i18n.es]
+name = "Horda frágil"
+tag = "SOLO · COOP"
+text = "Las zonas de la campaña con una horda que cae rápido."
+rules = ["Los enemigos tienen un 40% menos de salud"]
+rewards = ["Oro"]
+
+[i18n.pt]
+name = "Horda Frágil"
+tag = "SOLO · COOP"
+text = "As zonas da campanha com uma horda que cai rápido."
+rules = ["Inimigos têm 40% menos vida"]
+rewards = ["Ouro"]
+
+[i18n.ru]
+name = "Хрупкая орда"
+tag = "СОЛО · КООП"
+text = "Зоны кампании с ордой, которая быстро падает."
+rules = ["У врагов на 40% меньше здоровья"]
+rewards = ["Золото"]
+
+[i18n.it]
+name = "Orda fragile"
+tag = "SOLO · CO-OP"
+text = "Le zone della campagna con un'orda che cade in fretta."
+rules = ["I nemici hanno il 40% di salute in meno"]
+rewards = ["Oro"]
+
+[i18n.pl]
+name = "Krucha horda"
+tag = "SOLO · CO-OP"
+text = "Strefy kampanii z hordą, która szybko pada."
+rules = ["Przeciwnicy mają o 40% mniej zdrowia"]
+rewards = ["Złoto"]
+
+[i18n.tr]
+name = "Kırılgan Sürü"
+tag = "SOLO · CO-OP"
+text = "Kampanyanın bölgeleri, çabuk düşen bir sürüyle."
+rules = ["Düşmanların canı %40 daha az"]
+rewards = ["Altın"]
+
+[i18n.ja]
+name = "もろい群れ"
+tag = "ソロ・協力プレイ"
+text = "すぐに倒れる群れが相手のキャンペーンのゾーンです。"
+rules = ["敵の体力が40%少ない"]
+rewards = ["ゴールド"]
+
+[i18n.zh]
+name = "脆弱怪潮"
+tag = "单人 · 合作"
+text = "战役的区域，怪潮一击即倒。"
+rules = ["敌人生命值降低40%"]
+rewards = ["金币"]
+
+[i18n.ko]
+name = "연약한 무리"
+tag = "솔로 · 협동"
+text = "금방 쓰러지는 무리와 싸우는 캠페인 지역입니다."
+rules = ["적의 생명력이 40% 적습니다"]
+rewards = ["골드"]
+
+[horde]
+enemy_health = 0.6

@@ -1,0 +1,20 @@
+# King Dred: Mangling Slash, Bellowing Roar, his charge, Raptor Call.
+
+[[boss]]
+key = "king_dred"
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 48873, range = 10.0, arc = 90.0, warn = 1.2, factor = 2.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { nova = { spell = 22686, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = "charge"
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

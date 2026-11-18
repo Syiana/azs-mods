@@ -1,0 +1,150 @@
+# The deathknight's 8-piece set bonuses: one change to one of its spells per tier (docs/HOWTO-CONTENT.md "A set bonus").
+
+# Ours (TUNE): the family of the original's Common bonus (+2 targets), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "deathknight_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Icy Touch strikes {v} more enemies.", de = "Eisige Berührung trifft {v} Feinde mehr.", fr = "Toucher de glace frappe {v} ennemis de plus.", es = "Toque helado alcanza a {v} enemigos más.", pt = "Toque Gélido atinge mais {v} inimigos.", ru = "«Ледяное прикосновение» поражает больше врагов (+{v}).", pl = "Lodowy dotyk trafia o {v} wrogów więcej.", tr = "Buzlu Dokunuş {v} düşmana daha vurur.", it = "Tocco gelido colpisce {v} nemici in più.", ja = "アイシー・タッチが追加で{v}体の敵に命中します。", zh = "冰冷触摸额外击中{v}个敌人。", ko = "얼음 손길이 적을 {v}명 더 공격합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["icy_touch"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+
+# Ours (TUNE): the family of the original's Uncommon bonus (the dot leaps to 2 enemies when its victim dies), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "deathknight_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "When its victim dies, Plague Strike leaps to {v} enemies near it.", de = "Stirbt sein Opfer, springt Seuchenstoß auf {v} Feinde in dessen Nähe über.", fr = "Quand sa victime meurt, Frappe de peste saute sur {v} ennemis proches.", es = "Cuando su víctima muere, Golpe de plaga salta a {v} enemigos cercanos.", pt = "Quando a vítima morre, Golpe de Praga salta para {v} inimigos próximos.", ru = "Когда жертва умирает, «Удар чумы» перескакивает на ближайших к ней врагов: {v}.", pl = "Gdy ofiara ginie, Cios zarazy przeskakuje na {v} pobliskich wrogów.", tr = "Kurbanı öldüğünde Veba Darbesi yakınındaki {v} düşmana sıçrar.", it = "Quando la sua vittima muore, Colpo pestilente balza su {v} nemici vicini.", ja = "プレイグ・ストライクの対象が死ぬと、近くの敵{v}体に飛び移ります。", zh = "当目标死亡时，瘟疫打击会跳跃到附近的{v}个敌人身上。", ko = "역병의 일격에 걸린 적이 죽으면 근처의 적 {v}명에게 옮겨 갑니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 2.0, play = { dot_spread = { keys = ["plague_strike"], radius = 8.0 } } }]
+whole = true
+shows = "v"
+
+
+# Ours (TUNE): the family of the original's Rare bonus (+50% wider, +30% damage), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "deathknight_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Blood Boil is {v}% wider and deals {v2}% more damage.", de = "Blutsieden ist {v}% breiter und verursacht {v2}% mehr Schaden.", fr = "Furoncle sanglant est {v}% plus large et inflige {v2}% de dégâts en plus.", es = "Sangre hirviente es un {v}% más amplia e inflige un {v2}% más de daño.", pt = "Sangue Fervente fica {v}% mais largo e causa {v2}% a mais de dano.", ru = "«Вскипание крови» на {v}% шире и наносит на {v2}% больше урона.", pl = "Wrzenie krwi jest szersze o {v}% i zadaje o {v2}% więcej obrażeń.", tr = "Kan Kaynaması %{v} daha geniştir ve %{v2} daha fazla hasar verir.", it = "Ebollizione del sangue è più ampia del {v}% e infligge il {v2}% di danni in più.", ja = "ブラッド・ボイルの範囲が{v}%広がり、ダメージが{v2}%増加します。", zh = "血液沸腾的范围扩大{v}%，造成的伤害提高{v2}%。", ko = "피의 소용돌이의 범위가 {v}% 넓어지고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ area = ["blood_boil"] }]
+mods_v = 0.5
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["blood_boil"] }]
+mods_v = 0.3
+shows = "v2"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Epic bonus (moves with the hero, +20% damage), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "deathknight_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "Death and Decay moves with you and deals {v}% more damage.", de = "Tod und Verfall wandert mit dir und verursacht {v}% mehr Schaden.", fr = "Mort et décomposition se déplace avec vous et inflige {v}% de dégâts en plus.", es = "Muerte y descomposición se mueve contigo e inflige un {v}% más de daño.", pt = "Morte e Decomposição se move com você e causa {v}% a mais de dano.", ru = "«Смерть и разложение» движется вместе с вами и наносит на {v}% больше урона.", pl = "Śmierć i rozkład porusza się razem z tobą i zadaje o {v}% więcej obrażeń.", tr = "Ölüm ve Çürüme seninle birlikte hareket eder ve %{v} daha fazla hasar verir.", it = "Morte e decomposizione si muove con te e infligge il {v}% di danni in più.", ja = "デス・アンド・ディケイが自分と共に移動し、ダメージが{v}%増加します。", zh = "枯萎凋零会随你移动，造成的伤害提高{v}%。", ko = "죽음과 부패가 당신을 따라 움직이며 피해가 {v}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ follow = ["death_and_decay"] }]
+mods_v = 0.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ damage = ["death_and_decay"] }]
+mods_v = 0.2
+shows = "v"
+percent = true
+
+
+# Ours (TUNE): the family of the original's Legendary bonus (+2 targets, +25% damage), on a spell of the class (docs/PLAN-SET-BONUSES.md section 5).
+[[set_bonus]]
+key = "deathknight_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Heart Strike strikes {v} more enemies and deals {v2}% more damage.", de = "Herzstoß trifft {v} Feinde mehr und verursacht {v2}% mehr Schaden.", fr = "Frappe au cœur frappe {v} ennemis de plus et inflige {v2}% de dégâts en plus.", es = "Golpe al corazón alcanza a {v} enemigos más e inflige un {v2}% más de daño.", pt = "Golpe no Coração atinge mais {v} inimigos e causa {v2}% a mais de dano.", ru = "«Удар в сердце» поражает больше врагов (+{v}) и наносит на {v2}% больше урона.", pl = "Uderzenie w serce trafia o {v} wrogów więcej i zadaje {v2}% więcej obrażeń.", tr = "Kalp Darbesi {v} düşmana daha vurur ve %{v2} daha fazla hasar verir.", it = "Colpo al cuore colpisce {v} nemici in più e infligge il {v2}% di danni in più.", ja = "ハート・ストライクが追加で{v}体の敵に命中し、ダメージが{v2}%増加します。", zh = "心脏打击额外击中{v}个敌人，造成的伤害提高{v2}%。", ko = "심장 강타가 적을 {v}명 더 공격하고 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["heart_strike"] }]
+mods_v = 2.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["heart_strike"] }]
+mods_v = 0.25
+shows = "v2"
+percent = true
+
+
+# Ours (TUNE): plan section 5, the PvP bonus: +5 targets, +200% damage, 40% sooner, +100% against held enemies.
+[[set_bonus]]
+key = "deathknight_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Chains of Ice strike {v} more enemies, deal 200% more damage and come back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Eisige Ketten treffen {v} weitere Feinde, verursachen 200% mehr Schaden und sind 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Chaînes de glace frappent {v} ennemis de plus, infligent 200% de dégâts en plus et reviennent 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Cadenas de hielo golpean a {v} enemigos más, infligen un 200% más de daño y vuelven un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Correntes de Gelo atingem {v} inimigos a mais, causam 200% mais dano e voltam 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Ледяные оковы поражают ещё {v} противников, наносят на 200% больше урона и восстанавливаются на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Łańcuchy lodu trafiają {v} kolejnych wrogów, zadają o 200% więcej obrażeń i wracają o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Buz Zincirleri {v} düşmana daha vurur, %200 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Catene di ghiaccio colpiscono {v} nemici in più, infliggono il 200% di danni in più e ritornano il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "チェイン・オブ・アイスが追加で{v}体の敵に命中し、ダメージが200%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "寒冰锁链额外击中{v}个敌人，造成的伤害提高200%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "얼음 사슬이 적을 {v}명 더 공격하고, 피해가 200% 증가하며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["chains_of_ice"] }]
+mods_v = 5.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["chains_of_ice"] }]
+mods_v = 2.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["chains_of_ice"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true
+
+
+# Frost Tomb, the death knight's Mythic set (the balance team's write-up, version 4 of 2026-11-16,
+# `Todesritter_Set_Aenderungen`). The 4-piece: you also start every run with Frost Strike, and every
+# Frost hit of yours entombs its target for 4 sec, up to 5 stacks (all stacks end 4 sec after the latest
+# hit); each stack makes it take {v}% more damage from your Frost attacks (6%, empowered 9%, so 30% and
+# 45% at 5 stacks) and slows it by 5% (25% at 5, bosses too). The stacks are a debuff the enemy carries
+# (the target window's debuff bar shows a boss's, with the icon named here), which the 8-piece reads as
+# the enemy dies. The 8-piece: an enemy that dies entombed leaves an ice grave for 15 sec, up to 5. A
+# grave is not used up: every 2 sec it releases a Frost Ghoul (7 over its 15 sec) at the nearest boss or
+# guardian with 5 stacks within 12 m (13.12336 yd) of it, else at the thickest group of enemies within
+# 12 m. The ghoul charges there at 10 yd/s and explodes for {v}% of Frost Strike's hit (250%, empowered
+# 375%) on every enemy within {v2} m (6 m, empowered 9 m: 6.56168 yd), each rolling its own crit. The
+# explosion lays no stack (it is no cast: no echo, no amulet's extra) but takes the stacks' damage like
+# any Frost hit.
+
+[[set_bonus]]
+key = "deathknight_mythic_4"
+tier = "mythic"
+pieces = 4
+mechanic = { kind = "entomb", spell = "frost_strike", secs = 4.0, stacks = 5, vulnerability = 0.06, slow = 5, empowers = true, icon = "Spell_Frost_FrozenCore", name = { en = "Frost Tomb", de = "Frostgrab", fr = "Tombeau de givre", es = "Tumba de Escarcha", pt = "Túmulo de Gelo", ru = "Ледяная гробница", it = "Tomba di Ghiaccio", pl = "Lodowy Grób", tr = "Buz Mezarı", ja = "フロスト・トゥーム", zh = "冰霜之墓", ko = "서리 무덤" } }
+text = { en = "Frost Tomb: Start with Frost Strike. Your Frost attacks entomb their target for 4 sec, stacking up to 5 times. Each stack makes it take {v}% more damage from your Frost attacks and slows it by 5%.", de = "Frostgrab: Beginne mit Froststoß. Deine Frostangriffe legen ihr Ziel 4 Sek. lang in ein Frostgrab, bis zu 5-mal stapelbar. Jede Stapelung erhöht den Schaden, den es durch deine Frostangriffe erleidet, um {v}% und verlangsamt es um 5%.", fr = "Tombeau de givre : commencez avec Frappe de givre. Vos attaques de Givre ensevelissent leur cible pendant 4 s, jusqu’à 5 fois cumulables. Chaque cumul lui fait subir {v}% de dégâts en plus de vos attaques de Givre et le ralentit de 5%.", es = "Tumba de Escarcha: Empiezas con Golpe de escarcha. Tus ataques de Escarcha sepultan a su objetivo durante 4 s, acumulable hasta 5 veces. Cada acumulación hace que reciba un {v}% más de daño de tus ataques de Escarcha y lo ralentiza un 5%.", pt = "Túmulo de Gelo: Comece com Golpe de Gelo. Seus ataques de Gelo sepultam o alvo por 4 s, acumulando até 5 vezes. Cada acúmulo faz com que ele receba {v}% a mais de dano dos seus ataques de Gelo e o retarda em 5%.", ru = "Ледяная гробница: вы начинаете с Ледяного удара. Ваши атаки льдом заточают цель в гробницу на 4 с; эффект суммируется до 5 раз. Каждый заряд увеличивает урон, получаемый целью от ваших атак льдом, на {v}% и замедляет её на 5%.", it = "Tomba di Ghiaccio: inizi con Colpo di gelo. I tuoi attacchi di gelo seppelliscono il bersaglio per 4 s, fino a 5 volte cumulabili. Ogni cumulo gli fa subire il {v}% di danni in più dai tuoi attacchi di gelo e lo rallenta del 5%.", pl = "Lodowy Grób: zaczynasz z Lodowym uderzeniem. Twoje ataki mrozem pogrążają cel w grobie na 4 s, kumulując się do 5 razy. Każdy ładunek zwiększa obrażenia, jakie cel otrzymuje od twoich ataków mrozem, o {v}% i spowalnia go o 5%.", tr = "Buz Mezarı: Buz Darbesi ile başlarsın. Buz saldırıların hedefi 4 sn boyunca mezara gömer ve en fazla 5 kez birikir. Her birikim, hedefin buz saldırılarından aldığı hasarı %{v} artırır ve onu %5 yavaşlatır.", ja = "フロスト・トゥーム：フロスト・ストライクを習得した状態で開始します。冷気の攻撃が対象を4秒間墓に封じ、最大5回まで重なります。1回重なるごとに、対象が受ける冷気攻撃のダメージが{v}%増加し、移動速度が5%低下します。", zh = "冰霜之墓：以冰霜打击开局。你的冰霜攻击会将目标封入冰墓4秒，最多叠加5次。每层使其受到你的冰霜攻击的伤害提高{v}%，并使其减速5%。", ko = "서리 무덤: 냉기의 일격을 가지고 시작합니다. 냉기 공격이 대상을 4초 동안 무덤에 가두며 최대 5번 중첩됩니다. 중첩될 때마다 대상이 당신의 냉기 공격으로 받는 피해가 {v}% 증가하고 5% 느려집니다." }
+
+# The run starts with Frost Strike as well as the class's first spell, Icy Touch (a card with no boosts, like the starter).
+[[set_bonus.part]]
+effects = [{ start_with = "frost_strike" }]
+fixed = true
+
+[[set_bonus]]
+key = "deathknight_mythic_8"
+tier = "mythic"
+pieces = 8
+mechanic = { kind = "frozen_graves", spell = "frost_strike", pet = "ghoul", cap = 5, secs = 15.0, radius = 13.12336, blast = 6.56168, speed = 10.0, damage = 2.5, every = 2.0, entombed = true, crit = true, empowers = true, source = { en = "Frost Ghoul", de = "Eisghul", fr = "Goule de givre", es = "Necrófago de escarcha", pt = "Carniçal de gelo", ru = "Ледяной вурдалак", it = "Ghoul di ghiaccio", pl = "Lodowy ghul", tr = "Buz Hortlağı", ja = "フロスト・グール", zh = "冰霜食尸鬼", ko = "서리 구울" } }
+marker = { entry = 990104, display = 90102, scale = 0.7 }
+text = { en = "Frost Tomb: Entombed enemies leave ice graves when they die, lasting 15 seconds, up to 5. Every 2 sec, each grave releases a Frost Ghoul: at a boss or guardian with 5 stacks of Frost Tomb within 12 m, otherwise at the largest enemy group within 12 m. A Frost Ghoul charges its target and explodes for {v}% of Frost Strike damage on all enemies within {v2} m. The explosion can critically strike.", de = "Frostgrab: Gegner im Frostgrab hinterlassen beim Tod bis zu 5 Eisgräber für je 15 Sekunden. Alle 2 Sek. gibt jedes Grab einen Eisghul frei: auf einen Boss oder Wächter mit 5 Stapeln Frostgrab im Umkreis von 12 m, sonst auf die größte Gegnergruppe im Umkreis von 12 m. Ein Eisghul stürmt auf sein Ziel zu und explodiert für {v}% Froststoß-Schaden an allen Gegnern im Umkreis von {v2} m. Die Explosion kann kritisch treffen.", fr = "Tombeau de givre : les ennemis ensevelis laissent des tombes de glace à leur mort, pendant 15 secondes, jusqu’à 5. Toutes les 2 s, chaque tombe libère une goule de givre : sur un boss ou un gardien avec 5 cumuls de Tombeau de givre à moins de 12 m, sinon sur le plus gros groupe d’ennemis à moins de 12 m. Une goule de givre fonce sur sa cible et explose pour {v}% des dégâts de Frappe de givre sur tous les ennemis dans un rayon de {v2} m. L’explosion peut infliger un coup critique.", es = "Tumba de Escarcha: Los enemigos sepultados dejan tumbas de hielo al morir, que duran 15 segundos, hasta 5. Cada 2 s, cada tumba libera un necrófago de escarcha: sobre un jefe o guardián con 5 acumulaciones de Tumba de Escarcha a menos de 12 m; si no, sobre el mayor grupo de enemigos a menos de 12 m. Un necrófago de escarcha carga contra su objetivo y explota infligiendo un {v}% del daño de Golpe de escarcha a todos los enemigos en {v2} m. La explosión puede ser crítica.", pt = "Túmulo de Gelo: Inimigos sepultados deixam túmulos de gelo ao morrer, que duram 15 segundos, até 5. A cada 2 s, cada túmulo libera um carniçal de gelo: sobre um chefe ou guardião com 5 acúmulos de Túmulo de Gelo a até 12 m; caso contrário, sobre o maior grupo de inimigos a até 12 m. Um carniçal de gelo avança contra o alvo e explode causando {v}% do dano de Golpe de Gelo a todos os inimigos em {v2} m. A explosão pode causar dano crítico.", ru = "Ледяная гробница: заточённые в гробницу враги оставляют после смерти ледяные могилы на 15 секунд, до 5 штук. Каждые 2 с каждая могила выпускает ледяного вурдалака: на босса или стража с 5 зарядами Ледяной гробницы в радиусе 12 м, иначе на самую большую группу врагов в радиусе 12 м. Ледяной вурдалак бросается на свою цель и взрывается, нанося {v}% урона Ледяного удара всем врагам в радиусе {v2} м. Взрыв может нанести критический урон.", it = "Tomba di Ghiaccio: i nemici sepolti lasciano tombe di ghiaccio quando muoiono, che durano 15 secondi, fino a 5. Ogni 2 s, ogni tomba libera un ghoul di ghiaccio: su un boss o guardiano con 5 cumuli di Tomba di Ghiaccio entro 12 m, altrimenti sul gruppo di nemici più grande entro 12 m. Un ghoul di ghiaccio carica il suo bersaglio ed esplode infliggendo il {v}% dei danni di Colpo di gelo a tutti i nemici entro {v2} m. L’esplosione può infliggere un colpo critico.", pl = "Lodowy Grób: pogrzebani wrogowie zostawiają po śmierci lodowe groby na 15 sekund, do 5. Co 2 s każdy grób uwalnia lodowego ghula: na bossa lub strażnika z 5 ładunkami Lodowego Grobu w promieniu 12 m, w przeciwnym razie na największą grupę wrogów w promieniu 12 m. Lodowy ghul szarżuje na swój cel i wybucha, zadając {v}% obrażeń Lodowego uderzenia wszystkim wrogom w promieniu {v2} m. Wybuch może zadać obrażenia krytyczne.", tr = "Buz Mezarı: Mezara gömülen düşmanlar öldüklerinde 15 saniye süren en fazla 5 buz mezarı bırakır. Her 2 sn’de bir her mezar bir Buz Hortlağı salar: 12 m içinde 5 Buz Mezarı birikimi olan bir patrona veya muhafıza, yoksa 12 m içindeki en büyük düşman grubuna. Buz Hortlağı hedefine hücum eder ve patlayarak {v2} m içindeki tüm düşmanlara Buz Darbesi hasarının %{v}’si kadar hasar verir. Patlama kritik vurabilir.", ja = "フロスト・トゥーム：墓に封じられた敵は死亡時に氷の墓を残し、15秒間（最大5つ）残ります。2秒ごとに、それぞれの墓がフロスト・グールを1体放ちます。12メートル以内にフロスト・トゥームが5スタックのボスまたはガーディアンがいればそれを、いなければ12メートル以内で最も大きな敵の集団を狙います。フロスト・グールは対象へ突進して爆発し、{v2}メートル以内のすべての敵にフロスト・ストライクのダメージの{v}%を与えます。爆発はクリティカルになることがあります。", zh = "冰霜之墓：被封入冰墓的敌人死亡时会留下持续15秒的冰墓，最多5个。每2秒，每个冰墓会释放一个冰霜食尸鬼：12米内若有叠满5层冰霜之墓的首领或守卫，则攻向它，否则攻向12米内最大的一群敌人。冰霜食尸鬼会冲向目标并爆炸，对{v2}米内的所有敌人造成相当于冰霜打击{v}%的伤害。爆炸可以造成暴击。", ko = "서리 무덤: 무덤에 갇힌 적은 죽을 때 얼음 무덤을 남기며, 15초 동안 최대 5개까지 유지됩니다. 2초마다 각 무덤이 서리 구울을 하나씩 풀어놓습니다. 12미터 안에 서리 무덤이 5번 중첩된 우두머리나 수호자가 있으면 그에게, 없으면 12미터 안의 가장 큰 적 무리에게 향합니다. 서리 구울은 대상에게 돌진하여 폭발하고, {v2}미터 안의 모든 적에게 냉기의 일격 피해의 {v}%를 줍니다. 폭발은 치명타가 될 수 있습니다." }

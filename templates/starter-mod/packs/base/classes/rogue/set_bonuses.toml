@@ -1,0 +1,99 @@
+# The rogue's 8-piece bonus of each tier: one change to one of its spells (re/NUMBERS.md 14.6).
+# Imported from the original game by tools/set-bonus-pack.js; this file is the source now:
+# edit the numbers here, the importer does not overwrite it without --force.
+
+# The radii and delays the original's texts do not give (recast 0.3 s, 8 yd) are ours: `TUNE`.
+
+# Original: play nth_cast [sinister_strike] -> sinister_strike every v
+[[set_bonus]]
+key = "rogue_common_8"
+tier = "common"
+pieces = 8
+text = { en = "Every {v} Sinister Strikes strike twice.", de = "Jeder {v}. Finstere Stoß trifft doppelt.", fr = "Toutes les {v} Attaques pernicieuses, l'une frappe deux fois.", es = "Cada {v} Golpes siniestros, uno golpea dos veces.", pt = "A cada {v} Golpes Sinistros, um acerta duas vezes.", ru = "Каждый {v}-й «Коварный удар» бьёт дважды.", pl = "Co {v}. Podstępny Cios uderza dwa razy.", tr = "Her {v} Sinister Strike'ta biri iki kez vurur.", it = "Ogni {v} Colpi sinistri colpiscono due volte.", ja = "シニスター・ストライク{v}回ごとに2度命中します。", zh = "每{v}次邪恶攻击会打击两次。", ko = "사악한 일격을 {v}번 할 때마다 두 번 적중합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 3.0, play = { nth_cast = { keys = ["sinister_strike"], cast = "sinister_strike" } } }]
+empowered = 2.0
+shows = "v"
+
+# Original: play kill_burst dotted [rupture] radius 8, 0.15p of max health
+[[set_bonus]]
+key = "rogue_uncommon_8"
+tier = "uncommon"
+pieces = 8
+text = { en = "Enemies dying with your Rupture burst for {v}% of their max health on everything within 8 yards.", de = "Feinde, die mit deiner Blutung sterben, bersten und fügen allem innerhalb von 8 m {v}% ihrer maximalen Gesundheit zu.", fr = "Les ennemis qui meurent sous votre Rupture éclatent pour {v}% de leurs points de vie maximum sur tout ce qui se trouve à moins de 8 m.", es = "Los enemigos que mueren con tu Ruptura estallan por el {v}% de su salud máxima sobre todo lo que haya a 8 m.", pt = "Inimigos que morrem com sua Ruptura explodem com {v}% da vida máxima deles em tudo a até 8 m.", ru = "Враги, умирающие под вашей «Рваной раной», взрываются, нанося {v}% своего макс. здоровья всему в радиусе 8 м.", pl = "Wrogowie ginący z twoim Rozerwaniem pękają, zadając {v}% swojego maks. zdrowia wszystkiemu w promieniu 8 jd.", tr = "Rupture'ın üzerindeyken ölen düşmanlar patlar ve 8 m içindeki her şeye kendi azami canlarının %{v}'i kadar hasar verir.", it = "I nemici che muoiono con la tua Rottura scoppiano per il {v}% della loro salute massima su tutto entro 8 m.", ja = "ラプチャーがかかったまま死んだ敵が炸裂し、8ヤード以内のすべてに最大体力の{v}%のダメージを与えます。", zh = "带着你的割裂死亡的敌人会爆裂，对8码内的所有目标造成相当于其最大生命值{v}%的伤害。", ko = "파열에 걸린 채 죽은 적이 터져서 8미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.15, play = { kill_burst = { keys = ["rupture"], dotted = true, radius = 8.0, gap = 0.0 } } }]
+shows = "v"
+percent = true
+
+# Original: play recast [blade_flurry] share 0.60p
+[[set_bonus]]
+key = "rogue_rare_8"
+tier = "rare"
+pieces = 8
+text = { en = "Blade Flurry spins again for {v}% of its damage.", de = "Klingenwirbel wirbelt erneut für {v}% seines Schadens.", fr = "Déluge de lames tournoie de nouveau pour {v}% de ses dégâts.", es = "Aluvión de acero vuelve a girar con un {v}% de su daño.", pt = "Rajada de Lâminas gira de novo com {v}% do seu dano.", ru = "«Шквал клинков» вращается повторно, нанося {v}% своего урона.", pl = "Zamieć Ostrzy wiruje ponownie, zadając {v}% swoich obrażeń.", tr = "Blade Flurry, hasarının %{v}'i kadar bir kez daha döner.", it = "Raffica di lame gira di nuovo per il {v}% dei suoi danni.", ja = "ブレード・フラーリーがもう一度回転し、そのダメージの{v}%を与えます。", zh = "剑刃乱舞会再旋转一次，造成相当于其伤害{v}%的伤害。", ko = "폭풍의 칼날이 다시 회전하여 피해의 {v}%를 줍니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.6, play = { recast = { keys = ["blade_flurry"], delay = 0.3 } } }]
+shows = "v"
+percent = true
+
+# Original: play kill_cast [eviscerate] -> eviscerate, once per 1.0 s (0.67 s empowered)
+[[set_bonus]]
+key = "rogue_epic_8"
+tier = "epic"
+pieces = 8
+text = { en = "An Eviscerate kill readies it again, once every {v} sec.", de = "Ein Kill mit Ausweiden macht es sofort wieder bereit, höchstens einmal alle {v} Sek.", fr = "Un ennemi tué par Éviscération la réarme aussitôt, au plus une fois toutes les {v} s.", es = "Una muerte con Eviscerar lo deja listo de nuevo, una vez cada {v} s.", pt = "Uma morte por Eviscerar o deixa pronto de novo, uma vez a cada {v} s.", ru = "Убийство «Потрошением» снова делает его готовым, не чаще раза в {v} сек.", pl = "Zabójstwo Wypatroszeniem od razu je odnawia, najwyżej raz na {v} s.", tr = "Eviscerate ile öldürmek onu {v} sn'de bir kez yeniden hazır eder.", it = "Un'uccisione con Eviscerazione la rende di nuovo pronta, una volta ogni {v} sec.", ja = "エヴィセレートで敵を倒すと再使用可能になります（{v}秒に1回まで）。", zh = "剔骨击杀敌人时会使其立即就绪，每{v}秒一次。", ko = "절개로 적을 처치하면 절개가 다시 준비됩니다. {v}초에 한 번만 발동합니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 1.0, play = { kill_cast = { keys = ["eviscerate"], spell = "eviscerate" } } }]
+empowered = 0.67
+shows = "v"
+
+# Original: play again [sinister_strike, backstab] 0.35p; mod duration [adrenaline_rush] +0.50p
+[[set_bonus]]
+key = "rogue_legendary_8"
+tier = "legendary"
+pieces = 8
+text = { en = "Sinister Strike and Backstab have a {v}% chance to strike twice, and Adrenaline Rush lasts {v2}% longer.", de = "Finsterer Stoß und Meucheln haben eine Chance von {v}%, doppelt zu treffen, und Adrenalinrausch hält {v2}% länger an.", fr = "Attaque pernicieuse et Attaque sournoise ont {v}% de chances de frapper deux fois, et Poussée d'adrénaline dure {v2}% plus longtemps.", es = "Golpe siniestro y Puñalada tienen un {v}% de probabilidad de golpear dos veces, y Subidón de adrenalina dura un {v2}% más.", pt = "Golpe Sinistro e Punhalada têm {v}% de chance de acertar duas vezes, e Descarga de Adrenalina dura {v2}% a mais.", ru = "«Коварный удар» и «Удар в спину» с вероятностью {v}% бьют дважды, а «Выброс адреналина» длится на {v2}% дольше.", pl = "Podstępny Cios i Cios w Plecy mają {v}% szansy, by uderzyć dwa razy, a Przypływ Adrenaliny trwa o {v2}% dłużej.", tr = "Sinister Strike ve Backstab'ın iki kez vurma şansı %{v}, Adrenaline Rush ise %{v2} daha uzun sürer.", it = "Colpo sinistro e Pugnalata alle spalle hanno il {v}% di probabilità di colpire due volte, e Scarica di adrenalina dura il {v2}% in più.", ja = "シニスター・ストライクとバックスタブが{v}%の確率で2度命中し、アドレナリン・ラッシュの持続時間が{v2}%延びます。", zh = "邪恶攻击和背刺有{v}%的几率打击两次，冲动的持续时间延长{v2}%。", ko = "사악한 일격과 기습이 {v}% 확률로 두 번 적중하며, 아드레날린 촉진의 지속시간이 {v2}% 길어집니다." }
+
+[[set_bonus.part]]
+plays = [{ v = 0.35, play = { again = ["sinister_strike", "backstab"] } }]
+shows = "v"
+percent = true
+
+[[set_bonus.part]]
+mods = [{ duration = ["adrenaline_rush"] }]
+mods_v = 0.5
+shows = "v2"
+percent = true
+
+# Original: mod targets +v; damage +2.0; cooldown 0.40; stat vs_held +1.0p
+[[set_bonus]]
+key = "rogue_pvp_8"
+tier = "pvp"
+pieces = 8
+text = { en = "Kidney Shot strikes {v} more enemies, deals 200% more damage and comes back 40% sooner, and you deal {v2}% more damage to enemies you stun, root, slow or fear.", de = "Nierenhieb trifft {v} weitere Feinde, verursacht 200% mehr Schaden und ist 40% früher wieder bereit, und du verursachst {v2}% mehr Schaden an Feinden, die du betäubst, festwurzelst, verlangsamst oder fürchten lässt.", fr = "Aiguillon perfide frappe {v} ennemis de plus, inflige 200% de dégâts en plus et revient 40% plus tôt, et vous infligez {v2}% de dégâts en plus aux ennemis que vous étourdissez, immobilisez, ralentissez ou terrifiez.", es = "Golpe en los riñones golpea a {v} enemigos más, inflige un 200% más de daño y vuelve un 40% antes, y infliges un {v2}% más de daño a los enemigos que aturdes, enraízas, ralentizas o asustas.", pt = "Golpe nos Rins atinge {v} inimigos a mais, causa 200% mais dano e volta 40% mais cedo, e você causa {v2}% mais dano a inimigos que atordoa, enraíza, retarda ou amedronta.", ru = "Удар по почкам поражает ещё {v} противников, наносит на 200% больше урона и восстанавливается на 40% быстрее, а вы наносите на {v2}% больше урона противникам, которых оглушаете, обездвиживаете, замедляете или пугаете.", pl = "Cios w nerki trafia {v} kolejnych wrogów, zadaje o 200% więcej obrażeń i wraca o 40% szybciej, a zadajesz o {v2}% więcej obrażeń wrogom, których ogłuszasz, unieruchamiasz, spowalniasz lub przerażasz.", tr = "Böbrek Darbesi {v} düşmana daha vurur, %200 daha fazla hasar verir ve %40 daha erken hazır olur, ve sersemlettiğin, köklediğin, yavaşlattığın veya korkuttuğun düşmanlara %{v2} daha fazla hasar verirsin.", it = "Colpo ai reni colpisce {v} nemici in più, infligge il 200% di danni in più e ritorna il 40% prima, e infliggi il {v2}% di danni in più ai nemici che stordisci, immobilizzi, rallenti o terrorizzi.", ja = "キドニー・ショットが追加で{v}体の敵に命中し、ダメージが200%増加し、40%早く再使用できるようになります。さらに、スタン・移動不能・スロー・恐怖状態の敵に与えるダメージが{v2}%増加します。", zh = "肾击额外击中{v}个敌人，造成的伤害提高200%，冷却速度加快40%，并且你对被昏迷、定身、减速或恐惧的敌人造成的伤害提高{v2}%。", ko = "급소 가격이 적을 {v}명 더 공격하고, 피해가 200% 증가하며, 40% 더 빨리 돌아옵니다. 또한 기절, 속박, 감속, 공포 상태인 적에게 주는 피해가 {v2}% 증가합니다." }
+
+[[set_bonus.part]]
+mods = [{ targets = ["kidney_shot"] }]
+mods_v = 5.0
+whole = true
+shows = "v"
+
+[[set_bonus.part]]
+mods = [{ damage = ["kidney_shot"] }]
+mods_v = 2.0
+fixed = true
+
+[[set_bonus.part]]
+mods = [{ cooldown = ["kidney_shot"] }]
+mods_v = 0.4
+fixed = true
+
+[[set_bonus.part]]
+effects = [{ stat = [18, 1.0] }]
+shows = "v2"
+percent = true

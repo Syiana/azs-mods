@@ -1,0 +1,16 @@
+# Anomalus: Spark, Charge Rifts, the Chaotic Rifts.
+
+[[boss]]
+key = "anomalus"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 47751 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { nova = { spell = 47747, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

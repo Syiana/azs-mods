@@ -1,0 +1,5 @@
+# Wrath of the Lich King: Northrend's zones, the Death Knight and everything else the expansion brings.
+key = "wotlk"
+requires = ["base"]
+expansion = "wotlk"
+order = 2

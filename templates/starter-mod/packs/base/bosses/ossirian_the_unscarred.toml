@@ -1,0 +1,18 @@
+# Ossirian the Unscarred's abilities, Gates of Ahn'Qiraj.
+
+[[boss]]
+key = "ossirian_the_unscarred"
+
+# AS's tag 23 (shield) not in: every 30 s.
+# AS's tag 33 (crystals) not in: every 15 s.
+[[boss.kit]]
+every = 8.0
+ability = { nova = { spell = 25188, radius = 10.0, warn = 2.2 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 25160, count = 2, radius = 3.5, speed = 4.5, lasts = 8.0, tick = 0.5 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

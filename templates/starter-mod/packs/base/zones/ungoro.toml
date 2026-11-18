@@ -1,0 +1,305 @@
+# Un'Goro Crater, "The Primal Hunt".
+#
+# AS's enemies, elites and bosses with its sizes (`re/NUMBERS.md` 1.2); the place is ours
+# where AS's arena lies in an instance.
+#
+# Entries, names, creature types and display ids are AS's own where AS has the zone; health,
+# damage, speeds, spawn costs, minutes and the place are first guesses until read from the game.
+# `TUNE`
+
+[[zone]]
+key = "ungoro"
+order = 3
+name = { en = "Un'Goro Crater", de = "Krater von Un'Goro", fr = "Cratère d'Un'Goro", es = "Cráter de Un'Goro", pt = "Cratera de Un'Goro", ru = "Кратер Ун'Горо", pl = "Krater Un'Goro", tr = "Un'Goro Krateri", it = "Cratere di Un'Goro", ja = "アン・ゴロ・クレーター", zh = "安戈洛环形山", ko = "운고로 분화구" }
+subtitle = { en = "The Primal Hunt", de = "Die Urjagd", fr = "La chasse primitive", es = "La caza primigenia", pt = "A Caçada Primal", ru = "Первобытная охота", pl = "Pierwotne łowy", tr = "İlkel Av", it = "La caccia primordiale", ja = "原初の狩り", zh = "原始狩猎", ko = "원시의 사냥" }
+# The menu's zone button (`Interface\Icons\...`).
+icon = "Achievement_Zone_UnGoroCrater_01"
+map = 1
+map_name = "Kalimdor"
+area = 490
+center = [-6720.0, -1920.0]
+radius = 100.0
+map_bounds = [533.33, -3166.67, -5966.67, -8433.33]
+health_factor = 1.32
+gold_factor = 1.33
+late_factor = 0.0
+hour = 11
+weather = { fine = 75, rain = 25 }
+
+# The hero menu's 3D map preview of this zone, as the Menu Designer saved it.
+[zone.menu_view]
+turn = 0
+yaw = -18.0
+pitch = 23.0
+distance = 38.0
+lift = 0.0
+scale = 0.14
+orbit = [1.4, 32.0]
+fog_band = [0.72, 0.88]
+fog_end = 1.0
+brightness = 1.0
+
+[[zone.enemy]]
+entry = 1200
+name = { en = "Ravasaur Runner", de = "Ravasaurierläufer", fr = "Coureur ravasaure", es = "Corredor ravasaurio", pt = "Corredor Ravassauro", ru = "Бегун-равазавр", pl = "Biegacz ravasaur", tr = "Ravasaur Koşucusu", it = "Corridore Ravasauro", ja = "ラヴァサウルス・ランナー", zh = "暴掠龙奔跑者", ko = "라바사우루스 질주자" }
+type = "beast"
+display = 5290
+icon = "Ability_Hunter_Pet_Raptor"
+health = 26
+damage = 4
+swing = 1.3
+speed = 7.6
+cost = 1.0
+from = 0.0
+size = 0.38
+
+[[zone.enemy]]
+entry = 1201
+name = { en = "Young Ravasaur", de = "Junger Ravasaurier", fr = "Jeune ravasaure", es = "Ravasaurio joven", pt = "Ravassauro Jovem", ru = "Молодой равазавр", pl = "Młody ravasaur", tr = "Genç Ravasaur", it = "Giovane Ravasauro", ja = "若いラヴァサウルス", zh = "小暴掠龙", ko = "어린 라바사우루스" }
+type = "beast"
+display = 5242
+icon = "Ability_Hunter_Pet_Raptor"
+health = 24
+damage = 4
+swing = 1.3
+speed = 7.8
+cost = 1.0
+from = 0.6
+size = 0.28
+
+[[zone.enemy]]
+entry = 1202
+name = { en = "Fledgling Pterrordax", de = "Junger Pterrordax", fr = "Jeune ptérreurdactyle", es = "Pterrordaz polluelo", pt = "Pterrodax Filhote", ru = "Птенец птеррордакса", pl = "Młody pterrordax", tr = "Acemi Pterrordax", it = "Pterrordax implume", ja = "プテロダックスのひな", zh = "雏翼手龙", ko = "새끼 테로닥스" }
+type = "beast"
+display = 8410
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 22
+damage = 5
+swing = 1.3
+speed = 8.0
+cost = 1.2
+from = 1.2
+size = 0.5
+
+[[zone.enemy]]
+entry = 1203
+name = { en = "Gorishi Stinger", de = "Gorishistachler", fr = "Piqueur gorishi", es = "Aguijoneador gorishi", pt = "Ferroador Gorishi", ru = "Жалящий горише", pl = "Żądłak Gorishi", tr = "Gorishi Iğnelisi", it = "Pungiglione Gorishi", ja = "ゴリシ・スティンガー", zh = "格里什毒刺虫", ko = "고리시 침쏘개" }
+type = "beast"
+display = 11088
+icon = "Ability_Hunter_Pet_Wasp"
+health = 34
+damage = 7
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 2.0
+size = 0.33
+role = { ranged = { spell = 9591, range = 16.0, every = 3.0, speed = 24.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 1204
+name = { en = "Bloodpetal Lasher", de = "Blutblütenpeitscher", fr = "Fouetteur pétale-sanglant", es = "Azotador pétalo de sangre", pt = "Açoitador Pétala de Sangue", ru = "Хлестун кровавого лепестка", pl = "Chłostnik krwawego płatka", tr = "Kanyaprak Kırbaçlayıcısı", it = "Frustatore Petalosangue", ja = "ブラッドペタル・ラッシャー", zh = "血瓣鞭笞者", ko = "핏빛꽃잎 채찍덩굴" }
+type = "elemental"
+display = 11634
+icon = "Ability_Druid_ForceofNature"
+health = 40
+damage = 6
+swing = 1.8
+speed = 5.4
+cost = 1.5
+from = 3.0
+size = 0.8
+role = { ranged = { spell = 21067, range = 16.0, every = 3.0, speed = 40.0, radius = 1.6, factor = 0.7 } }
+
+[[zone.enemy]]
+entry = 1205
+name = { en = "Un'Goro Stomper", de = "Un'Goro-Stampfer", fr = "Piétineur d'Un'Goro", es = "Pisoteador de Un'Goro", pt = "Pisoteador de Un'Goro", ru = "Топтун Ун'Горо", pl = "Tupacz z Un'Goro", tr = "Un'Goro Ezicisi", it = "Calpestatore di Un'Goro", ja = "アン・ゴロ・ストンパー", zh = "安戈洛践踏者", ko = "운고로 발구르개" }
+type = "beast"
+display = 5294
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 130
+damage = 10
+swing = 2.2
+speed = 4.6
+cost = 3.0
+from = 4.5
+size = 1.15
+
+[[zone.enemy]]
+entry = 1206
+name = { en = "Venomhide Ravasaur", de = "Giftschuppenravasaurier", fr = "Ravasaure peau-venimeuse", es = "Ravasaurio pellejo venenoso", pt = "Ravassauro Pele Venenosa", ru = "Ядокожий равазавр", pl = "Jadoskóry ravasaur", tr = "Zehirpost Ravasaur", it = "Ravasauro Pellevenefica", ja = "ヴェノムハイド・ラヴァサウルス", zh = "毒皮暴掠龙", ko = "독가죽 라바사우루스" }
+type = "beast"
+display = 5291
+icon = "Ability_Hunter_Pet_Raptor"
+health = 60
+damage = 9
+swing = 1.4
+speed = 7.2
+cost = 2.0
+from = 6.0
+size = 0.4
+
+[[zone.enemy]]
+entry = 1207
+name = { en = "Frenzied Pterrordax", de = "Rasender Pterrordax", fr = "Ptérreurdactyle frénétique", es = "Pterrordaz frenético", pt = "Pterrodax Frenético", ru = "Бешеный птеррордакс", pl = "Szalony pterrordax", tr = "Çılgın Pterrordax", it = "Pterrordax frenetico", ja = "狂乱のプテロダックス", zh = "狂暴翼手龙", ko = "광포한 테로닥스" }
+type = "beast"
+display = 8411
+icon = "Ability_Hunter_Pet_WindSerpent"
+health = 40
+damage = 8
+swing = 3.2
+speed = 5.0
+cost = 2.0
+from = 7.5
+size = 0.47
+
+[[zone.enemy]]
+entry = 1208
+name = { en = "Elder Diemetradon", de = "Alter Diemetradon", fr = "Diémétradon ancien", es = "Diemetradón anciano", pt = "Diemetradon Ancião", ru = "Древний диеметродон", pl = "Starszy diemetradon", tr = "Yaşlı Diemetradon", it = "Diemetradon anziano", ja = "長老ダイメトロドン", zh = "年长的异齿龙", ko = "늙은 디메트라돈" }
+type = "beast"
+display = 8512
+icon = "Ability_Hunter_Pet_Raptor"
+health = 190
+damage = 13
+swing = 2.2
+speed = 5.0
+cost = 3.5
+from = 9.0
+size = 0.56
+
+[[zone.elite]]
+entry = 1209
+name = { en = "Ravasaur Hunter", de = "Ravasaurierjäger", fr = "Chasseur ravasaure", es = "Cazador ravasaurio", pt = "Caçador Ravassauro", ru = "Равазавр-охотник", pl = "Łowca ravasaurów", tr = "Ravasaur Avcısı", it = "Cacciatore Ravasauro", ja = "ラヴァサウルス・ハンター", zh = "暴掠龙猎手", ko = "라바사우루스 사냥꾼" }
+type = "beast"
+display = 5292
+icon = "Ability_Hunter_Pet_Raptor"
+health = 650
+damage = 20
+swing = 1.6
+speed = 6.6
+cost = 12.0
+from = 4.0
+size = 1.2
+
+[[zone.elite.kit]]
+every = 10.0
+ability = { leap = { spell = 20549, radius = 5.0, reach = 14.0, warn = 1.5, factor = 1.1 } }
+
+[[zone.elite.kit]]
+every = 7.0
+ability = { cone = { spell = 15284, range = 7.0, arc = 100.0, warn = 1.1, factor = 1.0 } }
+
+[[zone.elite]]
+entry = 1210
+name = { en = "Un'Goro Thunderer", de = "Un'Goro-Donnerer", fr = "Tonnerre d'Un'Goro", es = "Atronador de Un'Goro", pt = "Trovejador de Un'Goro", ru = "Громовержец Ун'Горо", pl = "Gromowładca z Un'Goro", tr = "Un'Goro Gürleyeni", it = "Tuonatore di Un'Goro", ja = "アン・ゴロ・サンダラー", zh = "安戈洛雷霆者", ko = "운고로 천둥발" }
+type = "beast"
+display = 8129
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 900
+damage = 26
+swing = 2.4
+speed = 5.0
+cost = 14.0
+from = 8.5
+size = 1.85
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 6.0, warn = 1.4, knock = 9.0 } }], 1.0] }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.elite]]
+entry = 1211
+name = { en = "Devilsaur", de = "Teufelssaurier", fr = "Diablosaure", es = "Demosaurio", pt = "Demossauro", ru = "Дьявозавр", pl = "Diabłozaur", tr = "Şeytan Saur", it = "Diavolosauro", ja = "デビルサウルス", zh = "魔暴龙", ko = "데빌사우루스" }
+type = "beast"
+display = 5239
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 1100
+damage = 30
+swing = 2.4
+speed = 5.6
+cost = 15.0
+from = 13.0
+size = 0.46
+
+[[zone.elite.kit]]
+every = 13.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 6.0, warn = 1.4, knock = 9.0 } }], 1.0] }
+
+[[zone.elite.kit]]
+every = 8.0
+ability = { cone = { spell = 15284, range = 8.0, arc = 90.0, warn = 1.3, factor = 1.2 } }
+
+[[zone.boss]]
+entry = 1290
+name = { en = "Ravasaur Matriarch", de = "Ravasauriermatriarchin", fr = "Matriarche ravasaure", es = "Matriarca ravasaurio", pt = "Matriarca Ravassauro", ru = "Матриарх равазавров", pl = "Matriarchini ravasaurów", tr = "Ravasaur Matriği", it = "Matriarca Ravasauro", ja = "ラヴァサウルスの女家長", zh = "暴掠龙女族长", ko = "라바사우루스 여왕" }
+type = "beast"
+display = 11319
+icon = "Ability_Hunter_Pet_Raptor"
+health = 3600
+damage = 22
+speed = 6.6
+size = 1.4399999
+minute = 3
+yell = { en = "The Ravasaur Matriarch shrieks, and her pack answers!", de = "Die Ravasauriermatriarchin kreischt, und ihr Rudel antwortet!", fr = "La matriarche ravasaure hurle, et sa meute répond !", es = "¡La matriarca ravasaurio chilla y su manada responde!", pt = "A Matriarca Ravassauro guincha, e sua alcateia responde!", ru = "Матриарх равазавров издает вопль, и ее стая отвечает!", pl = "Matriarchini ravasaurów wydaje wrzask, a jej stado odpowiada!", tr = "Ravasaur Matriği çığlık atıyor ve sürüsü karşılık veriyor!", it = "La Matriarca Ravasauro stride e il suo branco risponde!", ja = "ラヴァサウルスの女家長が金切り声を上げ、群れが応える！", zh = "暴掠龙女族长一声尖啸，她的族群群起回应！", ko = "라바사우루스 여왕이 날카롭게 울부짖자 무리가 응답합니다!" }
+kit = "ravasaur_matriarch"
+
+[[zone.boss]]
+entry = 1291
+name = { en = "Uhk'loc", de = "Uhk'loc", fr = "Uhk'loc", es = "Uhk'loc", pt = "Uhk'loc", ru = "Ухк'лок", pl = "Uhk'loc", tr = "Uhk'loc", it = "Uhk'loc", ja = "ウクロック", zh = "乌克洛克", ko = "우크로크" }
+type = "beast"
+display = 8129
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 9000
+damage = 30
+speed = 5.8
+size = 2.3999999
+minute = 6
+yell = { en = "Uhk'loc beats his chest and charges!", de = "Uhk'loc trommelt auf seine Brust und stürmt los!", fr = "Uhk'loc se frappe la poitrine et charge !", es = "¡Uhk'loc se golpea el pecho y carga!", pt = "Uhk'loc bate no peito e avança!", ru = "Ухк'лок бьет себя в грудь и бросается в атаку!", pl = "Uhk'loc bije się w pierś i szarżuje!", tr = "Uhk'loc göğsüne vurup hücuma geçiyor!", it = "Uhk'loc si batte il petto e carica!", ja = "ウクロックが胸を叩いて突進してくる！", zh = "乌克洛克捶打着胸膛冲了过来！", ko = "우크로크가 가슴을 치며 돌진합니다!" }
+kit = "uhkloc"
+
+[[zone.boss]]
+entry = 1292
+name = { en = "Lar'korwi", de = "Lar'korwi", fr = "Lar'korwi", es = "Lar'korwi", pt = "Lar'korwi", ru = "Лар'корви", pl = "Lar'korwi", tr = "Lar'korwi", it = "Lar'korwi", ja = "ラーコーウィ", zh = "拉克沃", ko = "라르코르위" }
+type = "beast"
+display = 11318
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 17000
+damage = 38
+speed = 7.0
+size = 1.4399999
+minute = 9
+yell = { en = "Lar'korwi comes for whoever took her eggs!", de = "Lar'korwi kommt für den, der ihre Eier genommen hat!", fr = "Lar'korwi vient pour celui qui a pris ses œufs !", es = "¡Lar'korwi viene a por quien le quitó los huevos!", pt = "Lar'korwi vem atrás de quem levou seus ovos!", ru = "Лар'корви идет за тем, кто забрал ее яйца!", pl = "Lar'korwi nadchodzi po tego, kto zabrał jej jaja!", tr = "Lar'korwi yumurtalarını alanın peşine düşüyor!", it = "Lar'korwi viene a prendere chi ha rubato le sue uova!", ja = "ラーコーウィが卵を奪った者を追ってくる！", zh = "拉克沃前来找偷走她蛋的人算账！", ko = "라르코르위가 자기 알을 가져간 자를 찾아옵니다!" }
+kit = "larkorwi"
+
+[[zone.boss]]
+entry = 1293
+name = { en = "Tyrant Devilsaur", de = "Tyrannischer Teufelssaurier", fr = "Diablosaure tyran", es = "Demosaurio tirano", pt = "Demossauro Tirano", ru = "Дьявозавр-тиран", pl = "Diabłozaur tyran", tr = "Zorba Şeytan Saur", it = "Diavolosauro Tiranno", ja = "タイラント・デビルサウルス", zh = "暴君魔暴龙", ko = "폭군 데빌사우루스" }
+type = "beast"
+display = 5240
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 28000
+damage = 46
+speed = 6.4
+size = 0.69
+minute = 12
+yell = { en = "The ground shakes as a Tyrant Devilsaur bursts from the trees!", de = "Der Boden bebt, als ein Tyrannischer Teufelssaurier aus den Bäumen bricht!", fr = "Le sol tremble quand un diablosaure tyran jaillit des arbres !", es = "¡El suelo tiembla cuando un demosaurio tirano irrumpe entre los árboles!", pt = "O chão treme quando um Demossauro Tirano irrompe das árvores!", ru = "Земля дрожит: из-за деревьев вырывается дьявозавр-тиран!", pl = "Ziemia drży, gdy diabłozaur tyran wyłamuje się spośród drzew!", tr = "Zorba bir Şeytan Saur ağaçların arasından fırlarken yer sarsılıyor!", it = "Il terreno trema mentre un Diavolosauro Tiranno irrompe dagli alberi!", ja = "大地が揺れ、タイラント・デビルサウルスが木々の間から飛び出してきた！", zh = "大地震动，一头暴君魔暴龙从树林中冲出！", ko = "폭군 데빌사우루스가 나무 사이에서 뛰쳐나오자 땅이 흔들립니다!" }
+kit = "tyrant_devilsaur"
+
+[[zone.boss]]
+entry = 1294
+name = { en = "King Mosh", de = "König Mosh", fr = "Roi Mosh", es = "Rey Mosh", pt = "Rei Mosh", ru = "Король Мош", pl = "Król Mosh", tr = "Kral Mosh", it = "Re Mosh", ja = "キング・モッシュ", zh = "莫什之王", ko = "왕 모쉬" }
+type = "beast"
+display = 5305
+icon = "Ability_Hunter_Pet_Devilsaur"
+health = 52500
+damage = 54
+speed = 6.6
+size = 1.14
+minute = 16
+yell = { en = "King Mosh roars, and the whole crater falls silent.", de = "König Mosh brüllt, und der ganze Krater verstummt.", fr = "Le roi Mosh rugit, et tout le cratère se tait.", es = "El rey Mosh ruge y todo el cráter guarda silencio.", pt = "O Rei Mosh ruge, e a cratera inteira silencia.", ru = "Король Мош ревет, и весь кратер затихает.", pl = "Król Mosh ryczy, a cały krater milknie.", tr = "Kral Mosh kükrüyor ve tüm krater susuyor.", it = "Re Mosh ruggisce e l'intero cratere ammutolisce.", ja = "キング・モッシュが咆哮し、クレーター全体が静まり返った。", zh = "莫什之王一声咆哮，整个环形山都安静了下来。", ko = "왕 모쉬가 포효하자 분화구 전체가 고요해집니다." }
+final = true
+kit = "king_mosh"

@@ -1,0 +1,104 @@
+# Illidan Stormrage on his platform atop the Black Temple: Eye Blast, Flame Crash, the glaive leap
+# into Flame Burst, Shadow Blast, the Shadow Demons, the Flames of Azzinoth, and his Fel Wave:
+# Chaos Nova (36225) on him, then rings of fel fire rolling out over the platform, each bursting
+# all round in fel novas (75536, `fel_firenova_area` with Archimonde's fel fire). At 30% he takes
+# his demon form (`IllidanDark.mdx`, display 21322) in a burst of Metamorphosis (47241).
+
+[[boss]]
+key = "illidan_stormrage"
+
+[[boss.kit]]
+every = 10.0
+ability = { line = { spell = 39908, len = 40.0, w = 6.0, warn = 1.8, factor = 2.8 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { puddle = { spell = 40832, burst = 40832, radius = 6.0, warn = 2.5, factor = 2.2, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ leap = { spell = 39635, radius = 6.0, reach = 16.0, warn = 1.6, factor = 2.4 } }, { nova = { spell = 41126, radius = 10.0, warn = 2.2 } }], 1.6] }
+
+[[boss.kit]]
+every = 8.0
+ability = { rain = { spell = 41078, count = 5, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.4 } }
+
+[[boss.kit]]
+every = 15.0
+ability = { wander = { spell = 41117, count = 2, radius = 3.0, speed = 4.5, lasts = 7.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { adds = 14 }
+
+# The Fel Wave: five rings 5 yd deep, the last 25 yd out, one every 0.45 s after the first's 2 s
+# warning. Run out of it at once, or slip in behind its front.
+[[boss.kit]]
+every = 16.0
+ability = { wave = { spell = 36225, burst = 75536, count = 5, w = 5.0, warn = 2.0, gap = 0.45, factor = 2.0 } }
+
+# Illidan at 65%: the glaives fly, the Flames of Azzinoth rise and blaze the ground, he rains
+# fire from above, his eye blast still sweeps the field and a wider Fel Wave rolls out.
+[[boss.phase]]
+below = 0.65
+yell = { en = "Behold the flames of Azzinoth!", de = "Seht die Flammen von Azzinoth!", fr = "Voyez les flammes d'Azzinoth !", es = "¡Contemplad las llamas de Azzinoth!", pt = "Contemplem as chamas de Azzinoth!", ru = "Узрите пламя Аззинота!", pl = "Oto płomienie Azzinotha!", tr = "Azzinoth'un alevlerine bakın!", it = "Contemplate le fiamme di Azzinoth!", ja = "アジノスの炎を見よ！", zh = "见识埃辛诺斯的烈焰吧！", ko = "아지노스의 불길을 보아라!" }
+adds = 10
+
+[[boss.phase.kit]]
+every = 14.0
+ability = { wander = { spell = 40610, count = 2, radius = 4.0, speed = 5.0, lasts = 10.0, tick = 0.5 } }
+
+[[boss.phase.kit]]
+every = 9.0
+ability = { trail = { spell = 40610, count = 5, radius = 4.0, warn = 1.1, gap = 0.7, factor = 2.0 } }
+
+[[boss.phase.kit]]
+every = 7.0
+ability = { rain = { spell = 40598, count = 5, radius = 4.0, spread = 11.0, warn = 1.4, factor = 2.0 } }
+
+[[boss.phase.kit]]
+every = 18.0
+ability = { sweep = { spell = 39908, len = 45.0, w = 5.0, warn = 2.0, lasts = 4.0, tick = 0.4 } }
+
+[[boss.phase.kit]]
+every = 20.0
+ability = { tether = { spell = 40585, reach = 18.0, warn = 1.6, lasts = 5.0, tick = 0.4 } }
+
+[[boss.phase.kit]]
+every = 12.0
+ability = { adds = 10 }
+
+[[boss.phase.kit]]
+every = 18.0
+ability = { wave = { spell = 36225, burst = 75536, count = 6, w = 5.0, warn = 2.0, gap = 0.5, factor = 2.2 } }
+
+# Illidan at 30%: the demon within. He takes his demon form; shadow blasts fall round the hero,
+# his Flame Burst rings him and a Fel Wave rolls out after it, agonizing flames chase the hero's
+# steps, shadow demons pour out, and Maiev sets her cage traps (from Heroic IV).
+[[boss.phase]]
+below = 0.3
+yell = { en = "Behold the power... of the demon within!", de = "Seht die Macht... des Dämons in mir!", fr = "Voyez la puissance... du démon qui est en moi !", es = "¡Contemplad el poder... del demonio que llevo dentro!", pt = "Contemplem o poder... do demônio que há em mim!", ru = "Узрите мощь... демона внутри меня!", pl = "Oto moc... demona wewnątrz!", tr = "İçimdeki şeytanın... gücüne bakın!", it = "Contemplate il potere... del demone che è in me!", ja = "見るがいい…内なるデーモンの力を！", zh = "见识……我体内恶魔的力量吧！", ko = "보아라... 내 안의 악마의 힘을!" }
+adds = 14
+display = 21322
+spell = 47241
+
+[[boss.phase.kit]]
+every = 6.0
+ability = { rain = { spell = 41078, count = 4, radius = 5.0, spread = 10.0, warn = 1.5, factor = 2.6 } }
+
+# Flame Burst, then the Fel Wave from where he stands once it struck.
+[[boss.phase.kit]]
+every = 14.0
+ability = { combo = [[{ nova = { spell = 41126, radius = 12.0, warn = 2.2 } }, { wave = { spell = 36225, burst = 75536, count = 6, w = 5.0, warn = 1.8, gap = 0.5, factor = 2.4 } }], 2.4] }
+
+[[boss.phase.kit]]
+every = 10.0
+ability = { trail = { spell = 40932, count = 5, radius = 4.0, warn = 1.1, gap = 0.8, factor = 2.2 } }
+
+[[boss.phase.kit]]
+every = 24.0
+ability = { towers = { spell = 40693, count = 3, radius = 4.0, spacing = 12.0, time = 5.0, factor = 6.0 } }
+
+[[boss.phase.kit]]
+every = 9.0
+ability = { adds = 14 }

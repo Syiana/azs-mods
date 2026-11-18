@@ -1,0 +1,20 @@
+# Anub'Rekhan's abilities, Naxxramas.
+
+[[boss]]
+key = "anubrekhan"
+
+[[boss.kit]]
+every = 7.0
+ability = { line = { spell = 28783, len = 30.0, w = 5.0, warn = 1.4, factor = 2.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { combo = [[{ line = { spell = 28783, len = 30.0, w = 5.0, warn = 1.2, factor = 2.4 } }, { line = { spell = 28783, len = 30.0, w = 5.0, warn = 1.2, factor = 2.4 } }], 1.1] }
+
+[[boss.kit]]
+every = 16.0
+ability = { whirlwind = { spell = 28785, radius = 8.0, lasts = 6.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 6 }

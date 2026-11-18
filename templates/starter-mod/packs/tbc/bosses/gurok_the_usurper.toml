@@ -1,0 +1,16 @@
+# Gurok the Usurper: a giant's Stomp and the boulders it shakes loose.
+
+[[boss]]
+key = "gurok_the_usurper"
+
+[[boss.kit]]
+every = 10.0
+ability = { stomp = { spell = 31277, radius = 10.0, warn = 1.8, knock = 14.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { rain = { spell = 36240, count = 4, radius = 5.0, spread = 10.0, warn = 1.6, factor = 2.2 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

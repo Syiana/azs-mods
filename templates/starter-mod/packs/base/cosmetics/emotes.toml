@@ -1,0 +1,173 @@
+# The emotes (survivors-sim emotes.rs), starters (price 0) first. `anim` is the Emotes.dbc id: 2 bow, 3 wave,
+# 4 cheer, 10 dance (a state), 11 laugh, 15 roar, 17 kiss, 23 flex, 66 salute, 253 applaud (state),
+# 391 roar (state), 392 laugh (state); 600-604 are patch-J's own dances (disco, rock, jig, shanty, party),
+# which a model without them plays as the stock Dance. `kit` is the SpellVisualKit.dbc kit on the hero:
+# 2084-2088 the fireworks' (11540-11544), 860 Party Fever's impact, 5034 Tag: Hearts' state.
+# A looping one's `aura` is a spell held on the hero while it lasts, its state kit the look: 44016
+# Has Pumpkin Head, 61292 Has a Borrowed Broom (stock 3.3.5a), or patch-~'s for an admin emote.
+# `staff` makes it an admin emote (the staff's alone, never sold, last).
+#
+# Every emote, starters first. `TUNE` the prices; the addon's `Emotes.lua` names the same keys.
+
+[[emote]]
+key = "wave"
+name = "Wave"
+price = 0
+anim = 3
+looping = false
+
+[[emote]]
+key = "cheer"
+name = "Cheer"
+price = 0
+anim = 4
+looping = false
+
+[[emote]]
+key = "dance"
+name = "Dance"
+price = 0
+anim = 10
+looping = true
+
+[[emote]]
+key = "laugh"
+name = "Laugh"
+price = 0
+anim = 11
+looping = false
+
+[[emote]]
+key = "salute"
+name = "Salute"
+price = 0
+anim = 66
+looping = false
+
+[[emote]]
+key = "roar"
+name = "Roar"
+price = 0
+anim = 15
+looping = false
+
+[[emote]]
+key = "bow"
+name = "Bow"
+price = 0
+anim = 2
+looping = false
+
+[[emote]]
+key = "flex"
+name = "Flex"
+price = 0
+anim = 23
+looping = false
+
+[[emote]]
+key = "disco"
+name = "Undercity Disco"
+price = 3000
+anim = 600
+looping = true
+kit = 860
+
+[[emote]]
+key = "rock_concert"
+name = "Rock Concert"
+price = 3500
+anim = 601
+looping = true
+kit = 2084
+
+[[emote]]
+key = "goblin_party"
+name = "Goblin Party"
+price = 2500
+anim = 604
+looping = true
+kit = 2086
+
+[[emote]]
+key = "dwarf_jig"
+name = "Dwarven Jig"
+price = 2500
+anim = 602
+looping = true
+kit = 2088
+
+[[emote]]
+key = "pirate_shanty"
+name = "Pirate Shanty"
+price = 2000
+anim = 603
+looping = true
+
+[[emote]]
+key = "tavern_cheer"
+name = "Tavern Cheers"
+price = 1500
+anim = 253
+looping = true
+
+[[emote]]
+key = "victory_roar"
+name = "Victory Roar"
+price = 1500
+anim = 391
+looping = true
+kit = 2084
+
+[[emote]]
+key = "cackle"
+name = "Endless Cackle"
+price = 1000
+anim = 392
+looping = true
+
+[[emote]]
+key = "firework_salute"
+name = "Firework Salute"
+price = 1000
+anim = 66
+looping = false
+kit = 2085
+
+[[emote]]
+key = "lovestruck"
+name = "Lovestruck"
+price = 1000
+anim = 17
+looping = false
+kit = 5034
+
+# Hallow's End's own (its Event Shop sells them too): the cackle with a broom in hand, and a dance
+# with a flaming pumpkin for a head.
+[[emote]]
+key = "witch_broom"
+name = "Witch's Broom"
+price = 2500
+anim = 392
+looping = true
+aura = 61292
+
+[[emote]]
+key = "pumpkin_dance"
+name = "Jack-o'-Lantern Dance"
+price = 2500
+anim = 10
+looping = true
+aura = 44016
+
+# The staff's joke emote (`crate::admin`): played by an admin's or moderator's account alone,
+# never sold.
+# It holds an aura on the hero while it lasts (`aura`), whose state kit shows the spinning cat.
+[[emote]]
+key = "uiia"
+name = "UIIA"
+price = 0
+anim = 10
+looping = true
+aura = 95001
+staff = true

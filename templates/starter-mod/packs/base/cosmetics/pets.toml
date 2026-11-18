@@ -1,0 +1,114 @@
+# The shop's companion prices (survivors-sim pets.rs); the companions themselves are the zones' content.
+# `TUNE` the prices.
+
+[[pet]]
+key = "squirrel"
+price = 300
+
+[[pet]]
+key = "rabbit"
+price = 500
+
+[[pet]]
+key = "macaw"
+price = 800
+
+[[pet]]
+key = "owl"
+price = 800
+
+[[pet]]
+key = "frog"
+price = 800
+
+[[pet]]
+key = "kingsnake"
+price = 1000
+
+[[pet]]
+key = "darter"
+price = 1200
+
+[[pet]]
+key = "whelpling"
+price = 1500
+
+[[pet]]
+key = "zergling"
+price = 1500
+
+[[pet]]
+key = "chicken"
+price = 1000
+
+[[pet]]
+key = "cockroach"
+price = 1000
+
+[[pet]]
+key = "panda"
+price = 2500
+
+[[pet]]
+key = "diablo"
+price = 3000
+
+[[pet]]
+key = "murloc"
+price = 1800
+
+[[pet]]
+key = "penguin"
+price = 1800
+
+[[pet]]
+key = "frostwyrm"
+price = 3500
+
+[[pet]]
+key = "phoenix"
+price = 3500
+
+[[pet]]
+key = "corehound"
+price = 3000
+
+[[pet]]
+key = "wolpertinger"
+price = 1800
+
+[[pet]]
+key = "nether_ray_fry"
+price = 2600
+
+[[pet]]
+key = "netherwhelp"
+price = 3000
+
+[[pet]]
+key = "mini_onyxia"
+price = 3600
+
+[[pet]]
+key = "lil_kt"
+price = 4000
+
+[[pet]]
+key = "pint_sized_pachyderm"
+price = 2200
+
+[[pet]]
+key = "toothy"
+price = 1400
+
+[[pet]]
+key = "stinker"
+price = 900
+
+[[pet]]
+key = "captured_firefly"
+price = 1900
+
+[[pet]]
+key = "grunty"
+price = 3200

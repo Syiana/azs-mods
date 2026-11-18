@@ -1,0 +1,16 @@
+# M'uru: Darkness, Entropius's crawling dark, the Void Sentinels.
+
+[[boss]]
+key = "muru"
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 45996, burst = 45996, radius = 6.0, warn = 2.5, factor = 2.0, lasts = 8.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 14.0
+ability = { wander = { spell = 46269, count = 2, radius = 3.0, speed = 4.3, lasts = 7.0, tick = 0.45 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { adds = 12 }

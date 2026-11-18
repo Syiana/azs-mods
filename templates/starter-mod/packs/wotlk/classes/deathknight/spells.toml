@@ -1,0 +1,227 @@
+# The pool in AS's order (`ability.*` in its texts); the first is the spell every run starts
+# with. Spell ids are 3.3.5a's own ranks, so the client shows their icons, names and visuals.
+# Numbers of AS's spells are AS's table (0x147106510, `re/NUMBERS.md` 18): the hit is its
+# damage times AS's form factor (half for novas and ground spells); riders and buff strengths
+# are ours. The WotLK spells' hits are ours, scaled with their class's AS spells. `TUNE` for
+# those. A hit is one hit before the hero's and the cards' factors: a tick for ground and
+# totem spells, the whole for a damage over time.
+
+[[spell]]
+key = "icy_touch"
+id = 45477
+visual = 46576
+school = "frost"
+shape = { strike = { targets = 1 } }
+hit = 30
+cooldown = 1.4
+range = 10.0
+rider = { slow = { pct = 30, secs = 3.0 } }
+# Its own impact (`DeathKnight_IcyTouch.mdx`) is a ground burst sized by its target, huge on
+# the run's enlarged bosses: it shows as Hailstone Chill, the Frostbolt's chest burst without a
+# missile. Ours.
+name = { en = "Icy Touch", de = "Eisige Berührung", fr = "Toucher de glace", es = "Toque helado", pt = "Toque Gélido", ru = "Ледяное прикосновение", pl = "Lodowy dotyk", tr = "Buzlu Dokunuş", it = "Tocco gelido", ja = "アイシー・タッチ", zh = "冰冷触摸", ko = "얼음 손길" }
+icon = "Spell_DeathKnight_IceTouch"
+
+[[spell]]
+key = "plague_strike"
+id = 45462
+school = "shadow"
+shape = { dot = { targets = 1, secs = 15.0, ticks = 5, cap = 1 } }
+hit = 80
+cooldown = 3.0
+range = 6.0
+name = { en = "Plague Strike", de = "Seuchenstoß", fr = "Frappe de peste", es = "Golpe de plaga", pt = "Golpe de Praga", ru = "Удар чумы", pl = "Cios zarazy", tr = "Veba Darbesi", it = "Colpo pestilente", ja = "プレイグ・ストライク", zh = "瘟疫打击", ko = "역병의 일격" }
+icon = "Spell_DeathKnight_EmpowerRuneBlade"
+
+[[spell]]
+key = "dk_death_coil"
+id = 47541
+visual = 47632
+# The spell's own row flies at speed 0, so its missile would not travel; the damage spell it triggers (47632) shares
+# its visual and flies at 24, so the cast shows that spell's.
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 95
+cooldown = 4.0
+range = 30.0
+name = { en = "Death Coil", de = "Todesmantel", fr = "Voile mortel", es = "Espiral de muerte", pt = "Espiral da Morte", ru = "Лик смерти", pl = "Splot śmierci", tr = "Ölüm Sarmalı", it = "Spira della morte", ja = "デス・コイル", zh = "死亡缠绕", ko = "죽음의 고리" }
+icon = "Spell_Shadow_DeathCoil"
+
+[[spell]]
+key = "blood_boil"
+id = 48721
+school = "shadow"
+shape = { nova = { radius = 10.0 } }
+hit = 37
+cooldown = 3.0
+range = 10.0
+name = { en = "Blood Boil", de = "Blutsieden", fr = "Furoncle sanglant", es = "Sangre hirviente", pt = "Sangue Fervente", ru = "Вскипание крови", pl = "Wrzenie krwi", tr = "Kan Kaynaması", it = "Ebollizione del sangue", ja = "ブラッド・ボイル", zh = "血液沸腾", ko = "피의 소용돌이" }
+icon = "Spell_DeathKnight_BloodBoil"
+
+[[spell]]
+key = "death_and_decay"
+id = 43265
+school = "shadow"
+shape = { ground = { radius = 8.0, every = 1.0, secs = 10.0 } }
+hit = 19
+cooldown = 12.0
+range = 30.0
+name = { en = "Death and Decay", de = "Tod und Verfall", fr = "Mort et décomposition", es = "Muerte y descomposición", pt = "Morte e Decomposição", ru = "Смерть и разложение", pl = "Śmierć i rozkład", tr = "Ölüm ve Çürüme", it = "Morte e decomposizione", ja = "デス・アンド・ディケイ", zh = "枯萎凋零", ko = "죽음과 부패" }
+icon = "Spell_Shadow_DeathAndDecay"
+
+[[spell]]
+key = "howling_blast"
+id = 49184
+school = "frost"
+# Ours: a frost hit and a slow on the nearest three; Icy Reach adds up to two more. (`hit = 0` would
+# make it a control strike: the slow alone, on at most five, no damage.)
+shape = { strike = { targets = 3 } }
+hit = 50
+cooldown = 6.0
+range = 10.0
+rider = { slow = { pct = 50, secs = 4.0 } }
+name = { en = "Howling Blast", de = "Heulende Böe", fr = "Rafale hurlante", es = "Ráfaga aullante", pt = "Rajada Uivante", ru = "Воющий ветер", pl = "Wyjąca zamieć", tr = "Uluyan Patlama", it = "Esplosione ululante", ja = "ハウリング・ブラスト", zh = "凛风冲击", ko = "울부짖는 한파" }
+icon = "Spell_Frost_ArcticWinds"
+
+[[spell]]
+key = "obliterate"
+id = 49020
+school = "physical"
+shape = { strike = { targets = 4 } }
+hit = 106
+cooldown = 4.0
+range = 6.0
+name = { en = "Obliterate", de = "Auslöschen", fr = "Anéantissement", es = "Obliterar", pt = "Obliterar", ru = "Уничтожение", pl = "Unicestwienie", tr = "Yok Et", it = "Annientare", ja = "オブリタレート", zh = "湮灭", ko = "절멸" }
+icon = "Spell_Deathknight_ClassIcon"
+
+[[spell]]
+key = "heart_strike"
+id = 55050
+school = "physical"
+shape = { strike = { targets = 2 } }
+hit = 60
+cooldown = 2.5
+range = 6.0
+name = { en = "Heart Strike", de = "Herzstoß", fr = "Frappe au cœur", es = "Golpe al corazón", pt = "Golpe no Coração", ru = "Удар в сердце", pl = "Uderzenie w serce", tr = "Kalp Darbesi", it = "Colpo al cuore", ja = "ハート・ストライク", zh = "心脏打击", ko = "심장 강타" }
+icon = "INV_Weapon_Shortblade_40"
+
+[[spell]]
+key = "scourge_strike"
+id = 55090
+school = "shadow"
+shape = { strike = { targets = 1 } }
+hit = 93
+cooldown = 3.5
+range = 6.0
+name = { en = "Scourge Strike", de = "Geißelstoß", fr = "Frappe du Fléau", es = "Golpe de la Plaga", pt = "Golpe do Flagelo", ru = "Удар Плети", pl = "Cios Plagi", tr = "Yıkım Darbesi", it = "Colpo del Flagello", ja = "スカージ・ストライク", zh = "天灾打击", ko = "스컬지의 일격" }
+icon = "Spell_DeathKnight_ScourgeStrike"
+
+[[spell]]
+key = "pestilence"
+id = 50842
+school = "shadow"
+shape = { dot = { targets = 5, secs = 12.0, ticks = 4, cap = 1 } }
+# 100 over 12 sec (the balance team's 1b: 52 was the lowest damage per cooldown of any damage over time).
+hit = 100
+cooldown = 8.0
+range = 10.0
+name = { en = "Pestilence", de = "Pestilenz", fr = "Pestilence", es = "Pestilencia", pt = "Pestilência", ru = "Мор", pl = "Pomór", tr = "Salgın", it = "Pestilenza", ja = "ペスティレンス", zh = "传染", ko = "역병" }
+icon = "Spell_Shadow_PlagueCloud"
+# A plague counts as damage over time, not as a strike: its ticks never crit and no echo casts it again
+# (the balance team's DK document: "Krit / erneutes Wirken (Echo) wirken nicht auf Pestilenz").
+no_crit = true
+no_echo = true
+
+[[spell]]
+key = "death_strike"
+id = 49998
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 66
+cooldown = 4.0
+range = 6.0
+rider = { drain = { pct = 50 } }
+name = { en = "Death Strike", de = "Todesstoß", fr = "Frappe de mort", es = "Golpe de muerte", pt = "Golpe da Morte", ru = "Удар смерти", pl = "Cios śmierci", tr = "Ölüm Darbesi", it = "Colpo della morte", ja = "デス・ストライク", zh = "灵界打击", ko = "죽음의 일격" }
+icon = "Spell_DeathKnight_Butcher2"
+
+[[spell]]
+key = "chains_of_ice"
+id = 45524
+school = "frost"
+shape = { strike = { targets = 1 } }
+hit = 13
+cooldown = 8.0
+range = 20.0
+rider = { root = { secs = 4.0 } }
+name = { en = "Chains of Ice", de = "Eisige Ketten", fr = "Chaînes de glace", es = "Cadenas de hielo", pt = "Correntes de Gelo", ru = "Ледяные оковы", pl = "Łańcuchy lodu", tr = "Buz Zincirleri", it = "Catene di ghiaccio", ja = "チェイン・オブ・アイス", zh = "寒冰锁链", ko = "얼음 사슬" }
+icon = "Spell_Frost_ChainsOfIce"
+
+[[spell]]
+key = "anti_magic_shell"
+id = 48707
+school = "shadow"
+shape = { shield = { share = 25 } }
+hit = 0
+cooldown = 15.0
+range = 0.0
+name = { en = "Anti-Magic Shell", de = "Antimagische Hülle", fr = "Carapace anti-magie", es = "Coraza antimagia", pt = "Carapaça Antimagia", ru = "Антимагический панцирь", pl = "Powłoka antymagiczna", tr = "Anti-Büyü Kabuğu", it = "Guscio anti-magia", ja = "アンチマジック・シェル", zh = "反魔法护罩", ko = "대마법 보호막" }
+icon = "Spell_Shadow_AntiMagicShell"
+
+[[spell]]
+key = "icebound_fortitude"
+id = 48792
+school = "frost"
+shape = { immune = { secs = 4.0 } }
+hit = 0
+cooldown = 60.0
+range = 0.0
+name = { en = "Icebound Fortitude", de = "Eisige Gegenwehr", fr = "Robustesse glaciale", es = "Entereza helada", pt = "Fortitude Congelante", ru = "Незыблемость льда", pl = "Lodowa twierdza", tr = "Buza Bağlı Sebat", it = "Fortitudine del ghiaccio", ja = "アイスバウンド・フォーティチュード", zh = "冰封之韧", ko = "얼음같은 인내력" }
+icon = "Spell_DeathKnight_IceBoundFortitude"
+
+[[spell]]
+key = "horn_of_winter"
+id = 57330
+school = "frost"
+shape = { fury = { pct = 15, secs = 12.0 } }
+hit = 0
+cooldown = 20.0
+range = 30.0
+name = { en = "Horn of Winter", de = "Horn des Winters", fr = "Cor de l'hiver", es = "Cuerno de invierno", pt = "Chifre do Inverno", ru = "Зимний горн", pl = "Róg Zimy", tr = "Kış Borusu", it = "Corno dell'inverno", ja = "ホーン・オブ・ウィンター", zh = "寒冬号角", ko = "겨울의 뿔피리" }
+icon = "INV_Misc_Horn_02"
+
+# Wrath of the Lich King signatures the pool lacked (the port's own numbers, `TUNE`).
+[[spell]]
+key = "frost_strike"
+id = 49143
+school = "frost"
+shape = { strike = { targets = 1 } }
+hit = 85
+cooldown = 2.5
+range = 6.0
+name = { en = "Frost Strike", de = "Froststoß", fr = "Frappe de givre", es = "Golpe de escarcha", pt = "Golpe de Gelo", ru = "Ледяной удар", pl = "Lodowe uderzenie", tr = "Buz Darbesi", it = "Colpo di gelo", ja = "フロスト・ストライク", zh = "冰霜打击", ko = "냉기의 일격" }
+icon = "Spell_DeathKnight_EmpowerRuneBlade2"
+
+[[spell]]
+key = "unholy_blight"
+id = 49194
+visual = 3256
+# The spell has no visual of its own: Plague Cloud's (3256) is the poison cloud its cast shows.
+school = "shadow"
+shape = { dot = { targets = 4, secs = 10.0, ticks = 5, cap = 1 } }
+hit = 60
+cooldown = 8.0
+range = 10.0
+name = { en = "Unholy Blight", de = "Unheilige Verseuchung", fr = "Flétrissure impie", es = "Añublo profano", pt = "Praga Profana", ru = "Нечестивая порча", pl = "Nieświęta plaga", tr = "Kutsal Olmayan Kırağı", it = "Morbo empio", ja = "アンホーリー・ブライト", zh = "邪恶虫群", ko = "부정의 역병" }
+icon = "Spell_Shadow_Contagion"
+
+[[spell]]
+key = "summon_gargoyle"
+id = 49206
+school = "shadow"
+shape = { summon = { pet = "gargoyle", count = 1, secs = 25.0 } }
+hit = 0
+cooldown = 50.0
+range = 30.0
+name = { en = "Summon Gargoyle", de = "Gargoyle beschwören", fr = "Invocation de gargouille", es = "Invocar gárgola", pt = "Invocar Gárgula", ru = "Призыв горгульи", pl = "Przyzwanie gargulca", tr = "Gargoyle Çağır", it = "Evocare Gargoyle", ja = "サモン・ガーゴイル", zh = "召唤石像鬼", ko = "가고일 소환" }
+icon = "Ability_Hunter_Pet_Bat"
+pet = { one = { en = "Ebon Gargoyle", de = "Ebenholzgargoyle", fr = "Gargouille d'ébène", es = "Gárgola de ébano", pt = "Gárgula de Ébano", ru = "Эбонитовая горгулья", pl = "Hebanowy gargulec", tr = "Abanoz Gargoyle", it = "Gargoyle d'ebano", ja = "エボン・ガーゴイル", zh = "黑锋石像鬼", ko = "칠흑의 가고일" }, many = { en = "Ebon Gargoyles", de = "Ebenholzgargoyle", fr = "Gargouilles d'ébène", es = "Gárgolas de ébano", pt = "Gárgulas de Ébano", ru = "Эбонитовые горгульи", pl = "Hebanowe gargulce", tr = "Abanoz Gargoyle'lar", it = "Gargoyle d'ebano", ja = "エボン・ガーゴイル", zh = "黑锋石像鬼", ko = "칠흑의 가고일" } }

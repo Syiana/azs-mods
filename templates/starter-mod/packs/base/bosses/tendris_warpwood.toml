@@ -1,0 +1,20 @@
+# Tendris Warpwood's abilities, Feralas.
+
+[[boss]]
+key = "tendris_warpwood"
+
+[[boss.kit]]
+every = 7.0
+ability = { nova = { spell = 5568, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { line = { spell = 5568, len = 30.0, w = 5.0, warn = 1.4, factor = 2.2 } }
+
+[[boss.kit]]
+every = 9.0
+ability = { pool = { spell = 16914, burst = 339, radius = 10.0, warn = 1.5, factor = 2.2 } }
+
+[[boss.kit]]
+every = 13.0
+ability = { adds = 10 }

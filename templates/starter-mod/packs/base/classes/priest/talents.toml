@@ -1,0 +1,569 @@
+# Azeroth Survivors' talent trees for this class. The trees' and talents' keys, rows, ranks,
+# requirements and `effects` are read out of AzerothSurvivors.exe by `re/tools/talents.js`,
+# which rewrites those lines and keeps every other line of a talent (its `mods`, `plays`,
+# names and comments).
+#
+# The order is the build string's: tree by tree, talent by talent (`talents.rs`).
+# `mods` (with `mods_v`, their `{v}` per rank) and `plays` (each with its `v`) are what a talent
+# the exe's table leaves bare does as the run plays it.
+
+[[talent_tree]]
+key = "priest_discipline"
+index = 0
+icon = "Spell_Holy_WordFortitude"
+background = "PriestDiscipline"
+name = { en = "Discipline", de = "Disziplin", fr = "Discipline", es = "Disciplina", pt = "Disciplina", ru = "Послушание", pl = "Dyscyplina", tr = "Disiplin", it = "Disciplina", ja = "ディシプリン", zh = "戒律", ko = "수양" }
+
+[[talent_tree]]
+key = "priest_holy"
+index = 1
+icon = "Spell_Holy_GuardianSpirit"
+background = "PriestHoly"
+name = { en = "Holy", de = "Heilig", fr = "Sacré", es = "Sagrado", pt = "Sagrado", ru = "Свет", pl = "Światłość", tr = "Kutsal", it = "Sacro", ja = "ホーリー", zh = "神圣", ko = "신성" }
+
+[[talent_tree]]
+key = "priest_shadow"
+index = 2
+icon = "Spell_Shadow_ShadowWordPain"
+background = "PriestShadow"
+name = { en = "Shadow", de = "Schatten", fr = "Ombre", es = "Sombras", pt = "Sombra", ru = "Тьма", pl = "Cień", tr = "Gölge", it = "Ombra", ja = "シャドウ", zh = "暗影", ko = "암흑" }
+
+[[talent]]
+key = "unbreakable_will"
+tree = 0
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [5, 0.008] }]
+icon = "Spell_Magic_MageArmor"
+name = { en = "Unbreakable Will", de = "Unbeugsamer Wille", fr = "Volonté inflexible", es = "Voluntad inquebrantable", pt = "Vontade Inquebrável", ru = "Железная воля", pl = "Niezłomna wola", tr = "Kırılmaz İrade", it = "Volontà indomita", ja = "アンブレイカブル・ウィル", zh = "坚定意志", ko = "굳건한 의지" }
+text = { en = "Reduces all damage taken by {v}%.", de = "Verringert jeglichen erlittenen Schaden um {v}%.", fr = "Réduit tous les dégâts subis de {v}%.", es = "Reduce todo el daño recibido un {v}%.", pt = "Reduz todo o dano sofrido em {v}%.", ru = "Снижает весь получаемый урон на {v}%.", pl = "Zmniejsza wszystkie otrzymywane obrażenia o {v}%.", tr = "Alınan tüm hasarı {v}% azaltır.", it = "Riduce tutti i danni subiti del {v}%.", ja = "受けるすべてのダメージが{v}%減少します。", zh = "使你受到的所有伤害降低{v}%。", ko = "받는 모든 피해가 {v}% 감소합니다." }
+menu_v = 0.008
+
+[[talent]]
+key = "wand_spec"
+tree = 0
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "INV_Wand_01"
+name = { en = "Wand Specialization", de = "Zauberstabspezialisierung", fr = "Spécialisation baguette", es = "Especialización con varitas", pt = "Especialização em Varinhas", ru = "Мастерство владения жезлом", pl = "Specjalizacja: różdżki", tr = "Asa Uzmanlığı", it = "Specializzazione nelle bacchette", ja = "ワンド・スペシャライゼーション", zh = "魔杖专精", ko = "마법봉 전문화" }
+text = { en = "Smite deals {v}% more damage.", de = "Göttliche Pein verursacht {v}% mehr Schaden.", fr = "Châtiment inflige {v}% de dégâts en plus.", es = "Aplastar inflige un {v}% más de daño.", pt = "Punição causa {v}% a mais de dano.", ru = "Кара наносит на {v}% больше урона.", pl = "Kara zadaje o {v}% więcej obrażeń.", tr = "Cezalandır {v}% daha fazla hasar verir.", it = "Punire infligge il {v}% di danni in più.", ja = "スマイトのダメージが{v}%増加します。", zh = "惩击造成的伤害提高{v}%。", ko = "성스러운 일격의 피해가 {v}% 증가합니다." }
+menu_v = 0.04
+mods = [{ damage = ["smite"] }]
+mods_v = 0.04
+
+[[talent]]
+key = "imp_pw_shield"
+tree = 0
+row = 1
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Holy_PowerWordShield"
+name = { en = "Improved Power Word: Shield", de = "Verbessertes Machtwort: Schild", fr = "Mot de pouvoir : Bouclier amélioré", es = "Palabra de poder: Escudo mejorada", pt = "Palavra de Poder: Escudo Aprimorada", ru = "Улучшенное Слово силы: Щит", pl = "Ulepszone Słowo Mocy: Tarcza", tr = "Gelişmiş Güç Sözü: Kalkan", it = "Parola del Potere: Scudo migliorata", ja = "改良型パワー・ワード：シールド", zh = "强化真言术：盾", ko = "신의 권능: 보호막 연마" }
+text = { en = "Power Word: Shield absorbs {v}% more.", de = "Machtwort: Schild absorbiert {v}% mehr.", fr = "Mot de pouvoir : Bouclier absorbe {v}% de dégâts en plus.", es = "Palabra de poder: Escudo absorbe un {v}% más.", pt = "Palavra de Poder: Escudo absorve {v}% a mais.", ru = "Слово силы: Щит поглощает на {v}% больше урона.", pl = "Słowo Mocy: Tarcza pochłania o {v}% więcej.", tr = "Güç Sözü: Kalkan {v}% daha fazla emer.", it = "Parola del Potere: Scudo assorbe il {v}% in più.", ja = "パワー・ワード：シールドの吸収量が{v}%増加します。", zh = "真言术：盾的吸收量提高{v}%。", ko = "신의 권능: 보호막의 흡수량이 {v}% 증가합니다." }
+menu_v = 0.2
+mods = [{ damage = ["pw_shield"] }]
+mods_v = 0.2
+
+[[talent]]
+key = "martyrdom"
+tree = 0
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [2, 0.015] }]
+icon = "Spell_Nature_Tranquility"
+name = { en = "Martyrdom", de = "Märtyrertum", fr = "Martyre", es = "Martirio", pt = "Martírio", ru = "Мученичество", pl = "Męczeństwo", tr = "Şehitlik", it = "Martirio", ja = "マーターダム", zh = "殉难", ko = "순교" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "divine_aegis"
+tree = 0
+row = 2
+col = 1
+ranks = 1
+effects = [{ start_with = "pw_shield" }]
+icon = "Spell_Holy_DivineIntervention"
+name = { en = "Divine Aegis", de = "Göttliche Aegis", fr = "Égide divine", es = "Égida divina", pt = "Égide Divina", ru = "Божественная эгида", pl = "Boska egida", tr = "İlahi Himaye", it = "Egida divina", ja = "ディヴァイン・イージス", zh = "神圣庇护", ko = "신의 보호" }
+text = { en = "Milestone. You start every run with Power Word: Shield, and a shield on you that breaks bursts in holy light: {v}% of what it absorbed strikes every enemy within 10 yd.", de = "Meilenstein. Du beginnst jeden Lauf mit Machtwort: Schild, und ein brechender Schild auf dir zerbirst in heiligem Licht: {v}% dessen, was er absorbiert hat, trifft jeden Feind im Umkreis von 10 m.", fr = "Jalon. Tu commences chaque partie avec Mot de pouvoir : Bouclier, et un bouclier qui se brise sur toi éclate en lumière sacrée : {v}% de ce qu'il a absorbé frappe chaque ennemi à moins de 10 m.", es = "Hito. Empiezas cada partida con Palabra de poder: Escudo, y un escudo tuyo que se rompe estalla en luz sagrada: un {v}% de lo que absorbió golpea a cada enemigo a menos de 10 m.", pt = "Marco. Você começa cada partida com Palavra de Poder: Escudo, e um escudo seu que se quebra explode em luz sagrada: {v}% do que absorveu atinge cada inimigo a até 10 m.", ru = "Веха. Ты начинаешь каждый забег со Слова силы: Щит, и разбитый щит на тебе взрывается священным светом: {v}% поглощенного им урона поражает каждого врага в радиусе 10 м.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz ze Słowem Mocy: Tarcza, a pękająca tarcza na tobie wybucha świętym światłem: {v}% pochłoniętych obrażeń uderza każdego przeciwnika w promieniu 10 m.", tr = "Dönüm noktası. Her oyuna Güç Sözü: Kalkan ile başlarsın ve üzerindeki kalkan kırılınca kutsal ışıkla patlar: emdiğinin {v}%'si 10 m içindeki her düşmana vurur.", it = "Traguardo. Inizi ogni partita con Parola del Potere: Scudo e uno scudo su di te che si rompe esplode in luce sacra: il {v}% di ciò che ha assorbito colpisce ogni nemico entro 10 m.", ja = "【マイルストーン】毎ランをパワー・ワード：シールドを持って始め、自分のシールドが壊れると聖なる光が炸裂します：吸収した量の{v}%が10ヤード以内のすべての敵に命中します。", zh = "里程碑：你在每场对局开始时拥有真言术：盾，你身上的护盾破碎时会迸发圣光：将其吸收量的{v}%作为伤害，打击10码内的所有敌人。", ko = "이정표. 모든 런을 신의 권능: 보호막을 가지고 시작하며, 당신에게 걸린 보호막이 깨지면 신성한 빛으로 터집니다: 흡수한 양의 {v}%만큼 10미터 안의 모든 적에게 피해를 줍니다." }
+menu_v = 0.5
+plays = [
+    # Its text's share is unread: ours. `TUNE`
+    { v = 0.5, play = { shield_burst = { radius = 10.0 } } },
+]
+
+[[talent]]
+key = "mental_agility"
+tree = 0
+row = 2
+col = 2
+ranks = 5
+effects = [{ stat = [1, 0.015] }]
+icon = "Ability_Hibernation"
+name = { en = "Mental Agility", de = "Geistige Beweglichkeit", fr = "Agilité mentale", es = "Agilidad mental", pt = "Agilidade Mental", ru = "Ментальная ловкость", pl = "Zwinność umysłu", tr = "Zihinsel Çeviklik", it = "Agilità mentale", ja = "メンタル・アジリティ", zh = "心灵敏锐", ko = "정신적 민첩함" }
+text = { en = "Your cooldowns recover {v}% faster.", de = "Deine Abklingzeiten laden {v}% schneller.", fr = "Tes recharges sont {v}% plus rapides.", es = "Tus reutilizaciones se recuperan un {v}% más rápido.", pt = "Suas recargas se recuperam {v}% mais rápido.", ru = "Твоя перезарядка идет на {v}% быстрее.", pl = "Twoje odnowienia regenerują się o {v}% szybciej.", tr = "Bekleme sürelerin {v}% daha hızlı yenilenir.", it = "Le tue ricariche si completano il {v}% più in fretta.", ja = "クールダウンの回復が{v}%速くなります。", zh = "你的冷却速度加快{v}%。", ko = "재사용 대기시간이 {v}% 더 빨리 회복됩니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "meditation"
+tree = 0
+row = 3
+col = 0
+ranks = 3
+effects = [{ stat = [6, 0.4] }]
+icon = "Spell_Nature_Sleep"
+name = { en = "Meditation", de = "Meditation", fr = "Méditation", es = "Meditación", pt = "Meditação", ru = "Медитация", pl = "Medytacja", tr = "Meditasyon", it = "Meditazione", ja = "メディテーション", zh = "冥想", ko = "명상" }
+text = { en = "Regenerate {v} more health per second.", de = "Regeneriere {v} mehr Gesundheit pro Sekunde.", fr = "Régénère {v} de santé de plus par seconde.", es = "Regenera {v} de salud más por segundo.", pt = "Regenera {v} de vida a mais por segundo.", ru = "Восстанавливает еще {v} здоровья в секунду.", pl = "Regenerujesz dodatkowo zdrowie na sekundę: {v}.", tr = "Saniyede {v} can daha fazla yenilenirsin.", it = "Rigeneri {v} salute in più al secondo.", ja = "毎秒の体力再生が{v}増加します。", zh = "每秒额外恢复{v}点生命值。", ko = "초당 생명력 재생량이 {v} 증가합니다." }
+menu_v = 0.4
+
+[[talent]]
+key = "mental_strength"
+tree = 0
+row = 3
+col = 2
+ranks = 5
+req = "divine_aegis"
+effects = [{ stat = [0, 0.02] }]
+icon = "Spell_Nature_EnchantArmor"
+name = { en = "Mental Strength", de = "Geistige Stärke", fr = "Force mentale", es = "Fuerza mental", pt = "Força Mental", ru = "Ментальная сила", pl = "Siła umysłu", tr = "Zihin Gücü", it = "Forza mentale", ja = "メンタル・ストレングス", zh = "心灵之力", ko = "정신력 강화" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "rapture"
+tree = 0
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_PowerInfusion"
+name = { en = "Rapture", de = "Verzückung", fr = "Ravissement", es = "Éxtasis", pt = "Arrebatamento", ru = "Экстаз", pl = "Uniesienie", tr = "Vecd", it = "Estasi", ja = "ラプチュア", zh = "全神贯注", ko = "환희" }
+text = { en = "Milestone. A broken Power Word: Shield is raised again at once, at most once every 15 sec.", de = "Meilenstein. Ein gebrochenes Machtwort: Schild wird sofort erneut errichtet, höchstens einmal alle 15 Sek.", fr = "Jalon. Un Mot de pouvoir : Bouclier brisé est aussitôt dressé de nouveau, au plus une fois toutes les 15 s.", es = "Hito. Una Palabra de poder: Escudo rota se levanta de nuevo al instante, como máximo una vez cada 15 s.", pt = "Marco. Uma Palavra de Poder: Escudo quebrada é erguida de novo na hora, no máximo uma vez a cada 15 s.", ru = "Веха. Разбитое Слово силы: Щит тут же возводится снова, не чаще раза в 15 сек.", pl = "Kamień milowy. Pęknięte Słowo Mocy: Tarcza wznosi się natychmiast ponownie, najwyżej raz na 15 s.", tr = "Dönüm noktası. Kırılan Güç Sözü: Kalkan hemen yeniden kalkar, 15 sn'de en fazla bir kez.", it = "Traguardo. Una Parola del Potere: Scudo rotta viene subito rialzata, al massimo una volta ogni 15 s.", ja = "【マイルストーン】壊れたパワー・ワード：シールドが即座に張り直されます（15秒に1回まで）。", zh = "里程碑：破碎的真言术：盾会立即重新生成，每15秒最多一次。", ko = "이정표. 신의 권능: 보호막이 깨지면 즉시 다시 씌워집니다. 15초에 최대 한 번입니다." }
+menu_v = 1
+plays = [
+    { v = 1.0, play = { rekindle = { key = "pw_shield", gap = 15.0 } } },
+]
+
+[[talent]]
+key = "force_of_will"
+tree = 0
+row = 4
+col = 2
+ranks = 5
+effects = [{ stat = [3, 0.008] }]
+icon = "Spell_Nature_SlowingTotem"
+name = { en = "Force of Will", de = "Willenskraft", fr = "Force de volonté", es = "Fuerza de voluntad", pt = "Força de Vontade", ru = "Сила воли", pl = "Siła woli", tr = "İrade Gücü", it = "Forza di volontà", ja = "フォース・オブ・ウィル", zh = "意志之力", ko = "의지의 힘" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.008
+
+[[talent]]
+key = "silent_resolve"
+tree = 0
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [12, 0.08] }]
+icon = "Spell_Nature_ManaRegenTotem"
+name = { en = "Silent Resolve", de = "Stille Entschlossenheit", fr = "Résolution silencieuse", es = "Resolución silenciosa", pt = "Determinação Silenciosa", ru = "Безмолвная решимость", pl = "Cicha determinacja", tr = "Sessiz Azim", it = "Risolutezza silenziosa", ja = "サイレント・リゾルヴ", zh = "无声消退", ko = "고요한 결의" }
+text = { en = "Increases your luck by {v}%.", de = "Erhöht dein Glück um {v}%.", fr = "Augmente ta chance de {v}%.", es = "Aumenta tu suerte un {v}%.", pt = "Aumenta sua sorte em {v}%.", ru = "Увеличивает твою удачу на {v}%.", pl = "Zwiększa twoje szczęście o {v}%.", tr = "Şansını {v}% artırır.", it = "Aumenta la tua fortuna del {v}%.", ja = "幸運が{v}%増加します。", zh = "使你的幸运提高{v}%。", ko = "행운이 {v}% 증가합니다." }
+menu_v = 0.08
+
+[[talent]]
+key = "imp_inner_fire"
+tree = 0
+row = 5
+col = 2
+ranks = 3
+req = "rapture"
+effects = []
+icon = "Spell_Holy_InnerFire"
+name = { en = "Improved Inner Fire", de = "Verbessertes inneres Feuer", fr = "Feu intérieur amélioré", es = "Fuego interno mejorado", pt = "Fogo Interior Aprimorado", ru = "Улучшенный внутренний огонь", pl = "Ulepszony Wewnętrzny ogień", tr = "Gelişmiş İç Ateş", it = "Fuoco interiore migliorato", ja = "改良型インナー・ファイア", zh = "强化心灵之火", ko = "내면의 열정 연마" }
+text = { en = "Power Word: Shield's cooldown is {v}% shorter.", de = "Die Abklingzeit von Machtwort: Schild ist {v}% kürzer.", fr = "Le temps de recharge de Mot de pouvoir : Bouclier est réduit de {v}%.", es = "El tiempo de reutilización de Palabra de poder: Escudo se reduce un {v}%.", pt = "O tempo de recarga de Palavra de Poder: Escudo é {v}% menor.", ru = "Время восстановления Слова силы: Щит сокращается на {v}%.", pl = "Czas odnowienia Słowa Mocy: Tarcza jest krótszy o {v}%.", tr = "Güç Sözü: Kalkan'ın bekleme süresi {v}% daha kısa.", it = "La ricarica di Parola del Potere: Scudo è più breve del {v}%.", ja = "パワー・ワード：シールドのクールダウンが{v}%短くなります。", zh = "真言术：盾的冷却时间缩短{v}%。", ko = "신의 권능: 보호막의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.1
+mods = [{ cooldown = ["pw_shield"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "penance"
+tree = 0
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_SearingLight"
+name = { en = "Penance", de = "Sühne", fr = "Pénitence", es = "Penitencia", pt = "Penitência", ru = "Исповедь", pl = "Pokuta", tr = "Kefaret", it = "Penitenza", ja = "ペナンス", zh = "苦修", ko = "회개" }
+text = { en = "Capstone. You strike out on your own: a free Penance about every 3 sec, three bolts of holy light at the nearest enemies.", de = "Schlussstein. Du schlägst von selbst zu: etwa alle 3 Sek. eine kostenlose Sühne, drei Geschosse aus heiligem Licht auf die nächsten Feinde.", fr = "Clé de voûte. Tu frappes de toi-même : une Pénitence gratuite environ toutes les 3 s, trois traits de lumière sacrée sur les ennemis les plus proches.", es = "Piedra angular. Atacas por tu cuenta: una Penitencia gratis cada 3 s aproximadamente, tres rayos de luz sagrada a los enemigos más cercanos.", pt = "Pedra angular. Você ataca por conta própria: uma Penitência grátis a cada 3 s, mais ou menos, três raios de luz sagrada nos inimigos mais próximos.", ru = "Вершина. Ты бьешь сам: бесплатная Исповедь примерно каждые 3 сек., три стрелы священного света по ближайшим врагам.", pl = "Zwieńczenie. Uderzasz sam z siebie: darmowa Pokuta mniej więcej co 3 s, trzy pociski świętego światła w najbliższych przeciwników.", tr = "Zirve. Kendi başına saldırırsın: yaklaşık her 3 sn'de bedava bir Kefaret, en yakın düşmanlara üç kutsal ışık oku.", it = "Vertice. Attacchi da solo: una Penitenza gratuita circa ogni 3 s, tre dardi di luce sacra sui nemici più vicini.", ja = "【キャップストーン】自ら攻撃に出ます：約3秒ごとに無料のペナンスが放たれ、最も近い敵に聖なる光のボルトを3発撃ちます。", zh = "终极天赋：你会自动出手：大约每3秒施放一次免费的苦修，向最近的敌人射出三道圣光。", ko = "궁극 특성. 스스로 공격에 나섭니다: 약 3초마다 회개를 무료로 시전하여 가장 가까운 적들에게 신성한 빛의 화살 세 발을 날립니다." }
+plays = [
+    { v = 3.0, play = { every = "penance" } },
+]
+
+[[talent]]
+key = "holy_spec"
+tree = 1
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [3, 0.008] }]
+icon = "Spell_Holy_SealOfSalvation"
+name = { en = "Holy Specialization", de = "Heilig-Spezialisierung", fr = "Spécialisation sacrée", es = "Especialización en lo Sagrado", pt = "Especialização Sagrada", ru = "Специализация на магии Света", pl = "Specjalizacja: światłość", tr = "Kutsal Uzmanlık", it = "Specializzazione nel Sacro", ja = "ホーリー・スペシャライゼーション", zh = "神圣专精", ko = "신성 전문화" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.008
+
+[[talent]]
+key = "imp_renew"
+tree = 1
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Holy_Renew"
+name = { en = "Improved Renew", de = "Verbesserte Erneuerung", fr = "Rénovation améliorée", es = "Renovar mejorado", pt = "Renovar Aprimorado", ru = "Улучшенное Обновление", pl = "Ulepszone Odnowienie", tr = "Gelişmiş Yenile", it = "Rinnovamento migliorato", ja = "改良型リニュー", zh = "强化恢复", ko = "소생 연마" }
+text = { en = "Renew and Circle of Healing heal {v}% more.", de = "Erneuerung und Kreis der Heilung heilen {v}% mehr.", fr = "Rénovation et Cercle de soins soignent {v}% de plus.", es = "Renovar y Círculo de sanación curan un {v}% más.", pt = "Renovar e Círculo de Cura curam {v}% a mais.", ru = "Обновление и Круг исцеления лечат на {v}% больше.", pl = "Odnowienie i Krąg uzdrowienia leczą o {v}% więcej.", tr = "Yenile ve Şifa Çemberi {v}% daha fazla iyileştirir.", it = "Rinnovamento e Cerchio di guarigione curano il {v}% in più.", ja = "リニューとサークル・オブ・ヒーリングの回復量が{v}%増加します。", zh = "恢复和治疗之环的治疗效果提高{v}%。", ko = "소생과 치유의 마법진의 치유량이 {v}% 증가합니다." }
+menu_v = 0.1
+mods = [{ damage = ["renew", "circle_of_healing"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "divine_fury"
+tree = 1
+row = 1
+col = 0
+ranks = 5
+effects = []
+icon = "Spell_Holy_SealOfWrath"
+name = { en = "Divine Fury", de = "Göttlicher Furor", fr = "Fureur divine", es = "Furia divina", pt = "Fúria Divina", ru = "Божественное неистовство", pl = "Boska furia", tr = "İlahi Öfke", it = "Furia divina", ja = "ディヴァイン・フューリー", zh = "神圣之怒", ko = "신의 분노" }
+text = { en = "Smite and Holy Fire cooldowns are {v}% shorter.", de = "Die Abklingzeiten von Göttliche Pein und Heiliges Feuer sind {v}% kürzer.", fr = "Les temps de recharge de Châtiment et de Feu sacré sont réduits de {v}%.", es = "Los tiempos de reutilización de Aplastar y Fuego Sagrado se reducen un {v}%.", pt = "Os tempos de recarga de Punição e Fogo Sagrado são {v}% menores.", ru = "Время восстановления Кары и Священного огня сокращается на {v}%.", pl = "Czasy odnowienia Kary i Świętego ognia są krótsze o {v}%.", tr = "Cezalandır ve Kutsal Ateş bekleme süreleri {v}% daha kısa.", it = "Le ricariche di Punire e Fuoco sacro sono più brevi del {v}%.", ja = "スマイトとホーリー・ファイアのクールダウンが{v}%短くなります。", zh = "惩击和神圣之火的冷却时间缩短{v}%。", ko = "성스러운 일격과 신성한 불꽃의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.03
+mods = [{ cooldown = ["smite", "holy_fire"] }]
+mods_v = 0.03
+
+[[talent]]
+key = "holy_reach"
+tree = 1
+row = 1
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Holy_Purify"
+name = { en = "Holy Reach", de = "Heilige Reichweite", fr = "Allonge sacrée", es = "Alcance sagrado", pt = "Alcance Sagrado", ru = "Дальность Света", pl = "Święty zasięg", tr = "Kutsal Erişim", it = "Portata sacra", ja = "ホーリー・リーチ", zh = "神圣延伸", ko = "신성 범위 확대" }
+text = { en = "Holy Nova reaches {v}% farther.", de = "Heilige Nova reicht {v}% weiter.", fr = "La portée de Nova sacrée augmente de {v}%.", es = "Nova Sagrada alcanza un {v}% más lejos.", pt = "Nova Sagrada alcança {v}% mais longe.", ru = "Дальность Кольца света увеличивается на {v}%.", pl = "Święta nova sięga o {v}% dalej.", tr = "Kutsal Nova {v}% daha uzağa erişir.", it = "Nova sacra arriva il {v}% più lontano.", ja = "ホーリー・ノヴァの範囲が{v}%広がります。", zh = "神圣新星的范围扩大{v}%。", ko = "신성한 폭발의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.1
+mods = [{ area = ["holy_nova"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "holy_nova_talent"
+tree = 1
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_HolyNova"
+name = { en = "Radiance", de = "Strahlen", fr = "Rayonnement", es = "Resplandor", pt = "Radiância", ru = "Сияние", pl = "Blask", tr = "Işıltı", it = "Radiosità", ja = "レディアンス", zh = "光辉", ko = "광휘" }
+text = { en = "Milestone. A Holy Nova bursts from you on its own every 24 sec.", de = "Meilenstein. Alle 24 Sek. bricht von selbst eine Heilige Nova aus dir hervor.", fr = "Jalon. Une Nova sacrée jaillit de toi toute seule toutes les 24 s.", es = "Hito. Una Nova Sagrada estalla de ti por sí sola cada 24 s.", pt = "Marco. Uma Nova Sagrada explode de você sozinha a cada 24 s.", ru = "Веха. Кольцо света само вырывается из тебя каждые 24 сек.", pl = "Kamień milowy. Święta nova wybucha z ciebie sama co 24 s.", tr = "Dönüm noktası. Her 24 sn'de senden kendiliğinden bir Kutsal Nova patlar.", it = "Traguardo. Una Nova sacra esplode da te da sola ogni 24 s.", ja = "【マイルストーン】24秒ごとにホーリー・ノヴァが自動で炸裂します。", zh = "里程碑：每24秒会自动从你身上爆发一次神圣新星。", ko = "이정표. 24초마다 신성한 폭발이 저절로 터져 나옵니다." }
+menu_v = 24
+plays = [
+    { v = 24.0, play = { every = "holy_nova" } },
+]
+
+[[talent]]
+key = "inspiration"
+tree = 1
+row = 2
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Holy_LayOnHands"
+name = { en = "Inspiration", de = "Inspiration", fr = "Inspiration", es = "Inspiración", pt = "Inspiração", ru = "Вдохновение", pl = "Natchnienie", tr = "İlham", it = "Ispirazione", ja = "インスピレーション", zh = "灵感", ko = "영감" }
+text = { en = "Your Holy critical strikes heal you for {v}% of your maximum health, at most once a second.", de = "Deine kritischen Treffer mit Heiligzaubern heilen dich um {v}% deiner maximalen Gesundheit, höchstens einmal pro Sekunde.", fr = "Tes coups critiques sacrés te soignent de {v}% de tes points de vie maximums, au plus une fois par seconde.", es = "Tus golpes críticos sagrados te curan un {v}% de tu salud máxima, como máximo una vez por segundo.", pt = "Seus acertos críticos sagrados curam você em {v}% da sua vida máxima, no máximo uma vez por segundo.", ru = "Твои критические удары магией Света лечат тебя на {v}% максимального здоровья, не чаще раза в секунду.", pl = "Twoje trafienia krytyczne światłości leczą cię o {v}% maksymalnego zdrowia, najwyżej raz na sekundę.", tr = "Kutsal kritik vuruşların azami canının {v}%'si kadar seni iyileştirir, saniyede en fazla bir kez.", it = "I tuoi colpi critici Sacri ti curano del {v}% della tua salute massima, al massimo una volta al secondo.", ja = "聖の呪文のクリティカルで最大体力の{v}%を回復します（1秒に1回まで）。", zh = "你的神圣法术暴击会为你恢复相当于最大生命值{v}%的生命值，每秒最多一次。", ko = "신성 치명타가 최대 생명력의 {v}%만큼 생명력을 회복시킵니다. 초당 최대 한 번입니다." }
+menu_v = 0.002
+plays = [
+    { v = 0.002, play = { crit_heal = { school = 2, gap = 1.0 } } },
+]
+
+[[talent]]
+key = "searing_light"
+tree = 1
+row = 3
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Holy_SearingLightPriest"
+name = { en = "Searing Light", de = "Sengendes Licht", fr = "Lumière brûlante", es = "Luz abrasadora", pt = "Luz Abrasadora", ru = "Опаляющий свет", pl = "Palące światło", tr = "Kavurucu Işık", it = "Luce rovente", ja = "シアリング・ライト", zh = "灼热之光", ko = "타오르는 빛" }
+text = { en = "Smite and Holy Fire deal {v}% more damage.", de = "Göttliche Pein und Heiliges Feuer verursachen {v}% mehr Schaden.", fr = "Châtiment et Feu sacré infligent {v}% de dégâts en plus.", es = "Aplastar y Fuego Sagrado infligen un {v}% más de daño.", pt = "Punição e Fogo Sagrado causam {v}% a mais de dano.", ru = "Кара и Священный огонь наносят на {v}% больше урона.", pl = "Kara i Święty ogień zadają o {v}% więcej obrażeń.", tr = "Cezalandır ve Kutsal Ateş {v}% daha fazla hasar verir.", it = "Punire e Fuoco sacro infliggono il {v}% di danni in più.", ja = "スマイトとホーリー・ファイアのダメージが{v}%増加します。", zh = "惩击和神圣之火造成的伤害提高{v}%。", ko = "성스러운 일격과 신성한 불꽃의 피해가 {v}% 증가합니다." }
+menu_v = 0.05
+mods = [{ damage = ["smite", "holy_fire"] }]
+mods_v = 0.05
+
+[[talent]]
+key = "spiritual_guidance"
+tree = 1
+row = 3
+col = 2
+ranks = 5
+req = "holy_nova_talent"
+effects = [{ stat = [0, 0.015] }]
+icon = "Spell_Holy_SpiritualGuidence"
+name = { en = "Spiritual Guidance", de = "Spirituelle Führung", fr = "Guidance spirituelle", es = "Guía espiritual", pt = "Orientação Espiritual", ru = "Духовное наставление", pl = "Duchowe prowadzenie", tr = "Ruhani Rehberlik", it = "Guida spirituale", ja = "スピリチュアル・ガイダンス", zh = "精神指引", ko = "영혼의 인도" }
+text = { en = "Increases all damage by {v}%.", de = "Erhöht jeglichen Schaden um {v}%.", fr = "Augmente tous les dégâts de {v}%.", es = "Aumenta todo el daño un {v}%.", pt = "Aumenta todo o dano em {v}%.", ru = "Увеличивает весь урон на {v}%.", pl = "Zwiększa wszystkie obrażenia o {v}%.", tr = "Tüm hasarı {v}% artırır.", it = "Aumenta tutti i danni del {v}%.", ja = "すべてのダメージが{v}%増加します。", zh = "使你造成的所有伤害提高{v}%。", ko = "모든 피해가 {v}% 증가합니다." }
+menu_v = 0.015
+
+[[talent]]
+key = "holy_fire_talent"
+tree = 1
+row = 4
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_SearingLight"
+name = { en = "Purifying Flame", de = "Läuternde Flamme", fr = "Flamme purificatrice", es = "Llama purificadora", pt = "Chama Purificadora", ru = "Очищающее пламя", pl = "Oczyszczający płomień", tr = "Arındıran Alev", it = "Fiamma purificatrice", ja = "ピュリファイング・フレイム", zh = "净化之火", ko = "정화의 불꽃" }
+text = { en = "Milestone. Smite and Holy Fire critical strikes set their target alight for {v}% of the hit over 6 sec.", de = "Meilenstein. Kritische Treffer von Göttliche Pein und Heiliges Feuer setzen ihr Ziel in Brand, für {v}% des Treffers über 6 Sek.", fr = "Jalon. Les coups critiques de Châtiment et de Feu sacré enflamment leur cible pour {v}% du coup sur 6 s.", es = "Hito. Los golpes críticos de Aplastar y Fuego Sagrado prenden fuego a su objetivo por un {v}% del golpe durante 6 s.", pt = "Marco. Os acertos críticos de Punição e Fogo Sagrado põem o alvo em chamas por {v}% do golpe durante 6 s.", ru = "Веха. Критические удары Кары и Священного огня поджигают цель на {v}% урона удара в течение 6 сек.", pl = "Kamień milowy. Krytyczne trafienia Kary i Świętego ognia podpalają cel za {v}% trafienia przez 6 s.", tr = "Dönüm noktası. Cezalandır ve Kutsal Ateş kritik vuruşları hedefi tutuşturur: 6 sn içinde vuruşun {v}%'si kadar.", it = "Traguardo. I colpi critici di Punire e Fuoco sacro incendiano il bersaglio per il {v}% del colpo in 6 s.", ja = "【マイルストーン】スマイトとホーリー・ファイアのクリティカルが対象に火をつけ、6秒かけてその攻撃の{v}%のダメージを与えます。", zh = "里程碑：惩击和神圣之火的暴击会点燃目标，在6秒内造成相当于该次攻击{v}%的伤害。", ko = "이정표. 성스러운 일격과 신성한 불꽃의 치명타가 대상을 불태워 6초에 걸쳐 그 피해의 {v}%를 줍니다." }
+menu_v = 0.3
+plays = [
+    { v = 0.3, play = { crit_bleed = { keys = ["smite", "holy_fire"], school = 0, secs = 6.0 } } },
+]
+
+[[talent]]
+key = "spiritual_healing"
+tree = 1
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Nature_MoonGlow"
+name = { en = "Spiritual Healing", de = "Spirituelle Heilung", fr = "Soins spirituels", es = "Sanación espiritual", pt = "Cura Espiritual", ru = "Духовное исцеление", pl = "Duchowe uzdrawianie", tr = "Ruhani Şifa", it = "Guarigione spirituale", ja = "スピリチュアル・ヒーリング", zh = "精神治疗", ko = "영적 치유" }
+text = { en = "Your heals and shields are {v}% stronger.", de = "Deine Heilungen und Schilde sind {v}% stärker.", fr = "Tes soins et tes boucliers sont {v}% plus puissants.", es = "Tus curaciones y escudos son un {v}% más fuertes.", pt = "Suas curas e escudos são {v}% mais fortes.", ru = "Твое лечение и щиты сильнее на {v}%.", pl = "Twoje leczenie i tarcze są silniejsze o {v}%.", tr = "İyileştirmelerin ve kalkanların {v}% daha güçlü.", it = "Le tue cure e i tuoi scudi sono più forti del {v}%.", ja = "回復とシールドの効果が{v}%高まります。", zh = "你的治疗和护盾效果提高{v}%。", ko = "치유와 보호막의 효과가 {v}% 증가합니다." }
+menu_v = 0.12
+mods = ["heals"]
+mods_v = 0.12
+
+[[talent]]
+key = "blessed_recovery"
+tree = 1
+row = 5
+col = 0
+ranks = 3
+effects = [{ stat = [2, 0.02] }]
+icon = "Spell_Holy_BlessedRecovery"
+name = { en = "Blessed Recovery", de = "Gesegnete Erholung", fr = "Récupération bénie", es = "Recuperación bendita", pt = "Recuperação Abençoada", ru = "Благословенное восстановление", pl = "Błogosławione odzyskiwanie", tr = "Kutsanmış İyileşme", it = "Recupero benedetto", ja = "ブレスド・リカバリー", zh = "神恩回复", ko = "축복받은 회복" }
+text = { en = "Increases your maximum health by {v}%.", de = "Erhöht deine maximale Gesundheit um {v}%.", fr = "Augmente ta santé maximale de {v}%.", es = "Aumenta tu salud máxima un {v}%.", pt = "Aumenta sua vida máxima em {v}%.", ru = "Увеличивает твое максимальное здоровье на {v}%.", pl = "Zwiększa maksymalne zdrowie o {v}%.", tr = "Azami canını {v}% artırır.", it = "Aumenta la tua salute massima del {v}%.", ja = "最大体力が{v}%増加します。", zh = "使你的最大生命值提高{v}%。", ko = "최대 생명력이 {v}% 증가합니다." }
+menu_v = 0.02
+
+[[talent]]
+key = "holy_concentration"
+tree = 1
+row = 5
+col = 2
+ranks = 3
+req = "holy_fire_talent"
+effects = []
+icon = "Spell_Holy_SpellWarding"
+name = { en = "Holy Concentration", de = "Heilige Konzentration", fr = "Concentration sacrée", es = "Concentración sagrada", pt = "Concentração Sagrada", ru = "Священная сосредоточенность", pl = "Święta koncentracja", tr = "Kutsal Yoğunlaşma", it = "Concentrazione sacra", ja = "ホーリー・コンセントレーション", zh = "神圣专注", ko = "신성한 집중" }
+text = { en = "Holy spells deal {v}% more damage.", de = "Heilige Zauber verursachen {v}% mehr Schaden.", fr = "Les sorts sacrés infligent {v}% de dégâts en plus.", es = "Los hechizos sagrados infligen un {v}% más de daño.", pt = "Feitiços Sagrados causam {v}% a mais de dano.", ru = "Заклинания Света наносят на {v}% больше урона.", pl = "Czary światłości zadają o {v}% więcej obrażeń.", tr = "Kutsal büyüler {v}% daha fazla hasar verir.", it = "Gli incantesimi Sacri infliggono il {v}% di danni in più.", ja = "聖の呪文のダメージが{v}%増加します。", zh = "神圣法术造成的伤害提高{v}%。", ko = "신성 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+mods = [{ school = 2 }]
+mods_v = 0.02
+
+[[talent]]
+key = "chastise"
+tree = 1
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Holy_SealOfWrath"
+name = { en = "Chastise", de = "Züchtigung", fr = "Châtier", es = "Castigar", pt = "Castigar", ru = "Наказание", pl = "Karcenie", tr = "Terbiye Et", it = "Castigare", ja = "チャスティス", zh = "责罚", ko = "응징" }
+text = { en = "Capstone. Smite strikes 1 more enemy, and every Smite cast that critically strikes sets off a free Holy Nova.", de = "Schlussstein. Göttliche Pein trifft 1 weiteren Feind, und jedes Wirken von Göttliche Pein, das kritisch trifft, löst eine kostenlose Heilige Nova aus.", fr = "Clé de voûte. Châtiment frappe 1 ennemi de plus, et chaque Châtiment qui inflige un coup critique déclenche une Nova sacrée gratuite.", es = "Piedra angular. Aplastar golpea a 1 enemigo más, y cada Aplastar que asesta un golpe crítico desencadena una Nova Sagrada gratis.", pt = "Pedra angular. Punição atinge mais 1 inimigo, e cada Punição que acerta um crítico dispara uma Nova Sagrada grátis.", ru = "Вершина. Кара поражает еще 1 врага, и каждая Кара, нанесшая критический удар, запускает бесплатное Кольцо света.", pl = "Zwieńczenie. Kara uderza 1 dodatkowego przeciwnika, a każdy krytyczny rzut Kary wywołuje darmową Świętą novę.", tr = "Zirve. Cezalandır 1 düşmana daha vurur ve kritik vuran her Cezalandır bedava bir Kutsal Nova tetikler.", it = "Vertice. Punire colpisce 1 nemico in più e ogni Punire che mette a segno un colpo critico innesca una Nova sacra gratuita.", ja = "【キャップストーン】スマイトが追加で1体の敵に命中し、クリティカルしたスマイトのたびに無料のホーリー・ノヴァが発動します。", zh = "终极天赋：惩击额外击中1个敌人，每次暴击的惩击都会触发一次免费的神圣新星。", ko = "궁극 특성. 성스러운 일격이 적을 1명 더 공격하며, 성스러운 일격이 치명타로 적중할 때마다 신성한 폭발이 무료로 터집니다." }
+menu_v = 1
+mods = [{ targets = ["smite"] }]
+mods_v = 1.0
+plays = [
+    { v = 1.0, play = { crit_cast = { keys = ["smite"], school = 0, cast = "holy_nova", gap = 0.0 } } },
+]
+
+[[talent]]
+key = "spirit_tap"
+tree = 2
+row = 0
+col = 1
+ranks = 5
+effects = [{ stat = [15, 0.5] }]
+icon = "Spell_Shadow_Requiem"
+name = { en = "Spirit Tap", de = "Willensentzug", fr = "Connexion spirituelle", es = "Drenar espíritu", pt = "Sifão Espiritual", ru = "Захват духа", pl = "Wyssanie ducha", tr = "Ruh Sömürüsü", it = "Contatto spirituale", ja = "スピリット・タップ", zh = "精神分流", ko = "정기 흡수" }
+text = { en = "Every kill heals you for {v} health.", de = "Jeder Kill heilt dich um {v} Gesundheit.", fr = "Chaque mort te soigne de {v} points de vie.", es = "Cada baja te cura {v} de salud.", pt = "Cada morte cura {v} de vida.", ru = "Каждое убийство лечит тебя на {v} здоровья.", pl = "Każde zabójstwo leczy cię o {v} zdrowia.", tr = "Her öldürme seni {v} can iyileştirir.", it = "Ogni uccisione ti cura di {v} salute.", ja = "敵を倒すたびに体力を{v}回復します。", zh = "每次击杀为你恢复{v}点生命值。", ko = "적을 처치할 때마다 생명력을 {v} 회복합니다." }
+menu_v = 0.5
+
+[[talent]]
+key = "blackout"
+tree = 2
+row = 0
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Shadow_GatherShadows"
+name = { en = "Blackout", de = "Blackout", fr = "Black-out", es = "Apagón", pt = "Apagão", ru = "Затмение", pl = "Zaćmienie", tr = "Kararma", it = "Blackout", ja = "ブラックアウト", zh = "昏阙", ko = "의식 상실" }
+text = { en = "Your Shadow spells have a {v}% chance to stun what they hit for 1.5 sec.", de = "Deine Schattenzauber haben eine Chance von {v}%, ihr Ziel 1,5 Sek. lang zu betäuben.", fr = "Tes sorts d'ombre ont {v}% de chances d'étourdir leur cible pendant 1,5 s.", es = "Tus hechizos de las Sombras tienen un {v}% de probabilidad de aturdir a su objetivo durante 1,5 s.", pt = "Seus feitiços de Sombra têm {v}% de chance de atordoar o alvo por 1,5 s.", ru = "Твои заклинания Тьмы с вероятностью {v}% оглушают цель на 1,5 сек.", pl = "Twoje czary cienia mają {v}% szansy, by ogłuszyć trafionych na 1,5 s.", tr = "Gölge büyülerin {v}% ihtimalle vurduğu şeyi 1,5 sn sersemletir.", it = "I tuoi incantesimi d'Ombra hanno il {v}% di probabilità di stordire ciò che colpiscono per 1,5 s.", ja = "暗黒の呪文が{v}%の確率で命中した敵を1.5秒間スタンさせます。", zh = "你的暗影法术有{v}%的几率使击中的目标昏迷1.5秒。", ko = "암흑 주문이 {v}% 확률로 맞힌 대상을 1.5초 동안 기절시킵니다." }
+menu_v = 0.015
+mods = [{ stun = [32, 1.5] }]
+mods_v = 1.5
+
+[[talent]]
+key = "imp_swp"
+tree = 2
+row = 1
+col = 0
+ranks = 2
+effects = []
+icon = "Spell_Shadow_ShadowWordPain"
+name = { en = "Improved Shadow Word: Pain", de = "Verbessertes Schattenwort: Schmerz", fr = "Mot de l'ombre : Douleur amélioré", es = "Palabra de las Sombras: Dolor mejorada", pt = "Palavra da Sombra: Dor Aprimorada", ru = "Улучшенное Слово Тьмы: Боль", pl = "Ulepszone Słowo Cienia: Ból", tr = "Gelişmiş Gölge Sözü: Acı", it = "Parola dell'Ombra: Dolore migliorata", ja = "改良型シャドウ・ワード：ペイン", zh = "强化暗言术：痛", ko = "어둠의 권능: 고통 연마" }
+text = { en = "Shadow Word: Pain and Vampiric Touch last {v}% longer.", de = "Schattenwort: Schmerz und Vampirberührung halten {v}% länger an.", fr = "Mot de l'ombre : Douleur et Toucher vampirique durent {v}% plus longtemps.", es = "Palabra de las Sombras: Dolor y Toque vampírico duran un {v}% más.", pt = "Palavra da Sombra: Dor e Toque Vampírico duram {v}% mais.", ru = "Слово Тьмы: Боль и Прикосновение вампира длятся на {v}% дольше.", pl = "Słowo Cienia: Ból i Wampiryczny dotyk trwają o {v}% dłużej.", tr = "Gölge Sözü: Acı ve Vampir Dokunuşu {v}% daha uzun sürer.", it = "Parola dell'Ombra: Dolore e Tocco vampirico durano il {v}% in più.", ja = "シャドウ・ワード：ペインとヴァンパイリック・タッチの持続時間が{v}%延びます。", zh = "暗言术：痛和吸血鬼之触的持续时间延长{v}%。", ko = "어둠의 권능: 고통과 흡혈의 손길의 지속시간이 {v}% 길어집니다." }
+menu_v = 0.15
+mods = [{ duration = ["sw_pain", "vampiric_touch"] }]
+mods_v = 0.15
+
+[[talent]]
+key = "shadow_focus"
+tree = 2
+row = 1
+col = 2
+ranks = 5
+effects = [{ stat = [3, 0.01] }]
+icon = "Spell_Shadow_BurningSpirit"
+name = { en = "Shadow Focus", de = "Schattenfokus", fr = "Focalisation de l'ombre", es = "Concentración en las Sombras", pt = "Foco nas Sombras", ru = "Сосредоточенность на Тьме", pl = "Skupienie cienia", tr = "Gölge Odağı", it = "Focus d'ombra", ja = "シャドウ・フォーカス", zh = "暗影集中", ko = "암흑 집중" }
+text = { en = "Increases your critical strike chance by {v}%.", de = "Erhöht deine kritische Trefferchance um {v}%.", fr = "Augmente tes chances de coup critique de {v}%.", es = "Aumenta tu probabilidad de golpe crítico un {v}%.", pt = "Aumenta sua chance de acerto crítico em {v}%.", ru = "Увеличивает шанс критического удара на {v}%.", pl = "Zwiększa szansę na trafienie krytyczne o {v}%.", tr = "Kritik vuruş şansını {v}% artırır.", it = "Aumenta la tua probabilità di colpo critico del {v}%.", ja = "クリティカル率が{v}%増加します。", zh = "使你的暴击几率提高{v}%。", ko = "치명타율이 {v}% 증가합니다." }
+menu_v = 0.01
+
+[[talent]]
+key = "shadow_weaving"
+tree = 2
+row = 2
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_BlackPlague"
+name = { en = "Shadow Weaving", de = "Schattengewebe", fr = "Tissage de l'ombre", es = "Tejido de Sombras", pt = "Trama Sombria", ru = "Плетение Тьмы", pl = "Tkanie cienia", tr = "Gölge Dokuması", it = "Tessitura d'ombra", ja = "シャドウ・ウィーヴィング", zh = "暗影之波", ko = "어둠의 직조" }
+text = { en = "Milestone. Your Shadow spells also strike what they hit for {v}% of its maximum health.", de = "Meilenstein. Deine Schattenzauber treffen ihr Ziel zusätzlich für {v}% seiner maximalen Gesundheit.", fr = "Jalon. Tes sorts d'ombre frappent aussi leur cible pour {v}% de ses points de vie maximums.", es = "Hito. Tus hechizos de las Sombras golpean además a su objetivo por un {v}% de su salud máxima.", pt = "Marco. Seus feitiços de Sombra também atingem o alvo com {v}% da vida máxima dele.", ru = "Веха. Твои заклинания Тьмы также бьют цель на {v}% ее максимального здоровья.", pl = "Kamień milowy. Twoje czary cienia uderzają też w trafionych za {v}% ich maksymalnego zdrowia.", tr = "Dönüm noktası. Gölge büyülerin vurduğu şeye ayrıca azami canının {v}%'si kadar vurur.", it = "Traguardo. I tuoi incantesimi d'Ombra colpiscono ciò che toccano anche per il {v}% della sua salute massima.", ja = "【マイルストーン】暗黒の呪文が命中した敵に、その最大体力の{v}%のダメージも与えます。", zh = "里程碑：你的暗影法术还会对击中的目标造成相当于其最大生命值{v}%的伤害。", ko = "이정표. 암흑 주문이 맞힌 대상에게 그 대상의 최대 생명력의 {v}%만큼 추가 피해를 줍니다." }
+menu_v = 0.005
+plays = [
+    { v = 0.005, play = { max_health_hit = { school = 32, keys = [] } } },
+]
+
+[[talent]]
+key = "imp_mind_blast"
+tree = 2
+row = 2
+col = 2
+ranks = 5
+effects = []
+icon = "Spell_Shadow_UnholyFrenzy"
+name = { en = "Improved Mind Blast", de = "Verbesserter Gedankenschlag", fr = "Attaque mentale améliorée", es = "Explosión mental mejorada", pt = "Ataque Mental Aprimorado", ru = "Улучшенный взрыв разума", pl = "Ulepszona Eksplozja umysłu", tr = "Gelişmiş Zihin Patlaması", it = "Esplosione mentale migliorata", ja = "改良型マインド・ブラスト", zh = "强化心灵震爆", ko = "정신 분열 연마" }
+text = { en = "Mind Blast's cooldown is {v}% shorter.", de = "Die Abklingzeit von Gedankenschlag ist {v}% kürzer.", fr = "Le temps de recharge d'Attaque mentale est réduit de {v}%.", es = "El tiempo de reutilización de Explosión mental se reduce un {v}%.", pt = "O tempo de recarga de Ataque Mental é {v}% menor.", ru = "Время восстановления Взрыва разума сокращается на {v}%.", pl = "Czas odnowienia Eksplozji umysłu jest krótszy o {v}%.", tr = "Zihin Patlaması'nın bekleme süresi {v}% daha kısa.", it = "La ricarica di Esplosione mentale è più breve del {v}%.", ja = "マインド・ブラストのクールダウンが{v}%短くなります。", zh = "心灵震爆的冷却时间缩短{v}%。", ko = "정신 분열의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.06
+mods = [{ cooldown = ["mind_blast"] }]
+mods_v = 0.06
+
+[[talent]]
+key = "darkness"
+tree = 2
+row = 3
+col = 0
+ranks = 5
+effects = []
+icon = "Spell_Shadow_Twilight"
+name = { en = "Darkness", de = "Dunkelheit", fr = "Ténèbres", es = "Oscuridad", pt = "Escuridão", ru = "Мрак", pl = "Ciemność", tr = "Karanlık", it = "Oscurità", ja = "ダークネス", zh = "黑暗", ko = "어둠" }
+text = { en = "Shadow spells deal {v}% more damage.", de = "Schattenzauber verursachen {v}% mehr Schaden.", fr = "Les sorts d'ombre infligent {v}% de dégâts en plus.", es = "Los hechizos de las Sombras infligen un {v}% más de daño.", pt = "Feitiços de Sombra causam {v}% a mais de dano.", ru = "Заклинания Тьмы наносят на {v}% больше урона.", pl = "Czary cienia zadają o {v}% więcej obrażeń.", tr = "Gölge büyüleri {v}% daha fazla hasar verir.", it = "Gli incantesimi d'Ombra infliggono il {v}% di danni in più.", ja = "暗黒の呪文のダメージが{v}%増加します。", zh = "暗影法术造成的伤害提高{v}%。", ko = "암흑 주문의 피해가 {v}% 증가합니다." }
+menu_v = 0.02
+mods = [{ school = 32 }]
+mods_v = 0.02
+
+[[talent]]
+key = "imp_psychic_scream"
+tree = 2
+row = 3
+col = 2
+ranks = 2
+req = "shadow_weaving"
+effects = []
+icon = "Spell_Shadow_PsychicScream"
+name = { en = "Improved Psychic Scream", de = "Verbesserter psychischer Schrei", fr = "Cri psychique amélioré", es = "Grito psíquico mejorado", pt = "Grito Psíquico Aprimorado", ru = "Улучшенный устрашающий крик", pl = "Ulepszony Psychiczny krzyk", tr = "Gelişmiş Zihinsel Çığlık", it = "Urlo psichico migliorato", ja = "改良型サイキック・スクリーム", zh = "强化心灵尖啸", ko = "영혼의 절규 연마" }
+text = { en = "Psychic Scream's cooldown is {v}% shorter.", de = "Die Abklingzeit von Psychischer Schrei ist {v}% kürzer.", fr = "Le temps de recharge de Cri psychique est réduit de {v}%.", es = "El tiempo de reutilización de Grito psíquico se reduce un {v}%.", pt = "O tempo de recarga de Grito Psíquico é {v}% menor.", ru = "Время восстановления Устрашающего крика сокращается на {v}%.", pl = "Czas odnowienia Psychicznego krzyku jest krótszy o {v}%.", tr = "Zihinsel Çığlık'ın bekleme süresi {v}% daha kısa.", it = "La ricarica di Urlo psichico è più breve del {v}%.", ja = "サイキック・スクリームのクールダウンが{v}%短くなります。", zh = "心灵尖啸的冷却时间缩短{v}%。", ko = "영혼의 절규의 재사용 대기시간이 {v}% 감소합니다." }
+menu_v = 0.12
+mods = [{ cooldown = ["psychic_scream"] }]
+mods_v = 0.12
+
+[[talent]]
+key = "shadowy_apparitions"
+tree = 2
+row = 4
+col = 1
+ranks = 1
+effects = [{ start_instead = "sw_pain" }]
+icon = "Spell_Shadow_Haunting"
+name = { en = "Shadowy Apparitions", de = "Schattenhafte Erscheinungen", fr = "Apparitions de l'ombre", es = "Apariciones sombrías", pt = "Aparições Sombrias", ru = "Теневые видения", pl = "Cieniste zjawy", tr = "Gölge Hayaletler", it = "Apparizioni d'ombra", ja = "シャドウィ・アパリション", zh = "暗影幻灵", ko = "어둠의 환영" }
+text = { en = "Milestone. You start every run with Shadow Word: Pain instead of Smite, and its ticks have a {v}% chance to loose a shadowy apparition: a free Mind Blast, at most twice a second.", de = "Meilenstein. Du beginnst jeden Lauf mit Schattenwort: Schmerz statt Göttlicher Pein, und seine Ticks haben eine Chance von {v}%, eine schattenhafte Erscheinung freizusetzen: ein kostenloser Gedankenschlag, höchstens zweimal pro Sekunde.", fr = "Jalon. Tu commences chaque partie avec Mot de l'ombre : Douleur au lieu de Châtiment, et ses impulsions ont {v}% de chances de libérer une apparition de l'ombre : une Attaque mentale gratuite, au plus deux fois par seconde.", es = "Hito. Empiezas cada partida con Palabra de las Sombras: Dolor en lugar de Aplastar, y sus pulsos tienen un {v}% de probabilidad de soltar una aparición sombría: una Explosión mental gratis, como máximo dos veces por segundo.", pt = "Marco. Você começa cada partida com Palavra da Sombra: Dor em vez de Punição, e seus pulsos têm {v}% de chance de soltar uma aparição sombria: um Ataque Mental grátis, no máximo duas vezes por segundo.", ru = "Веха. Ты начинаешь каждый забег со Слова Тьмы: Боль вместо Кары, и его такты с вероятностью {v}% выпускают теневое видение: бесплатный Взрыв разума, не чаще двух раз в секунду.", pl = "Kamień milowy. Każdą rozgrywkę zaczynasz ze Słowem Cienia: Ból zamiast Kary, a jego tyknięcia mają {v}% szansy, by wypuścić cienistą zjawę: darmową Eksplozję umysłu, najwyżej dwa razy na sekundę.", tr = "Dönüm noktası. Her oyuna Cezalandır yerine Gölge Sözü: Acı ile başlarsın ve vuruşları {v}% ihtimalle bir gölge hayalet salar: bedava bir Zihin Patlaması, saniyede en fazla iki kez.", it = "Traguardo. Inizi ogni partita con Parola dell'Ombra: Dolore invece di Punire e i suoi tick hanno il {v}% di probabilità di liberare un'apparizione d'ombra: un'Esplosione mentale gratuita, al massimo due volte al secondo.", ja = "【マイルストーン】毎ランをスマイトの代わりにシャドウ・ワード：ペインを持って始め、その各ティックが{v}%の確率で影の幻影を解き放ちます：無料のマインド・ブラスト（1秒に2回まで）。", zh = "里程碑：你在每场对局开始时拥有暗言术：痛而非惩击，其每跳伤害有{v}%的几率释放一个暗影幻象：一次免费的心灵震爆，每秒最多两次。", ko = "이정표. 모든 런을 성스러운 일격 대신 어둠의 권능: 고통을 가지고 시작하며, 고통이 피해를 줄 때마다 {v}% 확률로 어둠의 환영이 나타나 정신 분열을 무료로 시전합니다. 초당 최대 2번입니다." }
+menu_v = 0.1
+plays = [
+    # Its text's share and chance are unread: ours. `TUNE`
+    { v = 0.1, play = { tick_cast = { keys = ["sw_pain"], cast = "mind_blast", gap = 0.5 } } },
+]
+
+[[talent]]
+key = "shadow_reach"
+tree = 2
+row = 4
+col = 2
+ranks = 3
+effects = []
+icon = "Spell_Shadow_ChillTouch"
+name = { en = "Shadow Reach", de = "Schattenreichweite", fr = "Allonge de l'ombre", es = "Alcance de las Sombras", pt = "Alcance Sombrio", ru = "Дальность Тьмы", pl = "Zasięg cienia", tr = "Gölge Erişimi", it = "Portata dell'ombra", ja = "シャドウ・リーチ", zh = "暗影延伸", ko = "암흑 범위 확대" }
+text = { en = "Mind Flay and Mind Sear reach {v}% farther.", de = "Gedankenschinden und Gedankenexplosion reichen {v}% weiter.", fr = "La portée de Fouet mental et de Brûlure mentale augmente de {v}%.", es = "Tortura mental y Abrasar mente alcanzan un {v}% más lejos.", pt = "Açoite Mental e Queimadura Mental alcançam {v}% mais longe.", ru = "Дальность Пытки разума и Иссушения разума увеличивается на {v}%.", pl = "Dręczenie umysłu i Palenie umysłu sięgają o {v}% dalej.", tr = "Zihin Kırbacı ve Zihin Kavurması {v}% daha uzağa erişir.", it = "Tortura mentale e Bruciatura mentale arrivano il {v}% più lontano.", ja = "マインド・フレイとマインド・シアーの射程が{v}%延びます。", zh = "精神鞭笞和精神灼烧的范围扩大{v}%。", ko = "정신의 채찍과 정신 불태우기의 사거리가 {v}% 늘어납니다." }
+menu_v = 0.1
+mods = [{ area = ["mind_flay", "mind_sear"] }]
+mods_v = 0.1
+
+[[talent]]
+key = "shadow_power"
+tree = 2
+row = 5
+col = 0
+ranks = 3
+effects = []
+icon = "Spell_Shadow_SealOfKings"
+name = { en = "Shadow Power", de = "Schattenmacht", fr = "Puissance de l'ombre", es = "Poder de las Sombras", pt = "Poder Sombrio", ru = "Сила Тьмы", pl = "Moc cienia", tr = "Gölge Gücü", it = "Potere dell'ombra", ja = "シャドウ・パワー", zh = "暗影强化", ko = "암흑의 힘" }
+text = { en = "Your damage-over-time effects deal {v}% more damage.", de = "Deine Effekte für Schaden über Zeit verursachen {v}% mehr Schaden.", fr = "Tes effets de dégâts sur la durée infligent {v}% de dégâts en plus.", es = "Tus efectos de daño a lo largo del tiempo infligen un {v}% más de daño.", pt = "Seus efeitos de dano ao longo do tempo causam {v}% a mais de dano.", ru = "Твои эффекты периодического урона наносят на {v}% больше урона.", pl = "Twoje obrażenia w czasie zadają o {v}% więcej obrażeń.", tr = "Zamanla hasar efektlerin {v}% daha fazla hasar verir.", it = "I tuoi effetti di danno nel tempo infliggono il {v}% di danni in più.", ja = "継続ダメージ効果のダメージが{v}%増加します。", zh = "你的持续伤害效果造成的伤害提高{v}%。", ko = "지속 피해 효과의 피해가 {v}% 증가합니다." }
+menu_v = 0.06
+mods = ["dots"]
+mods_v = 0.06
+
+[[talent]]
+key = "imp_vampiric"
+tree = 2
+row = 5
+col = 2
+ranks = 3
+req = "shadowy_apparitions"
+effects = [{ stat = [14, 0.005] }]
+icon = "Spell_Shadow_ImprovedVampiricEmbrace"
+name = { en = "Improved Vampiric Embrace", de = "Verbesserte vampirische Umarmung", fr = "Étreinte vampirique améliorée", es = "Abrazo vampírico mejorado", pt = "Abraço Vampírico Aprimorado", ru = "Улучшенные объятия вампира", pl = "Ulepszony Wampiryczny uścisk", tr = "Gelişmiş Vampir Kucaklaması", it = "Abbraccio vampirico migliorato", ja = "改良型ヴァンパイリック・エンブレイス", zh = "强化吸血鬼的拥抱", ko = "흡혈의 선물 연마" }
+text = { en = "{v}% of all the damage you deal heals you.", de = "{v}% des gesamten Schadens, den du verursachst, heilt dich.", fr = "{v}% de tous les dégâts que tu infliges te soignent.", es = "El {v}% de todo el daño que infliges te cura.", pt = "{v}% de todo o dano que você causa cura você.", ru = "{v}% всего наносимого тобой урона лечит тебя.", pl = "{v}% wszystkich zadanych obrażeń leczy cię.", tr = "Verdiğin tüm hasarın {v}%'si seni iyileştirir.", it = "Il {v}% di tutti i danni che infliggi ti cura.", ja = "与えたすべてのダメージの{v}%だけ体力を回復します。", zh = "你造成的所有伤害的{v}%会治疗你。", ko = "주는 모든 피해의 {v}%만큼 생명력을 회복합니다." }
+menu_v = 0.005
+
+[[talent]]
+key = "shadowform"
+tree = 2
+row = 6
+col = 1
+ranks = 1
+effects = []
+icon = "Spell_Shadow_Shadowform"
+name = { en = "Shadowform", de = "Schattengestalt", fr = "Forme d'ombre", es = "Forma de las Sombras", pt = "Forma Sombria", ru = "Облик Тьмы", pl = "Postać cienia", tr = "Gölge Biçimi", it = "Forma d'Ombra", ja = "シャドウフォーム", zh = "暗影形态", ko = "어둠의 형상" }
+text = { en = "Capstone. You take on Shadowform for the whole run, and when an enemy dies with Shadow Word: Pain on it, it bursts for {v}% of its maximum health on everything within 6 yd and the pain jumps to the enemy nearest it.", de = "Schlussstein. Du nimmst für den ganzen Lauf Schattengestalt an, und wenn ein Feind mit Schattenwort: Schmerz stirbt, zerbirst er für {v}% seiner maximalen Gesundheit auf alles im Umkreis von 6 m, und der Schmerz springt auf den nächsten Feind über.", fr = "Clé de voûte. Tu prends la Forme d'ombre pour toute la partie, et quand un ennemi meurt sous Mot de l'ombre : Douleur, il éclate pour {v}% de ses points de vie maximums sur tout ce qui est à moins de 6 m, et la douleur saute sur l'ennemi le plus proche.", es = "Piedra angular. Adoptas la Forma de las Sombras durante toda la partida, y cuando un enemigo muere con Palabra de las Sombras: Dolor, estalla con un {v}% de su salud máxima sobre todo lo que haya a menos de 6 m y el dolor salta al enemigo más cercano.", pt = "Pedra angular. Você assume a Forma Sombria durante toda a partida, e quando um inimigo morre com Palavra da Sombra: Dor, ele explode com {v}% da vida máxima dele em tudo a até 6 m, e a dor salta para o inimigo mais próximo.", ru = "Вершина. Ты принимаешь Облик Тьмы на весь забег, и когда умирает враг со Словом Тьмы: Боль, он взрывается на {v}% своего максимального здоровья по всем в радиусе 6 м, а боль перескакивает на ближайшего врага.", pl = "Zwieńczenie. Przyjmujesz Postać cienia na całą rozgrywkę, a gdy umiera przeciwnik ze Słowem Cienia: Ból, wybucha za {v}% swojego maksymalnego zdrowia, raniąc wszystko w promieniu 6 m, a ból przeskakuje na najbliższego przeciwnika.", tr = "Zirve. Tüm oyun boyunca Gölge Biçimi'ne bürünürsün ve üzerinde Gölge Sözü: Acı olan bir düşman ölünce azami canının {v}%'si kadar 6 m içindeki her şeye patlar ve acı ona en yakın düşmana sıçrar.", it = "Vertice. Assumi la Forma d'Ombra per tutta la partita e quando un nemico muore con Parola dell'Ombra: Dolore addosso, esplode per il {v}% della sua salute massima su tutto entro 6 m e il dolore passa al nemico più vicino.", ja = "【キャップストーン】ラン中ずっとシャドウフォームになります。シャドウ・ワード：ペインがかかった敵が死ぬと炸裂して6ヤード以内のすべてに最大体力の{v}%のダメージを与え、ペインは最も近い敵に飛び移ります。", zh = "终极天赋：你在整场对局中保持暗影形态，身上带有暗言术：痛的敌人死亡时会爆发，对6码内的所有目标造成相当于其最大生命值{v}%的伤害，并且痛苦会跳到离它最近的敌人身上。", ko = "궁극 특성. 런 내내 어둠의 형상을 유지하며, 어둠의 권능: 고통에 걸린 적이 죽으면 터져서 6미터 안의 모든 대상에게 그 적의 최대 생명력의 {v}%만큼 피해를 주고, 고통이 가장 가까운 적에게 옮겨 갑니다." }
+menu_v = 0.1
+plays = [
+    # Its text's share is unread: ours; the pain jumps as far as Contagion's dots. `TUNE`
+    { v = 0.1, play = { pain_jump = { key = "sw_pain", burst = 6.0, reach = 10.0 } } },
+]

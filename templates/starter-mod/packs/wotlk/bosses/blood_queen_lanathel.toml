@@ -1,0 +1,20 @@
+# Blood-Queen Lana'thel: Swarming Shadows, Bloodbolt Whirl, Pact of the Darkfallen.
+
+[[boss]]
+key = "blood_queen_lanathel"
+
+[[boss.kit]]
+every = 12.0
+ability = { trail = { spell = 71264, count = 5, radius = 5.0, warn = 1.6, gap = 0.8, factor = 1.8 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { nova = { spell = 71772, radius = 10.0, warn = 2.0 } }
+
+[[boss.kit]]
+every = 16.0
+ability = { tether = { spell = 71341, reach = 16.0, warn = 1.6, lasts = 5.0, tick = 0.4 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

@@ -1,0 +1,175 @@
+# Daily Challenge: the same zone, class, tier and affixes for everyone on a UTC day, one seed for
+# everyone (the same card offers), every hero starting alike. The first run of the day counts on
+# the day's board (web/cloud.js `daily_runs`); runs after it are practice.
+
+name = "Daily Challenge"
+extends = "standard"
+
+[card]
+order = 3
+icon = "Spell_Holy_BorrowedTime"
+color = [0.15, 0.62, 0.62]
+tag = "SOLO"
+text = "The same zone, hero and affixes for everyone today, and the same cards on offer. Practise as often as you like; your first run of the day counts on the board."
+rules = [
+    "A new challenge at midnight (UTC)",
+    "Hero, zone, difficulty and affixes are set",
+    "Everyone starts alike: no gear bonuses, talents or perks",
+    "The first run of the day counts",
+]
+rewards = [
+    ["INV_Misc_Coin_01", "Gold"],
+    ["INV_Box_02", "Chests"],
+    ["Achievement_Arena_2v2_7", "Daily board"],
+]
+
+[i18n.de]
+name = "Tägliche Herausforderung"
+tag = "SOLO"
+text = "Dieselbe Zone, derselbe Held und dieselben Affixe für alle, und dieselben Karten im Angebot. Übe so oft du willst; dein erster Lauf des Tages zählt für die Rangliste."
+rules = [
+    "Eine neue Herausforderung um Mitternacht (UTC)",
+    "Held, Zone, Schwierigkeit und Affixe stehen fest",
+    "Alle starten gleich: keine Ausrüstungsboni, Talente oder Vorteile",
+    "Der erste Lauf des Tages zählt",
+]
+rewards = ["Gold", "Truhen", "Tagesrangliste"]
+
+[i18n.fr]
+name = "Défi quotidien"
+tag = "SOLO"
+text = "La même zone, le même héros et les mêmes affixes pour tout le monde aujourd'hui, et les mêmes cartes proposées. Entraîne-toi autant que tu veux ; ta première partie du jour compte pour le classement."
+rules = [
+    "Un nouveau défi à minuit (UTC)",
+    "Héros, zone, difficulté et affixes sont imposés",
+    "Tout le monde démarre à égalité : pas de bonus d'équipement, de talents ni d'avantages",
+    "La première partie du jour compte",
+]
+rewards = ["Or", "Coffres", "Classement du jour"]
+
+[i18n.es]
+name = "Desafío diario"
+tag = "SOLO"
+text = "La misma zona, el mismo héroe y los mismos afijos para todos hoy, y las mismas cartas en oferta. Practica todo lo que quieras; tu primera partida del día cuenta para la clasificación."
+rules = [
+    "Un nuevo desafío a medianoche (UTC)",
+    "Héroe, zona, dificultad y afijos están fijados",
+    "Todos empiezan igual: sin bonificaciones de equipo, talentos ni ventajas",
+    "Cuenta la primera partida del día",
+]
+rewards = ["Oro", "Cofres", "Clasificación diaria"]
+
+[i18n.pt]
+name = "Desafio Diário"
+tag = "SOLO"
+text = "A mesma zona, o mesmo herói e os mesmos afixos para todos hoje, e as mesmas cartas na oferta. Treine quanto quiser; sua primeira partida do dia vale para o ranking."
+rules = [
+    "Um novo desafio à meia-noite (UTC)",
+    "Herói, zona, dificuldade e afixos são fixos",
+    "Todos começam iguais: sem bônus de equipamento, talentos ou vantagens",
+    "A primeira partida do dia conta",
+]
+rewards = ["Ouro", "Baús", "Ranking diário"]
+
+[i18n.ru]
+name = "Ежедневное испытание"
+tag = "СОЛО"
+text = "Сегодня у всех одна и та же зона, один и тот же герой и те же аффиксы, и те же карты на выбор. Тренируйся сколько хочешь; твой первый забег дня идёт в таблицу лидеров."
+rules = [
+    "Новое испытание в полночь (UTC)",
+    "Герой, зона, сложность и аффиксы заданы",
+    "Все начинают одинаково: без бонусов снаряжения, талантов и преимуществ",
+    "Засчитывается первый забег дня",
+]
+rewards = ["Золото", "Сундуки", "Таблица дня"]
+
+[i18n.it]
+name = "Sfida giornaliera"
+tag = "SOLO"
+text = "Oggi per tutti la stessa zona, lo stesso eroe e gli stessi affissi, con le stesse carte da scegliere. Allenati quanto vuoi; la tua prima partita del giorno vale per la classifica."
+rules = [
+    "Una nuova sfida a mezzanotte (UTC)",
+    "Eroe, zona, difficoltà e affissi sono fissati",
+    "Tutti partono alla pari: nessun bonus di equipaggiamento, talenti o vantaggi",
+    "Conta la prima partita del giorno",
+]
+rewards = ["Oro", "Forzieri", "Classifica del giorno"]
+
+[i18n.pl]
+name = "Dzienne wyzwanie"
+tag = "SOLO"
+text = "Dziś dla wszystkich ta sama strefa, ten sam bohater, te same modyfikatory i te same karty do wyboru. Ćwicz, ile chcesz; pierwsza rozgrywka dnia liczy się do rankingu."
+rules = [
+    "Nowe wyzwanie o północy (UTC)",
+    "Bohater, strefa, trudność i modyfikatory są ustalone",
+    "Wszyscy zaczynają tak samo: bez bonusów ekwipunku, talentów i premii",
+    "Liczy się pierwsza rozgrywka dnia",
+]
+rewards = ["Złoto", "Skrzynie", "Ranking dnia"]
+
+[i18n.tr]
+name = "Günlük Meydan Okuma"
+tag = "SOLO"
+text = "Bugün herkes için aynı bölge, aynı kahraman, aynı ek özellikler ve aynı kartlar sunulur. İstediğin kadar alıştırma yap; günün ilk oyunu sıralamaya girer."
+rules = [
+    "Gece yarısı (UTC) yeni bir meydan okuma",
+    "Kahraman, bölge, zorluk ve ek özellikler sabittir",
+    "Herkes eşit başlar: ekipman, yetenek veya avantaj bonusu yok",
+    "Günün ilk oyunu sayılır",
+]
+rewards = ["Altın", "Sandıklar", "Günün sıralaması"]
+
+[i18n.ja]
+name = "デイリーチャレンジ"
+tag = "ソロ"
+text = "今日は全員が同じゾーン、同じヒーロー、同じアフィックスで挑み、提示されるカードも同じです。練習は何度でもできます。その日最初のランがランキングに記録されます。"
+rules = [
+    "毎日0時（UTC）に新しいチャレンジ",
+    "ヒーロー、ゾーン、難易度、アフィックスは固定です",
+    "全員が同じ条件で開始：装備ボーナス、タレント、特典はありません",
+    "その日最初のランが記録されます",
+]
+rewards = ["ゴールド", "宝箱", "デイリーランキング"]
+
+[i18n.zh]
+name = "每日挑战"
+tag = "单人"
+text = "今天所有人面对同样的区域、同样的英雄和同样的词缀，可选的卡牌也一样。你可以随意练习；当天的第一局对局计入排行榜。"
+rules = [
+    "每天午夜（UTC）刷新挑战",
+    "英雄、区域、难度和词缀均已固定",
+    "所有人起点相同：没有装备加成、天赋或特权",
+    "只计算当天的第一局对局",
+]
+rewards = ["金币", "宝箱", "每日排行榜"]
+
+[i18n.ko]
+name = "일일 도전"
+tag = "솔로"
+text = "오늘은 모두가 같은 지역, 같은 영웅, 같은 어픽스로 도전하며 제시되는 카드도 같습니다. 연습은 얼마든지 할 수 있으며, 그날의 첫 런이 순위표에 기록됩니다."
+rules = [
+    "자정(UTC)마다 새로운 도전",
+    "영웅, 지역, 난이도, 어픽스가 정해져 있습니다",
+    "모두 같은 조건으로 시작합니다: 장비 보너스, 특성, 혜택 없음",
+    "그날의 첫 런이 기록됩니다",
+]
+rewards = ["골드", "상자", "일일 순위표"]
+
+[coop]
+max_heroes = 1
+
+[daily]
+enabled = true
+# Each world's first eight zones (Azeroth, Outland, Northrend), without the staged multi-arena
+# finales (the zones with arenas in the packs: Black Temple, Azjol-Nerub, Pit of Saron, Icecrown
+# Citadel). The Worker has the same list (web/cloud.js `DAILY_POOLS`): change them together.
+zones = [
+    "elwynn", "duskwood", "wsg", "ungoro", "ab", "feralas", "arena", "sm",
+    "hellfire", "zangarmarsh", "terokkar", "nagrand", "eots", "bladesedge", "karazhan", "netherstorm",
+    "borean", "fjord", "dragonblight", "grizzly", "zuldrak", "sholazar", "coldarra", "stormpeaks",
+]
+classes = []
+tiers = [0, 1, 2]
+# One of the three affixes a day.
+mutator_count = 1
+fair = true

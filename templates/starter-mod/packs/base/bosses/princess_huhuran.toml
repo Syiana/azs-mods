@@ -1,0 +1,20 @@
+# Princess Huhuran's abilities, Gates of Ahn'Qiraj.
+
+[[boss]]
+key = "princess_huhuran"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 26053 } }
+
+[[boss.kit]]
+every = 7.0
+ability = { cone = { spell = 26050, range = 16.0, arc = 120.0, warn = 1.4, factor = 2.2 } }
+
+[[boss.kit]]
+every = 10.0
+ability = { puddle = { spell = 23861, burst = 23861, radius = 5.0, warn = 2.5, factor = 1.8, lasts = 8.0, tick = 0.35 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 10 }

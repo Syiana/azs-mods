@@ -1,0 +1,26 @@
+# Morbent Fel's abilities, Duskwood.
+
+[[boss]]
+key = "morbent_fel"
+
+[[boss.kit]]
+every = 5.0
+ability = { bolt = { spell = 686 } }
+
+# AS's tag 11 with no second spell and no tick: one strike where the hero stands, read as
+# radius, warning and factor (`27810 0 6 0 2 3`).
+[[boss.kit]]
+every = 7.0
+ability = { pool = { spell = 27810, burst = 0, radius = 6.0, warn = 2.0, factor = 3.0 } }
+
+[[boss.kit]]
+every = 11.0
+ability = { combo = [[{ leap = { spell = 1949, radius = 5.0, reach = 14.0, warn = 1.6, factor = 2.2 } }, { nova = { spell = 1949, radius = 9.0, warn = 2.0 } }], 1.6] }
+
+[[boss.kit]]
+every = 15.0
+ability = { tether = { spell = 689, reach = 16.0, warn = 1.5, lasts = 5.0, tick = 0.3 } }
+
+[[boss.kit]]
+every = 12.0
+ability = { adds = 12 }

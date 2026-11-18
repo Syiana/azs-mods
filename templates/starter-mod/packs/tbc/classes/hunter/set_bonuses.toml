@@ -1,0 +1,77 @@
+# Class set: Demolitionist / Sprengmeister.
+[[set_bonus]]
+key = "hunter_exotic_4"
+tier = "exotic"
+pieces = 4
+# The three traps share 8 s as their base cooldown, cut by the strongest cut any of them has, and cast
+# together; the numbers and the traps are the pack's, no code names them.
+mechanic = { kind = "shared_cooldown", spells = ["frost_trap", "explosive_trap", "immolation_trap"], cooldown = 8.0 }
+text = { en = "Demolitionist: Frost Trap, Explosive Trap and Immolation Trap share an 8-second cooldown and are placed together.", de = "Sprengmeister: Frostfalle, Sprengfalle und Feuerbrandfalle teilen sich eine Abklingzeit von 8 Sekunden und werden gemeinsam abgelegt.", fr = "Maître artificier : Piège de givre, Piège explosif et Piège d'immolation partagent un temps de recharge de 8 secondes et sont posés ensemble.", es = "Maestro de demoliciones: Trampa de escarcha, Trampa explosiva y Trampa de inmolación comparten una reutilización de 8 segundos y se colocan juntas.", pt = "Mestre das Demolições: Armadilha de Gelo, Armadilha Explosiva e Armadilha de Imolação têm uma recarga compartilhada de 8 segundos e são colocadas juntas.", ru = "Подрывник: Ледяная, взрывная и огненная ловушки имеют общее время восстановления 8 секунд и устанавливаются вместе.", it = "Maestro delle demolizioni: Trappola di ghiaccio, Trappola esplosiva e Trappola d'immolazione condividono un tempo di recupero di 8 secondi e vengono piazzate insieme.", pl = "Mistrz wyburzeń: Mroźna pułapka, Pułapka wybuchowa i Pułapka immolacyjna dzielą 8-sekundowy czas odnowienia i są rozstawiane razem.", tr = "Patlayıcı Ustası: Buz Tuzağı, Patlayıcı Tuzak ve Yakıcı Tuzak 8 saniyelik ortak bekleme süresini paylaşır ve birlikte kurulur.", ja = "デモリッショニスト：フロスト・トラップ、エクスプローシブ・トラップ、イモレーション・トラップが8秒のクールダウンを共有し、まとめて設置されます。", zh = "爆破专家：冰霜陷阱、爆炸陷阱和献祭陷阱共享8秒的冷却时间，并一起放置。", ko = "폭파 전문가: 냉기의 덫, 폭발의 덫, 제물의 덫이 8초의 재사용 대기시간을 공유하며 함께 설치됩니다." }
+
+[[set_bonus]]
+key = "hunter_exotic_8"
+tier = "exotic"
+pieces = 8
+# Thermal Bomb (the balance team's document of 2026-11-14). Once all three traps are drawn they fuse
+# into a bomb that takes every number from the Explosive Trap (`source`): twice its radius (`area`),
+# its cooldown cuts on 8 s, 1000% of its hit (`damage`, 1500% empowered: `{v}`). The burning ground
+# (`ground`, the Immolation Trap's beat, time and look) deals `burn` of the explosion each beat, and the
+# Frost Trap (`chill`) lays its own ground at the spot, drawn crimson (`chill_visual`, look 910908 below:
+# the trap's own ground and ice impact turned to hue 345; a Frost Trap laid alone stays blue). The models are those the three traps lay, at
+# `scale`; the three forms (below) are what the three bar places show. The explosion is look 910905 (below).
+mechanic = { kind = "spell_fusion", spells = ["frost_trap", "explosive_trap", "immolation_trap"], source = "explosive_trap", ground = "immolation_trap", chill = "frost_trap", area = 2.0, cooldown = 8.0, fuse = 0.75, damage = 10.0, empowers = true, slow = 50, slow_secs = 3.0, burn = 0.5, scale = 2.0, visual = 910905, rocket = 910907, rocket_speed = 9.3333, chill_visual = 910908 }
+text = { en = "Demolitionist: When Frost Trap, Explosive Trap and Immolation Trap are all equipped, they fuse into a Thermal Bomb. It is placed at your feet like an Explosive Trap as soon as an enemy is within its radius (200% of Explosive Trap's radius). After 0.75 sec a rocket strikes and the bomb explodes for {v}% of Explosive Trap's damage. Enemies hit are slowed by 50% for 3 sec. Then the ground within the same radius burns for 8 sec, dealing 50% of the explosion's damage every second. Frost Trap leaves its frost ground.", de = "Sprengmeister: Sind Frostfalle, Sprengfalle und Feuerbrandfalle ausgerüstet, verschmelzen sie zu einer Thermalbombe. Sie wird wie eine Sprengfalle zu deinen Füßen gelegt, sobald ein Gegner in ihrem Umkreis ist (200% des Umkreises von Sprengfalle). Nach 0,75 Sek. schlägt eine Rakete ein, und die Bombe explodiert für {v}% des Schadens von Sprengfalle. Getroffene Gegner werden 3 Sek. lang um 50% verlangsamt. Danach brennt der Boden im selben Umkreis 8 Sek. lang und verursacht jede Sekunde 50% des Explosionsschadens. Die Frostfalle hinterlässt ihren Frostboden.", fr = "Maître artificier : Si Piège de givre, Piège explosif et Piège d'immolation sont équipés, ils fusionnent en une Bombe thermique. Elle est posée à vos pieds comme un Piège explosif dès qu'un ennemi se trouve dans son rayon (200 % du rayon de Piège explosif). Après 0,75 s, une roquette s'abat et la bombe explose pour {v} % des dégâts de Piège explosif. Les ennemis touchés sont ralentis de 50 % pendant 3 s. Ensuite, le sol brûle 8 s dans le même rayon et inflige chaque seconde 50 % des dégâts de l'explosion. Piège de givre laisse son sol gelé.", es = "Maestro de demoliciones: Si equipas Trampa de escarcha, Trampa explosiva y Trampa de inmolación, se fusionan en una Bomba térmica. Se coloca a tus pies como una Trampa explosiva en cuanto hay un enemigo en su radio (200 % del radio de Trampa explosiva). Tras 0,75 s cae un cohete y la bomba explota con un {v} % del daño de Trampa explosiva. Los enemigos alcanzados se ralentizan un 50 % durante 3 s. Después el suelo del mismo radio arde 8 s e inflige cada segundo el 50 % del daño de la explosión. Trampa de escarcha deja su suelo helado.", pt = "Mestre das Demolições: Quando Armadilha de Gelo, Armadilha Explosiva e Armadilha de Imolação estão equipadas, elas se fundem numa Bomba Térmica. Ela é colocada aos seus pés como uma Armadilha Explosiva assim que há um inimigo no seu raio (200% do raio da Armadilha Explosiva). Após 0,75 s, um foguete atinge o local e a bomba explode com {v}% do dano da Armadilha Explosiva. Inimigos atingidos ficam 50% mais lentos por 3 s. Depois o chão no mesmo raio queima por 8 s e causa 50% do dano da explosão a cada segundo. A Armadilha de Gelo deixa o seu chão congelado.", ru = "Подрывник: Если выбраны ледяная, взрывная и огненная ловушки, они сливаются в термобомбу. Она кладётся у ваших ног, как взрывная ловушка, как только враг оказывается в её радиусе (200% радиуса взрывной ловушки). Через 0,75 с падает ракета, и бомба взрывается, нанося {v}% урона взрывной ловушки. Поражённые враги на 3 с замедляются на 50%. Затем земля в том же радиусе горит 8 с и каждую секунду наносит 50% урона взрыва. Ледяная ловушка оставляет свою ледяную землю.", it = "Maestro delle demolizioni: Se hai equipaggiato Trappola di ghiaccio, Trappola esplosiva e Trappola d'immolazione, si fondono in una Bomba termica. Viene posta ai tuoi piedi come una Trappola esplosiva appena un nemico è nel suo raggio (200% del raggio di Trappola esplosiva). Dopo 0,75 secondi un razzo colpisce e la bomba esplode per il {v}% dei danni di Trappola esplosiva. I nemici colpiti sono rallentati del 50% per 3 secondi. Poi il terreno nello stesso raggio brucia per 8 secondi e infligge ogni secondo il 50% dei danni dell'esplosione. Trappola di ghiaccio lascia il suo terreno gelido.", pl = "Mistrz wyburzeń: Gdy masz wyposażone Mroźną pułapkę, Pułapkę wybuchową i Pułapkę immolacyjną, łączą się w Bombę termiczną. Jest kładziona u twoich stóp jak Pułapka wybuchowa, gdy tylko wróg znajdzie się w jej promieniu (200% promienia Pułapki wybuchowej). Po 0,75 sekundy uderza rakieta, a bomba wybucha, zadając {v}% obrażeń Pułapki wybuchowej. Trafieni wrogowie są spowolnieni o 50% na 3 sekundy. Potem ziemia w tym samym promieniu płonie przez 8 sekund i co sekundę zadaje 50% obrażeń wybuchu. Mroźna pułapka zostawia swój mroźny grunt.", tr = "Patlayıcı Ustası: Buz Tuzağı, Patlayıcı Tuzak ve Yakıcı Tuzak kuşanıldığında Termal Bomba'da birleşir. Bir düşman yarıçapına (Patlayıcı Tuzağın yarıçapının %200'ü) girer girmez, Patlayıcı Tuzak gibi ayaklarının dibine konur. 0,75 saniye sonra bir roket düşer ve bomba, Patlayıcı Tuzağın hasarının %{v}'si ile patlar. Vurulan düşmanlar 3 saniyeliğine %50 yavaşlar. Sonra aynı yarıçaptaki zemin 8 saniye yanar ve her saniye patlama hasarının %50'sini verir. Buz Tuzağı buzlu zeminini bırakır.", ja = "デモリッショニスト：フロスト・トラップ、エクスプローシブ・トラップ、イモレーション・トラップをすべて装備していると、サーマルボムに融合します。範囲内（エクスプローシブ・トラップの範囲の200%）に敵が入ると、エクスプローシブ・トラップのように足元に設置されます。0.75秒後にロケットが着弾し、エクスプローシブ・トラップのダメージの{v}%で爆発します。命中した敵は3秒間50%スローになります。その後、同じ範囲の地面が8秒間燃え、毎秒爆発ダメージの50%を与えます。フロスト・トラップは氷結した地面を残します。", zh = "爆破专家：同时装备冰霜陷阱、爆炸陷阱和献祭陷阱时，它们会融合为热能炸弹。只要有敌人进入其范围（爆炸陷阱范围的200%），它就会像爆炸陷阱一样放置在你脚下。0.75秒后火箭命中，炸弹爆炸，造成相当于爆炸陷阱{v}%的伤害。被击中的敌人减速50%，持续3秒。随后同一范围内的地面燃烧8秒，每秒造成爆炸伤害的50%。冰霜陷阱会留下它的冰霜地面。", ko = "폭파 전문가: 냉기의 덫, 폭발의 덫, 제물의 덫을 모두 장착하면 열폭탄으로 합쳐집니다. 적이 범위(폭발의 덫 범위의 200%) 안에 들어오면 폭발의 덫처럼 발밑에 설치됩니다. 0.75초 후 로켓이 떨어지고 폭탄이 폭발의 덫 피해의 {v}%로 폭발합니다. 맞은 적은 3초 동안 50% 감속됩니다. 그 뒤 같은 범위의 땅이 8초 동안 불타며 매초 폭발 피해의 50%를 줍니다. 냉기의 덫은 얼어붙은 땅을 남깁니다." }
+
+# The explosion. The document wants Mimiron's Rocket Strike, but its explosion spell (63681, and 64402 and
+# 65034) has no SpellVisual row in Spell.dbc, so there is no look to copy (the patch builder stops on it).
+# The nearest stock bomb with a look is the Siege Engine's (spell 32979, Bomb_ExplosionA with its smoke):
+# its landing without the missile, at the largest size the patch builder allows (the document wants it as
+# wide as the bomb's radius) and set to the green of Fel. The world draws it where the bomb lies, with no
+# caster. The patch builder writes it into the client's tables: rebuild the `~` patch for it to show.
+[[set_bonus.look]]
+visual = 910905
+source = 32979
+no_missile = true
+impact_scale = 4.0
+tint = 115
+
+# The rocket: Mimiron's own missile (spell 63036, Missle_Rocket02, 7 yd a second in Spell.dbc) at 4/3 of
+# the speed (9.33 yd a second), so it falls from `rocket_speed * fuse` = 9.3333 * 0.75 = 7 yd up (nearly
+# three Tauren heads, where it was 21 yd and hardly seen) and lands the moment the bomb goes off.
+[[set_bonus.look]]
+visual = 910907
+source = 63036
+missile_speed = 1.3333
+
+# The frost ground the bomb lays: the Frost Trap's own look (spell 1499: the ground SummonGround_Blizzard_State
+# and the Ice_ImpactDD_Med_Chest impact) at the crimson of the palette (hue 345), so it stands apart from the
+# bomb's green explosion. Only the bomb's ground wears it; the trap on its own keeps the blue look 910029.
+[[set_bonus.look]]
+visual = 910908
+source = 1499
+tint = 345
+
+# The bar: once the three traps are fused, each of their three places shows the Thermal Bomb (the Goblin
+# bomb's icon) in place of its trap. The spells stay the traps' in the run; the patch builder writes three
+# spells of their own, 911001 to 911003, each a copy of its trap's row with the icon and the name.
+
+[[set_bonus.form]]
+spell = "frost_trap"
+id = 911001
+icon = "INV_Misc_Bomb_08"
+name = { en = "Thermal Bomb", de = "Thermalbombe", fr = "Bombe thermique", es = "Bomba térmica", pt = "Bomba Térmica", ru = "Термобомба", it = "Bomba termica", pl = "Bomba termiczna", tr = "Termal Bomba", ja = "サーマルボム", zh = "热能炸弹", ko = "열폭탄" }
+when = "fused"
+
+[[set_bonus.form]]
+spell = "explosive_trap"
+id = 911002
+icon = "INV_Misc_Bomb_08"
+name = { en = "Thermal Bomb", de = "Thermalbombe", fr = "Bombe thermique", es = "Bomba térmica", pt = "Bomba Térmica", ru = "Термобомба", it = "Bomba termica", pl = "Bomba termiczna", tr = "Termal Bomba", ja = "サーマルボム", zh = "热能炸弹", ko = "열폭탄" }
+when = "fused"
+
+[[set_bonus.form]]
+spell = "immolation_trap"
+id = 911003
+icon = "INV_Misc_Bomb_08"
+name = { en = "Thermal Bomb", de = "Thermalbombe", fr = "Bombe thermique", es = "Bomba térmica", pt = "Bomba Térmica", ru = "Термобомба", it = "Bomba termica", pl = "Bomba termiczna", tr = "Termal Bomba", ja = "サーマルボム", zh = "热能炸弹", ko = "열폭탄" }
+when = "fused"

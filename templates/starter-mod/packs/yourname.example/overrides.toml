@@ -1,0 +1,12 @@
+# The starter's worked example: the mage's Fireball hits harder and comes a little faster.
+#
+# profile.json declares it in this package's "overrides":
+#   { "dependency": "base", "entity": "spell:fireball" }
+# Without that line the check says "the lock must declare this override".
+# More examples, one per task: templates/snippets/.
+
+[[override]]
+kind = "spell"
+key = "fireball"
+hit = 60
+cooldown = 1.1
