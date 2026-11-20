@@ -1,0 +1,10 @@
+[[boss]]
+key = "example.copperbell:shiftkeeper"
+
+[[boss.kit]]
+every = 11.0
+ability = { script = { name = "warning_bells", params = { radius = 6.0, extra = 3.0 } } }
+
+[[boss.kit]]
+every = 26.0
+ability = { adds = 3 }

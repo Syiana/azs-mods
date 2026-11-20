@@ -1,0 +1,4 @@
+# SDK source manifest. The local builder generates the game's profile.json from this.
+id = "example.copperbell"
+version = "1"
+requires = ["base"]

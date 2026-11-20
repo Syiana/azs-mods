@@ -1,0 +1,5 @@
+# Requires the stock base dependency. This references its spell key and adds only a balance delta.
+[[override]]
+kind = "spell"
+key = "fireball"
+cooldown = 1.2

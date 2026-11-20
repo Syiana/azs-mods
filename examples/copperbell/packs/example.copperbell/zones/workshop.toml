@@ -1,0 +1,76 @@
+[[zone]]
+key = "example.copperbell:workshop"
+order = 410
+name = { en = "Copperbell Workshop", de = "Kupferglockenwerkstatt", fr = "Atelier de la cloche de cuivre", es = "Taller de la campana de cobre", pt = "Oficina do sino de cobre", ru = "Мастерская медных колоколов", it = "Officina della campana di rame", pl = "Warsztat miedzianych dzwonów", tr = "Bakır Çan Atölyesi", ja = "銅鐘の工房", zh = "铜铃工坊", ko = "구리종 공방" }
+subtitle = { en = "Keep the yard clear until the last bell.", de = "Halte den Hof bis zum letzten Glockenschlag frei.", fr = "Dégagez la cour jusqu'à la dernière sonnerie.", es = "Mantén el patio despejado hasta el último toque.", pt = "Mantenha o pátio livre até o último toque.", ru = "Держите двор свободным до последнего звонка.", it = "Tieni libero il cortile fino all'ultimo rintocco.", pl = "Utrzymaj dziedziniec wolny do ostatniego dzwonu.", tr = "Son çana kadar avluyu boş tut.", ja = "最後の鐘が鳴るまで中庭を守れ。", zh = "守住院子，直至最后一声钟响。", ko = "마지막 종이 울릴 때까지 마당을 지키세요." }
+# Presentation references are resolved by the local client. The SDK supplies no client data.
+icon = "INV_Misc_PocketWatch_01"
+map = 0
+map_name = "Azeroth"
+area = 12
+center = [-9510.0, 72.0]
+radius = 90.0
+map_bounds = [174.0, -30.0, -9408.0, -9612.0]
+health_factor = 0.91
+gold_factor = 1.0
+late_factor = 0.0
+hour = 17
+weather = { fine = 100 }
+
+[[zone.enemy]]
+entry = 978101
+name = { en = "Tin Runner", de = "Zinnläufer", fr = "Coureur d'étain", es = "Corredor de estaño", pt = "Corredor de estanho", ru = "Оловянный бегун", it = "Corridore di stagno", pl = "Cynowy biegacz", tr = "Kalay Koşucu", ja = "錫の走り手", zh = "锡铸奔跑者", ko = "주석 달리미" }
+type = "mechanical"
+display = 16347
+icon = "INV_Misc_Gear_01"
+health = 23
+damage = 4
+swing = 1.25
+speed = 7.0
+cost = 1.0
+from = 0.0
+
+[[zone.enemy]]
+entry = 978102
+name = { en = "Loose Rivet", de = "Lockere Niete", fr = "Rivet desserré", es = "Remache suelto", pt = "Rebite solto", ru = "Разболтанная заклёпка", it = "Rivetto allentato", pl = "Luźny nit", tr = "Gevşek Perçin", ja = "ゆるんだ鋲", zh = "松动铆钉", ko = "헐거운 리벳" }
+type = "mechanical"
+display = 26128
+icon = "INV_Misc_Gear_01"
+health = 52
+damage = 8
+swing = 1.9
+speed = 4.8
+cost = 2.0
+from = 2.0
+
+[[zone.elite]]
+entry = 978110
+name = { en = "Broken Press", de = "Defekte Presse", fr = "Presse cassée", es = "Prensa rota", pt = "Prensa quebrada", ru = "Сломанный пресс", it = "Pressa guasta", pl = "Zepsuta prasa", tr = "Bozuk Pres", ja = "壊れたプレス機", zh = "损坏的压机", ko = "고장 난 압착기" }
+type = "mechanical"
+display = 26586
+icon = "INV_Misc_Gear_01"
+health = 920
+damage = 25
+swing = 2.1
+speed = 4.9
+cost = 12.0
+from = 3.0
+size = 1.55
+
+[[zone.elite.kit]]
+every = 12.0
+ability = { stomp = { spell = 5568, radius = 5.0, warn = 2.0, knock = 6.0 } }
+
+[[zone.boss]]
+entry = 978190
+name = { en = "The Shiftkeeper", de = "Der Schichtwächter", fr = "Le gardien du quart", es = "El guardián del turno", pt = "O vigia do turno", ru = "Смотритель смены", it = "Il custode del turno", pl = "Stróż zmiany", tr = "Vardiya Bekçisi", ja = "交代の番人", zh = "轮班守卫", ko = "교대지기" }
+type = "mechanical"
+display = 26131
+icon = "INV_Misc_PocketWatch_01"
+health = 3800
+damage = 24
+speed = 5.2
+minute = 8
+final = true
+yell = { en = "Last bell! Clear the yard!", de = "Letzter Glockenschlag! Räumt den Hof!", fr = "Dernière sonnerie ! Évacuez la cour !", es = "¡Último toque! ¡Despejad el patio!", pt = "Último toque! Esvaziem o pátio!", ru = "Последний звонок! Освободите двор!", it = "Ultimo rintocco! Sgomberate il cortile!", pl = "Ostatni dzwon! Opróżnić dziedziniec!", tr = "Son çan! Avluyu boşaltın!", ja = "最後の鐘だ！中庭を空けろ！", zh = "最后一声钟！清空院子！", ko = "마지막 종이다! 마당을 비워라!" }
+kit = "example.copperbell:shiftkeeper"
