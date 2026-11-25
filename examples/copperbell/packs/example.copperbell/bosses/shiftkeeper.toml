@@ -1,0 +1,16 @@
+[[boss]]
+key = "example.copperbell:shiftkeeper"
+
+# Catch players who stay close for too long.
+[[boss.kit]]
+every = 10.0
+ability = { nova = { spell = 8078, radius = 7.0, warn = 2.0 } }
+
+# Every eighteen seconds, push players to change position before the impact.
+[[boss.kit]]
+every = 18.0
+ability = { combo = [["charge", { stomp = { spell = 5568, radius = 5.0, warn = 1.8, knock = 7.0 } }], 2.0] }
+
+[[boss.kit]]
+every = 26.0
+ability = { adds = 3 }

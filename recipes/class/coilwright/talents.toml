@@ -1,0 +1,38 @@
+[[talent_tree]]
+key = "example.copperbell:brasswork"
+class = "example.copperbell:coilwright"
+index = 0
+background = ""
+icon = "INV_Misc_Gear_01"
+name = { en = "Brasswork", de = "Messingarbeit", fr = "Travail du laiton", es = "Trabajo en latón", pt = "Trabalho em latão", ru = "Работа с латунью", it = "Lavorazione dell'ottone", pl = "Obróbka mosiądzu", tr = "Pirinç İşçiliği", ja = "真ちゅう細工", zh = "黄铜工艺", ko = "황동 가공" }
+
+[[talent_tree]]
+key = "example.copperbell:leverage"
+class = "example.copperbell:coilwright"
+index = 1
+background = ""
+icon = "INV_Misc_Gear_01"
+name = { en = "Leverage", de = "Hebelwirkung", fr = "Effet de levier", es = "Palanca", pt = "Alavanca", ru = "Рычаг", it = "Leva", pl = "Dźwignia", tr = "Kaldıraç", ja = "てこの原理", zh = "杠杆", ko = "지레" }
+
+[[talent_tree]]
+key = "example.copperbell:timing"
+class = "example.copperbell:coilwright"
+index = 2
+background = ""
+icon = "INV_Misc_PocketWatch_01"
+name = { en = "Timing", de = "Timing", fr = "Cadence", es = "Ritmo", pt = "Ritmo", ru = "Ритм", it = "Cadenza", pl = "Rytm", tr = "Zamanlama", ja = "間合い", zh = "时机", ko = "타이밍" }
+
+[[talent]]
+key = "example.copperbell:tighter_coil"
+class = "example.copperbell:coilwright"
+tree = 0
+row = 0
+col = 1
+ranks = 3
+effects = []
+icon = "INV_Misc_Gear_01"
+name = { en = "Tighter Coil", de = "Straffere Feder", fr = "Ressort plus tendu", es = "Muelle más tenso", pt = "Mola mais tensa", ru = "Тугая пружина", it = "Molla più tesa", pl = "Ciaśniejsza sprężyna", tr = "Daha Gergin Yay", ja = "きつく巻いたばね", zh = "紧绷线圈", ko = "팽팽한 용수철" }
+text = { en = "Physical attacks deal {v}% more damage.", de = "Körperliche Angriffe verursachen {v}% mehr Schaden.", fr = "Les attaques physiques infligent {v}% de dégâts supplémentaires.", es = "Los ataques físicos infligen un {v}% más de daño.", pt = "Ataques físicos causam {v}% a mais de dano.", ru = "Физические атаки наносят на {v}% больше урона.", it = "Gli attacchi fisici infliggono il {v}% di danni in più.", pl = "Ataki fizyczne zadają o {v}% więcej obrażeń.", tr = "Fiziksel saldırılar %{v} daha fazla hasar verir.", ja = "物理攻撃のダメージが{v}%増加する。", zh = "物理攻击造成的伤害提高{v}%。", ko = "물리 공격의 피해가 {v}% 증가합니다." }
+menu_v = 0.03
+mods = [{ school = 1 }]
+mods_v = 0.03

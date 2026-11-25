@@ -1,0 +1,13 @@
+name = "Closing Shift"
+extends = "standard"
+
+[card]
+order = 30
+icon = "INV_Misc_PocketWatch_01"
+color = [0.75, 0.48, 0.24]
+tag = "SOLO · CO-OP"
+text = "The usual campaign with a tougher horde."
+rules = ["Enemies have 25% more health."]
+
+[horde]
+enemy_health = 1.25

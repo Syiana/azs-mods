@@ -1,0 +1,33 @@
+key = "example.copperbell:coilwright"
+id = 31
+health = 225
+power = "mana"
+starter = "example.copperbell:spring_snap"
+races = [1]
+name = { en = "Coilwright", de = "Federbauer", fr = "Bobinier", es = "Bobinador", pt = "Bobinador", ru = "Мастер пружин", it = "Avvolgitore", pl = "Sprężyniarz", tr = "Yay Ustası", ja = "ばね職人", zh = "弹簧匠", ko = "용수철 장인" }
+color = [0.82, 0.54, 0.24]
+icon = "INV_Misc_Gear_01"
+piece_profiles = [0, 1, 2, 3, 4, 5, 6, 7]
+starter_weapons = [35]
+bot_name = "Coilwright"
+bot_order = 31
+swing = { beat = 1.8 }
+
+[gear]
+armor = "mail"
+wields = [4]
+sets = [
+    { en = "Riveted", de = "Genietet", fr = "Riveté", es = "Remachado", pt = "Rebitado", ru = "Клёпаный", it = "Rivettato", pl = "Nitowany", tr = "Perçinli", ja = "リベットの", zh = "铆接的", ko = "리벳의" },
+    { en = "Wound", de = "Gespannt", fr = "Remonté", es = "Tensado", pt = "Tensionado", ru = "Взведённый", it = "Caricato", pl = "Nakręcony", tr = "Kurulu", ja = "巻き上げた", zh = "上弦的", ko = "감아 올린" },
+    { en = "Etched", de = "Geätzt", fr = "Gravé", es = "Grabado", pt = "Gravado", ru = "Гравированный", it = "Inciso", pl = "Trawiony", tr = "İşlemeli", ja = "刻印の", zh = "蚀刻的", ko = "새긴" },
+    { en = "Polished", de = "Poliert", fr = "Poli", es = "Pulido", pt = "Polido", ru = "Полированный", it = "Lucidato", pl = "Polerowany", tr = "Cilalı", ja = "磨かれた", zh = "抛光的", ko = "광택 낸" },
+    { en = "Tempered", de = "Gehärtet", fr = "Trempé", es = "Templado", pt = "Temperado", ru = "Закалённый", it = "Temprato", pl = "Hartowany", tr = "Temperli", ja = "焼き戻した", zh = "回火的", ko = "뜨임한" },
+]
+weapons = [[
+    { en = "Worn Spanner", de = "Alter Schraubenschlüssel", fr = "Clé usée", es = "Llave gastada", pt = "Chave gasta", ru = "Потёртый ключ", it = "Chiave usurata", pl = "Zużyty klucz", tr = "Eski Anahtar", ja = "古びたレンチ", zh = "旧扳手", ko = "낡은 렌치" },
+    { en = "Long Spanner", de = "Langer Schraubenschlüssel", fr = "Clé longue", es = "Llave larga", pt = "Chave longa", ru = "Длинный ключ", it = "Chiave lunga", pl = "Długi klucz", tr = "Uzun Anahtar", ja = "長いレンチ", zh = "长扳手", ko = "긴 렌치" },
+    { en = "Heavy Spanner", de = "Schwerer Schraubenschlüssel", fr = "Clé lourde", es = "Llave pesada", pt = "Chave pesada", ru = "Тяжёлый ключ", it = "Chiave pesante", pl = "Ciężki klucz", tr = "Ağır Anahtar", ja = "重いレンチ", zh = "重扳手", ko = "무거운 렌치" },
+    { en = "Balanced Spanner", de = "Ausgewogener Schraubenschlüssel", fr = "Clé équilibrée", es = "Llave equilibrada", pt = "Chave equilibrada", ru = "Сбалансированный ключ", it = "Chiave bilanciata", pl = "Wyważony klucz", tr = "Dengeli Anahtar", ja = "均整の取れたレンチ", zh = "平衡扳手", ko = "균형 잡힌 렌치" },
+    { en = "Master's Spanner", de = "Schraubenschlüssel des Meisters", fr = "Clé de maître", es = "Llave del maestro", pt = "Chave do mestre", ru = "Ключ мастера", it = "Chiave del maestro", pl = "Klucz mistrza", tr = "Ustanın Anahtarı", ja = "名匠のレンチ", zh = "大师扳手", ko = "장인의 렌치" },
+]]
+weapon_icons = [["Mace_01", "Mace_01", "Mace_01", "Mace_01", "Mace_01", "Mace_01"]]

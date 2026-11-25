@@ -1,0 +1,11 @@
+# Copy to packages/copperbell-workshop.toml in a fork of the community registry.
+# Replace the author, repository and namespace to match your own release.
+id = "copperbell-workshop"
+kind = "mod"
+name = "Copperbell Workshop"
+author = "your-account"
+repo = "your-account/copperbell-workshop"
+description = "A workshop yard with a late-shift boss and a tougher campaign mode."
+license = "MIT"
+namespace = "example.copperbell"
+requires = []

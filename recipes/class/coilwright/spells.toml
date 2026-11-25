@@ -1,0 +1,11 @@
+[[spell]]
+key = "example.copperbell:spring_snap"
+class = "example.copperbell:coilwright"
+id = 51416
+school = "physical"
+shape = { strike = { targets = 1 } }
+hit = 34
+cooldown = 1.65
+range = 5.5
+icon = "INV_Misc_Gear_01"
+name = { en = "Spring Snap", de = "Federschnappen", fr = "Claquement de ressort", es = "Chasquido de muelle", pt = "Estalo da mola", ru = "Щелчок пружины", it = "Scatto della molla", pl = "Trzask sprężyny", tr = "Yay Şaklaması", ja = "ばね弾き", zh = "弹簧弹击", ko = "용수철 튕기기" }

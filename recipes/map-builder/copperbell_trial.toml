@@ -1,0 +1,23 @@
+[[zone]]
+key = "copperbell_trial"
+name = "Copperbell Training Yard"
+like = "elwynn"
+map = 0
+map_name = "Azeroth"
+area = 12
+center = [-9510.0, 72.0]
+spawn = [-9514.0, 57.0]
+radius = 85.0
+map_bounds = [174.0, -30.0, -9408.0, -9612.0]
+hour = 17
+
+# Create a low berm on one side and leave the center open.
+[[height]]
+center = [-9527.0, 86.0]
+radius = 11.0
+delta = 0.8
+
+[[height]]
+center = [-9529.0, 97.0]
+radius = 9.0
+delta = 0.6
